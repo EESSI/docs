@@ -1,0 +1,22 @@
+# documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
+name: build documentation
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
+    - name: set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: install mkdocs
+      run: |
+          pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin
+          mkdocs --version
+
+    - name: build tutorial
+      run: make test

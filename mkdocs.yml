@@ -1,0 +1,37 @@
+site_name: "<a href='/'>European Environment for Scientific Software Installations (EESSI)</a>"
+theme:
+  name: material
+  features:
+      - instant
+      - tabs
+repo_name: EESSI @ GitHub
+repo_url: https://github.com/EESSI
+edit_uri: docs/edit/master/docs
+nav:
+  - Home: index.md
+  - General info: 00_general.md
+  - Overview: 01_overview.md
+  - CVMFS layer: 11_cvmfs.md
+  - Gentoo Prefix layer: 12_gentoo_prefix.md
+  - EasyBuild later: 13_easybuild.md
+  - Contact info: 99_contact.md
+plugins:
+  # show revision date at bottom of each page
+  - git-revision-date-localized
+  # necessary for search to work
+  - search
+markdown_extensions:
+  # notes, warnings, hints, ...
+  - admonition
+  # code blocks with syntax highlighting, graphs
+  - pymdownx.superfences
+  # tabbed contents
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+extra:
+  # add links in bottom right
+  social:
+    - type: github
+      icon: octicons/logo-github
+      link: https://github.com/EESSI
