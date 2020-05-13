@@ -1,4 +1,4 @@
 # Project partners
 
-* Kenneth Hoste (Ghent University)
+* Kenneth Hoste (HPC-UGent)
 * Robbert Eggermont (Delft University of Technology)
