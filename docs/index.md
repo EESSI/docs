@@ -14,4 +14,5 @@
 * [CVMFS layer](11_cvmfs.md)
 * [Gentoo Prefix layer](12_gentoo_prefix.md)
 * [EasyBuild later](13_easybuild.md)
+* [Project partners](90_partners.md)
 * [Contact info](99_contact.md)
