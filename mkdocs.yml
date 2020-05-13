@@ -1,9 +1,10 @@
-site_name: "<a href='/'>European Environment for Scientific Software Installations (EESSI)</a>"
+site_name: "European Environment for Scientific Software Installations (EESSI)"
+site_url: https://eessi.github.io/docs/
 theme:
   name: material
   features:
-      - instant
-      - tabs
+    - instant
+    - tabs
 repo_name: EESSI @ GitHub
 repo_url: https://github.com/EESSI
 edit_uri: docs/edit/master/docs
