@@ -1,7 +1,7 @@
 # Project partners
 
 * Walther Blom, Dell Technologies, High Education & Research
-* Jaco van Dijk, Dell Technolgies, Higher Education
+* Jaco van Dijk, Dell Technologies, Higher Education
 * Bob Dröge, Center for Information Technology, University of Groningen
 * Robbert Eggermont, Delft University of Technology
 * Kenneth Hoste, HPC-UGent
