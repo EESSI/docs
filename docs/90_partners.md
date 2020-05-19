@@ -8,6 +8,7 @@
 * Geert Jan Laanstra, Electrical Engineering, Mathematics and Computer Science (EEMCS), University of Twente, Enschede
 * Caspar van Leeuwen, SURF
 * Mark Sharpley, University of Cambridge Research Computing Services Division
+* Peter Stol, Vrije Universiteit Amsterdam
 * Marco Verdicchio, SURF
 * Bas van der Vlies, SURF
 * Henk-Jan Zilverberg, Center for Information Technology, University of Groningen
