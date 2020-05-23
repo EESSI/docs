@@ -12,3 +12,4 @@
 * Marco Verdicchio, SURF
 * Bas van der Vlies, SURF
 * Henk-Jan Zilverberg, Center for Information Technology, University of Groningen
+* Alan O'Cais, Juelich Supercomputing Centre
