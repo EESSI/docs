@@ -9,4 +9,5 @@ The hierarchical structure with multiple caching layers (Stratum-0, Stratum-1's 
 
 For a (basic) introduction to CernVM-FS, see [this presentation](https://www.youtube.com/watch?v=MyYx-xaL36k).
 
-Detailed information about how we configure CVMFS is available at https://github.com/EESSI/CVMFS-layer.
+Detailed information about how we configure CVMFS is available at
+[https://github.com/EESSI/cvmfs-layer](https://github.com/EESSI/cvmfs-layer) .
