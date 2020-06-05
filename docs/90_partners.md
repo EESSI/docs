@@ -1,17 +1,36 @@
 # Project partners
 
-* Walther Blom, Dell Technologies, High Education & Research
-* Jaco van Dijk, Dell Technologies, Higher Education
-* Bob Dröge, Center for Information Technology, University of Groningen
-* Robbert Eggermont, Delft University of Technology
+## [Delft University of Technology (The Netherlands)](https://www.tudelft.nl/)
+* Robbert Eggermont
+* Koen Mulderij
+
+## [Dell Technologies (Europe)](https://www.dell.com/)
+* Walther Blom, High Education & Research
+* Jaco van Dijk, Higher Education
+
+## [Ghent University (Belgium)](https://www.ugent.be/hpc/en)
 * Kenneth Hoste, HPC-UGent
-* Geert Jan Laanstra, Electrical Engineering, Mathematics and Computer Science (EEMCS), University of Twente, Enschede
-* Caspar van Leeuwen, SURF
-* Koen Mulderij, Delft University of Technology
-* Alan O'Cais, Juelich Supercomputing Centre
-* Thomas Röblitz, University of Oslo
-* Mark Sharpley, University of Cambridge Research Computing Services Division
-* Peter Stol, Vrije Universiteit Amsterdam
-* Marco Verdicchio, SURF
-* Bas van der Vlies, SURF
-* Henk-Jan Zilverberg, Center for Information Technology, University of Groningen
+
+## [Jülich Supercomputing Centre (Germany)](https://www.fz-juelich.de/ias/jsc/)
+* Alan O'Cais
+
+## [University of Cambridge (United Kingdom)](https://www.cam.ac.uk/)
+* Mark Sharpley, Research Computing Services Division
+
+## [University of Groningen (The Netherlands)](https://www.rug.nl/)
+* Bob Dröge, Center for Information Technology
+* Henk-Jan Zilverberg, Center for Information Technology
+
+## [University of Twente (The Netherlands)](https://www.utwente.nl/)
+* Geert Jan Laanstra, Electrical Engineering, Mathematics and Computer Science (EEMCS)
+
+## [University of Oslo (Norway)](https://www.uio.no/)
+* Thomas Röblitz
+
+## [Vrije Universiteit Amsterdam (The Netherlands)](https://www.vu.nl/)
+* Peter Stol
+
+## [SURF (The Netherlands)](https://www.surf.nl/en/expertises/compute-services)
+* Caspar van Leeuwen
+* Marco Verdicchio
+* Bas van der Vlies
