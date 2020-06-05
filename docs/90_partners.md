@@ -1,4 +1,4 @@
-# Project partners
+# Project partners (new version)
 
 * Walther Blom, Dell Technologies, High Education & Research
 * Jaco van Dijk, Dell Technologies, Higher Education
