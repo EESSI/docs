@@ -1,37 +1,36 @@
 # Project partners
 
 ## Delft University of Technology
-* Robbert Eggermont, Delft University of Technology
-* Koen Mulderij, Delft University of Technology
+* Robbert Eggermont
+* Koen Mulderij
 
 ## Dell Technologies
-* Walther Blom, Dell Technologies, High Education & Research
-* Jaco van Dijk, Dell Technologies, Higher Education
+* Walther Blom, High Education & Research
+* Jaco van Dijk, Higher Education
 
 ## HPC-UGent
-* Kenneth Hoste, HPC-UGent
+* Kenneth Hoste
 
-## Juelich Supercomputing Centre
-* Alan O'Cais, Juelich Supercomputing Centre
+## J&uuml;lich Supercomputing Centre
+* Alan O'Cais
 
 ## University of Cambridge
-* Mark Sharpley, University of Cambridge Research Computing Services Division
+* Mark Sharpley, Research Computing Services Division
 
 ## University of Groningen
-* Bob Dröge, Center for Information Technology, University of Groningen
-* Henk-Jan Zilverberg, Center for Information Technology, University of Groningen
+* Bob Dröge, Center for Information Technology
+* Henk-Jan Zilverberg, Center for Information Technology
 
 ## University of Twente
-* Geert Jan Laanstra, Electrical Engineering, Mathematics and Computer Science (EEMCS), University of Twente, Enschede
+* Geert Jan Laanstra, Electrical Engineering, Mathematics and Computer Science (EEMCS)
 
 ## University of Oslo
-* Thomas Röblitz, University of Oslo
+* Thomas Röblitz
 
 ## Vrije Universiteit Amsterdam
-* Peter Stol, Vrije Universiteit Amsterdam
+* Peter Stol
 
 ## SURF
-* Caspar van Leeuwen, SURF
-* Marco Verdicchio, SURF
-* Bas van der Vlies, SURF
-
+* Caspar van Leeuwen
+* Marco Verdicchio
+* Bas van der Vlies
