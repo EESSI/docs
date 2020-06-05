@@ -11,7 +11,7 @@
 ## HPC-UGent
 * Kenneth Hoste
 
-## J&uuml;lich Supercomputing Centre
+## Jülich Supercomputing Centre
 * Alan O'Cais
 
 ## University of Cambridge
