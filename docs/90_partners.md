@@ -9,7 +9,7 @@
 * Jaco van Dijk, Higher Education
 
 ## [Ghent University (Belgium)](https://www.ugent.be/hpc/en)
-* Kenneth Hoste
+* Kenneth Hoste (HPC-UGent)
 
 ## [Jülich Supercomputing Centre (Germany)](https://www.fz-juelich.de/ias/jsc/)
 * Alan O'Cais
