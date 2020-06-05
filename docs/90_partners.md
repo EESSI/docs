@@ -7,6 +7,7 @@
 * Kenneth Hoste, HPC-UGent
 * Geert Jan Laanstra, Electrical Engineering, Mathematics and Computer Science (EEMCS), University of Twente, Enschede
 * Caspar van Leeuwen, SURF
+* Koen Mulderij, Delft University of Technology
 * Alan O'Cais, Juelich Supercomputing Centre
 * Thomas Röblitz, University of Oslo
 * Mark Sharpley, University of Cambridge Research Computing Services Division
