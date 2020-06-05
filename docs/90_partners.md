@@ -1,6 +1,6 @@
 # Project partners
 
-## [Delft University of Technology (The Netherlands)](https://www.tudelft.nl)
+## [Delft University of Technology (The Netherlands)](https://www.tudelft.nl/)
 * Robbert Eggermont
 * Koen Mulderij
 
