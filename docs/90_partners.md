@@ -11,6 +11,9 @@
 ## [Ghent University (Belgium)](https://www.ugent.be/hpc/en)
 * Kenneth Hoste, HPC-UGent
 
+## [HPCNow! (Spain)](https://www.hpcnow.com/)
+* Oriol Mula Valls
+
 ## [Jülich Supercomputing Centre (Germany)](https://www.fz-juelich.de/ias/jsc/)
 * Alan O'Cais
 
