@@ -8,6 +8,9 @@
 * Walther Blom, High Education & Research
 * Jaco van Dijk, Higher Education
 
+## [Eindhoven University of Technology](https://www.tue.nl/en/)
+* Patrick Van Brakel
+
 ## [Ghent University (Belgium)](https://www.ugent.be/hpc/en)
 * Kenneth Hoste, HPC-UGent
 
