@@ -3,7 +3,7 @@
     **This is very much a work in progress!**<br/>
     Many pages are still empty, that will hopefully change soon...
 
-![EESSI logo](img/EESSI_logo_horizontal.png)
+![EESSI logo](img/logos/EESSI_logo_horizontal.png)
 
 # Welcome to the EESSI project documentation!
 
