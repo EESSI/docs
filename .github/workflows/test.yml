@@ -13,15 +13,15 @@ jobs:
       with:
         python-version: 3.8
 
-   - name: Codespell action
+    - name: Codespell action
       uses: plettich/python_codespell_action@v0.1
 
-    #- name: Markdown Linting Action
-    #  uses: avto-dev/markdown-lint@v1.2.0
-    #  with:
-        # rules: '/lint/rules/changelog.js'
-        # config: '/lint/config/changelog.yml'
-    #    args: '.'
+    # - name: Markdown Linting Action
+    #   uses: avto-dev/markdown-lint@v1.2.0
+    #   with:
+          # rules: '/lint/rules/changelog.js'
+          # config: '/lint/config/changelog.yml'
+    #     args: '.'
 
     - name: install mkdocs
       run: |
