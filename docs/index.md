@@ -7,7 +7,7 @@
 
 # Welcome to the EESSI project documentation!
 
-The **European Environment for Scientific Software Installations** (EESSI, pronounced as “easy”) is a collaboration between different European partners in HPC community.
+The **European Environment for Scientific Software Installations** (EESSI, pronounced as "easy") is a collaboration between different European partners in HPC community.
 
 The goal of this project is to build a common scientific software stack for HPC systems and beyond, including laptops,
 personal workstations and cloud infrastructure.
