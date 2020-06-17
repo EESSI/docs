@@ -15,7 +15,7 @@ repo_url: https://github.com/EESSI
 edit_uri: docs/edit/master/docs
 nav:
   - Home: index.md
-  - Overview: overview.md
+  - Project overview: overview.md
   - Filesystem layer: filesystem_layer.md
   - Compatibility layer: compatibility_layer.md
   - Software layer: software_layer.md
