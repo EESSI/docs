@@ -7,7 +7,6 @@ theme:
   name: material
   features:
     - instant
-    - tabs
   logo: img/logos/EESSI.png
   favicon: img/logos/EESSI.png
 repo_name: EESSI @ GitHub
