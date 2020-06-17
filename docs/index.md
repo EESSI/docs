@@ -7,16 +7,17 @@
 
 # Welcome to the EESSI project documentation!
 
+!!! quote
+    What if there was a way to avoid having to install a broad range of scientific software from scratch on every HPC cluster or cloud instance you use or maintain, without compromising on performance?
+
 The **European Environment for Scientific Software Installations** (EESSI, pronounced as "easy") is a collaboration between different European partners in HPC community.
 
-The goal of this project is to build a common scientific software stack for HPC systems and beyond, including laptops,
+The goal of this project is to build a common stack of scientific software installations for HPC systems and beyond, including laptops,
 personal workstations and cloud infrastructure.
-
-The concept is heavily inspired by the <a href="https://docs.computecanada.ca/wiki/Accessing_CVMFS">Compute Canada software stack</a>.
 
 More details about the project are available in the different subsections:
 
-* [Overview](overview.md)
+* [Project overview](overview.md)
 * [Filesystem layer](filesystem_layer.md)
 * [Compatibility layer](compatibility_layer.md)
 * [Software layer](software_layer.md)
