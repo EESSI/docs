@@ -7,11 +7,8 @@ theme:
   name: material
   features:
     - instant
-    - tabs
   logo: img/logos/EESSI.png
   favicon: img/logos/EESSI.png
-  feature:
-    tabs: false
 repo_name: EESSI @ GitHub
 repo_url: https://github.com/EESSI
 edit_uri: docs/edit/master/docs
