@@ -5,7 +5,7 @@
 The bottom layer of the EESSI project is the **filesystem layer**,
 which is responsible for distributing the software stack.
 
-For this, we rely on [CernVM-FS](https://cernvm.cern.ch/portal/filesystem) (or CVMFS for short), a the network file system used to distribute the software to the clients in a fast, reliable and scalable way.
+For this we rely on [CernVM-FS](https://cernvm.cern.ch/portal/filesystem) (or CVMFS for short), a network file system used to distribute the software to the clients in a fast, reliable and scalable way.
 
 CVMFS was created over 10 years ago specifically for the purpose of globally distributing a large software stack. For the experiments at the Large Hadron Collider, it hosts several hundred million files and directories that are distributed to the order of hundred thousand client computers.
 
