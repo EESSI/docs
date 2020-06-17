@@ -1,4 +1,6 @@
-![EESSI logo](img/logos/EESSI_logo_horizontal.png)
+<p align="center">
+  <img width="60%" src="img/logos/EESSI_logo_horizontal.png" alt="EESSI logo">
+</p>
 
 # Welcome to the EESSI project documentation!
 
