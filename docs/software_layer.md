@@ -19,4 +19,4 @@ We leverage the [**archspec**](https://archspec.readthedocs.io) Python library
 to automatically select the best suited part of the software stack for
 a particular host, based on its system architecture.
 
-The software layer is maintained through our [https://github.com/EESSI/easybuild-layer](https://github.com/EESSI/easybuild-layer) GitHub repository.
+The software layer is maintained through our [https://github.com/EESSI/software-layer](https://github.com/EESSI/software-layer) GitHub repository.
