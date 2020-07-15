@@ -37,8 +37,5 @@ markdown_extensions:
 extra:
   # add links in bottom right
   social:
-    - type: github
-      icon: octicons/logo-github
-      link: https://github.com/EESSI
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
