@@ -5,4 +5,4 @@ talk by Kenneth Hoste (@boegel) at HPC Knowledge Meeting '20
 https://hpckp.org/agenda/european-environment-for-scientific-software-eessi
 
 * [slides](EESSI_HPCKP20_20200618.pdf)
-* *(recording available soon)*
+* [recording (YouTube)](https://www.youtube.com/watch?v=nihAG_Y2l9o)
