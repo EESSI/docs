@@ -25,4 +25,4 @@ More details about the project are available in the different subsections:
 
 The EESSI project was presented at the [HPC Knowledge Meeting](https://hpckp.org/) in June 2020. Check the recording:
 
-<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/nihAG_Y2l9o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/E0LFvrZIsi8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
