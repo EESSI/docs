@@ -23,7 +23,7 @@ and there are some known issues and limitations, please take these into account:
 The easiest way to access the EESSI pilot repository is by using Singularity.
 If Singularity is installed already, no admin privileges are required. No other software is needed either on the host.
 
-A container image is available in Docker Hub (see https://hub.docker.com/r/eessi/client-pilot).
+A container image is available in Docker Hub (see [https://hub.docker.com/r/eessi/client-pilot](https://hub.docker.com/r/eessi/client-pilot)).
 It only contains a minimal operating system + the necessary packages to access the EESSI pilot repository through CernVM-FS.
 
 The container image can be used directly by Singularity (no prior download required), as follows:
@@ -43,10 +43,10 @@ The container image can be used directly by Singularity (no prior download requi
 * Start the container using `singularity shell`, using `--fusemount` to mount the EESSI config and pilot repositories
   (using the `cvmfs2` command that is included in the container image):
   ```shell
-   export EESSI_CONFIG="container:cvmfs2 cvmfs-config.eessi-hpc.org /cvmfs/cvmfs-config.eessi-hpc.org"
-   export EESSI_PILOT="container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org"
-   singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-2020.08
-   ```
+  export EESSI_CONFIG="container:cvmfs2 cvmfs-config.eessi-hpc.org /cvmfs/cvmfs-config.eessi-hpc.org"
+  export EESSI_PILOT="container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org"
+  singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-2020.08
+  ```
 
  * This should give you a shell in the container, where the EESSI config and pilot repositories are mounted:
    ```
@@ -59,6 +59,7 @@ The container image can be used directly by Singularity (no prior download requi
    Singularity>
    ```
  * It is possible that you see some scary looking warnings, but those can be ignored for now.
+
    To verify that things are working, check the contents of the `/cvmfs/pilot.eessi-hpc.org/2020.08` directory:
    ```shell
    Singularity> ls /cvmfs/pilot.eessi-hpc.org/2020.08
@@ -93,14 +94,13 @@ Now you're all set up! Go ahead and explore the software stack using "`module av
 
 Please test the EESSI pilot software stack as you see fit: running simple commands, performing small calculations or running small benchmarks, etc.
 
-Test scripts that have been verified to work correctly using the pilot software stack are available at https://github.com/EESSI/software-layer/tree/master/tests .
+Test scripts that have been verified to work correctly using the pilot software stack are available at [https://github.com/EESSI/software-layer/tree/master/tests](https://github.com/EESSI/software-layer/tree/master/tests) .
 
 ### Giving feedback or reporting problems
 
 Any feedback is welcome, and questions or problems reports are welcome as well, through one of the EESSI communication channels:
 
-* (**preferred!**) EESSI `software-layer` GitHub repository: https://github.com/EESSI/software-layer/issues 
+* (**preferred!**) EESSI `software-layer` GitHub repository: [https://github.com/EESSI/software-layer/issues](https://github.com/EESSI/software-layer/issues)
 * EESSI mailing list (`eessi@list.rug.nl`)
-* EESSI Slack (https://eessi-hpc.slack.com, get an invite via https://www.eessi-hpc.org/join)
-* EESSI `software-layer` GitHub repository: https://github.com/EESSI/software-layer/issues
+* EESSI Slack: [https://eessi-hpc.slack.com](https://eessi-hpc.slack.com) (get an invite via [https://www.eessi-hpc.org/join](https://www.eessi-hpc.org/join))
 * monthly EESSI meetings (first Thursday of the month at 2pm CEST)
