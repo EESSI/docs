@@ -66,7 +66,7 @@ The container image can be used directly by Singularity (no prior download requi
    ```
 ### Setting up the EESSI environment
 
-Once you have the EESSI pilot repository mounted, you can set up the environment by sourcing the provided: init script:
+Once you have the EESSI pilot repository mounted, you can set up the environment by sourcing the provided init script:
 
 ```shell
 source /cvmfs/pilot.eessi-hpc.org/2020.08/init/bash
