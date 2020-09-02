@@ -18,6 +18,7 @@ More details about the project are available in the different subsections:
 * [Filesystem layer](filesystem_layer.md)
 * [Compatibility layer](compatibility_layer.md)
 * [Software layer](software_layer.md)
+* [Pilot repository](pilot.md)
 * [Project partners](partners.md)
 * [Contact info](contact.md)
 
