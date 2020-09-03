@@ -160,7 +160,7 @@ Any feedback is welcome, and questions or problems reports are welcome as well, 
 
 ### EasyBuild configuration
 
-The latest `develop` version of EasyBuild was used, all changed required to install the software in the `2020.08` version of the pilot repository will be included in the upcoming release of EasyBuild v4.3.0.
+The latest `develop` version of EasyBuild was used, all changes required to install the software in the `2020.08` version of the pilot repository will be included in the upcoming release of EasyBuild v4.3.0.
 
 ```
 $ eb --show-config
