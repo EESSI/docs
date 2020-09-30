@@ -2,7 +2,7 @@
 
 ### Caveats
 
-The current EESSI pilot software stack (version 2020.08) is the first iteration,
+The current EESSI pilot software stack (version 2020.09) is the second iteration,
 and there are some known issues and limitations, please take these into account:
 
 * First of all: the EESSI pilot software stack is **NOT READY FOR PRODUCTION!**
@@ -74,7 +74,7 @@ If all goes well, you should see output like this:
 
 ```shell
 Singularity> source /cvmfs/pilot.eessi-hpc.org/2020.09/init/bash
-Found EESSI pilot repo @ /cvmfs/pilot.eessi-hpc.org/2020.09!                                                                                                          [68/881]
+Found EESSI pilot repo @ /cvmfs/pilot.eessi-hpc.org/2020.09!
 Derived subdirectory for software layer: x86_64/intel/cascadelake
 Initializing Lmod...
 Prepending /cvmfs/pilot.eessi-hpc.org/2020.09/software/x86_64/intel/cascadelake/modules/all to $MODULEPATH...
@@ -112,10 +112,16 @@ Any feedback is welcome, and questions or problems reports are welcome as well, 
 
 *(last update: Sept 30th 2020)*
 
+EESSI currently supports the following HPC applications as well as all their dependencies:
+
+- GROMACS (2020.1)
+- OpenFOAM (v2006 and 8)
+- R 4.0.0 (+ R-bundle-Bioconductor 3.11)
+
 ```
 [EESSI pilot 2020.09] $ module avail
 
--------------------------------------- /cvmfs/pilot.eessi-hpc.org/2020.08/software/x86_64/intel/haswell/modules/all --------------------------------------
+----------------------------------- /cvmfs/pilot.eessi-hpc.org/2020.08/software/x86_64/intel/cascadelake/modules/all -----------------------------------
    Bison/3.5.3-GCCcore-9.3.0                       NSS/3.51-GCCcore-9.3.0                               groff/1.22.4-GCCcore-9.3.0
    Boost/1.72.0-gompi-2020a                        Ninja/1.10.0-GCCcore-9.3.0                           gzip/1.10-GCCcore-9.3.0
    CGAL/4.14.3-gompi-2020a-Python-3.8.2            OpenBLAS/0.3.9-GCC-9.3.0                             help2man/1.47.12-GCCcore-9.3.0
@@ -155,6 +161,23 @@ Any feedback is welcome, and questions or problems reports are welcome as well, 
    NSPR/4.25-GCCcore-9.3.0                         gperf/3.1-GCCcore-9.3.0
 ```
 
+### Architecture and micro-architecture support
+
+#### x86_64
+
+  - generic (currently implies `march=x86-64` and `-mtune=generic`)
+  - AMD
+      - zen2
+  - Intel
+      - broadwell
+      - cascadelake
+      - haswell
+      - ivybridge
+      - skylake_avx512
+
+#### aarch64/arm64
+  - generic (currently implies `-march=armv8-a` and `-mtune=generic`)
+
 ### EasyBuild configuration
 
 The latest `develop` version of EasyBuild was used, all changes required to install the software in the `2020.09` version of the pilot repository will be included in the upcoming release of EasyBuild v4.3.1.
@@ -166,18 +189,18 @@ $ eb --show-config
 # Current EasyBuild configuration
 # (C: command line argument, D: default value, E: environment variable, F: configuration file)
 #
-buildpath         (D) = /tmp/terjekv/singularity-home/.local/easybuild/build
-containerpath     (D) = /tmp/terjekv/singularity-home/.local/easybuild/containers
+buildpath         (D) = /tmp/eessi-build/singularity-home/.local/easybuild/build
+containerpath     (D) = /tmp/eessi-build/singularity-home/.local/easybuild/containers
 debug             (E) = True
 filter-deps       (E) = Autoconf, Automake, Autotools, binutils, bzip2, gettext, libreadline, libtool, M4, ncurses, XZ, zlib, Yasm
 filter-env-vars   (E) = LD_LIBRARY_PATH
 ignore-osdeps     (E) = True
 installpath       (E) = /cvmfs/pilot.eessi-hpc.org/2020.09/software/aarch64/generic
 module-extensions (E) = True
-repositorypath    (D) = /tmp/terjekv/singularity-home/.local/easybuild/ebfiles_repo
+repositorypath    (D) = /tmp/eessi-build/singularity-home/.local/easybuild/ebfiles_repo
 robot-paths       (D) = /cvmfs/pilot.eessi-hpc.org/2020.09/software/aarch64/generic/software/EasyBuild/4.3.0/easybuild/easyconfigs
 rpath             (E) = True
-sourcepath        (E) = /tmp/terjekv/easybuild/sources:
+sourcepath        (E) = /tmp/eessi-build/easybuild/sources:
 sysroot           (E) = /cvmfs/pilot.eessi-hpc.org/2020.09/compat/aarch64
 trace             (E) = True
 zip-logs          (E) = bzip2
