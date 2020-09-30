@@ -1,4 +1,4 @@
-## Pilot software stack (2020.08)
+## Pilot software stack (2020.09)
 
 ### Caveats
 
@@ -9,10 +9,10 @@ and there are some known issues and limitations, please take these into account:
 
   Do not use it for production work, and be careful when testing it on production systems!
 
+### Known problems
+
 * There is no Lmod (spider) cache available yet for the environment module files included in the pilot repository,
   so `module` commands may be somewhat slow.
-
-* The provided Open MPI installation (`OpenMPI/4.0.3-GCC-9.3.0` module) is not properly configured yet to use high-speed network interconnects.
 
 
 ### Accessing the EESSI pilot repository through Singularity
@@ -42,12 +42,12 @@ The container image can be used directly by Singularity (no prior download requi
   ```shell
   export EESSI_CONFIG="container:cvmfs2 cvmfs-config.eessi-hpc.org /cvmfs/cvmfs-config.eessi-hpc.org"
   export EESSI_PILOT="container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org"
-  singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-2020.08
+  singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-2020.09
   ```
 
  * This should give you a shell in the container, where the EESSI config and pilot repositories are mounted:
    ```
-   $ singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-2020.08
+   $ singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-2020.09
    INFO:    Using cached SIF image
    CernVM-FS: pre-mounted on file descriptor 3
    CernVM-FS: pre-mounted on file descriptor 3
@@ -121,7 +121,7 @@ EESSI currently supports the following HPC applications as well as all their dep
 ```
 [EESSI pilot 2020.09] $ module avail
 
------------------------------------ /cvmfs/pilot.eessi-hpc.org/2020.08/software/x86_64/intel/cascadelake/modules/all -----------------------------------
+----------------------------------- /cvmfs/pilot.eessi-hpc.org/2020.09/software/x86_64/intel/cascadelake/modules/all -----------------------------------
    Bison/3.5.3-GCCcore-9.3.0                       NSS/3.51-GCCcore-9.3.0                               groff/1.22.4-GCCcore-9.3.0
    Boost/1.72.0-gompi-2020a                        Ninja/1.10.0-GCCcore-9.3.0                           gzip/1.10-GCCcore-9.3.0
    CGAL/4.14.3-gompi-2020a-Python-3.8.2            OpenBLAS/0.3.9-GCC-9.3.0                             help2man/1.47.12-GCCcore-9.3.0
