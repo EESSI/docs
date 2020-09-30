@@ -31,6 +31,9 @@
 * Geert Jan Laanstra, Electrical Engineering, Mathematics and Computer Science (EEMCS)
 
 ## [University of Oslo (Norway)](https://www.uio.no/)
+* Terje Kvernes
+
+## [University of Bergen (Norway)](https://www.uib.no/)
 * Thomas Röblitz
 
 ## [Vrije Universiteit Amsterdam (The Netherlands)](https://www.vu.nl/)
