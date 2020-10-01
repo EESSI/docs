@@ -180,7 +180,9 @@ EESSI currently supports the following HPC applications as well as all their dep
 
 ### EasyBuild configuration
 
-The latest `develop` version of EasyBuild was used, all changes required to install the software in the `2020.09` version of the pilot repository will be included in the upcoming release of EasyBuild v4.3.1.
+EasyBuild v4.3.0 was used to install the software in the `2020.09` version of the pilot repository.
+For some installations pull requests with changes that will be included in EasyBuild v4.3.1 were leveraged,
+see the [build script](https://github.com/EESSI/software-layer/blob/master/EESSI-pilot-2020.09.sh) that was used.
 
 An example configuration of the build environment based on https://github.com/EESSI/software-layer can be seen here:
 ```
