@@ -42,7 +42,8 @@ The container image can be used directly by Singularity (no prior download requi
   ```shell
   export EESSI_CONFIG="container:cvmfs2 cvmfs-config.eessi-hpc.org /cvmfs/cvmfs-config.eessi-hpc.org"
   export EESSI_PILOT="container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org"
-  singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-2020.09
+  uname -m |grep -i aarch > /dev/null && export EESSI_DOCKER_ARCH="-arm64v8"
+  singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7${EESSI_DOCKER_ARCH}-2020.09
   ```
 
  * This should give you a shell in the container, where the EESSI config and pilot repositories are mounted:
