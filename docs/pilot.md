@@ -2,7 +2,7 @@
 
 ### Caveats
 
-The current EESSI pilot software stack (version 2020.10) is the second iteration,
+The current EESSI pilot software stack (version 2020.10) is the third iteration,
 and there are some known issues and limitations, please take these into account:
 
 * First of all: the EESSI pilot software stack is **NOT READY FOR PRODUCTION!**
@@ -13,6 +13,15 @@ and there are some known issues and limitations, please take these into account:
 
 * There is no Lmod (spider) cache available yet for the environment module files included in the pilot repository,
   so `module` commands may be somewhat slow (see https://github.com/EESSI/software-layer/issues/10).
+
+* Compiling software with the GCC installation provided in the software stack may fail
+  because it picks up the linker (`ld` command) of the host (see https://github.com/EESSI/software-layer/issues/26).
+
+  A workaround for this it to define `$COMPILER_PATH` to instruct GCC to pick up the `ld` command from the compatibility
+  layer:
+  ```shell
+  export COMPILER_PATH=${EPREFIX}/usr/bin
+  ```
 
 
 ### Accessing the EESSI pilot repository through Singularity
