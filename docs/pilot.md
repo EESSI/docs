@@ -119,7 +119,7 @@ Any feedback is welcome, and questions or problems reports are welcome as well, 
 
 ### Available software
 
-*(last update: Sept 30th 2020)*
+*(last update: Nov 5th 2020)*
 
 EESSI currently supports the following HPC applications as well as all their dependencies:
 
