@@ -17,7 +17,7 @@ and there are some known issues and limitations, please take these into account:
 * Compiling software with the GCC installation provided in the software stack may fail
   because it picks up the linker (`ld` command) of the host (see https://github.com/EESSI/software-layer/issues/26).
 
-  A workaround for this it to define `$COMPILER_PATH` to instruct GCC to pick up the `ld` command from the compatibility
+  A workaround for this is to define `$COMPILER_PATH` to instruct GCC to pick up the `ld` command from the compatibility
   layer:
   ```shell
   export COMPILER_PATH=${EPREFIX}/usr/bin
