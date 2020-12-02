@@ -14,7 +14,7 @@ Answer:   Yes, eventually. Right now there already are optimized installations
           but this is currently untested.
 
 Comment: I like this idea as for us it is important people can use it in their
-         laptops. Personally I not much loosing time in setting up sw at my
+         laptops. Personally I not much losing time in setting up sw at my
          laptop but I see for the users it is important to have an option to
          install/use it also in their lab. They like it more.
 Reply>   Yes, this could allow people to literally write a job script that
@@ -22,7 +22,7 @@ Reply>   Yes, this could allow people to literally write a job script that
          no need to build containers, or copy them over, etc.)
 
 Question: This builds on existing projects so it has some content from the
-          begining?
+          beginning?
 Answer:   Thanks to EasyBuild we can easily provide 1000s of installations.
           Right now we limit what we provide, so we can focus on solving the
           problems we're hitting first.
@@ -80,6 +80,6 @@ Reply:   Yes, indeed! Containers are also very rigid: what if you want to add
          to add software on top of it (without paying for it in terms of
          performance), etc.
 
-Comment: This would also work really well in heterogenous environments with
+Comment: This would also work really well in heterogeneous environments with
          a mix of old/new CPUs, thanks to the auto-detection mechanism.
 Reply:   Yes, very correct, this is an interesting use case!
