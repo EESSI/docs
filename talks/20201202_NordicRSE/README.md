@@ -4,5 +4,5 @@ talk by Thomas Roeblitz (@poksumdo) at Nordic-RSE Get Together Online (30.11.-2.
 
 https://nordic-rse.org/events/2020-online-get-together/
 
-* [slides](EESSI_Nordic_RSE_20201202.pdf)
+* [slides](EESSI-Nordic-RSE-20201202.pdf)
 * [Q&A](qa.txt)
