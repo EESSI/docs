@@ -1,6 +1,6 @@
 #Software testing
 
-**WARNING: development of the software test suite has only just started and is a work in progress. This page describes how the test suite _will_ be designed, but not everything is implemented yet and the design may still change.**
+**WARNING: development of the software test suite has only just started and is a work in progress. This page describes how the test suite _will_ be designed, but many things are not implemented yet and the design may still change.**
 
 ##Description of the software test suite
 
