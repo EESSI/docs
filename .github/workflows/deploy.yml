@@ -1,8 +1,8 @@
 # documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
-name: deploy documentation (only on push to master branch)
+name: deploy documentation (only on push to main branch)
 on:
   push:
-    branches: master
+    branches: main
 jobs:
   build:
     runs-on: ubuntu-18.04
