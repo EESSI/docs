@@ -97,7 +97,7 @@ Now you're all set up! Go ahead and explore the software stack using "`module av
 
 Please test the EESSI pilot software stack as you see fit: running simple commands, performing small calculations or running small benchmarks, etc.
 
-Test scripts that have been verified to work correctly using the pilot software stack are available at [https://github.com/EESSI/software-layer/tree/master/tests](https://github.com/EESSI/software-layer/tree/master/tests) .
+Test scripts that have been verified to work correctly using the pilot software stack are available at [https://github.com/EESSI/software-layer/tree/main/tests](https://github.com/EESSI/software-layer/tree/main/tests) .
 
 ### Giving feedback or reporting problems
 
@@ -211,7 +211,7 @@ EESSI currently supports the following HPC applications as well as all their dep
 
 EasyBuild v4.3.2 was used to install the software in the `2020.12` version of the pilot repository.
 For some installations pull requests with changes that will be included in EasyBuild v4.3.2 were leveraged,
-see the [build script](https://github.com/EESSI/software-layer/blob/master/EESSI-pilot-install-software.sh) that was used.
+see the [build script](https://github.com/EESSI/software-layer/blob/main/EESSI-pilot-install-software.sh) that was used.
 
 An example configuration of the build environment based on https://github.com/EESSI/software-layer can be seen here:
 ```

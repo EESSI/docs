@@ -51,25 +51,25 @@ which makes it very easy to preview the result of the changes you make locally.
 ## Automatic updates
 
 The rendered version of this documentation at https://eessi.github.io/docs/
-is automatically updated on every push to the ``master`` branch,
+is automatically updated on every push to the ``main`` branch,
 thanks to the GitHub Actions workflow defined in
-[``.github/workflows/deploy.yml``](https://github.com/EESSI/docs/blob/master/.github/workflows/deploy.yml).
+[``.github/workflows/deploy.yml``](https://github.com/EESSI/docs/blob/main/.github/workflows/deploy.yml).
 
 The [``gh-pages``](https://github.com/EESSI/docs/tree/gh-pages) branch in this repository contains the rendered version.
 
 https://eessi.github.io/docs/ will only be updated if the tests pass,
 see GitHub Actions workflow defined in
-[``.github/workflows/test.yml``](https://github.com/EESSI/docs/blob/master/.github/workflows/test.yml).
+[``.github/workflows/test.yml``](https://github.com/EESSI/docs/blob/main/.github/workflows/test.yml).
 
 **Note**: **do *not* change the files in the ``gh-pages`` branch directly!**
 
-All your changes will be lost the next time the ``master`` branch is updated...
+All your changes will be lost the next time the ``main`` branch is updated...
 
 # License
 
 The software in this repository is distributed under the terms of the
 [GNU General Public License v2.0](https://opensource.org/licenses/GPL-2.0).
 
-See [LICENSE](https://github.com/EESSI/filesystem-layer/blob/master/LICENSE) for more information.
+See [LICENSE](https://github.com/EESSI/docs/blob/main/LICENSE) for more information.
 
 SPDX-License-Identifier: GPL-2.0-only
