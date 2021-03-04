@@ -19,6 +19,7 @@ nav:
   - Compatibility layer: compatibility_layer.md
   - Software layer: software_layer.md
   - Pilot repository: pilot.md
+  - Software testing: software_testing.md
   - Project partners: partners.md
   - Contact info: contact.md
 plugins:
