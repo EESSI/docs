@@ -5,7 +5,7 @@
 ##Description of the software test suite
 
 ###Framework
-The EESSI project uses the [ReFrame framework](https://reframe-hpc.readthedocs.io/en/stable/index.html) for sofware testing. ReFrame is designed particularly for testing HPC software and thus has well integrated support for interacting with schedulers, as well as various launchers for MPI programs.
+The EESSI project uses the [ReFrame framework](https://reframe-hpc.readthedocs.io/en/stable/index.html) for software testing. ReFrame is designed particularly for testing HPC software and thus has well integrated support for interacting with schedulers, as well as various launchers for MPI programs.
 
 ###Test variants
 The EESSI software stack can be used in various ways, e.g. by using the [container](../pilot/#accessing-the-eessi-pilot-repository-through-singularity) or when the CVMFS software stack is mounted natively. This means the commands that need to be run to test an application are different in both cases. Similarly, systems may have different hardware (CPUs v.s. GPUs, system size, etc). Thus, tests - e.g. a GROMACS test - may have different variants: one designed to run on CPUs, one on GPUs, one designed to run through the container, etc.
