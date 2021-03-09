@@ -205,7 +205,13 @@ EESSI currently supports the following HPC applications as well as all their dep
 #### aarch64/arm64
 
   - generic (currently implies `-march=armv8-a` and `-mtune=generic`)
+  - AWS Graviton2
+  - Fujitsu A64FX
   - Marvell Thunder X2
+
+#### ppc64le
+
+  - IBM POWER9
 
 ### EasyBuild configuration
 
