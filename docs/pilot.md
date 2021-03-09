@@ -117,7 +117,7 @@ EESSI currently supports the following HPC applications as well as all their dep
 - GROMACS (2020.1)
 - OpenFOAM (v2006 and 8)
 - R 4.0.0 + R-bundle-Bioconductor 3.11
-- TensorFlow (2.3.1)
+- TensorFlow (2.3.1) *(currently not availale on `ppc64le`)*
 - OSU-Micro-Benchmarks (5.6.3)
 
 ```
