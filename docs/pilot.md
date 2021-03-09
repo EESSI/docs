@@ -75,18 +75,11 @@ If all goes well, you should see output like this:
 ```shell
 Singularity> source /cvmfs/pilot.eessi-hpc.org/2020.12/init/bash
 Found EESSI pilot repo @ /cvmfs/pilot.eessi-hpc.org/2020.12!
-Derived subdirectory for software layer: x86_64/amd/zen2
+Using x86_64/intel/haswell as software subdirectory.
+Using /cvmfs/pilot.eessi-hpc.org/2020.12/software/x86_64/intel/haswell/modules/all as the directory to be added to MODULEPATH.
+Found Lmod configuration file at /cvmfs/pilot.eessi-hpc.org/2020.12/software/x86_64/intel/haswell/.lmod/lmodrc.lua
 Initializing Lmod...
-Prepending /cvmfs/pilot.eessi-hpc.org/2020.12/software/x86_64/amd/zen2/modules/all to $MODULEPATH...
-
-*** Known problems in the 2020.12 pilot software stack ***
-
-1) No Lmod cache has been generated yet for the module files included
-   in the 2020.12 pilot software stack.
-   As a result, 'module' commands may be somewhat slow.
-   (see also https://github.com/EESSI/software-layer/issues/10)
-
-
+Prepending /cvmfs/pilot.eessi-hpc.org/2020.12/software/x86_64/intel/haswell/modules/all to $MODULEPATH...
 Environment set up to use EESSI pilot software stack, have fun!
 [EESSI pilot 2020.12] $
 ```
