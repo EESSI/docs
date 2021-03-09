@@ -75,18 +75,11 @@ If all goes well, you should see output like this:
 ```shell
 Singularity> source /cvmfs/pilot.eessi-hpc.org/2020.12/init/bash
 Found EESSI pilot repo @ /cvmfs/pilot.eessi-hpc.org/2020.12!
-Derived subdirectory for software layer: x86_64/amd/zen2
+Using x86_64/intel/haswell as software subdirectory.
+Using /cvmfs/pilot.eessi-hpc.org/2020.12/software/x86_64/intel/haswell/modules/all as the directory to be added to MODULEPATH.
+Found Lmod configuration file at /cvmfs/pilot.eessi-hpc.org/2020.12/software/x86_64/intel/haswell/.lmod/lmodrc.lua
 Initializing Lmod...
-Prepending /cvmfs/pilot.eessi-hpc.org/2020.12/software/x86_64/amd/zen2/modules/all to $MODULEPATH...
-
-*** Known problems in the 2020.12 pilot software stack ***
-
-1) No Lmod cache has been generated yet for the module files included
-   in the 2020.12 pilot software stack.
-   As a result, 'module' commands may be somewhat slow.
-   (see also https://github.com/EESSI/software-layer/issues/10)
-
-
+Prepending /cvmfs/pilot.eessi-hpc.org/2020.12/software/x86_64/intel/haswell/modules/all to $MODULEPATH...
 Environment set up to use EESSI pilot software stack, have fun!
 [EESSI pilot 2020.12] $
 ```
@@ -117,7 +110,7 @@ EESSI currently supports the following HPC applications as well as all their dep
 - GROMACS (2020.1)
 - OpenFOAM (v2006 and 8)
 - R 4.0.0 + R-bundle-Bioconductor 3.11
-- TensorFlow (2.3.1)
+- TensorFlow (2.3.1) *(currently not available on `ppc64le`)*
 - OSU-Micro-Benchmarks (5.6.3)
 
 ```
@@ -205,7 +198,13 @@ EESSI currently supports the following HPC applications as well as all their dep
 #### aarch64/arm64
 
   - generic (currently implies `-march=armv8-a` and `-mtune=generic`)
+  - AWS Graviton2
+  - Fujitsu A64FX
   - Marvell Thunder X2
+
+#### ppc64le
+
+  - IBM POWER9
 
 ### EasyBuild configuration
 
