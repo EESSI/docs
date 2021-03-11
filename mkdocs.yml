@@ -15,7 +15,9 @@ edit_uri: docs/edit/main/docs
 nav:
   - Home: index.md
   - Project overview: overview.md
-  - Filesystem layer: filesystem_layer.md
+  - Filesystem layer: 
+    - Overview: filesystem_layer.md
+    - filesystem_layer/stratum1.md
   - Compatibility layer: compatibility_layer.md
   - Software layer: software_layer.md
   - Pilot repository: pilot.md
