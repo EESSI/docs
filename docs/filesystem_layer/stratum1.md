@@ -51,7 +51,7 @@ This will automatically make replicas of all the repositories defined in `group_
 ## Step 2: request a firewall exception
 
 You can request a firewall exception rule to be added for your Stratum 1 server by
-opening an issue on the [GitHub page of the filesystem layer repository](https://github.com/EESSI/filesystem-layer/issues/new).
+[opening an issue on the GitHub page of the filesystem layer repository](https://github.com/EESSI/filesystem-layer/issues/new).
 
 Make sure to include the IP address of your server.
 
