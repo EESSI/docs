@@ -1,6 +1,6 @@
 # Setting up a Stratum 1
 
-Setting up a Stratum 1 involves two steps:
+Setting up a Stratum 1 involves the following steps:
 
 - set up the Stratum 1, preferably by running the Ansible playbook that we provide;
 - request a Stratum 0 firewall exception for your Stratum 1 server;
