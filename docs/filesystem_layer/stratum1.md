@@ -35,7 +35,7 @@ You can put your license key in the local configuration file `inventory/local_si
 
 Furthermore, the Stratum 1 runs a Squid server. The template configuration file can be found at `templates/eessi_stratum1_squid.conf.j2`.
 If you want to customize it, for instance for limiting the access to the Stratum 1, you can make your own version of this template file 
-and point to it by overriding the following setting in `inventory/local_site_specific_vars.yml`.
+and point to it by setting `local_stratum1_cvmfs_squid_conf_src` in `inventory/local_site_specific_vars.yml`.
 See the comments in the example file for more details.
 
 Make sure that you have added the hostname or IP address of your server to the `hosts` file, and finally install the Stratum 1 using:
