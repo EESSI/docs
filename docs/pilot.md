@@ -62,6 +62,13 @@ The container image can be used directly by Singularity (no prior download requi
    Singularity> ls /cvmfs/pilot.eessi-hpc.org/2020.12
    compat  init  software
    ```
+#### Standard installation
+
+For those with privileges on their system, there are a number of example installation scripts for different architectures
+and operating systems available in the [EESSI demo repository](https://github.com/EESSI/eessi-demo/tree/main/scripts).
+
+Here we prefer the Singularity approach as we can guarantee that the docker image is up to date.
+
 ### Setting up the EESSI environment
 
 Once you have the EESSI pilot repository mounted, you can set up the environment by sourcing the provided init script:
