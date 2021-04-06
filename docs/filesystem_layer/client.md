@@ -22,6 +22,9 @@ You can simply follow the steps on that page up to the
 !!! info
     In the section that instructs you to create `defaults.local` file, use `CVMFS_REPOSITORIES=pilot.eessi-hpc.org`.
 
+    The default limit for the cache directory that CVMFS will be using on the client machine is set to 4GB.
+    If you want to override this, add `CVMFS_QUOTA_LIMIT=<value in megabytes>` to your `defaults.local`.
+
 !!! warning
     Do **not** set `CVMFS_CLIENT_PROFILE=single` in your `defaults.local` if you are setting up multiple clients, e.g. on a cluster.
     In this case you should first set up one or more proxies, and then use `CVMFS_HTTP_PROXY` as described.
