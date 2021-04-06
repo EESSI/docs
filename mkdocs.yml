@@ -17,6 +17,7 @@ nav:
   - Project overview: overview.md
   - Filesystem layer: 
     - Overview: filesystem_layer.md
+    - filesystem_layer/client.md
     - filesystem_layer/stratum1.md
   - Compatibility layer: compatibility_layer.md
   - Software layer: software_layer.md
