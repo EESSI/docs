@@ -19,7 +19,9 @@ nav:
     - Overview: filesystem_layer.md
     - filesystem_layer/stratum1.md
   - Compatibility layer: compatibility_layer.md
-  - Software layer: software_layer.md
+  - Software layer:
+    - Overview: software_layer.md
+    - software_layer/build_nodes.md
   - Pilot repository: pilot.md
   - Software testing: software_testing.md
   - Project partners: partners.md
@@ -36,6 +38,8 @@ markdown_extensions:
   - pymdownx.superfences
   # tabbed contents
   - pymdownx.tabbed
+  # clickable details
+  - pymdownx.details
   - toc:
       permalink: true
 extra:
