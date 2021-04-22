@@ -62,8 +62,8 @@ ansible-playbook -b [-K] -e @inventory/local_site_specific_vars.yml stratum1.yml
 
 Option2:
 
-Create a ssh key pair and make sure the ansible-host-keys.pub is in the $HOME/.ssh/authorized_keys file
-on your Stratum 1 server.
+Create a ssh key pair and make sure the `ansible-host-keys.pub` is in the
+`$HOME/.ssh/authorized_keys` file on your Stratum 1 server.
 
 ```bash
 ssh-keygen -b 2048 -t rsa -f ~/.ssh/ansible-host-keys -q -N ""
