@@ -38,17 +38,49 @@ If you want to customize it, for instance for limiting the access to the Stratum
 and point to it by setting `local_stratum1_cvmfs_squid_conf_src` in `inventory/local_site_specific_vars.yml`.
 See the comments in the example file for more details.
 
-Make sure that you have added the hostname or IP address of your server to the `hosts` file, and finally install the Stratum 1 using:
+Start by installing Ansible:
+
+```bash
+sudo yum install -y ansible
+```
+
+Then install Ansible roles for EESSI:
+
+```bash
+ansible-galaxy role install -r requirements.yml -p ./roles --force
+```
+
+Make sure that you have added the hostname or IP address of your server to the
+`hosts` file. Finally install the Stratum 1 using one of the two following options.
+
+Option 1:
 
 ``` bash
 # -b to run as root, optionally use -K if a sudo password is required
 ansible-playbook -b [-K] -e @inventory/local_site_specific_vars.yml stratum1.yml
 ```
 
-This will automatically make replicas of all the repositories defined in `group_vars/all.yml`.
+Option2:
+
+Create a ssh keypair and make sure the ansible-host-keys.pub is in the $HOME/.ssh/authorized_keys file
+on your Stratum 1 server.
+
+```bash
+ssh-keygen -b 2048 -t rsa -f ~/.ssh/ansible-host-keys -q -N ""
+```
+
+Then run the playbook:
+
+```bash
+ansible-playbook -b --private-key ~/.ssh/ansible-host-keys -e @inventory/local_site_specific_vars.yml stratum1.yml
+```
+
+Running the playbook will automatically make replicas of all the repositories defined in `group_vars/all.yml`.
 
 
 ## Step 2: request a firewall exception
+
+(This step is not implemented yet and can be skipped)
 
 You can request a firewall exception rule to be added for your Stratum 1 server by
 [opening an issue on the GitHub page of the filesystem layer repository](https://github.com/EESSI/filesystem-layer/issues/new).
