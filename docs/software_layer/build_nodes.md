@@ -46,6 +46,18 @@ Requirements:
 * There should be **no automatic cleanup of old files** via a cron job on this local filesystem.
 * Try to make sure the directory is unique (not used by anything else).
 
+NB.
+If you are going to install on a separate drive (due to lack of space on /), then you need to set some variables to 
+point to that location. You will also need to bind mount it in the `singularity` command. Let's say that you drive is 
+mounted in /srt. Then you change the relevant commands below to this:
+```shell
+export EESSI_TMPDIR=/srt/$USER/EESSI
+mkdir -p $EESSI_TMPDIR
+mkdir /srt/tmp
+export SINGULARITY_BIND="$EESSI_TMPDIR/var-run-cvmfs:/var/run/cvmfs,$EESSI_TMPDIR/var-lib-cvmfs:/var/lib/cvmfs,/srt/tmp:/tmp"
+singularity shell -B /srt --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://eessi/fuse-overlay:debian10-$(uname -m)
+```
+
 We will assume that `/tmp/$USER/EESSI` meets these requirements:
 
 ```shell
