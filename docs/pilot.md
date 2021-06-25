@@ -39,21 +39,18 @@ The container image can be used directly by Singularity (no prior download requi
   export SINGULARITY_HOME="/tmp/$USER/home:/home/$USER"
   ```
 
-* Start the container using `singularity shell`, using `--fusemount` to mount the EESSI config and pilot repositories
+* Start the container using `singularity shell`, using `--fusemount` to mount the EESSI pilot repository
   (using the `cvmfs2` command that is included in the container image):
   ```shell
-  export EESSI_CONFIG="container:cvmfs2 cvmfs-config.eessi-hpc.org /cvmfs/cvmfs-config.eessi-hpc.org"
   export EESSI_PILOT="container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org"
-  singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://ghcr.io/eessi/client-pilot:centos7
+  singularity shell --fusemount "$EESSI_PILOT" docker://ghcr.io/eessi/client-pilot:centos7
   ```
 
- * This should give you a shell in the container, where the EESSI config and pilot repositories are mounted:
+ * This should give you a shell in the container, where the EESSI pilot repository is mounted:
    ```
-   $ singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://ghcr.io/eessi/client-pilot:centos7
+   $ singularity shell --fusemount "$EESSI_PILOT" docker://ghcr.io/eessi/client-pilot:centos7
    INFO:    Using cached SIF image
    CernVM-FS: pre-mounted on file descriptor 3
-   CernVM-FS: pre-mounted on file descriptor 3
-   CernVM-FS: loading Fuse module... done
    CernVM-FS: loading Fuse module... done
    Singularity>
    ```

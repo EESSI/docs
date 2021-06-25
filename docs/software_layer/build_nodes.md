@@ -55,7 +55,7 @@ export EESSI_TMPDIR=/srt/$USER/EESSI
 mkdir -p $EESSI_TMPDIR
 mkdir /srt/tmp
 export SINGULARITY_BIND="$EESSI_TMPDIR/var-run-cvmfs:/var/run/cvmfs,$EESSI_TMPDIR/var-lib-cvmfs:/var/lib/cvmfs,/srt/tmp:/tmp"
-singularity shell -B /srt --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://ghcr.io/eessi/build-node:debian10
+singularity shell -B /srt --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://ghcr.io/eessi/build-node:debian10
 ```
 
 We will assume that `/tmp/$USER/EESSI` meets these requirements:
@@ -83,7 +83,6 @@ export SINGULARITY_HOME="$EESSI_TMPDIR/home:/home/$USER"
 Define values to pass to ``--fusemount` in ``singularity`` command:
 
 ```shell
-export EESSI_CONFIG="container:cvmfs2 cvmfs-config.eessi-hpc.org /cvmfs/cvmfs-config.eessi-hpc.org"
 export EESSI_PILOT_READONLY="container:cvmfs2 pilot.eessi-hpc.org /cvmfs_ro/pilot.eessi-hpc.org"
 export EESSI_PILOT_WRITABLE_OVERLAY="container:fuse-overlayfs -o lowerdir=/cvmfs_ro/pilot.eessi-hpc.org -o upperdir=$EESSI_TMPDIR/overlay-upper -o workdir=$EESSI_TMPDIR/overlay-work /cvmfs/pilot.eessi-hpc.org"
 ```
@@ -92,7 +91,7 @@ Start the container (which includes Debian 10, [CernVM-FS](https://cernvm.cern.c
 [fuse-overlayfs](https://github.com/containers/fuse-overlayfs)):
 
 ```shell
-singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://ghcr.io/eessi/build-node:debian10
+singularity shell --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://ghcr.io/eessi/build-node:debian10
 ```
 
 Once the container image has been downloaded and converted to a Singularity image (SIF format),
