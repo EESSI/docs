@@ -1,0 +1,1018 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/pilot/">
+      
+      <link rel="icon" href="../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>Pilot repository - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pilot-software-stack-202103" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pilot repository
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/EESSI/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/EESSI/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Project overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Filesystem layer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Filesystem layer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Filesystem layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filesystem_layer/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filesystem_layer/stratum1/" class="md-nav__link">
+        Setting up a Stratum 1
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatibility_layer/" class="md-nav__link">
+        Compatibility layer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Software layer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Software layer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Software layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software_layer/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software_layer/build_nodes/" class="md-nav__link">
+        Build nodes
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Pilot repository
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Pilot repository
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pilot-software-stack-202103" class="md-nav__link">
+    Pilot software stack (2021.03)
+  </a>
+  
+    <nav class="md-nav" aria-label="Pilot software stack (2021.03)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting-problems" class="md-nav__link">
+    Reporting problems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-eessi-pilot-repository-through-singularity" class="md-nav__link">
+    Accessing the EESSI pilot repository through Singularity
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the EESSI pilot repository through Singularity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-installation" class="md-nav__link">
+    Standard installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-eessi-environment" class="md-nav__link">
+    Setting up the EESSI environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-eessi-pilot-software-stack" class="md-nav__link">
+    Testing the EESSI pilot software stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#giving-feedback-or-reporting-problems" class="md-nav__link">
+    Giving feedback or reporting problems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-software" class="md-nav__link">
+    Available software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-and-micro-architecture-support" class="md-nav__link">
+    Architecture and micro-architecture support
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture and micro-architecture support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x86_64" class="md-nav__link">
+    x86_64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aarch64arm64" class="md-nav__link">
+    aarch64/arm64
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild-configuration" class="md-nav__link">
+    EasyBuild configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software_testing/" class="md-nav__link">
+        Software testing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../partners/" class="md-nav__link">
+        Project partners
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact info
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pilot-software-stack-202103" class="md-nav__link">
+    Pilot software stack (2021.03)
+  </a>
+  
+    <nav class="md-nav" aria-label="Pilot software stack (2021.03)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caveats" class="md-nav__link">
+    Caveats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting-problems" class="md-nav__link">
+    Reporting problems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-eessi-pilot-repository-through-singularity" class="md-nav__link">
+    Accessing the EESSI pilot repository through Singularity
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessing the EESSI pilot repository through Singularity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-installation" class="md-nav__link">
+    Standard installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-the-eessi-environment" class="md-nav__link">
+    Setting up the EESSI environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-the-eessi-pilot-software-stack" class="md-nav__link">
+    Testing the EESSI pilot software stack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#giving-feedback-or-reporting-problems" class="md-nav__link">
+    Giving feedback or reporting problems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-software" class="md-nav__link">
+    Available software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-and-micro-architecture-support" class="md-nav__link">
+    Architecture and micro-architecture support
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture and micro-architecture support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x86_64" class="md-nav__link">
+    x86_64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aarch64arm64" class="md-nav__link">
+    aarch64/arm64
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild-configuration" class="md-nav__link">
+    EasyBuild configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/EESSI/docs/edit/main/docs/pilot.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Pilot repository</h1>
+                
+                <h2 id="pilot-software-stack-202103">Pilot software stack (2021.03)<a class="headerlink" href="#pilot-software-stack-202103" title="Permanent link">&para;</a></h2>
+<h3 id="caveats">Caveats<a class="headerlink" href="#caveats" title="Permanent link">&para;</a></h3>
+<p>The current EESSI pilot software stack (version 2021.03) is the 5th iteration,
+and there are some known issues and limitations, please take these into account:</p>
+<ul>
+<li>First of all: the EESSI pilot software stack is <strong>NOT READY FOR PRODUCTION!</strong></li>
+</ul>
+<p>Do not use it for production work, and be careful when testing it on production systems!</p>
+<h3 id="reporting-problems">Reporting problems<a class="headerlink" href="#reporting-problems" title="Permanent link">&para;</a></h3>
+<p>If you notice any problems, please report them via https://github.com/EESSI/software-layer/issues.</p>
+<h3 id="accessing-the-eessi-pilot-repository-through-singularity">Accessing the EESSI pilot repository through Singularity<a class="headerlink" href="#accessing-the-eessi-pilot-repository-through-singularity" title="Permanent link">&para;</a></h3>
+<p>The easiest way to access the EESSI pilot repository is by using Singularity.
+If Singularity is installed already, no admin privileges are required. No other software is needed either on the host.</p>
+<p>A container image is available in the GitHub Container Registry 
+(see <a href="https://github.com/EESSI/filesystem-layer/pkgs/container/client-pilot">https://github.com/EESSI/filesystem-layer/pkgs/container/client-pilot</a>).
+It only contains a minimal operating system + the necessary packages to access the EESSI pilot repository through CernVM-FS,
+and it is suitable for <code>aarch64</code>, <code>ppc64le</code>, and <code>x86_64</code>.</p>
+<p>The container image can be used directly by Singularity (no prior download required), as follows:</p>
+<ul>
+<li>
+<p>First, create some local directories in <code>/tmp/$USER</code> which will be bind mounted in the container:
+  <div class="highlight"><pre><span></span><code>mkdir -p /tmp/<span class="nv">$USER</span>/<span class="o">{</span>var-lib-cvmfs,var-run-cvmfs,home<span class="o">}</span>
+</code></pre></div>
+  These provides space for the CernVM-FS cache, and an empty home directory to use in the container.</p>
+</li>
+<li>
+<p>Set the <code>$SINGULARITY_BIND</code> and <code>$SINGULARITY_HOME</code> environment variables to configure Singularity:
+  <div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">SINGULARITY_BIND</span><span class="o">=</span><span class="s2">&quot;/tmp/</span><span class="nv">$USER</span><span class="s2">/var-run-cvmfs:/var/run/cvmfs,/tmp/</span><span class="nv">$USER</span><span class="s2">/var-lib-cvmfs:/var/lib/cvmfs&quot;</span>
+<span class="nb">export</span> <span class="nv">SINGULARITY_HOME</span><span class="o">=</span><span class="s2">&quot;/tmp/</span><span class="nv">$USER</span><span class="s2">/home:/home/</span><span class="nv">$USER</span><span class="s2">&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Start the container using <code>singularity shell</code>, using <code>--fusemount</code> to mount the EESSI pilot repository
+  (using the <code>cvmfs2</code> command that is included in the container image):
+  <div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">EESSI_PILOT</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org&quot;</span>
+singularity shell --fusemount <span class="s2">&quot;</span><span class="nv">$EESSI_PILOT</span><span class="s2">&quot;</span> docker://ghcr.io/eessi/client-pilot:centos7
+</code></pre></div></p>
+</li>
+<li>
+<p>This should give you a shell in the container, where the EESSI pilot repository is mounted:
+   <div class="highlight"><pre><span></span><code>$ singularity shell --fusemount &quot;$EESSI_PILOT&quot; docker://ghcr.io/eessi/client-pilot:centos7
+INFO:    Using cached SIF image
+CernVM-FS: pre-mounted on file descriptor 3
+CernVM-FS: loading Fuse module... done
+Singularity&gt;
+</code></pre></div></p>
+</li>
+<li>It is possible that you see some scary looking warnings, but those can be ignored for now.</li>
+</ul>
+<p>To verify that things are working, check the contents of the <code>/cvmfs/pilot.eessi-hpc.org/2021.03</code> directory:
+   <div class="highlight"><pre><span></span><code>Singularity&gt; ls /cvmfs/pilot.eessi-hpc.org/2021.03
+compat  init  software
+</code></pre></div></p>
+<h4 id="standard-installation">Standard installation<a class="headerlink" href="#standard-installation" title="Permanent link">&para;</a></h4>
+<p>For those with privileges on their system, there are a number of example installation scripts for different architectures
+and operating systems available in the <a href="https://github.com/EESSI/eessi-demo/tree/main/scripts">EESSI demo repository</a>.</p>
+<p>Here we prefer the Singularity approach as we can guarantee that the container image is up to date.</p>
+<h3 id="setting-up-the-eessi-environment">Setting up the EESSI environment<a class="headerlink" href="#setting-up-the-eessi-environment" title="Permanent link">&para;</a></h3>
+<p>Once you have the EESSI pilot repository mounted, you can set up the environment by sourcing the provided init script:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> /cvmfs/pilot.eessi-hpc.org/2021.03/init/bash
+</code></pre></div>
+<p>If all goes well, you should see output like this:</p>
+<div class="highlight"><pre><span></span><code>Singularity&gt; <span class="nb">source</span> /cvmfs/pilot.eessi-hpc.org/2021.03/init/bash
+Found EESSI pilot repo @ /cvmfs/pilot.eessi-hpc.org/2021.03!
+Using x86_64/intel/haswell as software subdirectory.
+Using /cvmfs/pilot.eessi-hpc.org/2021.03/software/linux/x86_64/intel/haswell/modules/all as the directory to be added to MODULEPATH.
+Found Lmod configuration file at /cvmfs/pilot.eessi-hpc.org/2021.03/software/linux/x86_64/intel/haswell/.lmod/lmodrc.lua
+Initializing Lmod...
+Prepending /cvmfs/pilot.eessi-hpc.org/2021.03/software/linux/x86_64/intel/haswell/modules/all to <span class="nv">$MODULEPATH</span>...
+Environment <span class="nb">set</span> up to use EESSI pilot software stack, have fun!
+<span class="o">[</span>EESSI pilot <span class="m">2021</span>.03<span class="o">]</span> $ 
+</code></pre></div>
+<p>Now you're all set up! Go ahead and explore the software stack using "<code>module avail</code>", and go wild with testing the available software installations!</p>
+<h3 id="testing-the-eessi-pilot-software-stack">Testing the EESSI pilot software stack<a class="headerlink" href="#testing-the-eessi-pilot-software-stack" title="Permanent link">&para;</a></h3>
+<p>Please test the EESSI pilot software stack as you see fit: running simple commands, performing small calculations or running small benchmarks, etc.</p>
+<p>Test scripts that have been verified to work correctly using the pilot software stack are available at <a href="https://github.com/EESSI/software-layer/tree/main/tests">https://github.com/EESSI/software-layer/tree/main/tests</a> .</p>
+<h3 id="giving-feedback-or-reporting-problems">Giving feedback or reporting problems<a class="headerlink" href="#giving-feedback-or-reporting-problems" title="Permanent link">&para;</a></h3>
+<p>Any feedback is welcome, and questions or problems reports are welcome as well, through one of the EESSI communication channels:</p>
+<ul>
+<li>(<strong>preferred!</strong>) EESSI <code>software-layer</code> GitHub repository: <a href="https://github.com/EESSI/software-layer/issues">https://github.com/EESSI/software-layer/issues</a></li>
+<li>EESSI mailing list (<code>eessi@list.rug.nl</code>)</li>
+<li>EESSI Slack: <a href="https://eessi-hpc.slack.com">https://eessi-hpc.slack.com</a> (get an invite via <a href="https://www.eessi-hpc.org/join">https://www.eessi-hpc.org/join</a>)</li>
+<li>monthly EESSI meetings (first Thursday of the month at 2pm CEST)</li>
+</ul>
+<h3 id="available-software">Available software<a class="headerlink" href="#available-software" title="Permanent link">&para;</a></h3>
+<p><em>(last update: Apr 19th 2021)</em></p>
+<p>EESSI currently supports the following HPC applications as well as all their dependencies:</p>
+<ul>
+<li>GROMACS (2020.1)</li>
+<li>OpenFOAM (v2006 and 8)</li>
+<li>R (4.0.0) + R-bundle-Bioconductor (3.11) + RStudio Server (1.3.1093)</li>
+<li>TensorFlow (2.3.1) <em>(currently not available on <code>ppc64le</code>)</em></li>
+<li>OSU-Micro-Benchmarks (5.6.3)</li>
+<li>ReFrame (3.5.1)</li>
+<li>Spark (3.1.1)</li>
+<li>IPython (7.15.0)</li>
+</ul>
+<div class="highlight"><pre><span></span><code>[EESSI pilot 2020.13] $ module --nx avail
+
+------------------------ /cvmfs/pilot.eessi-hpc.org/2021.03/software/linux/x86_64/intel/haswell/modules/all -------------------------
+   ant/1.10.8-Java-11                                              MariaDB-connector-c/3.1.7-GCCcore-9.3.0
+   Arrow/0.17.1-foss-2020a-Python-3.8.2                            matplotlib/3.2.1-foss-2020a-Python-3.8.2
+   Bazel/3.6.0-GCCcore-9.3.0                                       Mesa/20.0.2-GCCcore-9.3.0
+   Bison/3.5.3-GCCcore-9.3.0                                       Meson/0.55.1-GCCcore-9.3.0-Python-3.8.2
+   Boost/1.72.0-gompi-2020a                                        METIS/5.1.0-GCCcore-9.3.0
+   cairo/1.16.0-GCCcore-9.3.0                                      MPFR/4.0.2-GCCcore-9.3.0
+   CGAL/4.14.3-gompi-2020a-Python-3.8.2                            NASM/2.14.02-GCCcore-9.3.0
+   CMake/3.16.4-GCCcore-9.3.0                                      ncdf4/1.17-foss-2020a-R-4.0.0
+   code-server/3.7.3                                               netCDF/4.7.4-gompi-2020a
+   DB/18.1.32-GCCcore-9.3.0                                        nettle/3.6-GCCcore-9.3.0
+   double-conversion/3.1.5-GCCcore-9.3.0                           networkx/2.4-foss-2020a-Python-3.8.2
+   Doxygen/1.8.17-GCCcore-9.3.0                                    Ninja/1.10.0-GCCcore-9.3.0
+   EasyBuild/4.3.4                                                 NLopt/2.6.1-GCCcore-9.3.0
+   Eigen/3.3.7-GCCcore-9.3.0                                       NSPR/4.25-GCCcore-9.3.0
+   expat/2.2.9-GCCcore-9.3.0                                       NSS/3.51-GCCcore-9.3.0
+   FFmpeg/4.2.2-GCCcore-9.3.0                                      nsync/1.24.0-GCCcore-9.3.0
+   FFTW/3.3.8-gompi-2020a                                          numactl/2.0.13-GCCcore-9.3.0
+   flatbuffers/1.12.0-GCCcore-9.3.0                                OpenBLAS/0.3.9-GCC-9.3.0
+   fontconfig/2.13.92-GCCcore-9.3.0                                OpenFOAM/v2006-foss-2020a
+   foss/2020a                                                      OpenFOAM/8-foss-2020a                              (D)
+   freetype/2.10.1-GCCcore-9.3.0                                   OpenMPI/4.0.3-GCC-9.3.0
+   FriBidi/1.0.9-GCCcore-9.3.0                                     OpenPGM/5.2.122-GCCcore-9.3.0
+   GCC/9.3.0                                                       OSU-Micro-Benchmarks/5.6.3-gompi-2020a
+   GCCcore/9.3.0                                                   Pango/1.44.7-GCCcore-9.3.0
+   Ghostscript/9.52-GCCcore-9.3.0                                  ParaView/5.8.0-foss-2020a-Python-3.8.2-mpi
+   giflib/5.2.1-GCCcore-9.3.0                                      PCRE/8.44-GCCcore-9.3.0
+   git/2.23.0-GCCcore-9.3.0-nodocs                                 PCRE2/10.34-GCCcore-9.3.0
+   GLib/2.64.1-GCCcore-9.3.0                                       Perl/5.30.2-GCCcore-9.3.0
+   GLPK/4.65-GCCcore-9.3.0                                         pixman/0.38.4-GCCcore-9.3.0
+   GMP/6.2.0-GCCcore-9.3.0                                         pkg-config/0.29.2-GCCcore-9.3.0
+   gnuplot/5.2.8-GCCcore-9.3.0                                     pkgconfig/1.5.1-GCCcore-9.3.0-Python-3.8.2
+   GObject-Introspection/1.64.0-GCCcore-9.3.0-Python-3.8.2         PMIx/3.1.5-GCCcore-9.3.0
+   gompi/2020a                                                     poetry/1.0.9-GCCcore-9.3.0-Python-3.8.2
+   groff/1.22.4-GCCcore-9.3.0                                      protobuf-python/3.13.0-foss-2020a-Python-3.8.2
+   GROMACS/2020.1-foss-2020a-Python-3.8.2                          protobuf/3.13.0-GCCcore-9.3.0
+   GSL/2.6-GCC-9.3.0                                               pybind11/2.4.3-GCCcore-9.3.0-Python-3.8.2
+   gzip/1.10-GCCcore-9.3.0                                         Python/2.7.18-GCCcore-9.3.0
+   h5py/2.10.0-foss-2020a-Python-3.8.2                             Python/3.8.2-GCCcore-9.3.0                         (D)
+   HarfBuzz/2.6.4-GCCcore-9.3.0                                    PyYAML/5.3-GCCcore-9.3.0
+   HDF5/1.10.6-gompi-2020a                                         Qt5/5.14.1-GCCcore-9.3.0
+   hwloc/2.2.0-GCCcore-9.3.0                                       R-bundle-Bioconductor/3.11-foss-2020a-R-4.0.0
+   ICU/66.1-GCCcore-9.3.0                                          R/4.0.0-foss-2020a
+   ImageMagick/7.0.10-1-GCCcore-9.3.0                              re2c/1.3-GCCcore-9.3.0
+   IPython/7.15.0-foss-2020a-Python-3.8.2                          ReFrame/3.5.1
+   JasPer/2.0.14-GCCcore-9.3.0                                     RStudio-Server/1.3.1093-foss-2020a-Java-11-R-4.0.0
+   Java/11.0.2                                             (11)    ScaLAPACK/2.1.0-gompi-2020a
+   JsonCpp/1.9.4-GCCcore-9.3.0                                     scikit-build/0.10.0-foss-2020a-Python-3.8.2
+   LAME/3.100-GCCcore-9.3.0                                        SciPy-bundle/2020.03-foss-2020a-Python-3.8.2
+   libcerf/1.13-GCCcore-9.3.0                                      SCOTCH/6.0.9-gompi-2020a
+   libdrm/2.4.100-GCCcore-9.3.0                                    snappy/1.1.8-GCCcore-9.3.0
+   libevent/2.1.11-GCCcore-9.3.0                                   Spark/3.1.1-foss-2020a-Python-3.8.2
+   libfabric/1.11.0-GCCcore-9.3.0                                  SQLite/3.31.1-GCCcore-9.3.0
+   libffi/3.3-GCCcore-9.3.0                                        SWIG/4.0.1-GCCcore-9.3.0
+   libgd/2.3.0-GCCcore-9.3.0                                       Szip/2.1.1-GCCcore-9.3.0
+   libGLU/9.0.1-GCCcore-9.3.0                                      Tcl/8.6.10-GCCcore-9.3.0
+   libglvnd/1.2.0-GCCcore-9.3.0                                    TensorFlow/2.3.1-foss-2020a-Python-3.8.2
+   libiconv/1.16-GCCcore-9.3.0                                     Tk/8.6.10-GCCcore-9.3.0
+   libjpeg-turbo/2.0.4-GCCcore-9.3.0                               Tkinter/3.8.2-GCCcore-9.3.0
+   libpciaccess/0.16-GCCcore-9.3.0                                 UCX/1.8.0-GCCcore-9.3.0
+   libpng/1.6.37-GCCcore-9.3.0                                     UDUNITS/2.2.26-foss-2020a
+   libsndfile/1.0.28-GCCcore-9.3.0                                 UnZip/6.0-GCCcore-9.3.0
+   libsodium/1.0.18-GCCcore-9.3.0                                  X11/20200222-GCCcore-9.3.0
+   LibTIFF/4.1.0-GCCcore-9.3.0                                     x264/20191217-GCCcore-9.3.0
+   libunwind/1.3.1-GCCcore-9.3.0                                   x265/3.3-GCCcore-9.3.0
+   libxml2/2.9.10-GCCcore-9.3.0                                    xorg-macros/1.19.2-GCCcore-9.3.0
+   libyaml/0.2.2-GCCcore-9.3.0                                     Xvfb/1.20.9-GCCcore-9.3.0
+   LittleCMS/2.9-GCCcore-9.3.0                                     Yasm/1.3.0-GCCcore-9.3.0
+   LLVM/9.0.1-GCCcore-9.3.0                                        ZeroMQ/4.3.2-GCCcore-9.3.0
+   LMDB/0.9.24-GCCcore-9.3.0                                       Zip/3.0-GCCcore-9.3.0
+   lz4/1.9.2-GCCcore-9.3.0                                         zstd/1.4.4-GCCcore-9.3.0
+   Mako/1.1.2-GCCcore-9.3.0
+</code></pre></div>
+<h3 id="architecture-and-micro-architecture-support">Architecture and micro-architecture support<a class="headerlink" href="#architecture-and-micro-architecture-support" title="Permanent link">&para;</a></h3>
+<h4 id="x86_64">x86_64<a class="headerlink" href="#x86_64" title="Permanent link">&para;</a></h4>
+<ul>
+<li>generic (currently implies <code>march=x86-64</code> and <code>-mtune=generic</code>)</li>
+<li>AMD<ul>
+<li>zen2 (Rome)</li>
+</ul>
+</li>
+<li>Intel<ul>
+<li>haswell</li>
+<li>skylake_avx512</li>
+</ul>
+</li>
+</ul>
+<h4 id="aarch64arm64">aarch64/arm64<a class="headerlink" href="#aarch64arm64" title="Permanent link">&para;</a></h4>
+<ul>
+<li>generic (currently implies <code>-march=armv8-a</code> and <code>-mtune=generic</code>)</li>
+<li>AWS Graviton2</li>
+</ul>
+<h3 id="easybuild-configuration">EasyBuild configuration<a class="headerlink" href="#easybuild-configuration" title="Permanent link">&para;</a></h3>
+<p>EasyBuild v4.3.4 was used to install the software in the <code>2021.03</code> version of the pilot repository.
+For some installations pull requests with changes that will be included in later EasyBuild versions were leveraged,
+see the <a href="https://github.com/EESSI/software-layer/blob/main/EESSI-pilot-install-software.sh">build script</a> that was used.</p>
+<p>An example configuration of the build environment based on https://github.com/EESSI/software-layer can be seen here:
+<div class="highlight"><pre><span></span><code>$ eb --show-config
+#
+# Current EasyBuild configuration
+# (C: command line argument, D: default value, E: environment variable, F: configuration file)
+#
+buildpath         (E) = /tmp/eessi-build/easybuild/build
+containerpath     (E) = /tmp/eessi-build/easybuild/containers
+debug             (E) = True
+filter-deps       (E) = Autoconf, Automake, Autotools, binutils, bzip2, cURL, DBus, flex, gettext, gperf, help2man, intltool, libreadline, libtool, Lua, M4, makeinfo, ncurses, util-linux, XZ, zlib
+filter-env-vars   (E) = LD_LIBRARY_PATH
+hooks             (E) = /home/eessi-build/software-layer/eb_hooks.py
+ignore-osdeps     (E) = True
+installpath       (E) = /cvmfs/pilot.eessi-hpc.org/2021.03/software/linux/x86_64/intel/haswell
+module-extensions (E) = True
+packagepath       (E) = /tmp/eessi-build/easybuild/packages
+prefix            (E) = /tmp/eessi-build/easybuild
+repositorypath    (E) = /tmp/eessi-build/easybuild/ebfiles_repo
+robot-paths       (D) = /cvmfs/pilot.eessi-hpc.org/2021.03/software/linux/x86_64/intel/haswell/software/EasyBuild/4.3.4/easybuild/easyconfigs
+rpath             (E) = True
+sourcepath        (E) = /tmp/eessi-build/easybuild/sources:
+sysroot           (E) = /cvmfs/pilot.eessi-hpc.org/2021.03/compat/linux/x86_64
+trace             (E) = True
+zip-logs          (E) = bzip2
+</code></pre></div></p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 25, 2021</span>
+      
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../software_layer/build_nodes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Build nodes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Build nodes
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../software_testing/" class="md-footer__link md-footer__link--next" aria-label="Next: Software testing" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Software testing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+    
+  </body>
+</html>
