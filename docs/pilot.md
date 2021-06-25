@@ -20,8 +20,10 @@ If you notice any problems, please report them via https://github.com/EESSI/soft
 The easiest way to access the EESSI pilot repository is by using Singularity.
 If Singularity is installed already, no admin privileges are required. No other software is needed either on the host.
 
-A container image is available in Docker Hub (see [https://hub.docker.com/r/eessi/client-pilot](https://hub.docker.com/r/eessi/client-pilot)).
-It only contains a minimal operating system + the necessary packages to access the EESSI pilot repository through CernVM-FS.
+A container image is available in the GitHub Container Registry 
+(see [https://github.com/EESSI/filesystem-layer/pkgs/container/client-pilot](https://github.com/EESSI/filesystem-layer/pkgs/container/client-pilot)).
+It only contains a minimal operating system + the necessary packages to access the EESSI pilot repository through CernVM-FS,
+and it is suitable for `aarch64`, `ppc64le`, and `x86_64`.
 
 The container image can be used directly by Singularity (no prior download required), as follows:
 
@@ -42,12 +44,12 @@ The container image can be used directly by Singularity (no prior download requi
   ```shell
   export EESSI_CONFIG="container:cvmfs2 cvmfs-config.eessi-hpc.org /cvmfs/cvmfs-config.eessi-hpc.org"
   export EESSI_PILOT="container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org"
-  singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-$(uname -m)
+  singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://ghcr.io/eessi/client-pilot:centos7
   ```
 
  * This should give you a shell in the container, where the EESSI config and pilot repositories are mounted:
    ```
-   $ singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://eessi/client-pilot:centos7-$(uname -m)
+   $ singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT" docker://ghcr.io/eessi/client-pilot:centos7
    INFO:    Using cached SIF image
    CernVM-FS: pre-mounted on file descriptor 3
    CernVM-FS: pre-mounted on file descriptor 3
@@ -67,7 +69,7 @@ The container image can be used directly by Singularity (no prior download requi
 For those with privileges on their system, there are a number of example installation scripts for different architectures
 and operating systems available in the [EESSI demo repository](https://github.com/EESSI/eessi-demo/tree/main/scripts).
 
-Here we prefer the Singularity approach as we can guarantee that the docker image is up to date.
+Here we prefer the Singularity approach as we can guarantee that the container image is up to date.
 
 ### Setting up the EESSI environment
 

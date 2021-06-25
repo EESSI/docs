@@ -55,7 +55,7 @@ export EESSI_TMPDIR=/srt/$USER/EESSI
 mkdir -p $EESSI_TMPDIR
 mkdir /srt/tmp
 export SINGULARITY_BIND="$EESSI_TMPDIR/var-run-cvmfs:/var/run/cvmfs,$EESSI_TMPDIR/var-lib-cvmfs:/var/lib/cvmfs,/srt/tmp:/tmp"
-singularity shell -B /srt --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://eessi/fuse-overlay:debian10-$(uname -m)
+singularity shell -B /srt --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://ghcr.io/eessi/build-node:debian10
 ```
 
 We will assume that `/tmp/$USER/EESSI` meets these requirements:
@@ -92,7 +92,7 @@ Start the container (which includes Debian 10, [CernVM-FS](https://cernvm.cern.c
 [fuse-overlayfs](https://github.com/containers/fuse-overlayfs)):
 
 ```shell
-singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://eessi/fuse-overlay:debian10-$(uname -m)
+singularity shell --fusemount "$EESSI_CONFIG" --fusemount "$EESSI_PILOT_READONLY" --fusemount "$EESSI_PILOT_WRITABLE_OVERLAY" docker://ghcr.io/eessi/build-node:debian10
 ```
 
 Once the container image has been downloaded and converted to a Singularity image (SIF format),
