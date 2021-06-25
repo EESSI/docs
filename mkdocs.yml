@@ -1,8 +1,9 @@
 site_name: "European Environment for Scientific Software Installations (EESSI)"
 site_url: https://eessi.github.io/docs/
-google_analytics:
-    - UA-169665333-1
-    - auto
+extra:
+  analytics:
+    provider: google
+    property: UA-169665333-1
 theme:
   name: material
   features:
