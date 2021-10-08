@@ -219,7 +219,7 @@ EESSI currently supports the following HPC applications as well as all their dep
 
 #### ppc64le
 
-  - generic (currently implies `-mcpu=powerpc64le`)
+  - generic
   - power9le
 
 ### EasyBuild configuration
