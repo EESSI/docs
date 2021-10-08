@@ -36,7 +36,7 @@ The container image can be used directly by Singularity (no prior download requi
 * Set the `$SINGULARITY_BIND` and `$SINGULARITY_HOME` environment variables to configure Singularity:
   ```shell
   export SINGULARITY_BIND="/tmp/$USER/var-run-cvmfs:/var/run/cvmfs,/tmp/$USER/var-lib-cvmfs:/var/lib/cvmfs"
-  export SINGULARITY_HOME="/tmp/$USER/home:/home/$USER"
+  export SINGULARITY_HOME="/tmp/$USER/home:$HOME"
   ```
 
 * Start the container using `singularity shell`, using `--fusemount` to mount the EESSI pilot repository
