@@ -126,7 +126,7 @@ curl --head http://bgo-no.stratum1.cvmfs.eessi-infra.org/cvmfs/pilot.eessi-hpc.o
 You can also test access to your Stratum 1 from a client, for which you will have to install the CVMFS
 [client](https://github.com/EESSI/filesystem-layer#clients). 
 
-Then you run this commands to add you newly created Stratum 1:
+Then run the following command to add your newly created Stratum 1 to the existing list of EESSI Stratum 1 servers by creating a local CVMFS configuration file:
 
 ```bash
 echo 'CVMFS_SERVER_URL="http://<S1_IP>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi-hpc.org.local
