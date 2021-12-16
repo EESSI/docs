@@ -150,7 +150,7 @@ Finally, verify that the client connects to your new Stratum 1 by running:
 cvmfs_config stat -v pilot.eessi-hpc.org
 ```
 
-This should return:
+Assuming that your new Stratum 1 is the geographically closest one to your client, this should return:
 
 ```bash
 Connection: http://<S1_IP>/cvmfs/pilot.eessi-hpc.org through proxy DIRECT (online)
