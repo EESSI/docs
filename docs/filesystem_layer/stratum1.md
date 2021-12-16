@@ -123,10 +123,8 @@ Example with the Norwegian Stratum 1:
 curl --head http://bgo-no.stratum1.cvmfs.eessi-infra.org/cvmfs/pilot.eessi-hpc.org/.cvmfspublished
 ```
 
-You can also test access to your Stratum 1 from a client
-
-To test it you will have to install the CMVFS
-[`client`](https://github.com/EESSI/filesystem-layer#clients).
+You can also test access to your Stratum 1 from a client, for which you will have to install the CVMFS
+[client](https://github.com/EESSI/filesystem-layer#clients). 
 
 Then you run this commands to add you newly created Stratum 1:
 
