@@ -98,7 +98,7 @@ Make sure to include the IP address of your server.
 ## Step 3: Verification of the Stratum 1
 
 When the playbook has finished your Stratum 1 should be ready. In order to test your Stratum 1, even
-without a client installed, you can use curl.
+without a client installed, you can use `curl`.
 
 ```bash
 curl --head http://url-to-your-stratum1/cvmfs/pilot.eessi-hpc.org/.cvmfspublished
