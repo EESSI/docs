@@ -144,10 +144,7 @@ If you already had configured the client before, you can simply reload the confi
 sudo cvmfs_config reload -c pilot.eessi-hpc.org
 ```
 
-Finally you [`verify`](https://github.com/EESSI/filesystem-layer#client) that
-the client can connect to your Stratum 1.
-
-To check which Stratum 1 you are connected to, run this command:
+Finally, verify that the client connects to your new Stratum 1 by running:
 
 ```bash
 cvmfs_config stat -v pilot.eessi-hpc.org
