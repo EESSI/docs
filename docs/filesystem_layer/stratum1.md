@@ -59,7 +59,7 @@ cvmfs_srv_mount: /srv
 ```
 
 Make sure that you have added the hostname or IP address of your server to the
-`/inventory/hosts` file. Finally install the Stratum 1 using one of the two following options.
+`inventory/hosts` file. Finally, install the Stratum 1 using one of the two following options.
 
 Option 1:
 
