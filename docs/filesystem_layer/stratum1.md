@@ -138,7 +138,7 @@ If this is the first time you set up the client you now run:
 sudo cvmfs_config setup
 ```
 
-If you already have configured a client from before you reload the config:
+If you already had configured the client before, you can simply reload the config:
 
 ```bash
 sudo cvmfs_config reload -c pilot.eessi-hpc.org
