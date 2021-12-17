@@ -59,28 +59,12 @@ cvmfs_srv_mount: /srv
 ```
 
 Make sure that you have added the hostname or IP address of your server to the
-`inventory/hosts` file. Finally, install the Stratum 1 using one of the two following options.
+`inventory/hosts` file. Finally, install the Stratum 1 by running the playbook:
 
-Option 1:
 
 ``` bash
 # -b to run as root, optionally use -K if a sudo password is required
 ansible-playbook -b [-K] -e @inventory/local_site_specific_vars.yml stratum1.yml
-```
-
-Option2:
-
-Create a ssh key pair and make sure the `ansible-host-keys.pub` is in the
-`$HOME/.ssh/authorized_keys` file on your Stratum 1 server.
-
-```bash
-ssh-keygen -b 2048 -t rsa -f ~/.ssh/ansible-host-keys -q -N ""
-```
-
-Then run the playbook:
-
-```bash
-ansible-playbook -b --private-key ~/.ssh/ansible-host-keys -e @inventory/local_site_specific_vars.yml stratum1.yml
 ```
 
 Running the playbook will automatically make replicas of all the repositories defined in `group_vars/all.yml`.
