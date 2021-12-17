@@ -52,7 +52,7 @@ ansible-galaxy role install -r requirements.yml -p ./roles --force
 
 Make sure you have enough space in `/srv` (on the Stratum 1) since the snapshot of the Stratum 0
 will end up there by default. To alter the directory where the snapshot gets copied to you can add
-this variable in `inventory/host_vars/stratum1host`:
+this variable in `inventory/host_vars/<url-or-ip-to-your-stratum1>`:
 
 ```bash
 cvmfs_srv_mount: /srv
