@@ -1,5 +1,3 @@
 # Option 4: Singularity
 
-I guess just linking to the pilot?
-
-[`pilot`](../../pilot.md)
+You can also access the EESSI pilot via [`Singularity`](../../pilot.md#accessing-the-eessi-pilot-repository-through-singularity).
