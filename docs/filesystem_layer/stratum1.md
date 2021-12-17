@@ -51,8 +51,8 @@ ansible-galaxy role install -r requirements.yml -p ./roles --force
 ```
 
 Make sure you have enough space in `/srv` (on the Stratum 1) since the snapshot of the Stratum 0
-will end up there by default. If you want to alter the path where the snapshot gets copied to you
-can edit this variable in `roles/galaxyproject.cvmfs/defaults/main.yml`:
+will end up there by default. To alter the directory where the snapshot gets copied to you can add
+this variable in `inventory/host_vars/stratum1host`:
 
 ```bash
 cvmfs_srv_mount: /srv
@@ -101,20 +101,21 @@ When the playbook has finished your Stratum 1 should be ready. In order to test 
 without a client installed, you can use `curl`.
 
 ```bash
-curl --head http://url-to-your-stratum1/cvmfs/pilot.eessi-hpc.org/.cvmfspublished
+curl --head http://<url-or-ip-to-your-stratum1>/cvmfs/pilot.eessi-hpc.org/.cvmfspublished
 ```
 This should return:
 
 ```bash
 HTTP/1.1 200 OK
 ...
-X-Cache: MISS from url-to-your-proxy
+X-Cache: MISS from <url-or-ip-to-your-stratum1>
 ```
 
 The second time you run it, you should get a cache hit:
 
 ```bash
-X-Cache: HIT from url-to-your-proxy
+X-Cache: HIT from <url-or-ip-to-your-stratum1>
+
 ```
 
 Example with the Norwegian Stratum 1:
@@ -129,7 +130,7 @@ You can also test access to your Stratum 1 from a client, for which you will hav
 Then run the following command to add your newly created Stratum 1 to the existing list of EESSI Stratum 1 servers by creating a local CVMFS configuration file:
 
 ```bash
-echo 'CVMFS_SERVER_URL="http://<S1_IP>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi-hpc.org.local
+echo 'CVMFS_SERVER_URL="http://<url-or-ip-to-your-stratum1>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi-hpc.org.local
 ```
 
 If this is the first time you set up the client you now run:
@@ -153,7 +154,7 @@ cvmfs_config stat -v pilot.eessi-hpc.org
 Assuming that your new Stratum 1 is the geographically closest one to your client, this should return:
 
 ```bash
-Connection: http://<S1_IP>/cvmfs/pilot.eessi-hpc.org through proxy DIRECT (online)
+Connection: http://<url-or-ip-to-your-stratum1>/cvmfs/pilot.eessi-hpc.org through proxy DIRECT (online)
 ```
 
 
