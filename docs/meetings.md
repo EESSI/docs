@@ -18,4 +18,5 @@ More info via https://github.com/EESSI/meetings/wiki
 
 ### 2020
 
+* Meeting in Groningen (NL), 16 Jan 2020
 * Meeting in Delft (NL), 5 Mar 2020
