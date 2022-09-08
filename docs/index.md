@@ -20,6 +20,7 @@ More details about the project are available in the different subsections:
 * [Software layer](software_layer.md)
 * [Pilot repository](pilot.md)
 * [Software testing](software_testing.md)
+* [Meetings](meetings.md)
 * [Project partners](partners.md)
 * [Contact info](contact.md)
 
