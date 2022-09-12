@@ -25,7 +25,9 @@ nav:
     - software_layer/build_nodes.md
   - Pilot repository: pilot.md
   - Software testing: software_testing.md
-  - Meetings: meetings.md
+  - Meetings:
+      - Overview: meetings.md
+      - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
   - Project partners: partners.md
   - Contact info: contact.md
 plugins:
