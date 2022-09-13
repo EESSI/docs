@@ -48,13 +48,13 @@ We envision a mix of presentations, experience reports, demos, and hands-on sess
     - *[11:00-11:30]* **EESSI behind the scenes: infrastructure** *(Terje)*
     - *[11:30-12:00]* **Status on RISC-V support** *(Kenneth)*
 - *[12:00-13:00] Lunch*
-- *[13:00-13:30]* **Status on GPU support** *(Alan)*
-- *[13:30-14:00]* **Status on build-and-deploy bot** *(Thomas)*
-- *[14:00-15:00]* **Discussions/hands-on sessions/hackathon**
-    - **Hands-on with GPUs** *(Alan)*
-    - **Hands-on with bot** *(Thomas/Kenneth)*
+- *[13:00-14:00]* **Discussions/hands-on sessions/hackathon**
+- *[14:00-14:30]* **Status on GPU support** *(Alan)*
+- *[14:30-15:00]* **Status on build-and-deploy bot** *(Thomas)*
 - *[15:00-15:30] Coffee break*
 - *[15:30-17:00]* **Discussions/hands-on sessions/hackathon** (continued)
+    - **Hands-on with GPUs** *(Alan)*
+    - **Hands-on with bot** *(Thomas/Kenneth)*
 - *[19:00-...]* **Group dinner** @ Italia Oggi
     - address: Binnen Bantammerstraat 11, Amsterdam
 
