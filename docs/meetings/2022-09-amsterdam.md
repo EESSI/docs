@@ -32,7 +32,7 @@ We envision a mix of presentations, experience reports, demos, and hands-on sess
     - *[14:00-14:30]* **EESSI use cases** (Kenneth)
     - *[14:30-15:00]* **EESSI for sysadmins**: installing and mounting EESSI (Thomas)
 - *[15:00-15:30] Coffee break*
-- *[15:00-17:00]* **Presentations on EESSI** *(continued)*
+- *[15:30-17:00]* **Presentations on EESSI** *(continued)*
     - *[15:30-16:00]* **Hands-on:** installing EESSI *(Thomas/Kenneth)*
     - *[16:00-16:45]* **ComputeCanada site talk** *(Bart Oldeman, remote)*
     - *[16:45-17:15]* **Magic Castle** *(Felix-Antoine Fortin, remote)*
