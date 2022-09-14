@@ -27,10 +27,10 @@ We envision a mix of presentations, experience reports, demos, and hands-on sess
     - *[10:30-12:00]* **Round table discussion** (*not live-streamed!*)
 - *[12:00-13:00] Lunch*
 - *[13:00-15:00]* **Presentations on EESSI**
-    - *[13:00-13:30]* **Introduction to EESSI**: origins, why and how, etc. (Caspar)
-    - *[13:30-14:00]* **Hands-on**: how to use EESSI with EESSI-demo examples (Kenneth)
-    - *[14:00-14:30]* **EESSI use cases** (Kenneth)
-    - *[14:30-15:00]* **EESSI for sysadmins**: installing and mounting EESSI (Thomas)
+    - *[13:00-13:30]* **Introduction to EESSI** (Caspar) [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-001-introduction-to-EESSI.pdf) - [YouTube stream](https://www.youtube.com/watch?v=XEqb4CWWK4A)]
+    - *[13:30-14:00]* **Hands-on: how to use EESSI** (Kenneth) [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-002-Hands-on-How-to-use-EESSI.pdf) - [YouTube stream](https://www.youtube.com/watch?v=dnaFBmzwXzA)]
+    - *[14:00-14:30]* **EESSI use cases** (Kenneth) [[(slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-003-EESSI-use-cases.pdf) - [YouTube stream](https://www.youtube.com/watch?v=SHqj0a3cfdg)]
+    - *[14:30-15:00]* **EESSI for sysadmins** (Thomas) [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-004-EESSI-for-sysadmins.pdf) - [YouTube stream](https://www.youtube.com/watch?v=Fuykj4MRJno)]
 - *[15:00-15:30] Coffee break*
 - *[15:30-17:00]* **Presentations on EESSI** *(continued)*
     - *[15:30-16:00]* **Hands-on:** installing EESSI *(Thomas/Kenneth)*
