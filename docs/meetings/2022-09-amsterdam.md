@@ -34,28 +34,28 @@ We envision a mix of presentations, experience reports, demos, and hands-on sess
 - *[15:00-15:30] Coffee break*
 - *[15:30-17:00]* **Presentations on EESSI** *(continued)*
     - *[15:30-16:00]* **Hands-on:** installing EESSI *(Thomas/Kenneth)*
-    - *[16:00-16:45]* **ComputeCanada site talk** *(Bart Oldeman, remote)*
-    - *[16:45-17:15]* **Magic Castle** *(Felix-Antoine Fortin, remote)*
-- *[19:00-...]* **Group dinner** @ Saravanaa Bhavan
+    - *[16:00-16:45]* **ComputeCanada site talk** *(Bart Oldeman, remote)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-006-ComputeCanada.pdf) - [YouTube stream](https://www.youtube.com/watch?v=VQ6Y5dHr0mw)]
+    - *[16:45-17:15]* **Magic Castle** *(Felix-Antoine Fortin, remote)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-007-Magic-Castle.pdf) - [YouTube stream](https://www.youtube.com/watch?v=XGnxbIHJLmw)]
+- *[19:00-...]* **Group dinner** @ Saravanaa Bhavan **(sponsored by Dell Technologies)**
     - address: Stadhouderskade 123-124, Amsterdam
 
 ### Thu 15 Sept 2022
 
 - *[09:30-12:00]* More focused presentations on aspects of EESSI
-    - *[09:30-10:00]* **EESSI behind the scenes: compat layer** *(Kenneth/Bob)*
-    - *[10:00-10:30]* **EESSI behind the scenes: software layer** *(Kenneth/Thomas)*
+    - *[09:30-10:00]* **EESSI behind the scenes: compat layer** *(Bob)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-010-EESSI-behind-the-scenes-compat-layer.pdf) - [YouTube stream](https://www.youtube.com/watch?v=QTeIGww88hc)]
+    - *[10:00-10:30]* **EESSI behind the scenes: software layer** *(Kenneth)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-011-EESSI-behind-the-scenes-software-layer.pdf) - [YouTube stream](https://www.youtube.com/watch?v=ZAwrJDev4r4)]
     - *[10:30-11:00] Coffee break*
-    - *[11:00-11:30]* **EESSI behind the scenes: infrastructure** *(Terje)*
-    - *[11:30-12:00]* **Status on RISC-V support** *(Kenneth)*
+    - *[11:00-11:30]* **EESSI behind the scenes: infrastructure** *(Terje)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-012-infrastructure.pdf) - [YouTube stream](https://www.youtube.com/watch?v=IweNoWUxFGQ)]
+    - *[11:30-12:00]* **Status on RISC-V support** *(Kenneth)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-013-RISC-V-support.pdf) - [YouTube stream](https://www.youtube.com/watch?v=havsV_jxJjw)]
 - *[12:00-13:00] Lunch*
 - *[13:00-14:00]* **Discussions/hands-on sessions/hackathon**
-- *[14:00-14:30]* **Status on GPU support** *(Alan)*
-- *[14:30-15:00]* **Status on build-and-deploy bot** *(Thomas)*
+- *[14:00-14:30]* **Status on GPU support** *(Alan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-014-GPU-support.pdf) - [YouTube stream](https://www.youtube.com/watch?v=1pr2OwZIWVU)]
+- *[14:30-15:00]* **Status on build-and-deploy bot** *(Thomas)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-015-status-build-deploy-bot.pdf) - [YouTube stream](https://www.youtube.com/watch?v=c53kjdSDlSo)]
 - *[15:00-15:30] Coffee break*
 - *[15:30-17:00]* **Discussions/hands-on sessions/hackathon** (continued)
     - **Hands-on with GPUs** *(Alan)*
     - **Hands-on with bot** *(Thomas/Kenneth)*
-- *[19:00-...]* **Group dinner** @ Italia Oggi
+- *[19:00-...]* **Group dinner** @ Italia Oggi **(sponsored by HPC-UGent)**
     - address: Binnen Bantammerstraat 11, Amsterdam
 
 ### Fri 16 Sept 2022
