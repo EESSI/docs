@@ -61,18 +61,18 @@ We envision a mix of presentations, experience reports, demos, and hands-on sess
 ### Fri 16 Sept 2022
 
 - *[09:30-12:00]* **Presentations on future work**
-    - *[09:30-10:00]* **Testing in software layer** *(Caspar)*
-    - *[10:00-10:30]* **MultiXscale project** *(Alan/Kenneth)*
+    - *[09:30-10:00]* **Testing in software layer** *(Caspar)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-020-software-testing.pdf) - YouTube stream]
+    - *[10:00-10:30]* **MultiXscale project** *(Alan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-021-MultiXscale.pdf) - YouTube stream]
     - *[10:30-11:00] Coffee break*
-    - *[11:00-11:30]* **Short-term future work** *(Kenneth/Alan/Bob)*
-- *[11:30-12:00]* **Discussion: future management structure of EESSI**
+    - *[11:00-11:30]* **Short-term future work** *(Kenneth)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-022-short-term-future-work.pdf) - YouTube stream]
+- *[11:30-12:00]* **Discussion: future management structure of EESSI** *(Alan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-023-management-structure.pdf) - YouTube stream]
 - *[12:00-13:00] Lunch*
 - *[13:00-14:00]* **Site reports**
-    - **NESSI** *(Thomas)*
-    - **HPCNow!** *(Danilo)*
-    - **Azure?** *(Hugo)*
-    - **Dell?** *(Jaco)*
-- *[14:00-14:30]* **Discussion: what would make or break EESSI for your site?**
+    - **NESSI** *(Thomas)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-024-NESSI.pdf) - YouTube stream]
+    - **NLPL** *(Stephan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-025-site-talks-NLPL.pdf) - YouTube stream]
+    - **HPCNow!** *(Danilo)* [slides (PDF) - YouTube stream]
+    - **Azure** *(Hugo)* [slides (PDF) - YouTube stream]
+- *[14:00-14:30]* **Discussion: what would make or break EESSI for your site?** ([notes](https://hackmd.io/@EESSI/SJe8CkMZs))
 - *[14:30-15:45]* **Discussions/hands-on sessions/hackathon**
     - Hands-on with GPU support *(Alan)*
     - Hands-on with bot *(Thomas/Kenneth)*
