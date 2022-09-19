@@ -61,18 +61,18 @@ We envision a mix of presentations, experience reports, demos, and hands-on sess
 ### Fri 16 Sept 2022
 
 - *[09:30-12:00]* **Presentations on future work**
-    - *[09:30-10:00]* **Testing in software layer** *(Caspar)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-020-software-testing.pdf) - YouTube stream]
-    - *[10:00-10:30]* **MultiXscale project** *(Alan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-021-MultiXscale.pdf) - YouTube stream]
+    - *[09:30-10:00]* **Testing in software layer** *(Caspar)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-020-software-testing.pdf) - [YouTube stream](https://youtu.be/EsK2ACW4pek?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ)]
+    - *[10:00-10:30]* **MultiXscale project** *(Alan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-021-MultiXscale.pdf) - [YouTube stream](https://youtu.be/xWt35V4XXQo?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ)]
     - *[10:30-11:00] Coffee break*
-    - *[11:00-11:30]* **Short-term future work** *(Kenneth)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-022-short-term-future-work.pdf) - YouTube stream]
-- *[11:30-12:00]* **Discussion: future management structure of EESSI** *(Alan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-023-management-structure.pdf) - YouTube stream]
+    - *[11:00-11:30]* **Short-term future work** *(Kenneth)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-022-short-term-future-work.pdf) - [YouTube stream](https://youtu.be/tVhYGz9wrD8?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ)]
+- *[11:30-12:00]* **Discussion: future management structure of EESSI** *(Alan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-023-management-structure.pdf) - [YouTube stream](https://youtu.be/1TP8ZHr31Yg?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ)]
 - *[12:00-13:00] Lunch*
-- *[13:00-14:00]* **Site reports**
-    - **NESSI** *(Thomas)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-024-NESSI.pdf) - YouTube stream]
-    - **NLPL** *(Stephan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-025-site-talks-NLPL.pdf) - YouTube stream]
-    - **HPCNow!** *(Danilo)* [slides (PDF) - YouTube stream]
-    - **Azure** *(Hugo)* [slides (PDF) - YouTube stream]
-- *[14:00-14:30]* **Discussion: what would make or break EESSI for your site?** ([notes](https://hackmd.io/@EESSI/SJe8CkMZs))
+- *[13:00-14:00]* **Site reports** [[YouTube stream](https://youtu.be/c3Smw-54aqI?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ)]
+    - **NESSI** *(Thomas)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-024-NESSI.pdf)]
+    - **NLPL** *(Stephan)* [[slides (PDF)](2022-09-amsterdam/EESSI-community-meeting-2022.09-025-site-talks-NLPL.pdf)]
+    - **HPCNow!** *(Danilo)* [slides (PDF)]
+    - **Azure** *(Hugo)* [slides (PDF)]
+- *[14:00-14:30]* **Discussion: what would make or break EESSI for your site?** ([notes](https://hackmd.io/@EESSI/SJe8CkMZs) - [YouTube stream](https://youtu.be/BZHyPcPnwdI?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ))
 - *[14:30-15:45]* **Discussions/hands-on sessions/hackathon**
     - Hands-on with GPU support *(Alan)*
     - Hands-on with bot *(Thomas/Kenneth)*
