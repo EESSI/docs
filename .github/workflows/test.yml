@@ -3,7 +3,7 @@ name: build documentation
 on: [push, pull_request]
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
     - name: checkout
       uses: actions/checkout@v2
@@ -11,7 +11,7 @@ jobs:
     - name: set up Python
       uses: actions/setup-python@v1
       with:
-        python-version: 3.8
+        python-version: '3.10'
 
     - name: Codespell action
       uses: codespell-project/actions-codespell@master
