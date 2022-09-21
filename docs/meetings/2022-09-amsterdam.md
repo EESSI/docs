@@ -72,8 +72,8 @@ We envision a mix of presentations, experience reports, demos, and hands-on sess
 - *[13:00-14:00]* **Site reports** [[recording](https://youtu.be/c3Smw-54aqI?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ)]
     - **NESSI** *(Thomas)* [[slides](2022-09-amsterdam/EESSI-community-meeting-2022.09-024-NESSI.pdf)]
     - **NLPL** *(Stephan)* [[slides](2022-09-amsterdam/EESSI-community-meeting-2022.09-025-site-talks-NLPL.pdf)]
-    - **HPCNow!** *(Danilo)* [slides]
-    - **Azure** *(Hugo)* [slides]
+    - **HPCNow!** *(Danilo)* [[slides](2022-09-amsterdam/EESSI-community-meeting-2022.09-026-site-talks-HPCNow.pdf)]
+    - **Azure** *(Hugo)* [[slides](2022-09-amsterdam/EESSI-community-meeting-2022.09-027-site-talks-Azure.pdf)]
 - *[14:00-14:30]* **Discussion: what would make or break EESSI for your site?** ([notes](https://hackmd.io/@EESSI/SJe8CkMZs) - [recording](https://youtu.be/BZHyPcPnwdI?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ))
 - *[14:30-15:45]* **Discussions/hands-on sessions/hackathon**
     - Hands-on with GPU support *(Alan)*
