@@ -19,6 +19,7 @@ jobs:
       uses: codespell-project/actions-codespell@22ff5a2e4b591290baf82d47c9feadac31c65441 # v1.0
       with:
         check_filenames: true
+        skip: '*.pdf'
 
     # - name: Markdown Linting Action
     #   uses: avto-dev/markdown-lint@v1.2.0
