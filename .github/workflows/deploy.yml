@@ -9,7 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     permissions:
-      contents: read
       # Need to be able to write to the deploy branch
       contents: write
     steps:
