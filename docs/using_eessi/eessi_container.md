@@ -5,7 +5,7 @@ illustrating to access the EESSI software stack via a small container provided b
 EESSI. The container only contains a minimal number tools such as the CernVM-FS
 client and some configuration data.
 
-### Prequisites
+### Prerequisites
 
 - Singularity 3.7.x or newer _or_ Apptainer x.y.z or newer (any version with
   support for `--fusemount` should be sufficient)
