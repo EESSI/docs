@@ -19,6 +19,7 @@ More details about the project are available in the different subsections:
 * [Compatibility layer](compatibility_layer.md)
 * [Software layer](software_layer.md)
 * [Pilot repository](pilot.md)
+* [Using EESSI](using_eessi.md)
 * [Software testing](software_testing.md)
 * [Project partners](partners.md)
 * [Contact info](contact.md)

@@ -21,6 +21,10 @@ nav:
   - Compatibility layer: compatibility_layer.md
   - Software layer: software_layer.md
   - Pilot repository: pilot.md
+  - Using EESSI:
+    - Overview: using_eessi.md
+    - using_eessi/cvmfs_client.md
+    - using_eessi/eessi_container.md
   - Software testing: software_testing.md
   - Project partners: partners.md
   - Contact info: contact.md
@@ -38,6 +42,10 @@ markdown_extensions:
   - pymdownx.tabbed
   - toc:
       permalink: true
+  # emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 extra:
   # add links in bottom right
   social:
