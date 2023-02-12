@@ -1,16 +1,16 @@
 # Using EESSI
 
-There are different means to access EESSI depending on if and how it is set up on
+There are different means to access EESSI, depending on if and how it is set up on
 your system.
 
 ### Determine whether EESSI is already set up on your system
-If you run the command _(Note, this may take a while to finish.)_
+If you run the command _(Note, this may take a couple of seconds to finish.)_
 ```bash
 ls /cvmfs/pilot.eessi-hpc.org
 ```
 and see a message like
 ```
-2021.06  host_injections  latest  versions
+host_injections  latest  versions
 ```
 EESSI has been set up on your system already. :tada: Continue reading about using
 EESSI via the [Native CernVM-FS client](cvmfs_client).

@@ -7,32 +7,30 @@ client and some configuration data.
 
 ### Prerequisites
 
-- Singularity 3.7.x or newer _or_ Apptainer x.y.z or newer (any version with
+- Singularity 3.7.x or newer _or_ Apptainer 1.0.0 or newer (any version with
   support for `--fusemount` should be sufficient)
 - `git` available on your system
 
 ### Preparation
 
 Clone the [`EESSI/software-layer`](https://github.com/EESSI/software-layer.git)
-repository to a directory `eessi_container` by running the command
+repository and change into the `software-layer` directory by running the commands
 ```bash
-git clone https://github.com/EESSI/software-layer.git eessi_container
-```
-Change directory
-```bash
-cd eessi_container
+git clone https://github.com/EESSI/software-layer.git
+cd software-layer
 ```
 
 ## Basic scenarios
 
-### Get access to EESSI
+### Getting access to EESSI
 
 Simply run the command (from the directory you have changed into above)
 ```bash
 ./eessi_container.sh
 ```
-_(Note, the first run may take a bit longer because the container image is
-downloaded and converted.)_
+!!! Note
+    The first run may take a bit longer because the container image is
+    downloaded and converted.
 
 You should see output like
 ```
@@ -46,10 +44,12 @@ fuse: trying to continue without -o clone_fd.
 
 Singularity>
 ```
-_(Note, you may have to press enter to clearly see the prompt as some messages
-beginning with `CernVM-FS: loading Fuse` have been printed after the first prompt
-`Singularity> ` was shown.)_
-To access the EESSI pilot stack just run the command
+!!! Note
+    You may have to press enter to clearly see the prompt as some messages
+    beginning with `CernVM-FS: ` have been printed after the first prompt
+    `Singularity> ` was shown.
+
+To access the EESSI pilot stack run the command
 ```
 source /cvmfs/pilot.eessi-hpc.org/latest/init/bash
 ```
@@ -69,8 +69,8 @@ Environment set up to use EESSI pilot software stack, have fun!
 [EESSI pilot 2021.12] $ 
 ```
 The last line is the prompt. Run `module avail` to see which modules and
-extensions are available. About 280 modules and 1800 extensions are installed.
-Below is a short excerpt from `module avail` showing 10 modules only.
+extensions are available. Below is a short excerpt from `module avail`
+showing 10 modules only.
 ```
    PyYAML/5.3-GCCcore-9.3.0
    Qt5/5.14.1-GCCcore-9.3.0
@@ -107,22 +107,24 @@ You may have noted the following line in the output of `eessi_container.sh`
 ```
 Using /tmp/eessi.RC6kYEjmSj as tmp storage (add '--resume /tmp/eessi.RC6kYEjmSj' to resume where this session ended).
 ```
-Just try the following command to "resume" from the last session. _Note, the
-parameter after `--resume` is very likely different for your last session. Just
-scroll back and take note of it._
+!!! Note
+    The parameter after `--resume` (`/tmp/eessi.RC6kYEjmSj`) *will* be different
+    when you run `eessi_container.sh`. Scroll back and take note of it.
+Try the following command to "resume" from the last session.
 ```
 ./eessi_container.sh --resume /tmp/eessi.RC6kYEjmSj
 ```
 This should run much faster because the container image has been cached in the
 temporary directory (`/tmp/eessi.RC6kYEjmSj` in the example above). You should
-get to the prompt (`Singularity > ` or `Apptainer > `). Now you just have
+get to the prompt (`Singularity > ` or `Apptainer > `). Now you only have
 to source again the EESSI init script by running
 ```
 source /cvmfs/pilot.eessi-hpc.org/latest/init/bash
 ```
-_(Note, the `/tmp/eessi...` directory contains a `home` directory which includes
-the saved history of your last session. Just type `history` to see it. You should
-be able to access it as you would do in a normal terminal session.)_
+!!! Note
+    The `/tmp/eessi...` directory contains a `home` directory which includes
+    the saved history of your last session. Type `history` to see it. You should
+    be able to access it as you would do in a normal terminal session.
 ### List available options for `eessi_container.sh`
 Run `./eessi_container.sh --help` to see a list of available options.
 ```
