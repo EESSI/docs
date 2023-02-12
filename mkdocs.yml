@@ -7,6 +7,8 @@ theme:
   name: material
   features:
     - instant
+    - content.code.annotate
+    - content.code.copy
   logo: img/logos/EESSI.png
   favicon: img/logos/EESSI.png
 repo_name: EESSI @ GitHub
@@ -21,10 +23,14 @@ nav:
   - Compatibility layer: compatibility_layer.md
   - Software layer: software_layer.md
   - Pilot repository: pilot.md
+  - Getting access to EESSI:
+    - Overview: getting_access.md
+    - getting_access/native_installation.md
+    - getting_access/eessi_container.md
   - Using EESSI:
     - Overview: using_eessi.md
-    - using_eessi/cvmfs_client.md
-    - using_eessi/eessi_container.md
+    - using_eessi/setting_up_environment.md
+    - using_eessi/eessi_demos.md
   - Software testing: software_testing.md
   - Project partners: partners.md
   - Contact info: contact.md
@@ -38,6 +44,9 @@ markdown_extensions:
   - admonition
   # code blocks with syntax highlighting, graphs
   - pymdownx.superfences
+  # line numbers
+  - pymdownx.highlight:
+      anchor_linenums: true
   # tabbed contents
   - pymdownx.tabbed
   - toc:
