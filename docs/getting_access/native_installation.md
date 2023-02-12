@@ -1,3 +1,3 @@
-# Native CernVM-FS client
+# Native installation
 
 TBD

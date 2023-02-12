@@ -8,7 +8,6 @@ theme:
   features:
     - instant
     - content.code.annotate
-    - content.code.copy
   logo: img/logos/EESSI.png
   favicon: img/logos/EESSI.png
 repo_name: EESSI @ GitHub
@@ -30,6 +29,7 @@ nav:
   - Using EESSI:
     - Overview: using_eessi.md
     - using_eessi/setting_up_environment.md
+    - using_eessi/basic_commands.md
     - using_eessi/eessi_demos.md
   - Software testing: software_testing.md
   - Project partners: partners.md
@@ -40,6 +40,8 @@ plugins:
   # necessary for search to work
   - search
 markdown_extensions:
+  # enable adding HTML attributes and CSS classes
+  - attr_list
   # notes, warnings, hints, ...
   - admonition
   # code blocks with syntax highlighting, graphs
@@ -47,6 +49,10 @@ markdown_extensions:
   # line numbers
   - pymdownx.highlight:
       anchor_linenums: true
+  # syntax highlighting for inline code
+  - pymdownx.inlinehilite
+  # embed content from arbitrary files
+  - pymdownx.snippets
   # tabbed contents
   - pymdownx.tabbed
   - toc:

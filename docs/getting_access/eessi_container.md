@@ -1,4 +1,4 @@
-# Using the EESSI container
+# EESSI container
 
 This page provides all information and guides you through several examples
 illustrating to access the EESSI software stack via a small container provided by
@@ -48,6 +48,9 @@ Singularity>
     You may have to press enter to clearly see the prompt as some messages
     beginning with `CernVM-FS: ` have been printed after the first prompt
     `Singularity> ` was shown.
+
+Read about [using EESSI](../../using_eessi) in a separate section or continue reading here
+for additional features of the `eessi_container.sh` script.
 
 To access the EESSI pilot stack run the command
 ```
