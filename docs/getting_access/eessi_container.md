@@ -243,4 +243,6 @@ inside the container using the `SINGULARITY_BIND` or
 SINGULARITY_BIND=${PWD}:/scripts ./eessi_container.sh --mode run /scripts/eessi_container.sh
 ```
 
-## Running EESSI demo scripts
+## Running EESSI demos
+If you want to run some more complex scripts using software provided through
+EESSI, continue reading about [Running EESSI demos](../../using_eessi/eessi_demos).
