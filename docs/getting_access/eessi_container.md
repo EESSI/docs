@@ -44,10 +44,11 @@ Singularity>
 
 To use EESSI, continue reading the section [Using EESSI](../../using_eessi).
 
-## Viewing usage information for `eessi_container.sh`
+## Help for `eessi_container.sh`
 The example in the [Quickstart](#quickstart) paragraph facilitates an
-interactive session with read access to the EESSI pilot. It does so, because
-the script `eessi_container.sh` uses some carefully chosen defaults. To view
+interactive session with read access to the EESSI pilot software stack. It
+does not require any command-line arguments, because the script
+`eessi_container.sh` uses some carefully chosen defaults. To view
 all options of the script and its default values, run the command
 ``` { .bash .copy }
 ./eessi_container.sh --help
@@ -90,6 +91,11 @@ So, the defaults are equal to running the command
 and it would either create a temporary directory under `${TMPDIR}` (if defined)
 or `/tmp` (if `${TMPDIR}` is not defined).
 
+The remainder of this page will demonstrate different scenarios using some of
+the command-line arguments used for read-only access. Other arguments will be
+discussed in a yet-to-be written section covering adding software to the EESSI
+stack.
+
 ## Reusing the previous session
 You may have noted the following line in the output of `eessi_container.sh`
 ```
@@ -100,11 +106,11 @@ Using /tmp/eessi.EXAMPLE as tmp storage (add '--resume /tmp/eessi.EXAMPLE' to re
     when you run `eessi_container.sh`. Scroll back in your terminal and take
     note of it.
 Try the following command to "resume" from the last session.
-```
+``` { .bash .copy }
 ./eessi_container.sh --resume /tmp/eessi.EXAMPLE
 ```
 This should run much faster because the container image has been cached in the
-temporary directory (`/tmp/eessi.EXAMPLE` in the example above). You should
+temporary directory (`/tmp/eessi.EXAMPLE`). You should
 get to the prompt (`Singularity> ` or `Apptainer> `) and can use EESSI with
 the _state_ where you left the previous session.
 !!! Note
@@ -114,9 +120,127 @@ the _state_ where you left the previous session.
 
     Because the `/tmp/eessi.EXAMPLE` directory contains a `home` directory which
     includes the saved history of your last session, you may easily restore
-    the environment (variable) settings. Type `history` to see it. You should
-    be able to access it as you would do in a normal terminal session.
+    the environment (variable) settings. Type `history` to see which commands
+    you ran. You should be able to access the history as you would do in a
+    normal terminal session.
 
 ## Running a simple command
+We run the command `ls /cvmfs/pilot.eessi-hpc.org` through the script
+`eessi_container.sh` to verify if the CernVM-FS repository of
+the EESSI pilot is accessible.
+``` { .bash .copy }
+./eessi_container.sh --mode run ls /cvmfs/pilot.eessi-hpc.org
+```
+You should see an output such as
+```
+Using /tmp/eessi.EXAMPLE as tmp storage (add '--resume /tmp/eessi.EXAMPLE' to resume where this session ended).$
+Launching container with command (next line):
+singularity run --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org docker://ghcr.io/eessi/build-node:debian11 ls /cvmfs/pilot.eessi-hpc.org
+CernVM-FS: pre-mounted on file descriptor 3
+CernVM-FS: loading Fuse module... done
+host_injections  latest  versions
+```
+After the script has run you are now back in the session where you ran
+`eessi_container.sh` not inside the container. This is because of the
+command-line argument `--mode run`.
+
+!!! Note
+    The last line is the contents of the directory
+    `/cvmfs/pilot.eessi-hpc.org`.
+
+    Also, not that there is not container prompt (`Singularity>` or
+    `Apptainer>`).
+
+Alternatively to specify the command as we did above, you can also do the
+following.
+``` { .bash .copy }
+RUN_CMD_FROM_VARIABLE="ls -l /cvmfs/pilot.eessi-hpc.org"
+./eessi_container.sh --mode shell <<< ${RUN_CMD_FROM_VARIABLE}
+```
+
+!!! Note
+    We changed the mode from `run` to `shell` because we use a different method
+    to let the script run _our_ command.
+
+Because `shell` is the default value for `--mode` we can also omit this and
+simply run
+``` { .bash .copy }
+RUN_CMD_FROM_VARIABLE="ls -l /cvmfs/pilot.eessi-hpc.org"
+./eessi_container.sh <<< ${RUN_CMD_FROM_VARIABLE}
+```
+
 ## Running a script
+While running simple command can be sufficient in some cases, you often want
+to run scripts containing many commands. To run the script
+`eessi_architectures.sh` shown below (create it in your current directory, then
+make it executable with `chmod +x eessi_architectures.sh`)
+``` { .bash .copy }
+#!/usr/bin/env bash
+# This script determines which architectures are included in the
+# latest EESSI pilot version. It makes use of the specifc directory
+# structure in the EESSI pilot repository.
+#
+# determine which OS types
+BASE=${EESSI_CVMFS_REPO:-/cvmfs/pilot.eessi-hpc.org}/latest/software
+cd ${BASE}
+for os_type in $(ls -d *)
+do
+    # determine architecture families
+    OS_BASE=${BASE}/${os_type}
+    cd ${OS_BASE}
+    for arch_family in $(ls -d *)
+    do
+        # determine CPU microarchitectures
+        OS_ARCH_BASE=${BASE}/${os_type}/${arch_family}
+        cd ${OS_ARCH_BASE}
+        for microarch in $(ls -d *)
+        do
+            case ${microarch} in
+                amd | intel )
+                    for sub in $(ls ${microarch})
+                    do
+                        echo "${os_type}/${arch_family}/${microarch}/${sub}"
+                    done
+                    ;;
+                * )
+                    echo "${os_type}/${arch_family}/${microarch}"
+                    ;;
+            esac
+        done
+    done
+done
+```
+Run the script as follows
+``` { .bash .copy }
+./eessi_container.sh --mode shell < eessi_architectures.sh
+```
+The output should be similar to
+``` { .yaml linenums="1" }
+Using /tmp/eessi.EXAMPLE as tmp storage (add '--resume /tmp/eessi.EXAMPLE' to resume where this session ended).$
+Launching container with command (next line):
+singularity shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org docker://ghcr.io/eessi/build-node:debian11
+CernVM-FS: pre-mounted on file descriptor 3
+CernVM-FS: loading Fuse module... done
+linux/aarch64/generic
+linux/aarch64/graviton2
+linux/aarch64/graviton3
+linux/ppc64le/generic
+linux/ppc64le/power9le
+linux/x86_64/amd/zen2
+linux/x86_64/amd/zen3
+linux/x86_64/generic
+linux/x86_64/intel/haswell
+linux/x86_64/intel/skylake_avx512
+```
+Lines 6 to 16 show the output of the script `eessi_architectures.sh`.
+
+If you want to use the mode `run`, you have to make the script's location
+available inside the container. You can do that by mapping the current directory
+(which contains `eessi_architectures.sh`) to any not-yet existing directory
+inside the container using the `SINGULARITY_BIND` or
+`APPTAINER_BIND` variable. For example,
+``` { .bash .copy }
+SINGULARITY_BIND=${PWD}:/scripts ./eessi_container.sh --mode run /scripts/eessi_container.sh
+```
+
 ## Running EESSI demo scripts
