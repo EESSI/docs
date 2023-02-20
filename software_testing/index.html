@@ -1,0 +1,844 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/software_testing/">
+      
+      
+        <link rel="prev" href="../pilot/">
+      
+      
+        <link rel="next" href="../meetings/">
+      
+      <link rel="icon" href="../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+    
+    
+      
+        <title>Software testing - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ffa9267a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#software-testing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software testing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        Project overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Filesystem layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Filesystem layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filesystem_layer/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filesystem_layer/stratum1/" class="md-nav__link">
+        Setting up a Stratum 1
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatibility_layer/" class="md-nav__link">
+        Compatibility layer
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Software layer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Software layer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software_layer/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software_layer/build_nodes/" class="md-nav__link">
+        Build nodes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pilot/" class="md-nav__link">
+        Pilot repository
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Software testing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Software testing
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description-of-the-software-test-suite" class="md-nav__link">
+    Description of the software test suite
+  </a>
+  
+    <nav class="md-nav" aria-label="Description of the software test suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#framework" class="md-nav__link">
+    Framework
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-variants" class="md-nav__link">
+    Test variants
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-the-test-suite" class="md-nav__link">
+    How to run the test suite
+  </a>
+  
+    <nav class="md-nav" aria-label="How to run the test suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    General requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-for-container-based-tests" class="md-nav__link">
+    Requirements for container-based tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-reframe-configuration-file" class="md-nav__link">
+    Setting up a ReFrame configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adapting-the-tests-to-your-system" class="md-nav__link">
+    Adapting the tests to your system
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-example-run" class="md-nav__link">
+    An example run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Meetings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Meetings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meetings/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../meetings/2022-09-amsterdam/" class="md-nav__link">
+        Community meeting (Sept'22)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../partners/" class="md-nav__link">
+        Project partners
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contact/" class="md-nav__link">
+        Contact info
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description-of-the-software-test-suite" class="md-nav__link">
+    Description of the software test suite
+  </a>
+  
+    <nav class="md-nav" aria-label="Description of the software test suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#framework" class="md-nav__link">
+    Framework
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-variants" class="md-nav__link">
+    Test variants
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-the-test-suite" class="md-nav__link">
+    How to run the test suite
+  </a>
+  
+    <nav class="md-nav" aria-label="How to run the test suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-requirements" class="md-nav__link">
+    General requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requirements-for-container-based-tests" class="md-nav__link">
+    Requirements for container-based tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-a-reframe-configuration-file" class="md-nav__link">
+    Setting up a ReFrame configuration file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adapting-the-tests-to-your-system" class="md-nav__link">
+    Adapting the tests to your system
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#an-example-run" class="md-nav__link">
+    An example run
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="software-testing">Software testing<a class="headerlink" href="#software-testing" title="Permanent link">&para;</a></h1>
+<p><strong>WARNING: development of the software test suite has only just started and is a work in progress. This page describes how the test suite <em>will</em> be designed, but many things are not implemented yet and the design may still change.</strong></p>
+<h2 id="description-of-the-software-test-suite">Description of the software test suite<a class="headerlink" href="#description-of-the-software-test-suite" title="Permanent link">&para;</a></h2>
+<h3 id="framework">Framework<a class="headerlink" href="#framework" title="Permanent link">&para;</a></h3>
+<p>The EESSI project uses the <a href="https://reframe-hpc.readthedocs.io/en/stable/index.html">ReFrame framework</a> for software testing. ReFrame is designed particularly for testing HPC software and thus has well integrated support for interacting with schedulers, as well as various launchers for MPI programs.</p>
+<h3 id="test-variants">Test variants<a class="headerlink" href="#test-variants" title="Permanent link">&para;</a></h3>
+<p>The EESSI software stack can be used in various ways, e.g. by using the <a href="../pilot/#accessing-the-eessi-pilot-repository-through-singularity">container</a> or when the CVMFS software stack is mounted natively. This means the commands that need to be run to test an application are different in both cases. Similarly, systems may have different hardware (CPUs v.s. GPUs, system size, etc). Thus, tests - e.g. a GROMACS test - may have different variants: one designed to run on CPUs, one on GPUs, one designed to run through the container, etc.</p>
+<p>The main goal of the EESSI test suite is to test the software stack on systems that have the EESSI CVMFS mounted natively. Some tests may also have variants that can run the same test through the container, but note that this setup is technically much more difficult. Thus, the main focus is on tests that run with a native CVMFS mount of the EESSI stack.</p>
+<p>By default, ReFrame runs all test variants it find. Thus, in our test suite, we prespecify a number of tags that can be used to select an appropriate subset of tests for your system. We recognize the following tags:</p>
+<ul>
+<li>container: tests that use the EESSI container to run the software. E.g. one variant of our GROMACS test uses <code>singularity exec</code> to launch the EESSI container, load the GROMACS module, and run the GROMACS test. </li>
+<li><code>native</code>: tests that rely on the EESSI software stack being available through the modules system. E.g. one variant of the GROMACS test loads the GROMACS module and runs the GROMACS test.</li>
+<li><code>singlecore</code>: tests designed to run on a single core</li>
+<li><code>singlenode</code>: tests designed to run on a single (multicore) node (note: may still use MPI for multiprocessing)</li>
+<li><code>small</code>: tests designed to run on 2-8 nodes.</li>
+<li><code>large</code>: tests designed to run on &gt;9 nodes.</li>
+<li><code>cpu</code>: test designed to run on CPU.</li>
+<li><code>gpu</code>, gpu_nvidia, gpu_amd: test designed to run on GPUs / nvidia GPUs / AMD GPUs.</li>
+</ul>
+<h2 id="how-to-run-the-test-suite">How to run the test suite<a class="headerlink" href="#how-to-run-the-test-suite" title="Permanent link">&para;</a></h2>
+<h3 id="general-requirements">General requirements<a class="headerlink" href="#general-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A copy of the <code>tests</code> directory from <a href="https://github.com/EESSI/software-layer">software repository</a></li>
+</ul>
+<h3 id="requirements-for-container-based-tests">Requirements for container-based tests<a class="headerlink" href="#requirements-for-container-based-tests" title="Permanent link">&para;</a></h3>
+<p>Specifically for container-based tests, there are some requirements on the host system:</p>
+<ul>
+<li>An installation of ReFrame</li>
+<li>An MPI installation (to launch MPI tests) or PMIx-based launcher (e.g. SLURM compiled with PMIx support)</li>
+<li>Singularity</li>
+</ul>
+<p>The container based tests will use a so-called shared alien CVMFS cache to store temporary data. In addition, they use a local CVMFS cache for speed. For this reason, the container tests need to be pointed to one directory that is shared between nodes on your system, and one directory that is node-specific (preferably a local disk). The <code>shared_alien_cache_minimal.sh</code> script that is part of the test suite defines these, and sets up the correct CVMFS configuration. You will have to adapt the <code>SHAREDSPACE</code> and <code>LOCALSPACE</code> variables in that script for your system, and point them to a shared and node-local directory.</p>
+<h3 id="setting-up-a-reframe-configuration-file">Setting up a ReFrame configuration file<a class="headerlink" href="#setting-up-a-reframe-configuration-file" title="Permanent link">&para;</a></h3>
+<p>Once the prerequisites have been met, you'll need to create a ReFrame configuration file that matches your system (see the <a href="https://reframe-hpc.readthedocs.io/en/stable/configure.html">ReFrame documentation</a>). If you want to use the container-based tests, you <em>have</em> to define a partition programming environment called <code>container</code> and make sure it loads any modules needed to provide the MPI installation and singularity command. For an example configuration file, check the <code>tests/reframe/config/settings.py</code> in the <a href="https://github.com/EESSI/software-layer">software-layer repository</a>. Other than (potential) adaptations to the <code>container</code> environment, you should only really need to change the <code>systems</code> part.</p>
+<h3 id="adapting-the-tests-to-your-system">Adapting the tests to your system<a class="headerlink" href="#adapting-the-tests-to-your-system" title="Permanent link">&para;</a></h3>
+<p>For now, you will have to adapt the number of tasks specified in full-node tests to match the number of cores your machine has in a single node (in the future, you should be able to do this through the reframe configuration file). To do so, change all <code>self.num_tasks_per_node</code> you find in the various tests to that core count (unless they are 1, in which case the test specifically intended for only 1 process per node).</p>
+<h3 id="an-example-run">An example run<a class="headerlink" href="#an-example-run" title="Permanent link">&para;</a></h3>
+<p>In this example, we assume your current directory is the <code>tests/reframe</code> folder. To list e.g. all single node, cpu-based application tests on a system that has the EESSI software environment available natively, you execute:
+<div class="highlight"><pre><span></span><code>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t native -t single -t cpu
+</code></pre></div>
+(assuming you adapted the config file in <code>config/settings.py</code> for your system). This should list the tests that are selected based on the provided tags. To run the tests, change the <code>-l</code> argument into a <code>-r</code>:
+<div class="highlight"><pre><span></span><code>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t native -t single -t cpu --performance-report
+</code></pre></div>
+To run the same tests with using the EESSI container, run:
+<div class="highlight"><pre><span></span><code>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t container -t single -t cpu --performance-report
+</code></pre></div>
+Note that not all tests necessarily have implementations to run using the EESSI container: the primary focus of the test suite is for HPC sites to check the performance of their software suite. Such sites should have CVMFS mounted natively for optimal performance anyway.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 20, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
+</html>
