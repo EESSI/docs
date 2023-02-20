@@ -41,7 +41,7 @@ prepared with the help from Terje Kvernes (@terjekv).
 
 * Q: What if someone needs software compiled slightly differently (compiler flags,etc)?
   * The installations included in EESSI are "common", and are typically done such that they're useful to most sites.
-    It's easy to build addiotional software (or customized installations) on top of what EESSI provides, like a custom configuration of GROMACS, etc.
+    It's easy to build additional software (or customized installations) on top of what EESSI provides, like a custom configuration of GROMACS, etc.
   
     Alan did this last week in a container, to leverage the stack you just need a few EasyBuild settings and then you can install what you want how you want with EasyBuild (https://github.com/EESSI/software-layer/issues/59). It would also be reasonably easy to provide a build environment module (that sets up rpathing, CC, CXX etc.) for general use since this is what EasyBuild is doing internally anyway.
 

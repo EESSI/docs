@@ -1,8 +1,9 @@
 site_name: "European Environment for Scientific Software Installations (EESSI)"
 site_url: https://eessi.github.io/docs/
-google_analytics:
-    - UA-169665333-1
-    - auto
+extra:
+  analytics:
+    provider: google
+    property: UA-169665333-1
 theme:
   name: material
   features:
@@ -20,7 +21,9 @@ nav:
     - Overview: filesystem_layer.md
     - filesystem_layer/stratum1.md
   - Compatibility layer: compatibility_layer.md
-  - Software layer: software_layer.md
+  - Software layer:
+    - Overview: software_layer.md
+    - software_layer/build_nodes.md
   - Pilot repository: pilot.md
   - Getting access to EESSI:
     - Overview: getting_access.md
@@ -31,6 +34,9 @@ nav:
     - using_eessi/basic_commands.md
     - using_eessi/eessi_demos.md
   - Software testing: software_testing.md
+  - Meetings:
+      - Overview: meetings.md
+      - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
   - Project partners: partners.md
   - Contact info: contact.md
 plugins:
@@ -56,6 +62,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  # clickable details
+  - pymdownx.details
   - toc:
       permalink: true
   # emojis
