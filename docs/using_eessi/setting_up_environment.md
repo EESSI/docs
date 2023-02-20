@@ -1,4 +1,4 @@
-# Setting up environment
+# Setting up your environment
 
 To set up the EESSI environment, simply run the command
 ``` { .bash .copy }
@@ -24,6 +24,6 @@ Environment set up to use EESSI pilot software stack, have fun!
 2.  This is the prompt indicating that you have access to the EESSI software
     stack.
 
-The last line is the prompt.
+The last line is the shell prompt.
 
-:clap: Your environment is set up!
+:clap: Your environment is now set up, you are ready to start running software provided by EESSI!

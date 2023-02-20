@@ -27,7 +27,6 @@ nav:
     - getting_access/native_installation.md
     - getting_access/eessi_container.md
   - Using EESSI:
-    - Overview: using_eessi.md
     - using_eessi/setting_up_environment.md
     - using_eessi/basic_commands.md
     - using_eessi/eessi_demos.md
@@ -54,7 +53,9 @@ markdown_extensions:
   # embed content from arbitrary files
   - pymdownx.snippets
   # tabbed contents
-  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
   # emojis

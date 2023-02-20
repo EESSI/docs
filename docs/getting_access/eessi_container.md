@@ -1,4 +1,4 @@
-# EESSI container
+# Using the EESSI container
 
 The `eessi_container.sh` script provides a very easy yet versatile means
 to access EESSI.
