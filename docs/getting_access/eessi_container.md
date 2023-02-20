@@ -210,7 +210,7 @@ Here are the contents for the `eessi_architectures.sh` script:
 #!/usr/bin/env bash
 #
 # This script determines which architectures are included in the
-# latest EESSI pilot version. It makes use of the specifc directory
+# latest EESSI pilot version. It makes use of the specific directory
 # structure in the EESSI pilot repository.
 #
 
