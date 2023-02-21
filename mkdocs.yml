@@ -26,7 +26,7 @@ nav:
     - software_layer/build_nodes.md
   - Pilot repository: pilot.md
   - Getting access to EESSI:
-    - Overview: getting_access.md
+    - getting_access/is_eessi_accessible.md
     - getting_access/native_installation.md
     - getting_access/eessi_container.md
   - Using EESSI:

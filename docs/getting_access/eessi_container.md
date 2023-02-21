@@ -1,4 +1,4 @@
-# Using the EESSI container
+# EESSI container
 
 The `eessi_container.sh` script provides a very easy yet versatile means
 to access EESSI.
@@ -52,7 +52,7 @@ Apptainer>
     beginning with `CernVM-FS: ` have been printed after the first prompt
     `Apptainer> ` was shown.
 
-To starting using EESSI, see [Using EESSI](../../using_eessi).
+To start using EESSI, see [Using EESSI/Setting up your environment](../../using_eessi/setting_up_environment).
 
 ## Help for `eessi_container.sh`
 
