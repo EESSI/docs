@@ -1,6 +1,6 @@
 # Running EESSI demos
 
-To really experience how using EESSI can significantly facilitate the work of scientific researchers,
+To really experience how using EESSI can significantly facilitate the work of researchers,
 we recommend running one or more of the EESSI demos.
 
 First, clone the ``eessi-demo`` Git repository, and move into the resulting directory:
@@ -28,14 +28,15 @@ drwxr-xr-x  6 example  users    192 Jan 26 20:17 scripts
 The directories we care about are those that correspond to particular scientific software,
 like ``Bioconductor``, ``GROMACS``, ``OpenFOAM``, ``TensorFlow``, ...
 
-These each contain a ``run.sh`` script that can be used to start a small example run with that software,
-each takes a couple of minutes max. to run (even with limited resources).
+Each of these contains a ``run.sh`` script that can be used to start a small
+example run with that software. Every example takes a couple of minutes to run,
+even with limited resources only.
 
 ## Example: running GROMACS
 
 Let's try running the GROMACS example.
 
-First, we need to make sure that [our environment is set up to use EESSI](setting_up_environment):
+First, we need to make sure that [our environment is set up to use EESSI](../setting_up_environment):
 
 ``` { .bash .copy }
 source /cvmfs/pilot.eessi-hpc.org/latest/init/bash

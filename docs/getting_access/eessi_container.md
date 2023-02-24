@@ -266,7 +266,7 @@ linux/x86_64/generic
 linux/x86_64/intel/haswell
 linux/x86_64/intel/skylake_avx512
 ```
-Lines 6 to 16 show the output of the script `eessi_architectures.sh`.
+Lines 6 to 15 show the output of the script `eessi_architectures.sh`.
 
 If you want to use the mode `run`, you have to make the script's location
 available inside the container.
@@ -278,7 +278,7 @@ inside the container using the `$SINGULARITY_BIND` or
 
 For example:
 ``` { .bash .copy }
-SINGULARITY_BIND=${PWD}:/scripts ./eessi_container.sh --mode run /scripts/eessi_container.sh
+SINGULARITY_BIND=${PWD}:/scripts ./eessi_container.sh --mode run /scripts/eessi_architectures.sh
 ```
 
 ## Running EESSI demos

@@ -1,7 +1,7 @@
 # Is EESSI accessible?
 
-EESSI can be accessed via [a native (CernVM-FS) installation](native_installation),
-or via [a container that includes CernVM-FS](eessi_container).
+EESSI can be accessed via [a native (CernVM-FS) installation](../native_installation),
+or via [a container that includes CernVM-FS](../eessi_container).
 
 Before you look into these options, check if EESSI is already accessible on your system.
 
@@ -30,5 +30,5 @@ ls: /cvmfs/pilot.eessi-hpc.org: No such file or directory
 ```
 No worries, you don't need to be a :mage: to get access to EESSI.
 
-Continue reading about the [Native installation](native_installation) of EESSI,
-or access via the [EESSI container](eessi_container).
+Continue reading about the [Native installation](../native_installation) of EESSI,
+or access via the [EESSI container](../eessi_container).
