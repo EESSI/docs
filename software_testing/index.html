@@ -11,13 +11,13 @@
         <link rel="canonical" href="https://eessi.github.io/docs/software_testing/">
       
       
-        <link rel="prev" href="../pilot/">
+        <link rel="prev" href="../using_eessi/eessi_demos/">
       
       
         <link rel="next" href="../meetings/">
       
       <link rel="icon" href="../img/logos/EESSI.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.13">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ffa9267a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.113286f1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
@@ -394,6 +394,160 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Getting access to EESSI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Getting access to EESSI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_access/is_eessi_accessible/" class="md-nav__link">
+        Is EESSI accessible?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_access/native_installation/" class="md-nav__link">
+        Native installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_access/eessi_container/" class="md-nav__link">
+        EESSI container
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Using EESSI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Using EESSI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_eessi/setting_up_environment/" class="md-nav__link">
+        Setting up your environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_eessi/basic_commands/" class="md-nav__link">
+        Basic commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_eessi/eessi_demos/" class="md-nav__link">
+        Running EESSI demos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -525,17 +679,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
           Meetings
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Meetings
         </label>
@@ -762,13 +916,13 @@
 <p>For now, you will have to adapt the number of tasks specified in full-node tests to match the number of cores your machine has in a single node (in the future, you should be able to do this through the reframe configuration file). To do so, change all <code>self.num_tasks_per_node</code> you find in the various tests to that core count (unless they are 1, in which case the test specifically intended for only 1 process per node).</p>
 <h3 id="an-example-run">An example run<a class="headerlink" href="#an-example-run" title="Permanent link">&para;</a></h3>
 <p>In this example, we assume your current directory is the <code>tests/reframe</code> folder. To list e.g. all single node, cpu-based application tests on a system that has the EESSI software environment available natively, you execute:
-<div class="highlight"><pre><span></span><code>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t native -t single -t cpu
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t native -t single -t cpu
 </code></pre></div>
 (assuming you adapted the config file in <code>config/settings.py</code> for your system). This should list the tests that are selected based on the provided tags. To run the tests, change the <code>-l</code> argument into a <code>-r</code>:
-<div class="highlight"><pre><span></span><code>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t native -t single -t cpu --performance-report
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t native -t single -t cpu --performance-report
 </code></pre></div>
 To run the same tests with using the EESSI container, run:
-<div class="highlight"><pre><span></span><code>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t container -t single -t cpu --performance-report
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>reframe --config-file=config/settings.py --checkpath eessi-checks/applications/ -l -t container -t single -t cpu --performance-report
 </code></pre></div>
 Note that not all tests necessarily have implementations to run using the EESSI container: the primary focus of the test suite is for HPC sites to check the performance of their software suite. Such sites should have CVMFS mounted natively for optimal performance anyway.</p>
 
@@ -777,7 +931,7 @@ Note that not all tests necessarily have implementations to run using the EESSI 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 4, 2021</span>
       
     
   </small>
@@ -834,7 +988,7 @@ Note that not all tests necessarily have implementations to run using the EESSI 
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["instant"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["instant", "content.code.annotate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
