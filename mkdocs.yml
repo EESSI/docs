@@ -8,6 +8,7 @@ theme:
   name: material
   features:
     - instant
+    - content.code.annotate
   logo: img/logos/EESSI.png
   favicon: img/logos/EESSI.png
 repo_name: EESSI @ GitHub
@@ -24,6 +25,14 @@ nav:
     - Overview: software_layer.md
     - software_layer/build_nodes.md
   - Pilot repository: pilot.md
+  - Getting access to EESSI:
+    - getting_access/is_eessi_accessible.md
+    - getting_access/native_installation.md
+    - getting_access/eessi_container.md
+  - Using EESSI:
+    - using_eessi/setting_up_environment.md
+    - using_eessi/basic_commands.md
+    - using_eessi/eessi_demos.md
   - Software testing: software_testing.md
   - Meetings:
       - Overview: meetings.md
@@ -36,16 +45,31 @@ plugins:
   # necessary for search to work
   - search
 markdown_extensions:
+  # enable adding HTML attributes and CSS classes
+  - attr_list
   # notes, warnings, hints, ...
   - admonition
   # code blocks with syntax highlighting, graphs
   - pymdownx.superfences
+  # line numbers
+  - pymdownx.highlight:
+      anchor_linenums: true
+  # syntax highlighting for inline code
+  - pymdownx.inlinehilite
+  # embed content from arbitrary files
+  - pymdownx.snippets
   # tabbed contents
-  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   # clickable details
   - pymdownx.details
   - toc:
       permalink: true
+  # emojis
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 extra:
   # add links in bottom right
   social:

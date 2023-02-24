@@ -14,6 +14,7 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+      fetch-depth: 0  # need to fetch all history to ensure correct Git revision dates in docs
 
     - name: set up Python
       uses: actions/setup-python@13ae5bb136fac2878aff31522b9efb785519f984 # v4.3.0
