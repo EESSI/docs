@@ -1,11 +1,14 @@
 ## Basic commands to access software provided via EESSI
 
-EESSI provides software in modules and extensions. To see which modules and
-extensions are available run
+EESSI provides software through environment module files and [Lmod](https://lmod.readthedocs.io).
+
+To see which modules (and extensions) are available, run:
+
 ``` { .bash .copy }
 module avail
 ```
-Below is a short excerpt from `module avail` showing 10 modules only.
+
+Below is a short excerpt of the output produced by `module avail`, showing 10 modules only.
 ```
    PyYAML/5.3-GCCcore-9.3.0
    Qt5/5.14.1-GCCcore-9.3.0
@@ -18,9 +21,11 @@ Below is a short excerpt from `module avail` showing 10 modules only.
    re2c/2.1.1-GCCcore-10.3.0                               (D)
    RStudio-Server/1.3.1093-foss-2020a-Java-11-R-4.0.0
 ```
+
 Load modules with `module load package/version`, e.g.,
 `module load R/4.1.0-foss-2021a`, and try out the software. See below for a short
 session
+
 ```
 [EESSI pilot 2021.12] $ module load R/4.1.0-foss-2021a
 [EESSI pilot 2021.12] $ which R

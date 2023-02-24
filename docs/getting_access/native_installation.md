@@ -11,8 +11,8 @@ The following actions must be taken for a (basic) native installation of EESSI:
   (although installing from source is also possible);
 * Installing the EESSI configuration for CernVM-FS, which can be done by installing the ``cvmfs-config-eessi``
   package that we provide for the most popular Linux distributions
-  (more information available [here](https://github.com/EESSI/filesystem-layer/);
-* Creating a small client configuration file for CernVM-FS (``/etc/cvmfs/default.local``),
+  (more information available [here](https://github.com/EESSI/filesystem-layer/));
+* Creating a small client configuration file for CernVM-FS (``/etc/cvmfs/default.local``);
   see also the [CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-quickstart.html#create-default-local).
 
 The good news is that all of this only requires a handful commands :astonished: :

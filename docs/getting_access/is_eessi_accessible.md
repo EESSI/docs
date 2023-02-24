@@ -1,7 +1,7 @@
 # Is EESSI accessible?
 
-EESSI can be accessed via a native (CernVM-FS) installation,
-or via a container that includes CernVM-FS.
+EESSI can be accessed via [a native (CernVM-FS) installation](native_installation),
+or via [a container that includes CernVM-FS](eessi_container).
 
 Before you look into these options, check if EESSI is already accessible on your system.
 
