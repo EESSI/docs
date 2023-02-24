@@ -43,7 +43,7 @@ source /cvmfs/pilot.eessi-hpc.org/latest/init/bash
 
 Change to the ``GROMACS`` subdirectory of the ``eessi-demo`` Git repository, and execute the ``run.sh`` script:
 
-``` { .bash .no-copy }
+``` { .no-copy }
 [EESSI pilot 2021.12] $ cd GROMACS
 [EESSI pilot 2021.12] $ ./run.sh
 ```

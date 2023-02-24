@@ -6,6 +6,11 @@ To set up the EESSI environment, simply run the command:
 source /cvmfs/pilot.eessi-hpc.org/latest/init/bash
 ```
 
+!!! warning
+    The EESSI pilot software stack is **NOT READY FOR PRODUCTION!**
+
+    Do not use it for production work, and be careful when testing it on production systems!
+
 This may take a while as data is downloaded from a Stratum 1 server which is
 part of the CernVM-FS infrastructure to distribute files. You should see the
 following output:
