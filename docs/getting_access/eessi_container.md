@@ -347,3 +347,83 @@ parsing command line arguments. For example,
 
 For examples of scripts that use the software provided by EESSI,
 see [Running EESSI demos](../../using_eessi/eessi_demos).
+
+## Launching containers more quickly
+Subsequent runs of `eessi_container.sh` may reuse temporary data of a previous
+session, which includes the pulled image of the container. However, that is not
+always what we want, i.e., reusing a previous session (and thereby launching the
+container more quickly).
+
+The `eessi_container.sh` script may (re)-use a cache directory provided via
+`$APPTAINER_CACHEDIR` or `$SINGULARITY_CACHEDIR`. Hence, the container image does
+not have to be downloaded again even when starting a new session. The example
+below illustrates this.
+``` { .bash .copy }
+APPTAINER_CACHEDIR=${PWD}/apptainer_cachedir
+time ./eessi_container.sh <<< "ls /cvmfs/pilot.eessi-hpc.org"
+```
+which should produce output similar to
+``` { .yaml .no-copy }
+Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
+Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+Launching container with command (next line):
+singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+CernVM-FS: pre-mounted on file descriptor 3
+CernVM-FS: loading Fuse module... done
+fuse: failed to clone device fd: Inappropriate ioctl for device
+fuse: trying to continue without -o clone_fd.
+host_injections  latest  versions
+
+real    m40.445s
+user    3m2.621s
+sys     0m7.402s
+```
+The next run using the same cache directory, e.g., by simply executing
+``` { .bash .copy }
+time ./eessi_container.sh <<< "ls /cvmfs/pilot.eessi-hpc.org"
+```
+is much faster
+``` { .yaml .no-copy }
+Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
+Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+Launching container with command (next line):
+singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+CernVM-FS: pre-mounted on file descriptor 3
+CernVM-FS: loading Fuse module... done
+fuse: failed to clone device fd: Inappropriate ioctl for device
+fuse: trying to continue without -o clone_fd.
+host_injections  latest  versions
+
+real    0m2.781s
+user    0m0.172s
+sys     0m0.436s
+```
+
+!!! Note
+    Each run of `eessi_container.sh` (without specifying `--resume`) creates a
+    new temporary directory. The temporary directory stores, among other data, the
+    image file of the container. Thus we can ensure that the container is
+    available locally for a subsequent run.
+
+    However, this may quickly consume scarce resources, for example, a small
+    partition where `/tmp` is located (default for temporary storage, see `--help`
+    for specifying a different location).
+
+    See next section for making sure to clean up no longer needed temporary data.
+
+## Reducing disk usage
+By default `eessi_container.sh` creates a temporary directory under `/tmp`. The
+directories are named `eessi.RANDOM` where `RANDOM` is a 10-character string. The
+script does not automatically remove these directories. To determine their total
+disk usage, simply run
+``` { .bash .copy }
+du -sch /tmp/eessi.*
+```
+which could result in output similar to
+``` { .yaml .no-copy }
+333M    /tmp/eessi.session123
+333M    /tmp/eessi.session456
+333M    /tmp/eessi.session789
+997M    total
+```
+Clean up disk usage by simply removing directories you do not need any longer.
