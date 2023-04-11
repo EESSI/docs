@@ -359,7 +359,7 @@ The `eessi_container.sh` script may (re)-use a cache directory provided via
 not have to be downloaded again even when starting a new session. The example
 below illustrates this.
 ``` { .bash .copy }
-APPTAINER_CACHEDIR=${PWD}/apptainer_cachedir
+export SINGULARITY_CACHEDIR=${PWD}/container_cache_dir
 time ./eessi_container.sh <<< "ls /cvmfs/pilot.eessi-hpc.org"
 ```
 which should produce output similar to
