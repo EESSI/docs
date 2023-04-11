@@ -38,8 +38,9 @@ Run the `eessi_container` script (from the ``software-layer`` directory) to star
 You should see output like
 ```
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).
+Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org docker://ghcr.io/eessi/build-node:debian11
+singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 Apptainer> CernVM-FS: loading Fuse module... done
 fuse: failed to clone device fd: Inappropriate ioctl for device
@@ -66,33 +67,40 @@ all options of the script and its default values, run the command
 ```
 You should see the following output
 ```
-usage: ./eessi_container.sh [OPTIONS] [SCRIPT]
+usage: ./eessi_container.sh [OPTIONS] [[--] SCRIPT or COMMAND]
  OPTIONS:
-  -a | --access {ro,rw} - ro (read-only), rw (read & write) [default: ro]
-  -c | --container IMG  - image file or URL defining the container to use
-                          [default: docker://ghcr.io/eessi/build-node:debian11]
-  -h | --help           - display this usage information [default: false]
-  -g | --storage DIR    - directory space on host machine (used for
-                          temporary data) [default: 1. TMPDIR, 2. /tmp]
-  -m | --mode MODE      - with MODE==shell (launch interactive shell) or
-                          MODE==run (run a script) [default: shell]
-  -r | --repository CFG - configuration file or identifier defining the
-                          repository to use [default: EESSI-pilot via
-                          container configuration]
-  -u | --resume DIR/TGZ - resume a previous run from a directory or tarball,
-                          where DIR points to a previously used tmp directory
-                          (check for output 'Using DIR as tmp ...' of a previous
-                          run) and TGZ is the path to a tarball which is
-                          unpacked the tmp dir stored on the local storage space
-                          (see option --storage above) [default: not set]
-  -s | --save DIR/TGZ   - save contents of tmp directory to a tarball in
-                          directory DIR or provided with the fixed full path TGZ
-                          when a directory is provided, the format of the
-                          tarball's name will be {REPO_ID}-{TIMESTAMP}.tgz
-                          [default: not set]
-  -v | --verbose        - display more information [default: false]
+  -a | --access {ro,rw}  - ro (read-only), rw (read & write) [default: ro]
+  -c | --container IMG   - image file or URL defining the container to use
+                           [default: docker://ghcr.io/eessi/build-node:debian11]
+  -h | --help            - display this usage information [default: false]
+  -g | --storage DIR     - directory space on host machine (used for
+                           temporary data) [default: 1. TMPDIR, 2. /tmp]
+  -l | --list-repos      - list available repository identifiers [default: false]
+  -m | --mode MODE       - with MODE==shell (launch interactive shell) or
+                           MODE==run (run a script or command) [default: shell]
+  -r | --repository CFG  - configuration file or identifier defining the
+                           repository to use [default: EESSI-pilot via
+                           container configuration]
+  -u | --resume DIR/TGZ  - resume a previous run from a directory or tarball,
+                           where DIR points to a previously used tmp directory
+                           (check for output 'Using DIR as tmp ...' of a previous
+                           run) and TGZ is the path to a tarball which is
+                           unpacked the tmp dir stored on the local storage space
+                           (see option --storage above) [default: not set]
+  -s | --save DIR/TGZ    - save contents of tmp directory to a tarball in
+                           directory DIR or provided with the fixed full path TGZ
+                           when a directory is provided, the format of the
+                           tarball's name will be {REPO_ID}-{TIMESTAMP}.tgz
+                           [default: not set]
+  -v | --verbose         - display more information [default: false]
+  -x | --http-proxy URL  - provides URL for the env variable http_proxy
+                           [default: not set]; uses env var $http_proxy if set
+  -y | --https-proxy URL - provides URL for the env variable https_proxy
+                           [default: not set]; uses env var $https_proxy if set
 
- If value for --mode is 'run', the SCRIPT provided is executed.
+ If value for --mode is 'run', the SCRIPT/COMMAND provided is executed. If
+ arguments to the script/command start with '-' or '--', use the flag terminator
+ '--' to let eessi_container.sh stop parsing arguments.
 ```
 
 So, the defaults are equal to running the command
@@ -152,8 +160,9 @@ You should see an output such as
 
 ```
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).$
+Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity run --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org docker://ghcr.io/eessi/build-node:debian11 ls /cvmfs/pilot.eessi-hpc.org
+singularity -q run --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls /cvmfs/pilot.eessi-hpc.org
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
 host_injections  latest  versions
@@ -251,8 +260,9 @@ Run the script as follows
 The output should be similar to
 ``` { .yaml linenums="1" }
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).$
+Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org docker://ghcr.io/eessi/build-node:debian11
+singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
 linux/aarch64/generic
@@ -280,8 +290,140 @@ For example:
 ``` { .bash .copy }
 SINGULARITY_BIND=${PWD}:/scripts ./eessi_container.sh --mode run /scripts/eessi_architectures.sh
 ```
+## Running scripts or commands with parameters starting with `-` or `--`
+Let's assume we would like to get more information about the entries of
+`/cvmfs/pilot.eessi-hpc.org`. If we would just run
+``` { .bash .copy }
+./eessi_container.sh --mode run ls -lH /cvmfs/pilot.eessi-hpc.org
+```
+we would get an error message such as
+``` { .bash .no-copy }
+ERROR: Unknown option: -lH
+```
+We can resolve this in two ways:
+
+1. Using the `stdin` channel as described above, for example, by simply running
+  ``` { .bash .copy }
+  CMD="ls -lH /cvmfs/pilot.eessi-hpc.org"
+  ./eessi_container.sh <<< ${CMD}
+  ```
+  which should result in the output similar to
+  ``` { .yaml .no-copy }
+  Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
+  Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+  Launching container with command (next line):
+  singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+  CernVM-FS: pre-mounted on file descriptor 3
+  CernVM-FS: loading Fuse module... done
+  fuse: failed to clone device fd: Inappropriate ioctl for device
+  fuse: trying to continue without -o clone_fd.
+  total 10
+  lrwxrwxrwx 1 user user   10 Jun 30  2021 host_injections -> /opt/eessi
+  lrwxrwxrwx 1 user user   16 May  4  2022 latest -> versions/2021.12
+  drwxr-xr-x 3 user user 4096 Dec 10  2021 versions
+  ```
+2. Using the flag terminator `--` which tells `eessi_container.sh` to stop
+parsing command line arguments. For example,
+  ``` { .bash .copy }
+  ./eessi_container.sh --mode run -- ls -lH /cvmfs/pilot.eessi-hpc.org
+  ```
+  which should result in the output similar to
+  ``` { .yaml .no-copy }
+  Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
+  Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+  Launching container with command (next line):
+  singularity -q run --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls -lH /cvmfs/pilot.eessi-hpc.org
+  CernVM-FS: pre-mounted on file descriptor 3
+  CernVM-FS: loading Fuse module... done
+  fuse: failed to clone device fd: Inappropriate ioctl for device
+  fuse: trying to continue without -o clone_fd.
+  total 10
+  lrwxrwxrwx 1 user user   10 Jun 30  2021 host_injections -> /opt/eessi
+  lrwxrwxrwx 1 user user   16 May  4  2022 latest -> versions/2021.12
+  drwxr-xr-x 3 user user 4096 Dec 10  2021 versions
+  ```
 
 ## Running EESSI demos
 
 For examples of scripts that use the software provided by EESSI,
 see [Running EESSI demos](../../using_eessi/eessi_demos).
+
+## Launching containers more quickly
+Subsequent runs of `eessi_container.sh` may reuse temporary data of a previous
+session, which includes the pulled image of the container. However, that is not
+always what we want, i.e., reusing a previous session (and thereby launching the
+container more quickly).
+
+The `eessi_container.sh` script may (re)-use a cache directory provided via
+`$SINGULARITY_CACHEDIR` (or `$APPTAINER_CACHEDIR` when using Apptainer). Hence, the container image does
+not have to be downloaded again even when starting a new session. The example
+below illustrates this.
+``` { .bash .copy }
+export SINGULARITY_CACHEDIR=${PWD}/container_cache_dir
+time ./eessi_container.sh <<< "ls /cvmfs/pilot.eessi-hpc.org"
+```
+which should produce output similar to
+``` { .yaml .no-copy }
+Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
+Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+Launching container with command (next line):
+singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+CernVM-FS: pre-mounted on file descriptor 3
+CernVM-FS: loading Fuse module... done
+fuse: failed to clone device fd: Inappropriate ioctl for device
+fuse: trying to continue without -o clone_fd.
+host_injections  latest  versions
+
+real    m40.445s
+user    3m2.621s
+sys     0m7.402s
+```
+The next run using the same cache directory, e.g., by simply executing
+``` { .bash .copy }
+time ./eessi_container.sh <<< "ls /cvmfs/pilot.eessi-hpc.org"
+```
+is much faster
+``` { .yaml .no-copy }
+Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
+Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+Launching container with command (next line):
+singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+CernVM-FS: pre-mounted on file descriptor 3
+CernVM-FS: loading Fuse module... done
+fuse: failed to clone device fd: Inappropriate ioctl for device
+fuse: trying to continue without -o clone_fd.
+host_injections  latest  versions
+
+real    0m2.781s
+user    0m0.172s
+sys     0m0.436s
+```
+
+!!! Note
+    Each run of `eessi_container.sh` (without specifying `--resume`) creates a
+    new temporary directory. The temporary directory stores, among other data, the
+    image file of the container. Thus we can ensure that the container is
+    available locally for a subsequent run.
+
+    However, this may quickly consume scarce resources, for example, a small
+    partition where `/tmp` is located (default for temporary storage, see `--help`
+    for specifying a different location).
+
+    See next section for making sure to clean up no longer needed temporary data.
+
+## Reducing disk usage
+By default `eessi_container.sh` creates a temporary directory under `/tmp`. The
+directories are named `eessi.RANDOM` where `RANDOM` is a 10-character string. The
+script does not automatically remove these directories. To determine their total
+disk usage, simply run
+``` { .bash .copy }
+du -sch /tmp/eessi.*
+```
+which could result in output similar to
+``` { .yaml .no-copy }
+333M    /tmp/eessi.session123
+333M    /tmp/eessi.session456
+333M    /tmp/eessi.session789
+997M    total
+```
+Clean up disk usage by simply removing directories you do not need any longer.
