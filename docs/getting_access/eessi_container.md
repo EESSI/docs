@@ -355,7 +355,7 @@ always what we want, i.e., reusing a previous session (and thereby launching the
 container more quickly).
 
 The `eessi_container.sh` script may (re)-use a cache directory provided via
-`$APPTAINER_CACHEDIR` or `$SINGULARITY_CACHEDIR`. Hence, the container image does
+`$SINGULARITY_CACHEDIR` (or `$APPTAINER_CACHEDIR` when using Apptainer). Hence, the container image does
 not have to be downloaded again even when starting a new session. The example
 below illustrates this.
 ``` { .bash .copy }
