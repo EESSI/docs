@@ -31,7 +31,7 @@ Most events are ignored, but specific events trigger the bot to take action.
 
 Examples of actionable events are submitting of a comment that starts with `bot:`,
 which may specify an instruction for the bot like [building software](#building),
-or adding a `bot:deploy` label (see [deploying](#deploying software)).
+or adding a `bot:deploy` label (see [deploying](#deploying)).
 
 ### Job manager
 
