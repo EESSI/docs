@@ -24,6 +24,7 @@ nav:
   - Software layer:
     - Overview: software_layer.md
     - software_layer/build_nodes.md
+    - software_layer/adding_software.md
   - Pilot repository: pilot.md
   - Getting access to EESSI:
     - getting_access/is_eessi_accessible.md
