@@ -205,9 +205,9 @@ where it will be automatically picked up for ingestion in the EESSI repository.
 
     Ask for help in the `#software-layer` channel of the EESSI Slack if needed!
 
-You should be able to verify in the pull requests that the ingestion has been done,
+You should be able to verify in the pull request that the ingestion has been done,
 since the CI should fail :x: to indicate that some software installations listed in
-the easystack you are changed are missing.
+your modified easystack are missing.
 
 Once the ingestion has been done, simply re-triggering the CI workflow should be sufficient to make it pass
 :white_check_mark:, and then the pull request can be merged.
