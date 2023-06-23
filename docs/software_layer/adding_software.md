@@ -14,10 +14,10 @@ To add software to EESSI, you should go through the semi-automatic software inst
 Before you can make a pull request to the [software-layer](https://github.com/EESSI/software-layer),
 you should [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository in your GitHub account.
 
-For the remainder of these instructions, we assume that your GitHub account is `@moyai` :moyai:.
+For the remainder of these instructions, we assume that your GitHub account is `@koala` :koala:.
 
 !!! note
-    Don't forget to replace `moyai` :moyai: with the name of your GitHub account in the commands below!
+    Don't forget to replace `koala` :koala: with the name of your GitHub account in the commands below!
 
 1) Clone the [EESSI/software-layer](https://github.com/EESSI/software-layer) repository:
 
@@ -28,10 +28,10 @@ git clone https://github.com/EESSI/software-layer
 cd software-layer
 ```
 
-2) Add your fork as a [remote](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories) :moyai:
+2) Add your fork as a [remote](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories) :koala:
 
 ```
-git remote add moyai git@github.com:moyai/software-layer.git
+git remote add koala git@github.com:koala/software-layer.git
 ```
 
 3) Check out the branch that corresponds to the version of EESSI repository you want to add software to,
@@ -75,10 +75,10 @@ git add eessi-2023.06-eb-4.7.2-2021a.yml
 git commit -m "adding example 1.2.3 with GCC/10.3.0 to EESSI pilot 2023.06"
 ```
 
-5) Push your branch to your fork of the [software-layer](https://github.com/EESSI/software-layer) repository :moyai:
+5) Push your branch to your fork of the [software-layer](https://github.com/EESSI/software-layer) repository :koala:
 
 ```shell
-git push moyai example_branch
+git push koala example_branch
 ```
 
 6) Go to the [GitHub web interface](https://github.com/EESSI/software-layer) to open your pull request,
