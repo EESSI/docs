@@ -27,7 +27,7 @@ The bot event handler is responsible for handling
 for the GitHub repositories it is registered to.
 
 It is triggered for every event that it receives from GitHub.
-Most events are ignored, but specific events trigger the bot to take action
+Most events are ignored, but specific events trigger the bot to take action.
 
 Examples of actionable events are submitting of a comment that starts with `bot:`,
 which may specify an instruction for the bot like [building software](#building),
@@ -147,7 +147,7 @@ of the `bot/check-result.sh` script.
 #### Artefacts
 
 If all goes well, each job should produce a tarball as an *artefact*,
-which contain the software installations and the corresponding environment module files.
+which contains the software installations and the corresponding environment module files.
 
 The message reported by the job manager provides an overview of the contents of the artefact,
 which was created by the `bot/check-result.sh` script.
@@ -176,5 +176,5 @@ The current setup for the [software-layer repository](https://github.com/EESSI/s
 * A cron job that runs every couple of minutes on the CernVM-FS Stratum-0 server opens a pull request to
   the (private) [EESSI/staging](https://github.com/EESSI/staging) repository, to move the metadata file for
   each uploaded tarball from the `staged` to the `approved` directory;
-* Once that pull request gets merged, the target is automatically into the EESSI repository by a cron job
+* Once that pull request gets merged, the target is automatically ingested into the EESSI repository by a cron job
   on the Stratum-0 server, and the metadata file is moved from `approved` to `ingested` in the `EESSI/staging` repository;
