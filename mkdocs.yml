@@ -23,6 +23,7 @@ nav:
   - Compatibility layer: compatibility_layer.md
   - Software layer:
     - Overview: software_layer.md
+    - software_layer/cpu_targets.md
     - software_layer/build_nodes.md
     - software_layer/adding_software.md
   - Pilot repository: pilot.md
