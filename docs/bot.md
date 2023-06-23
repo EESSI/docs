@@ -6,7 +6,7 @@ Building, testing, and deploying software is done by one or more *bot instances*
 The EESSI build-test-deploy bot :robot: is implemented as a [GitHub App](https://docs.github.com/en/apps/overview)
 in the [`eessi-bot-software-layer` repository](https://github.com/EESSI/eessi-bot-software-layer).
 
-It operates in the context of [pull requests](adding_software.md#software_layer_pull_request) to
+It operates in the context of [pull requests](software_layer/adding_software.md#software_layer_pull_request) to
 the [`compatibility-layer` repository](https://github.com/EESSI/compatibility-layer) or the
 [`software-layer` repository](https://github.com/EESSI/software-layer),
 and follows the instructions supplied by humans,
@@ -61,7 +61,7 @@ to trigger building of software, and to deploy software installations in to the 
 ## Building { #building }
 
 To instruct the bot :robot: to build software, one or more `build` instructions
-should be issued by posting a comment in the pull request (see also [here](adding_software.md#bot_build)).
+should be issued by posting a comment in the pull request (see also [here](software_layer/adding_software.md#bot_build)).
 
 The most basic build instruction that can be sent to the bot is:
 
@@ -81,7 +81,7 @@ should be executed, based on:
 
 - `instance`: the `name` of the bot instance, for example `instance:aws` for the bot instance running in AWS;
 - `repository`: the target repository, for example `eessi-2023.06-software` which corresponds to the 2023.06 version of the EESSI software layer;
-- `architecture`: the name of the [CPU microarchitecture](cpu_targets.md), for example `x86_64/amd/zen2`;
+- `architecture`: the name of the [CPU microarchitecture](software_layer/cpu_targets.md), for example `x86_64/amd/zen2`;
 
 !!! note
     Use `:` as separator to specify a value for a particular filter, do not add spaces after the `:`.
