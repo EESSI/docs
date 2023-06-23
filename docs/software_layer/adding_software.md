@@ -5,9 +5,9 @@ To add software to EESSI, you should go through the semi-automatic software inst
 * 1) Making a pull request to the [software-layer](https://github.com/EESSI/software-layer) repository
      to (add or) update an [easystack file](https://docs.easybuild.io/easystack-files) :books: that is used by
      [EasyBuild](https://docs.easybuild.io/) to install software;
-* 2) Instructing the build-and-deploy bot :robot: to `build` the software on all supported CPU microarchitectures;
-* 3) Instructing the bot :robot: to `deploy` the built software for ingestion into the EESSI repository;
-* 4) Merging the pull request once CI indicates that the software has been ingested :white_check_mark:
+* 2) Instructing the [bot :robot:](../bot.md) to build the software on all [supported CPU microarchitectures](cpu_targets.md);
+* 3) Instructing the [bot :robot:](../bot.md) to deploy the built software for ingestion into the EESSI repository;
+* 4) Merging the pull request once CI indicates that the software has been ingested. :white_check_mark:
 
 ### Preparation
 
@@ -28,7 +28,7 @@ git clone https://github.com/EESSI/software-layer
 cd software-layer
 ```
 
-2) Add your fork as a [remote](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories) :koala:
+2) Add your fork :koala: as a [remote](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories)
 
 ```
 git remote add koala git@github.com:koala/software-layer.git
@@ -44,7 +44,7 @@ git checkout 2023.06
 !!! note
     The commands above only need to be run once, to prepare your setup for making pull requests.
 
-### Creating a pull request
+### Creating a pull request {: #software_layer_pull_request }
 
 1) Make sure that your `2023.06` branch in the checkout of the
   [`EESSI/software-layer`](https://github.com/EESSI/software-layer) repository is up-to-date
@@ -75,7 +75,7 @@ git add eessi-2023.06-eb-4.7.2-2021a.yml
 git commit -m "adding example 1.2.3 with GCC/10.3.0 to EESSI pilot 2023.06"
 ```
 
-5) Push your branch to your fork of the [software-layer](https://github.com/EESSI/software-layer) repository :koala:
+5) Push your branch to your fork :koala: of the [software-layer](https://github.com/EESSI/software-layer) repository
 
 ```shell
 git push koala example_branch
@@ -90,74 +90,16 @@ git push koala example_branch
    If all goes well, one or more bots :robot: should almost instantly create a comment in your pull request
    with an overview of how it is configured - you will need this information when providing build instructions.
 
-### Instructing the bot to build :hammer:
+### Instructing the bot to build :hammer: { #bot_build }
+
+Once the pull request is open, you can instruct the [bot :robot:](../bot.md) to build the software by posting a comment.
+
+For more information, see the [building section in the bot documentation](../bot.md#building).
 
 !!! warning
-    The build-and-deploy bot :robot: is configured to only give specific GitHub accounts permissions
-    to instruct it to `build` software.
-    
-    Ask for help in the `#software-layer-bot` channel of the EESSI Slack if needed!
+    Permission to trigger building of software must be granted to your GitHub account first!
 
-Once the pull request is open, you can instruct the [EESSI build-and-deploy bot](https://github.com/EESSI/eessi-bot-software-layer)
-to `build` the software.
-
-This is done by adding a comment in the pull request with `build` instructions for the bot:
-
-```
-bot: build
-```
-
-!!! note
-    Instructions for the bot :robot: should always start with `bot: `.
-
-    To get help from the bot, post a comment with `bot: help`.
-
-    To make the bot report how it is configured, post a comment with `bot: show_config`.
-
-Hold on though! :see_no_evil:
-
-You should refine the build instruction a bit, to avoid that the bot :robot: starts building the software for *all*
-its configurations, which is most likely not what you want.
-
-This is done by adding one or more *filters* to the instruction.
-
-#### Filtering by repository
-
-To only build for a particular repository, add a filter like `repo:...`.
-
-For example:
-
-```
-bot: build repo:eessi-2023.06-software
-```
-
-#### Filtering by CPU target
-
-To only build for a particular CPU target, add a filter like `arch:...`.
-
-For example:
-
-```
-bot: build arch:x86_64/amd/zen3
-```
-
-#### Combining filters
-
-You can combine filters, just separate them with a space:
-
-```
-bot: build repo:eessi-2023.06-software arch:x86_64/amd/zen3
-```
-
-#### Multiple build instructions
-
-You can give multiple build instructions in a single comment, one per line:
-
-```
-bot: build repo:eessi-2021.12 arch:x86_64/intel/haswell
-bot: build repo:eessi-2023.06-software arch:x86_64/amd/zen3
-bot: build repo:eessi-2023.06-software arch:aarch64/generic
-```
+    See [bot permissions](../bot.md#permissions) for more information.
 
 #### Guidelines
 
@@ -166,7 +108,7 @@ bot: build repo:eessi-2023.06-software arch:aarch64/generic
 
 * If one of the builds failed, you can let the bot retry that specific build.
 
-* Make sure that the software has been built correctly for all CPU targets before you deploy!
+* Make sure that the software has been built correctly for all [CPU targets](cpu_targets.md) before you deploy!
 
 #### Checking the builds :mag:
 
@@ -186,27 +128,20 @@ artefact :package:.
 
 ### Instructing the bot to deploy :rocket:
 
+To make the [bot :robot:](../bot.md) deploy the successfully built software, you should
+issue the corresponding instruction to the bot.
+
+For more information, see the [deploying section in the bot documentation](../bot.md#deploying).
+
 !!! warning
-    The build-and-deploy bot :robot: is configured to only give specific GitHub accounts permissions
-    to instruct it to `deploy` software.
-    
-    Ask for help in the `#software-layer-bot` channel of the EESSI Slack if needed!
+    Permission to trigger deployment of software installations must be granted to your GitHub account first!
 
-To make the bot :robot: deploy the successfully built software, you should add a `bot: deploy` **label**
-to your pull request.
-
-This will make the bot upload the artefacts of the successful builds to an S3 bucket,
-where it will be automatically picked up for ingestion in the EESSI repository.
+    See [bot permissions](../bot.md#permissions) for more information.
 
 ### Merging the pull request
 
-!!! warning
-    You need permissions to re-trigger CI workflows and merge pull requests.
-
-    Ask for help in the `#software-layer` channel of the EESSI Slack if needed!
-
 You should be able to verify in the pull request that the ingestion has been done,
-since the CI should fail :x: to indicate that some software installations listed in
+since the CI should fail :x: initially to indicate that some software installations listed in
 your modified easystack are missing.
 
 Once the ingestion has been done, simply re-triggering the CI workflow should be sufficient to make it pass
@@ -218,6 +153,12 @@ Once the ingestion has been done, simply re-triggering the CI workflow should be
     `2023.06`) of the [software-layer](https://github.com/EESSI/software-layer).
 
     If that's not the case yet, update this workflow in your pull request as well to add the missing easystack file!
+
+!!! warning
+    You need permissions to re-trigger CI workflows and merge pull requests
+    in the [software-layer](https://github.com/EESSI/software-layer) repository.
+
+    Ask for help in the `#software-layer` channel of the EESSI Slack if needed!
 
 ### Getting help
 
