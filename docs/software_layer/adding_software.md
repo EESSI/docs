@@ -9,6 +9,10 @@ To add software to EESSI, you should go through the semi-automatic software inst
 * 3) Instructing the [bot :robot:](../bot.md) to deploy the built software for ingestion into the EESSI repository;
 * 4) Merging the pull request once CI indicates that the software has been ingested. :white_check_mark:
 
+!!! warning
+
+    Make sure you are also aware of our [contribution policy](contribution_policy.md) when adding software to EESSI.
+
 ### Preparation
 
 Before you can make a pull request to the [software-layer](https://github.com/EESSI/software-layer),

@@ -26,6 +26,7 @@ nav:
     - software_layer/cpu_targets.md
     - software_layer/build_nodes.md
     - software_layer/adding_software.md
+    - software_layer/contribution_policy.md
   - Build-test-deploy bot: bot.md
   - Pilot repository: pilot.md
   - Getting access to EESSI:
