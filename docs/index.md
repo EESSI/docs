@@ -22,6 +22,7 @@ More details about the project are available in the different subsections:
 * [Getting access to EESSI](getting_access/is_eessi_accessible.md)
 * [Using EESSI](using_eessi/setting_up_environment.md)
 * [Software testing](software_testing.md)
+* [Getting support](support.md)
 * [Meetings](meetings.md)
 * [Project partners](partners.md)
 * [Contact info](contact.md)
