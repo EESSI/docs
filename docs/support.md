@@ -1,4 +1,4 @@
-![mustixscale logo](img/logos/multixscale_logo.png){width=60%}
+![MustiXscale logo](img/logos/multixscale_logo.png){width=60%}
 
 Thanks to the MultiXscale project we are able to provide support to the users of EESSI. 
 
