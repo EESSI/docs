@@ -5,7 +5,8 @@ Thanks to the MultiXscale project we are able to provide support to the users of
 ## How to report a problem or ask a question
 
 If you have a GitLab account you can submit your problems or questions on 
-the following GitLab repo, https://gitlab.com/eessi/support.
+the following GitLab repo, https://gitlab.com/eessi/support. 
+Please use one of the provided templates when submitting an issue.
 
 You can also submit your issues or send in questions via our e-mail address `support (@) eessi.io`. 
 When you send us an email, please provide us with as much information as possible on the issue that you are having. 
