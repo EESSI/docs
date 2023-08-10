@@ -29,6 +29,6 @@ If you are using the test-suite and run into any trouble using it you can also s
 ## What do we not support
 
 We ask the users of EESSI to refrain from sending in issues that are specifically related to a bug in one of the softwares that EESSI provides. 
-Instead please look at the support that is provided by the developers and community of the software in question. 
+Instead please consult the support that is provided by the developers and community of the software in question. 
 
 
