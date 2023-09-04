@@ -24,7 +24,7 @@ Please contact us.
 
 ### software requests
 We are open to software requests for applications that aren't available. You can try it your self by looking through the [documentation on adding software](software_layer/adding_software.md). 
-Or you can just send in a resquest. 
+Or you can just send in a request. 
 Please try to provide as much information on the software as possible.
 
 ### Test-suite
