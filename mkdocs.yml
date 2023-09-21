@@ -41,7 +41,6 @@ nav:
     - using_eessi/setting_up_environment.md
     - using_eessi/basic_commands.md
     - using_eessi/eessi_demos.md
-  - Software testing: software_testing.md
   - Meetings:
       - Overview: meetings.md
       - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
