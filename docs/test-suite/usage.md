@@ -72,7 +72,7 @@ ReFrame will generate various output and log files:
 
 We strongly recommend controlling where these files go by using the [common logging configuration that
 is provided by the EESSI test suite in your ReFrame configuration file](installation-configuration.md#logging)
-and setting [`$RFM_PREFIX`](installation-configuration.md#RFM_PREFIX).
+and setting [`$RFM_PREFIX`](installation-configuration.md#RFM_PREFIX) (avoid using the cmd line option `--prefix`).
 
 If you do, and if you use [ReFrame v4.3.3 or more newer](installation-configuration.md#requirements),
 you should find the output and log files at:
