@@ -241,7 +241,7 @@ reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-re
 reframe --list --name %module_name=TensorFlow/2.11 --tag 1_node
 ```
 
-### Dry run of TensorFlow CI checks on a quarter node (on all system partitions)
+### Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)
 
 ```
 reframe --dry-run --name 'TensorFlow.*CUDA' --tag 1_4_node --tag CI
