@@ -22,7 +22,7 @@ Found 123 check(s)
 ```
 
 !!! note
-    When using `--list`, checks are only generated based on available modules.
+    When using `--list`, checks are only generated based on modules that are available in the system where the `reframe` command is invoked.
 
     The system partitions specified in your ReFrame configuration file are *not* taken into account when using `--list`.
 
