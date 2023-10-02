@@ -1,6 +1,6 @@
 # Overview of the EESSI project
 
-![EESSI logo](img/logos/EESSI_logo_horizontal_smaller.png)
+![EESSI logo](img/logos/EESSI_logo_horizontal_smaller.jpg)
 
 ## Scope & Goals
 
