@@ -1,4 +1,8 @@
-![MustiXscale logo](img/logos/multixscale_logo.png){width=60%}
+# Getting support for EESSI
+
+<p align="center">
+  <img width="40%" src="../img/logos/multixscale_logo.png" alt="MustiXscale logo">
+</p>
 
 Thanks to the [MultiXscale EuroHPC project](https://www.multixscale.eu) we are able to provide support to the users of EESSI. 
 The [EESSI support portal](https://gitlab.com/eessi/support) is hosted in GitLab.
@@ -37,6 +41,7 @@ The quickest way to add additional software to EESSI is by contributing it yours
 
 Alternatively, you can send in a request to our support team. Please try to provide as much information on the software as possible: preferably use the [issue template](https://gitlab.com/eessi/support/-/issues/new?issuable_template=Software_request) (which requires you to log in to GitLab), or make sure to cover the items listed [here](https://gitlab.com/eessi/support/-/blob/main/.gitlab/issue_templates/Software_request.md).
 
+Be aware that we can only provide software that has an appropriate open source license.
 
 #### EESSI test suite
 
