@@ -5,7 +5,8 @@
 </p>
 
 Thanks to the [MultiXscale EuroHPC project](https://www.multixscale.eu) we are able to provide support to the users of EESSI. 
-The [EESSI support portal](https://gitlab.com/eessi/support) is hosted in GitLab.
+
+The **EESSI support portal** is hosted in GitLab: <https://gitlab.com/eessi/support>.
 
 ## How to report a problem or ask a question { #open-issue }
 
