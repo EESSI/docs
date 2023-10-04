@@ -26,6 +26,11 @@ nav:
     - software_layer/cpu_targets.md
     - software_layer/build_nodes.md
     - software_layer/adding_software.md
+  - Test suite:
+    - Overview: test-suite/index.md
+    - Installation & configuration: test-suite/installation-configuration.md
+    - Usage: test-suite/usage.md
+    - Release notes: test-suite/release-notes.md
   - Build-test-deploy bot: bot.md
   - Pilot repository: pilot.md
   - Getting access to EESSI:
