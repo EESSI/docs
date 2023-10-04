@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://eessi.github.io/docs/bot/">
+        <link rel="canonical" href="https://eessi.github.io/docs/test-suite/">
       
       
-        <link rel="prev" href="../test-suite/release-notes/">
+        <link rel="prev" href="../software_layer/adding_software/">
       
       
-        <link rel="next" href="../pilot/">
+        <link rel="next" href="installation-configuration/">
       
       
       <link rel="icon" href="../img/logos/EESSI.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Build-test-deploy bot - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>Overview - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-test-deploy-bot" class="md-skip">
+        <a href="#eessi-test-suite" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Build-test-deploy bot
+              Overview
             
           </span>
         </div>
@@ -475,18 +475,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -500,7 +502,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Test suite
@@ -511,9 +513,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../test-suite/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -522,6 +533,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -533,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../test-suite/installation-configuration/" class="md-nav__link">
+      <a href="installation-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../test-suite/usage/" class="md-nav__link">
+      <a href="usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../test-suite/release-notes/" class="md-nav__link">
+      <a href="release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -598,29 +610,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Build-test-deploy bot
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../bot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -629,174 +621,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#high-level-design" class="md-nav__link">
-    High-level design
-  </a>
-  
-    <nav class="md-nav" aria-label="High-level design">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-handler" class="md-nav__link">
-    Event handler
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#job-manager" class="md-nav__link">
-    Job manager
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    Basics
-  </a>
-  
-    <nav class="md-nav" aria-label="Basics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building" class="md-nav__link">
-    Building
-  </a>
-  
-    <nav class="md-nav" aria-label="Building">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filters" class="md-nav__link">
-    Filters
-  </a>
-  
-    <nav class="md-nav" aria-label="Filters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#combining-filters" class="md-nav__link">
-    Combining filters
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiple-build-instructions" class="md-nav__link">
-    Multiple build instructions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behind-the-scenes" class="md-nav__link">
-    Behind-the-scenes
-  </a>
-  
-    <nav class="md-nav" aria-label="Behind-the-scenes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#processing-build-instructions" class="md-nav__link">
-    Processing build instructions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#managing-build-jobs" class="md-nav__link">
-    Managing build jobs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#artefacts" class="md-nav__link">
-    Artefacts
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    Testing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploying" class="md-nav__link">
-    Deploying
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploying">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#behind-the-scenes_1" class="md-nav__link">
-    Behind-the-scenes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1205,162 +1029,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#high-level-design" class="md-nav__link">
-    High-level design
-  </a>
-  
-    <nav class="md-nav" aria-label="High-level design">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#event-handler" class="md-nav__link">
-    Event handler
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#job-manager" class="md-nav__link">
-    Job manager
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    Basics
-  </a>
-  
-    <nav class="md-nav" aria-label="Basics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#permissions" class="md-nav__link">
-    Permissions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#building" class="md-nav__link">
-    Building
-  </a>
-  
-    <nav class="md-nav" aria-label="Building">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#filters" class="md-nav__link">
-    Filters
-  </a>
-  
-    <nav class="md-nav" aria-label="Filters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#combining-filters" class="md-nav__link">
-    Combining filters
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multiple-build-instructions" class="md-nav__link">
-    Multiple build instructions
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#behind-the-scenes" class="md-nav__link">
-    Behind-the-scenes
-  </a>
-  
-    <nav class="md-nav" aria-label="Behind-the-scenes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#processing-build-instructions" class="md-nav__link">
-    Processing build instructions
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#managing-build-jobs" class="md-nav__link">
-    Managing build jobs
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#artefacts" class="md-nav__link">
-    Artefacts
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing" class="md-nav__link">
-    Testing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploying" class="md-nav__link">
-    Deploying
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploying">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#behind-the-scenes_1" class="md-nav__link">
-    Behind-the-scenes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1377,139 +1045,21 @@
   
 
 
-<h1 id="build-test-deploy-bot">Build-test-deploy bot<a class="headerlink" href="#build-test-deploy-bot" title="Permanent link">&para;</a></h1>
-<p>Building, testing, and deploying software is done by one or more <em>bot instances</em>.</p>
-<p>The EESSI build-test-deploy bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /> is implemented as a <a href="https://docs.github.com/en/apps/overview">GitHub App</a>
-in the <a href="https://github.com/EESSI/eessi-bot-software-layer"><code>eessi-bot-software-layer</code> repository</a>.</p>
-<p>It operates in the context of <a href="../software_layer/adding_software/#software_layer_pull_request">pull requests</a> to
-the <a href="https://github.com/EESSI/compatibility-layer"><code>compatibility-layer</code> repository</a> or the
-<a href="https://github.com/EESSI/software-layer"><code>software-layer</code> repository</a>,
-and follows the instructions supplied by humans,
-so the procedure of adding software to EESSI is <em>semi-automatic</em>.</p>
-<p>It leverages the scripts provided in the <code>bot/</code> subdirectory of the target repository
-(see for example <a href="https://github.com/EESSI/software-layer/tree/2023.06/bot">here</a>), like <code>bot/build.sh</code>
-to build software, and <code>bot/check-result.sh</code> to check whether the software was built correctly.</p>
-<h2 id="high-level-design">High-level design<a class="headerlink" href="#high-level-design" title="Permanent link">&para;</a></h2>
-<p>The bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /> consists of two components: the <em>event handler</em>, and the <em>job manager</em>.</p>
-<h3 id="event-handler">Event handler<a class="headerlink" href="#event-handler" title="Permanent link">&para;</a></h3>
-<p>The bot event handler is responsible for handling
-<a href="https://docs.github.com/en/webhooks-and-events/events/github-event-types">GitHub events</a>
-for the GitHub repositories it is registered to.</p>
-<p>It is triggered for every event that it receives from GitHub.
-Most events are ignored, but specific events trigger the bot to take action.</p>
-<p>Examples of actionable events are submitting of a comment that starts with <code>bot:</code>,
-which may specify an instruction for the bot like <a href="#building">building software</a>,
-or adding a <code>bot:deploy</code> label (see <a href="#deploying">deploying</a>).</p>
-<h3 id="job-manager">Job manager<a class="headerlink" href="#job-manager" title="Permanent link">&para;</a></h3>
-<p>The bot job manager is responsible for monitoring the queued and running jobs, and reporting back
-when jobs completed.</p>
-<p>It runs every couple of minutes as a <a href="https://en.wikipedia.org/wiki/Cron">cron job</a>.</p>
-<h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
-<p>Instructions for the bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /> should always start with <code>bot:</code>.</p>
-<p>To get help from the bot, post a comment with <code>bot: help</code>.</p>
-<p>To make the bot report how it is configured, post a comment with <code>bot: show_config</code>.</p>
-<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
-<p>The bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /> is configured to only act on instructions issued by specific GitHub accounts.</p>
-<p>There are separate configuration options for allowing to send instructions to the bot,
-to trigger building of software, and to deploy software installations in to the EESSI repository.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ask for help in the <code>#software-layer-bot</code> channel of the EESSI Slack if needed!</p>
-</div>
-<h2 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h2>
-<p>To instruct the bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /> to build software, one or more <code>build</code> instructions
-should be issued by posting a comment in the pull request (see also <a href="../software_layer/adding_software/#bot_build">here</a>).</p>
-<p>The most basic build instruction that can be sent to the bot is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bot: build
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Only use <code>bot: build</code> if you are confident that it is OK to do so.</p>
-<p>Most likely, you want to supply one or more filters to avoid that the bot builds for all its configurations.</p>
-</div>
-<h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
-<p>Build instructions can include <em>filters</em> that are applied by each bot instance to determine which builds
-should be executed, based on:</p>
-<ul>
-<li><code>instance</code>: the <code>name</code> of the bot instance, for example <code>instance:aws</code> for the bot instance running in AWS;</li>
-<li><code>repository</code>: the target repository, for example <code>eessi-2023.06-software</code> which corresponds to the 2023.06 version of the EESSI software layer;</li>
-<li><code>architecture</code>: the name of the <a href="../software_layer/cpu_targets/">CPU microarchitecture</a>, for example <code>x86_64/amd/zen2</code>;</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Use <code>:</code> as separator to specify a value for a particular filter, do not add spaces after the <code>:</code>.</p>
-<p>The bot recognizes shorthands for the supported filters, so you can use <code>inst:...</code> instead of <code>instance:...</code>,
-<code>repo:...</code> instead of <code>repository:...</code>, and <code>arch:...</code> instead of <code>architecture:...</code>.</p>
-</div>
-<h4 id="combining-filters">Combining filters<a class="headerlink" href="#combining-filters" title="Permanent link">&para;</a></h4>
-<p>You can combine multiple filters in a single <code>build</code> instruction.
-Separate filters with a space, order of filters does not matter.</p>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bot: build repo:eessi-2023.06-software arch:x86_64/amd/zen2
-</code></pre></div>
-<h4 id="multiple-build-instructions">Multiple build instructions<a class="headerlink" href="#multiple-build-instructions" title="Permanent link">&para;</a></h4>
-<p>You can issue multiple build instructions in a single comment, even across multiple bot instances,
-repositories, and CPU targets. Specify one build instruction per line.</p>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bot: build repo:eessi-2023.06-software arch:x86_64/amd/zen3 inst:aws
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>bot: build repo:eessi-2023.06-software arch:aarch64/generic inst:azure
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The bot applies the filters with partial matching, which you can use to combine multiple build
-instructions into a single one.</p>
-<p>For example, if you only want to build for all <code>aarch64</code> CPU targets, you can use <code>arch:aarch64</code> as filter.</p>
-<p>The same applies to the <code>instance</code> and <code>repository</code> filters.</p>
-</div>
-<h3 id="behind-the-scenes">Behind-the-scenes<a class="headerlink" href="#behind-the-scenes" title="Permanent link">&para;</a></h3>
-<h4 id="processing-build-instructions">Processing build instructions<a class="headerlink" href="#processing-build-instructions" title="Permanent link">&para;</a></h4>
-<p>When the bot receives build instructions through a comment in a pull request,
-they are processed by the event handler component. It will:</p>
-<p>1) Combine its active configuration (instance name, repositories, supported CPU targets)
-   and the build instructions to prepare a list of jobs to submit;</p>
-<p>2) Create a working directory for each job, including a Slurm job script that
-   runs the <code>bot/build.sh</code> script in the context of the changes proposed in the pull request to build the
-   software, and runs <code>bot/check-result.sh</code> script at the end to check whether the build was successful;</p>
-<p>3) Submit each prepared job to a workernode that can build for the specified CPU target, and put a hold on it.</p>
-<h4 id="managing-build-jobs">Managing build jobs<a class="headerlink" href="#managing-build-jobs" title="Permanent link">&para;</a></h4>
-<p>During the next iteration of the job manager, the submitted jobs are released and queued for execution.</p>
-<p>The job manager also monitors the running jobs at regular intervals, and reports back in the pull request
-when a job has completed. It also reports the result (<code>SUCCESS</code> <img alt="😁" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f601.svg" title=":grin:" /> or <code>FAILURE</code> <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f622.svg" title=":cry:" />), based on the result
-of the <code>bot/check-result.sh</code> script.</p>
-<h4 id="artefacts">Artefacts<a class="headerlink" href="#artefacts" title="Permanent link">&para;</a></h4>
-<p>If all goes well, each job should produce a tarball as an <em>artefact</em>,
-which contains the software installations and the corresponding environment module files.</p>
-<p>The message reported by the job manager provides an overview of the contents of the artefact,
-which was created by the <code>bot/check-result.sh</code> script.</p>
-<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The test phase is not implemented yet in the bot.</p>
-<p>We intend to use the <a href="https://github.com/EESSI/test-suite">EESSI test suite</a>
-in different OS configurations to verify that the software that was built works as expected.</p>
-</div>
-<h2 id="deploying">Deploying<a class="headerlink" href="#deploying" title="Permanent link">&para;</a></h2>
-<p>To deploy the artefacts that were obtained in the build phase, you should add the <code>bot: deploy</code> label
-to the pull request.</p>
-<p>This will trigger the event handler to upload the artefacts for ingestion into the EESSI repository.</p>
-<h3 id="behind-the-scenes_1">Behind-the-scenes<a class="headerlink" href="#behind-the-scenes_1" title="Permanent link">&para;</a></h3>
-<p>The current setup for the <a href="https://github.com/EESSI/software-layer">software-layer repository</a>, is as follows:</p>
-<ul>
-<li>The bot deploys the artefacts (tarballs) to an S3 bucket in AWS, along with a metadata file, using the
-  <a href="https://github.com/EESSI/eessi-bot-software-layer/blob/main/scripts/eessi-upload-to-staging"><code>eessi-upload-to-staging</code></a> script;</li>
-<li>A cron job that runs every couple of minutes on the CernVM-FS Stratum-0 server opens a pull request to
-  the (private) <a href="https://github.com/EESSI/staging">EESSI/staging</a> repository, to move the metadata file for
-  each uploaded tarball from the <code>staged</code> to the <code>approved</code> directory;</li>
-<li>Once that pull request gets merged, the target is automatically ingested into the EESSI repository by a cron job
-  on the Stratum-0 server, and the metadata file is moved from <code>approved</code> to <code>ingested</code> in the <code>EESSI/staging</code> repository;</li>
-</ul>
+<h1 id="eessi-test-suite">EESSI test suite<a class="headerlink" href="#eessi-test-suite" title="Permanent link">&para;</a></h1>
+<p>The <a href="https://github.com/EESSI/test-suite">EESSI test suite</a> is a collection of tests that are run using
+<a href="https://reframe-hpc.readthedocs.io/">ReFrame</a>.
+It is used to check whether the software installations included in the <a href="../software_layer">EESSI software layer</a>
+are working and performing as expected.</p>
+<p>To get started, you should look into the <a href="installation-configuration/">installation and configuration guidelines</a> first.</p>
+<p>For more information on using the EESSI test suite, see <a href="usage/">here</a>.</p>
+<p>See also <a href="release-notes/">release notes for the EESSI test suite</a>.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 21, 2023</span>
       
     
   </small>

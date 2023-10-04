@@ -1,0 +1,1902 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/test-suite/installation-configuration/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../usage/">
+      
+      
+      <link rel="icon" href="../../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.3">
+    
+    
+      
+        <title>Installation & configuration - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.79e020e9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installing-and-configuring-the-eessi-test-suite" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation & configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Filesystem layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Filesystem layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filesystem_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filesystem_layer/stratum1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up a Stratum 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compatibility_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compatibility layer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Software layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/cpu_targets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPU targets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/build_nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build nodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/adding_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Test suite
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Test suite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation & configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Installation & configuration
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-reframe-incl-test-library" class="md-nav__link">
+    Installing Reframe (incl. test library)
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Reframe (incl. test library)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reframe-test-library-hpctestlib" class="md-nav__link">
+    ReFrame test library (hpctestlib)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-eessi-test-suite" class="md-nav__link">
+    Installing the EESSI test suite
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the EESSI test suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip-install" class="md-nav__link">
+    Using pip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloning-the-repository" class="md-nav__link">
+    Cloning the repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    Verify installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-reframe-environment-variables" class="md-nav__link">
+    Configuring ReFrame environment variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring ReFrame environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#RFM_CONFIG_FILES" class="md-nav__link">
+    ReFrame configuration file ($RFM_CONFIG_FILES)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-path-for-tests-rfm_check_search_path" class="md-nav__link">
+    Search path for tests ($RFM_CHECK_SEARCH_PATH)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#RFM_PREFIX" class="md-nav__link">
+    ReFrame prefix ($RFM_PREFIX)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reframe-config-file" class="md-nav__link">
+    ReFrame configuration file
+  </a>
+  
+    <nav class="md-nav" aria-label="ReFrame configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-imports" class="md-nav__link">
+    Python imports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-level-system-info-systems" class="md-nav__link">
+    High-level system info (systems)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitions" class="md-nav__link">
+    System partitions (systems.partitions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    Environments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-auto-detection" class="md-nav__link">
+    Auto-detection of processor information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-your-reframe-configuration" class="md-nav__link">
+    Verifying your ReFrame configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build-test-deploy bot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pilot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pilot repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting access to EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Getting access to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/is_eessi_accessible/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is EESSI accessible?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/native_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Native installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/eessi_container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EESSI container
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Using EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Using EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/setting_up_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/basic_commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/eessi_demos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running EESSI demos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software testing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Meetings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Meetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2022-09-amsterdam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community meeting (Sept'22)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../partners/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project partners
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-reframe-incl-test-library" class="md-nav__link">
+    Installing Reframe (incl. test library)
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Reframe (incl. test library)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reframe-test-library-hpctestlib" class="md-nav__link">
+    ReFrame test library (hpctestlib)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-eessi-test-suite" class="md-nav__link">
+    Installing the EESSI test suite
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing the EESSI test suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pip-install" class="md-nav__link">
+    Using pip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloning-the-repository" class="md-nav__link">
+    Cloning the repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-installation" class="md-nav__link">
+    Verify installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-reframe-environment-variables" class="md-nav__link">
+    Configuring ReFrame environment variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring ReFrame environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#RFM_CONFIG_FILES" class="md-nav__link">
+    ReFrame configuration file ($RFM_CONFIG_FILES)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-path-for-tests-rfm_check_search_path" class="md-nav__link">
+    Search path for tests ($RFM_CHECK_SEARCH_PATH)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#RFM_PREFIX" class="md-nav__link">
+    ReFrame prefix ($RFM_PREFIX)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reframe-config-file" class="md-nav__link">
+    ReFrame configuration file
+  </a>
+  
+    <nav class="md-nav" aria-label="ReFrame configuration file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-imports" class="md-nav__link">
+    Python imports
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high-level-system-info-systems" class="md-nav__link">
+    High-level system info (systems)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partitions" class="md-nav__link">
+    System partitions (systems.partitions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environments" class="md-nav__link">
+    Environments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu-auto-detection" class="md-nav__link">
+    Auto-detection of processor information
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-your-reframe-configuration" class="md-nav__link">
+    Verifying your ReFrame configuration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="installing-and-configuring-the-eessi-test-suite">Installing and configuring the EESSI test suite<a class="headerlink" href="#installing-and-configuring-the-eessi-test-suite" title="Permanent link">&para;</a></h1>
+<p>This page covers the installation and configuration of the <a href="https://github.com/EESSI/test-suite">EESSI test suite</a>.</p>
+<p>For information on <em>using</em> the test suite, see <a href="../usage/">here</a>.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h3>
+<p>The EESSI test suite requires Python &gt;= 3.6 and <a href="https://reframe-hpc.readthedocs.io">ReFrame</a> v4.3.3 (or newer).</p>
+<details class="note">
+<summary>(for more details on the ReFrame version requirement, click here)</summary>
+<p>Two important bugs were resolved in ReFrame's CPU autodetect functionality <a href="https://github.com/reframe-hpc/reframe/pull/2978">in version 4.3.3</a>.</p>
+<p><em>We strongly recommend you use <code>ReFrame &gt;= 4.3.3</code></em>.</p>
+<p>If you are using an older version of ReFrame, you may encounter some issues:</p>
+<ul>
+<li>ReFrame will try to use the parallel launcher command configured for each partition (e.g. <code>mpirun</code>) when doing
+  the remote autodetect. If there is no system-version of <code>mpirun</code> available, that will fail
+  (see <a href="https://github.com/reframe-hpc/reframe/issues/2926">ReFrame issue #2926</a>).</li>
+<li>CPU autodetection only worked when using a clone of the ReFrame repository, <em>not</em> when it was installed
+  with <code>pip</code> or <code>EasyBuild</code> (as is also the case for the ReFrame shipped with EESSI)
+  (see <a href="https://github.com/reframe-hpc/reframe/issues/2914">ReFrame issue #2914</a>).</li>
+</ul>
+</details>
+<h3 id="installing-reframe-incl-test-library">Installing Reframe (incl. test library)<a class="headerlink" href="#installing-reframe-incl-test-library" title="Permanent link">&para;</a></h3>
+<p>You need to make sure that <a href="https://reframe-hpc.readthedocs.io">ReFrame</a> is available - that is, the <code>reframe</code> command should work:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reframe<span class="w"> </span>--version
+</code></pre></div>
+<p>General instructions for installing ReFrame are available in the <a href="https://reframe-hpc.readthedocs.io/en/stable/started.html">ReFrame documentation</a>.</p>
+<h4 id="reframe-test-library-hpctestlib">ReFrame test library (<code>hpctestlib</code>)<a class="headerlink" href="#reframe-test-library-hpctestlib" title="Permanent link">&para;</a></h4>
+<p>The EESSI test suite requires that the <a href="https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html">ReFrame test library (<code>hpctestlib</code>)</a>
+is available, which is currently not included in a standard installation of ReFrame.</p>
+<p>We recommend installing ReFrame using <a href="https://easybuild.io/">EasyBuild</a> (version 4.8.1, or newer),
+or using a ReFrame installation that is available in EESSI (pilot version 2023.06, or newer).</p>
+<p>For example (using EESSI):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/pilot.eessi-hpc.org/versions/2023.06/init/bash
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>module<span class="w"> </span>load<span class="w"> </span>ReFrame/4.2.0
+</code></pre></div>
+<p>To check whether the ReFrame test library is available, try importing a submodule of the <code>hpctestlib</code> Python package:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import hpctestlib.sciapps.gromacs&#39;</span>
+</code></pre></div>
+<h3 id="installing-the-eessi-test-suite">Installing the EESSI test suite<a class="headerlink" href="#installing-the-eessi-test-suite" title="Permanent link">&para;</a></h3>
+<p>To install the EESSI test suite, you can either use <code>pip</code> or clone the GitHub repository directly:</p>
+<h4 id="pip-install">Using <code>pip</code><a class="headerlink" href="#pip-install" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/EESSI/test-suite.git
+</code></pre></div>
+<h4 id="cloning-the-repository">Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/EESSI/test-suite<span class="w"> </span><span class="nv">$HOME</span>/EESSI-test-suite
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>EESSI-test-suite
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PWD</span>:<span class="nv">$PYTHONPATH</span>
+</code></pre></div>
+<h4 id="verify-installation">Verify installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h4>
+<p>To check whether the EESSI test suite installed correctly,
+try importing the <code>eessi.testsuite</code> Python package:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import eessi.testsuite&#39;</span>
+</code></pre></div>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<p>Before you can run the EESSI test suite, you need to create a configuration file for ReFrame that is specific to the system on which the tests will be run.</p>
+<p>Example configuration files are available in the <code>config</code> subdirectory of the <code>EESSI/test-suite</code> GitHub repository](https://github.com/EESSI/test-suite/tree/main/config),
+which you can use as a template to create your own.</p>
+<h3 id="configuring-reframe-environment-variables">Configuring ReFrame environment variables<a class="headerlink" href="#configuring-reframe-environment-variables" title="Permanent link">&para;</a></h3>
+<p>We recommend setting a couple of <code>$RFM_*</code> environment variables to configure ReFrame, to avoid needing to include particular options to the <code>reframe</code> command over and over again.</p>
+<h4 id="RFM_CONFIG_FILES">ReFrame configuration file (<code>$RFM_CONFIG_FILES</code>)<a class="headerlink" href="#RFM_CONFIG_FILES" title="Permanent link">&para;</a></h4>
+<p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_CONFIG_FILES"><code>RFM_CONFIG_FILES</code> in ReFrame docs</a>)</em></p>
+<p>Define the <code>$RFM_CONFIG_FILES</code> environment variable to instruct ReFrame which configuration file to use, for example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CONFIG_FILES</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/config/example.py
+</code></pre></div>
+<p>Alternatively, you can use the <code>--config-file</code> (or <code>-C</code>) <code>reframe</code> option.</p>
+<p>See the <a href="#reframe-config-file">section on the ReFrame configuration file</a> below for more information.</p>
+<h4 id="search-path-for-tests-rfm_check_search_path">Search path for tests (<code>$RFM_CHECK_SEARCH_PATH</code>)<a class="headerlink" href="#search-path-for-tests-rfm_check_search_path" title="Permanent link">&para;</a></h4>
+<p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_CHECK_SEARCH_PATH"><code>RFM_CHECK_SEARCH_PATH</code> in ReFrame docs</a>)</em></p>
+<p>Define the <code>$RFM_CHECK_SEARCH_PATH</code> environment variable to tell ReFrame which directory to search for tests.</p>
+<p>In addition, define <code>$RFM_CHECK_SEARCH_RECURSIVE</code> to ensure that ReFrame searches <code>$RFM_CHECK_SEARCH_PATH</code> recursively
+(i.e. so that also tests in subdirectories are found).</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CHECK_SEARCH_PATH</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/eessi/testsuite/tests
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CHECK_SEARCH_RECURSIVE</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
+<p>Alternatively, you can use the <code>--checkpath</code> (or <code>-c</code>) and <code>--recursive</code> (or <code>-R</code>) <code>reframe</code> options.</p>
+<h4 id="RFM_PREFIX">ReFrame prefix (<code>$RFM_PREFIX</code>)<a class="headerlink" href="#RFM_PREFIX" title="Permanent link">&para;</a></h4>
+<p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_PREFIX"><code>RFM_PREFIX</code> in ReFrame docs</a>)</em></p>
+<p>Define the <code>$RFM_PREFIX</code> environment variable to tell ReFrame where to store the files it produces. E.g.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>export RFM_PREFIX=$HOME/reframe_runs
+</code></pre></div>
+<p>This involves:</p>
+<ul>
+<li>test output directories (which contain e.g. the job script, stderr and stdout for each of the test jobs)</li>
+<li>staging directories (unless otherwise specified by <code>staging</code>, see below);</li>
+<li>performance logs;</li>
+</ul>
+<p>Note that the default is for ReFrame to use the current directory as prefix.
+We recommend setting a prefix so that logs are not scattered around and nicely appended for each run.</p>
+<p>If our <a href="#logging">common logging configuration</a> is used, the regular ReFrame log file will
+also end up in the location specified by <code>$RFM_PREFIX</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using the <code>--prefix</code> option in your <code>reframe</code> command is <em>not</em> equivalent to setting <code>$RFM_PREFIX</code>,
+since our <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/common_config.py">common logging configuration</a>
+only picks up on the <code>$RFM_PREFIX</code> environment variable to determine the location for the ReFrame log file.</p>
+</div>
+<h3 id="reframe-config-file">ReFrame configuration file<a class="headerlink" href="#reframe-config-file" title="Permanent link">&para;</a></h3>
+<p>In order for ReFrame to run tests on your system, it needs to know some properties about your system.
+For example, it needs to know what kind of job scheduler you have, which partitions the system has,
+how to submit to those partitions, etc.
+All of this has to be described in a <em>ReFrame configuration file</em> (see also the <a href="#RFM_CONFIG_FILES">section on <code>$RFM_CONFIG_FILES</code> above</a>).</p>
+<p>The <a href="https://reframe-hpc.readthedocs.io/en/stable/configure.html">official ReFrame documentation</a> provides the full
+description on configuring ReFrame for your site. However, there are some configuration settings that are specifically
+required for the EESSI test suite. Also, there are a large amount of configuration settings available in ReFrame,
+which makes the official documentation potentially a bit overwhelming.</p>
+<p>Here, we will describe how to create a configuration file that works with the EESSI test suite, starting from an
+<a href="https://github.com/EESSI/test-suite/tree/main/config/settings_example.py">example configuration file <code>settings_example.py</code></a>,
+which defines the most common configuration settings.</p>
+<p>You can look at other example configurations in the <a href="https://github.com/EESSI/test-suite/tree/main/config/">config directory</a> for more inspiration.</p>
+<h4 id="python-imports">Python imports<a class="headerlink" href="#python-imports" title="Permanent link">&para;</a></h4>
+<p>The EESSI test suite standardizes a few string-based values as constants, as well as the logging format used by ReFrame.
+Every ReFrame configuration file used for running the EESSI test suite should therefore start with the following import statements:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">from</span> <span class="nn">eessi.testsuite.common_config</span> <span class="kn">import</span> <span class="n">common_logging_config</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kn">from</span> <span class="nn">eessi.testsuite.constants</span> <span class="kn">import</span> <span class="o">*</span>
+</code></pre></div>
+<h4 id="high-level-system-info-systems">High-level system info (<code>systems</code>)<a class="headerlink" href="#high-level-system-info-systems" title="Permanent link">&para;</a></h4>
+<p>First, we describe the system at its highest level through the
+<a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#systems"><code>systems</code></a> keyword.</p>
+<p>You can define multiple systems in a single configuration file (<code>systems</code> is a Python list value).
+We recommend defining just a single system in each configuration file, as it makes the configuration file a bit easier to digest (for humans).</p>
+<p>An example of the <code>systems</code> section of the configuration file would be:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">site_configuration</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="s1">&#39;systems&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="c1"># We could list multiple systems. Here, we just define one</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        <span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;example&#39;</span><span class="p">,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>            <span class="s1">&#39;descr&#39;</span><span class="p">:</span> <span class="s1">&#39;Example cluster&#39;</span><span class="p">,</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>            <span class="s1">&#39;modules_system&#39;</span><span class="p">:</span> <span class="s1">&#39;lmod&#39;</span><span class="p">,</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>            <span class="s1">&#39;hostnames&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">],</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>            <span class="s1">&#39;stagedir&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;/some/shared/dir/</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;USER&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">/reframe_output/staging&#39;</span><span class="p">,</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>            <span class="s1">&#39;partitions&#39;</span><span class="p">:</span> <span class="p">[</span><span class="o">...</span><span class="p">],</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>        <span class="p">}</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    <span class="p">]</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
+</code></pre></div>
+<p>The most common configuration items defined at this level are:</p>
+<ul>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.name"><code>name</code></a>:
+  The name of the system. Pick whatever makes sense for you.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.descr"><code>descr</code></a>:
+  Description of the system. Again, pick whatever you like.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.modules_system"><code>modules_system</code></a>:
+  The modules system used on your system. EESSI provides modules in <code>lmod</code> format. There is no need to change this,
+  unless you want to run tests from the EESSI test suite with non-EESSI modules.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.hostnames"><code>hostnames</code></a>:
+  The names of the hosts on which you will run the ReFrame command, as regular expression. Using these names,
+  ReFrame can automatically determine which of the listed configurations in the <code>systems</code> list to use, which is useful
+  if you're defining multiple systems in a single configuration file. If you follow our recommendation to limit
+  yourself to one system per configuration file, simply define <code>'hostnames': ['*']</code>.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.prefix"><code>prefix</code></a>:
+  Prefix directory for a ReFrame run on this system. Any directories or files produced by ReFrame will use this prefix,
+  if not specified otherwise.
+  We recommend setting the <code>$RFM_PREFIX</code> environment variable rather than specifying <code>prefix</code> in
+  your configuration file, so our <a href="#logging">common logging configuration</a> can pick up on it
+  (see also <a href="#RFM_PREFIX"><code>$RFM_PREFIX</code></a>).</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.stagedir"><code>stagedir</code></a>: A shared directory that is available on all nodes that will execute ReFrame tests. This is used for storing (temporary) files related to the test. Typically, you want to set this to a path on a (shared) scratch filesystem. Defining this is optional: the default is a '<code>stage</code>' directory inside the <code>prefix</code> directory.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions"><code>partitions</code></a>: Details on system partitions, see below.</li>
+</ul>
+<h4 id="partitions">System partitions (<code>systems.partitions</code>)<a class="headerlink" href="#partitions" title="Permanent link">&para;</a></h4>
+<p>The next step is to add the system partitions to the configuration files,
+which is also specified as a Python list since a system can have multiple partitions.</p>
+<p>The <a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions"><code>partitions</code></a>
+section of the configuration for a system with two <a href="https://slurm.schedmd.com/">Slurm</a> partitions (one CPU partition,
+and one GPU partition) could for example look something like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">site_configuration</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="s1">&#39;systems&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        <span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>            <span class="o">...</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>            <span class="s1">&#39;partitions&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>                <span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>                    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;cpu_partition&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>                    <span class="s1">&#39;descr&#39;</span><span class="p">:</span> <span class="s1">&#39;CPU partition&#39;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>                    <span class="s1">&#39;scheduler&#39;</span><span class="p">:</span> <span class="s1">&#39;slurm&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>                    <span class="s1">&#39;prepare_cmds&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;source /cvmfs/pilot.eessi-hpc.org/latest/init/bash&#39;</span><span class="p">],</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>                    <span class="s1">&#39;launcher&#39;</span><span class="p">:</span> <span class="s1">&#39;mpirun&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>                    <span class="s1">&#39;access&#39;</span><span class="p">:</span>  <span class="p">[</span><span class="s1">&#39;-p cpu&#39;</span><span class="p">],</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>                    <span class="s1">&#39;environs&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">],</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>                    <span class="s1">&#39;max_jobs&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>                    <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">FEATURES</span><span class="p">[</span><span class="n">CPU</span><span class="p">]],</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>                <span class="p">},</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>                <span class="p">{</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>                    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;gpu_partition&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>                    <span class="s1">&#39;descr&#39;</span><span class="p">:</span> <span class="s1">&#39;GPU partition&#39;</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>                    <span class="s1">&#39;scheduler&#39;</span><span class="p">:</span> <span class="s1">&#39;slurm&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>                    <span class="s1">&#39;prepare_cmds&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;source /cvmfs/pilot.eessi-hpc.org/latest/init/bash&#39;</span><span class="p">],</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>                    <span class="s1">&#39;launcher&#39;</span><span class="p">:</span> <span class="s1">&#39;mpirun&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>                    <span class="s1">&#39;access&#39;</span><span class="p">:</span>  <span class="p">[</span><span class="s1">&#39;-p gpu&#39;</span><span class="p">],</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>                    <span class="s1">&#39;environs&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">],</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>                    <span class="s1">&#39;max_jobs&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>                    <span class="s1">&#39;resources&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>                        <span class="p">{</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>                            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;_rfm_gpu&#39;</span><span class="p">,</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>                            <span class="s1">&#39;options&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;--gpus-per-node=</span><span class="si">{num_gpus_per_node}</span><span class="s1">&#39;</span><span class="p">],</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>                        <span class="p">}</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>                    <span class="p">],</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>                    <span class="s1">&#39;devices&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>                        <span class="p">{</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>                            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">DEVICE_TYPES</span><span class="p">[</span><span class="n">GPU</span><span class="p">],</span>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>                            <span class="s1">&#39;num_devices&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>                        <span class="p">}</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>                    <span class="p">],</span>
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>                    <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>                        <span class="n">FEATURES</span><span class="p">[</span><span class="n">CPU</span><span class="p">],</span>
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>                        <span class="n">FEATURES</span><span class="p">[</span><span class="n">GPU</span><span class="p">],</span>
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>                    <span class="p">],</span>
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>                    <span class="s1">&#39;extras&#39;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>                        <span class="n">GPU_VENDOR</span><span class="p">:</span> <span class="n">GPU_VENDORS</span><span class="p">[</span><span class="n">NVIDIA</span><span class="p">],</span>
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>                    <span class="p">},</span>
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>                <span class="p">},</span>
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>            <span class="p">]</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>        <span class="p">}</span>
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>    <span class="p">]</span>
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a><span class="p">}</span>
+</code></pre></div>
+<p>The most common configuration items defined at this level are:</p>
+<ul>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.name"><code>name</code></a>:
+  The name of the partition. Pick anything you like.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.descr"><code>descr</code></a>:
+  Description of the partition. Again, pick whatever you like.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.scheduler"><code>scheduler</code></a>:
+  The scheduler used to submit to this partition, for example <code>slurm</code>. All valid options can be found
+  <a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.scheduler">in the ReFrame documentation</a>.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.launcher"><code>launcher</code></a>:
+  The parallel launcher used on this partition, for example <code>mpirun</code> or <code>srun</code>. All valid options can be found
+  <a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.launcher">in the ReFrame documentation</a>.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.access"><code>access</code></a>:
+  A list of arguments that you would normally pass to the scheduler when submitting to this partition
+  (for example '<code>-p cpu</code>' for submitting to a Slurm partition called <code>cpu</code>).
+  If supported by your scheduler, we recommend to <em>not</em> export the submission environment
+  (for example by using '<code>--export=None</code>' with Slurm). This avoids test failures due to environment variables set
+  in the submission environment that are passed down to submitted jobs.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.prepare_cmds"><code>prepare_cmds</code></a>:
+  Commands to execute at the start of every job that runs a test. If your batch scheduler does not export
+  the environment of the submit host, this is typically where you can initialize the EESSI environment.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.environs"><code>environs</code></a>:
+  The names of the <em>programming environments</em> (to be defined later in the configuration file via <a href="#environments"><code>environments</code></a>)
+  that may be used on this partition. A programming environment is required for tests that are compiled first,
+  before they can run. The EESSI test suite however only tests existing software installations, so no compilation
+  (or specific programming environment) is needed. Simply specify <code>'environs': ['default']</code>,
+  since ReFrame requires that <em>a</em> default environment is defined. </li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.max_jobs"><code>max_jobs</code></a>:
+  The maximum amount of jobs ReFrame is allowed to submit in parallel. Some batch systems limit how many jobs users
+  are allowed to have in the queue. You can use this to make sure ReFrame doesn't exceed that limit.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#custom-job-scheduler-resources"><code>resources</code></a>:
+  This field defines how additional resources can be requested in a batch job. Specifically, on a GPU partition,
+  you have to define a resource with the name '<code>_rfm_gpu</code>'. The <code>options</code> field should then contain the argument to be
+  passed to the batch scheduler in order to request a certain number of GPUs <em>per node</em>, which could be different for
+  different batch schedulers. For example, when using Slurm you would specify:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="s1">&#39;resources&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  <span class="p">{</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>      <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;_rfm_gpu&#39;</span><span class="p">,</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>      <span class="s1">&#39;options&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;--gpus-per-node=</span><span class="si">{num_gpus_per_node}</span><span class="s1">&#39;</span><span class="p">],</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  <span class="p">},</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">],</span>
+</code></pre></div></li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.processor"><code>processor</code></a>:
+  We recommend to <em>NOT</em> define this field, unless <a href="#cpu-auto-detection">CPU autodetection</a> is not working for you.
+  The EESSI test suite relies on information about your processor topology to run. Using CPU autodetection is the
+  easiest way to ensure that <em>all</em> processor-related information needed by the EESSI test suite are defined.
+  Only if CPU autodetection is failing for you do we advice you to set the <code>processor</code> in the partition configuration
+  as an alternative. Although additional fields might be used by future EESSI tests, at this point you'll have to
+  specify <em>at least</em> the following fields:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="s1">&#39;processor&#39;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="s1">&#39;num_cpus&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>  <span class="c1"># Total number of CPU cores in a node</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="s1">&#39;num_sockets&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1"># Number of sockets in a node</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="s1">&#39;num_cpus_per_socket&#39;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>  <span class="c1"># Number of CPU cores per socket</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="s1">&#39;num_cpus_per_core&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1"># Number of hardware threads per CPU core</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="p">}</span>                 
+</code></pre></div></li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.features"><code>features</code></a>:
+  The <code>features</code> field is used by the EESSI test suite to run tests <em>only</em> on a partition if it supports a certain
+  <em>feature</em> (for example if GPUs are available). Feature names are standardized in the EESSI test suite in
+  <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants.FEATURES</code></a>
+  dictionary.
+  Typically, you want to define <code>features: [FEATURES[CPU]]</code> for CPU based partitions, and <code>features: [FEATURES[GPU]]</code>
+  for GPU based partitions. The first tells the EESSI test suite that this partition can only run CPU-based tests,
+  whereas second indicates that this partition can only run GPU-based tests.
+  You <em>can</em> define a single partition to have <em>both</em> the CPU and GPU features (since <code>features</code> is a Python list).
+  However, since the CPU-based tests will not ask your batch scheduler for GPU resources, this <em>may</em> fail on batch
+  systems that force you to ask for at least one GPU on GPU-based nodes. Also, running CPU-only code on a GPU node is
+  typically considered bad practice, thus testing its functionality is typically not relevant.</li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.devices"><code>devices</code></a>: This field specifies information on devices (for example) present in the partition. Device types are standardized in the EESSI test suite in the <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants.DEVICE_TYPES</code></a> dictionary. This is used by the EESSI test suite to determine how many of these devices it can/should use per node.
+  Typically, there is no need to define <code>devices</code> for CPU partitions.
+  For GPU partitions, you want to define something like:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="s1">&#39;devices&#39;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">DEVICE_TYPES</span><span class="p">[</span><span class="n">GPU</span><span class="p">],</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="s1">&#39;num_devices&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1"># or however many GPUs you have per node</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">}</span>
+</code></pre></div></li>
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.extras"><code>extras</code></a>: This field specifies extra information on the partition, such as the GPU vendor. Valid fields for <code>extras</code> are standardized as constants in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants</code></a> (for example <code>GPU_VENDOR</code>). This is used by the EESSI test suite to decide if a partition can run a test that <em>specifically</em> requires a certain brand of GPU.
+  Typically, there is no need to define <code>extras</code> for CPU partitions.
+  For GPU partitions, you typically want to specify the GPU vendor, for example:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="s1">&#39;extras&#39;</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="n">GPU_VENDOR</span><span class="p">:</span> <span class="n">GPU_VENDORS</span><span class="p">[</span><span class="n">NVIDIA</span><span class="p">]</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<p>Note that as more tests are added to the EESSI test suite, the use of <code>features</code>, <code>devices</code> and <code>extras</code> by the EESSI test suite may be extended, which may require an update of your configuration file to define newly recognized fields.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Keep in mind that ReFrame partitions are <em>virtual</em> entities: they may or may not correspond to a partition as it is
+configured in your batch system. One might for example have a single partition in the batch system, but configure
+it as two separate partitions in the ReFrame configuration file based on additional constraints that are passed to
+the scheduler, see for example the <a href="https://github.com/EESSI/test-suite/blob/main/config/aws_citc.py">AWS CitC example configuration</a>.</p>
+<p>The EESSI test suite (and more generally, ReFrame) assumes the hardware <em>within</em> a partition defined in the ReFrame configuration file is <em>homogeneous</em>.</p>
+</div>
+<h4 id="environments">Environments<a class="headerlink" href="#environments" title="Permanent link">&para;</a></h4>
+<p>ReFrame needs a programming environment to be defined in its configuration file for tests that need to be compiled before they are run. While we don't have such tests in the EESSI test suite, ReFrame requires <em>some</em> programming environment to be defined:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">site_configuration</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="o">...</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    <span class="s1">&#39;environments&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>        <span class="p">{</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span>  <span class="c1"># Note: needs to match whatever we set for &#39;environs&#39; in the partition</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>            <span class="s1">&#39;cc&#39;</span><span class="p">:</span> <span class="s1">&#39;cc&#39;</span><span class="p">,</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>            <span class="s1">&#39;cxx&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>            <span class="s1">&#39;ftn&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>        <span class="p">}</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="p">]</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>name</code> here needs to match whatever we specified for <a href="#partitions">the <code>environs</code> property of the partitions</a>.</p>
+</div>
+<h4 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h4>
+<p>ReFrame allows a large degree of control over what gets logged, and where. For convenience, we have created a common logging
+configuration in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/common_config.py"><code>eessi.testsuite.common_config</code></a>
+that provides a reasonable default. It can be used by importing <code>common_logging_config</code> and calling it as a function
+to define the '<code>logging</code> setting:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">from</span> <span class="nn">eessi.testsuite.common_config</span> <span class="kn">import</span> <span class="n">common_logging_config</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">site_configuration</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="o">...</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="s1">&#39;logging&#39;</span><span class="p">:</span>  <span class="n">common_logging_config</span><span class="p">(),</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">}</span>
+</code></pre></div>
+When combined by setting the <a href="#RFM_PREFIX"><code>$RFM_PREFIX</code> environment variable</a>, the output, performance log, and
+regular ReFrame logs will all end up in the directory specified by <code>$RFM_PREFIX</code>, which we recommend doing.</p>
+<p>Alternatively, a prefix can be passed as an argument like <code>common_logging_config(prefix)</code>, which will control where
+the regular ReFrame log ends up. Note that the performance logs do <em>not</em> respect this prefix: they will still end up
+in the standard ReFrame prefix (by default the current directory, unless otherwise set with <code>$RFM_PREFIX</code> or <code>--prefix</code>).</p>
+<h4 id="cpu-auto-detection">Auto-detection of processor information<a class="headerlink" href="#cpu-auto-detection" title="Permanent link">&para;</a></h4>
+<p>You can let ReFrame <a href="https://reframe-hpc.readthedocs.io/en/stable/configure.html#proc-autodetection">auto-detect the processor information</a> for your system.</p>
+<p>ReFrame will automatically use auto-detection when two conditions are met:</p>
+<ol>
+<li>The <a href="#partitions"><code>partitions</code> section of you configuration file</a> does <em>not</em> specify <code>processor</code> information for a
+   particular partition (as per our recommendation <a href="#partitions">in the previous section</a>);</li>
+<li>The <code>remote_detect</code> option is enabled in the <code>general</code> part of the configuration, as follows:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">site_configuration</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="s1">&#39;systems&#39;</span><span class="p">:</span> <span class="o">...</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="s1">&#39;logging&#39;</span><span class="p">:</span> <span class="o">...</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="s1">&#39;general&#39;</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>        <span class="p">{</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>            <span class="s1">&#39;remote_detect&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>        <span class="p">}</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>    <span class="p">]</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="p">}</span>
+</code></pre></div></li>
+</ol>
+<p>To trigger the auto-detection of processor information, it is sufficient to
+let ReFrame list the available tests:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>reframe --list
+</code></pre></div>
+<p>ReFrame will store the processor information for your system in <code>~/.reframe/topology/&lt;system&gt;-&lt;partition&gt;/processor.json</code>.</p>
+<h3 id="verifying-your-reframe-configuration">Verifying your ReFrame configuration<a class="headerlink" href="#verifying-your-reframe-configuration" title="Permanent link">&para;</a></h3>
+<p>To verify the ReFrame configuration, you can <a href="https://reframe-hpc.readthedocs.io/en/stable/configure.html#querying-configuration-options">query the configuration using <code>--show-config</code></a>.</p>
+<p>To see the full configuration, use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>reframe<span class="w"> </span>--show-config
+</code></pre></div>
+<p>To only show the configuration of a particular system partition, you can use the <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-system"><code>--system</code> option</a>.
+To query a specific setting, you can pass an argument to <code>--show-config</code>.</p>
+<p>For example, to show the configuration of the <code>gpu</code> partition of the <code>example</code> system:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>reframe<span class="w"> </span>--system<span class="w"> </span>example:gpu<span class="w"> </span>--show-config<span class="w"> </span>systems/0/partitions
+</code></pre></div>
+<p>You can drill it down further to only show the value of a particular configuration setting.</p>
+<p>For example, to only show the <code>launcher</code> value for the <code>gpu</code> partition of the <code>example</code> system:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>reframe<span class="w"> </span>--system<span class="w"> </span>example:gpu<span class="w"> </span>--show-config<span class="w"> </span>systems/0/partitions/@gpu/launcher
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 4, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.6eac0284.min.js"></script>
+      
+    
+  </body>
+</html>
