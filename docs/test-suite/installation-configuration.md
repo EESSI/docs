@@ -90,7 +90,7 @@ python3 -c 'import eessi.testsuite'
 
 Before you can run the EESSI test suite, you need to create a configuration file for ReFrame that is specific to the system on which the tests will be run.
 
-Example configuration files are available [n the `config` subdirectory of the `EESSI/test-suite` GitHub repository](https://github.com/EESSI/test-suite/tree/main/config),
+Example configuration files are available in the `config` subdirectory of the `EESSI/test-suite` GitHub repository](https://github.com/EESSI/test-suite/tree/main/config),
 which you can use as a template to create your own.
 
 ### Configuring ReFrame environment variables
