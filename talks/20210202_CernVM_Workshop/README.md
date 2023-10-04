@@ -12,7 +12,7 @@ https://indico.cern.ch/event/885212/overview
   * A: Jülich and CSCS are examples for large centers which are part of EESSI (not sure if they are part of PRACE or EuroHPC).
   * A: LUMI has shown signs of interest.
 
-* Q (Valentin Volkl): Key4HEP is already using Gitlab CI for publising to CVMFS and would be interested in a GitHub PR based workflow as envisaged by EESSI, interested in collaboration; perhaps the Github action runner can help.
+* Q (Valentin Volkl): Key4HEP is already using Gitlab CI for publishing to CVMFS and would be interested in a GitHub PR based workflow as envisaged by EESSI, interested in collaboration; perhaps the Github action runner can help.
   * A: We would be very interested to discuss this more. We also expect that the CVMFS ephemeral publish container would help.
 
 * Q (Dave Dykstra): Rocky Linux already uses building based on github PRs.

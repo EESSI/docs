@@ -77,7 +77,7 @@ prepared with the help from Terje Kvernes (@terjekv).
 
     We should ask the CVMFS developers about this too (see also https://cvmfs.readthedocs.io/en/stable/apx-security.html).
 
-* Q: LTS for Gentoo? Lifetime? Major upgrade -> EasyBuild complete rebuild? How long can we re-use the previous "trees"?
+* Q: LTS for Gentoo? Lifetime? Major upgrade -> EasyBuild complete rebuild? How long can we reuse the previous "trees"?
   * A: (question answered on stream, see recording).
        Short answer: we haven't decided this yet.
 
