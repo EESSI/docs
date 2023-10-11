@@ -97,7 +97,7 @@ Separate filters with a space, order of filters does not matter.
 For example:
 
 ```
-bot: build repo:eessi-2023.06-software arch:x86_64/amd/zen2
+bot: build repo:eessi-hpc.org-2023.06-software arch:x86_64/amd/zen2
 ```
 
 #### Multiple build instructions
@@ -108,8 +108,8 @@ repositories, and CPU targets. Specify one build instruction per line.
 For example:
 
 ```
-bot: build repo:eessi-2023.06-software arch:x86_64/amd/zen3 inst:aws
-bot: build repo:eessi-2023.06-software arch:aarch64/generic inst:azure
+bot: build repo:eessi-hpc.org-2023.06-software arch:x86_64/amd/zen3 inst:aws
+bot: build repo:eessi-hpc.org-2023.06-software arch:aarch64/generic inst:azure
 ```
 
 !!! note
