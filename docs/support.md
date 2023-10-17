@@ -61,4 +61,4 @@ Please consult the documentation of the software you are using, or contact the d
 
 --------------
 
-MultiXscale project funded by the European High Performance Computing Joint Undertaking (JU) and countries participating in the project under grant agreement no. 101093169
+Funded by the European Union. This work has received funding from the European High Performance Computing Joint Undertaking (JU) and countries participating in the project under grant agreement No 101093169.
