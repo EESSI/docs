@@ -58,3 +58,7 @@ If you are using the [EESSI build-and-deploy bot](https://github.com/EESSI/eessi
 Do not contact the EESSI support team to get help with *using* software that is included in EESSI, unless you think the problems you are seeing are related to *how* the software was built and installed.
 
 Please consult the documentation of the software you are using, or contact the developers of the software directly, if you have questions regarding using the software, or if you think you have found a bug.
+
+--------------
+
+Funded by the European Union. This work has received funding from the European High Performance Computing Joint Undertaking (JU) and countries participating in the project under grant agreement No 101093169.
