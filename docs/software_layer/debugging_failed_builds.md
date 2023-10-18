@@ -1,0 +1,129 @@
+# Debugging failed builds
+
+Unfortunately, software does not always build succesfully. Since EESSI targets novel CPU architectures as well, build failures on such platforms are quite common, as the software and/or the software build systems have not always been adjusted to support these architectures yet. Another challenge in EESSI is that the builds are done by a bot. While this is great for builds that complete succesfully (we can build a lot of software, for a wide range of hardware because of this automation), it does means that you, as contributor, can not easily access the build directory and build logs to figure out build issues.
+
+This page describes how you can interactively reproduce failed builds, so that you can more easily debug the issue. The assumption, of course, is that you have access to a node of the architecture on which the build is failing.
+
+Throughout this page, we will use [this PR](https://github.com/EESSI/software-layer/pull/360) as an example. It builds LAMMPS, and failed (among other things) on a [build issue for Plumed](https://github.com/EESSI/software-layer/pull/360#issuecomment-1765913105).
+
+## Preparing the environment
+A number of steps are needed to create the same environment in which the bot builds.
+
+- Fetching the feature branch from which you want to replicate a build.
+- Starting a shell in the EESSI container.
+- Setting the version of the EESSI software stack to use.
+- Start the Gentoo Prefix environment.
+- Start the EESSI software environment.
+- Configure EasyBuild.
+
+### Fetching the feature branch
+Looking at [the example PR](https://github.com/EESSI/software-layer/pull/360), we see the PR is created from [this fork](https://github.com/laraPPr/software-layer/). First, we clone the fork, then checkout the feature branch (`LAMMPS_23Jun2022`)
+```
+git clone https://github.com/laraPPr/software-layer/
+cd software-layer
+git checkout LAMMPS_23Jun2022
+```
+Alternatively, if you already have a clone of the `software-layer` you can add it as a new remote
+```
+cd software-layer
+git remote add laraPPr https://github.com/laraPPr/software-layer/
+git fetch laraPPr
+git checkout LAMMPS_23Jun2022
+```
+
+### Starting a shell in the EESSI container
+Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer` repository
+```
+./eessi_container.sh
+```
+!!! Note
+    You may have to press enter to clearly see the prompt as some messages
+        beginning with `CernVM-FS: ` have been printed after the first prompt
+            `Apptainer> ` was shown.
+
+For more info on using the EESSI container, see [here](../getting_access/eessi_container).
+
+### Start the Gentoo Prefix environment
+The next step is to start the Gentoo Prefix environment. 
+
+Before we start, check the current values of `${EESSI_CVMFS_REPO}` and `${EESSI_PILOT_VERSION}` so that you can reset them later:
+```
+echo ${EESSI_CVMFS_REPO}
+echo ${EESSI_PILOT_VERSION}
+```
+
+To do that, you need to run the `startprefix` command. However, we have several compatibility layers, and you'll need to run it for the one that matches the host node. For example, on an x86_64 linux machine:
+```
+export EESSI_OS_TYPE=linux
+export EESSI_CPU_FAMILY=x86_64
+${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
+```
+
+if you are unsure, you can start the EESSI software environment (see next step) and check the values of `EESSI_OS_TYPE` and `EESSI_CPU_FAMILY` set by that initialization script. Note that you'll have to start over with a new shell (i.e. quit the container) and repeat the current step of starting the Gentoo Prefix environment, as the order of those two steps matters.
+
+Now, reset the `${EESSI_CVMFS_REPO}` and `${EESSI_PILOT_VERSION}` in your prefix environment
+```
+export EESSI_CVMFS_REPO=...
+export EESSI_PILOT_VERSION=...
+```
+
+!!! Note
+    By activating the Gentoo Prefix environment, the system tools (e.g. `ls`) you would normally use are now provided by Gentoo Prefix, instead of the container OS. E.g. running `which ls` after starting the prefix environment as above will return `/cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/x86_64/bin/ls`. This makes the builds completely independent from the container OS.
+
+### Starting the EESSI software environment
+To activate the software environment, run
+```
+source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/bash
+```
+
+!!! Note
+    If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVFMS_REPO}` and `${EESSI_PILOT_VERSION}` environment variables at the end of the previous step.
+
+For more info on starting the EESSI software environment, see [here](../using_eessi/setting_up_environment/)
+
+### Configure EasyBuild
+It is important that we configure EasyBuild in the same way as the bot uses it, with two small exceptions:
+
+- Our working directory will be different
+- Our installpath will be different
+
+For both, any writeable path will do. In this example, we will choose `/tmp/easybuild` as our workdir, and `$HOME/.local/easybuild` as our installpath. Finally, we will source the `configure_easybuild` script, which will configure EasyBuild by setting environment variables.
+
+```
+export WORKDIR=/tmp/easybuild
+export EASYBUILD_INSTALLPATH="${HOME}/.local/easybuild"
+source configure_easybuild
+```
+Next, we need to determine the correct version of EasyBuild to load. Since [the example PR](https://github.com/EESSI/software-layer/pull/360) changes the file `eessi-2023.06-eb-4.8.1-2021b.yml`, this tells us the bot was using version `4.8.1` of EasyBuild to build this. Thus, we load that version of the EasyBuild module and check if everything was configured correctly:
+```
+module load EasyBuild/4.8.1
+eb --show-config
+```
+You should get something similar to
+
+```
+#
+# Current EasyBuild configuration
+# (C: command line argument, D: default value, E: environment variable, F: configuration file)
+#
+buildpath            (E) = /tmp/easybuild/easybuild/build
+containerpath        (E) = /tmp/easybuild/easybuild/containers
+debug                (E) = True
+experimental         (E) = True
+filter-deps          (E) = Autoconf, Automake, Autotools, binutils, bzip2, DBus, flex, gettext, gperf, help2man, intltool, libreadline, libtool, Lua, M4, makeinfo, ncurses, util-linux, XZ, zlib, Yasm
+filter-env-vars      (E) = LD_LIBRARY_PATH
+hooks                (E) = /home/casparvl/software-layer/eb_hooks.py
+ignore-osdeps        (E) = True
+installpath          (E) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/aarch64/neoverse_n1
+module-extensions    (E) = True
+packagepath          (E) = /tmp/easybuild/easybuild/packages
+prefix               (E) = /tmp/easybuild/easybuild
+read-only-installdir (E) = True
+repositorypath       (E) = /tmp/easybuild/easybuild/ebfiles_repo
+robot-paths          (D) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/aarch64/neoverse_n1/software/EasyBuild/4.8.1/easybuild/easyconfigs
+rpath                (E) = True
+sourcepath           (E) = /tmp/easybuild/easybuild/sources:
+sysroot              (E) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/aarch64
+trace                (E) = True
+zip-logs             (E) = bzip2
+```
