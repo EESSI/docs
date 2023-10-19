@@ -6,6 +6,12 @@ This page describes how you can interactively reproduce failed builds, so that y
 
 Throughout this page, we will use [this PR](https://github.com/EESSI/software-layer/pull/360) as an example. It builds LAMMPS, and failed (among other things) on a [build issue for Plumed](https://github.com/EESSI/software-layer/pull/360#issuecomment-1765913105).
 
+## Prerequisites
+You will need to have:
+
+- Access to a machine with the hardware for which the build that you want to debug failed. 
+- On that machine, meet the requirements for running the EESSI container, as described on [this page](../getting_access/eessi_container.md#prerequisites)
+
 ## Preparing the environment
 A number of steps are needed to create the same environment in which the bot builds.
 
@@ -41,7 +47,7 @@ Simply run the EESSI container (`eessi_container.sh`), which should be in the ro
         beginning with `CernVM-FS: ` have been printed after the first prompt
             `Apptainer> ` was shown.
 
-For more info on using the EESSI container, see [here](../getting_access/eessi_container).
+For more info on using the EESSI container, see [here](../getting_access/eessi_container.md).
 
 ### Start the Gentoo Prefix environment
 The next step is to start the Gentoo Prefix environment. 
@@ -71,6 +77,9 @@ export EESSI_PILOT_VERSION=...
     By activating the Gentoo Prefix environment, the system tools (e.g. `ls`) you would normally use are now provided by Gentoo Prefix, instead of the container OS. E.g. running `which ls` after starting the prefix environment as above will return `/cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/x86_64/bin/ls`. This makes the builds completely independent from the container OS.
 
 ### Starting the EESSI software environment
+!!! Note
+    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EESSI_SOFTWARE_SUBDIR_OVERRIDE=x86_64/generic` before starting the EESSI environment.
+
 To activate the software environment, run
 ```
 source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/bash
@@ -79,7 +88,8 @@ source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/bash
 !!! Note
     If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVFMS_REPO}` and `${EESSI_PILOT_VERSION}` environment variables at the end of the previous step.
 
-For more info on starting the EESSI software environment, see [here](../using_eessi/setting_up_environment/)
+
+For more info on starting the EESSI software environment, see [here](../using_eessi/setting_up_environment.md)
 
 ### Configure EasyBuild
 It is important that we configure EasyBuild in the same way as the bot uses it, with two small exceptions:
@@ -126,4 +136,22 @@ sourcepath           (E) = /tmp/easybuild/easybuild/sources:
 sysroot              (E) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/aarch64
 trace                (E) = True
 zip-logs             (E) = bzip2
+```
+
+!!! Note
+    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EASYBUILD_OPTARCH=GENERIC`.
+
+## Building the software
+When the bot builds software, it loops over all EasyStack files that have been changed, and builds them using EasyBuild. However, a single PR may add multiple items to a single EasyStack file, and the issue you are trying to debug is probably in _one_ of them. Getting EasyBuild to build the full EasyStack file will create the most similar situation to what the bot does. However, you _may_ just want to build the individual software that has changed. Below, we describe both approaches.
+
+### Building everything in the EasyStack file
+In our [example PR](https://github.com/EESSI/software-layer/pull/360), the EasyStack file that was changed was `eessi-2023.06-eb-4.8.1-2021b.yml`. To build this, we run (in the directory that contains the checkout of this feature branch):
+```
+eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
+```
+
+### Building an individual package
+In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. We'll also have to mind any options that are listed in the EasyStack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
+```
+eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19000
 ```

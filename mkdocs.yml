@@ -26,6 +26,7 @@ nav:
     - software_layer/cpu_targets.md
     - software_layer/build_nodes.md
     - software_layer/adding_software.md
+    - software_layer/debugging_failed_builds.md
   - Test suite:
     - Overview: test-suite/index.md
     - Installation & configuration: test-suite/installation-configuration.md
