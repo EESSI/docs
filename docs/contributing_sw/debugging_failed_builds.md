@@ -1,8 +1,10 @@
 # Debugging failed builds
 
-Unfortunately, software does not always build succesfully. Since EESSI targets novel CPU architectures as well, build failures on such platforms are quite common, as the software and/or the software build systems have not always been adjusted to support these architectures yet. Another challenge in EESSI is that the builds are done by a bot. While this is great for builds that complete succesfully (we can build a lot of software, for a wide range of hardware because of this automation), it does means that you, as contributor, can not easily access the build directory and build logs to figure out build issues.
+Unfortunately, software does not always build successfully. Since EESSI targets novel CPU architectures as well, build failures on such platforms are quite common, as the software and/or the software build systems have not always been adjusted to support these architectures yet.
 
-This page describes how you can interactively reproduce failed builds, so that you can more easily debug the issue. The assumption, of course, is that you have access to a node of the architecture on which the build is failing.
+In EESSI, the build are performed by a bot. This is great for builds that complete successfully as we can build a lot of software, for a wide range of hardware because of this automation. However, it does means that you, as contributor, can not easily access the build directory and build logs to figure out build issues.
+
+This page describes how you can interactively reproduce failed builds, so that you can more easily debug the issue.
 
 Throughout this page, we will use [this PR](https://github.com/EESSI/software-layer/pull/360) as an example. It builds LAMMPS, and failed (among other things) on a [build issue for Plumed](https://github.com/EESSI/software-layer/pull/360#issuecomment-1765913105).
 
@@ -10,7 +12,7 @@ Throughout this page, we will use [this PR](https://github.com/EESSI/software-la
 You will need to have:
 
 - Access to a machine with the hardware for which the build that you want to debug failed. 
-- On that machine, meet the requirements for running the EESSI container, as described on [this page](../getting_access/eessi_container.md#prerequisites)
+- On that machine, meet the requirements for running the EESSI container, as described on [this page](../getting_access/eessi_container.md#prerequisites).
 
 ## Preparing the environment
 A number of steps are needed to create the same environment in which the bot builds.
@@ -58,10 +60,10 @@ echo ${EESSI_CVMFS_REPO}
 echo ${EESSI_PILOT_VERSION}
 ```
 
-To do that, you need to run the `startprefix` command. However, we have several compatibility layers, and you'll need to run it for the one that matches the host node. For example, on an x86_64 linux machine:
+To do that, you need to run the `startprefix` command. However, we have several compatibility layers, and you'll need to run it for the one that matches the host node. For example, on an aarch64 (ARM) linux machine:
 ```
 export EESSI_OS_TYPE=linux
-export EESSI_CPU_FAMILY=x86_64
+export EESSI_CPU_FAMILY=aarch64
 ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
 ```
 
@@ -78,7 +80,7 @@ export EESSI_PILOT_VERSION=...
 
 ### Starting the EESSI software environment
 !!! Note
-    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EESSI_SOFTWARE_SUBDIR_OVERRIDE=x86_64/generic` before starting the EESSI environment.
+    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic` before starting the EESSI environment.
 
 To activate the software environment, run
 ```
@@ -149,9 +151,11 @@ In our [example PR](https://github.com/EESSI/software-layer/pull/360), the EasyS
 ```
 eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
 ```
+After some time, this build fails whil trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
 
 ### Building an individual package
 In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. We'll also have to mind any options that are listed in the EasyStack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
 ```
 eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19000
 ```
+After some time, this build fails whil trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
