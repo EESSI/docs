@@ -5,7 +5,7 @@ To add software to EESSI, you should go through the semi-automatic software inst
 * 1) Making a pull request to the [software-layer](https://github.com/EESSI/software-layer) repository
      to (add or) update an [easystack file](https://docs.easybuild.io/easystack-files) :books: that is used by
      [EasyBuild](https://docs.easybuild.io/) to install software;
-* 2) Instructing the [bot :robot:](../bot.md) to build the software on all [supported CPU microarchitectures](cpu_targets.md);
+* 2) Instructing the [bot :robot:](../bot.md) to build the software on all [supported CPU microarchitectures](../software_layer/cpu_targets.md);
 * 3) Instructing the [bot :robot:](../bot.md) to deploy the built software for ingestion into the EESSI repository;
 * 4) Merging the pull request once CI indicates that the software has been ingested. :white_check_mark:
 
@@ -108,7 +108,7 @@ For more information, see the [building section in the bot documentation](../bot
 
 * If one of the builds failed, you can let the bot retry that specific build.
 
-* Make sure that the software has been built correctly for all [CPU targets](cpu_targets.md) before you deploy!
+* Make sure that the software has been built correctly for all [CPU targets](../software_layer/cpu_targets.md) before you deploy!
 
 #### Checking the builds :mag:
 
