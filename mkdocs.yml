@@ -40,6 +40,7 @@ nav:
   - Using EESSI:
     - using_eessi/setting_up_environment.md
     - using_eessi/basic_commands.md
+    - using_eessi/building_on_eessi.md
     - using_eessi/eessi_demos.md
   - Getting support: support.md
   - Meetings:
