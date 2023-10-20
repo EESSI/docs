@@ -37,7 +37,7 @@ eb --show-config
 ```
 
 !!! Note
-    We use EasyBuild's default behaviour in optimizing for the host architecture. Since the EESSI initalization script also loads the EESSI stack that is optimized for your host architecture, this matches nicely. However, if you work on a cluster with heterogeneous node types, you have to realize you can only use these builds on the same architecture as where you build them. You can use different `EASYBUILD_INSTALLPATH`s if you want to build for different host architectures.
+    We use EasyBuild's default behaviour in optimizing for the host architecture. Since the EESSI initialization script also loads the EESSI stack that is optimized for your host architecture, this matches nicely. However, if you work on a cluster with heterogeneous node types, you have to realize you can only use these builds on the same architecture as where you build them. You can use different `EASYBUILD_INSTALLPATH`s if you want to build for different host architectures.
 
 ### Building
 Now, you are ready to build. For example, at the time of writing, `netCDF-4.9.0-gompi-2022a.eb` was not in the EESSI environment yet, so you can build it yourself:
@@ -61,7 +61,7 @@ module load netCDF/4.9.0-gompi-2022a
 ```
 
 !!! Note
-    Be careful adding to the `MODULEPATH` in your `.bashrc` if you are on a cluster with heterogenous architectures. You don't want to pick up on a module that was not compiled for the correct architectures accidentally.
+    Be careful adding to the `MODULEPATH` in your `.bashrc` if you are on a cluster with heterogeneous architectures. You don't want to pick up on a module that was not compiled for the correct architectures accidentally.
 
 ## Manually building software op top of EESSI
 Building software on top of EESSI would require your linker to use the same system-dependencies as the software in EESSI does. In other words: it requires you to link against libraries from the compatibility layer, instead of from your host OS.
