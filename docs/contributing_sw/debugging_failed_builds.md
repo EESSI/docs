@@ -19,7 +19,6 @@ A number of steps are needed to create the same environment in which the bot bui
 
 - Fetching the feature branch from which you want to replicate a build.
 - Starting a shell in the EESSI container.
-- Setting the version of the EESSI software stack to use.
 - Start the Gentoo Prefix environment.
 - Start the EESSI software environment.
 - Configure EasyBuild.
