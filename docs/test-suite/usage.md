@@ -183,14 +183,19 @@ $ reframe --name GROMACS --tag CI
 
 #### `scale` tags
 
-The EESSI test suite defines a set of custom tags that control the *scale* of checks,
-which specify many cores/nodes should be used for running a check.
+The EESSI test suite defines a set of custom tags that control the *scale* of
+checks, which specify many cores/GPUs/nodes should be used for running a check.
+The number of cores and GPUs serves as an upper limit; the actual count depends
+on the specific configuration of cores, GPUs, and sockets within the node, as
+well as the specific test being carried out.
 
 | tag name | description |
 |:--------:|-------------|
-| `1_core` | using 1 CPU core and 1 GPU (if running a GPU test) |
-| `2_cores` | using 2 CPU cores and 1 GPU (if running a GPU test) |
-| `4_cores` | using 4 CPU cores and 1 GPU (if running a GPU test) |
+| `1_core` | using 1 CPU core 1 GPU |
+| `2_cores` | using 2 CPU cores and 1 GPU |
+| `4_cores` | using 4 CPU cores and 1 GPU |
+| `1_cpn_2_nodes` | using 1 CPU core per node, 1 GPU per node, and 2 nodes |
+| `1_cpn_4_nodes` | using 1 CPU core per node, 1 GPU per node, and 4 nodes |
 | `1_8_node` | using 1/8th of a node (12.5% of available cores/GPUs, 1 at minimum) |
 | `1_4_node` | using a quarter of a node (25% of available cores/GPUs, 1 at minimum) |
 | `1_2_node` | using half of a node (50% of available cores/GPUs, 1 at minimum) |
