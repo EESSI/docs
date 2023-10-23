@@ -43,6 +43,8 @@ Simply run the EESSI container (`eessi_container.sh`), which should be in the ro
 ```
 ./eessi_container.sh
 ```
+You may want to start the container with the `--save DIR/TGZ` and flag (check `./eessi_container.sh --help`) in order to be able to resume later. This is especially useful when debugging an issue for which dependencies first have to be build, since the next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off.
+
 !!! Note
     You may have to press enter to clearly see the prompt as some messages
         beginning with `CernVM-FS: ` have been printed after the first prompt
