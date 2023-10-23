@@ -43,12 +43,30 @@ Simply run the EESSI container (`eessi_container.sh`), which should be in the ro
 ```
 ./eessi_container.sh
 ```
-If you want to debug an issue for which a lot of dependencies need to be build first, you may want to start the container with the `--save DIR/TGZ` and flag (check `./eessi_container.sh --help`) in order to be able to resume later. Next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off, having all dependencies already built and available.
-
 !!! Note
     You may have to press enter to clearly see the prompt as some messages
         beginning with `CernVM-FS: ` have been printed after the first prompt
             `Apptainer> ` was shown.
+
+If you want to debug an issue for which a lot of dependencies need to be build first, you may want to start the container with the `--save DIR/TGZ` and flag (check `./eessi_container.sh --help`) in order to be able to resume later. E.g.
+
+```
+./eessi_container.sh --save ${HOME}/pr370/
+```
+The tarball will be saved when you exit the container. Note that the first `exit` command will first make you exit the Gentoo prefix environment. Only the second will take you out of the container, and print where the tarball will be stored:
+```
+[EESSI pilot 2023.06] $ exit
+logout
+Leaving Gentoo Prefix with exit status 1
+Apptainer> exit
+exit
+Saved contents of tmp directory '/tmp/eessi.VgLf1v9gf0' to tarball '${HOME}/pr370/EESSI-pilot-1698056784.tgz' (to resume session add '--resume ${HOME}/pr370//EESSI-pilot-1698056784.tgz')
+```
+
+Next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off, having all dependencies already built and available.
+```
+./eessi_container.sh --resume ${HOME}/pr370//EESSI-pilot-1698056784.tgz
+```
 
 For more info on using the EESSI container, see [here](../getting_access/eessi_container.md).
 
