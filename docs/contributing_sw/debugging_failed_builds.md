@@ -123,7 +123,7 @@ For both, any writeable path will do. In this example, we will choose `/tmp/easy
 ```
 export WORKDIR=/tmp/easybuild
 source configure_easybuild
-export EASYBUILD_INSTALLPATH="/tmp/easybuild"
+export EASYBUILD_INSTALLPATH=/tmp/easybuild
 ```
 Note that you probably also want to add the path where the modules are installed to your `MODULEPATH`:
 ```
