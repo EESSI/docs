@@ -123,7 +123,7 @@ For both, any writeable path will do. In this example, we will choose `/tmp/easy
 ```
 export WORKDIR=/tmp/easybuild
 source configure_easybuild
-export EASYBUILD_INSTALLPATH="${HOME}/.local/easybuild"
+export EASYBUILD_INSTALLPATH="/tmp/easybuild"
 ```
 Next, we need to determine the correct version of EasyBuild to load. Since [the example PR](https://github.com/EESSI/software-layer/pull/360) changes the file `eessi-2023.06-eb-4.8.1-2021b.yml`, this tells us the bot was using version `4.8.1` of EasyBuild to build this. Thus, we load that version of the EasyBuild module and check if everything was configured correctly:
 ```
@@ -145,7 +145,7 @@ filter-deps          (E) = Autoconf, Automake, Autotools, binutils, bzip2, DBus,
 filter-env-vars      (E) = LD_LIBRARY_PATH
 hooks                (E) = /home/casparvl/software-layer/eb_hooks.py
 ignore-osdeps        (E) = True
-installpath          (E) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/aarch64/neoverse_n1
+installpath          (E) = /tmp/easybuild/software/linux/aarch64/neoverse_n1
 module-extensions    (E) = True
 packagepath          (E) = /tmp/easybuild/easybuild/packages
 prefix               (E) = /tmp/easybuild/easybuild
