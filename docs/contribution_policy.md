@@ -88,8 +88,7 @@ although the installation of older software versions and toolchains is allowed i
 
 ### g) Testing { #testing }
 
-We should be able to test the software installations via the [EESSI test suite](https://github.com/EESSI/test-suite)
-being developed.
+We should be able to test the software installations via the [EESSI test suite](../test-suite).
 
 Ideally one or more tests are available that verify that the software is functionally correct,
 and performs well.
