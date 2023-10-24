@@ -11,4 +11,4 @@ For more information:
 A Slack channel is available for the EESSI community (an invitation is required
 to join).
 
-![EESSI logo](img/logos/EESSI_logo_horizontal.png)
+![EESSI logo](img/logos/EESSI_logo_horizontal.jpg)

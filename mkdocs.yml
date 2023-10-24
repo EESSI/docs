@@ -27,6 +27,11 @@ nav:
     - software_layer/build_nodes.md
     - software_layer/adding_software.md
   - Contribution policy: contribution_policy.md
+  - Test suite:
+    - Overview: test-suite/index.md
+    - Installation & configuration: test-suite/installation-configuration.md
+    - Usage: test-suite/usage.md
+    - Release notes: test-suite/release-notes.md
   - Build-test-deploy bot: bot.md
   - Pilot repository: pilot.md
   - Getting access to EESSI:
@@ -37,7 +42,7 @@ nav:
     - using_eessi/setting_up_environment.md
     - using_eessi/basic_commands.md
     - using_eessi/eessi_demos.md
-  - Software testing: software_testing.md
+  - Getting support: support.md
   - Meetings:
       - Overview: meetings.md
       - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
@@ -72,8 +77,8 @@ markdown_extensions:
       permalink: true
   # emojis
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 extra:
   # add links in bottom right
   social:
