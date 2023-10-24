@@ -18,6 +18,7 @@ More details about the project are available in the different subsections:
 * [Filesystem layer](filesystem_layer.md)
 * [Compatibility layer](compatibility_layer.md)
 * [Software layer](software_layer.md)
+* [Contribution policy](contribution_policy.md)
 * [Pilot repository](pilot.md)
 * [Getting access to EESSI](getting_access/is_eessi_accessible.md)
 * [Using EESSI](using_eessi/setting_up_environment.md)
