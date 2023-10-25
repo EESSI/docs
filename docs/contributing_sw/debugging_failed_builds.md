@@ -2,11 +2,11 @@
 
 Unfortunately, software does not always build successfully. Since EESSI targets novel CPU architectures as well, build failures on such platforms are quite common, as the software and/or the software build systems have not always been adjusted to support these architectures yet.
 
-In EESSI, the build are performed by a bot. This is great for builds that complete successfully as we can build a lot of software, for a wide range of hardware because of this automation. However, it does means that you, as contributor, can not easily access the build directory and build logs to figure out build issues.
+In EESSI, all software packages are built by a bot. This is great for builds that complete successfully as we can build many software packages for a wide range of hardware with little human intervention. However, it does mean that you, as contributor, can not easily access the build directory and build logs to figure out build issues.
 
 This page describes how you can interactively reproduce failed builds, so that you can more easily debug the issue.
 
-Throughout this page, we will use [this PR](https://github.com/EESSI/software-layer/pull/360) as an example. It builds LAMMPS, and failed (among other things) on a [build issue for Plumed](https://github.com/EESSI/software-layer/pull/360#issuecomment-1765913105).
+Throughout this page, we will use [this PR](https://github.com/EESSI/software-layer/pull/360) as an example. It intends to add LAMMPS to EESSI. Among other issues, it failed on a [building Plumed](https://github.com/EESSI/software-layer/pull/360#issuecomment-1765913105).
 
 ## Prerequisites
 You will need to have:
@@ -45,13 +45,13 @@ Simply run the EESSI container (`eessi_container.sh`), which should be in the ro
 ```
 !!! Note
     You may have to press enter to clearly see the prompt as some messages
-        beginning with `CernVM-FS: ` have been printed after the first prompt
-            `Apptainer> ` was shown.
+    beginning with `CernVM-FS: ` have been printed after the first prompt
+    `Apptainer> ` was shown.
 
-If you want to debug an issue for which a lot of dependencies need to be build first, you may want to start the container with the `--save DIR/TGZ` and flag (check `./eessi_container.sh --help`) in order to be able to resume later. E.g.
+If you want to debug an issue for which a lot of dependencies need to be build first, you may want to start the container with the `--save DIR/TGZ` and flag (check `./eessi_container.sh --help`). This saves the temporary directory (which we will use as working and installation directory later in this instruction) in order to be able to resume later with the same temporary directory. E.g.
 
 ```
-./eessi_container.sh --save ${HOME}/pr370/
+./eessi_container.sh --save ${HOME}/pr370
 ```
 The tarball will be saved when you exit the container. Note that the first `exit` command will first make you exit the Gentoo prefix environment. Only the second will take you out of the container, and print where the tarball will be stored:
 ```
@@ -60,15 +60,18 @@ logout
 Leaving Gentoo Prefix with exit status 1
 Apptainer> exit
 exit
-Saved contents of tmp directory '/tmp/eessi.VgLf1v9gf0' to tarball '${HOME}/pr370/EESSI-pilot-1698056784.tgz' (to resume session add '--resume ${HOME}/pr370//EESSI-pilot-1698056784.tgz')
+Saved contents of tmp directory '/tmp/eessi.VgLf1v9gf0' to tarball '${HOME}/pr370/EESSI-pilot-1698056784.tgz' (to resume session add '--resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz')
 ```
+
+Note that the tarballs can be quite sizeable, so make sure to pick a filesystem where you have a large enough quotum.
+
 
 Next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off, having all dependencies already built and available.
 ```
-./eessi_container.sh --resume ${HOME}/pr370//EESSI-pilot-1698056784.tgz
+./eessi_container.sh --resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz
 ```
 
-For more info on using the EESSI container, see [here](../getting_access/eessi_container.md).
+For a detailed description on using the script `eessi_container.sh`, see [here](../getting_access/eessi_container.md).
 
 ### Start the Gentoo Prefix environment
 The next step is to start the Gentoo Prefix environment. 
@@ -79,12 +82,10 @@ echo ${EESSI_CVMFS_REPO}
 echo ${EESSI_PILOT_VERSION}
 ```
 
-Then, we'll source a script that sets `EESSI_OS_TYPE` and `EESSI_CPU_FAMILY` automatically, by detecting the host OS and CPU:
+Then, we set `EESSI_OS_TYPE` and `EESSI_CPU_FAMILY` and run the `startprefix` command to start the Gentoo Prefix environment:
 ```
-source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/minimal_eessi_env
-```
-Then, run the `startprefix` command to actually start the Gentoo Prefix environment:
-```
+export EESSI_OS_TYPE=linux  # We only support Linux for now
+export EESSI_CPU_FAMILY=$(uname -m)
 ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
 ```
 
@@ -118,14 +119,20 @@ It is important that we configure EasyBuild in the same way as the bot uses it, 
 - Our working directory will be different
 - Our installpath will be different
 
-For both, any writeable path will do. In this example, we will choose `/tmp/easybuild` as our workdir, and `$HOME/.local/easybuild` as our installpath. Finally, we will source the `configure_easybuild` script, which will configure EasyBuild by setting environment variables.
+For both, any writeable path will do. In this example, we create a unique temporary directory inside `/tmp` to serve both as our workdir and installpath. Finally, we will source the `configure_easybuild` script, which will configure EasyBuild by setting environment variables.
 
 ```
-export WORKDIR=/tmp/easybuild
+export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi.XXXXXXXXXX)
 source configure_easybuild
-export EASYBUILD_INSTALLPATH=/tmp/easybuild
+export EASYBUILD_INSTALLPATH=${WORKDIR}
 ```
-Note that you probably also want to add the path where the modules are installed to your `MODULEPATH`:
+!!! Note
+    If you started the container using --resume, you probably want WORKDIR to point to the workdir you created previously, instead of create a new, temporary directory.
+
+!!! Note
+    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EASYBUILD_OPTARCH=GENERIC`.
+
+Next, add the path where the modules are installed to your `MODULEPATH`, so that you can easily find these with `module av` after installation has completed:
 ```
 module use ${EASYBUILD_INSTALLPATH}/modules/all
 ```
@@ -164,9 +171,6 @@ trace                (E) = True
 zip-logs             (E) = bzip2
 ```
 
-!!! Note
-    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EASYBUILD_OPTARCH=GENERIC`.
-
 ## Building the software
 When the bot builds software, it loops over all EasyStack files that have been changed, and builds them using EasyBuild. However, a single PR may add multiple items to a single EasyStack file, and the issue you are trying to debug is probably in _one_ of them. Getting EasyBuild to build the full EasyStack file will create the most similar situation to what the bot does. However, you _may_ just want to build the individual software that has changed. Below, we describe both approaches.
 
@@ -175,11 +179,11 @@ In our [example PR](https://github.com/EESSI/software-layer/pull/360), the EasyS
 ```
 eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
 ```
-After some time, this build fails whil trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
+After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
 
 ### Building an individual package
-In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. We'll also have to mind any options that are listed in the EasyStack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
+In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. We'll also have to (re)use any options that are listed in the EasyStack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
 ```
 eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19000
 ```
-After some time, this build fails whil trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
+After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
