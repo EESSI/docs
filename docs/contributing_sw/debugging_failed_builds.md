@@ -79,14 +79,15 @@ echo ${EESSI_CVMFS_REPO}
 echo ${EESSI_PILOT_VERSION}
 ```
 
-To do that, you need to run the `startprefix` command. However, we have several compatibility layers, and you'll need to run it for the one that matches the host node. For example, on an aarch64 (ARM) linux machine:
+Then, we'll source a script that sets `EESSI_OS_TYPE` and `EESSI_CPU_FAMILY` automatically, by detecting the host OS and CPU:
 ```
-export EESSI_OS_TYPE=linux
+source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/minimal_eessi_env
+```
+Then, run the `startprefix` command to actually start the Gentoo Prefix environment:
+```
 export EESSI_CPU_FAMILY=aarch64
 ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
 ```
-
-if you are unsure, you can start the EESSI software environment (see next step) and check the values of `EESSI_OS_TYPE` and `EESSI_CPU_FAMILY` set by that initialization script. Note that you'll have to start over with a new shell (i.e. quit the container) and repeat the current step of starting the Gentoo Prefix environment, as the order of those two steps matters.
 
 Now, reset the `${EESSI_CVMFS_REPO}` and `${EESSI_PILOT_VERSION}` in your prefix environment
 ```
