@@ -85,7 +85,6 @@ source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/minimal_eessi_en
 ```
 Then, run the `startprefix` command to actually start the Gentoo Prefix environment:
 ```
-export EESSI_CPU_FAMILY=aarch64
 ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
 ```
 
