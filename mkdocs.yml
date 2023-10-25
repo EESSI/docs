@@ -40,11 +40,15 @@ nav:
     - using_eessi/setting_up_environment.md
     - using_eessi/basic_commands.md
     - using_eessi/eessi_demos.md
-  - Contributing software to EESSI:
+  - Adding software to EESSI:
     # Todo: insert an overview page with a flowchart showing the high level process
-    # - Overview: contributing_sw/overview.md
-    - contributing_sw/adding_software.md
+    - contributing_sw/overview.md
+    # - Contribution policy, requires #108
+    - contributing_sw/contribution_policy.md
+    - contributing_sw/opening_pr.md
+    - contributing_sw/building_software.md
     - contributing_sw/debugging_failed_builds.md
+    - contributing_sw/deploying_software.md
   # Todo: write on how to contribute to the EESSI test suite
   # - Contributing software tests to the EESSI test suite:
   - Getting support: support.md
