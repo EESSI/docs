@@ -41,7 +41,7 @@ git checkout LAMMPS_23Jun2022
 ### Starting a shell in the EESSI container
 Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer` repository
 ```
-./eessi_container.sh
+./eessi_container.sh --access rw
 ```
 !!! Note
     You may have to press enter to clearly see the prompt as some messages
@@ -51,7 +51,7 @@ Simply run the EESSI container (`eessi_container.sh`), which should be in the ro
 If you want to debug an issue for which a lot of dependencies need to be build first, you may want to start the container with the `--save DIR/TGZ` and flag (check `./eessi_container.sh --help`). This saves the temporary directory (which we will use as working and installation directory later in this instruction) in order to be able to resume later with the same temporary directory. E.g.
 
 ```
-./eessi_container.sh --save ${HOME}/pr370
+./eessi_container.sh --access rw --save ${HOME}/pr370
 ```
 The tarball will be saved when you exit the container. Note that the first `exit` command will first make you exit the Gentoo prefix environment. Only the second will take you out of the container, and print where the tarball will be stored:
 ```
@@ -68,7 +68,7 @@ Note that the tarballs can be quite sizeable, so make sure to pick a filesystem 
 
 Next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off, having all dependencies already built and available.
 ```
-./eessi_container.sh --resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz
+./eessi_container.sh --access rw --resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz
 ```
 
 For a detailed description on using the script `eessi_container.sh`, see [here](../getting_access/eessi_container.md).
@@ -109,28 +109,34 @@ source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/bash
 
 !!! Note
     If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVFMS_REPO}` and `${EESSI_PILOT_VERSION}` environment variables at the end of the previous step.
+!!! Note
+    If you want to build with generic optimization, you should run `export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic` before sourcing.
 
 
 For more info on starting the EESSI software environment, see [here](../using_eessi/setting_up_environment.md)
 
 ### Configure EasyBuild
-It is important that we configure EasyBuild in the same way as the bot uses it, with two small exceptions:
+It is important that we configure EasyBuild in the same way as the bot uses it, with one small exceptions: our working directory will be different. Typically, that doesn't matter, but it's good to be aware of this one difference, in case you fail to replicate the build failure.
 
-- Our working directory will be different
-- Our installpath will be different
-
-For both, any writeable path will do. In this example, we create a unique temporary directory inside `/tmp` to serve both as our workdir and installpath. Finally, we will source the `configure_easybuild` script, which will configure EasyBuild by setting environment variables.
+In this example, we create a unique temporary directory inside `/tmp` to serve both as our workdir. Finally, we will source the `configure_easybuild` script, which will configure EasyBuild by setting environment variables.
 
 ```
 export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-debug.XXXXXXXXXX)
 source configure_easybuild
+```
+Among other things, the `configure_easybuild` script sets the install path for EasyBuild to point to the correct installation directory in (to `${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_SOFTWARE_SUBDIR}`). This is the exact same path the `bot` uses to build, and uses a writeable overlay filesystem in the container to write to a path in `/cvmfs` (which normally is read-only). Since this is identical to what the `bot` does, we advise you to start with this when reproducting a build failure. However, after having reproduced the bug, you may want to set a different `EASYBUILD_INSTALLPATH`, e.g.
+
+```
 export EASYBUILD_INSTALLPATH=${WORKDIR}
 ```
-!!! Note
-    If you started the container using --resume, you probably want WORKDIR to point to the workdir you created previously, instead of create a new, temporary directory.
+
+(_after_ sourcing the `configure_easybuild` script, so that you overwrite whatever that script sets). This can help you identify if an issue is related to building in a writeable overlay. For example, the writeable overlay is know to be a bit slow sometimes, and we have seen tests failing because they exceeded some timeout.
 
 !!! Note
-    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EASYBUILD_OPTARCH=GENERIC`.
+    If you started the container using --resume, yoy may want WORKDIR to point to the workdir you created previously (instead of create a new, temporary directory with `mktemp`).
+
+!!! Note
+    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EASYBUILD_OPTARCH=GENERIC` after sourcing `configure_easybuild`.
 
 Next, add the path where the modules are installed to your `MODULEPATH`, so that you can easily find these with `module av` after installation has completed:
 ```
