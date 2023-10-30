@@ -48,21 +48,24 @@ eb netCDF-4.9.0-gompi-2022a.eb
 !!! Note
     If this netCDF module is available by the time you are trying, you can force a local rebuild by adding the `--force` argument in order to experiment with building locally, or pick a different EasyConfig to build.
 
-### Adding your module directory to the `MODULEPATH`
-Finally, we need to make sure this module is available on our `MODULEPATH`. The path where EasyBuild installs modules by default is `${EASYBUILD_INSTALLPATH}/modules/all`. You can add it to your modulepath by running:
+### Using the newly build module
+First, you'll need to add the subdirectory of the `EASYBUILD_INSTALLPATH` that contains the modules to the `MODULEPATH`. You can do that using:
+
 ```
 module use ${EASYBUILD_INSTALLPATH}/modules/all
 ```
 
-You may want to do this as part of your `.bashrc` (unless your system is heterogenous, since then the `module use` path may then be different per run - see the note above).
-
-Now, we should be able to load our newly build module:
-```
-module load netCDF/4.9.0-gompi-2022a
-```
+you may want to do this as part of your `.bashrc`.
 
 !!! Note
     Be careful adding to the `MODULEPATH` in your `.bashrc` if you are on a cluster with heterogeneous architectures. You don't want to pick up on a module that was not compiled for the correct architectures accidentally.
+
+Since your module is build on top of the EESSI environment, that needs to be loaded first (as described [here](../using_eessi/setting_up_environment.md)), if you haven't already done so.
+
+Finally, you should be able to load our newly build module:
+```
+module load netCDF/4.9.0-gompi-2022a
+```
 
 ## Manually building software op top of EESSI
 Building software on top of EESSI would require your linker to use the same system-dependencies as the software in EESSI does. In other words: it requires you to link against libraries from the compatibility layer, instead of from your host OS.
