@@ -14,9 +14,9 @@ Quick links:
 * [What is EEESSI?](overview.md)
 * EESSI layered structure: [filesystem](filesystem_layer.md), [compatibility](compatibility_layer.md), [software](software_layer.md)
 * [EESSI pilot software stack and available software](pilot.md)
-* [Access](getting_access/is_eessi_accessible.md), [configure](setting_up_environment.md) and [use](basic_commands.md) EESSI
-* [How to run EESSI test suite](index.md)
-* [Contribute software to EESSI](adding_software.md)
+* [Access](getting_access/is_eessi_accessible.md), [configure](using_eessi/setting_up_environment.md) and [use](using_eessi/basic_commands.md) EESSI
+* [How to run EESSI test suite](test-suite/index.md)
+* [Contribute software to EESSI](software_layer/adding_software.md)
 * [Get help or report issue](support.md)
 
 
