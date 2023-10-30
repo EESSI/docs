@@ -7,7 +7,7 @@ Building on top of EESSI with EasyBuild is relatively straightforward. One cruci
 Start your environment as described [here](../using_eessi/setting_up_environment.md)
 
 ### Configure EasyBuild
-To configure EasyBuild, first, check out the Github repository. We advice you check out the branch corresponding to the version of EESSI you would like to use.
+To configure EasyBuild, first, check out the [EESSI software-layer repository](https://github.com/EESSI/software-layer.git). We advise you to check out the branch corresponding to the version of EESSI you would like to use.
 
 If you are unsure which version you are using, you can run
 ```
@@ -21,9 +21,9 @@ To build on top of e.g. version `2023.06` of the EESSI software stack, we check 
 git clone https://github.com/EESSI/software-layer/ --branch 2023.06
 cd software-layer
 ```
-Then, you have to pick a working directory (that you have write access to) where EasyBuild can do the build, and an install directory, where EasyBuild can install it. In this example, we use `/tmp/easybuild` as our working directory, and `$HOME/.local/easybuild` as our installpath:
+Then, you have to pick a working directory (that you have write access to) where EasyBuild can do the build, and an install directory (with sufficient storage space), where EasyBuild can install it. In this example, we create a temporary directory in `/tmp/` as our working directory, and use `$HOME/.local/easybuild` as our installpath:
 ```
-export WORKDIR=/tmp/easybuild
+export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-build.XXXXXXXXXX)
 export EASYBUILD_INSTALLPATH="${HOME}/.local/easybuild"
 source configure_easybuild
 ```
@@ -37,7 +37,7 @@ eb --show-config
 ```
 
 !!! Note
-    We use EasyBuild's default behaviour in optimizing for the host architecture. Since the EESSI initialization script also loads the EESSI stack that is optimized for your host architecture, this matches nicely. However, if you work on a cluster with heterogeneous node types, you have to realize you can only use these builds on the same architecture as where you build them. You can use different `EASYBUILD_INSTALLPATH`s if you want to build for different host architectures.
+    We use EasyBuild's default behaviour in optimizing for the host architecture. Since the EESSI initialization script also loads the EESSI stack that is optimized for your host architecture, this matches nicely. However, if you work on a cluster with heterogeneous node types, you have to realize you can only use these builds on the same architecture as where you build them. You can use different `EASYBUILD_INSTALLPATH`s if you want to build for different host architectures. For example, when you are on a system that has a mix of `AMD zen3` and `AMD zen4` nodes, you might want to use `EASYBUILD_INSTALLPATH=$HOME/.local/easybuild/zen3` when building on a `zen3` node, `EASYBUILD_INSTALLPATH=$HOME/.local/easybuild/zen4` when building on a `zen4` node. Then, in the step beloww, instead of the `module use` command listed there, you can use `module use $HOME/.local/easybuild/zen3/modules/all` when you want to run on a `zen3` node and `module use $HOME/.local/easybuild/zen4/modules/all` when you want to run on a `zen4` node.
 
 ### Building
 Now, you are ready to build. For example, at the time of writing, `netCDF-4.9.0-gompi-2022a.eb` was not in the EESSI environment yet, so you can build it yourself:
@@ -53,7 +53,8 @@ Finally, we need to make sure this module is available on our `MODULEPATH`. The 
 ```
 module use ${EASYBUILD_INSTALLPATH}/modules/all
 ```
-You may want to do this as part of your `.bashrc`.
+
+You may want to do this as part of your `.bashrc` (unless your system is heterogenous, since then the `module use` path may then be different per run - see the note above).
 
 Now, we should be able to load our newly build module:
 ```
