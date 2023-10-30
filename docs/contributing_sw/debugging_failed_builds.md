@@ -60,7 +60,7 @@ logout
 Leaving Gentoo Prefix with exit status 1
 Apptainer> exit
 exit
-Saved contents of tmp directory '/tmp/eessi.VgLf1v9gf0' to tarball '${HOME}/pr370/EESSI-pilot-1698056784.tgz' (to resume session add '--resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz')
+Saved contents of tmp directory '/tmp/eessi-debug.VgLf1v9gf0' to tarball '${HOME}/pr370/EESSI-pilot-1698056784.tgz' (to resume session add '--resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz')
 ```
 
 Note that the tarballs can be quite sizeable, so make sure to pick a filesystem where you have a large enough quotum.
@@ -122,7 +122,7 @@ It is important that we configure EasyBuild in the same way as the bot uses it, 
 For both, any writeable path will do. In this example, we create a unique temporary directory inside `/tmp` to serve both as our workdir and installpath. Finally, we will source the `configure_easybuild` script, which will configure EasyBuild by setting environment variables.
 
 ```
-export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi.XXXXXXXXXX)
+export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-debug.XXXXXXXXXX)
 source configure_easybuild
 export EASYBUILD_INSTALLPATH=${WORKDIR}
 ```
@@ -187,3 +187,4 @@ In our [example PR](https://github.com/EESSI/software-layer/pull/360), the indiv
 eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19000
 ```
 After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
+!!! While this might be faster than the EasyStack-based approach, this is _not_ how the bot builds. So why it _may_ reproduce the failure the bot encounters, it may not reproduce the bug _at all_ (no failure) or run into _different_ bugs. If you want to be sure, use the EasyStack-based approach.
