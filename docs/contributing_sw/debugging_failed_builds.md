@@ -89,7 +89,7 @@ export EESSI_CPU_FAMILY=$(uname -m)
 ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
 ```
 
-Now, reset the `${EESSI_CVMFS_REPO}` and `${EESSI_PILOT_VERSION}` in your prefix environment
+Now, reset the `${EESSI_CVMFS_REPO}` and `${EESSI_PILOT_VERSION}` in your prefix environment with the initial values (printed in the echo statements above)
 ```
 export EESSI_CVMFS_REPO=...
 export EESSI_PILOT_VERSION=...
@@ -109,6 +109,7 @@ source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/bash
 
 !!! Note
     If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVFMS_REPO}` and `${EESSI_PILOT_VERSION}` environment variables at the end of the previous step.
+
 !!! Note
     If you want to build with generic optimization, you should run `export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic` before sourcing.
 
@@ -124,24 +125,14 @@ In this example, we create a unique temporary directory inside `/tmp` to serve b
 export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-debug.XXXXXXXXXX)
 source configure_easybuild
 ```
-Among other things, the `configure_easybuild` script sets the install path for EasyBuild to point to the correct installation directory in (to `${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_SOFTWARE_SUBDIR}`). This is the exact same path the `bot` uses to build, and uses a writeable overlay filesystem in the container to write to a path in `/cvmfs` (which normally is read-only). Since this is identical to what the `bot` does, we advise you to start with this when reproducting a build failure. However, after having reproduced the bug, you may want to set a different `EASYBUILD_INSTALLPATH`, e.g.
-
-```
-export EASYBUILD_INSTALLPATH=${WORKDIR}
-```
-
-(_after_ sourcing the `configure_easybuild` script, so that you overwrite whatever that script sets). This can help you identify if an issue is related to building in a writeable overlay. For example, the writeable overlay is know to be a bit slow sometimes, and we have seen tests failing because they exceeded some timeout.
+Among other things, the `configure_easybuild` script sets the install path for EasyBuild to point to the correct installation directory in (to `${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_SOFTWARE_SUBDIR}`). This is the exact same path the `bot` uses to build, and uses a writeable overlay filesystem in the container to write to a path in `/cvmfs` (which normally is read-only). This is identical to what the `bot` does.
 
 !!! Note
-    If you started the container using --resume, yoy may want WORKDIR to point to the workdir you created previously (instead of create a new, temporary directory with `mktemp`).
+    If you started the container using --resume, you may want WORKDIR to point to the workdir you created previously (instead of creating a new, temporary directory with `mktemp`).
 
 !!! Note
     If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EASYBUILD_OPTARCH=GENERIC` after sourcing `configure_easybuild`.
 
-Next, add the path where the modules are installed to your `MODULEPATH`, so that you can easily find these with `module av` after installation has completed:
-```
-module use ${EASYBUILD_INSTALLPATH}/modules/all
-```
 
 Next, we need to determine the correct version of EasyBuild to load. Since [the example PR](https://github.com/EESSI/software-layer/pull/360) changes the file `eessi-2023.06-eb-4.8.1-2021b.yml`, this tells us the bot was using version `4.8.1` of EasyBuild to build this. Thus, we load that version of the EasyBuild module and check if everything was configured correctly:
 ```
@@ -193,4 +184,43 @@ In our [example PR](https://github.com/EESSI/software-layer/pull/360), the indiv
 eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19000
 ```
 After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
-!!! While this might be faster than the EasyStack-based approach, this is _not_ how the bot builds. So why it _may_ reproduce the failure the bot encounters, it may not reproduce the bug _at all_ (no failure) or run into _different_ bugs. If you want to be sure, use the EasyStack-based approach.
+
+!!! Note
+    While this might be faster than the EasyStack-based approach, this is _not_ how the bot builds. So why it _may_ reproduce the failure the bot encounters, it may not reproduce the bug _at all_ (no failure) or run into _different_ bugs. If you want to be sure, use the EasyStack-based approach.
+
+## Known causes of issues in EESSI
+
+### The custom system prefix of the compatibility layer
+Some installations might expect the system root (sysroot, for short) to be in `/`. However, in case of EESSI, we are building against the OS in the [compatibility layer](../compatibility_layer.md). Thus, our sysroot is something like `${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}`. This _can_ cause issues if installation procedures _assume_ the sysroot is in `/`.
+
+One example of a sysroot [issue](https://github.com/EESSI/software-layer/pull/370#issuecomment-1774744151) was in installing `wget`. The EasyConfig for `wget` defined
+```
+# make sure pkg-config picks up system packages (OpenSSL & co)
+preconfigopts = "export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig && "
+configopts = '--with-ssl=openssl '
+```
+This will not work in EESSI, since the OpenSSL should be picked up from the compatibility layer. This was fixed by changing the EasyConfig to read
+```
+preconfigopts = "export PKG_CONFIG_PATH=%(sysroot)s/usr/lib64/pkgconfig:%(sysroot)s/usr/lib/pkgconfig:%(sysroot)s/usr/lib/x86_64-linux-gnu/pkgconfig && "
+configopts = '--with-ssl=openssl
+```
+The `%(sysroot)s` is a template value which EasyBuild will resolve to the value that has been configured in EasyBuild for `sysroot` (it is one of the fields printed by `eb --show-config` if a non-standard sysroot is configured).
+
+If you encounter issues where the installation can not find something that is _normally_ provided by the OS (i.e. _not_ one of the dependencies in your module environment), you may need to resort to a similar approach.
+
+### The writeable overlay
+The writeable overlay in the container is known to be a bit slow sometimes. Thus, we have seen tests failing because they exceed some timeout (e.g. [this issue](https://github.com/EESSI/software-layer/pull/332#issuecomment-1775374260)).
+
+To investigate if the writeable overlay is somehow the issue, you can make sure the installation gets done somewhere else, e.g. in the temporary directory in `/tmp` that you created as workdir. To do this, set
+
+```
+export EASYBUILD_INSTALLPATH=${WORKDIR}
+```
+
+_after_ the step in which you have sourced the `configure_easybuild` script. Note that in order to find (with `module av`) any modules that get installed here, you will need to add this path to the `MODULEPATH`:
+
+```
+module use ${EASYBUILD_INSTALLPATH}/modules/all
+```
+
+Then, retry building the software (as described above). If the build now succeeds, you know that indeed the writeable overlay caused the issue. We _have_ to build in this writeable overlay when we do real deployments. Thus, if you hit such a timeout, try to see if you can (temporarily) modify the timeout value in the test so that it passes.
