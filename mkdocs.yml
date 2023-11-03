@@ -25,7 +25,6 @@ nav:
     - Overview: software_layer.md
     - software_layer/cpu_targets.md
     - software_layer/build_nodes.md
-    - software_layer/adding_software.md
   - Test suite:
     - Overview: test-suite/index.md
     - Installation & configuration: test-suite/installation-configuration.md
@@ -41,6 +40,17 @@ nav:
     - using_eessi/setting_up_environment.md
     - using_eessi/basic_commands.md
     - using_eessi/eessi_demos.md
+  - Adding software to EESSI:
+    # Todo: insert an overview page with a flowchart showing the high level process
+    - contributing_sw/overview.md
+    # - Contribution policy, requires #108
+    - contributing_sw/contribution_policy.md
+    - contributing_sw/opening_pr.md
+    - contributing_sw/building_software.md
+    - contributing_sw/debugging_failed_builds.md
+    - contributing_sw/deploying_software.md
+  # Todo: write on how to contribute to the EESSI test suite
+  # - Contributing software tests to the EESSI test suite:
   - Getting support: support.md
   - Meetings:
       - Overview: meetings.md
