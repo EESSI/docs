@@ -444,26 +444,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../software_layer/adding_software/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Adding software
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1031,6 +1011,169 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding software to EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Adding software to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing_sw/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing_sw/contribution_policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribution policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing_sw/opening_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opening a pull request (contributors)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing_sw/building_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software (maintainers)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing_sw/debugging_failed_builds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging failed builds (contributors/maintainers)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing_sw/deploying_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying packages (maintainers)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
     <li class="md-nav__item">
       <a href="../support/" class="md-nav__link">
         
@@ -1060,10 +1203,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1074,8 +1217,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Meetings
           </label>
@@ -1362,7 +1505,7 @@
 <p>Building, testing, and deploying software is done by one or more <em>bot instances</em>.</p>
 <p>The EESSI build-test-deploy bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /> is implemented as a <a href="https://docs.github.com/en/apps/overview">GitHub App</a>
 in the <a href="https://github.com/EESSI/eessi-bot-software-layer"><code>eessi-bot-software-layer</code> repository</a>.</p>
-<p>It operates in the context of <a href="../software_layer/adding_software/#software_layer_pull_request">pull requests</a> to
+<p>It operates in the context of <a href="../contributing_sw/opening_pr/#software_layer_pull_request">pull requests</a> to
 the <a href="https://github.com/EESSI/compatibility-layer"><code>compatibility-layer</code> repository</a> or the
 <a href="https://github.com/EESSI/software-layer"><code>software-layer</code> repository</a>,
 and follows the instructions supplied by humans,
@@ -1399,7 +1542,7 @@ to trigger building of software, and to deploy software installations in to the 
 </div>
 <h2 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h2>
 <p>To instruct the bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /> to build software, one or more <code>build</code> instructions
-should be issued by posting a comment in the pull request (see also <a href="../software_layer/adding_software/#bot_build">here</a>).</p>
+should be issued by posting a comment in the pull request (see also <a href="../contributing_sw/building_software/#bot_build">here</a>).</p>
 <p>The most basic build instruction that can be sent to the bot is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bot: build
 </code></pre></div>
@@ -1490,7 +1633,7 @@ to the pull request.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 25, 2023</span>
       
     
   </small>

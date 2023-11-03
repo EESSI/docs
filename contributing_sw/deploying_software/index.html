@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://eessi.github.io/docs/meetings/2022-09-amsterdam/">
+        <link rel="canonical" href="https://eessi.github.io/docs/contributing_sw/deploying_software/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../debugging_failed_builds/">
       
       
-        <link rel="next" href="../../partners/">
+        <link rel="next" href="../../support/">
       
       
       <link rel="icon" href="../../img/logos/EESSI.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Community meeting (Sept'22) - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>Deploying packages (maintainers) - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eessi-community-meeting-sept22-amsterdam" class="md-skip">
+        <a href="#deploying-packages-maintainers" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Community meeting (Sept'22)
+              Deploying packages (maintainers)
             
           </span>
         </div>
@@ -822,18 +822,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
@@ -847,7 +849,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Adding software to EESSI
@@ -860,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing_sw/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing_sw/contribution_policy/" class="md-nav__link">
+      <a href="../contribution_policy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing_sw/opening_pr/" class="md-nav__link">
+      <a href="../opening_pr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -920,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing_sw/building_software/" class="md-nav__link">
+      <a href="../building_software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -940,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing_sw/debugging_failed_builds/" class="md-nav__link">
+      <a href="../debugging_failed_builds/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -958,9 +960,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../contributing_sw/deploying_software/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploying packages (maintainers)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -969,6 +991,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instructing-the-bot-to-deploy" class="md-nav__link">
+    Instructing the bot to deploy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merging-the-pull-request" class="md-nav__link">
+    Merging the pull request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    Getting help
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1004,20 +1067,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
           <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
@@ -1031,7 +1092,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Meetings
@@ -1044,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../meetings/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1062,29 +1123,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Community meeting (Sept'22)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../meetings/2022-09-amsterdam/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1093,67 +1134,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#practical-info" class="md-nav__link">
-    Practical info
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#agenda" class="md-nav__link">
-    Agenda
-  </a>
-  
-    <nav class="md-nav" aria-label="Agenda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wed-14-sept-2022" class="md-nav__link">
-    Wed 14 Sept 2022
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#thu-15-sept-2022" class="md-nav__link">
-    Thu 15 Sept 2022
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fri-16-sept-2022" class="md-nav__link">
-    Fri 16 Sept 2022
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1231,43 +1211,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#practical-info" class="md-nav__link">
-    Practical info
+  <a href="#instructing-the-bot-to-deploy" class="md-nav__link">
+    Instructing the bot to deploy
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#agenda" class="md-nav__link">
-    Agenda
-  </a>
-  
-    <nav class="md-nav" aria-label="Agenda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wed-14-sept-2022" class="md-nav__link">
-    Wed 14 Sept 2022
+  <a href="#merging-the-pull-request" class="md-nav__link">
+    Merging the pull request
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#thu-15-sept-2022" class="md-nav__link">
-    Thu 15 Sept 2022
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    Getting help
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fri-16-sept-2022" class="md-nav__link">
-    Fri 16 Sept 2022
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1289,111 +1249,45 @@
   
 
 
-<h1 id="eessi-community-meeting-sept22-amsterdam">EESSI Community Meeting (Sept'22, Amsterdam)<a class="headerlink" href="#eessi-community-meeting-sept22-amsterdam" title="Permanent link">&para;</a></h1>
-<p align="center">
-  <img width="80%" src="eessi-community-meeting-sept-2022-group-picture.jpg" alt="EESSI group picture">
-</p>
-
-<h2 id="practical-info">Practical info<a class="headerlink" href="#practical-info" title="Permanent link">&para;</a></h2>
-<ul>
-<li>dates: <strong>Wed-Fri 14-16 Sept'22</strong></li>
-<li>in conjunction with <a href="https://indico.cern.ch/event/1079490">CernVM workshop @ Nikhef (Mon-Tue 12-13 Sept'22)</a></li>
-<li>venue: <a href="https://www.cafe-restaurantpolder.nl/">"Polderzaal" at Cafe-Restaurant Polder</a> (<a href="https://www.google.nl/maps/place/Science+Park+201,+1098+XH+Amsterdam/@52.3546615,4.9504205,17z/data=!3m1!4b1!4m5!3m4!1s0x47c60944a3e28c25:0xf450971b8bdeea2d!8m2!3d52.3546582!4d4.9526092?hl=nl&amp;shorturl=1">Google
-  Maps</a>), sponsored by <a href="https://www.surf.nl/en/research-ict/compute-services">SURF</a></li>
-<li>registration (<em>closed since Fri 9 Sept'22</em>)</li>
-<li>Slack channel: <a href="https://eessi-hpc.slack.com/archives/C0417F3JNLS"><code>community-meeting-2022</code> in EESSI Slack</a></li>
-<li><a href="https://www.youtube.com/playlist?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ">YouTube playlist with recorded talks</a></li>
-</ul>
-<h2 id="agenda">Agenda<a class="headerlink" href="#agenda" title="Permanent link">&para;</a></h2>
-<p><em>(subject to changes)</em></p>
-<p>We envision a mix of presentations, experience reports, demos, and hands-on sessions and/or hackathons related to the EESSI project.</p>
-<p><strong>If you would like to give a talk or host a session, please let us know via the EESSI Slack!</strong></p>
-<h3 id="wed-14-sept-2022">Wed 14 Sept 2022<a class="headerlink" href="#wed-14-sept-2022" title="Permanent link">&para;</a></h3>
-<ul>
-<li><em>[10:00-13:00]</em> <strong>Welcome session</strong><ul>
-<li><em>[10:00-10:30]</em> <strong>Walk-in, coffee</strong></li>
-<li><em>[10:30-12:00]</em> <strong>Round table discussion</strong> (<em>not live-streamed!</em>)</li>
-</ul>
-</li>
-<li><em>[12:00-13:00] Lunch</em></li>
-<li><em>[13:00-15:00]</em> <strong>Presentations on EESSI</strong><ul>
-<li><em>[13:00-13:30]</em> <strong>Introduction to EESSI</strong> (Caspar) [<a href="EESSI-community-meeting-2022.09-001-introduction-to-EESSI.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=XEqb4CWWK4A">recording</a>]</li>
-<li><em>[13:30-14:00]</em> <strong>Hands-on: how to use EESSI</strong> (Kenneth) [<a href="EESSI-community-meeting-2022.09-002-Hands-on-How-to-use-EESSI.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=dnaFBmzwXzA">recording</a>]</li>
-<li><em>[14:00-14:30]</em> <strong>EESSI use cases</strong> (Kenneth) [<a href="EESSI-community-meeting-2022.09-003-EESSI-use-cases.pdf">(slides</a> - <a href="https://www.youtube.com/watch?v=SHqj0a3cfdg">recording</a>]</li>
-<li><em>[14:30-15:00]</em> <strong>EESSI for sysadmins</strong> (Thomas) [<a href="EESSI-community-meeting-2022.09-004-EESSI-for-sysadmins.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=Fuykj4MRJno">recording</a>]</li>
-</ul>
-</li>
-<li><em>[15:00-15:30] Coffee break</em></li>
-<li><em>[15:30-17:00]</em> <strong>Presentations on EESSI</strong> <em>(continued)</em><ul>
-<li><em>[15:30-16:00]</em> <strong>Hands-on:</strong> installing EESSI <em>(Thomas/Kenneth)</em></li>
-<li><em>[16:00-16:45]</em> <strong>ComputeCanada site talk</strong> <em>(Bart Oldeman, remote)</em> [<a href="EESSI-community-meeting-2022.09-006-ComputeCanada.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=VQ6Y5dHr0mw">recording</a>]</li>
-<li><em>[16:45-17:15]</em> <strong>Magic Castle</strong> <em>(Felix-Antoine Fortin, remote)</em> [<a href="EESSI-community-meeting-2022.09-007-Magic-Castle.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=XGnxbIHJLmw">recording</a>]</li>
-</ul>
-</li>
-<li><em>[19:00-...]</em> <strong>Group dinner</strong> @ Saravanaa Bhavan <strong>(sponsored by Dell Technologies)</strong><ul>
-<li>address: Stadhouderskade 123-124, Amsterdam</li>
-</ul>
-</li>
-</ul>
-<h3 id="thu-15-sept-2022">Thu 15 Sept 2022<a class="headerlink" href="#thu-15-sept-2022" title="Permanent link">&para;</a></h3>
-<ul>
-<li><em>[09:30-12:00]</em> More focused presentations on aspects of EESSI<ul>
-<li><em>[09:30-10:00]</em> <strong>EESSI behind the scenes: compat layer</strong> <em>(Bob)</em> [<a href="EESSI-community-meeting-2022.09-010-EESSI-behind-the-scenes-compat-layer.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=QTeIGww88hc">recording</a>]</li>
-<li><em>[10:00-10:30]</em> <strong>EESSI behind the scenes: software layer</strong> <em>(Kenneth)</em> [<a href="EESSI-community-meeting-2022.09-011-EESSI-behind-the-scenes-software-layer.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=ZAwrJDev4r4">recording</a>]</li>
-<li><em>[10:30-11:00] Coffee break</em></li>
-<li><em>[11:00-11:30]</em> <strong>EESSI behind the scenes: infrastructure</strong> <em>(Terje)</em> [<a href="EESSI-community-meeting-2022.09-012-infrastructure.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=IweNoWUxFGQ">recording</a>]</li>
-<li><em>[11:30-12:00]</em> <strong>Status on RISC-V support</strong> <em>(Kenneth)</em> [<a href="EESSI-community-meeting-2022.09-013-RISC-V-support.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=havsV_jxJjw">recording</a>]</li>
-</ul>
-</li>
-<li><em>[12:00-13:00] Lunch</em></li>
-<li><em>[13:00-14:00]</em> <strong>Discussions/hands-on sessions/hackathon</strong></li>
-<li><em>[14:00-14:30]</em> <strong>Status on GPU support</strong> <em>(Alan)</em> [<a href="EESSI-community-meeting-2022.09-014-GPU-support.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=1pr2OwZIWVU">recording</a>]</li>
-<li><em>[14:30-15:00]</em> <strong>Status on build-and-deploy bot</strong> <em>(Thomas)</em> [<a href="EESSI-community-meeting-2022.09-015-status-build-deploy-bot.pdf">slides</a> - <a href="https://www.youtube.com/watch?v=c53kjdSDlSo">recording</a>]</li>
-<li><em>[15:00-15:30] Coffee break</em></li>
-<li><em>[15:30-17:00]</em> <strong>Discussions/hands-on sessions/hackathon</strong> (continued)<ul>
-<li><strong>Hands-on with GPUs</strong> <em>(Alan)</em></li>
-<li><strong>Hands-on with bot</strong> <em>(Thomas/Kenneth)</em></li>
-</ul>
-</li>
-<li><em>[19:00-...]</em> <strong>Group dinner</strong> @ Italia Oggi <strong>(sponsored by HPC-UGent)</strong><ul>
-<li>address: Binnen Bantammerstraat 11, Amsterdam</li>
-</ul>
-</li>
-</ul>
-<h3 id="fri-16-sept-2022">Fri 16 Sept 2022<a class="headerlink" href="#fri-16-sept-2022" title="Permanent link">&para;</a></h3>
-<ul>
-<li><em>[09:30-12:00]</em> <strong>Presentations on future work</strong><ul>
-<li><em>[09:30-10:00]</em> <strong>Testing in software layer</strong> <em>(Caspar)</em> [<a href="EESSI-community-meeting-2022.09-020-software-testing.pdf">slides</a> - <a href="https://youtu.be/EsK2ACW4pek?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ">recording</a>]</li>
-<li><em>[10:00-10:30]</em> <strong>MultiXscale project</strong> <em>(Alan)</em> [<a href="EESSI-community-meeting-2022.09-021-MultiXscale.pdf">slides</a> - <a href="https://youtu.be/xWt35V4XXQo?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ">recording</a>]</li>
-<li><em>[10:30-11:00] Coffee break</em></li>
-<li><em>[11:00-11:30]</em> <strong>Short-term future work</strong> <em>(Kenneth)</em> [<a href="EESSI-community-meeting-2022.09-022-short-term-future-work.pdf">slides</a> - <a href="https://youtu.be/tVhYGz9wrD8?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ">recording</a>]</li>
-</ul>
-</li>
-<li><em>[11:30-12:00]</em> <strong>Discussion: future management structure of EESSI</strong> <em>(Alan)</em> [<a href="EESSI-community-meeting-2022.09-023-management-structure.pdf">slides</a> - <a href="https://youtu.be/1TP8ZHr31Yg?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ">recording</a>]</li>
-<li><em>[12:00-13:00] Lunch</em></li>
-<li><em>[13:00-14:00]</em> <strong>Site reports</strong> [<a href="https://youtu.be/c3Smw-54aqI?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ">recording</a>]<ul>
-<li><strong>NESSI</strong> <em>(Thomas)</em> [<a href="EESSI-community-meeting-2022.09-024-NESSI.pdf">slides</a>]</li>
-<li><strong>NLPL</strong> <em>(Stephan)</em> [<a href="EESSI-community-meeting-2022.09-025-site-talks-NLPL.pdf">slides</a>]</li>
-<li><strong>HPCNow!</strong> <em>(Danilo)</em> [<a href="EESSI-community-meeting-2022.09-026-site-talks-HPCNow.pdf">slides</a>]</li>
-<li><strong>Azure</strong> <em>(Hugo)</em> [<a href="EESSI-community-meeting-2022.09-027-site-talks-Azure.pdf">slides</a>]</li>
-</ul>
-</li>
-<li><em>[14:00-14:30]</em> <strong>Discussion: what would make or break EESSI for your site?</strong> (<a href="https://hackmd.io/@EESSI/SJe8CkMZs">notes</a> - <a href="https://youtu.be/BZHyPcPnwdI?list=PL6_PkP_6pUtb7_tovj1V__y4ii_AjhroJ">recording</a>)</li>
-<li><em>[14:30-15:45]</em> <strong>Discussions/hands-on sessions/hackathon</strong><ul>
-<li>Hands-on with GPU support <em>(Alan)</em></li>
-<li>Hands-on with bot <em>(Thomas/Kenneth)</em></li>
-<li>Hands-on with software testing <em>(Caspar)</em></li>
-</ul>
-</li>
-<li><strong>We need to leave the room by 16:00!</strong></li>
-</ul>
+<h1 id="deploying-packages-maintainers">Deploying packages (maintainers)<a class="headerlink" href="#deploying-packages-maintainers" title="Permanent link">&para;</a></h1>
+<h3 id="instructing-the-bot-to-deploy">Instructing the bot to deploy <img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f680.svg" title=":rocket:" /><a class="headerlink" href="#instructing-the-bot-to-deploy" title="Permanent link">&para;</a></h3>
+<p>To make the <a href="../../bot/">bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /></a> deploy the successfully built software, you should
+issue the corresponding instruction to the bot.</p>
+<p>For more information, see the <a href="../../bot/#deploying">deploying section in the bot documentation</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Permission to trigger deployment of software installations must be granted to your GitHub account first!</p>
+<p>See <a href="../../bot/#permissions">bot permissions</a> for more information.</p>
+</div>
+<h3 id="merging-the-pull-request">Merging the pull request<a class="headerlink" href="#merging-the-pull-request" title="Permanent link">&para;</a></h3>
+<p>You should be able to verify in the pull request that the ingestion has been done,
+since the CI should fail <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/274c.svg" title=":x:" /> initially to indicate that some software installations listed in
+your modified easystack are missing.</p>
+<p>Once the ingestion has been done, simply re-triggering the CI workflow should be sufficient to make it pass
+<img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2705.svg" title=":white_check_mark:" />, and then the pull request can be merged.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This assumes that the easystack file being modified is considered by the CI workflow file
+(<code>.github/workflows/test_eessi.yml</code>) that checks for missing installations, in the correct branch (for example
+<code>2023.06</code>) of the <a href="https://github.com/EESSI/software-layer">software-layer</a>.</p>
+<p>If that's not the case yet, update this workflow in your pull request as well to add the missing easystack file!</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You need permissions to re-trigger CI workflows and merge pull requests
+in the <a href="https://github.com/EESSI/software-layer">software-layer</a> repository.</p>
+<p>Ask for help in the <code>#software-layer</code> channel of the EESSI Slack if needed!</p>
+</div>
+<h3 id="getting-help">Getting help<a class="headerlink" href="#getting-help" title="Permanent link">&para;</a></h3>
+<p>If you have any questions, or if you need help with something, don't hesitate to contact us via
+the <code>#software-layer</code> channel of the EESSI Slack.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 25, 2023</span>
       
     
   </small>
