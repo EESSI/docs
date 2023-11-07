@@ -24,8 +24,8 @@ cd software-layer
 Then, you have to pick a working directory (that you have write access to) where EasyBuild can do the build, and an install directory (with sufficient storage space), where EasyBuild can install it. In this example, we create a temporary directory in `/tmp/` as our working directory, and use `$HOME/.local/easybuild` as our installpath:
 ```
 export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-build.XXXXXXXXXX)
-export EASYBUILD_INSTALLPATH="${HOME}/.local/easybuild"
 source configure_easybuild
+export EASYBUILD_INSTALLPATH="${HOME}/.local/easybuild"
 ```
 Next, you load the EasyBuild module that you want to use, e.g. 
 ```
