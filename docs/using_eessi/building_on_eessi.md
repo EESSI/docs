@@ -29,7 +29,7 @@ export EASYBUILD_INSTALLPATH="${HOME}/.local/easybuild"
 ```
 Next, you load the EasyBuild module that you want to use, e.g. 
 ```
-module load EasyBuild/4.8.1
+module load EasyBuild/4.8.2
 ```
 Finally, you can check the current configuration for EasyBuild using
 ```
@@ -48,7 +48,7 @@ eb netCDF-4.9.0-gompi-2022a.eb
 !!! Note
     If this netCDF module is available by the time you are trying, you can force a local rebuild by adding the `--force` argument in order to experiment with building locally, or pick a different EasyConfig to build.
 
-### Using the newly build module
+### Using the newly built module
 First, you'll need to add the subdirectory of the `EASYBUILD_INSTALLPATH` that contains the modules to the `MODULEPATH`. You can do that using:
 
 ```
