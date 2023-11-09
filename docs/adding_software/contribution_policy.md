@@ -10,7 +10,7 @@
 
 The purpose of this contribution policy is to provide guidelines for [adding software](software_layer/adding_software.md) to EESSI.
 
-It informs about what requirements must be met in order for software to be eligible for inclusion
+It informs contributors about what requirements must be met in order for software to be eligible for inclusion
 in the EESSI software layer.
 
 ## Requirements
