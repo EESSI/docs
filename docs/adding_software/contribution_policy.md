@@ -8,9 +8,9 @@
 
 ## Purpose
 
-The purpose of this contribution policy is to provide guidelines for [adding software](software_layer/adding_software.md) to EESSI.
+The purpose of this contribution policy is to provide guidelines for [adding software](opening_pr.md) to EESSI.
 
-It informs contributors about what requirements must be met in order for software to be eligible for inclusion
+It informs about what requirements must be met in order for software to be eligible for inclusion
 in the EESSI software layer.
 
 ## Requirements
@@ -43,9 +43,9 @@ see the [SPDX license list](https://spdx.org/licenses/).
 
 ### ii) Built by the bot { #built_by_bot }
 
-All software included in the EESSI repository *must* be **built autonomously** by [our bot :robot:](bot.md).
+All software included in the EESSI repository *must* be **built autonomously** by [our bot :robot:](../bot.md).
 
-For more information, see our [semi-automatic software installation procedure](software_layer/adding_software.md).
+For more information, see our [semi-automatic software installation procedure](building_software.md).
 
 
 ---
@@ -86,7 +86,7 @@ When adding software to a particular version of EESSI,
 you should *use a toolchain version that is already installed*.
 
 If you would like to see an additional toolchain version being added to a particular version of EESSI,
-please [open a support request](support.md) for this, and motivate your request.
+please [open a support request](../support.md) for this, and motivate your request.
 
 ---
 
@@ -112,7 +112,7 @@ prevent the installation of the software for specific CPU targets.
 
 ### viii) Testing { #testing }
 
-We should be able to test the software installations via the [EESSI test suite](../test-suite),
+We should be able to test the software installations via the [EESSI test suite](../test-suite/index.md),
 in particular for software applications and user-facing tools.
 
 Ideally one or more tests are available that verify that the software is functionally correct,

@@ -13,7 +13,7 @@ To add software to EESSI, you should go through the semi-automatic software inst
 
 !!! warning
 
-    Make sure you are also aware of our [contribution policy](../contribution_policy.md) when adding software to EESSI.
+    Make sure you are also aware of our [contribution policy](contribution_policy.md) when adding software to EESSI.
 
 ### Preparation
 
