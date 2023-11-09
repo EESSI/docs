@@ -34,7 +34,7 @@ The EESSI project consists of 3 layers.
 
 ![EESSI overview](img/overview_layers.png)
 
-The bottom layer is the [**filesystem layer**](filesystem_layer),
+The bottom layer is the [**filesystem layer**](filesystem_layer.md),
 which is responsible for distributing the software stack across clients.
 
 The middle layer is a [**compatibility layer**](compatibility_layer.md),

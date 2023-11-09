@@ -102,7 +102,7 @@ in your contribution.
 
 ### vii) CPU targets { #cpu_targets }
 
-Software that is added to EESSI *should* **work on all [supported CPU targets](software_layer/cpu_targets.md)**.
+Software that is added to EESSI *should* **work on all [supported CPU targets](../software_layer/cpu_targets.md)**.
 
 Exceptions to this requirement are allowed if technical problems that can not be resolved with reasonable effort
 prevent the installation of the software for specific CPU targets.

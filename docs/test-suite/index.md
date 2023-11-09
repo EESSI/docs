@@ -2,7 +2,7 @@
 
 The [EESSI test suite](https://github.com/EESSI/test-suite) is a collection of tests that are run using
 [ReFrame](https://reframe-hpc.readthedocs.io/).
-It is used to check whether the software installations included in the [EESSI software layer](../software_layer)
+It is used to check whether the software installations included in the [EESSI software layer](../software_layer.md)
 are working and performing as expected.
 
 To get started, you should look into the [installation and configuration guidelines](installation-configuration.md) first.
