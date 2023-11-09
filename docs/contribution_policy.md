@@ -1,6 +1,6 @@
 # Contribution policy
 
-*(version v0.1.0 - updated 24 Oct 2023)*
+*(version v0.1.0 - updated 9 Nov 2023)*
 
 !!! note
 
@@ -17,60 +17,92 @@ in the EESSI software layer.
 
 The following requirements must be taken into account when adding software to EESSI.
 
+Note that additional restrictions may apply in specific cases that are currently not covered explicitly by this policy.
+
 ---
 
-### a) Open source software { #open_source_software }
+### i) Open source software { #open_source_software }
 
-Only **open source software** can be added to the EESSI repository.
+Only **freely redistributable software** can be added to the EESSI repository,
+and we strongly prefer including only **open source software** in EESSI.
 
-Make sure that you are aware of relevant software license, and that redistribution is allowed.
+Make sure that you are aware of the relevant software licenses,
+and that redistribution of the software you want to add to EESSI is allowed.
 
-For more information about a specific license, see the [SPDX license list](https://spdx.org/licenses/).
+For more information about a specific software license,
+see the [SPDX license list](https://spdx.org/licenses/).
 
 !!! note
 
     We intend to automatically verify that this requirement is met,
-    by requiring that the [SPDX license identifier](https://spdx.dev/ids/) is provided for all software.
+    by requiring that the [SPDX license identifier](https://spdx.dev/ids/) is provided
+    for all software included in EESSI.
 
 
 ---
 
-### b) Built by the bot { #built_by_bot }
+### ii) Built by the bot { #built_by_bot }
 
-All software included in the EESSI repository *must* be built autonomously by [our bot :robot:](bot.md),
-see also the [semi-automatic software installation procedure](software_layer/adding_software.md).
+All software included in the EESSI repository *must* be **built autonomously** by [our bot :robot:](bot.md).
+
+For more information, see our [semi-automatic software installation procedure](software_layer/adding_software.md).
 
 
 ---
 
-### c) Supported by EasyBuild { #supported_by_easybuild }
+### iii) Built and installed with EasyBuild { #easybuild }
 
-Currently, we require that all software being added to EESSI is supported by the *EasyBuild release* being used
-to perform the installation.
+We currently require that all software installations in EESSI are
+**built and installed using EasyBuild**.
 
-That is, the easyconfig files used for the installation *must be included in the EasyBuild release*.
+We strongly prefer that the [*latest release of EasyBuild*](https://pypi.org/project/easybuild/)
+that is available at the time is used to add software to EESSI.
 
-We do allow the use of [`--from-pr`](https://docs.easybuild.io/integration-with-github/#github_from_pr) and
+The use of [`--from-pr`](https://docs.easybuild.io/integration-with-github/#github_from_pr) and
 [`--include-easyblocks-from-pr`](https://docs.easybuild.io/integration-with-github/#github_include_easyblocks_from_pr)
-to pull in changes required to make the installation work correctly in the EESSI build environment,
-but only if that is strictly required.
+to pull in changes to EasyBuild that are required to make the installation work correctly
+in EESSI is allowed, but only if that is strictly required
+(that is, if those changes are not included yet in the latest EasyBuild release).
 
 
 ---
 
-### d) Compiler toolchain { #compiler_toolchain }
+### iv) Supported compiler toolchain { #supported_toolchain }
 
-A [compiler toolchain](https://docs.easybuild.io/terminology/#toolchains) that is still supported by the latest
-EasyBuild must be used for building the software.
+A **[compiler toolchain](https://docs.easybuild.io/terminology/#toolchains) that is still supported**
+by the latest EasyBuild release *must* be used for building the software.
 
-More information on supported toolchains in EasyBuild is available [here](https://docs.easybuild.io/policies/toolchains).
+For more information on supported toolchains,
+see the [EasyBuild toolchain support policy](https://docs.easybuild.io/policies/toolchains).
 
 
 ---
 
-### e) CPU targets { #cpu_targets }
+### v) Recent toolchain versions { #recent_toolchains }
 
-The software *should* work on all [CPU targets supported by EESSI](software_layer/cpu_targets.md).
+We strongly prefer adding software to EESSI that was built with a **recent compiler toolchain**.
+
+When adding software to a particular version of EESSI,
+you should *use a toolchain version that is already installed*.
+
+If you would like to see an additional toolchain version being added to a particular version of EESSI,
+please [open a support request](support.md) for this, and motivate your request.
+
+---
+
+### vi) Recent software versions { #recent_software_versions }
+
+We strongly prefer adding sufficiently **recent software versions** to EESSI.
+
+If you would like to add older software versions, please clearly motivate the need for this
+in your contribution.
+
+
+---
+
+### vii) CPU targets { #cpu_targets }
+
+Software that is added to EESSI *should* **work on all [supported CPU targets](software_layer/cpu_targets.md)**.
 
 Exceptions to this requirement are allowed if technical problems that can not be resolved with reasonable effort
 prevent the installation of the software for specific CPU targets.
@@ -78,22 +110,20 @@ prevent the installation of the software for specific CPU targets.
 
 ---
 
-### f) Versions & toolchains { #versions_toolchains }
+### viii) Testing { #testing }
 
-Recent software versions and toolchains *should* be preferred,
-although the installation of older software versions and toolchains is allowed if sufficiently motivated.
-
-
----
-
-### g) Testing { #testing }
-
-We should be able to test the software installations via the [EESSI test suite](../test-suite).
+We should be able to test the software installations via the [EESSI test suite](../test-suite),
+in particular for software applications and user-facing tools.
 
 Ideally one or more tests are available that verify that the software is functionally correct,
-and performs well.
+and that it (still) performs well.
 
-It should be possible to run a minimal *smoke test*, for example using EasyBuild's `--sanity-check-only` feature.
+Tests that are run during the software installation procedure as performed by EasyBuild *must* pass.
+Exceptions can made if only a small subset of tests fail for specific CPU targets,
+as long as these exceptions are tracked and an effort is made to assess the impact of those failing tests.
+
+It should be possible to run a minimal *smoke test* for the software included in EESSI,
+for example using EasyBuild's `--sanity-check-only` feature.
 
 !!! note
 
@@ -106,6 +136,6 @@ It should be possible to run a minimal *smoke test*, for example using EasyBuild
 
 ## Changelog
 
-### v0.1.0 (24 Oct 2023)
+### v0.1.0 (9 Nov 2023)
 
 - initial contribution policy
