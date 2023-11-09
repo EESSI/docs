@@ -1,7 +1,7 @@
 # Native installation
 
 Setting up native access to EESSI, that is a system-wide deployment that does not require workarounds like
-[using a container](../eessi_container), requires the installation and configuration of [CernVM-FS](https://cernvm.cern.ch/fs).
+[using a container](eessi_container.md), requires the installation and configuration of [CernVM-FS](https://cernvm.cern.ch/fs).
 
 This requires **admin privileges**, since you need to install CernVM-FS as an OS package.
 
