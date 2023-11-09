@@ -28,9 +28,10 @@ jobs:
           # config: '/lint/config/changelog.yml'
     #     args: '.'
 
-    - name: install mkdocs
+    - name: install mkdocs + plugins
       run: |
-          pip install mkdocs mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-toc-sidebar-plugin
+          pip install -r requirements.txt
+          pip list | grep mkdocs
           mkdocs --version
 
     - name: build tutorial

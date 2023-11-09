@@ -38,7 +38,7 @@ Note that we can only help with problems related to the software *installations*
 
 We are open to software requests for software that is not included in EESSI yet.
 
-The quickest way to add additional software to EESSI is by contributing it yourself as a community contribution, please see the [documentation on adding software](contributing_sw/overview.md).
+The quickest way to add additional software to EESSI is by contributing it yourself as a community contribution, please see the [documentation on adding software](adding_software/overview.md).
 
 Alternatively, you can send in a request to our support team. Please try to provide as much information on the software as possible: preferably use the [issue template](https://gitlab.com/eessi/support/-/issues/new?issuable_template=Software_request) (which requires you to log in to GitLab), or make sure to cover the items listed [here](https://gitlab.com/eessi/support/-/blob/main/.gitlab/issue_templates/Software_request.md).
 
