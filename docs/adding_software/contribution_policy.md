@@ -119,7 +119,7 @@ Ideally one or more tests are available that verify that the software is functio
 and that it (still) performs well.
 
 Tests that are run during the software installation procedure as performed by EasyBuild *must* pass.
-Exceptions can made if only a small subset of tests fail for specific CPU targets,
+Exceptions can be made if only a small subset of tests fail for specific CPU targets,
 as long as these exceptions are tracked and an effort is made to assess the impact of those failing tests.
 
 It should be possible to run a minimal *smoke test* for the software included in EESSI,
