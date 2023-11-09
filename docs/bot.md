@@ -6,7 +6,7 @@ Building, testing, and deploying software is done by one or more *bot instances*
 The EESSI build-test-deploy bot :robot: is implemented as a [GitHub App](https://docs.github.com/en/apps/overview)
 in the [`eessi-bot-software-layer` repository](https://github.com/EESSI/eessi-bot-software-layer).
 
-It operates in the context of [pull requests](contributing_sw/opening_pr.md#software_layer_pull_request) to
+It operates in the context of [pull requests](adding_software/opening_pr.md#software_layer_pull_request) to
 the [`compatibility-layer` repository](https://github.com/EESSI/compatibility-layer) or the
 [`software-layer` repository](https://github.com/EESSI/software-layer),
 and follows the instructions supplied by humans,
@@ -61,7 +61,7 @@ to trigger building of software, and to deploy software installations in to the 
 ## Building { #building }
 
 To instruct the bot :robot: to build software, one or more `build` instructions
-should be issued by posting a comment in the pull request (see also [here](contributing_sw/building_software.md#bot_build)).
+should be issued by posting a comment in the pull request (see also [here](adding_software/building_software.md#bot_build)).
 
 The most basic build instruction that can be sent to the bot is:
 

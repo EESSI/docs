@@ -1,4 +1,6 @@
-# Debugging failed builds (contributors/maintainers)
+# Debugging failed builds
+
+*(for contributors + maintainers)*
 
 Unfortunately, software does not always build successfully. Since EESSI targets novel CPU architectures as well, build failures on such platforms are quite common, as the software and/or the software build systems have not always been adjusted to support these architectures yet.
 

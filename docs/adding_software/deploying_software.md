@@ -1,4 +1,6 @@
-# Deploying packages (maintainers)
+# Deploying software
+
+*(for maintainers)*
 
 ### Instructing the bot to deploy :rocket:
 

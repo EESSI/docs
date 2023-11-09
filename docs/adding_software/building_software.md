@@ -1,4 +1,6 @@
-# Building software (maintainers)
+# Building software
+
+*(for maintainers)*
 
 ### Instructing the bot to build :hammer: { #bot_build }
 

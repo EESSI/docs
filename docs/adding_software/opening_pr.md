@@ -1,4 +1,6 @@
-# Opening a pull request (contributors)
+# Opening a pull request
+
+*(for contributors)*
 
 To add software to EESSI, you should go through the semi-automatic software installation procedure by:
 
