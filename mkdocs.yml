@@ -72,6 +72,7 @@ plugins:
         contributing_sw/deploying_software.md: adding_software/deploying_software.md
         contributing_sw/opening_pr.md: adding_software/opening_pr.md
         contributing_sw/overview.md: adding_software/overview.md
+        software_layer/adding_software.md: adding_software/overview.md
 markdown_extensions:
   # enable adding HTML attributes and CSS classes
   - attr_list
