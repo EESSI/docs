@@ -1,0 +1,1698 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/adding_software/debugging_failed_builds/">
+      
+      
+        <link rel="prev" href="../building_software/">
+      
+      
+        <link rel="next" href="../deploying_software/">
+      
+      
+      <link rel="icon" href="../../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+    
+    
+      
+        <title>Debugging failed builds - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#debugging-failed-builds" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Debugging failed builds
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Filesystem layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Filesystem layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filesystem_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filesystem_layer/stratum1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up a Stratum 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compatibility_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compatibility layer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software layer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Software layer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/cpu_targets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPU targets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/build_nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build nodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Test suite
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Test suite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/installation-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation & configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build-test-deploy bot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pilot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pilot repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting access to EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Getting access to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/is_eessi_accessible/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is EESSI accessible?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/native_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Native installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/eessi_container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EESSI container
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Using EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Using EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/setting_up_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/basic_commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/building_on_eessi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software on top of EESSI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/eessi_demos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running EESSI demos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding software to EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Adding software to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (overview)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribution_policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribution policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opening_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Opening a pull request
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Debugging failed builds
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Debugging failed builds
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-the-environment" class="md-nav__link">
+    Preparing the environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing the environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fetching-the-feature-branch" class="md-nav__link">
+    Fetching the feature branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-a-shell-in-the-eessi-container" class="md-nav__link">
+    Starting a shell in the EESSI container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-gentoo-prefix-environment" class="md-nav__link">
+    Start the Gentoo Prefix environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-eessi-software-environment" class="md-nav__link">
+    Starting the EESSI software environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-easybuild" class="md-nav__link">
+    Configure EasyBuild
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-software" class="md-nav__link">
+    Building the software
+  </a>
+  
+    <nav class="md-nav" aria-label="Building the software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-everything-in-the-easystack-file" class="md-nav__link">
+    Building everything in the EasyStack file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-an-individual-package" class="md-nav__link">
+    Building an individual package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-causes-of-issues-in-eessi" class="md-nav__link">
+    Known causes of issues in EESSI
+  </a>
+  
+    <nav class="md-nav" aria-label="Known causes of issues in EESSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-custom-system-prefix-of-the-compatibility-layer" class="md-nav__link">
+    The custom system prefix of the compatibility layer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-writeable-overlay" class="md-nav__link">
+    The writeable overlay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Meetings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Meetings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/2022-09-amsterdam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community meeting (Sept'22)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../partners/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project partners
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-the-environment" class="md-nav__link">
+    Preparing the environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing the environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fetching-the-feature-branch" class="md-nav__link">
+    Fetching the feature branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-a-shell-in-the-eessi-container" class="md-nav__link">
+    Starting a shell in the EESSI container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-the-gentoo-prefix-environment" class="md-nav__link">
+    Start the Gentoo Prefix environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-eessi-software-environment" class="md-nav__link">
+    Starting the EESSI software environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-easybuild" class="md-nav__link">
+    Configure EasyBuild
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-the-software" class="md-nav__link">
+    Building the software
+  </a>
+  
+    <nav class="md-nav" aria-label="Building the software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-everything-in-the-easystack-file" class="md-nav__link">
+    Building everything in the EasyStack file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-an-individual-package" class="md-nav__link">
+    Building an individual package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-causes-of-issues-in-eessi" class="md-nav__link">
+    Known causes of issues in EESSI
+  </a>
+  
+    <nav class="md-nav" aria-label="Known causes of issues in EESSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-custom-system-prefix-of-the-compatibility-layer" class="md-nav__link">
+    The custom system prefix of the compatibility layer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-writeable-overlay" class="md-nav__link">
+    The writeable overlay
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="debugging-failed-builds">Debugging failed builds<a class="headerlink" href="#debugging-failed-builds" title="Permanent link">&para;</a></h1>
+<p><em>(for contributors + maintainers)</em></p>
+<p>Unfortunately, software does not always build successfully. Since EESSI targets novel CPU architectures as well, build failures on such platforms are quite common, as the software and/or the software build systems have not always been adjusted to support these architectures yet.</p>
+<p>In EESSI, all software packages are built by a bot. This is great for builds that complete successfully as we can build many software packages for a wide range of hardware with little human intervention. However, it does mean that you, as contributor, can not easily access the build directory and build logs to figure out build issues.</p>
+<p>This page describes how you can interactively reproduce failed builds, so that you can more easily debug the issue.</p>
+<p>Throughout this page, we will use <a href="https://github.com/EESSI/software-layer/pull/360">this PR</a> as an example. It intends to add LAMMPS to EESSI. Among other issues, it failed on a <a href="https://github.com/EESSI/software-layer/pull/360#issuecomment-1765913105">building Plumed</a>.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>You will need to have:</p>
+<ul>
+<li>Access to a machine with the hardware for which the build that you want to debug failed. </li>
+<li>On that machine, meet the requirements for running the EESSI container, as described on <a href="../../getting_access/eessi_container/#prerequisites">this page</a>.</li>
+</ul>
+<h2 id="preparing-the-environment">Preparing the environment<a class="headerlink" href="#preparing-the-environment" title="Permanent link">&para;</a></h2>
+<p>A number of steps are needed to create the same environment in which the bot builds.</p>
+<ul>
+<li>Fetching the feature branch from which you want to replicate a build.</li>
+<li>Starting a shell in the EESSI container.</li>
+<li>Start the Gentoo Prefix environment.</li>
+<li>Start the EESSI software environment.</li>
+<li>Configure EasyBuild.</li>
+</ul>
+<h3 id="fetching-the-feature-branch">Fetching the feature branch<a class="headerlink" href="#fetching-the-feature-branch" title="Permanent link">&para;</a></h3>
+<p>Looking at <a href="https://github.com/EESSI/software-layer/pull/360">the example PR</a>, we see the PR is created from <a href="https://github.com/laraPPr/software-layer/">this fork</a>. First, we clone the fork, then checkout the feature branch (<code>LAMMPS_23Jun2022</code>)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/laraPPr/software-layer/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cd software-layer
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git checkout LAMMPS_23Jun2022
+</code></pre></div>
+Alternatively, if you already have a clone of the <code>software-layer</code> you can add it as a new remote
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd software-layer
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git remote add laraPPr https://github.com/laraPPr/software-layer/
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>git fetch laraPPr
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>git checkout LAMMPS_23Jun2022
+</code></pre></div></p>
+<h3 id="starting-a-shell-in-the-eessi-container">Starting a shell in the EESSI container<a class="headerlink" href="#starting-a-shell-in-the-eessi-container" title="Permanent link">&para;</a></h3>
+<p>Simply run the EESSI container (<code>eessi_container.sh</code>), which should be in the root of the <code>software-layer</code> repository
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>./eessi_container.sh --access rw
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may have to press enter to clearly see the prompt as some messages
+beginning with <code>CernVM-FS:</code> have been printed after the first prompt
+<code>Apptainer&gt;</code> was shown.</p>
+</div>
+<p>If you want to debug an issue for which a lot of dependencies need to be build first, you may want to start the container with the <code>--save DIR/TGZ</code> and flag (check <code>./eessi_container.sh --help</code>). This saves the temporary directory (which we will use as working and installation directory later in this instruction) in order to be able to resume later with the same temporary directory. E.g.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./eessi_container.sh --access rw --save ${HOME}/pr370
+</code></pre></div>
+The tarball will be saved when you exit the container. Note that the first <code>exit</code> command will first make you exit the Gentoo prefix environment. Only the second will take you out of the container, and print where the tarball will be stored:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[EESSI pilot 2023.06] $ exit
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>logout
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Leaving Gentoo Prefix with exit status 1
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Apptainer&gt; exit
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>exit
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Saved contents of tmp directory &#39;/tmp/eessi-debug.VgLf1v9gf0&#39; to tarball &#39;${HOME}/pr370/EESSI-pilot-1698056784.tgz&#39; (to resume session add &#39;--resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz&#39;)
+</code></pre></div></p>
+<p>Note that the tarballs can be quite sizeable, so make sure to pick a filesystem where you have a large enough quotum.</p>
+<p>Next time you want to continue investigating this issue, you can start the container with <code>--resume DIR/TGZ</code> and continue where you left off, having all dependencies already built and available.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./eessi_container.sh --access rw --resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz
+</code></pre></div></p>
+<p>For a detailed description on using the script <code>eessi_container.sh</code>, see <a href="../../getting_access/eessi_container/">here</a>.</p>
+<h3 id="start-the-gentoo-prefix-environment">Start the Gentoo Prefix environment<a class="headerlink" href="#start-the-gentoo-prefix-environment" title="Permanent link">&para;</a></h3>
+<p>The next step is to start the Gentoo Prefix environment. </p>
+<p>Before we start, check the current values of <code>${EESSI_CVMFS_REPO}</code> and <code>${EESSI_PILOT_VERSION}</code> so that you can reset them later:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>echo ${EESSI_CVMFS_REPO}
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>echo ${EESSI_PILOT_VERSION}
+</code></pre></div></p>
+<p>Then, we set <code>EESSI_OS_TYPE</code> and <code>EESSI_CPU_FAMILY</code> and run the <code>startprefix</code> command to start the Gentoo Prefix environment:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>export EESSI_OS_TYPE=linux  # We only support Linux for now
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>export EESSI_CPU_FAMILY=$(uname -m)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
+</code></pre></div></p>
+<p>Now, reset the <code>${EESSI_CVMFS_REPO}</code> and <code>${EESSI_PILOT_VERSION}</code> in your prefix environment with the initial values (printed in the echo statements above)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>export EESSI_CVMFS_REPO=...
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>export EESSI_PILOT_VERSION=...
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By activating the Gentoo Prefix environment, the system tools (e.g. <code>ls</code>) you would normally use are now provided by Gentoo Prefix, instead of the container OS. E.g. running <code>which ls</code> after starting the prefix environment as above will return <code>/cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/x86_64/bin/ls</code>. This makes the builds completely independent from the container OS.</p>
+</div>
+<h3 id="starting-the-eessi-software-environment">Starting the EESSI software environment<a class="headerlink" href="#starting-the-eessi-software-environment" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to replicate a build with <code>generic</code> optimization (i.e. in <code>$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic</code>) you will need to set <code>export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic</code> before starting the EESSI environment.</p>
+</div>
+<p>To activate the software environment, run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>source ${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/init/bash
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you get an error <code>bash: /versions//init/bash: No such file or directory</code>, you forgot to reset the <code>${EESSI_CVFMS_REPO}</code> and <code>${EESSI_PILOT_VERSION}</code> environment variables at the end of the previous step.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to build with generic optimization, you should run <code>export EESSI_CPU_FAMILY=$(uname -m) &amp;&amp; export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic</code> before sourcing.</p>
+</div>
+<p>For more info on starting the EESSI software environment, see <a href="../../using_eessi/setting_up_environment/">here</a></p>
+<h3 id="configure-easybuild">Configure EasyBuild<a class="headerlink" href="#configure-easybuild" title="Permanent link">&para;</a></h3>
+<p>It is important that we configure EasyBuild in the same way as the bot uses it, with one small exceptions: our working directory will be different. Typically, that doesn't matter, but it's good to be aware of this one difference, in case you fail to replicate the build failure.</p>
+<p>In this example, we create a unique temporary directory inside <code>/tmp</code> to serve both as our workdir. Finally, we will source the <code>configure_easybuild</code> script, which will configure EasyBuild by setting environment variables.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-debug.XXXXXXXXXX)
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>source configure_easybuild
+</code></pre></div>
+Among other things, the <code>configure_easybuild</code> script sets the install path for EasyBuild to point to the correct installation directory in (to <code>${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_SOFTWARE_SUBDIR}</code>). This is the exact same path the <code>bot</code> uses to build, and uses a writeable overlay filesystem in the container to write to a path in <code>/cvmfs</code> (which normally is read-only). This is identical to what the <code>bot</code> does.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you started the container using --resume, you may want WORKDIR to point to the workdir you created previously (instead of creating a new, temporary directory with <code>mktemp</code>).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to replicate a build with <code>generic</code> optimization (i.e. in <code>$EESSI_CVMFS_REPO/versions/${EESSI_PILOT_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic</code>) you will need to set <code>export EASYBUILD_OPTARCH=GENERIC</code> after sourcing <code>configure_easybuild</code>.</p>
+</div>
+<p>Next, we need to determine the correct version of EasyBuild to load. Since <a href="https://github.com/EESSI/software-layer/pull/360">the example PR</a> changes the file <code>eessi-2023.06-eb-4.8.1-2021b.yml</code>, this tells us the bot was using version <code>4.8.1</code> of EasyBuild to build this. Thus, we load that version of the EasyBuild module and check if everything was configured correctly:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>module load EasyBuild/4.8.1
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>eb --show-config
+</code></pre></div>
+You should get something similar to</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>#
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a># Current EasyBuild configuration
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a># (C: command line argument, D: default value, E: environment variable, F: configuration file)
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>#
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>buildpath            (E) = /tmp/easybuild/easybuild/build
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>containerpath        (E) = /tmp/easybuild/easybuild/containers
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>debug                (E) = True
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>experimental         (E) = True
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>filter-deps          (E) = Autoconf, Automake, Autotools, binutils, bzip2, DBus, flex, gettext, gperf, help2man, intltool, libreadline, libtool, Lua, M4, makeinfo, ncurses, util-linux, XZ, zlib, Yasm
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>filter-env-vars      (E) = LD_LIBRARY_PATH
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>hooks                (E) = ${HOME}/software-layer/eb_hooks.py
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>ignore-osdeps        (E) = True
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>installpath          (E) = /tmp/easybuild/software/linux/aarch64/neoverse_n1
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>module-extensions    (E) = True
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>packagepath          (E) = /tmp/easybuild/easybuild/packages
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>prefix               (E) = /tmp/easybuild/easybuild
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>read-only-installdir (E) = True
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>repositorypath       (E) = /tmp/easybuild/easybuild/ebfiles_repo
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>robot-paths          (D) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/aarch64/neoverse_n1/software/EasyBuild/4.8.1/easybuild/easyconfigs
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>rpath                (E) = True
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>sourcepath           (E) = /tmp/easybuild/easybuild/sources:
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>sysroot              (E) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/aarch64
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>trace                (E) = True
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>zip-logs             (E) = bzip2
+</code></pre></div>
+<h2 id="building-the-software">Building the software<a class="headerlink" href="#building-the-software" title="Permanent link">&para;</a></h2>
+<p>When the bot builds software, it loops over all EasyStack files that have been changed, and builds them using EasyBuild. However, a single PR may add multiple items to a single EasyStack file, and the issue you are trying to debug is probably in <em>one</em> of them. Getting EasyBuild to build the full EasyStack file will create the most similar situation to what the bot does. However, you <em>may</em> just want to build the individual software that has changed. Below, we describe both approaches.</p>
+<h3 id="building-everything-in-the-easystack-file">Building everything in the EasyStack file<a class="headerlink" href="#building-everything-in-the-easystack-file" title="Permanent link">&para;</a></h3>
+<p>In our <a href="https://github.com/EESSI/software-layer/pull/360">example PR</a>, the EasyStack file that was changed was <code>eessi-2023.06-eb-4.8.1-2021b.yml</code>. To build this, we run (in the directory that contains the checkout of this feature branch):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
+</code></pre></div>
+After some time, this build fails while trying to build <code>Plumed</code>, and we can access the build log to look for clues on why it failed.</p>
+<h3 id="building-an-individual-package">Building an individual package<a class="headerlink" href="#building-an-individual-package" title="Permanent link">&para;</a></h3>
+<p>In our <a href="https://github.com/EESSI/software-layer/pull/360">example PR</a>, the individual package that was added to <code>eessi-2023.06-eb-4.8.1-2021b.yml</code> was <code>LAMMPS-23Jun2022-foss-2021b-kokkos.eb</code>. We'll also have to (re)use any options that are listed in the EasyStack file for <code>LAMMPS-23Jun2022-foss-2021b-kokkos.eb</code>, in this case the option <code>--from-pr 19000</code>. Thus, to build, we run:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19000
+</code></pre></div>
+After some time, this build fails while trying to build <code>Plumed</code>, and we can access the build log to look for clues on why it failed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While this might be faster than the EasyStack-based approach, this is <em>not</em> how the bot builds. So why it <em>may</em> reproduce the failure the bot encounters, it may not reproduce the bug <em>at all</em> (no failure) or run into <em>different</em> bugs. If you want to be sure, use the EasyStack-based approach.</p>
+</div>
+<h2 id="known-causes-of-issues-in-eessi">Known causes of issues in EESSI<a class="headerlink" href="#known-causes-of-issues-in-eessi" title="Permanent link">&para;</a></h2>
+<h3 id="the-custom-system-prefix-of-the-compatibility-layer">The custom system prefix of the compatibility layer<a class="headerlink" href="#the-custom-system-prefix-of-the-compatibility-layer" title="Permanent link">&para;</a></h3>
+<p>Some installations might expect the system root (sysroot, for short) to be in <code>/</code>. However, in case of EESSI, we are building against the OS in the <a href="../../compatibility_layer/">compatibility layer</a>. Thus, our sysroot is something like <code>${EESSI_CVMFS_REPO}/versions/${EESSI_PILOT_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}</code>. This <em>can</em> cause issues if installation procedures <em>assume</em> the sysroot is in <code>/</code>.</p>
+<p>One example of a sysroot <a href="https://github.com/EESSI/software-layer/pull/370#issuecomment-1774744151">issue</a> was in installing <code>wget</code>. The EasyConfig for <code>wget</code> defined
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a># make sure pkg-config picks up system packages (OpenSSL &amp; co)
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>preconfigopts = &quot;export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; &quot;
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>configopts = &#39;--with-ssl=openssl &#39;
+</code></pre></div>
+This will not work in EESSI, since the OpenSSL should be picked up from the compatibility layer. This was fixed by changing the EasyConfig to read
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>preconfigopts = &quot;export PKG_CONFIG_PATH=%(sysroot)s/usr/lib64/pkgconfig:%(sysroot)s/usr/lib/pkgconfig:%(sysroot)s/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; &quot;
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>configopts = &#39;--with-ssl=openssl
+</code></pre></div>
+The <code>%(sysroot)s</code> is a template value which EasyBuild will resolve to the value that has been configured in EasyBuild for <code>sysroot</code> (it is one of the fields printed by <code>eb --show-config</code> if a non-standard sysroot is configured).</p>
+<p>If you encounter issues where the installation can not find something that is <em>normally</em> provided by the OS (i.e. <em>not</em> one of the dependencies in your module environment), you may need to resort to a similar approach.</p>
+<h3 id="the-writeable-overlay">The writeable overlay<a class="headerlink" href="#the-writeable-overlay" title="Permanent link">&para;</a></h3>
+<p>The writeable overlay in the container is known to be a bit slow sometimes. Thus, we have seen tests failing because they exceed some timeout (e.g. <a href="https://github.com/EESSI/software-layer/pull/332#issuecomment-1775374260">this issue</a>).</p>
+<p>To investigate if the writeable overlay is somehow the issue, you can make sure the installation gets done somewhere else, e.g. in the temporary directory in <code>/tmp</code> that you created as workdir. To do this, set</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>export EASYBUILD_INSTALLPATH=${WORKDIR}
+</code></pre></div>
+<p><em>after</em> the step in which you have sourced the <code>configure_easybuild</code> script. Note that in order to find (with <code>module av</code>) any modules that get installed here, you will need to add this path to the <code>MODULEPATH</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>module use ${EASYBUILD_INSTALLPATH}/modules/all
+</code></pre></div>
+<p>Then, retry building the software (as described above). If the build now succeeds, you know that indeed the writeable overlay caused the issue. We <em>have</em> to build in this writeable overlay when we do real deployments. Thus, if you hit such a timeout, try to see if you can (temporarily) modify the timeout value in the test so that it passes.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 9, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      
+    
+  </body>
+</html>
