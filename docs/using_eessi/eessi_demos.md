@@ -36,7 +36,7 @@ even with limited resources only.
 
 Let's try running the GROMACS example.
 
-First, we need to make sure that [our environment is set up to use EESSI](../setting_up_environment):
+First, we need to make sure that [our environment is set up to use EESSI](setting_up_environment.md):
 
 ``` { .bash .copy }
 source /cvmfs/pilot.eessi-hpc.org/latest/init/bash

@@ -53,7 +53,7 @@ Apptainer>
     beginning with `CernVM-FS: ` have been printed after the first prompt
     `Apptainer> ` was shown.
 
-To start using EESSI, see [Using EESSI/Setting up your environment](../../using_eessi/setting_up_environment).
+To start using EESSI, see [Using EESSI/Setting up your environment](../using_eessi/setting_up_environment.md).
 
 ## Help for `eessi_container.sh`
 
@@ -346,7 +346,7 @@ parsing command line arguments. For example,
 ## Running EESSI demos
 
 For examples of scripts that use the software provided by EESSI,
-see [Running EESSI demos](../../using_eessi/eessi_demos).
+see [Running EESSI demos](../using_eessi/eessi_demos.md).
 
 ## Launching containers more quickly
 Subsequent runs of `eessi_container.sh` may reuse temporary data of a previous
