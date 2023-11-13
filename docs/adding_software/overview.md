@@ -12,7 +12,7 @@ We welcome contributions to EESSI software stack. This page shows an overview of
 </p>
 
 
-## Contributing an ReFrame test to EESSI test suite
+## Contributing a ReFrame test to EESSI test suite
 
 Ideally, contributor makes a ReFrame test for the software he plans to contribute. 
 
