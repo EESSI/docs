@@ -1,4 +1,24 @@
-# Adding software to EESSI
+# Overview of adding software to EESSI
+
+We welcome contributions to EESSI software stack. This page shows an overview of the procedures of contributing to the EESSI repository. 
+
+## Contribute a software to EESSI software stack
+
+<p align="center">
+  <img width="100%" src="../img/contribute_software_workflow.png" alt="EESSI contribute software">
+</p>
+
+## Contributing a ReFrame test to EESSI test suite
+
+Ideally, contributor makes a ReFrame test for the software he plans to contribute. 
+
+<p align="center">
+  <img width="100%" src="../img/contribute_test_workflow.png" alt="EESSI contribute test">
+</p>
+
+
+
+# More about adding software to EESSI# Adding software to EESSI
 
 * [Contribution policy](contribution_policy.md)
 * [Opening a pull request *(for contributors)*](opening_pr.md)
