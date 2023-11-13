@@ -5,7 +5,7 @@ We welcome contributions to EESSI software stack. This page shows an overview of
 ## Contribute a software to EESSI software stack
 
 <p align="center">
-  <img width="100%" src="../img/contribute_software_workflow.png" alt="EESSI contribute software">
+  <img width="50%" src="../img/contribute_software_workflow.png" alt="EESSI contribute software">
 </p>
 
 ## Contributing a ReFrame test to EESSI test suite
@@ -13,12 +13,12 @@ We welcome contributions to EESSI software stack. This page shows an overview of
 Ideally, contributor makes a ReFrame test for the software he plans to contribute. 
 
 <p align="center">
-  <img width="100%" src="../img/contribute_test_workflow.png" alt="EESSI contribute test">
+  <img width="50%" src="../img/contribute_test_workflow.png" alt="EESSI contribute test">
 </p>
 
 
 
-# More about adding software to EESSI# Adding software to EESSI
+# More about adding software to EESSI
 
 * [Contribution policy](contribution_policy.md)
 * [Opening a pull request *(for contributors)*](opening_pr.md)
