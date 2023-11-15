@@ -221,6 +221,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -230,6 +241,32 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-links" class="md-nav__link">
+    Quick links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1169,6 +1206,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-links" class="md-nav__link">
+    Quick links
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1185,43 +1237,52 @@
   
 
 
+<h1 id="welcome-to-the-eessi-project-documentation">Welcome to the EESSI project documentation!<a class="headerlink" href="#welcome-to-the-eessi-project-documentation" title="Permanent link">&para;</a></h1>
+<hr />
 <p align="center">
   <img width="60%" src="img/logos/EESSI_logo_horizontal.jpg" alt="EESSI logo">
 </p>
 
-<h1 id="welcome-to-the-eessi-project-documentation">Welcome to the EESSI project documentation!<a class="headerlink" href="#welcome-to-the-eessi-project-documentation" title="Permanent link">&para;</a></h1>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>What if there was a way to avoid having to install a broad range of scientific software from scratch on every HPC cluster or cloud instance you use or maintain, without compromising on performance?</p>
 </div>
-<p>The <strong>European Environment for Scientific Software Installations</strong> (EESSI, pronounced as "easy") is a collaboration between different European partners in HPC community.</p>
-<p>The goal of this project is to build a common stack of scientific software installations for HPC systems and beyond, including laptops,
+<p>The <strong>European Environment for Scientific Software Installations</strong> (EESSI, pronounced as "easy") is a collaboration between different European partners in HPC community. The goal of this project is to build a common stack of scientific software installations for HPC systems and beyond, including laptops,
 personal workstations and cloud infrastructure.</p>
-<p>More details about the project are available in the different subsections:</p>
+<hr />
+<h3 id="quick-links">Quick links<a class="headerlink" href="#quick-links" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="overview/">Project overview</a></li>
-<li><a href="filesystem_layer/">Filesystem layer</a></li>
-<li><a href="compatibility_layer/">Compatibility layer</a></li>
-<li><a href="software_layer/">Software layer</a></li>
-<li><a href="pilot/">Pilot repository</a></li>
-<li><a href="getting_access/is_eessi_accessible/">Getting access to EESSI</a></li>
-<li><a href="using_eessi/setting_up_environment/">Using EESSI</a></li>
-<li><a href="software_testing/">Software testing</a></li>
-<li><a href="support/">Getting support</a></li>
-<li><a href="meetings/">Meetings</a></li>
-<li><a href="partners/">Project partners</a></li>
+<li><a href="overview/">What is EESSI?</a></li>
 <li><a href="contact/">Contact info</a></li>
 </ul>
+<p>For users:</p>
+<ul>
+<li><a href="pilot/">EESSI pilot software stack and available software</a></li>
+<li><a href="getting_access/is_eessi_accessible/">Access</a>, <a href="using_eessi/setting_up_environment/">initialize</a> and <a href="using_eessi/basic_commands/">use</a> EESSI</li>
+<li><a href="test-suite/">How to run EESSI test suite</a></li>
+<li><a href="support/">Get help or report issue</a></li>
+</ul>
+<p>For system administrators:</p>
+<ul>
+<li>EESSI layered structure: <a href="filesystem_layer/">filesystem</a>, <a href="compatibility_layer/">compatibility</a>, <a href="software_layer/">software</a></li>
+<li><a href="getting_access/native_installation/">Installing EESSI</a></li>
+<li><a href="filesystem_layer/stratum1/">Setting up a mirror server</a></li>
+</ul>
+<p>For contributors:</p>
+<ul>
+<li><a href="adding_software/overview/">Adding software to EESSI</a></li>
+<li><a href="meetings/">Meetings</a></li>
+</ul>
 <hr />
-<p>The EESSI project was presented at the <a href="https://easybuild.io/eum21/">6th EasyBuild User Meeting</a> in January 2021, check the recording:</p>
-<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/1CXwzIW_MsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p>The EESSI project was covered during a quick AWS HPC Tech Short video (15 June 2023):</p>
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/Fzv4ieiI1jo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 2, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2023</span>
       
     
   </small>
