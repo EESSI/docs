@@ -21,7 +21,7 @@ Note that additional restrictions may apply in specific cases that are currently
 
 ---
 
-### i) Open source software { #open_source_software }
+### i) Freely redistributable software { #freely_redistributable_software }
 
 Only **freely redistributable software** can be added to the EESSI repository,
 and we strongly prefer including only **open source software** in EESSI.
