@@ -4,7 +4,7 @@
 
 Online EESSI update meeting, every 1st Thursday of the month at 14:00 CE(S)T.
 
-More info via https://github.com/EESSI/meetings/wiki
+More info via [EESSI wiki](https://github.com/EESSI/meetings/wiki).
 
 ## Physical meetings
 
