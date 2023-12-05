@@ -2,7 +2,7 @@
 
 We welcome contributions to EESSI software stack. This page shows an overview of the procedures of contributing to the EESSI repository. 
 
-## Contribute a software to EESSI software stack
+## Contribute a software to the EESSI software stack
 
 <p align="center">
   <img width="50%" src="../img/contribute_software_workflow.png" alt="EESSI contribute software">
