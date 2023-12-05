@@ -1,6 +1,6 @@
 # Overview of adding software to EESSI
 
-We welcome contributions to EESSI software stack. This page shows an overview of the procedures of contributing to the EESSI repository. 
+We welcome contributions to the EESSI software stack. This page shows the procedure and provides links to the contribution policy and the technical details of making a contribution. 
 
 ## Contribute a software to the EESSI software stack
 
