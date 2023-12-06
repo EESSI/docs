@@ -42,9 +42,7 @@ nav:
     - using_eessi/building_on_eessi.md
     - using_eessi/eessi_demos.md
   - Adding software to EESSI:
-    # Todo: insert an overview page with a flowchart showing the high level process
-    - (overview): adding_software/overview.md
-    # - Contribution policy, requires #108
+    - Overview: adding_software/overview.md
     - adding_software/contribution_policy.md
     - adding_software/opening_pr.md
     - adding_software/building_software.md
