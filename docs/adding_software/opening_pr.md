@@ -41,10 +41,10 @@ git remote add koala git@github.com:koala/software-layer.git
 ```
 
 3) Check out the branch that corresponds to the version of EESSI repository you want to add software to,
-   for example `2023.06`:
+   for example `2023.06-software.eessi.io`:
 
 ```
-git checkout 2023.06
+git checkout 2023.06-software.eessi.io
 ```
 
 !!! note
@@ -52,13 +52,13 @@ git checkout 2023.06
 
 ### Creating a pull request {: #software_layer_pull_request }
 
-1) Make sure that your `2023.06` branch in the checkout of the
+1) Make sure that your `2023.06-software.eessi.io` branch in the checkout of the
   [`EESSI/software-layer`](https://github.com/EESSI/software-layer) repository is up-to-date
 
 ```
 cd EESSI/software-layer
-git checkout 2023.06
-git pull origin 2023.06
+git checkout 2023.06-software.eessi.io 
+git pull origin 2023.06-software.eessi.io 
 ```
 
 2) Create a new branch (use a sensible name, not `example_branch` as below), and check it out
@@ -71,14 +71,14 @@ git checkout -b example_branch
    easyconfigs should be installed
 
 ```shell
-echo '  - example-1.2.3-GCC-10.3.0.eb' >> eessi-2023.06-eb-4.7.2-2021a.yml
+echo '  - example-1.2.3-GCC-12.3.0.eb' >> easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
 ```
 
 4) Stage and commit the changes into your your branch with a sensible message
 
 ```shell
-git add eessi-2023.06-eb-4.7.2-2021a.yml
-git commit -m "adding example 1.2.3 with GCC/10.3.0 to EESSI pilot 2023.06"
+git add easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
+git commit -m "{2023.06}[GCC/12.3.0] example 1.2.3"
 ```
 
 5) Push your branch to your fork :koala: of the [software-layer](https://github.com/EESSI/software-layer) repository
@@ -91,7 +91,7 @@ git push koala example_branch
    or use the helpful link that should show up in the output of the `git push` command.
 
    **Make sure you target the correct branch**: the one that corresponds to the version of EESSI you want to add
-   software to (like `2023.06`).
+   software to (like `2023.06-software.eessi.io`).
 
    If all goes well, one or more bots :robot: should almost instantly create a comment in your pull request
    with an overview of how it is configured - you will need this information when providing build instructions.
