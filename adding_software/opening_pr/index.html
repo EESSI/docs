@@ -1335,30 +1335,30 @@ you should <a href="https://docs.github.com/en/get-started/quickstart/fork-a-rep
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git remote add koala git@github.com:koala/software-layer.git
 </code></pre></div>
 <p>3) Check out the branch that corresponds to the version of EESSI repository you want to add software to,
-   for example <code>2023.06</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git checkout 2023.06
+   for example <code>2023.06-software.eessi.io</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git checkout 2023.06-software.eessi.io
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The commands above only need to be run once, to prepare your setup for making pull requests.</p>
 </div>
 <h3 id="software_layer_pull_request">Creating a pull request<a class="headerlink" href="#software_layer_pull_request" title="Permanent link">&para;</a></h3>
-<p>1) Make sure that your <code>2023.06</code> branch in the checkout of the
+<p>1) Make sure that your <code>2023.06-software.eessi.io</code> branch in the checkout of the
   <a href="https://github.com/EESSI/software-layer"><code>EESSI/software-layer</code></a> repository is up-to-date</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cd EESSI/software-layer
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git checkout 2023.06
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git pull origin 2023.06
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git checkout 2023.06-software.eessi.io 
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git pull origin 2023.06-software.eessi.io 
 </code></pre></div>
 <p>2) Create a new branch (use a sensible name, not <code>example_branch</code> as below), and check it out</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>example_branch
 </code></pre></div>
 <p>3) Determine the correct easystack file to change, and add one or more lines to it that specify which
    easyconfigs should be installed</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;  - example-1.2.3-GCC-10.3.0.eb&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>eessi-2023.06-eb-4.7.2-2021a.yml
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;  - example-1.2.3-GCC-12.3.0.eb&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
 </code></pre></div>
 <p>4) Stage and commit the changes into your your branch with a sensible message</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>add<span class="w"> </span>eessi-2023.06-eb-4.7.2-2021a.yml
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;adding example 1.2.3 with GCC/10.3.0 to EESSI pilot 2023.06&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>add<span class="w"> </span>easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;{2023.06}[GCC/12.3.0] example 1.2.3&quot;</span>
 </code></pre></div>
 <p>5) Push your branch to your fork <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f428.svg" title=":koala:" /> of the <a href="https://github.com/EESSI/software-layer">software-layer</a> repository</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>push<span class="w"> </span>koala<span class="w"> </span>example_branch
@@ -1366,7 +1366,7 @@ you should <a href="https://docs.github.com/en/get-started/quickstart/fork-a-rep
 <p>6) Go to the <a href="https://github.com/EESSI/software-layer">GitHub web interface</a> to open your pull request,
    or use the helpful link that should show up in the output of the <code>git push</code> command.</p>
 <p><strong>Make sure you target the correct branch</strong>: the one that corresponds to the version of EESSI you want to add
-   software to (like <code>2023.06</code>).</p>
+   software to (like <code>2023.06-software.eessi.io</code>).</p>
 <p>If all goes well, one or more bots <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f916.svg" title=":robot:" /> should almost instantly create a comment in your pull request
    with an overview of how it is configured - you will need this information when providing build instructions.</p>
 
@@ -1375,7 +1375,7 @@ you should <a href="https://docs.github.com/en/get-started/quickstart/fork-a-rep
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 6, 2023</span>
       
     
   </small>
