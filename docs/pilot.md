@@ -33,10 +33,10 @@ The container image can be used directly by Singularity (no prior download requi
   ```
   These provides space for the CernVM-FS cache, and an empty home directory to use in the container.
 
-* Set the `$SINGULARITY_BIND` and `$SINGULARITY_HOME` environment variables to configure Singularity:
+* Set the `$SINGULARITY_HOME` and `SINGULARITY_SCRATCH` environment variables to configure Singularity:
   ```shell
-  export SINGULARITY_BIND="/tmp/$USER/var-run-cvmfs:/var/run/cvmfs,/tmp/$USER/var-lib-cvmfs:/var/lib/cvmfs"
   export SINGULARITY_HOME="/tmp/$USER/home:/home/$USER"
+  export SINGULARITY_SCRATCH="/var/lib/cvmfs,/var/run/cvmfs"
   ```
 
 * Start the container using `singularity shell`, using `--fusemount` to mount the EESSI pilot repository
