@@ -54,7 +54,7 @@ nav:
   - Meetings:
       - Overview: meetings.md
       - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
-  - Project partners: partners.md
+  - Talks: talks.md
   - Contact info: contact.md
 plugins:
   # show revision date at bottom of each page
