@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://eessi.github.io/docs/filesystem_layer/">
+        <link rel="canonical" href="https://eessi.github.io/docs/talks/">
       
       
-        <link rel="prev" href="../overview/">
+        <link rel="prev" href="../meetings/2022-09-amsterdam/">
       
       
-        <link rel="next" href="stratum1/">
+        <link rel="next" href="../contact/">
       
       
       <link rel="icon" href="../img/logos/EESSI.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Overview - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>Talks - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#filesystem-layer" class="md-skip">
+        <a href="#talks-related-to-eessi" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Talks
             
           </span>
         </div>
@@ -252,21 +252,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -280,7 +278,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Filesystem layer
@@ -291,19 +289,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../filesystem_layer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -312,7 +301,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -325,7 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="stratum1/" class="md-nav__link">
+      <a href="../filesystem_layer/stratum1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,10 +1144,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../talks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Talks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1168,6 +1176,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      2023
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1212,6 +1249,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      2023
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1228,17 +1282,14 @@
   
 
 
-<h1 id="filesystem-layer">Filesystem layer<a class="headerlink" href="#filesystem-layer" title="Permanent link">&para;</a></h1>
-<p><img alt="Filesystem layer" src="../img/filesystem_layer.png" /></p>
-<p>The bottom layer of the EESSI project is the <strong>filesystem layer</strong>,
-which is responsible for distributing the software stack.</p>
-<p>For this we rely on <a href="https://cernvm.cern.ch/portal/filesystem">CernVM-FS</a> (or CVMFS for short), a network file system used to distribute the software to the clients in a fast, reliable and scalable way.</p>
-<p>CVMFS was created over 10 years ago specifically for the purpose of globally distributing a large software stack. For the experiments at the Large Hadron Collider, it hosts several hundred million files and directories that are distributed to the order of hundred thousand client computers.</p>
-<p><img alt="CVMFS hierarchy" src="../img/cvmfs_hierarchy.png" /></p>
-<p>The hierarchical structure with multiple caching layers (Stratum-0, Stratum-1's located at partner sites and local caching proxies) ensures good performance with limited resources. Redundancy is provided by using multiple Stratum-1's at various sites. Since CVMFS is based on the HTTP protocol, the ubiquitous <a href="http://www.squid-cache.org/">Squid caching proxy</a> can be leveraged to reduce server loads and improve performance at large installations (such as HPC clusters). Clients can easily mount the file system (read-only) via a <a href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace">FUSE</a> (Filesystem in Userspace) module.</p>
-<p>For a (basic) introduction to CernVM-FS, see <a href="https://www.youtube.com/watch?v=MyYx-xaL36k">this presentation</a>.</p>
-<p>Detailed information about how we configure CVMFS is available at
-<a href="https://github.com/EESSI/filesystem-layer">https://github.com/EESSI/filesystem-layer</a> .</p>
+<h1 id="talks-related-to-eessi">Talks related to EESSI<a class="headerlink" href="#talks-related-to-eessi" title="Permanent link">&para;</a></h1>
+<h2 id="2023">2023<a class="headerlink" href="#2023" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="2023/20231205_castiel2_eessi_intro/"><em>Streaming Optimised Scientific Software: an Introduction to EESSI</em></a> (online tutorial, 5 Dec 2023)</li>
+<li><a href="2023/20231204_cvmfs_hpc/"><em>Best Practices for CernVM-FS in HPC</em></a> (online tutorial, 4 Dec 2023)</li>
+<li><a href="2023/20231027_packagingcon23_eessi/"><em>Streaming optimized scientific software installations on any Linux distro with EESSI</em></a> (PackagingCon 2023, 27 Oct 2023)</li>
+<li><a href="2023/20230615_aws_tech_short/"><em>Making scientific software EESSI - and fast</em></a> (8-min AWS HPC Tech Short, 15 June 2023)</li>
+</ul>
 
 
 
@@ -1259,7 +1310,7 @@ which is responsible for distributing the software stack.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2020</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 20, 2023</span>
   </span>
 
     
