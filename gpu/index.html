@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://eessi.github.io/docs/gpu/">
       
       
+        <link rel="prev" href="../adding_software/deploying_software/">
+      
+      
+        <link rel="next" href="../support/">
       
       
       <link rel="icon" href="../img/logos/EESSI.png">
@@ -1034,6 +1038,174 @@
       
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    GPU support
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    GPU support
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support for using NVIDIA GPUs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support for using NVIDIA GPUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nvidia_drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVIDIA GPU drivers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda_sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiling CUDA software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host_injections" class="md-nav__link">
+    <span class="md-ellipsis">
+      host_injections variant symlink
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvidia_eessi_native" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NVIDIA GPUs via a native EESSI installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using NVIDIA GPUs via a native EESSI installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposing-nvidia-gpu-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposing NVIDIA GPU drivers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-full-cuda-sdk-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing full CUDA SDK (optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvidia_eessi_container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NVIDIA GPUs via EESSI in a container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using NVIDIA GPUs via EESSI in a container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposing-nvidia-gpu-drivers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposing NVIDIA GPU drivers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu_cuda_testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing the GPU support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
@@ -1066,10 +1238,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1080,8 +1252,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             Meetings
           </label>
@@ -1196,6 +1368,122 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nvidia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support for using NVIDIA GPUs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support for using NVIDIA GPUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nvidia_drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      NVIDIA GPU drivers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuda_sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiling CUDA software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host_injections" class="md-nav__link">
+    <span class="md-ellipsis">
+      host_injections variant symlink
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvidia_eessi_native" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NVIDIA GPUs via a native EESSI installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using NVIDIA GPUs via a native EESSI installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposing-nvidia-gpu-drivers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposing NVIDIA GPU drivers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-full-cuda-sdk-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing full CUDA SDK (optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvidia_eessi_container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NVIDIA GPUs via EESSI in a container
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using NVIDIA GPUs via EESSI in a container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exposing-nvidia-gpu-drivers_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exposing NVIDIA GPU drivers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu_cuda_testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing the GPU support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1213,13 +1501,121 @@
 
 
 <h1 id="gpu-support">GPU support<a class="headerlink" href="#gpu-support" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>The support for GPU software in EESSI is a work-in-progess.</strong></p>
-</div>
 <p>More information on the actions that must be performed to ensure that GPU software included in EESSI
-can use the GPU in your system will be available here soon.</p>
-<p>For now, <a href="../support/">please open a support issue</a> if you need help or have questions regarding GPU support.</p>
+can use the GPU in your system is available below.</p>
+<p><a href="../support/">Please open a support issue</a> if you need help or have questions regarding GPU support.</p>
+<div class="admonition tip">
+<p class="admonition-title">Make sure the <code>${EESSI_VERSION}</code> version placeholder is defined!</p>
+<p>In this page, we use <code>${EESSI_VERSION}</code> as a placeholder for the version of the EESSI repository,
+for example:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>
+</code></pre></div></p>
+<p>Before inspecting paths, or executing any of the specified commands, you should define <code>$EESSI_VERSION</code> first,
+for example with:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_VERSION</span><span class="o">=</span><span class="m">2023</span>.06
+</code></pre></div></p>
+</div>
+<h2 id="nvidia">Support for using NVIDIA GPUs<a class="headerlink" href="#nvidia" title="Permanent link">&para;</a></h2>
+<p>EESSI supports running CUDA-enabled software. All CUDA-enabled modules are marked with the <code>(gpu)</code> feature,
+which is visible in the output produced by <code>module avail</code>.</p>
+<h3 id="nvidia_drivers">NVIDIA GPU drivers<a class="headerlink" href="#nvidia_drivers" title="Permanent link">&para;</a></h3>
+<p>For CUDA-enabled software to run, it needs to be able to find the <strong>NVIDIA GPU drivers</strong> of the host system.
+The challenge here is that the NVIDIA GPU drivers are not <em>always</em> in a standard system location, and that we
+can not install the GPU drivers in EESSI (since they are too closely tied to the client OS and GPU hardware).</p>
+<h3 id="cuda_sdk">Compiling CUDA software<a class="headerlink" href="#cuda_sdk" title="Permanent link">&para;</a></h3>
+<p>An additional requirement is necessary if you want to be able to compile CUDA-enabled software using a CUDA installation included in EESSI. This requires a <em>full</em> CUDA SDK, but the <a href="https://docs.nvidia.com/cuda/eula/index.html">CUDA SDK End User License Agreement (EULA)</a> does not allow for full redistribution. In EESSI, we are (currently) only allowed to redistribute the files needed to <em>run</em> CUDA software.</p>
+<div class="admonition note">
+<p class="admonition-title">Full CUDA SDK only needed to <em>compile</em> CUDA software</p>
+<p>Without a full CUDA SDK on the host system, you will still be able to <em>run</em> CUDA-enabled software from the EESSI stack,
+you just won't be able to <em>compile</em> additional CUDA software.</p>
+</div>
+<p>Below, we describe how to make sure that the EESSI software stack can find your NVIDIA GPU drivers and (optionally) full installations of the CUDA SDK.</p>
+<h3 id="host_injections"><code>host_injections</code> variant symlink<a class="headerlink" href="#host_injections" title="Permanent link">&para;</a></h3>
+<p>In the EESSI repository, a special directory has been prepared where system administrators can install files that can be picked up by
+software installations included in EESSI. This gives the ability to administrators to influence the behaviour (and capabilities) of the EESSI software stack.</p>
+<p>This special directory is located in <code>/cvmfs/software.eessi.io/host_injections</code>, and it is a <em>CernVM-FS Variant Symlink</em>:
+a symbolic link for which the target can be controlled by the CernVM-FS client configuration (for more info, see <a href="https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks">'Variant Symlinks' in the official CernVM-FS documentation</a>).</p>
+<div class="admonition info">
+<p class="admonition-title">Default target for <code>host_injections</code> variant symlink</p>
+<p>Unless otherwise configured in the CernVM-FS client configuration for the EESSI repository, the <code>host_injections</code> symlink points to <code>/opt/eessi</code> on the client system:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ ls -l /cvmfs/software.eessi.io/host_injections
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>lrwxrwxrwx 1 cvmfs cvmfs 10 Oct  3 13:51 /cvmfs/software.eessi.io/host_injections -&gt; /opt/eessi
+</code></pre></div></p>
+</div>
+<p>As an example, let's imagine that we want to use a architecture-specific location on a shared filesystem as the target for the symlink. This has the advantage that one can make changes under <code>host_injections</code> that affect all nodes which share that CernVM-FS configuration. Configuring this in your CernVM-FS configuration would mean adding the following line in the client configuration file:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="na">EESSI_HOST_INJECTIONS</span><span class="o">=</span><span class="s">/shared_fs/path</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Don't forget to reload the CernVM-FS configuration</p>
+<p>After making a change to a CernVM-FS configuration file, you also need to reload the configuration:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload
+</code></pre></div></p>
+</div>
+<p>All CUDA-enabled software in EESSI expects the CUDA drivers to be available in a specific subdirectory of this <code>host_injections</code> directory.
+In addition, installations of the CUDA SDK included EESSI are stripped down to the files that we are allowed to redistribute;
+all other files are replaced by symbolic links that point to another specific subdirectory of <code>host_injections</code>. For example:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ ls -l /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>lrwxrwxrwx 1 cvmfs cvmfs 109 Dec 21 14:49 /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc -&gt; /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
+</code></pre></div></p>
+<p>If the corresponding full installation of the CUDA SDK is available there, the CUDA installation included in EESSI can be used to build CUDA software.</p>
+<h3 id="nvidia_eessi_native">Using NVIDIA GPUs via a native EESSI installation<a class="headerlink" href="#nvidia_eessi_native" title="Permanent link">&para;</a></h3>
+<p>Here, we describe the steps to enable GPU support when you have a <a href="../getting_access/native_installation/">native EESSI installation</a> on your system.</p>
+<div class="admonition warning">
+<p class="admonition-title">Required permissions</p>
+<p>To enable GPU support for EESSI on your system, you will typically need to have system administration rights, since you need write permissions on the folder to the target directory of the <code>host_injections</code> symlink.</p>
+</div>
+<h4 id="exposing-nvidia-gpu-drivers">Exposing NVIDIA GPU drivers<a class="headerlink" href="#exposing-nvidia-gpu-drivers" title="Permanent link">&para;</a></h4>
+<p>To install the symlinks to your GPU drivers in <code>host_injections</code>, run the <code>link_nvidia_host_libraries.sh</code> script that is included in EESSI:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
+</code></pre></div>
+<p>This script uses <code>ldconfig</code> on your host system to locate your GPU drivers, and creates symbolic links to them in the correct location under <code>host_injections</code> directory. It also stores the CUDA version supported by the driver that the symlinks were created for.</p>
+<div class="admonition tip">
+<p class="admonition-title">Re-run <code>link_nvidia_host_libraries.sh</code> after NVIDIA GPU driver update</p>
+<p>You should re-run this script every time you update the NVIDIA GPU drivers on the host system.</p>
+<p>Note that it is safe to re-run the script even if no driver updates were done: the script should detect that the current version of the drivers were already symlinked.</p>
+</div>
+<h4 id="installing-full-cuda-sdk-optional">Installing full CUDA SDK (optional)<a class="headerlink" href="#installing-full-cuda-sdk-optional" title="Permanent link">&para;</a></h4>
+<p>To install a full CUDA SDK under <code>host_injections</code>, use the <code>install_cuda_host_injections.sh</code> script that is included in EESSI:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/scripts/gpu_support/nvidia/install_cuda_host_injections.sh
+</code></pre></div>
+<p>For example, to install CUDA 12.1.1 in the directory that the <a href="#host_injections"><code>host_injections</code> variant symlink</a> points to,
+using <code>/tmp/$USER/EESSI</code> as directory to store temporary files:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
+</code></pre></div>
+You should choose the CUDA version you wish to install according to what CUDA versions are included in EESSI;
+see the output of <code>module avail CUDA/</code> after <a href="../using_eessi/setting_up_environment/">setting up your environment for using
+EESSI</a>.</p>
+<p>You can run <code>/cvmfs/software.eessi.io/scripts/install_cuda_host_injections.sh --help</code> to check all of the options.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This script uses EasyBuild to install the CUDA SDK. For this to work, two requirements need to be satisfied:</p>
+<ul>
+<li><code>module load EasyBuild</code> should work (or the <code>eb</code> command is already available in the environment);</li>
+<li>The version of EasyBuild being used should provide the requested version of the CUDA easyconfig file
+  (in the example case above, that's <code>CUDA-12.1.1.eb</code>).</li>
+</ul>
+<p>You can rely on the EasyBuild installation that is included in EESSI for this.</p>
+<p>Alternatively, you may load an EasyBuild module manually <em>before</em> running the <code>install_cuda_host_injections.sh</code>
+script to make an <code>eb</code> command available.</p>
+</div>
+<h3 id="nvidia_eessi_container">Using NVIDIA GPUs via EESSI in a container<a class="headerlink" href="#nvidia_eessi_container" title="Permanent link">&para;</a></h3>
+<p>We focus here on the <a href="https://apptainer.org/">Apptainer</a>/<a href="https://sylabs.io/singularity">Singularity</a> use case,
+and have only tested the <a href="https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard"><code>--nv</code> option</a>
+to enable access to GPUs from within the container.</p>
+<p>If you are using the <a href="../getting_access/eessi_container/">EESSI container</a> to access the EESSI software,
+the procedure for enabling GPU support is slightly different and will be documented here eventually.</p>
+<h4 id="exposing-nvidia-gpu-drivers_1">Exposing NVIDIA GPU drivers<a class="headerlink" href="#exposing-nvidia-gpu-drivers_1" title="Permanent link">&para;</a></h4>
+<p>When running a container with <code>apptainer</code> or <code>singularity</code> it is <em>not</em> necessary to run the <code>install_cuda_host_injections.sh</code>
+script since both these tools use <code>$LD_LIBRARY_PATH</code> internally in order to make the host GPU drivers available
+in the container.</p>
+<p>The only scenario where this would be required is if <code>$LD_LIBRARY_PATH</code> is modified or undefined.</p>
+<h3 id="gpu_cuda_testing">Testing the GPU support<a class="headerlink" href="#gpu_cuda_testing" title="Permanent link">&para;</a></h3>
+<p>The quickest way to test if software installations included in  EESSI can access and use your GPU is to run the
+<code>deviceQuery</code> executable that is part of the <code>CUDA-Samples</code> module:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>module load CUDA-Samples
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>deviceQuery
+</code></pre></div>
+If both are successful, you should see information about your GPU printed to your terminal.</p>
 
 
 
@@ -1240,7 +1636,7 @@ can use the GPU in your system will be available here soon.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 21, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2023</span>
   </span>
 
     
