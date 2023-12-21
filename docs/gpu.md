@@ -73,3 +73,12 @@ If you are using the [EESSI container](https://www.eessi.io/docs/getting_access/
 When using an `apptainer`/`singularity` container it is _not_ necessary to run the symlinking script since these containers use `LD_LIBRARY_PATH` internally in order to find GPU drivers.
 
 The only scenario where this would be required is one where the `LD_LIBRARY_PATH` is modified/removed.
+
+### Testing that the GPU works
+
+The quickest way to test if EESSI can see/use your GPU is to run the `deviceQuery` executable that is part of the `CUDA-Samples` module:
+```
+module load CUDA-Samples
+deviceQuery
+```
+If both are successful, you should see information about your GPU printed to your terminal.
