@@ -51,7 +51,7 @@ You should re-run this script every time you update the drivers on the host syst
 
 To install the CUDA SDK under `host_injections`, run the script in `/cvmfs/${EESSI_PREFIX}/scripts/install_cuda_host_injections.sh`. 
 
-As an example of exectuting this script, to install CUDA 12.1.1 in the `host_injections` directory, using `/path/to/tmpdir` as directory to store temporary files:
+As an example of executing this script, to install CUDA 12.1.1 in the `host_injections` directory, using `/path/to/tmpdir` as directory to store temporary files:
 ```
 /cvmfs/${EESSI_PREFIX}/scripts/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /path/to/tmpdir --accept-cuda-eula
 ```
