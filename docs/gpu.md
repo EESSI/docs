@@ -18,18 +18,18 @@ can use the GPU in your system is available below.
     export EESSI_VERSION=2023.06
     ```
 
-## Support for using NVIDIA GPUs
+## Support for using NVIDIA GPUs {: #nvidia }
 
 EESSI supports running CUDA-enabled software. All CUDA-enabled modules are marked with the `(gpu)` feature,
 which is visible in the output produced by `module avail`.
 
-### NVIDIA GPU drivers
+### NVIDIA GPU drivers {: #nvidia_drivers }
 
 For CUDA-enabled software to run, it needs to be able to find the **NVIDIA GPU drivers** of the host system.
 The challenge here is that the NVIDIA GPU drivers are not _always_ in a standard system location, and that we
 can not install the GPU drivers in EESSI (since they are too closely tied to the client OS and GPU hardware).
 
-### Compiling CUDA software
+### Compiling CUDA software {: #cuda_sdk }
 
 An additional requirement is necessary if you want to be able to compile CUDA-enabled software using a CUDA installation included in EESSI. This requires a *full* CUDA SDK, but the [CUDA SDK End User License Agreement (EULA)](https://docs.nvidia.com/cuda/eula/index.html) does not allow for full redistribution. In EESSI, we are (currently) only allowed to redistribute the files needed to *run* CUDA software.
 
@@ -78,14 +78,14 @@ lrwxrwxrwx 1 cvmfs cvmfs 109 Dec 21 14:49 /cvmfs/software.eessi.io/versions/2023
 If the corresponding full installation of the CUDA SDK is available there, the CUDA installation included in EESSI can be used to build CUDA software.
 
 
-### Enabling GPU support when using a native EESSI installation {: #gpu_eessi_native }
+### Using NVIDIA GPUs via a native EESSI installation {: #nvidia_eessi_native }
 
 Here, we describe the steps to enable GPU support when you have a [native EESSI installation](getting_access/native_installation.md) on your system.
 
 !!! warning "Required permissions"
     To enable GPU support for EESSI on your system, you will typically need to have system administration rights, since you need write permissions on the folder to the target directory of the `host_injections` symlink.
 
-#### Exposing the GPU drivers
+#### Exposing NVIDIA GPU drivers
 
 To install the symlinks to your GPU drivers in `host_injections`, run the `link_nvidia_host_libraries.sh` script that is included in EESSI:
 
@@ -133,7 +133,7 @@ You can run `/cvmfs/software.eessi.io/scripts/install_cuda_host_injections.sh --
     script to make an `eb` command available.
 
 
-### Enabling GPU support when using EESSI in a container {: #gpu_eessi_container }
+### Using NVIDIA GPUs via EESSI in a container {: #nvidia_eessi_container }
 
 We focus here on the [Apptainer](https://apptainer.org/)/[Singularity](https://sylabs.io/singularity) use case,
 and have only tested the [`--nv` option](https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard)
@@ -142,7 +142,7 @@ to enable access to GPUs from within the container.
 If you are using the [EESSI container](getting_access/eessi_container.md) to access the EESSI software,
 the procedure for enabling GPU support is slightly different and will be documented here eventually.
 
-#### Exposing the GPU drivers
+#### Exposing NVIDIA GPU drivers
 
 When running a container with `apptainer` or `singularity` it is _not_ necessary to run the `install_cuda_host_injections.sh`
 script since both these tools use `$LD_LIBRARY_PATH` internally in order to make the host GPU drivers available
@@ -150,7 +150,7 @@ in the container.
 
 The only scenario where this would be required is if `$LD_LIBRARY_PATH` is modified or undefined.
 
-### Testing the GPU support
+### Testing the GPU support {: #gpu_cuda_testing }
 
 The quickest way to test if software installations included in  EESSI can access and use your GPU is to run the
 `deviceQuery` executable that is part of the `CUDA-Samples` module:
