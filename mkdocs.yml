@@ -50,6 +50,7 @@ nav:
     - adding_software/deploying_software.md
   # Todo: write on how to contribute to the EESSI test suite
   # - Contributing software tests to the EESSI test suite:
+  - GPU support: gpu.md
   - Getting support: support.md
   - Meetings:
       - Overview: meetings.md
