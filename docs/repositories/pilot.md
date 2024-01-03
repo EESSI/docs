@@ -2,6 +2,9 @@
 
 ### Caveats
 
+!!! warning 
+    The EESSI pilot software stack is **NOT FOR PRODUCTION**
+
 The current EESSI pilot software stack (version 2021.12) is the 7th iteration,
 and there are some known issues and limitations, please take these into account:
 
