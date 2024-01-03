@@ -31,7 +31,9 @@ nav:
     - Usage: test-suite/usage.md
     - Release notes: test-suite/release-notes.md
   - Build-test-deploy bot: bot.md
-  - Pilot repository: pilot.md
+  - Repositories:
+    - EESSI repository: repositories/software_eessi_io.md
+    - Pilot repository: repositories/pilot.md
   - Getting access to EESSI:
     - getting_access/is_eessi_accessible.md
     - getting_access/native_installation.md
