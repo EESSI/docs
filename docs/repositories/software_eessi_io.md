@@ -9,7 +9,7 @@ If you notice any problems, please report them via https://gitlab.com/eessi/supp
 
 #### Via a container
 
-To acces the EESSI repository you only need a minimal operating system and the necessay packages to acces the EESSI repository through CernVM-FS, and it is suitable for `aarch64`, `ppc64le`, and `x86_64`.
+To access the EESSI repository you only need a minimal operating system and the necessary packages to access the EESSI repository through CernVM-FS, and it is suitable for `aarch64`, `ppc64le`, and `x86_64`.
 
 The easiest way to access the EESSI repository is by using Singularity. You can find the instructions for using EESSI on a container, [here](../getting_access/eessi_container.md).
 
