@@ -212,6 +212,28 @@ To filter tests using multiple tags, you can:
 * use `|` as separator to indicate that *one* of the specified tags must match (logical OR, for example `--tag='1_core|2_cores'`);
 * use the `--tag` option multiple times to indicate that *all* specified tags must match (logical AND, for example `--tag CI --tag 1_core`);
 
+
+## Example commands
+
+Running all GROMACS tests on 4 cores on the `cpu` partition
+
+```
+reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-report
+```
+
+List all checks for TensorFlow 2.11 using a single node
+
+```
+reframe --list --name %module_name=TensorFlow/2.11 --tag 1_node
+```
+
+Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)
+
+```
+reframe --dry-run --name 'TensorFlow.*CUDA' --tag 1_4_node --tag CI
+```
+
+
 ## Overriding test parameters *(advanced)*
 
 You can override test parameters using the [`--setvar` option (or `-S`)](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-S).
@@ -231,82 +253,3 @@ reframe --setvar GROMACS_EESSI.modules=GROMACS/2023.1-foss-2022a ...
 
     You should try filtering tests using the [`--name`](#filter-name) or [`--tag`](#filter-tag) options instead.
 
-
-## Example commands
-
-### Running all GROMACS tests on 4 cores on the `cpu` partition
-
-```
-reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-report
-```
-
-### List all checks for TensorFlow 2.11 using a single node
-
-```
-reframe --list --name %module_name=TensorFlow/2.11 --tag 1_node
-```
-
-### Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)
-
-```
-reframe --dry-run --name 'TensorFlow.*CUDA' --tag 1_4_node --tag CI
-```
-
-## Available tests { #available-tests }
-
-The EESSI test suite currently includes tests for:
-
-* [GROMACS](#gromacs)
-* [TensorFlow](#tensorflow)
-
-For a complete overview of all available tests in the EESSI test suite, see the
-[`eessi/testsuite/tests` subdirectory in the `EESSI/test-suite` GitHub repository](https://github.com/EESSI/test-suite/tree/main/eessi/testsuite/tests).
-
-### GROMACS { #gromacs }
-
-Several tests for [GROMACS](https://www.gromacs.org), a software package to perform molecular dynamics simulations,
-are included, which use the systems included in the [HECBioSim benchmark suite](https://www.hecbiosim.ac.uk/access-hpc/benchmarks):
-
-* `Crambin` (20K atom system)
-* `Glutamine-Binding-Protein` (61K atom system)
-- `hEGFRDimer` (465K atom system)
-- `hEGFRDimerSmallerPL` (465K atom system, only 10k steps)
-- `hEGFRDimerPair` (1.4M atom system)
-- `hEGFRtetramerPair` (3M atom system)
-
-It is implemented in [`tests/apps/gromacs.py`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/gromacs.py),
-on top of the GROMACS test that is included in the [ReFrame test library `hpctestlib`](https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html).
-
-To run this GROMACS test with all HECBioSim systems, use:
-
-```bash
-reframe --run --name GROMACS
-```
-
-To run this GROMACS test only for a specific HECBioSim system, use for example:
-
-```bash
-reframe --run --name 'GROMACS.*HECBioSim/hEGFRDimerPair'
-```
-
-To run this GROMACS test with the smallest HECBioSim system (`Crambin`), you can use the `CI` tag:
-
-```bash
-reframe --run --name GROMACS --tag CI
-```
-
-### TensorFlow { #tensorflow }
-
-A test for [TensorFlow](https://www.tensorflow.org), a machine learning framework, is included,
-which is based on the ["Multi-worker training with Keras" TensorFlow tutorial](https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras).
-
-It is implemented in [`tests/apps/tensorflow/`](https://github.com/EESSI/test-suite/tree/main/eessi/testsuite/tests/apps/tensorflow).
-
-!!! warning
-    This test requires TensorFlow v2.11 or newer, using an older TensorFlow version will not work!
-
-To run this TensorFlow test, use:
-
-```bash
-reframe --run --name TensorFlow
-```
