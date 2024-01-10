@@ -25,3 +25,5 @@ Ideally, a contributor prepares a ReFrame test for the software to be added to t
 * [Building software *(for maintainers)*](building_software.md)
 * [Debugging failed builds *(for contributors + maintainers)*](debugging_failed_builds.md)
 * [Deploying software *(for maintainers)*](deploying_software.md)
+
+If you need help with adding software to EESSI, please [open a support request](../support.md).
