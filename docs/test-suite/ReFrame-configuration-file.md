@@ -42,7 +42,7 @@ site_configuration = {
             'partitions': [
                 {
                     'name': 'cpu_partition',
-                    'descr': 'CPU partition'
+                    'descr': 'CPU partition',
                     'scheduler': 'slurm',
                     'launcher': 'mpirun',
                     'access':  ['-p cpu', '--export=None'],
