@@ -1,4 +1,4 @@
-## EESSI software stack (2023.06)
+# Production EESSI repository (`software.eessi.io`)
 
 ### Reporting problems
 
