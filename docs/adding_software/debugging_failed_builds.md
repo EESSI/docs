@@ -57,12 +57,12 @@ If you want to debug an issue for which a lot of dependencies need to be build f
 ```
 The tarball will be saved when you exit the container. Note that the first `exit` command will first make you exit the Gentoo prefix environment. Only the second will take you out of the container, and print where the tarball will be stored:
 ```
-[EESSI pilot 2023.06] $ exit
+[EESSI 2023.06] $ exit
 logout
 Leaving Gentoo Prefix with exit status 1
 Apptainer> exit
 exit
-Saved contents of tmp directory '/tmp/eessi-debug.VgLf1v9gf0' to tarball '${HOME}/pr370/EESSI-pilot-1698056784.tgz' (to resume session add '--resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz')
+Saved contents of tmp directory '/tmp/eessi-debug.VgLf1v9gf0' to tarball '${HOME}/pr370/EESSI-1698056784.tgz' (to resume session add '--resume ${HOME}/pr370/EESSI-1698056784.tgz')
 ```
 
 Note that the tarballs can be quite sizeable, so make sure to pick a filesystem where you have a large enough quotum.
@@ -70,7 +70,7 @@ Note that the tarballs can be quite sizeable, so make sure to pick a filesystem 
 
 Next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off, having all dependencies already built and available.
 ```
-./eessi_container.sh --access rw --resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz
+./eessi_container.sh --access rw --resume ${HOME}/pr370/EESSI-1698056784.tgz
 ```
 
 For a detailed description on using the script `eessi_container.sh`, see [here](../getting_access/eessi_container.md).
@@ -98,7 +98,7 @@ export EESSI_PILOT_VERSION=...
 ```
 
 !!! Note
-    By activating the Gentoo Prefix environment, the system tools (e.g. `ls`) you would normally use are now provided by Gentoo Prefix, instead of the container OS. E.g. running `which ls` after starting the prefix environment as above will return `/cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/x86_64/bin/ls`. This makes the builds completely independent from the container OS.
+    By activating the Gentoo Prefix environment, the system tools (e.g. `ls`) you would normally use are now provided by Gentoo Prefix, instead of the container OS. E.g. running `which ls` after starting the prefix environment as above will return `/cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/bin/ls`. This makes the builds completely independent from the container OS.
 
 ### Starting the EESSI software environment
 !!! Note
@@ -162,10 +162,10 @@ packagepath          (E) = /tmp/easybuild/easybuild/packages
 prefix               (E) = /tmp/easybuild/easybuild
 read-only-installdir (E) = True
 repositorypath       (E) = /tmp/easybuild/easybuild/ebfiles_repo
-robot-paths          (D) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/aarch64/neoverse_n1/software/EasyBuild/4.8.1/easybuild/easyconfigs
+robot-paths          (D) = /cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/neoverse_n1/software/EasyBuild/4.8.1/easybuild/easyconfigs
 rpath                (E) = True
 sourcepath           (E) = /tmp/easybuild/easybuild/sources:
-sysroot              (E) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/aarch64
+sysroot              (E) = /cvmfs/software.eessi.io/versions/2023.06/compat/linux/aarch64
 trace                (E) = True
 zip-logs             (E) = bzip2
 ```

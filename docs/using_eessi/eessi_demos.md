@@ -39,14 +39,14 @@ Let's try running the GROMACS example.
 First, we need to make sure that [our environment is set up to use EESSI](setting_up_environment.md):
 
 ``` { .bash .copy }
-source /cvmfs/pilot.eessi-hpc.org/latest/init/bash
+source /cvmfs/software.eessi.io/latest/init/bash
 ```
 
 Change to the ``GROMACS`` subdirectory of the ``eessi-demo`` Git repository, and execute the ``run.sh`` script:
 
 ``` { .no-copy }
-[EESSI pilot 2021.12] $ cd GROMACS
-[EESSI pilot 2021.12] $ ./run.sh
+[EESSI 2023.06] $ cd GROMACS
+[EESSI 2023.06] $ ./run.sh
 ```
 
 Shortly after starting the script you should see output as shown below, which indicates that GROMACS has started
@@ -54,7 +54,7 @@ running:
 
 ``` { .no-copy }
 GROMACS:      gmx mdrun, version 2020.1-EasyBuild-4.5.0
-Executable:   /cvmfs/pilot.eessi-hpc.org/versions/2021.12/software/linux/x86_64/intel/haswell/software/GROMACS/2020.1-foss-2020a-Python-3.8.2/bin/gmx
+Executable:   /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/GROMACS/2020.1-foss-2020a-Python-3.8.2/bin/gmx
 ...
 starting mdrun 'Protein'
 1000 steps,      2.5 ps.

@@ -76,7 +76,7 @@ There are many challenges in an ambitious project like this, including (but prob
 
 *(June 2020)*
 
-We are actively working on a pilot setup that has a limited scope,
+We are actively working on the EESSI repository,
 and are organizing monthly meetings to discuss progress and next steps forward.
 
 Keep an eye on our GitHub repositories at [https://github.com/EESSI](https://github.com/EESSI) and our [Twitter
