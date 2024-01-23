@@ -20,6 +20,12 @@ nav:
   - Filesystem layer: 
     - Overview: filesystem_layer.md
     - filesystem_layer/stratum1.md
+    - Configuring the client:
+      - filesystem_layer/installing_a_client/client_configuration_options.md
+      - filesystem_layer/installing_a_client/standalone_package.md
+      - filesystem_layer/installing_a_client/package_repository.md
+      - filesystem_layer/installing_a_client/ansible.md
+      - filesystem_layer/installing_a_client/singularity.md
   - Compatibility layer: compatibility_layer.md
   - Software layer:
     - Overview: software_layer.md
