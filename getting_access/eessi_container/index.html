@@ -1585,13 +1585,12 @@ repository and change into the <code>software-layer</code> directory by running 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Using /tmp/eessi.abc123defg as tmp storage (add &#39;--resume /tmp/eessi.abc123defg&#39; to resume where this session ended).
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Launching container with command (next line):
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>CernVM-FS: pre-mounted on file descriptor 3
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Apptainer&gt; CernVM-FS: loading Fuse module... done
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>fuse: failed to clone device fd: Inappropriate ioctl for device
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>fuse: trying to continue without -o clone_fd.
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>Apptainer&gt;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>CernVM-FS: loading Fuse module... done
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Apptainer&gt;
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1602,7 +1601,7 @@ beginning with <code>CernVM-FS:</code> have been printed after the first prompt
 <p>To start using EESSI, see <a href="../../using_eessi/setting_up_environment/">Using EESSI/Setting up your environment</a>.</p>
 <h2 id="help-for-eessi_containersh">Help for <code>eessi_container.sh</code><a class="headerlink" href="#help-for-eessi_containersh" title="Permanent link">&para;</a></h2>
 <p>The example in the <a href="#quickstart">Quickstart</a> section facilitates an
-interactive session with read access to the EESSI pilot software stack. It
+interactive session with read access to the EESSI software stack. It
 does not require any command line options, because the script
 <code>eessi_container.sh</code> uses some carefully chosen defaults. To view
 all options of the script and its default values, run the command
@@ -1614,38 +1613,43 @@ You should see the following output
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  -a | --access {ro,rw}  - ro (read-only), rw (read &amp; write) [default: ro]
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  -c | --container IMG   - image file or URL defining the container to use
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                           [default: docker://ghcr.io/eessi/build-node:debian11]
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  -h | --help            - display this usage information [default: false]
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  -g | --storage DIR     - directory space on host machine (used for
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>                           temporary data) [default: 1. TMPDIR, 2. /tmp]
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  -l | --list-repos      - list available repository identifiers [default: false]
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  -m | --mode MODE       - with MODE==shell (launch interactive shell) or
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>                           MODE==run (run a script or command) [default: shell]
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  -r | --repository CFG  - configuration file or identifier defining the
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>                           repository to use [default: EESSI-pilot via
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>                           container configuration]
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  -u | --resume DIR/TGZ  - resume a previous run from a directory or tarball,
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>                           where DIR points to a previously used tmp directory
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>                           (check for output &#39;Using DIR as tmp ...&#39; of a previous
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>                           run) and TGZ is the path to a tarball which is
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>                           unpacked the tmp dir stored on the local storage space
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>                           (see option --storage above) [default: not set]
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>  -s | --save DIR/TGZ    - save contents of tmp directory to a tarball in
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>                           directory DIR or provided with the fixed full path TGZ
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>                           when a directory is provided, the format of the
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>                           tarball&#39;s name will be {REPO_ID}-{TIMESTAMP}.tgz
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>                           [default: not set]
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>  -v | --verbose         - display more information [default: false]
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>  -x | --http-proxy URL  - provides URL for the env variable http_proxy
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>                           [default: not set]; uses env var $http_proxy if set
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>  -y | --https-proxy URL - provides URL for the env variable https_proxy
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>                           [default: not set]; uses env var $https_proxy if set
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a> If value for --mode is &#39;run&#39;, the SCRIPT/COMMAND provided is executed. If
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a> arguments to the script/command start with &#39;-&#39; or &#39;--&#39;, use the flag terminator
-<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a> &#39;--&#39; to let eessi_container.sh stop parsing arguments.
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  -g | --storage DIR     - directory space on host machine (used for
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>                           temporary data) [default: 1. TMPDIR, 2. /tmp]
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  -h | --help            - display this usage information [default: false]
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  -i | --host-injections - directory to link to for host_injections 
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>                           [default: /..storage../opt-eessi]
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  -l | --list-repos      - list available repository identifiers [default: false]
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  -m | --mode MODE       - with MODE==shell (launch interactive shell) or
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>                           MODE==run (run a script or command) [default: shell]
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  -n | --nvidia MODE     - configure the container to work with NVIDIA GPUs,
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>                           MODE==install for a CUDA installation, MODE==run to
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>                           attach a GPU, MODE==all for both [default: false]
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  -r | --repository CFG  - configuration file or identifier defining the
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>                           repository to use [default: EESSI via
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>                           container configuration]
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  -u | --resume DIR/TGZ  - resume a previous run from a directory or tarball,
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>                           where DIR points to a previously used tmp directory
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>                           (check for output &#39;Using DIR as tmp ...&#39; of a previous
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>                           run) and TGZ is the path to a tarball which is
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>                           unpacked the tmp dir stored on the local storage space
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>                           (see option --storage above) [default: not set]
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>  -s | --save DIR/TGZ    - save contents of tmp directory to a tarball in
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>                           directory DIR or provided with the fixed full path TGZ
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>                           when a directory is provided, the format of the
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>                           tarball&#39;s name will be {REPO_ID}-{TIMESTAMP}.tgz
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>                           [default: not set]
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  -v | --verbose         - display more information [default: false]
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>  -x | --http-proxy URL  - provides URL for the env variable http_proxy
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>                           [default: not set]; uses env var $http_proxy if set
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>  -y | --https-proxy URL - provides URL for the env variable https_proxy
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>                           [default: not set]; uses env var $https_proxy if set
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a> If value for --mode is &#39;run&#39;, the SCRIPT/COMMAND provided is executed. If
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a> arguments to the script/command start with &#39;-&#39; or &#39;--&#39;, use the flag terminator
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a> &#39;--&#39; to let eessi_container.sh stop parsing arguments.
 </code></pre></div></p>
 <p>So, the defaults are equal to running the command
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./eessi_container.sh<span class="w"> </span>--access<span class="w"> </span>ro<span class="w"> </span>--container<span class="w"> </span>docker://ghcr.io/eessi/build-node:debian11<span class="w"> </span>--mode<span class="w"> </span>shell<span class="w"> </span>--repository<span class="w"> </span>EESSI-pilot
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./eessi_container.sh<span class="w"> </span>--access<span class="w"> </span>ro<span class="w"> </span>--container<span class="w"> </span>docker://ghcr.io/eessi/build-node:debian11<span class="w"> </span>--mode<span class="w"> </span>shell<span class="w"> </span>--repository<span class="w"> </span>EESSI
 </code></pre></div>
 and it would either create a temporary directory under <code>${TMPDIR}</code> (if defined),
 or <code>/tmp</code> (if <code>${TMPDIR}</code> is not defined).</p>
@@ -1682,15 +1686,15 @@ you ran. You should be able to access the history as you would do in a
 normal terminal session.</p>
 </div>
 <h2 id="running-a-simple-command">Running a simple command<a class="headerlink" href="#running-a-simple-command" title="Permanent link">&para;</a></h2>
-<p>Let's "<code>ls /cvmfs/pilot.eessi-hpc.org</code>" through the <code>eessi_container.sh</code> script
-to check if the CernVM-FS EESSI pilot repository is accessible:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./eessi_container.sh<span class="w"> </span>--mode<span class="w"> </span>run<span class="w"> </span>ls<span class="w"> </span>/cvmfs/pilot.eessi-hpc.org
+<p>Let's "<code>ls /cvmfs/software.eessi.io</code>" through the <code>eessi_container.sh</code> script
+to check if the CernVM-FS EESSI repository is accessible:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>./eessi_container.sh<span class="w"> </span>--mode<span class="w"> </span>run<span class="w"> </span>ls<span class="w"> </span>/cvmfs/software.eessi.io
 </code></pre></div>
 <p>You should see an output such as</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Using /tmp/eessi.abc123defg as tmp storage (add &#39;--resume /tmp/eessi.abc123defg&#39; to resume where this session ended).$
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Launching container with command (next line):
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>singularity -q run --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls /cvmfs/pilot.eessi-hpc.org
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>CernVM-FS: pre-mounted on file descriptor 3
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>CernVM-FS: loading Fuse module... done
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>host_injections  latest  versions
@@ -1702,13 +1706,13 @@ you are back in the shell session where you ran the <code>eessi_container.sh</co
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The last line in the output is the output of the <code>ls</code> command,
-which shows the contents of the <code>/cvmfs/pilot.eessi-hpc.org</code> directory.</p>
+which shows the contents of the <code>/cvmfs/software.eessi.io</code> directory.</p>
 <p>Also, note that there is no shell prompt (<code>Apptainer&gt;</code> or <code>Singularity</code>),
 since no interactive shell session is started in the container.</p>
 </div>
 <p>Alternatively to specify the command as we did above, you can also do the
 following.
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">CMD</span><span class="o">=</span><span class="s2">&quot;ls -l /cvmfs/pilot.eessi-hpc.org&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">CMD</span><span class="o">=</span><span class="s2">&quot;ls -l /cvmfs/software.eessi.io&quot;</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>./eessi_container.sh<span class="w"> </span>--mode<span class="w"> </span>shell<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="si">${</span><span class="nv">CMD</span><span class="si">}</span>
 </code></pre></div></p>
 <div class="admonition note">
@@ -1718,7 +1722,7 @@ to let the script run <em>our</em> command, by feeding it in via the <code>stdin
 </div>
 <p>Because <code>shell</code> is the default value for <code>--mode</code> we can also omit this and
 simply run
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">CMD</span><span class="o">=</span><span class="s2">&quot;ls -l /cvmfs/pilot.eessi-hpc.org&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">CMD</span><span class="o">=</span><span class="s2">&quot;ls -l /cvmfs/software.eessi.io&quot;</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>./eessi_container.sh<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="si">${</span><span class="nv">CMD</span><span class="si">}</span>
 </code></pre></div></p>
 <h2 id="running-a-script">Running a script<a class="headerlink" href="#running-a-script" title="Permanent link">&para;</a></h2>
@@ -1733,12 +1737,12 @@ in your current directory. Also make the script executable, by running:</p>
 <p><div class="copy highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="ch">#!/usr/bin/env bash</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1">#</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="c1"># This script determines which architectures are included in the</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># latest EESSI pilot version. It makes use of the specific directory</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1"># structure in the EESSI pilot repository.</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># latest EESSI version. It makes use of the specific directory</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1"># structure in the EESSI repository.</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1">#</span>
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
 <a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># determine list of available OS types</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nv">BASE</span><span class="o">=</span><span class="si">${</span><span class="nv">EESSI_CVMFS_REPO</span><span class="k">:-</span><span class="p">/cvmfs/pilot.eessi-hpc.org</span><span class="si">}</span>/latest/software
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="nv">BASE</span><span class="o">=</span><span class="si">${</span><span class="nv">EESSI_CVMFS_REPO</span><span class="k">:-</span><span class="p">/cvmfs/software.eessi.io</span><span class="si">}</span>/latest/software
 <a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="nb">cd</span><span class="w"> </span><span class="si">${</span><span class="nv">BASE</span><span class="si">}</span>
 <a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="k">for</span><span class="w"> </span>os_type<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>ls<span class="w"> </span>-d<span class="w"> </span>*<span class="k">)</span>
 <a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="k">do</span>
@@ -1789,7 +1793,7 @@ The output should be similar to
 <span class="normal"><a href="#__codelineno-15-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="l l-Scalar l-Scalar-Plain">Using /tmp/eessi.abc123defg as tmp storage (add &#39;--resume /tmp/eessi.abc123defg&#39; to resume where this session ended).$</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="l l-Scalar l-Scalar-Plain">Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="l l-Scalar l-Scalar-Plain">Launching container with command (next line)</span><span class="p p-Indicator">:</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pre-mounted on file descriptor 3</span>
 <a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loading Fuse module... done</span>
 <a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="l l-Scalar l-Scalar-Plain">linux/aarch64/generic</span>
@@ -1815,8 +1819,8 @@ inside the container using the <code>$SINGULARITY_BIND</code> or
 </code></pre></div></p>
 <h2 id="running-scripts-or-commands-with-parameters-starting-with-or-">Running scripts or commands with parameters starting with <code>-</code> or <code>--</code><a class="headerlink" href="#running-scripts-or-commands-with-parameters-starting-with-or-" title="Permanent link">&para;</a></h2>
 <p>Let's assume we would like to get more information about the entries of
-<code>/cvmfs/pilot.eessi-hpc.org</code>. If we would just run
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./eessi_container.sh<span class="w"> </span>--mode<span class="w"> </span>run<span class="w"> </span>ls<span class="w"> </span>-lH<span class="w"> </span>/cvmfs/pilot.eessi-hpc.org
+<code>/cvmfs/software.eessi.io</code>. If we would just run
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./eessi_container.sh<span class="w"> </span>--mode<span class="w"> </span>run<span class="w"> </span>ls<span class="w"> </span>-lH<span class="w"> </span>/cvmfs/software.eessi.io
 </code></pre></div>
 we would get an error message such as
 <div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ERROR:<span class="w"> </span>Unknown<span class="w"> </span>option:<span class="w"> </span>-lH
@@ -1824,14 +1828,14 @@ we would get an error message such as
 We can resolve this in two ways:</p>
 <ol>
 <li>Using the <code>stdin</code> channel as described above, for example, by simply running
-  <div class="copy highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">CMD</span><span class="o">=</span><span class="s2">&quot;ls -lH /cvmfs/pilot.eessi-hpc.org&quot;</span>
+  <div class="copy highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nv">CMD</span><span class="o">=</span><span class="s2">&quot;ls -lH /cvmfs/software.eessi.io&quot;</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>./eessi_container.sh<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="si">${</span><span class="nv">CMD</span><span class="si">}</span>
 </code></pre></div>
   which should result in the output similar to
   <div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="l l-Scalar l-Scalar-Plain">Using /tmp/eessi.abc123defg as tmp directory (to resume session add &#39;--resume /tmp/eessi.abc123defg&#39;).</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="l l-Scalar l-Scalar-Plain">Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="l l-Scalar l-Scalar-Plain">Launching container with command (next line)</span><span class="p p-Indicator">:</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pre-mounted on file descriptor 3</span>
 <a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loading Fuse module... done</span>
 <a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="nt">fuse: failed to clone device fd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inappropriate ioctl for device</span>
@@ -1843,13 +1847,13 @@ We can resolve this in two ways:</p>
 </code></pre></div></li>
 <li>Using the flag terminator <code>--</code> which tells <code>eessi_container.sh</code> to stop
 parsing command line arguments. For example,
-  <div class="copy highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>./eessi_container.sh<span class="w"> </span>--mode<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>ls<span class="w"> </span>-lH<span class="w"> </span>/cvmfs/pilot.eessi-hpc.org
+  <div class="copy highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>./eessi_container.sh<span class="w"> </span>--mode<span class="w"> </span>run<span class="w"> </span>--<span class="w"> </span>ls<span class="w"> </span>-lH<span class="w"> </span>/cvmfs/software.eessi.io
 </code></pre></div>
   which should result in the output similar to
   <div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="l l-Scalar l-Scalar-Plain">Using /tmp/eessi.abc123defg as tmp directory (to resume session add &#39;--resume /tmp/eessi.abc123defg&#39;).</span>
 <a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="l l-Scalar l-Scalar-Plain">Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="l l-Scalar l-Scalar-Plain">Launching container with command (next line)</span><span class="p p-Indicator">:</span>
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q run --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls -lH /cvmfs/pilot.eessi-hpc.org</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q run --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls -lH /cvmfs/software.eessi.io</span>
 <a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pre-mounted on file descriptor 3</span>
 <a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loading Fuse module... done</span>
 <a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nt">fuse: failed to clone device fd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inappropriate ioctl for device</span>
@@ -1873,13 +1877,13 @@ container more quickly).</p>
 not have to be downloaded again even when starting a new session. The example
 below illustrates this.
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITY_CACHEDIR</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span>/container_cache_dir
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nb">time</span><span class="w"> </span>./eessi_container.sh<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;ls /cvmfs/pilot.eessi-hpc.org&quot;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nb">time</span><span class="w"> </span>./eessi_container.sh<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;ls /cvmfs/software.eessi.io&quot;</span>
 </code></pre></div>
 which should produce output similar to
 <div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="l l-Scalar l-Scalar-Plain">Using /tmp/eessi.abc123defg as tmp directory (to resume session add &#39;--resume /tmp/eessi.abc123defg&#39;).</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="l l-Scalar l-Scalar-Plain">Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="l l-Scalar l-Scalar-Plain">Launching container with command (next line)</span><span class="p p-Indicator">:</span>
-<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pre-mounted on file descriptor 3</span>
 <a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loading Fuse module... done</span>
 <a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="nt">fuse: failed to clone device fd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inappropriate ioctl for device</span>
@@ -1891,13 +1895,13 @@ which should produce output similar to
 <a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="l l-Scalar l-Scalar-Plain">sys     0m7.402s</span>
 </code></pre></div>
 The next run using the same cache directory, e.g., by simply executing
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">time</span><span class="w"> </span>./eessi_container.sh<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;ls /cvmfs/pilot.eessi-hpc.org&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nb">time</span><span class="w"> </span>./eessi_container.sh<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span><span class="s2">&quot;ls /cvmfs/software.eessi.io&quot;</span>
 </code></pre></div>
 is much faster
 <div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="l l-Scalar l-Scalar-Plain">Using /tmp/eessi.abc123defg as tmp directory (to resume session add &#39;--resume /tmp/eessi.abc123defg&#39;).</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="l l-Scalar l-Scalar-Plain">Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="l l-Scalar l-Scalar-Plain">Launching container with command (next line)</span><span class="p p-Indicator">:</span>
-<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="l l-Scalar l-Scalar-Plain">singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif</span>
 <a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pre-mounted on file descriptor 3</span>
 <a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="nt">CernVM-FS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">loading Fuse module... done</span>
 <a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="nt">fuse: failed to clone device fd</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Inappropriate ioctl for device</span>
@@ -1953,7 +1957,7 @@ Clean up disk usage by simply removing directories you do not need any longer.</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 9, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 19, 2024</span>
   </span>
 
     

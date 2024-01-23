@@ -1471,7 +1471,7 @@
 <p>The last two steps can be skipped if you want to host a "private" Stratum 1 for your site.</p>
 <h2 id="requirements-for-a-stratum-1">Requirements for a Stratum 1<a class="headerlink" href="#requirements-for-a-stratum-1" title="Permanent link">&para;</a></h2>
 <p>The main requirements for a Stratum 1 server are a good network connection to the clients it is going to serve,
-and sufficient disk space. For the EESSI pilot, a few hundred gigabytes should suffice, but for production
+and sufficient disk space. For the EESSI repository, a few hundred gigabytes should suffice, but for production
 environments at least 1 TB would be recommended.</p>
 <p>In terms of cores and memory, a machine with just a few (~4) cores and 4-8 GB of memory should suffice.</p>
 <p>Various Linux distributions are supported, but we recommend one based on RHEL 7 or 8.</p>
@@ -1520,7 +1520,7 @@ this variable in <code>inventory/host_vars/&lt;url-or-ip-to-your-stratum1&gt;</c
 <h2 id="step-3-verification-of-the-stratum-1">Step 3: Verification of the Stratum 1<a class="headerlink" href="#step-3-verification-of-the-stratum-1" title="Permanent link">&para;</a></h2>
 <p>When the playbook has finished your Stratum 1 should be ready. In order to test your Stratum 1, even
 without a client installed, you can use <code>curl</code>.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/pilot.eessi-hpc.org/.cvmfspublished
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/software.eessi.io/.cvmfspublished
 </code></pre></div>
 This should return:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>HTTP/1.1<span class="w"> </span><span class="m">200</span><span class="w"> </span>OK
@@ -1531,7 +1531,7 @@ This should return:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>X-Cache:<span class="w"> </span>HIT<span class="w"> </span>from<span class="w"> </span>&lt;url-or-ip-to-your-stratum1&gt;
 </code></pre></div>
 <p>Example with the Norwegian Stratum 1:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://bgo-no.stratum1.cvmfs.eessi-infra.org/cvmfs/pilot.eessi-hpc.org/.cvmfspublished
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://bgo-no.stratum1.cvmfs.eessi-infra.org/cvmfs/software.eessi.io/.cvmfspublished
 </code></pre></div>
 <p>You can also test access to your Stratum 1 from a client, for which you will have to install the CVMFS
 <a href="https://github.com/EESSI/filesystem-layer#clients">client</a>. </p>
@@ -1542,13 +1542,13 @@ This should return:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>setup
 </code></pre></div>
 <p>If you already had configured the client before, you can simply reload the config:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload<span class="w"> </span>-c<span class="w"> </span>pilot.eessi-hpc.org
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload<span class="w"> </span>-c<span class="w"> </span>software.eessi.io
 </code></pre></div>
 <p>Finally, verify that the client connects to your new Stratum 1 by running:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>cvmfs_config<span class="w"> </span>stat<span class="w"> </span>-v<span class="w"> </span>pilot.eessi-hpc.org
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>cvmfs_config<span class="w"> </span>stat<span class="w"> </span>-v<span class="w"> </span>software.eessi.io
 </code></pre></div>
 <p>Assuming that your new Stratum 1 is the geographically closest one to your client, this should return:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Connection:<span class="w"> </span>http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/pilot.eessi-hpc.org<span class="w"> </span>through<span class="w"> </span>proxy<span class="w"> </span>DIRECT<span class="w"> </span><span class="o">(</span>online<span class="o">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Connection:<span class="w"> </span>http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/software.eessi.io<span class="w"> </span>through<span class="w"> </span>proxy<span class="w"> </span>DIRECT<span class="w"> </span><span class="o">(</span>online<span class="o">)</span>
 </code></pre></div>
 <h2 id="step-4-request-an-eessi-dns-name">Step 4: request an EESSI DNS name<a class="headerlink" href="#step-4-request-an-eessi-dns-name" title="Permanent link">&para;</a></h2>
 <p>In order to keep the configuration clean and easy, all the EESSI Stratum 1 servers have a DNS name
@@ -1581,7 +1581,7 @@ you can open a pull request with updated configuration files. You will only have
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 17, 2021</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 19, 2024</span>
   </span>
 
     

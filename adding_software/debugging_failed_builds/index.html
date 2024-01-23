@@ -1669,16 +1669,16 @@ beginning with <code>CernVM-FS:</code> have been printed after the first prompt
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./eessi_container.sh --access rw --save ${HOME}/pr370
 </code></pre></div>
 The tarball will be saved when you exit the container. Note that the first <code>exit</code> command will first make you exit the Gentoo prefix environment. Only the second will take you out of the container, and print where the tarball will be stored:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[EESSI pilot 2023.06] $ exit
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[EESSI 2023.06] $ exit
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>logout
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Leaving Gentoo Prefix with exit status 1
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Apptainer&gt; exit
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>exit
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Saved contents of tmp directory &#39;/tmp/eessi-debug.VgLf1v9gf0&#39; to tarball &#39;${HOME}/pr370/EESSI-pilot-1698056784.tgz&#39; (to resume session add &#39;--resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz&#39;)
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Saved contents of tmp directory &#39;/tmp/eessi-debug.VgLf1v9gf0&#39; to tarball &#39;${HOME}/pr370/EESSI-1698056784.tgz&#39; (to resume session add &#39;--resume ${HOME}/pr370/EESSI-1698056784.tgz&#39;)
 </code></pre></div></p>
 <p>Note that the tarballs can be quite sizeable, so make sure to pick a filesystem where you have a large enough quotum.</p>
 <p>Next time you want to continue investigating this issue, you can start the container with <code>--resume DIR/TGZ</code> and continue where you left off, having all dependencies already built and available.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./eessi_container.sh --access rw --resume ${HOME}/pr370/EESSI-pilot-1698056784.tgz
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>./eessi_container.sh --access rw --resume ${HOME}/pr370/EESSI-1698056784.tgz
 </code></pre></div></p>
 <p>For a detailed description on using the script <code>eessi_container.sh</code>, see <a href="../../getting_access/eessi_container/">here</a>.</p>
 <h3 id="start-the-gentoo-prefix-environment">Start the Gentoo Prefix environment<a class="headerlink" href="#start-the-gentoo-prefix-environment" title="Permanent link">&para;</a></h3>
@@ -1698,7 +1698,7 @@ The tarball will be saved when you exit the container. Note that the first <code
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>By activating the Gentoo Prefix environment, the system tools (e.g. <code>ls</code>) you would normally use are now provided by Gentoo Prefix, instead of the container OS. E.g. running <code>which ls</code> after starting the prefix environment as above will return <code>/cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/x86_64/bin/ls</code>. This makes the builds completely independent from the container OS.</p>
+<p>By activating the Gentoo Prefix environment, the system tools (e.g. <code>ls</code>) you would normally use are now provided by Gentoo Prefix, instead of the container OS. E.g. running <code>which ls</code> after starting the prefix environment as above will return <code>/cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/bin/ls</code>. This makes the builds completely independent from the container OS.</p>
 </div>
 <h3 id="starting-the-eessi-software-environment">Starting the EESSI software environment<a class="headerlink" href="#starting-the-eessi-software-environment" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
@@ -1755,10 +1755,10 @@ You should get something similar to</p>
 <a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>prefix               (E) = /tmp/easybuild/easybuild
 <a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>read-only-installdir (E) = True
 <a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>repositorypath       (E) = /tmp/easybuild/easybuild/ebfiles_repo
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>robot-paths          (D) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/software/linux/aarch64/neoverse_n1/software/EasyBuild/4.8.1/easybuild/easyconfigs
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>robot-paths          (D) = /cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/neoverse_n1/software/EasyBuild/4.8.1/easybuild/easyconfigs
 <a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>rpath                (E) = True
 <a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>sourcepath           (E) = /tmp/easybuild/easybuild/sources:
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>sysroot              (E) = /cvmfs/pilot.eessi-hpc.org/versions/2023.06/compat/linux/aarch64
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>sysroot              (E) = /cvmfs/software.eessi.io/versions/2023.06/compat/linux/aarch64
 <a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>trace                (E) = True
 <a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>zip-logs             (E) = bzip2
 </code></pre></div>
@@ -1821,7 +1821,7 @@ The <code>%(sysroot)s</code> is a template value which EasyBuild will resolve to
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 9, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 19, 2024</span>
   </span>
 
     
