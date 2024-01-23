@@ -23,7 +23,7 @@ personal workstations and cloud infrastructure.
 
 For users:
 
-* [EESSI pilot software stack and available software](pilot.md)
+* [`software.eessi.io` repository](repositories/software.eessi.io.md)
 * [Access](getting_access/is_eessi_accessible.md), [initialize](using_eessi/setting_up_environment.md) and [use](using_eessi/basic_commands.md) EESSI
 * [How to run EESSI test suite](test-suite/index.md)
 * [Get help or report issue](support.md)

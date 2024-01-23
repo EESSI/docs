@@ -2,6 +2,11 @@
 
 ### Caveats
 
+!!! danger
+    The EESSI pilot repository is no longer actively maintained, and should not be used for production work.
+
+    **Please use the [`software.eessi.io` repository](software.eessi.io.md) instead.**
+
 The current EESSI pilot software stack (version 2021.12) is the 7th iteration,
 and there are some known issues and limitations, please take these into account:
 

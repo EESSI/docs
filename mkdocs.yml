@@ -31,7 +31,9 @@ nav:
     - Usage: test-suite/usage.md
     - Release notes: test-suite/release-notes.md
   - Build-test-deploy bot: bot.md
-  - Pilot repository: pilot.md
+  - Repositories:
+    - EESSI repository: repositories/software.eessi.io.md
+    - Pilot repository: repositories/pilot.md
   - Getting access to EESSI:
     - getting_access/is_eessi_accessible.md
     - getting_access/native_installation.md
@@ -72,6 +74,7 @@ plugins:
         contributing_sw/opening_pr.md: adding_software/opening_pr.md
         contributing_sw/overview.md: adding_software/overview.md
         software_layer/adding_software.md: adding_software/overview.md
+        pilot.md: repositories/pilot.md
 markdown_extensions:
   # enable adding HTML attributes and CSS classes
   - attr_list
