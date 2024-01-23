@@ -1,6 +1,6 @@
 # CPU targets
 
-In the 2023.06 version of the EESSI pilot repository, the following CPU microarchitectures are supported.
+In the 2023.06 version of the EESSI repository, the following CPU microarchitectures are supported.
 
 * `aarch64/generic`: fallback for Arm 64-bit CPUs (like Raspberri Pi, etc.)
 * `aarch64/neoverse_n1`: AWS Graviton 2, Ampere Altra, ...

@@ -27,10 +27,10 @@ Load modules with `module load package/version`, e.g.,
 session
 
 ```
-[EESSI pilot 2021.12] $ module load R/4.1.0-foss-2021a
-[EESSI pilot 2021.12] $ which R
-/cvmfs/pilot.eessi-hpc.org/versions/2021.12/software/linux/x86_64/intel/skylake_avx512/software/R/4.1.0-foss-2021a/bin/R
-[EESSI pilot 2021.12] $ R --version
+[EESSI 2023.06] $ module load R/4.1.0-foss-2021a
+[EESSI 2021.06] $ which R
+/cvmfs/software.eessi.io/versions/2021.12/software/linux/x86_64/intel/skylake_avx512/software/R/4.1.0-foss-2021a/bin/R
+[EESSI 2023.06] $ R --version
 R version 4.1.0 (2021-05-18) -- "Camp Pontanezen"
 Copyright (C) 2021 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
