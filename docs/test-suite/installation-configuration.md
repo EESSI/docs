@@ -40,7 +40,7 @@ reframe --version
 
 The EESSI test suite requires that the ReFrame test library (`hpctestlib`) is available, which is currently not included in a standard installation of ReFrame.
 
-We recommend installing ReFrame using [EasyBuild](https://easybuild.io/) (version 4.8.1, or newer), or using a ReFrame installation that is available in EESSI (pilot version 2023.06, or newer).
+We recommend installing ReFrame using [EasyBuild](https://easybuild.io/) (version 4.8.1, or newer), or using a ReFrame installation that is available in the EESSI repository (version 2023.06, or newer).
 
 For example (using EESSI):
 
