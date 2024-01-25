@@ -15,7 +15,7 @@ This page is organized as follows:
 ## Available ReFrame configuration file
 
 There are some available ReFrame configuration files for HPC systems and public cloud in the [config directory](https://github.com/EESSI/test-suite/tree/main/config/) for more inspiration.
-Below is a simple ReFrame configuration file with minimal changes required for getting you started on using test suite for a CPU partition. Please check that `stagedir` is set to a path ona (shared) scratch filesystem for storing (temporary) files related to the tests, and `access` is set to a list of arguments that you would normally pass to the scheduler when submitting to this partition (for example '-p cpu' for submitting to a Slurm partition called cpu).
+Below is a simple ReFrame configuration file with minimal changes required for getting you started on using the test suite for a CPU partition. Please check that `stagedir` is set to a path ona (shared) scratch filesystem for storing (temporary) files related to the tests, and `access` is set to a list of arguments that you would normally pass to the scheduler when submitting to this partition (for example '-p cpu' for submitting to a Slurm partition called cpu).
   
 To write a ReFrame configuration file for your system, check the section How to write a ReFrame configuration file.  
 
