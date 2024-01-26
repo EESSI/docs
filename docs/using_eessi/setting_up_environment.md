@@ -3,7 +3,7 @@
 To set up the EESSI environment, simply run the command:
 
 ``` { .bash .copy }
-source /cvmfs/software.eessi.io/versions/versions/2023.06/init/bash
+source /cvmfs/software.eessi.io/versions/2023.06/init/bash
 ```
 
 This may take a while as data is downloaded from a Stratum 1 server which is
