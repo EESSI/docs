@@ -4,6 +4,7 @@ The EESSI test suite currently includes tests for:
 
 * [GROMACS](#gromacs)
 * [TensorFlow](#tensorflow)
+* [OSU Micro-Benchmarks](#osumicrobenchmarks)
 
 For a complete overview of all available tests in the EESSI test suite, see the
 [`eessi/testsuite/tests`](https://github.com/EESSI/test-suite/tree/main/eessi/testsuite/tests) subdirectory in the `EESSI/test-suite` GitHub repository.
@@ -56,3 +57,18 @@ reframe --run --name TensorFlow
 
 !!! warning
     This test requires TensorFlow v2.11 or newer, using an older TensorFlow version will not work!
+
+## OSU Micro-Benchmarks { #osumicrobenchmarks }
+
+A test for [OSU Micro-Benchmarks](https://mvapich.cse.ohio-state.edu/benchmarks/), which provides an MPI benchmark. 
+
+It is implemented in [`tests/apps/osu.py`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/osu.py).
+
+To run this Osu Micro-Benchmark, use:
+
+```bash
+reframe --run --name OSU-Micro-Benchmarks
+```
+
+!!! warning
+    This test requires OSU Micro-Benchmarks v5.9 or newer, using an older OSU -Micro-Benchmark version will not work!
