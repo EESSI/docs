@@ -11,14 +11,14 @@
         <link rel="canonical" href="https://eessi.github.io/docs/test-suite/usage/">
       
       
-        <link rel="prev" href="../installation-configuration/">
+        <link rel="prev" href="../ReFrame-configuration-file/">
       
       
-        <link rel="next" href="../release-notes/">
+        <link rel="next" href="../available-tests/">
       
       
       <link rel="icon" href="../../img/logos/EESSI.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
     
     
       
@@ -546,6 +546,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReFrame-configuration-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReFrame configuration file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -706,6 +727,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#overriding-test-parameters-advanced" class="md-nav__link">
     <span class="md-ellipsis">
       Overriding test parameters (advanced)
@@ -714,85 +744,31 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#example-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#running-all-gromacs-tests-on-4-cores-on-the-cpu-partition" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running all GROMACS tests on 4 cores on the cpu partition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-all-checks-for-tensorflow-211-using-a-single-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      List all checks for TensorFlow 2.11 using a single node
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dry-run-of-tensorflow-ci-checks-on-a-quarter-14-of-a-node-on-all-system-partitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#available-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      Available tests
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Available tests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gromacs" class="md-nav__link">
-    <span class="md-ellipsis">
-      GROMACS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensorflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      TensorFlow
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available tests
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1641,86 +1617,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overriding-test-parameters-advanced" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overriding test parameters (advanced)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#example-commands" class="md-nav__link">
     <span class="md-ellipsis">
       Example commands
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Example commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#running-all-gromacs-tests-on-4-cores-on-the-cpu-partition" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running all GROMACS tests on 4 cores on the cpu partition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-all-checks-for-tensorflow-211-using-a-single-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      List all checks for TensorFlow 2.11 using a single node
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dry-run-of-tensorflow-ci-checks-on-a-quarter-14-of-a-node-on-all-system-partitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-tests" class="md-nav__link">
+  <a href="#overriding-test-parameters-advanced" class="md-nav__link">
     <span class="md-ellipsis">
-      Available tests
+      Overriding test parameters (advanced)
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Available tests">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gromacs" class="md-nav__link">
-    <span class="md-ellipsis">
-      GROMACS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tensorflow" class="md-nav__link">
-    <span class="md-ellipsis">
-      TensorFlow
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1941,11 +1851,21 @@ well as the specific test being carried out.</p>
 <li>use <code>|</code> as separator to indicate that <em>one</em> of the specified tags must match (logical OR, for example <code>--tag='1_core|2_cores'</code>);</li>
 <li>use the <code>--tag</code> option multiple times to indicate that <em>all</em> specified tags must match (logical AND, for example <code>--tag CI --tag 1_core</code>);</li>
 </ul>
+<h2 id="example-commands">Example commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h2>
+<p>Running all GROMACS tests on 4 cores on the <code>cpu</code> partition</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-report
+</code></pre></div>
+<p>List all checks for TensorFlow 2.11 using a single node</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>reframe --list --name %module_name=TensorFlow/2.11 --tag 1_node
+</code></pre></div>
+<p>Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>reframe --dry-run --name &#39;TensorFlow.*CUDA&#39; --tag 1_4_node --tag CI
+</code></pre></div>
 <h2 id="overriding-test-parameters-advanced">Overriding test parameters <em>(advanced)</em><a class="headerlink" href="#overriding-test-parameters-advanced" title="Permanent link">&para;</a></h2>
 <p>You can override test parameters using the <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-S"><code>--setvar</code> option (or <code>-S</code>)</a>.</p>
 <p>This can be done either globally (for all tests), or only for specific tests (which is recommended when using <code>--setvar</code>).</p>
 <p>For example, to run all GROMACS checks with a specific GROMACS module, you can use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>reframe --setvar GROMACS_EESSI.modules=GROMACS/2023.1-foss-2022a ...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>reframe --setvar GROMACS_EESSI.modules=GROMACS/2023.1-foss-2022a ...
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1953,57 +1873,6 @@ well as the specific test being carried out.</p>
 this way that can result in broken checks.</p>
 <p>You should try filtering tests using the <a href="#filter-name"><code>--name</code></a> or <a href="#filter-tag"><code>--tag</code></a> options instead.</p>
 </div>
-<h2 id="example-commands">Example commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h2>
-<h3 id="running-all-gromacs-tests-on-4-cores-on-the-cpu-partition">Running all GROMACS tests on 4 cores on the <code>cpu</code> partition<a class="headerlink" href="#running-all-gromacs-tests-on-4-cores-on-the-cpu-partition" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-report
-</code></pre></div>
-<h3 id="list-all-checks-for-tensorflow-211-using-a-single-node">List all checks for TensorFlow 2.11 using a single node<a class="headerlink" href="#list-all-checks-for-tensorflow-211-using-a-single-node" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>reframe --list --name %module_name=TensorFlow/2.11 --tag 1_node
-</code></pre></div>
-<h3 id="dry-run-of-tensorflow-ci-checks-on-a-quarter-14-of-a-node-on-all-system-partitions">Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)<a class="headerlink" href="#dry-run-of-tensorflow-ci-checks-on-a-quarter-14-of-a-node-on-all-system-partitions" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>reframe --dry-run --name &#39;TensorFlow.*CUDA&#39; --tag 1_4_node --tag CI
-</code></pre></div>
-<h2 id="available-tests">Available tests<a class="headerlink" href="#available-tests" title="Permanent link">&para;</a></h2>
-<p>The EESSI test suite currently includes tests for:</p>
-<ul>
-<li><a href="#gromacs">GROMACS</a></li>
-<li><a href="#tensorflow">TensorFlow</a></li>
-</ul>
-<p>For a complete overview of all available tests in the EESSI test suite, see the
-<a href="https://github.com/EESSI/test-suite/tree/main/eessi/testsuite/tests"><code>eessi/testsuite/tests</code> subdirectory in the <code>EESSI/test-suite</code> GitHub repository</a>.</p>
-<h3 id="gromacs">GROMACS<a class="headerlink" href="#gromacs" title="Permanent link">&para;</a></h3>
-<p>Several tests for <a href="https://www.gromacs.org">GROMACS</a>, a software package to perform molecular dynamics simulations,
-are included, which use the systems included in the <a href="https://www.hecbiosim.ac.uk/access-hpc/benchmarks">HECBioSim benchmark suite</a>:</p>
-<ul>
-<li><code>Crambin</code> (20K atom system)</li>
-<li><code>Glutamine-Binding-Protein</code> (61K atom system)</li>
-<li><code>hEGFRDimer</code> (465K atom system)</li>
-<li><code>hEGFRDimerSmallerPL</code> (465K atom system, only 10k steps)</li>
-<li><code>hEGFRDimerPair</code> (1.4M atom system)</li>
-<li><code>hEGFRtetramerPair</code> (3M atom system)</li>
-</ul>
-<p>It is implemented in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/gromacs.py"><code>tests/apps/gromacs.py</code></a>,
-on top of the GROMACS test that is included in the <a href="https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html">ReFrame test library <code>hpctestlib</code></a>.</p>
-<p>To run this GROMACS test with all HECBioSim systems, use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span>GROMACS
-</code></pre></div>
-<p>To run this GROMACS test only for a specific HECBioSim system, use for example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span><span class="s1">&#39;GROMACS.*HECBioSim/hEGFRDimerPair&#39;</span>
-</code></pre></div>
-<p>To run this GROMACS test with the smallest HECBioSim system (<code>Crambin</code>), you can use the <code>CI</code> tag:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span>GROMACS<span class="w"> </span>--tag<span class="w"> </span>CI
-</code></pre></div>
-<h3 id="tensorflow">TensorFlow<a class="headerlink" href="#tensorflow" title="Permanent link">&para;</a></h3>
-<p>A test for <a href="https://www.tensorflow.org">TensorFlow</a>, a machine learning framework, is included,
-which is based on the <a href="https://www.tensorflow.org/tutorials/distribute/multi_worker_with_keras">"Multi-worker training with Keras" TensorFlow tutorial</a>.</p>
-<p>It is implemented in <a href="https://github.com/EESSI/test-suite/tree/main/eessi/testsuite/tests/apps/tensorflow"><code>tests/apps/tensorflow/</code></a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This test requires TensorFlow v2.11 or newer, using an older TensorFlow version will not work!</p>
-</div>
-<p>To run this TensorFlow test, use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span>TensorFlow
-</code></pre></div>
 
 
 
@@ -2024,7 +1893,7 @@ which is based on the <a href="https://www.tensorflow.org/tutorials/distribute/m
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 22, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 10, 2024</span>
   </span>
 
     
@@ -2089,7 +1958,7 @@ which is based on the <a href="https://www.tensorflow.org/tutorials/distribute/m
     <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
       
     
   </body>
