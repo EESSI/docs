@@ -28,7 +28,9 @@ nav:
   - Test suite:
     - Overview: test-suite/index.md
     - Installation & configuration: test-suite/installation-configuration.md
+    - ReFrame configuration file: test-suite/ReFrame-configuration-file.md
     - Usage: test-suite/usage.md
+    - Available tests: test-suite/available-tests.md
     - Release notes: test-suite/release-notes.md
   - Build-test-deploy bot: bot.md
   - Repositories:
