@@ -57,7 +57,7 @@ To actually run the (full) EESSI test suite and let ReFrame
 produce a performance report, use `reframe --run --performance-report`.
 
 We strongly recommend filtering the checks that will be run by using additional options
-like `--system`, `--name`, `--tag` (see the 'Filtering tests' section below](#filtering-tests)),
+like `--system`, `--name`, `--tag` (see the ['Filtering tests' section below](#filtering-tests)),
 and doing a [dry run](#dry-run) first to make sure that the generated checks correspond to what you have in mind.
 
 ## ReFrame output and log files
