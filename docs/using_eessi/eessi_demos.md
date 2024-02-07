@@ -39,7 +39,7 @@ Let's try running the TensorFlow example.
 First, we need to make sure that [our environment is set up to use EESSI](setting_up_environment.md):
 
 ``` { .bash .copy }
-source /cvmfs/software.eessi.io/latest/init/bash
+source /cvmfs/software.eessi.io/versions/2023.06/init/bash
 ```
 
 Change to the ``TensorFlow`` subdirectory of the ``eessi-demo`` Git repository, and execute the ``run.sh`` script:
