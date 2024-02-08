@@ -65,7 +65,7 @@ Epoch 5/5
    1875/1875 [==============================] - 3s 1ms/step - loss: 0.0732 - accuracy: 0.9772
 313/313 - 0s - loss: 0.0679 - accuracy: 0.9790 - 391ms/epoch - 1ms/step
 
-real	1m24.645s
-user	0m16.467s
-sys	0m0.910s
+real   1m24.645s
+user   0m16.467s
+sys    0m0.910s
 ```
