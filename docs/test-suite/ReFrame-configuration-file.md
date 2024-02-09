@@ -26,7 +26,7 @@ simple ReFrame configuration file
 """
 import os
 
-from eessi.testsuite.common_config import common_logging_config, format_perfvars, perflog_format
+from eessi.testsuite.common_config import common_logging_config, common_eessi_init, format_perfvars, perflog_format
 from eessi.testsuite.constants import *  
 
 
@@ -46,7 +46,7 @@ site_configuration = {
                     'scheduler': 'slurm',
                     'launcher': 'mpirun',
                     'access':  ['-p cpu', '--export=None'],
-                    'prepare_cmds': ['source /cvmfs/pilot.eessi-hpc.org/latest/init/bash'],
+                    'prepare_cmds': ['source %s' % common_eessi_init()],
                     'environs': ['default'],
                     'max_jobs': 4,
                     'resources': [
@@ -134,7 +134,7 @@ The EESSI test suite standardizes a few string-based values as constants, as wel
 Every ReFrame configuration file used for running the EESSI test suite should therefore start with the following import statements:
 
 ```python
-from eessi.testsuite.common_config import common_logging_config
+from eessi.testsuite.common_config import common_logging_config, common_eessi_init
 from eessi.testsuite.constants import *
 ```
 
@@ -208,7 +208,7 @@ site_configuration = {
                     'name': 'cpu_partition',
                     'descr': 'CPU partition'
                     'scheduler': 'slurm',
-                    'prepare_cmds': ['source /cvmfs/pilot.eessi-hpc.org/latest/init/bash'],
+                    'prepare_cmds': ['source %s' % common_eessi_init()],
                     'launcher': 'mpirun',
                     'access':  ['-p cpu'],
                     'environs': ['default'],
@@ -219,7 +219,7 @@ site_configuration = {
                     'name': 'gpu_partition',
                     'descr': 'GPU partition'
                     'scheduler': 'slurm',
-                    'prepare_cmds': ['source /cvmfs/pilot.eessi-hpc.org/latest/init/bash'],
+                    'prepare_cmds': ['source %s' % common_eessi_init()],
                     'launcher': 'mpirun',
                     'access':  ['-p gpu'],
                     'environs': ['default'],
