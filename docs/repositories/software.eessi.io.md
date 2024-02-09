@@ -21,5 +21,5 @@ For now, use `module avail` after [initializing the EESSI environment](../using_
 
 ### Architecture and micro-architecture support
 
-See [cpu_targets](../software_layer/cpu_targets.md)
+See [CPU targets](../software_layer/cpu_targets.md).
 
