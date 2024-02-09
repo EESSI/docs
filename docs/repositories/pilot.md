@@ -284,3 +284,5 @@ sysroot           (E) = /cvmfs/pilot.eessi-hpc.org/versions/2021.12/compat/linux
 trace             (E) = True
 zip-logs          (E) = bzip2
 ```
+## Infrastructure status
+The status of the CernVM FS infrastructure for the pilot respository is shown [here](http://status.eessi-infra.org/).
