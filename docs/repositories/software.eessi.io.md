@@ -7,11 +7,11 @@ please [open a support request](../support.md).
 
 ## Accessing the EESSI repository
 
-See [Getting access](../getting_access/is_eessi_accessible.md)
+See [Getting access](../getting_access/is_eessi_accessible.md).
 
 ## Using `software.eessi.io`
 
-See [Using EESSI](../using_eessi/setting_up_environment.md)
+See [Using EESSI](../using_eessi/setting_up_environment.md).
 
 ## Available software
 
