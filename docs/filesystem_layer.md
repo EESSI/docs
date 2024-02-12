@@ -2,7 +2,8 @@
 
 ![Filesystem layer](img/filesystem_layer.png)
 
-## CernVM File System
+## CernVM File System (CernVM-FS)
+
 The bottom layer of the EESSI project is the **filesystem layer**,
 which is responsible for distributing the software stack.
 
@@ -20,4 +21,5 @@ Detailed information about how we configure CVMFS is available at
 [https://github.com/EESSI/filesystem-layer](https://github.com/EESSI/filesystem-layer).
 
 ## EESSI infrastructure
-Both the [pilot](repositories/pilot.md) and [production](repositories/software.eessi.io.md), EESSI hosts a CernVM FS Stratum 0 and a number of public Stratum 1 servers. EESSI clients by default connect against the public EESSI CernVM FS Stratum 1 servers. The status of the infrastructure for the pilot repository is displayed [here](http://status.eessi-infra.org/), while for the production repository it is displayed [here](https://status.eessi.io/).
+
+For both the [pilot](repositories/pilot.md) and [production](repositories/software.eessi.io.md) repositories, EESSI hosts a CernVM-FS Stratum 0 and a number of public Stratum 1 servers. Client systems using EESSI by default connect against the public EESSI CernVM-FS Stratum 1 servers. The status of the infrastructure for the pilot repository is displayed at [http://status.eessi-infra.org](http://status.eessi-infra.org/), while for the production repository it is displayed at [https://status.eessi.io](https://status.eessi.io/).

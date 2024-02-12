@@ -285,4 +285,5 @@ trace             (E) = True
 zip-logs          (E) = bzip2
 ```
 ## Infrastructure status
-The status of the CernVM FS infrastructure for the pilot repository is shown [here](http://status.eessi-infra.org/).
+
+The status of the CernVM-FS infrastructure for the pilot repository is shown [http://status.eessi-infra.org](http://status.eessi-infra.org/).
