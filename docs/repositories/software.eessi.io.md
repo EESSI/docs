@@ -23,3 +23,6 @@ For now, use `module avail` after [initializing the EESSI environment](../using_
 
 See [CPU targets](../software_layer/cpu_targets.md).
 
+## Infrastructure status
+
+The status of the CernVM-FS infrastructure for the production repository is shown at [https://status.eessi.io](https://status.eessi.io/).
