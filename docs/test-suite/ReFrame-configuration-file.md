@@ -324,7 +324,7 @@ The most common configuration items defined at this level are:
   However, since the CPU-based tests will not ask your batch scheduler for GPU resources, this _may_ fail on batch
   systems that force you to ask for at least one GPU on GPU-based nodes. Also, running CPU-only code on a GPU node is
   typically considered bad practice, thus testing its functionality is typically not relevant.
-  The `list(SCALES.keys()` adds all the scales that are valid on this system to the `features` list. These scales are
+  The `list(SCALES.keys()` adds all the scales that may be used by EESSI tests to the `features` list. These scales are
   defined in
   [`eessi.testsuite.constants.SCALES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py)
   and define at which scales tests should be run, e.g. single core, half a node, a full node, two nodes, etc. This
