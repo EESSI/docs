@@ -7,7 +7,7 @@ Before you look into these options, check if EESSI is already accessible on your
 
 Run the following command:
 ``` { .bash .copy }
-ls /cvmfs/pilot.eessi-hpc.org
+ls /cvmfs/software.eessi.io
 ```
 
 !!! note
@@ -26,7 +26,7 @@ For starting to use EESSI, continue reading about
 If you see an error message as shown below, **EESSI is not yet accessible on your
 system**.
 ```
-ls: /cvmfs/pilot.eessi-hpc.org: No such file or directory
+ls: /cvmfs/software.eessi.io: No such file or directory
 ```
 No worries, you don't need to be a :mage: to get access to EESSI.
 
