@@ -29,7 +29,6 @@ import os
 from eessi.testsuite.common_config import common_logging_config, common_eessi_init, format_perfvars, perflog_format
 from eessi.testsuite.constants import *  
 
-ma
 site_configuration = {
     'systems': [
         {
