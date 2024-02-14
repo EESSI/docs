@@ -15,7 +15,7 @@ This page is organized as follows:
 ## Available ReFrame configuration file
 
 There are some available ReFrame configuration files for HPC systems and public cloud in the [config directory](https://github.com/EESSI/test-suite/tree/main/config/) for more inspiration.
-Below is a simple ReFrame configuration file with minimal changes required for getting you started on using the test suite for a CPU partition. Please check that `stagedir` is set to a path ona (shared) scratch filesystem for storing (temporary) files related to the tests, and `access` is set to a list of arguments that you would normally pass to the scheduler when submitting to this partition (for example '-p cpu' for submitting to a Slurm partition called cpu).
+Below is a simple ReFrame configuration file with minimal changes required for getting you started on using the test suite for a CPU partition. Please check that `stagedir` is set to a path on a (shared) scratch filesystem for storing (temporary) files related to the tests, and `access` is set to a list of arguments that you would normally pass to the scheduler when submitting to this partition (for example '-p cpu' for submitting to a Slurm partition called cpu).
   
 To write a ReFrame configuration file for your system, check the section How to write a ReFrame configuration file.  
 
@@ -29,7 +29,7 @@ import os
 from eessi.testsuite.common_config import common_logging_config, common_eessi_init, format_perfvars, perflog_format
 from eessi.testsuite.constants import *  
 
-
+ma
 site_configuration = {
     'systems': [
         {
@@ -55,7 +55,9 @@ site_configuration = {
                             'options': ['--mem={size}'],
                         }
                     ],
-                    'features': [FEATURES[CPU]],
+                    'features': [
+                        FEATURES[CPU]
+                    ] + list(SCALES.keys()),
                 }
             ]
         },
@@ -213,7 +215,9 @@ site_configuration = {
                     'access':  ['-p cpu'],
                     'environs': ['default'],
                     'max_jobs': 4,
-                    'features': [FEATURES[CPU]],
+                    'features': [
+                        FEATURES[CPU]
+                    ] + list(SCALES.keys()),
                 },
                 {
                     'name': 'gpu_partition',
@@ -313,13 +317,23 @@ The most common configuration items defined at this level are:
   _feature_ (for example if GPUs are available). Feature names are standardized in the EESSI test suite in
   [`eessi.testsuite.constants.FEATURES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py)
   dictionary.
-  Typically, you want to define `features: [FEATURES[CPU]]` for CPU based partitions, and `features: [FEATURES[GPU]]`
-  for GPU based partitions. The first tells the EESSI test suite that this partition can only run CPU-based tests,
-  whereas second indicates that this partition can only run GPU-based tests.
-  You _can_ define a single partition to have _both_ the CPU and GPU features (since `features` is a Python list).
+  Typically, you want to define `features: [FEATURES[CPU]] + list(SCALES.keys())` for CPU based partitions, and
+  `features: [FEATURES[GPU]] + list(SCALES.keys())` for GPU based partitions. The first tells the EESSI test suite
+  that this partition can only run CPU-based tests, whereas second indicates that this partition can only run GPU-based
+  tests. You _can_ define a single partition to have _both_ the CPU and GPU features (since `features` is a Python list).
   However, since the CPU-based tests will not ask your batch scheduler for GPU resources, this _may_ fail on batch
   systems that force you to ask for at least one GPU on GPU-based nodes. Also, running CPU-only code on a GPU node is
   typically considered bad practice, thus testing its functionality is typically not relevant.
+  The `list(SCALES.keys()` adds all the scales that are valid on this system to the `features` list. These scales are
+  defined in
+  [`eessi.testsuite.constants.SCALES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py)
+  and define at which scales tests should be run, e.g. single core, half a node, a full node, two nodes, etc. This
+  can be used to exclude running at certain scales on systems that would not support it. E.g. some systems might not
+  support requesting multiple partial nodes, which is what the `1_cpn_2_nodes` (1 core per node, on two nodes) and
+  `1_cpn_4_nodes` scales do. One could exclude these by setting e.g.
+  `features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1_cpn_2_nodes', '1_cpn_4_nodes']]`. With this
+  configuration setting, ReFrame will run all the scales listed in `eessi.testsuite.constants.SCALES _except_
+  those two. In a similar way, one could exclude all multinode tests if one just has a single node available.
 - [`devices`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.devices): This field specifies information on devices (for example) present in the partition. Device types are standardized in the EESSI test suite in the [`eessi.testsuite.constants.DEVICE_TYPES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) dictionary. This is used by the EESSI test suite to determine how many of these devices it can/should use per node.
   Typically, there is no need to define `devices` for CPU partitions.
   For GPU partitions, you want to define something like:
