@@ -70,7 +70,8 @@ cvmfs_srv_mount: /lots/of/space
 ```
 
 Also make sure that you have added the hostname or IP address of your server to the
-`inventory/hosts` file. 
+`inventory/hosts` file, that you are able to log in to the server from the machine that is going to run the playbook
+(preferably using an SSH key), and that you can use `sudo`. 
 
 Finally, install the Stratum 1 using:
 
