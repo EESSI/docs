@@ -1,7 +1,7 @@
 # Setting up a Stratum 1
 
 The EESSI project provides a number of geographically distributed public Stratum 1 servers that you can use to make EESSI available on your machine(s).
-If you want to be better protected against network outages and increase the bandwith between your cluster nodes and the Stratum 1 servers,
+If you want to be better protected against network outages and increase the bandwidth between your cluster nodes and the Stratum 1 servers,
 you could consider setting up a local (private) Stratum 1 server that replicates the EESSI CVMFS repository.
 This guarantees that you always have a full and up-to-date copy of the entire stack available in your local network. 
 
