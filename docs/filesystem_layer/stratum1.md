@@ -76,8 +76,8 @@ Also make sure that you have added the hostname or IP address of your server to 
 Finally, install the Stratum 1 using:
 
 ``` bash
-# -b to run as root, optionally use -K if a sudo password is required
-ansible-playbook -b [-K] -e @inventory/local_site_specific_vars.yml stratum1.yml
+# -b to run as root, optionally use -K if a sudo password is required, and optionally include your site-specific variables
+ansible-playbook -b [-K] [-e @inventory/local_site_specific_vars.yml] stratum1.yml
 ```
 Running the playbook will automatically make replicas of all the repositories defined in `group_vars/all.yml`.
 
