@@ -96,7 +96,7 @@ ansible-playbook -b [-K] [-e @inventory/local_site_specific_vars.yml] stratum1.y
 Running the playbook will automatically make replicas of all the repositories defined in `group_vars/all.yml`.
 
 
-## Verification of the Stratum 1
+### Verification of the Stratum 1 using `curl`
 
 When the playbook has finished, your Stratum 1 should be ready. In order to test your Stratum 1,
 even without a client installed, you can use `curl`:
@@ -123,6 +123,8 @@ Example with the EESSI Stratum 1 running in AWS:
 ```bash
 curl --head http://aws-eu-central-s1.eessi.science/cvmfs/software.eessi.io/.cvmfspublished
 ```
+
+### Verification of the Stratum 1 using a CVMFS client
 
 You can also test access to your Stratum 1 from a client, for which you will have to install the CVMFS
 [client](https://github.com/EESSI/filesystem-layer#clients). 
