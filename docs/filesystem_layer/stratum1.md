@@ -24,6 +24,19 @@ Stratum 1 servers usually replicate from the Stratum 0 server.
 In order to ensure the stability and security of the EESSI Stratum 0 server, it has a strict firewall, and only the EESSI-maintained public Stratum 1 servers are allowed to replicate from it.
 However, EESSI provides a synchronisation server that can be used for setting up private Stratum 1 replica servers, and this is available at `http://aws-eu-west-s1-sync.eessi.science`.
 
+!!! warn Potential issues with intrusion prevention systems
+    In the past we have seen a few occurrences of data transfer issues when files were being pulled in by or from a Stratum 1 server.
+    In such cases the `cvmfs_server snapshot` command, used for synchronizing the Stratum 1, may break with errors like `failed to download <URL to file>`.
+    Trying to manually download the mentioned file with `curl` will also not work, and result in errors like:
+    ```
+    curl: (56) Recv failure: Connection reset by peer
+    ```
+    In all cases this was due to an intrusion prevention system scanning the associated network, and hence scanning all files going in or out of the Stratum 1.
+    Though it was a false-positive in all cases, this breaks the synchronization procedure of your Stratum 1.
+    If this is the case, you can try switching to HTTPS by using `https://aws-eu-west-s1-sync.eessi.science` for synchronizing your Stratum 1.
+    Even though there is no advantage for CVMFS itself in using HTTPS (it has built-in mechasnims for ensuring the integrity of the data),
+    this will prevent the described issues, as the intrusion prevention system will not be able to inspect the encrypted data.
+
 ### Manual configuration
 
 In order to set up a Stratum 1 manually, you can make use of the instructions in the [Private Stratum 1 replica server](https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices/access/stratum1/)
