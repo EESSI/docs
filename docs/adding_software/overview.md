@@ -17,7 +17,7 @@ flowchart TB
     E --> F(Debug build issue if needed)
     F --> G(Deploy tarballs to S3 bucket)
     G --> H(Ingest tarballs in EESSI by merging staging PRs)
-     classDef blue fill:#003db4,stroke:#333,stroke-width:2px;
+     classDef blue fill:#9abcff,stroke:#333,stroke-width:2px;
      class A,B,D,F,I blue
 ```
 
@@ -34,7 +34,7 @@ flowchart TB
     Y --> W(Debug issue if needed) 
     W --> V(Review PR if needed)
     V --> U(Merge PR)
-     classDef blue fill:#003db4,stroke:#333,stroke-width:2px;
+     classDef blue fill:#9abcff,stroke:#333,stroke-width:2px;
      class Z,W blue
 ```
 
