@@ -60,26 +60,6 @@ If you want to write additional tests and use the script effectively, follow the
        os.environ["LMOD_CMD"] = cls.path + "/data/lmod_mock.sh"
    ``` 
 
-2. **Mocking output of `module avail cluster` command:**
-
-   The output of the command `module avail cluster/` can be put in a `.txt` file. 
-   Set the path to this file in the `$MOCK_FILE_AVAIL_CLUSTER` environment variable.
-   ```python
-   os.environ["MOCK_FILE_AVAIL_CLUSTER"] = path + "/data/data_avail_cluster_simple.txt"
-   ```
-   
-3. **Mocking the `module swap` command:**
-
-   For mocking the `module swap` command, assign the path to the swap files to the `$MOCK_FILE_SWAP` environment variable.
-   Ensure that the filename contains the placeholder '`CLUSTER`', 
-   which will later be replaced with the actual cluster name when performing the swap.
-
-   ```python
-   os.environ["MOCK_FILE_SWAP"] = path + "/data/data_swap_CLUSTER.txt"
-   ```
-   When trying to swap to, for example, the `cluster/pikachu` cluster,
-   it will use the `data_swap_pikachu.txt` file as output for the swap command.
-   
 ### Example 
 An example of a possible `setup_class` function is given below.
 ```python

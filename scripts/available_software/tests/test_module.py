@@ -32,11 +32,6 @@ class TestModule:
             "science/5.3.0", "science/5.3.0", "science/5.3.0", "science/7.2.0"
         ]
 
-    def test_avail_cluster(self):
-        os.environ["MOCK_FILE_AVAIL_CLUSTER"] = self.path + "/data/data_avail_cluster_simple.txt"
-        output = module_avail(name="cluster/")
-        assert len(output) == 1
-
     def test_whatis(self):
         os.environ["MOCK_FILE_SHOW"] = self.path + "/data/data_show_science.txt"
         data = module_whatis("science")
