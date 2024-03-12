@@ -7,7 +7,7 @@ PGPLOT
 ======
 
 
-The PGPLOT Graphics Subroutine Library is a Fortran- or C-callable,device-independent graphics package for making simple scientific graphs. It is intendedfor making graphical images of publication quality with minimum effort on the part ofthe user. For most applications, the program can be device-independent, and the outputcan be directed to the appropriate device at run time.
+The PGPLOT Graphics Subroutine Library is a Fortran- or C-callable,device-independent graphics package for making simple scientific graphs. It is intendedfor making graphical images of publication quality with minimum effort on the part of the user. For most applications, the program can be device-independent, and the outputcan be directed to the appropriate device at run time.
 
 https://sites.astro.caltech.edu/~tjp/pgplot/
 # Available modules
