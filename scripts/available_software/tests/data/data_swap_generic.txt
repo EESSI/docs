@@ -1,0 +1,1 @@
+os.environ["MOCK_FILE_AVAIL"] = os.getenv('TESTS_PATH') + "/data/data_avail_simple_generic.txt"
