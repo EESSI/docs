@@ -1,0 +1,49 @@
+name: Module overview script (lint + test)
+on:
+  push:
+    paths:
+      - 'scripts/**'
+      - './.github/**'
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - './.github/**'
+
+# Declare default permissions as read only.
+permissions: read-all
+jobs:
+
+  flake8-lint:
+    runs-on: ubuntu-20.04
+    name: Lint
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v3
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.6"
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
+        with:
+          max-line-length: "120"
+          path: "scripts/available_software"
+
+  pytest-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.6'
+      - name: Install dependencies
+        run: |
+          cd scripts/available_software
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r requirements_tests.txt
+      - name: Test with pytest
+        run: |
+          cd scripts/available_software
+          ./test.sh
