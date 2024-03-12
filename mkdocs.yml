@@ -46,6 +46,7 @@ nav:
     - using_eessi/basic_commands.md
     - using_eessi/building_on_eessi.md
     - using_eessi/eessi_demos.md
+  - Available software: available_software/overview.md
   - Adding software to EESSI:
     - Overview: adding_software/overview.md
     - adding_software/contribution_policy.md
@@ -109,3 +110,11 @@ extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
+extra_javascript:
+  # javascript which generates overview of available software
+  - https://code.jquery.com/jquery-3.7.0.min.js
+  - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
+  - available_software/javascripts/populate_overview.js
+extra_css:
+  # CSS for popultate_overview
+  - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
