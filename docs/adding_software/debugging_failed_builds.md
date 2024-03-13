@@ -138,7 +138,7 @@ Among other things, the `configure_easybuild` script sets the install path for E
 
 Next, we need to determine the correct version of EasyBuild to load. Since [the example PR](https://github.com/EESSI/software-layer/pull/360) changes the file `eessi-2023.06-eb-4.8.1-2021b.yml`, this tells us the bot was using version `4.8.1` of EasyBuild to build this. Thus, we load that version of the EasyBuild module and check if everything was configured correctly:
 ```
-module load EasyBuild/4.8.1
+module load EasyBuild/4.8.2
 eb --show-config
 ```
 You should get something similar to
