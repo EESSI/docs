@@ -152,10 +152,32 @@ The only scenario where this would be required is if `$LD_LIBRARY_PATH` is modif
 
 ### Testing the GPU support {: #gpu_cuda_testing }
 
-The quickest way to test if software installations included in  EESSI can access and use your GPU is to run the
+The quickest way to test if software installations included in EESSI can access and use your GPU is to run the
 `deviceQuery` executable that is part of the `CUDA-Samples` module:
-```
+```{ .bash .copy }
 module load CUDA-Samples
 deviceQuery
 ```
-If both are successful, you should see information about your GPU printed to your terminal.
+If both are successful, you should see information about your GPU printed to your terminal, for example:
+
+```
+$ deviceQuery
+deviceQuery Starting...
+
+ CUDA Device Query (Runtime API) version (CUDART static linking)
+
+Detected 1 CUDA Capable device(s)
+
+Device 0: "NVIDIA A2"
+  CUDA Driver Version / Runtime Version          12.2 / 12.1
+  CUDA Capability Major/Minor version number:    8.6
+...
+```
+
+If the `deviceQuery` command can not access your GPU, you will see an error message like:
+```
+cudaGetDeviceCount returned 35
+-> CUDA driver version is insufficient for CUDA runtime version
+Result = FAIL
+```
+```
