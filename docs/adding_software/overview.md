@@ -4,7 +4,7 @@ We welcome contributions to the EESSI software stack. This page shows the proced
 
 ## Contribute a software to the EESSI software stack
 
-```mermaid
+<pre class="mermaid">
 %%{init: { 'theme':'forest', 'sequence': {'useMaxWidth':false} } }%%
 flowchart TB
     I(contributor)  
@@ -19,7 +19,7 @@ flowchart TB
     G --> H(Ingest tarballs in EESSI by merging staging PRs)
      classDef blue fill:#9abcff,stroke:#333,stroke-width:2px;
      class A,B,D,F,I blue
-```
+</pre>
 
 
 ## Contributing a ReFrame test to the EESSI test suite
