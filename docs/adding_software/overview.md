@@ -19,6 +19,9 @@ flowchart TB
     G --> H(Ingest tarballs in EESSI by merging staging PRs)
      classDef blue fill:#9abcff,stroke:#333,stroke-width:2px;
      class A,B,D,F,I blue
+     click B "https://easybuild.io/"
+     click D "../opening_pr/"
+     click F "../debugging_failed_builds/"
 </pre>
 
 
