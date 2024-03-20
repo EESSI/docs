@@ -37,7 +37,7 @@ flowchart TB
      classDef blue fill:#9abcff,stroke:#333,stroke-width:2px;
      class Z,W blue
 </pre>
-
+</div>
 
 
 # More about adding software to EESSI
