@@ -29,6 +29,7 @@ flowchart TB
 
 Ideally, a contributor prepares a ReFrame test for the software to be added to the EESSI software stack. 
 
+<div style="display:flex;justify-content:center;">
 <pre class="mermaid">
 %%{init: { 'theme':'forest', 'sequence': {'useMaxWidth':false} } }%%
 flowchart TB
