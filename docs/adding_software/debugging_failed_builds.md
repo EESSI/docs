@@ -58,7 +58,7 @@ If you want to install NVIDIA GPU software, make sure to also add the `--nvidia 
 
 
 ### Starting a shell in the EESSI container - more efficient approach
-While the above works perfectly well, you might not be able to complete your debugging session in one go. With the above appraoch, several steps will just be repeated every time you start a debugging session:
+While the above works perfectly well, you might not be able to complete your debugging session in one go. With the above approach, several steps will just be repeated every time you start a debugging session:
 - Downloading the container
 - Installing `CUDA` in your [host injections](../gpu.md#host_injections) directory (only if you use the `EESSI-install-software.sh` script, see below).
 - Installing all dependencies (before you get to the package that actually fails to build)
