@@ -131,7 +131,7 @@ export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${E
 ```
 
 ## Building software with the `EESSI-install-software.sh` script
-The Automatic build and deploy [bot](../bot.md) installs software by executing the `EESSI-install-software.sh` script. The advantage is that running this script is the closest you can get to replicating the bot's behaviour - and thus the failure. The downside is that if a PR adds a lot of software, it may take quite a long time to run - even if you might already know what the problematic software package is. In that case, you might be better off following the steps under (Building software from an easystack file)[#building-software-from-an-easystack-file] or (Building an individual package)[#building-an-individual-package].
+The Automatic build and deploy [bot](../bot.md) installs software by executing the `EESSI-install-software.sh` script. The advantage is that running this script is the closest you can get to replicating the bot's behaviour - and thus the failure. The downside is that if a PR adds a lot of software, it may take quite a long time to run - even if you might already know what the problematic software package is. In that case, you might be better off following the steps under (Building software from an easystack file)[#building-software-from-an-easystack-file] or (Building an individual package)[#building-an-individual-package]. Note that you could also combine approaches: first build everything using the `EESSI-install-software.sh` script, until you reproduce the failure. Then, start making modifications (e.g. changes to the EasyConfig, patches, etc) and trying to rebuild that package individually to test your changes.
 
 First, you'll need to get the diff file for the PR, as this is used by the `EESSI-install-software.sh` script to see what is changed in this PR - and thus what needs to be build for this PR. To download the diff for PR 360, we would e.g. do
 ```
@@ -213,7 +213,7 @@ trace                (E) = True
 zip-logs             (E) = bzip2
 ```
 
-## Building everything in the easystack file
+### Building everything in the easystack file
 In our [example PR](https://github.com/EESSI/software-layer/pull/360), the easystack file that was changed was `eessi-2023.06-eb-4.8.1-2021b.yml`. To build this, we run (in the directory that contains the checkout of this feature branch):
 ```
 eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
