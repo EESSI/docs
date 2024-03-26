@@ -57,7 +57,7 @@ If you want to install NVIDIA GPU software, make sure to also add the `--nvidia 
     `Apptainer> ` was shown.
 
 
-### Starting a shell in the EESSI container - more efficient approach
+### More efficient approach for multiple/continued debugging sessions
 While the above works perfectly well, you might not be able to complete your debugging session in one go. With the above approach, several steps will just be repeated every time you start a debugging session:
 - Downloading the container
 - Installing `CUDA` in your [host injections](../gpu.md#host_injections) directory (only if you use the `EESSI-install-software.sh` script, see below).
@@ -98,6 +98,9 @@ For a detailed description on using the script `eessi_container.sh`, see [here](
 
 !!! Note
     Reusing a previously downloaded container, or existing CUDA installation from a `host_injections` is not be a good approach if those could be the cause of your issues. If you are unsure if this is the case, simply follow the regular approach to starting the EESSI container.
+
+!!! Note
+    It is recommended to clean the container cache and `host_injections` directories every now and again, to make sure you pick up the latest changes for those two components.
 
 ### Start the Gentoo Prefix environment
 The next step is to start the Gentoo Prefix environment. 
