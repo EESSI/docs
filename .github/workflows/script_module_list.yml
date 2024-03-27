@@ -1,14 +1,14 @@
 # documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
 name: Module overview script (lint + test)
-on:
-  push:
-    paths:
-      - 'scripts/**'
-      - './.github/**'
-  pull_request:
-    paths:
-      - 'scripts/**'
-      - './.github/**'
+on: [push, pull_request]
+#  push:
+#    paths:
+#      - 'scripts/**'
+#      - './.github/**'
+#  pull_request:
+#    paths:
+#      - 'scripts/**'
+#      - './.github/**'
 
 # Declare default permissions as read only.
 permissions: read-all
