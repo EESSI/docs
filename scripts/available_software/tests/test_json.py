@@ -36,7 +36,7 @@ class TestJSON:
         modules = modules_eessi()
         json_data = generate_json_overview_data(modules)
         assert len(json_data.keys()) == 3
-        assert list(json_data["clusters"]) == ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"]
+        assert list(json_data["targets"]) == ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"]
         assert json_data["modules"] == {
                 "Markov": [1, 0],
                 "cfd": [1, 1],
@@ -55,7 +55,7 @@ class TestJSON:
 
         assert len(data_generated) == 3
         assert data_generated["modules"] == data_solution["modules"]
-        assert data_generated["clusters"] == data_solution["clusters"]
+        assert data_generated["targets"] == data_solution["targets"]
 
     def test_json_detail_simple(self):
         modules = modules_eessi()
@@ -70,5 +70,5 @@ class TestJSON:
             data_solution = json.load(json_data)
 
         assert len(data_generated) == 3
-        assert data_generated["clusters"] == data_solution["clusters"]
+        assert data_generated["targets"] == data_solution["targets"]
         assert data_generated["software"] == data_solution["software"]
