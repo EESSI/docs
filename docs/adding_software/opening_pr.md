@@ -73,6 +73,7 @@ git checkout -b example_branch
 ```shell
 echo '  - example-1.2.3-GCC-12.3.0.eb' >> easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
 ```
+Note that the naming scheme is standardized and should be `eessi-<eessi_version>-eb-<eb_version>-<toolchain_version>.yml`. See the [official EasyBuild documentation on easystack files](https://docs.easybuild.io/easystack-files/) for more information on the syntax.
 
 4) Stage and commit the changes into your your branch with a sensible message
 
@@ -95,3 +96,13 @@ git push koala example_branch
 
    If all goes well, one or more bots :robot: should almost instantly create a comment in your pull request
    with an overview of how it is configured - you will need this information when providing build instructions.
+
+### Rebuilding software
+We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using the software. However, there are certain situations in which it is difficult or impossible to avoid.
+
+To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` directory. Include the current date (YYYYMMDD) in the name of the EasyStack file. E.g.:
+```shell
+echo '  - example-1.2.3-GCC-12.3.0.eb' >> easystacks/software.eessi.io/2023.06/rebuilds/20240327-eessi-2023.06-eb-4.9.0-2023a.yml
+```
+
+By seperating rebuilds in dedicated files, we still maintain a complete software bill of materials: it is transparant what got rebuild, and when.
