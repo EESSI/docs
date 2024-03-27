@@ -1770,11 +1770,13 @@ beginning with <code>CernVM-FS:</code> have been printed after the first prompt
 <code>Apptainer&gt;</code> was shown.</p>
 </div>
 <h3 id="more-efficient-approach-for-multiplecontinued-debugging-sessions">More efficient approach for multiple/continued debugging sessions<a class="headerlink" href="#more-efficient-approach-for-multiplecontinued-debugging-sessions" title="Permanent link">&para;</a></h3>
-<p>While the above works perfectly well, you might not be able to complete your debugging session in one go. With the above approach, several steps will just be repeated every time you start a debugging session:
-- Downloading the container
-- Installing <code>CUDA</code> in your <a href="../../gpu/#host_injections">host injections</a> directory (only if you use the <code>EESSI-install-software.sh</code> script, see below).
-- Installing all dependencies (before you get to the package that actually fails to build)</p>
-<p>To avoid this, we create two directories. One holds the container &amp; <code>host_injections</code> - these are (typically) common between multiple PRs and thus you don't have to redownload the container / reinstall the <code>host_injections</code> if you start working on another PR. The other will hold the PR-specific data: a tarball storing the software you'll build in your interactive debugging session. The paths we pick here are just example, you can pick any persistent, writeable location for this:
+<p>While the above works perfectly well, you might not be able to complete your debugging session in one go. With the above approach, several steps will just be repeated every time you start a debugging session:</p>
+<ul>
+<li>Downloading the container</li>
+<li>Installing <code>CUDA</code> in your <a href="../../gpu/#host_injections">host injections</a> directory (only if you use the <code>EESSI-install-software.sh</code> script, see below)</li>
+<li>Installing all dependencies (before you get to the package that actually fails to build)</li>
+</ul>
+<p>To avoid this, we create two directories. One holds the container &amp; <code>host_injections</code>, which are (typically) common between multiple PRs and thus you don't have to redownload the container / reinstall the <code>host_injections</code> if you start working on another PR. The other will hold the PR-specific data: a tarball storing the software you'll build in your interactive debugging session. The paths we pick here are just example, you can pick any persistent, writeable location for this:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>eessi_common_dir=${HOME}/eessi-manual-builds
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>eessi_pr_dir=${HOME}/pr360
 </code></pre></div></p>
@@ -1952,7 +1954,7 @@ The <code>%(sysroot)s</code> is a template value which EasyBuild will resolve to
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 27, 2024</span>
   </span>
 
     
