@@ -59,11 +59,12 @@ If you want to install NVIDIA GPU software, make sure to also add the `--nvidia 
 
 ### More efficient approach for multiple/continued debugging sessions
 While the above works perfectly well, you might not be able to complete your debugging session in one go. With the above approach, several steps will just be repeated every time you start a debugging session:
+
 - Downloading the container
-- Installing `CUDA` in your [host injections](../gpu.md#host_injections) directory (only if you use the `EESSI-install-software.sh` script, see below).
+- Installing `CUDA` in your [host injections](../gpu.md#host_injections) directory (only if you use the `EESSI-install-software.sh` script, see below)
 - Installing all dependencies (before you get to the package that actually fails to build)
 
-To avoid this, we create two directories. One holds the container & `host_injections` - these are (typically) common between multiple PRs and thus you don't have to redownload the container / reinstall the `host_injections` if you start working on another PR. The other will hold the PR-specific data: a tarball storing the software you'll build in your interactive debugging session. The paths we pick here are just example, you can pick any persistent, writeable location for this:
+To avoid this, we create two directories. One holds the container & `host_injections`, which are (typically) common between multiple PRs and thus you don't have to redownload the container / reinstall the `host_injections` if you start working on another PR. The other will hold the PR-specific data: a tarball storing the software you'll build in your interactive debugging session. The paths we pick here are just example, you can pick any persistent, writeable location for this:
 ```
 eessi_common_dir=${HOME}/eessi-manual-builds
 eessi_pr_dir=${HOME}/pr360
