@@ -109,3 +109,6 @@ extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
+# mermaid diagram
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
