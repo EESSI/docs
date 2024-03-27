@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   /apps/gent/RHEL8/zen2-ib/modules/all/SciPy-bundle/2022.05-foss-2022a.lua:
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+help([[
+Description
+===========
+Bundle for scientific software
+
+
+More information
+================
+ - Homepage: https://science.com/
+
+
+Included extensions
+===================
+beniget-0.4.1, Bottleneck-1.3.4
+]])
+whatis("Description: Bundle for scientific software")
+whatis("Homepage: https://science.com/")
+whatis("URL: https://science.com/")
+whatis("Extensions: ext-1.2.3, ext-2.3.4")
+conflict("SciPy-bundle")
+prepend_path("CMAKE_PREFIX_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a")
+prepend_path("LIBRARY_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a/lib")
+prepend_path("PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a/bin")
+setenv("EBROOTSCIPYMINBUNDLE","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a")
+setenv("EBVERSIONSCIPYMINBUNDLE","2022.05")
+setenv("EBDEVELSCIPYMINBUNDLE","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a/easybuild/SciPy-bundle-2022.05-foss-2022a-easybuild-devel")
+prepend_path("PYTHONPATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages")
+prepend_path("CPATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages/numpy/core/include")
+prepend_path("LD_LIBRARY_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages/numpy/core/lib")
+prepend_path("LIBRARY_PATH","/apps/gent/RHEL8/zen2-ib/software/SciPy-bundle/2022.05-foss-2022a/lib/python3.10/site-packages/numpy/core/lib")
+setenv("EBEXTSLISTSCIPYMINBUNDLE","numpy-1.22.3,ply-3.11,gast-0.5.3,beniget-0.4.1,pythran-0.11.0,scipy-1.8.1,mpi4py-3.1.3,numexpr-2.8.1,Bottleneck-1.3.4,pandas-1.4.2,mpmath-1.2.1,deap-1.3.1")
