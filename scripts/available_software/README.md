@@ -69,15 +69,17 @@ import os
 def setup_class(cls):
     os.environ["TESTS_PATH"] = cls.path
     os.environ["LMOD_CMD"] = cls.path + "/data/lmod_mock.sh"
-    os.environ["MOCK_FILE_AVAIL_CLUSTER"] = cls.path + "/data/data_avail_cluster_simple.txt"
-    os.environ["MOCK_FILE_SWAP"] = cls.path + "/data/data_swap_CLUSTER.txt"
+    os.environ["SHELL"] = cls.path + "/data/bash_mock.sh"
+    os.environ["MOCK_FILE_SWAP"] = cls.path + "/data/data_swap_TARGET.txt"
+    os.environ["MOCK_FILE_AVAIL_TARGET"] = cls.path + "/data/data_avail_target_simple.txt"
+    os.environ["MOCK_FILE_AVAIL_TARGET_AMD_INTEL"] = cls.path + "/data/data_avail_target_amd_intel.txt"
 ```
 
 This does multiple things:
 1. Set the path of the tests folder in `$TESTS_PATH`
 2. Set the path to the `lmod_mock.sh` script in the environment variable `$LMOD_CMD`
-3. Set the output file for the `module avail cluster/` to the `MOCK_FILE_AVAIL_CLUSTER` variable.
-   The actual output can be found in the `data/data_avail_cluster_simple.txt` file.
-4. Set the swap files output to the `MOCK_FILE_SWAP` variable.
-   Files with swap output will have the `data/data_swap_CLUSTER.txt`.
-   For example, `data/data_swap_pikachu.txt` could be a possible file.
+3. set the path to the `bash_mock.sh` script in the environment variable `$SHELL`
+4. Set the output file for the `module swap` to the `MOCK_FILE_SWAP` variable.
+   For example, `data/data_swap_generic.txt` could be a possible file.
+3. Set the output file for the `module avail` to the `MOCK_FILE_AVAIL_TARGET` variable.
+   The actual output can be found in the `data/data_avail_target_simple.txt` file or `/data/data_avail_target_amd_intel.txt` file.
