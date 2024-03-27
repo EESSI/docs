@@ -18,8 +18,8 @@ class TestJSON:
     def setup_class(cls):
         os.environ["TESTS_PATH"] = cls.path
         os.environ["LMOD_CMD"] = cls.path + "/data/lmod_mock.sh"
-        os.environ["MOCK_FILE_SWAP"] = cls.path + "/data/data_swap_CLUSTER.txt"
-        os.environ["MOCK_FILE_AVAIL_CLUSTER"] = cls.path + "/data/data_avail_cluster_simple.txt"
+        os.environ["MOCK_FILE_SWAP"] = cls.path + "/data/data_swap_TARGET.txt"
+        os.environ["MOCK_FILE_AVAIL_TARGET"] = cls.path + "/data/data_avail_target_simple.txt"
         os.environ["MOCK_FILE_SHOW"] = cls.path + "/data/data_show_science.txt"
 
     @classmethod

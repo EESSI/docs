@@ -12,24 +12,19 @@ mod_args="${4:-}"
 
 # Emulated avail command.
 if [ "$mod_cmd" = "avail" ]; then
-  if [ "$mod_args" = "cluster/" ]; then
-    cat "${MOCK_FILE_AVAIL_CLUSTER}" >&2
-  else
     cat "${MOCK_FILE_AVAIL}" >&2
-  fi
-
 
 # Emulated swap command.
 elif [ "$mod_cmd" = "swap" ]; then
-  # extract the cluster name from the 4th argument
-  cluster=$(echo "$mod_args" | cut -d "/" -f 1)
-  cluster_name=$(echo "$mod_args" | cut -d "/" -f 2)
+  # extract the target name from the 4th argument
+  target=$(echo "$mod_args" | cut -d "/" -f 1)
+  target_name=$(echo "$mod_args" | cut -d "/" -f 2)
 
-  if [ "$cluster" = "cluster" ]; then
-    # Substitute CLUSTER by the cluster_name
-    cat ${MOCK_FILE_SWAP/CLUSTER/${cluster_name}} >&1
+  if [ "$target" = "target" ]; then
+    # Substitute TARGET by the target_name
+    cat ${MOCK_FILE_SWAP/TARGET/${target_name}} >&1
   else
-    echo "${mod_args} is not a cluster." >&2
+    echo "${mod_args} is not a target." >&2
     exit 1
   fi
 
@@ -44,17 +39,17 @@ elif [ "$mod_cmd" = "use" ]; then
       repo=$(echo "$mod_args" | cut -d "/" -f 3)
       if [ "cvmfs" = "cvmfs" ]; then
           if echo "$mod_args" | grep -q -E "amd"; then
-              cluster_name=$(echo "$mod_args" | cut -d "/" -f 10)
-              # Substitute CLUSTER by the cluster_name
-              cat ${MOCK_FILE_SWAP/CLUSTER/${cluster_name}} >&1
+              target_name=$(echo "$mod_args" | cut -d "/" -f 10)
+              # Substitute TARGET by the target_name
+              cat ${MOCK_FILE_SWAP/TARGET/${target_name}} >&1
           elif echo "$mod_args" | grep -q -E "intel"; then
-              cluster_name=$(echo "$mod_args" | cut -d "/" -f 10)
-              # Substitute CLUSTER by the cluster_name
-              cat ${MOCK_FILE_SWAP/CLUSTER/${cluster_name}} >&1
+              target_name=$(echo "$mod_args" | cut -d "/" -f 10)
+              # Substitute TARGET by the target_name
+              cat ${MOCK_FILE_SWAP/TARGET/${target_name}} >&1
           else
-              cluster_name=$(echo "$mod_args" | cut -d "/" -f 9)
-              # Substitute CLUSTER by the cluster_name
-              cat ${MOCK_FILE_SWAP/CLUSTER/${cluster_name}} >&1
+              target_name=$(echo "$mod_args" | cut -d "/" -f 9)
+              # Substitute TARGET by the target_name
+              cat ${MOCK_FILE_SWAP/TARGET/${target_name}} >&1
           fi
       else
           echo "${mod_arg} in not a cvmfs repo"
