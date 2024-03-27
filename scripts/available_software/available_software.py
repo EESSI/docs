@@ -23,10 +23,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
+# The original program is update and is now a part of the EESSI docs
 """
-Python script to generate an overview of available modules across different clusters, in MarkDown format.
+Python script to generate an overview of available modules across different CPU and GPU targets,
+in MarkDown format.
 
 @author: Michiel Lachaert (Ghent University)
+@author: Lara Peeters (Ghent University)
 """
 import argparse
 import json
@@ -201,45 +204,45 @@ def module_info(info: str) -> dict:
 
 def filter_fn_eessi_modules(data: np.ndarray) -> np.ndarray:
     """
-    Filter function for the output of all software modules for EESSI (excl. `cluster` and `env` modules).
+    Filter function for the output of all software modules for EESSI (excl. 'target').
     @param data: Output
     @return: Filtered output
     """
     return data[~np.char.endswith(data, ":")]
 
 
-def clusters_eessi() -> np.ndarray:
+def targets_eessi() -> np.ndarray:
     """
-    Returns all the cluster names of EESSI.
-    @return: cluster names
+    Returns all the target names of EESSI.
+    @return: target names
     """
     commands = [
         "find /cvmfs/software.eessi.io/versions/2023.06/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
         "-name 'amd' \\) -type d",
         'find /cvmfs/software.eessi.io/versions/2023.06/software/linux/*/{amd,intel}/* -maxdepth 0  -type d'
     ]
-    clusters = np.array([])
+    targets = np.array([])
 
     for command in commands:
-        clusters = np.concatenate([clusters, bash_command(command)])
+        targets = np.concatenate([targets, bash_command(command)])
 
-    return clusters
+    return targets
 
 
 def modules_eessi() -> dict:
     """
     Returns names of all software module that are installed on EESSI.
-    They are grouped by cluster.
-    @return: Dictionary with all the modules per cluster
+    They are grouped by target.
+    @return: Dictionary with all the modules per target
     """
     print("Start collecting modules:")
     data = {}
     module_unuse(os.getenv('MODULEPATH'))
-    for cluster in clusters_eessi():
-        print(f"\t Collecting available modules for {cluster}... ", end="", flush=True)
-        module_use(cluster + "/modules/all/")
-        data[cluster] = module_avail(filter_fn=filter_fn_eessi_modules)
-        print(f"found {len(data[cluster])} modules!")
+    for target in targets_eessi():
+        print(f"\t Collecting available modules for {target}... ", end="", flush=True)
+        module_use(target + "/modules/all/")
+        data[target] = module_avail(filter_fn=filter_fn_eessi_modules)
+        print(f"found {len(data[target])} modules!")
         module_unuse(os.getenv('MODULEPATH'))
 
     print("All data collected!\n")
@@ -258,7 +261,7 @@ def get_extra_info_eessi(json_data) -> dict:
                 # TODO handle specific naming schema for Java 
                 # code cannot handle "Java/11(@Java/11.0.20)"
                 continue
-            base_path = modules[software]['versions'][mod]['clusters'][0] + '/modules/all/'
+            base_path = modules[software]['versions'][mod]['targets'][0] + '/modules/all/'
             path = base_path + mod + ".lua"
             f = open(path, 'r')
             info = f.read()
@@ -302,7 +305,7 @@ def get_unique_software_names(data: Union[dict, list, np.ndarray]) -> Union[dict
     """
 
     if isinstance(data, dict):
-        simplified_data = {cluster: mod_names_to_software_names(data[cluster]) for cluster in data}
+        simplified_data = {target: mod_names_to_software_names(data[target]) for target in data}
     else:
         simplified_data = mod_names_to_software_names(data)
 
@@ -323,22 +326,22 @@ def dict_sort(dictionary: dict) -> dict:
 # Generate detailed markdown
 # --------------------------------------------------------------------------------------------------------
 
-def generate_software_table_data(software_data: dict, clusters: list) -> list:
+def generate_software_table_data(software_data: dict, targets: list) -> list:
     """
     Construct the data for the detailed software table.
 
     @param software_data: Software specific data.
-    @param clusters: List with all the cluster names
+    @param targets: List with all the target names
     @return: 1D list with all the data for the table
     """
     #TODO: add same structure as https://github.com/laraPPr/EESSI_docs/blob/test_add_script_generate_software/docs/available_software/overview.md to table
-    table_data = [" "] + [cluster[57:] for cluster in clusters]
+    table_data = [" "] + [target[57:] for target in targetss]
 
     for module_name, available in list(software_data.items())[::-1]:
         row = [module_name]
 
-        for cluster in clusters:
-            row += ("x" if cluster in available["clusters"] else "-")
+        for target in targets:
+            row += ("x" if target in available["targets"] else "-")
         table_data += row
 
     return table_data
@@ -348,7 +351,7 @@ def generate_software_detail_page(
         software_name: str,
         software_data: dict,
         generated_time: str,
-        clusters: list,
+        targets: list,
         path: str
 ) -> None:
     """
@@ -357,7 +360,7 @@ def generate_software_detail_page(
     @param software_name: Name of the software
     @param software_data: Additional information about the software (version, etc...)
     @param generated_time: Timestamp when the data was generated
-    @param clusters: List with all the cluster names
+    @param targets: List with all the target names
     @param path: Path of the directory where the detailed page will be created.
     """
     sorted_versions = dict_sort(software_data["versions"])
@@ -374,8 +377,8 @@ def generate_software_detail_page(
 
     md_file.new_header(level=1, title="Available modules")
 
-    md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per HPC-UGent "
-                          f"Tier-2cluster, ordered based on software version (new to old).")
+    md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per "
+                          f"CPU and GPU targets in EESSI, ordered based on software version (new to old).")
     md_file.new_paragraph(f"To start using {software_name}, load one of these modules using a `module load` command "
                           f"like:")
     md_file.insert_code(f"module load {newest_version}", language="shell")
@@ -383,9 +386,9 @@ def generate_software_detail_page(
     md_file.new_line()
 
     md_file.new_table(
-        columns=len(clusters) + 1,
+        columns=len(targets) + 1,
         rows=len(sorted_versions) + 1,
-        text=generate_software_table_data(sorted_versions, clusters)
+        text=generate_software_table_data(sorted_versions, targets)
     )
 
     for version, details in list(sorted_versions.items())[::-1]:
@@ -412,9 +415,9 @@ def generate_detail_pages(json_path, dest_path) -> None:
     with open(json_path) as json_data:
         data = json.load(json_data)
 
-    all_clusters = data["clusters"]
+    all_targets = data["targets"]
     for software, content in data["software"].items():
-        generate_software_detail_page(software, content, data["time_generated"], all_clusters, dest_path)
+        generate_software_detail_page(software, content, data["time_generated"], all_targets, dest_path)
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -437,8 +440,8 @@ def generate_table_data(avail_mods: dict) -> Tuple[np.ndarray, int, int]:
     for package in all_modules:
         final = np.append(final, package)
 
-        for cluster in avail_mods:
-            final = np.append(final, "X" if package in avail_mods[cluster] else " ")
+        for target in avail_mods:
+            final = np.append(final, "X" if package in avail_mods[target] else " ")
 
     return final, len(avail_mods.keys()) + 1, len(all_modules) + 1
 
@@ -447,7 +450,7 @@ def generate_module_table(data: dict, md_file: MdUtils) -> None:
     """
     Generate the general table of the overview.
 
-    @param data: Dict with all the data. Keys are the cluster names.
+    @param data: Dict with all the data. Keys are the target names.
     @param md_file: MdUtils object.
     """
     print("Generating markdown table... ", end="", flush=True)
@@ -459,10 +462,10 @@ def generate_module_table(data: dict, md_file: MdUtils) -> None:
 def generate_markdown_overview(modules: dict) -> None:
     """
     Generate the general overview in a markdown file.
-    It generates a list of all the available software and indicates on which cluster it is available.
+    It generates a list of all the available software and indicates for which target it is available.
     """
     md_fn = 'module_overview.md'
-    md_file = MdUtils(file_name=md_fn, title='Overview of available modules per cluster')
+    md_file = MdUtils(file_name=md_fn, title='Overview of available modules per target architecture in EESSI')
     generate_module_table(modules, md_file)
     md_file.create_md_file()
     print(f"Module overview created at {md_fn}")
@@ -477,7 +480,7 @@ def generate_markdown_overview(modules: dict) -> None:
 
 # FORMAT OVERVIEW JSON
 # {
-#     "clusters": ["cluster/dialga", "cluster/pikachu"],
+#     "targets": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"],
 #     "modules": {
 #         "Markov": [1, 0],
 #         "cfd": [1, 1],
@@ -489,12 +492,12 @@ def generate_json_overview_data(modules: dict) -> dict:
     """
     Generate the data for the json overview in the above format.
 
-    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @param modules: Dictionary with all the modules per target. Keys are the target names.
     @return: Dictionary with the required JSON structure.
 
     """
     json_data = {
-        "clusters": list(modules.keys()),
+        "targets": list(modules.keys()),
         "modules": {},
         "time_generated": time.strftime("%a, %d %b %Y at %H:%M:%S %Z")
     }
@@ -502,11 +505,11 @@ def generate_json_overview_data(modules: dict) -> dict:
     all_software = get_unique_software_names(np.concatenate(list(modules.values())))
 
     # creates a list of booleans for each software that indicates
-    # if the software is available for the corresponding cluster.
+    # if the software is available for the corresponding target.
     for soft in all_software:
         available = []
-        for cluster in json_data["clusters"]:
-            available.append(int(soft in avail_software[cluster]))
+        for target in json_data["targets"]:
+            available.append(int(soft in avail_software[target]))
         json_data["modules"][soft] = available
     return json_data
 
@@ -515,7 +518,7 @@ def generate_json_overview(modules: dict, path_data_dir: str) -> str:
     """
     Generate the overview in a JSON format.
 
-    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @param modules: Dictionary with all the modules per target. Keys are the target names.
     @param path_data_dir: Path to the directory where the JSON will be placed.
     @return: Absolute path to the json file.
     """
@@ -538,13 +541,13 @@ def generate_json_overview(modules: dict, path_data_dir: str) -> str:
 # FORMAT DETAILED JSON:
 #
 # {
-#     "clusters": ["dialga", "pikachu"],
+#     "targets": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"],
 #     "software": {
 #         "cfd": {
-#             "clusters": ["dialga", "pikachu"],
+#             "targets": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.e    essi.io/versions/2023.06/software/linux/x86_64/amd/zen2"],
 #             "versions": {
-#                 "2.3.1": ["dialga"],
-#                 "2.3.2": ["dialga", "pikachu"]
+#                 "2.3.1": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic"],
+#                 "2.3.2": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/so    ftware.e    essi.io/versions/2023.06/software/linux/x86_64/amd/zen2"]
 #             }
 #         }
 #     }
@@ -554,18 +557,18 @@ def generate_json_detailed_data(modules: dict) -> dict:
     """
     Generate the data for the detailed JSON in the above format.
 
-    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @param modules: Dictionary with all the modules per target. Keys are the target names.
     @return: Dictionary with the required JSON structure.
     """
     json_data = {
-        "clusters": list(modules.keys()),
+        "targets": list(modules.keys()),
         "software": {},
         "time_generated": time.strftime("%a, %d %b %Y at %H:%M:%S %Z")
     }
 
-    # Loop over every module in every cluster
-    for cluster in modules:
-        for mod in modules[cluster]:
+    # Loop over every module in every target
+    for target in modules:
+        for mod in modules[target]:
             software, version = analyze_module(mod)
 
             # Exclude modules with no version
@@ -573,21 +576,21 @@ def generate_json_detailed_data(modules: dict) -> dict:
                 # If the software is not yet present, add it.
                 if software not in json_data["software"]:
                     json_data["software"][software] = {
-                        "clusters": [],
+                        "targets": [],
                         "versions": {}
                     }
 
                 # If the version is not yet present, add it.
                 if mod not in json_data["software"][software]["versions"]:
-                    json_data["software"][software]["versions"][mod] = {'clusters': []}
+                    json_data["software"][software]["versions"][mod] = {'targets': []}
 
-                # If the cluster is not yet present, add it.
-                if cluster not in json_data["software"][software]["clusters"]:
-                    json_data["software"][software]["clusters"].append(cluster)
+                # If the target is not yet present, add it.
+                if target not in json_data["software"][software]["targets"]:
+                    json_data["software"][software]["targets"].append(target)
 
-                # If the cluster is not yet present, add it.
-                if cluster not in json_data["software"][software]["versions"][mod]["clusters"]:
-                    json_data["software"][software]["versions"][mod]["clusters"].append(cluster)
+                # If the target is not yet present, add it.
+                if target not in json_data["software"][software]["versions"][mod]["targets"]:
+                    json_data["software"][software]["versions"][mod]["targets"].append(target)
 
     return json_data
 
@@ -596,7 +599,7 @@ def generate_json_detailed(json_data: dict, path_data_dir: str) -> str:
     """
     Generate the detailed JSON.
 
-    @param modules: Dictionary with all the modules per cluster. Keys are the cluster names.
+    @param modules: Dictionary with all the modules per target. Keys are the target names.
     @param path_data_dir: Path to the directory where the JSON will be placed.
     @return: Absolute path to the json file.
     """
