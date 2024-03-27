@@ -105,4 +105,4 @@ To do a rebuild, you add the software you want to rebuild to a dedicated easysta
 echo '  - example-1.2.3-GCC-12.3.0.eb' >> easystacks/software.eessi.io/2023.06/rebuilds/20240327-eessi-2023.06-eb-4.9.0-2023a.yml
 ```
 
-By seperating rebuilds in dedicated files, we still maintain a complete software bill of materials: it is transparant what got rebuild, and when.
+By separating rebuilds in dedicated files, we still maintain a complete software bill of materials: it is transparent what got rebuild, and when.
