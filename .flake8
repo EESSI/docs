@@ -1,0 +1,14 @@
+# This file is part of the EESSI build-and-deploy bot,
+# see https://github.com/EESSI/eessi-bot-software-layer
+#
+# author: Kenneth Hoste (@boegel)
+#
+# license: GPLv2
+#
+
+[flake8]
+max-line-length = 120
+
+# ignore "Black would make changes" produced by flake8-black
+# see also https://github.com/houndci/hound/issues/1769
+extend-ignore = BLK100
