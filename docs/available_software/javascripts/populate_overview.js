@@ -40,9 +40,9 @@ function populate_overview(json_data) {
 
             // CONSTRUCT TABLE
 
-            // list with all the names of the clusters
-            const all_clusters = json.clusters.map(x => {
-		    //Todo: split up the strings of the clusters to automate the hierarchy of the table header
+            // list with all the names of the targets
+            const all_targets = json.targets.map(x => {
+		    //Todo: split up the strings of the targets to automate the hierarchy of the table header
 		    console.log(x)
 		    let pathArray = x.split("/")
 		    pathArray = pathArray.slice(7)
@@ -52,10 +52,10 @@ function populate_overview(json_data) {
 		    //x = pathArray
                     return ({"title": x})
                 })
-	    console.log(all_clusters)
-            console.log([...[{"title": "name"}], ...all_clusters])
+	    console.log(all_targets)
+            console.log([...[{"title": "name"}], ...all_targets])
             const table = new DataTable('#overview_table', {
-		columns: [...[{"title": "name"}], ...all_clusters],
+		columns: [...[{"title": "name"}], ...all_targets],
                 paging: false,
                 columnDefs: [
                     {
