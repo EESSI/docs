@@ -23,7 +23,7 @@ Bug fixes:
 * fix typo in partition names in configuration file for vsc_hortense (#106)
 
 
-## 0.1.0 (5 Oktober 2023)
+## 0.1.0 (5 October 2023)
 
 Version 0.1.0 is the first release of the EESSI test suite.
 
