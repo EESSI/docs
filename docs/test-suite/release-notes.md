@@ -1,6 +1,29 @@
 # Release notes for EESSI test suite
 
-## 0.1.0
+## 0.2.0 (7 march 2024)
+
+This is a minor release of the EESSI test-suite
+
+It includes:
+
+* Implement the CI for regular runs on a system (#93)
+* Add OSU tests and update the hooks and configs to make the tests portable (#54, #95, #96, #97, #110, #116, #117, #118, #121)
+* Add extra scales to filter tests(#94)
+* add new hook to filter out invalid scales based on features in the config (#111)
+* unify test names (#108)
+* updates to CI workflow ((#102, #103, #104, #105)
+* Update common_config (#114)
+* Add common config item to redirect the report file to the same directory as e.g. the perflog (#122)
+* Fix code formatting + enforce it in CI workflow  (#120)
+
+Bug fixes:
+
+* Fix hook _assign_num_tasks_per_node (#98)
+* fix import common-config vsc_hortense (#99)
+* fix typo in partition names in configuration file for vsc_hortense (#106)
+
+
+## 0.1.0 (5 Oktober 2023)
 
 Version 0.1.0 is the first release of the EESSI test suite.
 
