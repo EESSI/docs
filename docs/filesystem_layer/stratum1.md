@@ -35,7 +35,7 @@ However, EESSI provides a synchronisation server that can be used for setting up
     In all cases this was due to an intrusion prevention system scanning the associated network, and hence scanning all files going in or out of the Stratum 1.
     Though it was a false-positive in all cases, this breaks the synchronization procedure of your Stratum 1.
     If this is the case, you can try switching to HTTPS by using `https://aws-eu-west-s1-sync.eessi.science` for synchronizing your Stratum 1.
-    Even though there is no advantage for CVMFS itself in using HTTPS (it has built-in mechasnims for ensuring the integrity of the data),
+    Even though there is no advantage for CVMFS itself in using HTTPS (it has built-in mechanisms for ensuring the integrity of the data),
     this will prevent the described issues, as the intrusion prevention system will not be able to inspect the encrypted data.
     As HTTPS does introduce some overhead due to the encryption/decryption, it is still recommended to use HTTP as default.
 
