@@ -37,7 +37,8 @@ However, EESSI provides a synchronisation server that can be used for setting up
     If this is the case, you can try switching to HTTPS by using `https://aws-eu-west-s1-sync.eessi.science` for synchronizing your Stratum 1.
     Even though there is no advantage for CVMFS itself in using HTTPS (it has built-in mechanisms for ensuring the integrity of the data),
     this will prevent the described issues, as the intrusion prevention system will not be able to inspect the encrypted data.
-    As HTTPS does introduce some overhead due to the encryption/decryption, it is still recommended to use HTTP as default.
+    Howver, not only does HTTPS introduce some overhead due to the encryption/decryption, it also makes caching in forward proxies impossible.
+    Therefore, it is strongly discouraged to use HTTPS as default.
 
 ### Manual configuration
 
