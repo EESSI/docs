@@ -53,7 +53,8 @@ For the commands in this section, we are assuming that you cloned this repositor
 
 !!! note GEO API
     Installing a Stratum 1 usually requires a GEO API license key, which will be used to find the (geographically) closest Stratum 1 server for your client and proxies.
-    However, for a private Stratum 1 this can be skipped, as clients should just connect to your local Stratum 1 by default.
+    However, for a private Stratum 1 this can be skipped, and you can disable the use of the GEO API in the configuration of your clients by setting `CVMFS_USE_GEOAPI=no`.
+    In this case, they will just connect to your local Stratum 1 by default.
     
     If you do want to set up the GEO API, you can find more information on how to (freely) obtain this key in the CVMFS documentation: https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#geo-api-setup.
     
