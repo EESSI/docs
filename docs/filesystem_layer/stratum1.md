@@ -21,7 +21,7 @@ Finally, make sure that ports 80 and 8000 are open to clients.
 
 ## Configure the Stratum 1
 
-Stratum 1 servers usually replicate from the Stratum 0 server. 
+Stratum 1 servers have to synchronize the contents of their CVMFS repositories regularly, and usually they replicate from a CVMFS Stratum 0 server. 
 In order to ensure the stability and security of the EESSI Stratum 0 server, it has a strict firewall, and only the EESSI-maintained public Stratum 1 servers are allowed to replicate from it.
 However, EESSI provides a synchronisation server that can be used for setting up private Stratum 1 replica servers, and this is available at `http://aws-eu-west-s1-sync.eessi.science`.
 
