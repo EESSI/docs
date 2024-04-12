@@ -60,12 +60,6 @@ For the commands in this section, we are assuming that you cloned this repositor
     
     You can put your license key in the local configuration file `inventory/local_site_specific_vars.yml`.
 
-!!! note Squid reverse proxy
-    The Stratum 1 playbooks also installs and configures a Squid reverse proxy on the server. The template configuration file for Squid can be found at `templates/eessi_stratum1_squid.conf.j2`.
-    If you want to customize it, for instance for limiting the access to the Stratum 1, you can make your own version of this template file 
-    and point to it by setting `local_stratum1_cvmfs_squid_conf_src` in `inventory/local_site_specific_vars.yml`.
-    See the comments in the example file for more details.
-
 Start by installing Ansible, e.g.:
 
 ```bash
