@@ -101,18 +101,12 @@ even without a client installed, you can use `curl`:
 ```bash
 curl --head http://<url-or-ip-to-your-stratum1>/cvmfs/software.eessi.io/.cvmfspublished
 ```
-This should return:
+This should return something like:
 
 ```bash
 HTTP/1.1 200 OK
 ...
-X-Cache: MISS from <url-or-ip-to-your-stratum1>
-```
-
-The second time you run it, you should get a cache hit:
-
-```bash
-X-Cache: HIT from <url-or-ip-to-your-stratum1>
+Content-Type: application/x-cvmfs
 ```
 
 Example with the EESSI Stratum 1 running in AWS:
