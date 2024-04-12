@@ -123,7 +123,7 @@ You can also test access to your Stratum 1 from a client, for which you will hav
 Then run the following command to prepend your newly created Stratum 1 to the existing list of EESSI Stratum 1 servers by creating a local CVMFS configuration file:
 
 ```bash
-echo 'CVMFS_SERVER_URL="http://<url-or-ip-to-your-stratum1>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi-hpc.org.local
+echo 'CVMFS_SERVER_URL="http://<url-or-ip-to-your-stratum1>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi.io.local
 ```
 
 !!! note
