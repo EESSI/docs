@@ -40,11 +40,10 @@ You should see output like
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).
 Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 Apptainer> CernVM-FS: loading Fuse module... done
-fuse: failed to clone device fd: Inappropriate ioctl for device
-fuse: trying to continue without -o clone_fd.
+CernVM-FS: loading Fuse module... done
 
 Apptainer>
 ```
@@ -53,12 +52,12 @@ Apptainer>
     beginning with `CernVM-FS: ` have been printed after the first prompt
     `Apptainer> ` was shown.
 
-To start using EESSI, see [Using EESSI/Setting up your environment](../../using_eessi/setting_up_environment).
+To start using EESSI, see [Using EESSI/Setting up your environment](../using_eessi/setting_up_environment.md).
 
 ## Help for `eessi_container.sh`
 
 The example in the [Quickstart](#quickstart) section facilitates an
-interactive session with read access to the EESSI pilot software stack. It
+interactive session with read access to the EESSI software stack. It
 does not require any command line options, because the script
 `eessi_container.sh` uses some carefully chosen defaults. To view
 all options of the script and its default values, run the command
@@ -72,14 +71,19 @@ usage: ./eessi_container.sh [OPTIONS] [[--] SCRIPT or COMMAND]
   -a | --access {ro,rw}  - ro (read-only), rw (read & write) [default: ro]
   -c | --container IMG   - image file or URL defining the container to use
                            [default: docker://ghcr.io/eessi/build-node:debian11]
-  -h | --help            - display this usage information [default: false]
   -g | --storage DIR     - directory space on host machine (used for
                            temporary data) [default: 1. TMPDIR, 2. /tmp]
+  -h | --help            - display this usage information [default: false]
+  -i | --host-injections - directory to link to for host_injections 
+                           [default: /..storage../opt-eessi]
   -l | --list-repos      - list available repository identifiers [default: false]
   -m | --mode MODE       - with MODE==shell (launch interactive shell) or
                            MODE==run (run a script or command) [default: shell]
+  -n | --nvidia MODE     - configure the container to work with NVIDIA GPUs,
+                           MODE==install for a CUDA installation, MODE==run to
+                           attach a GPU, MODE==all for both [default: false]
   -r | --repository CFG  - configuration file or identifier defining the
-                           repository to use [default: EESSI-pilot via
+                           repository to use [default: EESSI via
                            container configuration]
   -u | --resume DIR/TGZ  - resume a previous run from a directory or tarball,
                            where DIR points to a previously used tmp directory
@@ -105,7 +109,7 @@ usage: ./eessi_container.sh [OPTIONS] [[--] SCRIPT or COMMAND]
 
 So, the defaults are equal to running the command
 ``` { .bash .copy }
-./eessi_container.sh --access ro --container docker://ghcr.io/eessi/build-node:debian11 --mode shell --repository EESSI-pilot
+./eessi_container.sh --access ro --container docker://ghcr.io/eessi/build-node:debian11 --mode shell --repository EESSI
 ```
 and it would either create a temporary directory under `${TMPDIR}` (if defined),
 or `/tmp` (if `${TMPDIR}` is not defined).
@@ -149,11 +153,11 @@ the _state_ where you left the previous session.
 
 ## Running a simple command
 
-Let's "`ls /cvmfs/pilot.eessi-hpc.org`" through the `eessi_container.sh` script
-to check if the CernVM-FS EESSI pilot repository is accessible:
+Let's "`ls /cvmfs/software.eessi.io`" through the `eessi_container.sh` script
+to check if the CernVM-FS EESSI repository is accessible:
 
 ``` { .bash .copy }
-./eessi_container.sh --mode run ls /cvmfs/pilot.eessi-hpc.org
+./eessi_container.sh --mode run ls /cvmfs/software.eessi.io
 ```
 
 You should see an output such as
@@ -162,7 +166,7 @@ You should see an output such as
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).$
 Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity -q run --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls /cvmfs/pilot.eessi-hpc.org
+singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
 host_injections  latest  versions
@@ -176,7 +180,7 @@ This is because we used the `--mode run` command line option.
 
 !!! Note
     The last line in the output is the output of the `ls` command,
-    which shows the contents of the `/cvmfs/pilot.eessi-hpc.org` directory.
+    which shows the contents of the `/cvmfs/software.eessi.io` directory.
 
     Also, note that there is no shell prompt (`Apptainer>` or `Singularity`),
     since no interactive shell session is started in the container.
@@ -184,7 +188,7 @@ This is because we used the `--mode run` command line option.
 Alternatively to specify the command as we did above, you can also do the
 following.
 ``` { .bash .copy }
-CMD="ls -l /cvmfs/pilot.eessi-hpc.org"
+CMD="ls -l /cvmfs/software.eessi.io"
 ./eessi_container.sh --mode shell <<< ${CMD}
 ```
 
@@ -195,7 +199,7 @@ CMD="ls -l /cvmfs/pilot.eessi-hpc.org"
 Because `shell` is the default value for `--mode` we can also omit this and
 simply run
 ``` { .bash .copy }
-CMD="ls -l /cvmfs/pilot.eessi-hpc.org"
+CMD="ls -l /cvmfs/software.eessi.io"
 ./eessi_container.sh <<< ${CMD}
 ```
 
@@ -219,12 +223,12 @@ Here are the contents for the `eessi_architectures.sh` script:
 #!/usr/bin/env bash
 #
 # This script determines which architectures are included in the
-# latest EESSI pilot version. It makes use of the specific directory
-# structure in the EESSI pilot repository.
+# latest EESSI version. It makes use of the specific directory
+# structure in the EESSI repository.
 #
 
 # determine list of available OS types
-BASE=${EESSI_CVMFS_REPO:-/cvmfs/pilot.eessi-hpc.org}/latest/software
+BASE=${EESSI_CVMFS_REPO:-/cvmfs/software.eessi.io}/latest/software
 cd ${BASE}
 for os_type in $(ls -d *)
 do
@@ -262,7 +266,7 @@ The output should be similar to
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).$
 Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
 linux/aarch64/generic
@@ -292,9 +296,9 @@ SINGULARITY_BIND=${PWD}:/scripts ./eessi_container.sh --mode run /scripts/eessi_
 ```
 ## Running scripts or commands with parameters starting with `-` or `--`
 Let's assume we would like to get more information about the entries of
-`/cvmfs/pilot.eessi-hpc.org`. If we would just run
+`/cvmfs/software.eessi.io`. If we would just run
 ``` { .bash .copy }
-./eessi_container.sh --mode run ls -lH /cvmfs/pilot.eessi-hpc.org
+./eessi_container.sh --mode run ls -lH /cvmfs/software.eessi.io
 ```
 we would get an error message such as
 ``` { .bash .no-copy }
@@ -304,7 +308,7 @@ We can resolve this in two ways:
 
 1. Using the `stdin` channel as described above, for example, by simply running
   ``` { .bash .copy }
-  CMD="ls -lH /cvmfs/pilot.eessi-hpc.org"
+  CMD="ls -lH /cvmfs/software.eessi.io"
   ./eessi_container.sh <<< ${CMD}
   ```
   which should result in the output similar to
@@ -312,7 +316,7 @@ We can resolve this in two ways:
   Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
   Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
   Launching container with command (next line):
-  singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+  singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
   CernVM-FS: pre-mounted on file descriptor 3
   CernVM-FS: loading Fuse module... done
   fuse: failed to clone device fd: Inappropriate ioctl for device
@@ -325,14 +329,14 @@ We can resolve this in two ways:
 2. Using the flag terminator `--` which tells `eessi_container.sh` to stop
 parsing command line arguments. For example,
   ``` { .bash .copy }
-  ./eessi_container.sh --mode run -- ls -lH /cvmfs/pilot.eessi-hpc.org
+  ./eessi_container.sh --mode run -- ls -lH /cvmfs/software.eessi.io
   ```
   which should result in the output similar to
   ``` { .yaml .no-copy }
   Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
   Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
   Launching container with command (next line):
-  singularity -q run --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls -lH /cvmfs/pilot.eessi-hpc.org
+  singularity -q run --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls -lH /cvmfs/software.eessi.io
   CernVM-FS: pre-mounted on file descriptor 3
   CernVM-FS: loading Fuse module... done
   fuse: failed to clone device fd: Inappropriate ioctl for device
@@ -346,7 +350,7 @@ parsing command line arguments. For example,
 ## Running EESSI demos
 
 For examples of scripts that use the software provided by EESSI,
-see [Running EESSI demos](../../using_eessi/eessi_demos).
+see [Running EESSI demos](../using_eessi/eessi_demos.md).
 
 ## Launching containers more quickly
 Subsequent runs of `eessi_container.sh` may reuse temporary data of a previous
@@ -360,14 +364,14 @@ not have to be downloaded again even when starting a new session. The example
 below illustrates this.
 ``` { .bash .copy }
 export SINGULARITY_CACHEDIR=${PWD}/container_cache_dir
-time ./eessi_container.sh <<< "ls /cvmfs/pilot.eessi-hpc.org"
+time ./eessi_container.sh <<< "ls /cvmfs/software.eessi.io"
 ```
 which should produce output similar to
 ``` { .yaml .no-copy }
 Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
 Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
 fuse: failed to clone device fd: Inappropriate ioctl for device
@@ -380,14 +384,14 @@ sys     0m7.402s
 ```
 The next run using the same cache directory, e.g., by simply executing
 ``` { .bash .copy }
-time ./eessi_container.sh <<< "ls /cvmfs/pilot.eessi-hpc.org"
+time ./eessi_container.sh <<< "ls /cvmfs/software.eessi.io"
 ```
 is much faster
 ``` { .yaml .no-copy }
 Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
 Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity -q shell --fusemount container:cvmfs2 pilot.eessi-hpc.org /cvmfs/pilot.eessi-hpc.org /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
 fuse: failed to clone device fd: Inappropriate ioctl for device

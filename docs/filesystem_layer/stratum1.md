@@ -13,7 +13,7 @@ The last two steps can be skipped if you want to host a "private" Stratum 1 for 
 ## Requirements for a Stratum 1
 
 The main requirements for a Stratum 1 server are a good network connection to the clients it is going to serve,
-and sufficient disk space. For the EESSI pilot, a few hundred gigabytes should suffice, but for production
+and sufficient disk space. For the EESSI repository, a few hundred gigabytes should suffice, but for production
 environments at least 1 TB would be recommended.
 
 In terms of cores and memory, a machine with just a few (~4) cores and 4-8 GB of memory should suffice.
@@ -101,7 +101,7 @@ When the playbook has finished your Stratum 1 should be ready. In order to test 
 without a client installed, you can use `curl`.
 
 ```bash
-curl --head http://<url-or-ip-to-your-stratum1>/cvmfs/pilot.eessi-hpc.org/.cvmfspublished
+curl --head http://<url-or-ip-to-your-stratum1>/cvmfs/software.eessi.io/.cvmfspublished
 ```
 This should return:
 
@@ -121,7 +121,7 @@ X-Cache: HIT from <url-or-ip-to-your-stratum1>
 Example with the Norwegian Stratum 1:
 
 ```bash
-curl --head http://bgo-no.stratum1.cvmfs.eessi-infra.org/cvmfs/pilot.eessi-hpc.org/.cvmfspublished
+curl --head http://bgo-no.stratum1.cvmfs.eessi-infra.org/cvmfs/software.eessi.io/.cvmfspublished
 ```
 
 You can also test access to your Stratum 1 from a client, for which you will have to install the CVMFS
@@ -142,19 +142,19 @@ sudo cvmfs_config setup
 If you already had configured the client before, you can simply reload the config:
 
 ```bash
-sudo cvmfs_config reload -c pilot.eessi-hpc.org
+sudo cvmfs_config reload -c software.eessi.io
 ```
 
 Finally, verify that the client connects to your new Stratum 1 by running:
 
 ```bash
-cvmfs_config stat -v pilot.eessi-hpc.org
+cvmfs_config stat -v software.eessi.io
 ```
 
 Assuming that your new Stratum 1 is the geographically closest one to your client, this should return:
 
 ```bash
-Connection: http://<url-or-ip-to-your-stratum1>/cvmfs/pilot.eessi-hpc.org through proxy DIRECT (online)
+Connection: http://<url-or-ip-to-your-stratum1>/cvmfs/software.eessi.io through proxy DIRECT (online)
 ```
 
 

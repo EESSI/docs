@@ -32,30 +32,40 @@ Each of these contains a ``run.sh`` script that can be used to start a small
 example run with that software. Every example takes a couple of minutes to run,
 even with limited resources only.
 
-## Example: running GROMACS
+## Example: running TensorFlow
 
-Let's try running the GROMACS example.
+Let's try running the TensorFlow example.
 
-First, we need to make sure that [our environment is set up to use EESSI](../setting_up_environment):
+First, we need to make sure that [our environment is set up to use EESSI](setting_up_environment.md):
 
 ``` { .bash .copy }
-source /cvmfs/pilot.eessi-hpc.org/latest/init/bash
+source /cvmfs/software.eessi.io/versions/2023.06/init/bash
 ```
 
-Change to the ``GROMACS`` subdirectory of the ``eessi-demo`` Git repository, and execute the ``run.sh`` script:
+Change to the ``TensorFlow`` subdirectory of the ``eessi-demo`` Git repository, and execute the ``run.sh`` script:
 
 ``` { .no-copy }
-[EESSI pilot 2021.12] $ cd GROMACS
-[EESSI pilot 2021.12] $ ./run.sh
+[EESSI 2023.06] $ cd TensorFlow
+[EESSI 2023.06] $ ./run.sh
 ```
 
 Shortly after starting the script you should see output as shown below, which indicates that GROMACS has started
 running:
 
 ``` { .no-copy }
-GROMACS:      gmx mdrun, version 2020.1-EasyBuild-4.5.0
-Executable:   /cvmfs/pilot.eessi-hpc.org/versions/2021.12/software/linux/x86_64/intel/haswell/software/GROMACS/2020.1-foss-2020a-Python-3.8.2/bin/gmx
-...
-starting mdrun 'Protein'
-1000 steps,      2.5 ps.
+Epoch 1/5
+   1875/1875 [==============================] - 3s 1ms/step - loss: 0.2983 - accuracy: 0.9140
+Epoch 2/5
+   1875/1875 [==============================] - 3s 1ms/step - loss: 0.1444 - accuracy: 0.9563
+Epoch 3/5
+   1875/1875 [==============================] - 3s 1ms/step - loss: 0.1078 - accuracy: 0.9670
+Epoch 4/5
+   1875/1875 [==============================] - 3s 1ms/step - loss: 0.0890 - accuracy: 0.9717
+Epoch 5/5
+   1875/1875 [==============================] - 3s 1ms/step - loss: 0.0732 - accuracy: 0.9772
+313/313 - 0s - loss: 0.0679 - accuracy: 0.9790 - 391ms/epoch - 1ms/step
+
+real   1m24.645s
+user   0m16.467s
+sys    0m0.910s
 ```

@@ -1,6 +1,6 @@
 # Overview of the EESSI project
 
-![EESSI logo](img/logos/EESSI_logo_horizontal_smaller.png)
+![EESSI logo](img/logos/EESSI_logo_horizontal_smaller.jpg)
 
 ## Scope & Goals
 
@@ -34,7 +34,7 @@ The EESSI project consists of 3 layers.
 
 ![EESSI overview](img/overview_layers.png)
 
-The bottom layer is the [**filesystem layer**](filesystem_layer),
+The bottom layer is the [**filesystem layer**](filesystem_layer.md),
 which is responsible for distributing the software stack across clients.
 
 The middle layer is a [**compatibility layer**](compatibility_layer.md),
@@ -76,7 +76,7 @@ There are many challenges in an ambitious project like this, including (but prob
 
 *(June 2020)*
 
-We are actively working on a pilot setup that has a limited scope,
+We are actively working on the EESSI repository,
 and are organizing monthly meetings to discuss progress and next steps forward.
 
 Keep an eye on our GitHub repositories at [https://github.com/EESSI](https://github.com/EESSI) and our [Twitter
