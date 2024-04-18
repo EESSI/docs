@@ -20,9 +20,8 @@ nav:
     - Project overview: overview.md
     - Filesystem layer: filesystem_layer.md
     - Compatibility layer: compatibility_layer.md
-    - Software layer: 
-      - Overview: software_layer.md
-      - CPU targets: software_layer/cpu_targets.md
+    - Software layer: software_layer.md
+    - Supported CPU targets: software_layer/cpu_targets.md
   - Installation:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
     - Native: getting_access/native_installation.md
@@ -34,8 +33,8 @@ nav:
   - Advanced usage:
     - Repositories:
       - Production: repositories/software.eessi.io.md
-      - Pilot: repositories/pilot.md
       - RISC-V: repositories/riscv.eessi.io.md
+      - Pilot: repositories/pilot.md
     - Setting up your Stratum: filesystem_layer/stratum1.md
     - Building software with EESSI: using_eessi/building_on_eessi.md
     - Test suite:
@@ -59,9 +58,9 @@ nav:
       - Deploying software: adding_software/deploying_software.md
       - Build nodes: software_layer/build_nodes.md
   - Known issues:
-    - pilot: None
-    - v2022.02: None
-    - v2023.06: None
+    - v2023.06: []
+    - v2022.02: []
+    - pilot: []
   - Community and support:
     - Getting support: support.md
     - Meetings: meetings.md
