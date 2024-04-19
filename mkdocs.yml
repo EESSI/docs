@@ -56,6 +56,8 @@ nav:
   # Todo: write on how to contribute to the EESSI test suite
   # - Contributing software tests to the EESSI test suite:
   - GPU support: gpu.md
+  - Known issues:
+    - v2023.06: known_issues/eessi-2023.06.md
   - Getting support: support.md
   - Meetings:
       - Overview: meetings.md
