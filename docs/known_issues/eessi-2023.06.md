@@ -12,7 +12,7 @@ See: https://github.com/easybuilders/easybuild-easyconfigs/issues/20233</p>
 
 <b>Workarounds</b>
 
-<p>You can instruct OpenMPI to not use libfabric by passing the following options to `mpirun`:</p>
+<p>You can instruct OpenMPI to not use libfabric and turn off `uct`(see https://openucx.readthedocs.io/en/master/running.html#running-mpi) by passing the following options to `mpirun`:</p>
 
 ```
 mpirun -mca pml ucx -mca btl '^uct,ofi' -mca mtl '^ofi'
