@@ -11,7 +11,7 @@ To configure EasyBuild, first, check out the [EESSI software-layer repository](h
 
 If you are unsure which version you are using, you can run
 ```
-echo ${EESSI_PILOT_VERSION}
+echo ${EESSI_VERSION}
 ```
 to check it.
 
