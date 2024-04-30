@@ -67,7 +67,32 @@ Finally, you should be able to load our newly build module:
 module load netCDF/4.9.0-gompi-2022a
 ```
 
-## Manually building software op top of EESSI
-Building software on top of EESSI would require your linker to use the same system-dependencies as the software in EESSI does. In other words: it requires you to link against libraries from the compatibility layer, instead of from your host OS.
+## Manually building software op top of EESSI (without EasyBuild)
 
-While we plan to support this in the future, manually building on top of EESSI is currently not supported yet in a trivial way.
+Building and running software on top of EESSI without EasyBuild is not as straightforward and requires some considerations to take care of. 
+
+Build time is trivial as long as EESSI toolchains are loaded, so the runtime linker from the compat-layer is used. The safest way to make sure all libraries will point to the required locations is starting an EESSI shell before building. Steps would be: 
+
+* First of all, load the environment by starting an EESSI shell as described [here](https://www.eessi.io/docs/using_eessi/setting_up_environment). 
+* Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it. 
+* Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used when checking the binary.
+* Once done, exit prefix shell or use another terminal to run your software.
+
+For runtime, as EESSI does not set `LD_LIBRARY_PATH`, the executable will need help finding the proper libraries. The easiest approach is to set this variable manually before running. Thus, assuming a new terminal with no EESSI shell loaded, you will need to:
+
+* Load dependencies for your software to run
+* Set manually `LD_LIBRARY_PATH` to resolve libraries at runtime
+```sh
+export LD_LIBRARY_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
+```
+* Run! 
+
+Note how this has to be done every time you want to run your software. A long term approach is to set add any library used by your software to the RPATH in your executable. This is also more reliable as your executable won't pick unexpected libraries from LD_LIBRARY_PATH.
+
+!!! Note No RPATH should point to a compatibility layer directory, only to software layer ones, as all resolving is done via `ld-linux*.so`.
+
+The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for. I. e, if you add to your executable RPATH a `libhdf5.so`compiled for `intel_avx512`, you will not be able to run that binary in a machine with a different architecture.
+
+!!! Note This documentation is intended for experts in runtime linker/runtime linker behaviour and most cases are untested. Any feedback on this topic is highly appreciated. 
+
+
