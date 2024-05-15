@@ -1764,7 +1764,7 @@ mounted in /srt. Then you change the relevant commands below to this:
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$EESSI_TMPDIR</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>mkdir<span class="w"> </span>/srt/tmp
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITY_BIND</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$EESSI_TMPDIR</span><span class="s2">/var-run-cvmfs:/var/run/cvmfs,</span><span class="nv">$EESSI_TMPDIR</span><span class="s2">/var-lib-cvmfs:/var/lib/cvmfs,/srt/tmp:/tmp&quot;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>singularity<span class="w"> </span>shell<span class="w"> </span>-B<span class="w"> </span>/srt<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EESSI_READONLY</span><span class="s2">&quot;</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EESSI_WRITABLE_OVERLAY</span><span class="s2">&quot;</span><span class="w"> </span>docker://ghcr.io/eessi/build-node:debian10
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>singularity<span class="w"> </span>shell<span class="w"> </span>-B<span class="w"> </span>/srt<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EESSI_READONLY</span><span class="s2">&quot;</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EESSI_WRITABLE_OVERLAY</span><span class="s2">&quot;</span><span class="w"> </span>docker://ghcr.io/eessi/build-node:debian11
 </code></pre></div></p>
 <p>We will assume that <code>/tmp/$USER/EESSI</code> meets these requirements:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_TMPDIR</span><span class="o">=</span>/tmp/<span class="nv">$USER</span>/EESSI
@@ -1783,7 +1783,7 @@ mounted in /srt. Then you change the relevant commands below to this:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_READONLY</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 software.eessi.io /cvmfs_ro/software.eessi.io&quot;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_WRITABLE_OVERLAY</span><span class="o">=</span><span class="s2">&quot;container:fuse-overlayfs -o lowerdir=/cvmfs_ro/software.eessi.io -o upperdir=</span><span class="nv">$EESSI_TMPDIR</span><span class="s2">/overlay-upper -o workdir=</span><span class="nv">$EESSI_TMPDIR</span><span class="s2">/overlay-work /cvmfs/software.eessi.io&quot;</span>
 </code></pre></div>
-<p>Start the container (which includes Debian 10, <a href="https://cernvm.cern.ch/fs/">CernVM-FS</a> and
+<p>Start the container (which includes Debian 11, <a href="https://cernvm.cern.ch/fs/">CernVM-FS</a> and
 <a href="https://github.com/containers/fuse-overlayfs">fuse-overlayfs</a>):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>singularity<span class="w"> </span>shell<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EESSI_READONLY</span><span class="s2">&quot;</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EESSI_WRITABLE_OVERLAY</span><span class="s2">&quot;</span><span class="w"> </span>docker://ghcr.io/eessi/build-node:debian10
 </code></pre></div>
@@ -1801,8 +1801,8 @@ you should get a prompt like this:</p>
 <h2 id="setting-up-the-environment">Setting up the environment<a class="headerlink" href="#setting-up-the-environment" title="Permanent link">&para;</a></h2>
 <p>Set up the environment by starting a Gentoo Prefix session using the <code>startprefix</code> command.</p>
 <p><strong>Make sure you use the correct version of the EESSI repository!</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_VERSION</span><span class="o">=</span><span class="s1">&#39;2023.06&#39;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>/cvmfs/software.eessi.io/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/compat/linux/<span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span>/startprefix
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_VERSION</span><span class="o">=</span><span class="s1">&#39;2023.06&#39;</span><span class="w"> </span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/compat/linux/<span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span>/startprefix
 </code></pre></div>
 <h2 id="installing-software">Installing software<a class="headerlink" href="#installing-software" title="Permanent link">&para;</a></h2>
 <p>Clone the <a href="https://github.com/EESSI/software-layer">software-layer</a> repository:</p>
@@ -1823,7 +1823,7 @@ you should get a prompt like this:</p>
 <p>Before tearing down the build node, you should create tarball to ingest into the EESSI CernVM-FS repository.</p>
 <p>To create a tarball of <em>all</em> installations, assuming your build host is <code>x86_64/intel/haswell</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_VERSION</span><span class="o">=</span><span class="s1">&#39;2023.06&#39;</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">cd</span><span class="w"> </span>/cvmfs/software.eessi.io/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/software/linux
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">cd</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/software/linux
 <a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nv">eessi_tar_gz</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/eessi-</span><span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span><span class="s2">-haswell.tar.gz&quot;</span>
 <a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>tar<span class="w"> </span>cvfz<span class="w"> </span><span class="si">${</span><span class="nv">eessi_tar_gz</span><span class="si">}</span><span class="w"> </span>x86_64/intel/haswell
 </code></pre></div>
@@ -1856,7 +1856,7 @@ If needed, you can ask for help in the
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2024</span>
   </span>
 
     
