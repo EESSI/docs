@@ -67,7 +67,9 @@ nav:
     - Talks: talks.md
         # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
     - Contact info: contact.md
+  - Blog: blog/index.md
 plugins:
+  - blog
   # show revision date at bottom of each page
   - git-revision-date-localized
   # necessary for search to work
