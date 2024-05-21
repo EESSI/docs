@@ -10,26 +10,30 @@ by making the EESSI CVMFS domain available, you will automatically have access t
 
 ## Using `riscv.eessi.io`
 
-This repository does not have any initialization scripts nor actual applications available yet.
-Also, it is not clear yet which RISC-V CPUs will be supported.
+This repository currently offers one version (20240402), and this contains both a compatibility layer and a software layer.
+Furthermore, initialization scripts are in place to set up the repository:
 
-The RISC-V compatibility layer is already available and can be used, as shown in the following example:
 
 ``` { .bash .copy }
-$ ls /cvmfs/riscv.eessi.io/versions/20240307/compat/linux/riscv64/
-bin  lib    opt     run   stage1.log  stage3.log   tmp  var
-etc  lib64  reprod  sbin  stage2.log  startprefix  usr
-
-$ /cvmfs/riscv.eessi.io/versions/20240307/compat/linux/riscv64/startprefix
-Entering Gentoo Prefix /cvmfs/riscv.eessi.io/versions/20240307/compat/linux/riscv64
-$ which gcc
-/cvmfs/riscv.eessi.io/versions/20240307/compat/linux/riscv64/usr/bin/gcc
-$ gcc --version
-gcc (Gentoo 13.2.1_p20240210 p14) 13.2.1 20240210
-Copyright (C) 2023 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+$ source /cvmfs/riscv.eessi.io/versions/20240402/init/bash
+Found EESSI repo @ /cvmfs/riscv.eessi.io/versions/20240402!
+archdetect says riscv64/generic
+Using riscv64/generic as software subdirectory.
+Found Lmod configuration file at /cvmfs/riscv.eessi.io/versions/20240402/software/linux/riscv64/generic/.lmod/lmodrc.lua
+Found Lmod SitePackage.lua file at /cvmfs/riscv.eessi.io/versions/20240402/software/linux/riscv64/generic/.lmod/SitePackage.lua
+Using /cvmfs/riscv.eessi.io/versions/20240402/software/linux/riscv64/generic/modules/all as the directory to be added to MODULEPATH.
+Initializing Lmod...
+Prepending /cvmfs/riscv.eessi.io/versions/20240402/software/linux/riscv64/generic/modules/all to $MODULEPATH...
+Environment set up to use EESSI (20240402), have fun!
+{EESSI 20240402} $
 ```
+
+Note that we currently only provide generic builds, hence `riscv64/generic` is being used for all RISC-V CPUs.
+
+The amount of software is constantly increasing.
+Besides having the `foss/2023b` toolchain available, applications like dlb, GROMACS, OSU Micro-Benchmarks, and R are already available as well.
+Use `module avail` to get a full and up-to-date listing of available software.
+
 
 ## Infrastructure status
 
