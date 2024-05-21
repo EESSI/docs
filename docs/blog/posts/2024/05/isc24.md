@@ -29,7 +29,7 @@ During this session, we introduced the EESSI project with a short presentation, 
 Linux virtual machine instance in Amazon EC2 and getting optimized installations of popular scientific applications like GROMACS and TensorFlow running in a matter of minutes.
 
 During the second part of the BoF session, we engaged with the audience
-through an **interactive poll** and letting attendees ask questions.
+through an **interactive poll** and by letting attendees ask questions.
 
 The **presentation slides**, including the results of the interactive poll and questions that were raised by attendees, are **available [here](https://raw.githubusercontent.com/EESSI/meetings/main/other/isc24/EESSI-ISC24-BoF-with-poll-results-20240514.pdf)**.
 
