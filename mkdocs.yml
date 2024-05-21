@@ -90,6 +90,8 @@ markdown_extensions:
   - attr_list
   # notes, warnings, hints, ...
   - admonition
+  # support for using MarkDown in HTML
+  - md_in_html
   # code blocks with syntax highlighting, graphs
   - pymdownx.superfences
   # line numbers
