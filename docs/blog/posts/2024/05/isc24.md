@@ -37,7 +37,7 @@ The **presentation slides**, including the results of the interactive poll and q
 
 ## Workshops
 
-During the last day of ISC'24, EESSI was present is no less than *three* different
+During the last day of ISC'24, EESSI was present in no less than *three* different
 workshops.
 
 ### RISC-V workshop
