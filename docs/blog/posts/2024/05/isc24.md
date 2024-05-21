@@ -122,7 +122,7 @@ Both Microsoft Azure and AWS have been graciously providing resources in their c
 ### EuroHPC booth
 
 The [MultiXscale EuroHPC Centre-of-Excellence](https://www.multixscale.eu) we
-are actively involved in, and through which the development of EESSI is being funded since Jan'23,
+are actively involved in, and through which the development of EESSI is being co-funded since Jan'23,
 was invited by the [EuroHPC JU](https://eurohpc-ju.europa.eu) to present the goals and
 preliminary achievements at their booth.
 
