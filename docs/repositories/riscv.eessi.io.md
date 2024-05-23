@@ -28,6 +28,29 @@ Environment set up to use EESSI (20240402), have fun!
 {EESSI 20240402} $
 ```
 
+You can even source the initialization script of the [`software.eessi.io` production repository](software.eessi.io.md) now,
+and it will automatically set up the RISC-V repository for you:
+``` { .bash .copy }
+$ source /cvmfs/software.eessi.io/versions/2023.06/init/bash 
+RISC-V architecture detected, but there is no RISC-V support yet in the production repository.
+Automatically switching to version 20240402 of the RISC-V development repository /cvmfs/riscv.eessi.io.
+For more details about this repository, see https://www.eessi.io/docs/repositories/riscv.eessi.io/.
+
+Found EESSI repo @ /cvmfs/riscv.eessi.io/versions/20240402!
+archdetect says riscv64/generic
+Using riscv64/generic as software subdirectory.
+Found Lmod configuration file at /cvmfs/riscv.eessi.io/versions/20240402/software/linux/riscv64/generic/.lmod/lmodrc.lua
+Found Lmod SitePackage.lua file at /cvmfs/riscv.eessi.io/versions/20240402/software/linux/riscv64/generic/.lmod/SitePackage.lua
+Using /cvmfs/riscv.eessi.io/versions/20240402/software/linux/riscv64/generic/modules/all as the directory to be added to MODULEPATH.
+Using /cvmfs/riscv.eessi.io/host_injections/20240402/software/linux/riscv64/generic/modules/all as the site extension directory to be added to MODULEPATH.
+Initializing Lmod...
+Prepending /cvmfs/riscv.eessi.io/versions/20240402/software/linux/riscv64/generic/modules/all to $MODULEPATH...
+Prepending site path /cvmfs/riscv.eessi.io/host_injections/20240402/software/linux/riscv64/generic/modules/all to $MODULEPATH...
+Environment set up to use EESSI (20240402), have fun!
+{EESSI 20240402} $ 
+
+```
+
 Note that we currently only provide generic builds, hence `riscv64/generic` is being used for all RISC-V CPUs.
 
 The amount of software is constantly increasing.
