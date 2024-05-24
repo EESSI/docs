@@ -436,7 +436,7 @@ Clean up disk usage by simply removing directories you do not need any longer.
 # EESSI container image
 
 If you would like to directly use an EESSI container image, you can do so
-by configuring `apptainer` to correctly run CVMFS:
+by configuring `apptainer` to correctly mount the CVMFS repository:
 
 ``` { .bash .copy }
 # honor $TMPDIR if it is already defined, use /tmp otherwise

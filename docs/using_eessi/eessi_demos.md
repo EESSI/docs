@@ -15,14 +15,14 @@ The contents of the directory should be something like this:
 ```
 $ ls -l
 total 48
-drwxrwxr-x 2 alanc alanc  4096 May 15 13:26 Bioconductor
-drwxrwxr-x 2 alanc alanc  4096 May 15 13:26 ESPResSo
-drwxrwxr-x 2 alanc alanc  4096 May 15 13:26 GROMACS
--rw-rw-r-- 1 alanc alanc 18092 Dec  5  2022 LICENSE
-drwxrwxr-x 2 alanc alanc  4096 May 15 13:26 OpenFOAM
--rw-rw-r-- 1 alanc alanc   543 May 15 13:26 README.md
-drwxrwxr-x 3 alanc alanc  4096 May 15 13:26 scripts
-drwxrwxr-x 2 alanc alanc  4096 May 15 13:26 TensorFlow
+drwxrwxr-x 2 example users  4096 May 15 13:26 Bioconductor
+drwxrwxr-x 2 example users  4096 May 15 13:26 ESPResSo
+drwxrwxr-x 2 example users  4096 May 15 13:26 GROMACS
+-rw-rw-r-- 1 example users 18092 Dec  5  2022 LICENSE
+drwxrwxr-x 2 example users  4096 May 15 13:26 OpenFOAM
+-rw-rw-r-- 1 example users   543 May 15 13:26 README.md
+drwxrwxr-x 3 example users  4096 May 15 13:26 scripts
+drwxrwxr-x 2 example users  4096 May 15 13:26 TensorFlow
 ```
 
 The directories we care about are those that correspond to particular scientific software,
