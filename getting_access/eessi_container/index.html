@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eessi-container" class="md-skip">
+        <a href="#eessi-container-script" class="md-skip">
           Skip to content
         </a>
       
@@ -1841,9 +1841,10 @@
   
 
 
-<h1 id="eessi-container">EESSI container<a class="headerlink" href="#eessi-container" title="Permanent link">&para;</a></h1>
+<h1 id="eessi-container-script">EESSI container script<a class="headerlink" href="#eessi-container-script" title="Permanent link">&para;</a></h1>
 <p>The <code>eessi_container.sh</code> script provides a very easy yet versatile means
-to access EESSI.</p>
+to access EESSI. It is the preferred method to start an EESSI container
+as it has support for many different scenarios via various options.</p>
 <p>This page guides you through several example scenarios
 illustrating the use of the script.</p>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
@@ -2228,6 +2229,23 @@ which could result in output similar to
 <a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="l l-Scalar l-Scalar-Plain">997M    total</span>
 </code></pre></div>
 Clean up disk usage by simply removing directories you do not need any longer.</p>
+<h1 id="eessi-container-image">EESSI container image<a class="headerlink" href="#eessi-container-image" title="Permanent link">&para;</a></h1>
+<p>If you would like to directly use an EESSI container image, you can do so
+by configuring <code>apptainer</code> to correctly mount the CVMFS repository:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># honor $TMPDIR if it is already defined, use /tmp otherwise</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="nv">$TMPDIR</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">WORKDIR</span><span class="o">=</span>/tmp/<span class="nv">$USER</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="k">else</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">WORKDIR</span><span class="o">=</span><span class="nv">$TMPDIR</span>/<span class="nv">$USER</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="k">fi</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">WORKDIR</span><span class="si">}</span>/<span class="o">{</span>var-lib-cvmfs,var-run-cvmfs,home<span class="o">}</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITY_BIND</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">WORKDIR</span><span class="si">}</span><span class="s2">/var-run-cvmfs:/var/run/cvmfs,</span><span class="si">${</span><span class="nv">WORKDIR</span><span class="si">}</span><span class="s2">/var-lib-cvmfs:/var/lib/cvmfs&quot;</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITY_HOME</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">WORKDIR</span><span class="si">}</span><span class="s2">/home:/home/</span><span class="nv">$USER</span><span class="s2">&quot;</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_REPO</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io&quot;</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_CONTAINER</span><span class="o">=</span><span class="s2">&quot;docker://ghcr.io/eessi/client:centos7&quot;</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>singularity<span class="w"> </span>shell<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EESSI_REPO</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EESSI_CONTAINER</span><span class="s2">&quot;</span>
+</code></pre></div>
 
 
 
@@ -2248,7 +2266,7 @@ Clean up disk usage by simply removing directories you do not need any longer.</
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 24, 2024</span>
   </span>
 
     
