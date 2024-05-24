@@ -14,15 +14,15 @@ The contents of the directory should be something like this:
 
 ```
 $ ls -l
-drwxr-xr-x  5 example  users    160 Nov 23  2020 Bioconductor
-drwxr-xr-x  3 example  users     96 Jan 26 20:17 CitC
-drwxr-xr-x  5 example  users    160 Jan 26 20:17 GROMACS
--rw-r--r--  1 example  users  18092 Jan 26 20:17 LICENSE
-drwxr-xr-x  3 example  users     96 Jan 26 20:17 Magic_Castle
-drwxr-xr-x  4 example  users    128 Nov 24  2020 OpenFOAM
--rw-r--r--  1 example  users    546 Jan 26 20:17 README.md
-drwxr-xr-x  5 example  users    160 Nov 23  2020 TensorFlow
-drwxr-xr-x  6 example  users    192 Jan 26 20:17 scripts
+total 48
+drwxrwxr-x 2 example users  4096 May 15 13:26 Bioconductor
+drwxrwxr-x 2 example users  4096 May 15 13:26 ESPResSo
+drwxrwxr-x 2 example users  4096 May 15 13:26 GROMACS
+-rw-rw-r-- 1 example users 18092 Dec  5  2022 LICENSE
+drwxrwxr-x 2 example users  4096 May 15 13:26 OpenFOAM
+-rw-rw-r-- 1 example users   543 May 15 13:26 README.md
+drwxrwxr-x 3 example users  4096 May 15 13:26 scripts
+drwxrwxr-x 2 example users  4096 May 15 13:26 TensorFlow
 ```
 
 The directories we care about are those that correspond to particular scientific software,
