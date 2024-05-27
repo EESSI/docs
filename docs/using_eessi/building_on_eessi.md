@@ -71,7 +71,7 @@ module load netCDF/4.9.0-gompi-2022a
 
 Building and running software on top of EESSI without EasyBuild is not as straightforward and requires some considerations to take care of. 
 
-Build time is trivial as long as EESSI toolchains are loaded, so the runtime linker from the compat-layer is used. The safest way to make sure all libraries will point to the required locations is starting an EESSI shell before building. Steps would be: 
+It is expected that you will have loaded all of your required dependencies as modules from the EESSI environment. Since EESSI sets `LIBRARY_PATH` for all of the modules and the `GCC` compiler is configured to use the compat layer, there should be no additional configuration required to execute a standard build process. The safest way to make sure all libraries will point to the required locations (and do not leak in from the host operating system) is starting an EESSI prefix shell before building. To do this: 
 
 * First of all, load the environment by starting an EESSI shell as described [here](https://www.eessi.io/docs/using_eessi/setting_up_environment). 
 * Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it. 
