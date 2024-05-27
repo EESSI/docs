@@ -106,6 +106,3 @@ Note how this has to be done every time you want to run your software. A long te
 
 The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for, i.e., if you add to your executable RPATH a `libhdf5.so`compiled for `intel_avx512`, you will not be able to run that binary in a machine with a different architecture. If this is an issue for you, you should look into how EESSI itself organises the location of binaries and perhaps leverage the relevant environment variables (e.g., `EESSI_SOFTWARE_SUBDIR`).
 
-!!! Note This documentation is intended for experts in runtime linker/runtime linker behaviour and most cases are untested. Any feedback on this topic is highly appreciated. 
-
-
