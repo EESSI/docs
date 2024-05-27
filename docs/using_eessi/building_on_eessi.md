@@ -76,7 +76,7 @@ It is expected that you will have loaded all of your required dependencies as mo
 * First of all, load the environment by starting an EESSI shell as described [here](https://www.eessi.io/docs/using_eessi/setting_up_environment). 
 * Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it (`foss` is a good option as it will also include MPI with OpenMPI and math libraries via FlexiBLAS/FFTW). 
 * Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used when checking the binary.
-* Once done, exit prefix shell or use another terminal to run your software.
+* Once done, exit the EESSI prefix shell (with `exit`) or use another terminal to run your software.
 
 For runtime, as EESSI does not set `LD_LIBRARY_PATH`, the executable will need help finding the proper libraries. The easiest approach is to set this variable manually before running. Thus, assuming a new terminal with no EESSI shell loaded, you will need to:
 
