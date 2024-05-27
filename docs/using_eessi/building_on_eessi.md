@@ -87,7 +87,7 @@ export LD_LIBRARY_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
 ```
 * Run! 
 
-Note how this has to be done every time you want to run your software. A long term approach is to set add any library used by your software to the RPATH in your executable. This is also more reliable as your executable won't pick unexpected libraries from LD_LIBRARY_PATH.
+Note how this has to be done every time you want to run your software. A long term approach is to set add any library used by your software to the RPATH in your executable. This is also more reliable as your executable won't pick unexpected libraries from `LD_LIBRARY_PATH`.
 
 !!! Note No RPATH should point to a compatibility layer directory, only to software layer ones, as all resolving is done via `ld-linux*.so`.
 
