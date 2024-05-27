@@ -85,6 +85,7 @@ EESSI does not set `LD_LIBRARY_PATH`, so at runtime the executable will need hel
 ```sh
 export LD_LIBRARY_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
 ```
+   With this approach we leverage the fact that `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to `libstdc++` from our GCC installation
 * Run! 
 
 Note how this has to be done every time you want to run your software. A long term approach is to set add any library used by your software to the RPATH in your executable. This is also more reliable as your executable won't pick unexpected libraries from `LD_LIBRARY_PATH`.
