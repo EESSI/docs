@@ -78,7 +78,7 @@ It is expected that you will have loaded all of your required dependencies as mo
 * Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used when checking the binary.
 * Once done, exit the EESSI prefix shell (with `exit`) or use another terminal to run your software.
 
-For runtime, as EESSI does not set `LD_LIBRARY_PATH`, the executable will need help finding the proper libraries. The easiest approach is to set this variable manually before running. Thus, assuming a new terminal with no EESSI shell loaded, you will need to:
+EESSI does not set `LD_LIBRARY_PATH`, so at runtime the executable will need help finding the proper libraries that it needs. The easiest approach is to set this variable manually before running your compiled application. Thus, assuming a new terminal with no EESSI shell loaded, you will need to:
 
 * Load dependencies for your software to run
 * Set manually `LD_LIBRARY_PATH` to resolve libraries at runtime
