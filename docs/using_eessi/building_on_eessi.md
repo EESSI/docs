@@ -69,6 +69,18 @@ module load netCDF/4.9.0-gompi-2022a
 
 ## Manually building software op top of EESSI (without EasyBuild)
 
+!!! warning
+
+    We are working on a module file that should make building on top of EESSI (without using EasyBuild)
+    more straightforward, particularly when using `Autotools` or `CMake`. Right now, it is a little convoluted
+    and requires you to have a decent grasp of
+    * What a runtime linker (`ld-linux*.so`) is and does
+    * How to influence the behaviour of the runtime linker with `LD_LIBRARY_PATH`
+    * The difference between `LIBRARY_PATH` and `LD_LIBRARY_PATH`
+    
+    As such, this documentation is intended for "experts" in the runtime linker and it's behaviour,
+    and most cases are untested. Any feedback on this topic is highly appreciated. 
+    
 Building and running software on top of EESSI without EasyBuild is not as straightforward and requires some considerations to take care of. 
 
 It is expected that you will have loaded all of your required dependencies as modules from the EESSI environment. Since EESSI sets `LIBRARY_PATH` for all of the modules and the `GCC` compiler is configured to use the compat layer, there should be no additional configuration required to execute a standard build process. The safest way to make sure all libraries will point to the required locations (and do not leak in from the host operating system) is starting an EESSI prefix shell before building. To do this: 
