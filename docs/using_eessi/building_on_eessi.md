@@ -89,7 +89,7 @@ export LD_LIBRARY_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
 
 Note how this has to be done every time you want to run your software. A long term approach is to set add any library used by your software to the RPATH in your executable. This is also more reliable as your executable won't pick unexpected libraries from `LD_LIBRARY_PATH`.
 
-!!! Note No RPATH should point to a compatibility layer directory, only to software layer ones, as all resolving is done via `ld-linux*.so`.
+!!! Note RPATH should never point to a compatibility layer directory, only to software layer ones, as all resolving is done via the runtime linker (`ld-linux*.so`)  that is shipped with EESSI, which automatically searches these locations.
 
 The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for. I. e, if you add to your executable RPATH a `libhdf5.so`compiled for `intel_avx512`, you will not be able to run that binary in a machine with a different architecture.
 
