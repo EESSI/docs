@@ -260,7 +260,7 @@ Now, exit the container, paying attention to the instructions that are printed t
 Saved contents of tmp directory '/tmp/eessi.WZxeFUemH2' to tarball '/home/myuser/pr507/EESSI-1711538681.tgz' (to resume session add '--resume /home/myuser/pr507/EESSI-1711538681.tgz')
 ```
 
-Now, continue with the original instructions to start the container (i.e. either [here](#starting-a-shell-in-the-eessi-container) or [with this alternate approach](#more-efficient-approach-for-multiplecontinued-debugging-sessions)) and make sure to add the `--resume` flag. This way, you are resuming from the tarball (i.e. with the software removed that has to be rebuild), but in a new container in which you have regular (i.e. no root) permissions.
+Now, continue with the original instructions to start the container (i.e. either [here](#starting-a-shell-in-the-eessi-container) or [with this alternate approach](#more-efficient-approach-for-multiplecontinued-debugging-sessions)) and make sure to add the `--resume` flag. This way, you are resuming from the tarball (i.e. with the software removed that has to be rebuilt), but in a new container in which you have regular (i.e. no root) permissions.
 
 ## Known causes of issues in EESSI
 
