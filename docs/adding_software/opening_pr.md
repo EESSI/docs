@@ -100,13 +100,13 @@ git push koala example_branch
 ### Rebuilding software
 We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using the software. However, there are certain situations in which it is difficult or impossible to avoid.
 
-To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` directory. Use the following naming convention: `YYYYMMDD-eb-<EB_VERSION>-<APPLICATION_NAME>-<APPLICATION_VERSION>-<SHORT_DESCRIPTION>.yml`. As comments, please include a short description at the top of this easystack file, including any relevant links to external issues (e.g. from the github repositories of EESSI, EasyBuild, or the software you are rebuilding).
+To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` directory. Use the following naming convention: `YYYYMMDD-eb-<EB_VERSION>-<APPLICATION_NAME>-<APPLICATION_VERSION>-<SHORT_DESCRIPTION>.yml`, where `YYYYMMDD` is the opening date of your PR. E.g. `2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml` was added in a PR on the 6th of May 2024 and used to rebuild CUDA-12.1.1 using EasyBuild 4.9.1 to resolve an issue with some runtime libraries missing from the initial CUDA 12.1.1 installation.
 
-For example, our original CUDA-12.1.1 installation missed part of the runtime libraries. Thus, it was rebuild using the following easystack file:
+At the top of your easystack file, please use comments to include a short description, and make sure to include any relevant links to related issues (e.g. from the GitHub repositories of EESSI, EasyBuild, or the software you are rebuilding).
+
+As an example, consider the full easystack file (`2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml`) used for the aforementioned CUDA rebuild: 
 
 ```yaml
-# easystacks/software.eessi.io/2023.06/rebuilds/2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml
-
 # 2024.05.06
 # Original matching of files we could ship was not done correctly. We were
 # matching the basename for files (e.g., libcudart.so from libcudart.so.12)
