@@ -100,9 +100,22 @@ git push koala example_branch
 ### Rebuilding software
 We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using the software. However, there are certain situations in which it is difficult or impossible to avoid.
 
-To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` directory. Include the current date (YYYYMMDD) in the name of the EasyStack file. E.g.:
-```shell
-echo '  - example-1.2.3-GCC-12.3.0.eb' >> easystacks/software.eessi.io/2023.06/rebuilds/20240327-eessi-2023.06-eb-4.9.0-2023a.yml
+To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` directory. Use the following naming convention: `YYYYMMDD-eb-<EB_VERSION>-<APPLICATION_NAME>-<APPLICATION_VERSION>-<SHORT_DESCRIPTION>.yml`. As comments, please include a short description at the top of this easystack file, including any relevant links to external issues (e.g. from the github repositories of EESSI, EasyBuild, or the software you are rebuilding).
+
+For example, our original CUDA-12.1.1 installation missed part of the runtime libraries. Thus, it was rebuild using the following easystack file:
+
+```yaml
+# easystacks/software.eessi.io/2023.06/rebuilds/2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml
+
+# 2024.05.06
+# Original matching of files we could ship was not done correctly. We were
+# matching the basename for files (e.g., libcudart.so from libcudart.so.12)
+# rather than the name stub (libcudart)
+# See https://github.com/EESSI/software-layer/pull/559
+easyconfigs:
+  - CUDA-12.1.1.eb:
+        options:
+                accept-eula-for: CUDA
 ```
 
-By separating rebuilds in dedicated files, we still maintain a complete software bill of materials: it is transparent what got rebuild, and when.
+By separating rebuilds in dedicated files, we still maintain a complete software bill of materials: it is transparent what got rebuilt, for which reason, and when.
