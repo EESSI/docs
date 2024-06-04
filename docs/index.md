@@ -25,6 +25,7 @@ For users:
 
 * [`software.eessi.io` repository](repositories/software.eessi.io.md)
 * [Access](getting_access/is_eessi_accessible.md), [initialize](using_eessi/setting_up_environment.md) and [use](using_eessi/basic_commands.md) EESSI
+* [Overview of software](available_software/overview.md)
 * [How to run EESSI test suite](test-suite/index.md)
 * [Get help or report issue](support.md)
   

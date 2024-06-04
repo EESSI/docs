@@ -30,7 +30,7 @@ nav:
     - Set up environment: using_eessi/setting_up_environment.md
     - Basic commands: using_eessi/basic_commands.md
     - Demos: using_eessi/eessi_demos.md
-    - Available software: available_software/overview.md
+  - Available software: available_software/overview.md
   - Advanced usage:
     - Repositories:
       - Production: repositories/software.eessi.io.md
