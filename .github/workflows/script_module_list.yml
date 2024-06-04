@@ -3,7 +3,7 @@ name: Module overview script (lint + test)
 on:
   push:
     paths:
-      - 'scripts/README.mds/**'
+      - 'scripts/**'
       - './.github/**'
   pull_request:
     paths:
