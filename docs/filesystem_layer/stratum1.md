@@ -79,15 +79,6 @@ create a symlink before running the playbook:
 sudo ln -s /lots/of/space/cvmfs /srv/cvmfs
 ```
 
-Alternatively, you can instruct the Ansible role to create a file system (e.g. ext4) on a given storage device
-and mount it at `/srv` by adding the following variable
-in `inventory/host_vars/<url-or-ip-to-your-stratum1>`:
-
-```bash
-cvmfs_srv_device: /dev/somedevice
-cvmfs_srv_fstype: ext4
-```
-
 Also make sure that you have added the hostname or IP address of your server to the
 `inventory/hosts` file, that you are able to log in to the server from the machine that is going to run the playbook
 (preferably using an SSH key), and that you can use `sudo`. 
