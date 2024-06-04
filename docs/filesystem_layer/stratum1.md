@@ -117,32 +117,11 @@ curl --head http://aws-eu-central-s1.eessi.science/cvmfs/software.eessi.io/.cvmf
 
 ### Verification of the Stratum 1 using a CVMFS client
 
-You can also test access to your Stratum 1 from a client, for which you will have to install the CVMFS
-[client](https://github.com/EESSI/filesystem-layer#clients). 
+You can, of course, also test access to your Stratum 1 from a client.
+This requires you to install a CernVM-FS client and add the Stratum 1 to the client configuration;
+this is explained in more detail on the [native installation page](getting_access/native_installation.md).
 
-Then run the following command to prepend your newly created Stratum 1 to the existing list of EESSI Stratum 1 servers by creating a local CVMFS configuration file:
-
-```bash
-echo 'CVMFS_SERVER_URL="http://<url-or-ip-to-your-stratum1>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi.io.local
-```
-
-!!! note
-    By prepending your new Stratum 1 to the list of existing Stratum 1 servers, your clients should by default use the private Stratum 1.
-    In case of downtime of your private Stratum 1, they will also still be able to make use of the public EESSI Stratum 1 servers.
-
-If this is the first time you set up the client, you now run:
-
-```bash
-sudo cvmfs_config setup
-```
-
-If you already had configured the client before, you can simply reload the config:
-
-```bash
-sudo cvmfs_config reload -c software.eessi.io
-```
-
-Finally, verify that the client connects to your new Stratum 1 by running:
+Then verify that the client connects to your new Stratum 1 by running:
 
 ```bash
 cvmfs_config stat -v software.eessi.io
