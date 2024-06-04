@@ -1349,6 +1349,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rebuilding-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-the-test-step" class="md-nav__link">
     <span class="md-ellipsis">
       Running the test step
@@ -1950,6 +1959,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rebuilding-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebuilding software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-the-test-step" class="md-nav__link">
     <span class="md-ellipsis">
       Running the test step
@@ -2197,26 +2215,44 @@ After some time, this build fails while trying to build <code>Plumed</code>, and
 <p class="admonition-title">Note</p>
 <p>While this might be faster than the easystack-based approach, this is <em>not</em> how the bot builds. So why it <em>may</em> reproduce the failure the bot encounters, it may not reproduce the bug <em>at all</em> (no failure) or run into <em>different</em> bugs. If you want to be sure, use the easystack-based approach.</p>
 </div>
+<h2 id="rebuilding-software">Rebuilding software<a class="headerlink" href="#rebuilding-software" title="Permanent link">&para;</a></h2>
+<p><a href="../opening_pr/#rebuilding_software">Rebuilding software</a> requires an additional step at the beginning: the software first needs to be removed. We assume you've already <a href="#fetching-the-feature-branch">checked out the feature branch</a>. Then, you need to start the container with the additional <code>--fakeroot</code> argument, otherwise you will not be able to remove files from the <code>/cvmfs</code> prefix. Make sure to also include the <code>--save</code> argument, as we will need the tarball later on. E.g.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir} --fakeroot
+</code></pre></div>
+Then, initialize the EESSI environment
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
+</code></pre></div>
+and get the diff file for the corresponding PR, e.g. for PR 123:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>wget https://github.com/EESSI/software-layer/pull/123.diff
+</code></pre></div>
+Finally, run the <code>EESSI-remove-software.sh</code> script
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>./EESSI-remove-software.sh`
+</code></pre></div></p>
+<p>This should remove any software specified in a <a href="../opening_pr/#rebuilding_software">rebuild easystack</a> that got added in your current feature branch.</p>
+<p>Now, exit the container, paying attention to the instructions that are printed to resume later, e.g.:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Saved contents of tmp directory &#39;/tmp/eessi.WZxeFUemH2&#39; to tarball &#39;/home/myuser/pr507/EESSI-1711538681.tgz&#39; (to resume session add &#39;--resume /home/myuser/pr507/EESSI-1711538681.tgz&#39;)
+</code></pre></div>
+<p>Now, continue with the original instructions to start the container (i.e. either <a href="#starting-a-shell-in-the-eessi-container">here</a> or <a href="#more-efficient-approach-for-multiplecontinued-debugging-sessions">with this alternate approach</a>) and make sure to add the <code>--resume</code> flag. This way, you are resuming from the tarball (i.e. with the software removed that has to be rebuilt), but in a new container in which you have regular (i.e. no root) permissions.</p>
 <h2 id="running-the-test-step">Running the test step<a class="headerlink" href="#running-the-test-step" title="Permanent link">&para;</a></h2>
 <p>If you are still in the prefix layer (i.e. after previously building something), exit it first:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ exit
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>logout
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>Leaving Gentoo Prefix with exit status 0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>$ exit
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>logout
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>Leaving Gentoo Prefix with exit status 0
 </code></pre></div>
 Then, source the EESSI init script (again):
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Apptainer&gt; source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Environment set up to use EESSI (2023.06), have fun!
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>{EESSI 2023.06} Apptainer&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Apptainer&gt; source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>Environment set up to use EESSI (2023.06), have fun!
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>{EESSI 2023.06} Apptainer&gt;
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are in a SLURM environment, make sure to run <code>for i in $(env | grep SLURM); do unset "${i%=*}"; done</code> to unset any SLURM environment variables. Failing to do so will cause <code>mpirun</code> to pick up on these and e.g. infer how many slots are available. If you run into errors of the form "There are not enough slots available in the system to satisfy the X slots that were requested by the application:", you probably forgot this step.</p>
 </div>
 <p>Then, execute the <code>run_tests.sh</code> script. We are assuming you are still in the root of the <code>software-layer</code> repository that you cloned earlier:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>./run_tests.sh
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>./run_tests.sh
 </code></pre></div>
 if all goes well, you should see (part of) the EESSI test suite being run by ReFrame, finishing with something like</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>[  PASSED  ] Ran X/Y test case(s) from Z check(s) (0 failure(s), 0 skipped, 0 aborted)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>[  PASSED  ] Ran X/Y test case(s) from Z check(s) (0 failure(s), 0 skipped, 0 aborted)
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2226,23 +2262,23 @@ if all goes well, you should see (part of) the EESSI test suite being run by ReF
 <h3 id="the-custom-system-prefix-of-the-compatibility-layer">The custom system prefix of the compatibility layer<a class="headerlink" href="#the-custom-system-prefix-of-the-compatibility-layer" title="Permanent link">&para;</a></h3>
 <p>Some installations might expect the system root (sysroot, for short) to be in <code>/</code>. However, in case of EESSI, we are building against the OS in the <a href="../../compatibility_layer/">compatibility layer</a>. Thus, our sysroot is something like <code>${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}</code>. This <em>can</em> cause issues if installation procedures <em>assume</em> the sysroot is in <code>/</code>.</p>
 <p>One example of a sysroot <a href="https://github.com/EESSI/software-layer/pull/370#issuecomment-1774744151">issue</a> was in installing <code>wget</code>. The EasyConfig for <code>wget</code> defined
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a># make sure pkg-config picks up system packages (OpenSSL &amp; co)
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>preconfigopts = &quot;export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; &quot;
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>configopts = &#39;--with-ssl=openssl &#39;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a># make sure pkg-config picks up system packages (OpenSSL &amp; co)
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>preconfigopts = &quot;export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; &quot;
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>configopts = &#39;--with-ssl=openssl &#39;
 </code></pre></div>
 This will not work in EESSI, since the OpenSSL should be picked up from the compatibility layer. This was fixed by changing the EasyConfig to read
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>preconfigopts = &quot;export PKG_CONFIG_PATH=%(sysroot)s/usr/lib64/pkgconfig:%(sysroot)s/usr/lib/pkgconfig:%(sysroot)s/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; &quot;
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>configopts = &#39;--with-ssl=openssl
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>preconfigopts = &quot;export PKG_CONFIG_PATH=%(sysroot)s/usr/lib64/pkgconfig:%(sysroot)s/usr/lib/pkgconfig:%(sysroot)s/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; &quot;
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>configopts = &#39;--with-ssl=openssl
 </code></pre></div>
 The <code>%(sysroot)s</code> is a template value which EasyBuild will resolve to the value that has been configured in EasyBuild for <code>sysroot</code> (it is one of the fields printed by <code>eb --show-config</code> if a non-standard sysroot is configured).</p>
 <p>If you encounter issues where the installation can not find something that is <em>normally</em> provided by the OS (i.e. <em>not</em> one of the dependencies in your module environment), you may need to resort to a similar approach.</p>
 <h3 id="the-writeable-overlay">The writeable overlay<a class="headerlink" href="#the-writeable-overlay" title="Permanent link">&para;</a></h3>
 <p>The writeable overlay in the container is known to be a bit slow sometimes. Thus, we have seen tests failing because they exceed some timeout (e.g. <a href="https://github.com/EESSI/software-layer/pull/332#issuecomment-1775374260">this issue</a>).</p>
 <p>To investigate if the writeable overlay is somehow the issue, you can make sure the installation gets done somewhere else, e.g. in the temporary directory in <code>/tmp</code> that you created as workdir. To do this, set</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>export EASYBUILD_INSTALLPATH=${WORKDIR}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>export EASYBUILD_INSTALLPATH=${WORKDIR}
 </code></pre></div>
 <p><em>after</em> the step in which you have sourced the <code>configure_easybuild</code> script. Note that in order to find (with <code>module av</code>) any modules that get installed here, you will need to add this path to the <code>MODULEPATH</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>module use ${EASYBUILD_INSTALLPATH}/modules/all
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>module use ${EASYBUILD_INSTALLPATH}/modules/all
 </code></pre></div>
 <p>Then, retry building the software (as described above). If the build now succeeds, you know that indeed the writeable overlay caused the issue. We <em>have</em> to build in this writeable overlay when we do real deployments. Thus, if you hit such a timeout, try to see if you can (temporarily) modify the timeout value in the test so that it passes.</p>
 
