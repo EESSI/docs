@@ -247,7 +247,11 @@ Then, initialize the EESSI environment
 ```
 source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
 ```
-and run the `EESSI-remove-software.sh` script
+and get the diff file for the corresponding PR, e.g. for PR 123:
+```
+wget https://github.com/EESSI/software-layer/pull/123.diff
+```
+Finally, run the `EESSI-remove-software.sh` script
 ```
 ./EESSI-remove-software.sh`
 ```
