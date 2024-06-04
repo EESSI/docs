@@ -218,7 +218,7 @@ if all goes well, you should see (part of) the EESSI test suite being run by ReF
 ```
 
 !!! Note
-    If you are running on a system with hyperthreading enabled, you may still run into the "There are not enough slots available in the system to satisfy the X slots that were requested by the application:" error from `mpirun`, because hardware threads are not considered to be slots by default by OpenMPIs `mpirun`. In this case, run with `OMPI_MCA_hwloc_base_use_hwthreads_as_cpus=1./run_tests.sh` (for OpenMPI 4.X) or `PRTE_MCA_rmaps_default_mapping_policy=:hwtcpus ./run_tests.sh` (for OpenMPI 5.X).
+    If you are running on a system with hyperthreading enabled, you may still run into the "There are not enough slots available in the system to satisfy the X slots that were requested by the application:" error from `mpirun`, because hardware threads are not considered to be slots by default by OpenMPIs `mpirun`. In this case, run with `OMPI_MCA_hwloc_base_use_hwthreads_as_cpus=1 ./run_tests.sh` (for OpenMPI 4.X) or `PRTE_MCA_rmaps_default_mapping_policy=:hwtcpus ./run_tests.sh` (for OpenMPI 5.X).
 
 ## Known causes of issues in EESSI
 
