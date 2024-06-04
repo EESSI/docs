@@ -1,0 +1,55 @@
+name: Update overview of available software in EESSI
+on:
+  - workflow_dispatch
+jobs:
+  update_available_software:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          architecture: x64
+
+      - name: Mount EESSI
+        uses: eessi/github-action-eessi@v3.1.0
+        with:
+          eessi_stack_version: '2023.06'
+
+      - name: update overview of available software
+        id: update_available_software
+        run: |
+          cd scripts/available_software
+
+          # install required Python packages in virtual environment
+          python -m venv venv
+          . venv/bin/activate
+          pip install -r requirements.txt
+
+          python available_software.py
+          git status
+
+          # determine whether pull request should be opened:
+          # if JSON files in docs/available_software/data have been updated, then a PR should be opened
+          json_data_changed=$((git diff --exit-code ../../docs/available_software/data > /dev/null && echo 'no') || echo 'yes')
+          if [[ ${json_data_changed} == "yes" ]]; then
+            echo "JSON files in docs/available_software/data have been changed, PR should be opened"
+          else
+            echo "JSON files in docs/available_software/data have not been changed, no need to open PR"
+          fi
+          echo "json_data_changed=${json_data_changed}" >> $GITHUB_OUTPUT
+
+      - name: create pull request
+        uses: peter-evans/create-pull-request@v6
+        if: steps.update_available_software.outputs.json_data_changed == 'yes'
+        with:
+          add-paths: docs/available_software
+          branch: update-software-overview
+          branch-suffix: timestamp
+          commit-message: update overview of available software
+          title: update overview of available software
+          body: ''
+          token: ${{ secrets.EESSIBOT_GITHUB_TOKEN }}
+          push-to-fork: EESSIbot/docs
