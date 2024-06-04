@@ -135,7 +135,7 @@ export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${E
 ```
 
 ## Building software with the `EESSI-install-software.sh` script
-The Automatic build and deploy [bot](../bot.md) installs software by executing the `EESSI-install-software.sh` script. The advantage is that running this script is the closest you can get to replicating the bot's behaviour - and thus the failure. The downside is that if a PR adds a lot of software, it may take quite a long time to run - even if you might already know what the problematic software package is. In that case, you might be better off following the steps under (Building software from an easystack file)[#building-software-from-an-easystack-file] or (Building an individual package)[#building-an-individual-package].
+The Automatic build and deploy [bot](../bot.md) installs software by executing the `EESSI-install-software.sh` script. The advantage is that running this script is the closest you can get to replicating the bot's behaviour - and thus the failure. The downside is that if a PR adds a lot of software, it may take quite a long time to run - even if you might already know what the problematic software package is. In that case, you might be better off following the steps under [Building software from an easystack file](#building-software-from-an-easystack-file) or [Building an individual package](#building-an-individual-package).
 
 Note that you could also combine approaches: first build everything using the `EESSI-install-software.sh` script, until you reproduce the failure. Then, start making modifications (e.g. changes to the EasyConfig, patches, etc) and trying to rebuild that package individually to test your changes.
 
@@ -265,6 +265,36 @@ Saved contents of tmp directory '/tmp/eessi.WZxeFUemH2' to tarball '/home/myuser
 ```
 
 Now, continue with the original instructions to start the container (i.e. either [here](#starting-a-shell-in-the-eessi-container) or [with this alternate approach](#more-efficient-approach-for-multiplecontinued-debugging-sessions)) and make sure to add the `--resume` flag. This way, you are resuming from the tarball (i.e. with the software removed that has to be rebuilt), but in a new container in which you have regular (i.e. no root) permissions.
+
+## Running the test step
+If you are still in the prefix layer (i.e. after previously building something), exit it first:
+```
+$ exit
+logout
+Leaving Gentoo Prefix with exit status 0
+```
+Then, source the EESSI init script (again):
+```
+Apptainer> source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
+Environment set up to use EESSI (2023.06), have fun!
+{EESSI 2023.06} Apptainer>
+```
+
+!!! Note
+    If you are in a SLURM environment, make sure to run `for i in $(env | grep SLURM); do unset "${i%=*}"; done` to unset any SLURM environment variables. Failing to do so will cause `mpirun` to pick up on these and e.g. infer how many slots are available. If you run into errors of the form "There are not enough slots available in the system to satisfy the X slots that were requested by the application:", you probably forgot this step.
+
+Then, execute the `run_tests.sh` script. We are assuming you are still in the root of the `software-layer` repository that you cloned earlier:
+```
+./run_tests.sh
+```
+if all goes well, you should see (part of) the EESSI test suite being run by ReFrame, finishing with something like
+
+```
+[  PASSED  ] Ran X/Y test case(s) from Z check(s) (0 failure(s), 0 skipped, 0 aborted)
+```
+
+!!! Note
+    If you are running on a system with hyperthreading enabled, you may still run into the "There are not enough slots available in the system to satisfy the X slots that were requested by the application:" error from `mpirun`, because hardware threads are not considered to be slots by default by OpenMPIs `mpirun`. In this case, run with `OMPI_MCA_hwloc_base_use_hwthreads_as_cpus=1 ./run_tests.sh` (for OpenMPI 4.X) or `PRTE_MCA_rmaps_default_mapping_policy=:hwtcpus ./run_tests.sh` (for OpenMPI 5.X).
 
 ## Known causes of issues in EESSI
 

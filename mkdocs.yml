@@ -16,53 +16,61 @@ repo_url: https://github.com/EESSI
 edit_uri: docs/edit/main/docs
 nav:
   - Home: index.md
-  - Project overview: overview.md
-  - Filesystem layer: 
-    - Overview: filesystem_layer.md
-    - filesystem_layer/stratum1.md
-  - Compatibility layer: compatibility_layer.md
-  - Software layer:
-    - Overview: software_layer.md
-    - software_layer/cpu_targets.md
-    - software_layer/build_nodes.md
-  - Test suite:
-    - Overview: test-suite/index.md
-    - Installation & configuration: test-suite/installation-configuration.md
-    - ReFrame configuration file: test-suite/ReFrame-configuration-file.md
-    - Usage: test-suite/usage.md
-    - Available tests: test-suite/available-tests.md
-    - Release notes: test-suite/release-notes.md
-  - Build-test-deploy bot: bot.md
-  - Repositories:
-    - EESSI repository: repositories/software.eessi.io.md
-    - Pilot repository: repositories/pilot.md
-    - RISC-V repository: repositories/riscv.eessi.io.md
-  - Getting access to EESSI:
-    - getting_access/is_eessi_accessible.md
-    - getting_access/native_installation.md
-    - getting_access/eessi_container.md
-  - Using EESSI:
-    - using_eessi/setting_up_environment.md
-    - using_eessi/basic_commands.md
-    - using_eessi/building_on_eessi.md
-    - using_eessi/eessi_demos.md
-  - Adding software to EESSI:
+  - Design:
+    - Project overview: overview.md
+    - Filesystem layer: filesystem_layer.md
+    - Compatibility layer: compatibility_layer.md
+    - Software layer: software_layer.md
+    - Supported CPU targets: software_layer/cpu_targets.md
+  - Installation:
+    - Is EESSI already installed?: getting_access/is_eessi_accessible.md
+    - Native: getting_access/native_installation.md
+    - Container: getting_access/eessi_container.md
+  - Basic usage:
+    - Set up environment: using_eessi/setting_up_environment.md
+    - Basic commands: using_eessi/basic_commands.md
+    - Demos: using_eessi/eessi_demos.md
+  - Available software: available_software/overview.md
+  - Advanced usage:
+    - Repositories:
+      - Production: repositories/software.eessi.io.md
+      - RISC-V: repositories/riscv.eessi.io.md
+      - Pilot: repositories/pilot.md
+    - Setting up your Stratum: filesystem_layer/stratum1.md
+    - Building software with EESSI: using_eessi/building_on_eessi.md
+    - Test suite:
+      - Overview: test-suite/index.md
+      - Installation & configuration: test-suite/installation-configuration.md
+      - ReFrame configuration file: test-suite/ReFrame-configuration-file.md
+      - Usage: test-suite/usage.md
+      - Available tests: test-suite/available-tests.md
+      - Release notes: test-suite/release-notes.md
+    - Accelerators support:
+      - GPUs: gpu.md
+  - Adding software to EESSI: 
     - Overview: adding_software/overview.md
-    - adding_software/contribution_policy.md
-    - adding_software/opening_pr.md
-    - adding_software/building_software.md
-    - adding_software/debugging_failed_builds.md
-    - adding_software/deploying_software.md
-  # Todo: write on how to contribute to the EESSI test suite
-  # - Contributing software tests to the EESSI test suite:
-  - GPU support: gpu.md
-  - Getting support: support.md
-  - Meetings:
-      - Overview: meetings.md
-      - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
-  - Talks: talks.md
-  - Contact info: contact.md
+    - For contributors:
+      - Contribution policy: adding_software/contribution_policy.md
+      - Open PR: adding_software/opening_pr.md
+      - Debugging: adding_software/debugging_failed_builds.md
+    - For maintainers:
+      - BTD bot: bot.md
+      - Building software: adding_software/building_software.md
+      - Deploying software: adding_software/deploying_software.md
+      - Build nodes: software_layer/build_nodes.md
+  - Known issues:
+    - v2023.06: known_issues/eessi-2023.06.md
+    - v2022.02: []
+    - pilot: []
+  - Community and support:
+    - Getting support: support.md
+    - Meetings: meetings.md
+    - Talks: talks.md
+        # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
+    - Contact info: contact.md
+  - Blog: blog/index.md
 plugins:
+  - blog
   # show revision date at bottom of each page
   - git-revision-date-localized
   # necessary for search to work
@@ -83,6 +91,8 @@ markdown_extensions:
   - attr_list
   # notes, warnings, hints, ...
   - admonition
+  # support for using MarkDown in HTML
+  - md_in_html
   # code blocks with syntax highlighting, graphs
   - pymdownx.superfences
   # line numbers
@@ -109,6 +119,13 @@ extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
-# mermaid diagram
 extra_javascript:
+  # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
+  # javascript which generates overview of available software
+  - https://code.jquery.com/jquery-3.7.0.min.js
+  - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
+  - available_software/javascripts/populate_overview.js
+extra_css:
+  # CSS for popultate_overview
+  - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css

@@ -55,7 +55,7 @@ export EESSI_TMPDIR=/srt/$USER/EESSI
 mkdir -p $EESSI_TMPDIR
 mkdir /srt/tmp
 export SINGULARITY_BIND="$EESSI_TMPDIR/var-run-cvmfs:/var/run/cvmfs,$EESSI_TMPDIR/var-lib-cvmfs:/var/lib/cvmfs,/srt/tmp:/tmp"
-singularity shell -B /srt --fusemount "$EESSI_READONLY" --fusemount "$EESSI_WRITABLE_OVERLAY" docker://ghcr.io/eessi/build-node:debian10
+singularity shell -B /srt --fusemount "$EESSI_READONLY" --fusemount "$EESSI_WRITABLE_OVERLAY" docker://ghcr.io/eessi/build-node:debian11
 ```
 
 We will assume that `/tmp/$USER/EESSI` meets these requirements:
@@ -87,7 +87,7 @@ export EESSI_READONLY="container:cvmfs2 software.eessi.io /cvmfs_ro/software.ees
 export EESSI_WRITABLE_OVERLAY="container:fuse-overlayfs -o lowerdir=/cvmfs_ro/software.eessi.io -o upperdir=$EESSI_TMPDIR/overlay-upper -o workdir=$EESSI_TMPDIR/overlay-work /cvmfs/software.eessi.io"
 ```
 
-Start the container (which includes Debian 10, [CernVM-FS](https://cernvm.cern.ch/fs/) and
+Start the container (which includes Debian 11, [CernVM-FS](https://cernvm.cern.ch/fs/) and
 [fuse-overlayfs](https://github.com/containers/fuse-overlayfs)):
 
 ```shell
@@ -118,8 +118,8 @@ Set up the environment by starting a Gentoo Prefix session using the ``startpref
 **Make sure you use the correct version of the EESSI repository!**
 
 ```shell
-export EESSI_VERSION='2023.06'
-/cvmfs/software.eessi.io/${EESSI_VERSION}/compat/linux/$(uname -m)/startprefix
+export EESSI_VERSION='2023.06' 
+/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/compat/linux/$(uname -m)/startprefix
 ```
 
 ## Installing software
@@ -159,7 +159,7 @@ To create a tarball of *all* installations, assuming your build host is ``x86_64
 
 ```shell
 export EESSI_VERSION='2023.06'
-cd /cvmfs/software.eessi.io/${EESSI_VERSION}/software/linux
+cd /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/software/linux
 eessi_tar_gz="$HOME/eessi-${EESSI_VERSION}-haswell.tar.gz"
 tar cvfz ${eessi_tar_gz} x86_64/intel/haswell
 ```
