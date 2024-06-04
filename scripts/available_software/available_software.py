@@ -15,12 +15,15 @@ import json
 import os
 import re
 import subprocess
+import sys
 import time
 from pathlib import Path
 from typing import Union, Tuple
 import numpy as np
 from mdutils.mdutils import MdUtils
 from natsort import natsorted
+
+EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -85,6 +88,10 @@ def module(*args, filter_fn=lambda x: x) -> np.ndarray:
     @return: Array with the output of the module command.
     """
     lmod = os.getenv('LMOD_CMD')
+    if lmod is None:
+        sys.stderr.write("Lmod not found (via $LMOD_CMD)!\n")
+        sys.exit(1)
+
     proc = subprocess.run(
         [lmod, "python", "--terse"] + list(args),
         encoding="utf-8",
@@ -195,10 +202,14 @@ def targets_eessi() -> np.ndarray:
     Returns all the target names of EESSI.
     @return: target names
     """
+    if not os.path.exists(EESSI_TOPDIR):
+        sys.stderr.write(f"ERROR: {EESSI_TOPDIR} does not exist!\n")
+        sys.exit(1)
+
     commands = [
-        "find /cvmfs/software.eessi.io/versions/2023.06/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
+        f"find {EESSI_TOPDIR}/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
         "-name 'amd' \\) -type d",
-        'find /cvmfs/software.eessi.io/versions/2023.06/software/linux/*/{amd,intel}/* -maxdepth 0  -type d'
+        f'find {EESSI_TOPDIR}/software/linux/*/{{amd,intel}}/* -maxdepth 0  -type d'
     ]
     targets = np.array([])
 
@@ -216,7 +227,11 @@ def modules_eessi() -> dict:
     """
     print("Start collecting modules:")
     data = {}
-    module_unuse(os.getenv('MODULEPATH'))
+
+    modulepath = os.getenv('MODULEPATH')
+    if modulepath:
+        module_unuse(modulepath)
+
     for target in targets_eessi():
         print(f"\t Collecting available modules for {target}... ", end="", flush=True)
         module_use(target + "/modules/all/")
