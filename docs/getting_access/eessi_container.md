@@ -1,7 +1,8 @@
-# EESSI container
+# EESSI container script
 
 The `eessi_container.sh` script provides a very easy yet versatile means
-to access EESSI.
+to access EESSI. It is the preferred method to start an EESSI container
+as it has support for many different scenarios via various options.
 
 This page guides you through several example scenarios
 illustrating the use of the script.
@@ -431,3 +432,24 @@ which could result in output similar to
 997M    total
 ```
 Clean up disk usage by simply removing directories you do not need any longer.
+
+# EESSI container image
+
+If you would like to directly use an EESSI container image, you can do so
+by configuring `apptainer` to correctly mount the CVMFS repository:
+
+``` { .bash .copy }
+# honor $TMPDIR if it is already defined, use /tmp otherwise
+if [ -z $TMPDIR ]; then
+    export WORKDIR=/tmp/$USER
+else
+    export WORKDIR=$TMPDIR/$USER
+fi
+
+mkdir -p ${WORKDIR}/{var-lib-cvmfs,var-run-cvmfs,home}
+export SINGULARITY_BIND="${WORKDIR}/var-run-cvmfs:/var/run/cvmfs,${WORKDIR}/var-lib-cvmfs:/var/lib/cvmfs"
+export SINGULARITY_HOME="${WORKDIR}/home:/home/$USER"
+export EESSI_REPO="container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io"
+export EESSI_CONTAINER="docker://ghcr.io/eessi/client:centos7"
+singularity shell --fusemount "$EESSI_REPO" "$EESSI_CONTAINER"
+```
