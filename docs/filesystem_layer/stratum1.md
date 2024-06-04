@@ -69,7 +69,7 @@ sudo yum install -y ansible
 Then install Ansible roles for EESSI:
 
 ```bash
-ansible-galaxy role install -r ./requirements.yml -p ./roles --force
+ansible-galaxy role install -r ./requirements.yml --force
 ```
 
 Make sure you have enough space in `/srv` on the Stratum 1, since the snapshot of the repositories
