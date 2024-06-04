@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://eessi.github.io/docs/test-suite/installation-configuration/">
+        <link rel="canonical" href="https://eessi.github.io/docs/known_issues/eessi-2023.06/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../../software_layer/build_nodes/">
       
       
-        <link rel="next" href="../ReFrame-configuration-file/">
+        <link rel="next" href="../../support/">
       
       
       <link rel="icon" href="../../img/logos/EESSI.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Installation & configuration - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>v2023.06 - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-and-configuring-the-eessi-test-suite" class="md-skip">
+        <a href="#known-issues" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation & configuration
+              v2023.06
             
           </span>
         </div>
@@ -589,19 +589,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -615,7 +613,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Advanced usage
@@ -774,19 +772,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
         
           
           <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
@@ -800,7 +796,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_4">
             <span class="md-nav__icon md-icon"></span>
             Test suite
@@ -814,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../test-suite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -832,30 +828,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Installation & configuration
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../test-suite/installation-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,158 +840,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-reframe" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Reframe
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-reframe-test-library-hpctestlib" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing ReFrame test library (hpctestlib)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pip-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using pip
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloning the repository
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Verify installation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-reframe-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring ReFrame environment variables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuring ReFrame environment variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#RFM_CONFIG_FILES" class="md-nav__link">
-    <span class="md-ellipsis">
-      ReFrame configuration file ($RFM_CONFIG_FILES)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-path-for-tests-rfm_check_search_path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search path for tests ($RFM_CHECK_SEARCH_PATH)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#RFM_PREFIX" class="md-nav__link">
-    <span class="md-ellipsis">
-      ReFrame prefix ($RFM_PREFIX)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1028,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ReFrame-configuration-file/" class="md-nav__link">
+      <a href="../../test-suite/ReFrame-configuration-file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,7 +873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/" class="md-nav__link">
+      <a href="../../test-suite/usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../available-tests/" class="md-nav__link">
+      <a href="../../test-suite/available-tests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../release-notes/" class="md-nav__link">
+      <a href="../../test-suite/release-notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,17 +1308,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1508,7 +1334,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Known issues
@@ -1519,10 +1345,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../known_issues/eessi-2023.06/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    v2023.06
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1531,6 +1377,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eessi-production-repository-v202306" class="md-nav__link">
+    <span class="md-ellipsis">
+      EESSI Production Repository (v2023.06)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EESSI Production Repository (v2023.06)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#failed-to-modify-ud-qp-to-init-on-mlx5_0-operation-not-permitted" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failed to modify UD QP to INIT on mlx5_0: Operation not permitted
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1760,129 +1650,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
+  <a href="#eessi-production-repository-v202306" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirements
+      EESSI Production Repository (v2023.06)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Requirements">
+    <nav class="md-nav" aria-label="EESSI Production Repository (v2023.06)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#installing-reframe" class="md-nav__link">
+  <a href="#failed-to-modify-ud-qp-to-init-on-mlx5_0-operation-not-permitted" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing Reframe
+      Failed to modify UD QP to INIT on mlx5_0: Operation not permitted
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installing-reframe-test-library-hpctestlib" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing ReFrame test library (hpctestlib)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pip-install" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using pip
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cloning-the-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloning the repository
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#verify-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Verify installation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuring-reframe-environment-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring ReFrame environment variables
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuring ReFrame environment variables">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#RFM_CONFIG_FILES" class="md-nav__link">
-    <span class="md-ellipsis">
-      ReFrame configuration file ($RFM_CONFIG_FILES)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#search-path-for-tests-rfm_check_search_path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Search path for tests ($RFM_CHECK_SEARCH_PATH)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#RFM_PREFIX" class="md-nav__link">
-    <span class="md-ellipsis">
-      ReFrame prefix ($RFM_PREFIX)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1909,101 +1691,29 @@
   
 
 
-<h1 id="installing-and-configuring-the-eessi-test-suite">Installing and configuring the EESSI test suite<a class="headerlink" href="#installing-and-configuring-the-eessi-test-suite" title="Permanent link">&para;</a></h1>
-<p>This page covers the requirements, installation and configuration of the <a href="https://github.com/EESSI/test-suite">EESSI test suite</a>.</p>
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
-<p>The EESSI test suite requires </p>
-<ul>
-<li>Python &gt;= 3.6 </li>
-<li><a href="https://reframe-hpc.readthedocs.io">ReFrame</a> v4.3.3 (or newer)</li>
-<li><a href="https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html">ReFrame test library (<code>hpctestlib</code>)</a></li>
-</ul>
-<h4 id="installing-reframe">Installing Reframe<a class="headerlink" href="#installing-reframe" title="Permanent link">&para;</a></h4>
-<p>General instructions for installing ReFrame are available in the <a href="https://reframe-hpc.readthedocs.io/en/stable/started.html">ReFrame documentation</a>. To check if ReFrame is available, run the <code>reframe</code> command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reframe<span class="w"> </span>--version
+<h1 id="known-issues">Known issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h1>
+<h2 id="eessi-production-repository-v202306">EESSI Production Repository (v2023.06)<a class="headerlink" href="#eessi-production-repository-v202306" title="Permanent link">&para;</a></h2>
+<h3 id="failed-to-modify-ud-qp-to-init-on-mlx5_0-operation-not-permitted"><code>Failed to modify UD QP to INIT on mlx5_0: Operation not permitted</code><a class="headerlink" href="#failed-to-modify-ud-qp-to-init-on-mlx5_0-operation-not-permitted" title="Permanent link">&para;</a></h3>
+<div style="padding-left: 30px;">
+
+<p>This is an error that occurs with OpenMPI after updating to OFED 23.10.</p>
+
+<p>Their is an upstream issue on this problem opened with EasyBuild.
+See: https://github.com/easybuilders/easybuild-easyconfigs/issues/20233</p>
+
+<b>Workarounds</b>
+
+<p>You can instruct OpenMPI to not use libfabric and turn off `uct`(see https://openucx.readthedocs.io/en/master/running.html#running-mpi) by passing the following options to `mpirun`:</p>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mpirun -mca pml ucx -mca btl &#39;^uct,ofi&#39; -mca mtl &#39;^ofi&#39;
 </code></pre></div>
-<details class="note">
-<summary>(for more details on the ReFrame version requirement, click here)</summary>
-<p>Two important bugs were resolved in ReFrame's CPU autodetect functionality <a href="https://github.com/reframe-hpc/reframe/pull/2978">in version 4.3.3</a>.</p>
-<p><em>We strongly recommend you use <code>ReFrame &gt;= 4.3.3</code></em>.</p>
-<p>If you are using an older version of ReFrame, you may encounter some issues:</p>
-<ul>
-<li>ReFrame will try to use the parallel launcher command configured for each partition (e.g. <code>mpirun</code>) when doing
-  the remote autodetect. If there is no system-version of <code>mpirun</code> available, that will fail
-  (see <a href="https://github.com/reframe-hpc/reframe/issues/2926">ReFrame issue #2926</a>).</li>
-<li>CPU autodetection only worked when using a clone of the ReFrame repository, <em>not</em> when it was installed
-  with <code>pip</code> or <code>EasyBuild</code> (as is also the case for the ReFrame shipped with EESSI)
-  (see <a href="https://github.com/reframe-hpc/reframe/issues/2914">ReFrame issue #2914</a>).</li>
-</ul>
-</details>
-<h4 id="installing-reframe-test-library-hpctestlib">Installing ReFrame test library (<code>hpctestlib</code>)<a class="headerlink" href="#installing-reframe-test-library-hpctestlib" title="Permanent link">&para;</a></h4>
-<p>The EESSI test suite requires that the ReFrame test library (<code>hpctestlib</code>) is available, which is currently not included in a standard installation of ReFrame.</p>
-<p>We recommend installing ReFrame using <a href="https://easybuild.io/">EasyBuild</a> (version 4.8.1, or newer), or using a ReFrame installation that is available in the EESSI repository (version 2023.06, or newer).</p>
-<p>For example (using EESSI):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/bash
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>module<span class="w"> </span>load<span class="w"> </span>ReFrame/4.3.3
+
+Or equivalently, you can set the following environment variables:
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>export OMPI_MCA_btl=&#39;^uct,ofi&#39;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>export OMPI_MCA_pml=&#39;ucx&#39;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>export OMPI_MCA_mtl=&#39;^ofi&#39;
 </code></pre></div>
-<p>To check whether the ReFrame test library is available, try importing a submodule of the <code>hpctestlib</code> Python package:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import hpctestlib.sciapps.gromacs&#39;</span>
-</code></pre></div>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>To install the EESSI test suite, you can either use <code>pip</code> or clone the GitHub repository directly:</p>
-<h4 id="pip-install">Using <code>pip</code><a class="headerlink" href="#pip-install" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/EESSI/test-suite.git
-</code></pre></div>
-<h4 id="cloning-the-repository">Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/EESSI/test-suite<span class="w"> </span><span class="nv">$HOME</span>/EESSI-test-suite
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>EESSI-test-suite
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PWD</span>:<span class="nv">$PYTHONPATH</span>
-</code></pre></div>
-<h4 id="verify-installation">Verify installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h4>
-<p>To check whether the EESSI test suite installed correctly,
-try importing the <code>eessi.testsuite</code> Python package:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import eessi.testsuite&#39;</span>
-</code></pre></div>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
-<p>Before you can run the EESSI test suite, you need to create a configuration file for ReFrame that is specific to the system on which the tests will be run.</p>
-<p>Example configuration files are available in the <code>config</code> subdirectory of the <code>EESSI/test-suite</code> GitHub repository](https://github.com/EESSI/test-suite/tree/main/config),
-which you can use as a template to create your own.</p>
-<h3 id="configuring-reframe-environment-variables">Configuring ReFrame environment variables<a class="headerlink" href="#configuring-reframe-environment-variables" title="Permanent link">&para;</a></h3>
-<p>We recommend setting a couple of <code>$RFM_*</code> environment variables to configure ReFrame, to avoid needing to include particular options to the <code>reframe</code> command over and over again.</p>
-<h4 id="RFM_CONFIG_FILES">ReFrame configuration file (<code>$RFM_CONFIG_FILES</code>)<a class="headerlink" href="#RFM_CONFIG_FILES" title="Permanent link">&para;</a></h4>
-<p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_CONFIG_FILES"><code>RFM_CONFIG_FILES</code> in ReFrame docs</a>)</em></p>
-<p>Define the <code>$RFM_CONFIG_FILES</code> environment variable to instruct ReFrame which configuration file to use, for example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CONFIG_FILES</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/config/example.py
-</code></pre></div>
-<p>Alternatively, you can use the <code>--config-file</code> (or <code>-C</code>) <code>reframe</code> option.</p>
-<p>See the <a href="#reframe-config-file">section on the ReFrame configuration file</a> below for more information.</p>
-<h4 id="search-path-for-tests-rfm_check_search_path">Search path for tests (<code>$RFM_CHECK_SEARCH_PATH</code>)<a class="headerlink" href="#search-path-for-tests-rfm_check_search_path" title="Permanent link">&para;</a></h4>
-<p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_CHECK_SEARCH_PATH"><code>RFM_CHECK_SEARCH_PATH</code> in ReFrame docs</a>)</em></p>
-<p>Define the <code>$RFM_CHECK_SEARCH_PATH</code> environment variable to tell ReFrame which directory to search for tests.</p>
-<p>In addition, define <code>$RFM_CHECK_SEARCH_RECURSIVE</code> to ensure that ReFrame searches <code>$RFM_CHECK_SEARCH_PATH</code> recursively
-(i.e. so that also tests in subdirectories are found).</p>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CHECK_SEARCH_PATH</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/eessi/testsuite/tests
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CHECK_SEARCH_RECURSIVE</span><span class="o">=</span><span class="m">1</span>
-</code></pre></div>
-<p>Alternatively, you can use the <code>--checkpath</code> (or <code>-c</code>) and <code>--recursive</code> (or <code>-R</code>) <code>reframe</code> options.</p>
-<h4 id="RFM_PREFIX">ReFrame prefix (<code>$RFM_PREFIX</code>)<a class="headerlink" href="#RFM_PREFIX" title="Permanent link">&para;</a></h4>
-<p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_PREFIX"><code>RFM_PREFIX</code> in ReFrame docs</a>)</em></p>
-<p>Define the <code>$RFM_PREFIX</code> environment variable to tell ReFrame where to store the files it produces. E.g.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>export RFM_PREFIX=$HOME/reframe_runs
-</code></pre></div>
-<p>This involves:</p>
-<ul>
-<li>test output directories (which contain e.g. the job script, stderr and stdout for each of the test jobs)</li>
-<li>staging directories (unless otherwise specified by <code>staging</code>, see below);</li>
-<li>performance logs;</li>
-</ul>
-<p>Note that the default is for ReFrame to use the current directory as prefix.
-We recommend setting a prefix so that logs are not scattered around and nicely appended for each run.</p>
-<p>If our <a href="#logging">common logging configuration</a> is used, the regular ReFrame log file will
-also end up in the location specified by <code>$RFM_PREFIX</code>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Using the <code>--prefix</code> option in your <code>reframe</code> command is <em>not</em> equivalent to setting <code>$RFM_PREFIX</code>,
-since our <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/common_config.py">common logging configuration</a>
-only picks up on the <code>$RFM_PREFIX</code> environment variable to determine the location for the ReFrame log file.</p>
 </div>
 
 
@@ -2025,7 +1735,7 @@ only picks up on the <code>$RFM_PREFIX</code> environment variable to determine 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 24, 2024</span>
   </span>
 
     

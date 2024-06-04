@@ -126,6 +126,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/known_issues/eessi-2023.06/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/meetings/2022-09-amsterdam/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
