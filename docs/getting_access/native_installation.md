@@ -69,7 +69,7 @@ The good news is that all of this only requires a handful commands :astonished: 
     This is good enough for an individual client, or for testing purposes,
     but for a production-quality setup you should also set up a Squid proxy cache.
 
-    For large-scale systems, like an HPC cluster, you should also consider [setting up your own CernVM-FS Stratum 1 mirror server](filesystem_layer/stratum1.md).
+    For large-scale systems, like an HPC cluster, you should also consider [setting up your own CernVM-FS Stratum 1 mirror server](../filesystem_layer/stratum1.md).
 
     For more details on this, please refer to the
     [*Stratum 1 and proxies section* of the CernVM-FS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/03_stratum1_proxies/).
