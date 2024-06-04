@@ -72,12 +72,20 @@ Then install Ansible roles for EESSI:
 ansible-galaxy role install -r ./requirements.yml --force
 ```
 
-Make sure you have enough space in `/srv` on the Stratum 1, since the snapshot of the repositories
-will end up there by default. To alter the directory where the snapshots get stored you can add
-the following variable in `inventory/host_vars/<url-or-ip-to-your-stratum1>`:
+Make sure you have enough space in `/srv` on the Stratum 1, since the snapshots of the repositories
+will end up there by default. To alter the directory where the snapshots get stored you can manually
+create a symlink before running the playbook:
+```bash
+sudo ln -s /lots/of/space/cvmfs /srv/cvmfs
+```
+
+Alternatively, you can instruct the Ansible role to create a file system (e.g. ext4) on a given storage device
+and mount it at `/srv` by adding the following variable
+in `inventory/host_vars/<url-or-ip-to-your-stratum1>`:
 
 ```bash
-cvmfs_srv_mount: /lots/of/space
+cvmfs_srv_device: /dev/somedevice
+cvmfs_srv_fstype: ext4
 ```
 
 Also make sure that you have added the hostname or IP address of your server to the
