@@ -1,29 +1,8 @@
 #
 # Copyright 2023-2023 Ghent University
 #
-# This file is part of vsc_user_docs,
-# originally created by the HPC team of Ghent University (http://ugent.be/hpc/en),
-# with support of Ghent University (http://ugent.be/hpc),
-# the Flemish Supercomputer Centre (VSC) (https://www.vscentrum.be),
-# the Flemish Research Foundation (FWO) (http://www.fwo.be/en)
-# and the Department of Economy, Science and Innovation (EWI) (http://www.ewi-vlaanderen.be/en).
+# SPDX license identifier: GPL-3.0-or-later
 #
-# https://github.com/hpcugent/vsc_user_docs
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-# The original program is update and is now a part of the EESSI docs
 """
 Python script to generate an overview of available modules across different CPU and GPU targets,
 in MarkDown format.
