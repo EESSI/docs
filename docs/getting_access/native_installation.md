@@ -73,3 +73,17 @@ The good news is that all of this only requires a handful commands :astonished: 
 
     For more details on this, please refer to the
     [*Stratum 1 and proxies section* of the CernVM-FS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/03_stratum1_proxies/).
+
+## Configuring your client to use a Squid proxy
+
+If you have set up one or more Squid proxies, you will have to add them to your CernVM-FS client configuration.
+This can be done by removing `CVMFS_CLIENT_PROFILE="single"` from `/etc/cvmfs/default.local`, and add the following line:
+
+```
+CVMFS_HTTP_PROXY="http://ip-of-your-1st-proxy:port|http://ip-of-your-2nd-proxy:port"
+```
+
+In this case, both proxies are equally preferable.
+More advanced use cases can be found in [the CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-configure.html#proxy-list-examples).
+
+
