@@ -26,6 +26,10 @@ nav:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
     - Native: getting_access/native_installation.md
     - Container: getting_access/eessi_container.md
+    - Configuring EESSI:
+      - How to configure EESSI: site_specific_config/host_injections.md
+      - GPU support: site_specific_config/gpu.md
+      - Custom LMOD hooks: site_specific_config/lmod_hooks.md
   - Basic usage:
     - Set up environment: using_eessi/setting_up_environment.md
     - Basic commands: using_eessi/basic_commands.md
