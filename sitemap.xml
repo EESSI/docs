@@ -96,6 +96,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/overview/</loc>
+         <lastmod>2024-06-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/blog/</loc>
          <lastmod>2024-06-04</lastmod>
          <changefreq>daily</changefreq>
