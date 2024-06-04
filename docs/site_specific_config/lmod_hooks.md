@@ -11,7 +11,7 @@ The EESSI software stack provides its own set of hooks in `$LMOD_PACKAGE_PATH/Si
 The first allows for hooks that need to be executed for that system, irrespective of the CPU architecture. The second allows for hooks specific to a certain architecture.
 
 ## Architecture-independent hooks
-Hooks are written in Lua and can use any of the standard Lmod functionality as described in the [Lmod documentation](https://lmod.readthedocs.io/en/latest/170_hooks.html). While there are many types of hooks, you most likely want to specify a load or unload hook.
+Hooks are written in Lua and can use any of the standard Lmod functionality as described in the [Lmod documentation](https://lmod.readthedocs.io/en/latest/170_hooks.html). While there are many types of hooks, you most likely want to specify a load or unload hook. Note that the EESSI hooks provide a nice example of what you can do with hooks. Here, as an example, we will define a `load` hook that environment variable `MY_ENV_VAR` to `1` whenever an `OpenMPI` module is loaded.
 
 First, you typically want to load the necessary Lua packages:
 ```lua
@@ -24,7 +24,7 @@ require("strict")
 local hook=require("Hook")
 ```
 
-Next, we define a function that we want to use as a hook. Let's assume that we want to define a `load` hook that sets the environment variable `MY_ENV_VAR` to `1` whenever an `OpenMPI` module is loaded. Unfortunately, registering multiple hooks of the same type (e.g. multiple `load` hooks) is only supported in Lmod 8.7.35+. EESSI version 2023.06 uses Lmod 8.7.30. Thus, we define our function without the local keyword, so that we can still ad to it later in an architecture-specific hook (if we wanted to):
+Next, we define a function that we want to use as a hook. Unfortunately, registering multiple hooks of the same type (e.g. multiple `load` hooks) is only supported in Lmod 8.7.35+. EESSI version 2023.06 uses Lmod 8.7.30. Thus, we define our function without the local keyword, so that we can still add to it later in an architecture-specific hook (if we wanted to):
 
 ```lua
 -- Define a function for the hook
@@ -38,7 +38,7 @@ function set_my_env_var_openmpi(t)
 end
 ```
 
-for the same reason that multiple hooks cannot be registered, we need to combine this function for our site-specific (architecture-independent) with the function that specifies the EESSI `load` hook
+for the same reason that multiple hooks cannot be registered, we need to combine this function for our site-specific (architecture-independent) with the function that specifies the EESSI `load` hook. Note that all EESSI hooks will be called `eessi_<hook_type>_hook` by convention.
 
 ```lua
 -- Registering multiple hook functions, e.g. multiple load hooks is only supported in Lmod 8.7.35+
@@ -55,7 +55,7 @@ local function combined_load_hook(t)
 end
 ```
 
-before we can finally register this function as an Lmod hook:
+Then, we can finally register this function as an Lmod hook:
 
 ```lua
 hook.register("load", combined_load_hook)
