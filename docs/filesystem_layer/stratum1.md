@@ -119,7 +119,7 @@ curl --head http://aws-eu-central-s1.eessi.science/cvmfs/software.eessi.io/.cvmf
 
 You can, of course, also test access to your Stratum 1 from a client.
 This requires you to install a CernVM-FS client and add the Stratum 1 to the client configuration;
-this is explained in more detail on the [native installation page](getting_access/native_installation.md).
+this is explained in more detail on the [native installation page](../getting_access/native_installation.md).
 
 Then verify that the client connects to your new Stratum 1 by running:
 
