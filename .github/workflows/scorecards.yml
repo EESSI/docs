@@ -14,7 +14,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches:    
+    branches:
       - main
 
 # Declare default permissions as read only.
@@ -22,6 +22,7 @@ permissions: read-all
 
 jobs:
   analysis:
+    if: github.repository_owner == 'EESSI'   # Prevent running on forks
     name: Scorecards analysis
     runs-on: ubuntu-latest
     permissions:

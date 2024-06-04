@@ -45,35 +45,63 @@ Simply run the EESSI container (`eessi_container.sh`), which should be in the ro
 ```
 ./eessi_container.sh --access rw
 ```
+
+If you want to install NVIDIA GPU software, make sure to also add the `--nvidia all` argument, to insure that your GPU drivers get mounted inside the container:
+```
+./eessi_container.sh --access rw --nvidia all
+```
+
 !!! Note
     You may have to press enter to clearly see the prompt as some messages
     beginning with `CernVM-FS: ` have been printed after the first prompt
     `Apptainer> ` was shown.
 
-If you want to debug an issue for which a lot of dependencies need to be build first, you may want to start the container with the `--save DIR/TGZ` and flag (check `./eessi_container.sh --help`). This saves the temporary directory (which we will use as working and installation directory later in this instruction) in order to be able to resume later with the same temporary directory. E.g.
 
+### More efficient approach for multiple/continued debugging sessions
+While the above works perfectly well, you might not be able to complete your debugging session in one go. With the above approach, several steps will just be repeated every time you start a debugging session:
+
+- Downloading the container
+- Installing `CUDA` in your [host injections](../gpu.md#host_injections) directory (only if you use the `EESSI-install-software.sh` script, see below)
+- Installing all dependencies (before you get to the package that actually fails to build)
+
+To avoid this, we create two directories. One holds the container & `host_injections`, which are (typically) common between multiple PRs and thus you don't have to redownload the container / reinstall the `host_injections` if you start working on another PR. The other will hold the PR-specific data: a tarball storing the software you'll build in your interactive debugging session. The paths we pick here are just example, you can pick any persistent, writeable location for this:
 ```
-./eessi_container.sh --access rw --save ${HOME}/pr370
+eessi_common_dir=${HOME}/eessi-manual-builds
+eessi_pr_dir=${HOME}/pr360
 ```
-The tarball will be saved when you exit the container. Note that the first `exit` command will first make you exit the Gentoo prefix environment. Only the second will take you out of the container, and print where the tarball will be stored:
+
+Now, we start the container
+```
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}
+```
+
+Here, the `SINGULARITY_CACHEDIR` makes sure that if the container was already downloaded, and is present in the cache, it is not redownloaded. The host injections will just be picked up from `${eessi_common_dir}/host_injections` (if those were already installed before). And finally, the `--save` makes sure that everything that you build in the container gets stored in a tarball as soon as you exit the container.
+
+Note that the first `exit` command will first make you exit the Gentoo prefix environment. Only the second will take you out of the container, and print where the tarball will be stored:
+
 ```
 [EESSI 2023.06] $ exit
 logout
 Leaving Gentoo Prefix with exit status 1
 Apptainer> exit
 exit
-Saved contents of tmp directory '/tmp/eessi-debug.VgLf1v9gf0' to tarball '${HOME}/pr370/EESSI-1698056784.tgz' (to resume session add '--resume ${HOME}/pr370/EESSI-1698056784.tgz')
+Saved contents of tmp directory '/tmp/eessi-debug.VgLf1v9gf0' to tarball '${HOME}/pr360/EESSI-1698056784.tgz' (to resume session add '--resume ${HOME}/pr360/EESSI-1698056784.tgz')
 ```
 
 Note that the tarballs can be quite sizeable, so make sure to pick a filesystem where you have a large enough quotum.
 
-
 Next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off, having all dependencies already built and available.
 ```
-./eessi_container.sh --access rw --resume ${HOME}/pr370/EESSI-1698056784.tgz
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}/EESSI-1698056784.tgz
 ```
 
 For a detailed description on using the script `eessi_container.sh`, see [here](../getting_access/eessi_container.md).
+
+!!! Note
+    Reusing a previously downloaded container, or existing CUDA installation from a `host_injections` is not be a good approach if those could be the cause of your issues. If you are unsure if this is the case, simply follow the regular approach to starting the EESSI container.
+
+!!! Note
+    It is recommended to clean the container cache and `host_injections` directories every now and again, to make sure you pick up the latest changes for those two components.
 
 ### Start the Gentoo Prefix environment
 The next step is to start the Gentoo Prefix environment. 
@@ -100,10 +128,31 @@ export EESSI_VERSION=...
 !!! Note
     By activating the Gentoo Prefix environment, the system tools (e.g. `ls`) you would normally use are now provided by Gentoo Prefix, instead of the container OS. E.g. running `which ls` after starting the prefix environment as above will return `/cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/bin/ls`. This makes the builds completely independent from the container OS.
 
-### Starting the EESSI software environment
-!!! Note
-    If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic` before starting the EESSI environment.
+### Building for the `generic` optimization target
+If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set the following environment variable:
+```
+export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic
+```
 
+## Building software with the `EESSI-install-software.sh` script
+The Automatic build and deploy [bot](../bot.md) installs software by executing the `EESSI-install-software.sh` script. The advantage is that running this script is the closest you can get to replicating the bot's behaviour - and thus the failure. The downside is that if a PR adds a lot of software, it may take quite a long time to run - even if you might already know what the problematic software package is. In that case, you might be better off following the steps under (Building software from an easystack file)[#building-software-from-an-easystack-file] or (Building an individual package)[#building-an-individual-package].
+
+Note that you could also combine approaches: first build everything using the `EESSI-install-software.sh` script, until you reproduce the failure. Then, start making modifications (e.g. changes to the EasyConfig, patches, etc) and trying to rebuild that package individually to test your changes.
+
+To build software using the `EESSI-install-software.sh` script, you'll first need to get the diff file for the PR. This is used by the `EESSI-install-software.sh` script to see what is changed in this PR - and thus what needs to be build for this PR. To download the diff for PR 360, we would e.g. do
+```
+wget https://github.com/EESSI/software-layer/pull/360.diff
+```
+
+Now, we run the `EESSI-install-software.sh` script:
+
+```
+./EESSI-install-software.sh
+```
+
+## Building software from an easystack file
+
+### Starting the EESSI software environment
 To activate the software environment, run
 ```
 source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
@@ -170,25 +219,24 @@ trace                (E) = True
 zip-logs             (E) = bzip2
 ```
 
-## Building the software
-When the bot builds software, it loops over all EasyStack files that have been changed, and builds them using EasyBuild. However, a single PR may add multiple items to a single EasyStack file, and the issue you are trying to debug is probably in _one_ of them. Getting EasyBuild to build the full EasyStack file will create the most similar situation to what the bot does. However, you _may_ just want to build the individual software that has changed. Below, we describe both approaches.
-
-### Building everything in the EasyStack file
-In our [example PR](https://github.com/EESSI/software-layer/pull/360), the EasyStack file that was changed was `eessi-2023.06-eb-4.8.1-2021b.yml`. To build this, we run (in the directory that contains the checkout of this feature branch):
+### Building everything in the easystack file
+In our [example PR](https://github.com/EESSI/software-layer/pull/360), the easystack file that was changed was `eessi-2023.06-eb-4.8.1-2021b.yml`. To build this, we run (in the directory that contains the checkout of this feature branch):
 ```
 eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
 ```
 After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
 
-### Building an individual package
-In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. We'll also have to (re)use any options that are listed in the EasyStack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
+## Building an individual package
+First, prepare the environment by following the [Starting the EESSI software environment][#starting-the-eessi-software-environment] and [Configure EasyBuild](#configure-easybuild) above.
+
+In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. To mimic the build behaviour, we'll also have to (re)use any options that are listed in the easystack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
 ```
 eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19000
 ```
 After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
 
 !!! Note
-    While this might be faster than the EasyStack-based approach, this is _not_ how the bot builds. So why it _may_ reproduce the failure the bot encounters, it may not reproduce the bug _at all_ (no failure) or run into _different_ bugs. If you want to be sure, use the EasyStack-based approach.
+    While this might be faster than the easystack-based approach, this is _not_ how the bot builds. So why it _may_ reproduce the failure the bot encounters, it may not reproduce the bug _at all_ (no failure) or run into _different_ bugs. If you want to be sure, use the easystack-based approach.
 
 ## Known causes of issues in EESSI
 

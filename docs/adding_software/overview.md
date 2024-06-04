@@ -34,7 +34,7 @@ Ideally, a contributor prepares a ReFrame test for the software to be added to t
 %%{init: { 'theme':'forest', 'sequence': {'useMaxWidth':false} } }%%
 flowchart TB
 
-    Z(Creat ReFrame test & PR to tests-suite) --> Y(Review PR & run new test)
+    Z(Create ReFrame test & PR to tests-suite) --> Y(Review PR & run new test)
     Y --> W(Debug issue if needed) 
     W --> V(Review PR if needed)
     V --> U(Merge PR)
