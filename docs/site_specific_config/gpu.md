@@ -39,33 +39,7 @@ An additional requirement is necessary if you want to be able to compile CUDA-en
 
 Below, we describe how to make sure that the EESSI software stack can find your NVIDIA GPU drivers and (optionally) full installations of the CUDA SDK.
 
-### `host_injections` variant symlink {: #host_injections }
-
-In the EESSI repository, a special directory has been prepared where system administrators can install files that can be picked up by
-software installations included in EESSI. This gives the ability to administrators to influence the behaviour (and capabilities) of the EESSI software stack.
-
-This special directory is located in `/cvmfs/software.eessi.io/host_injections`, and it is a *CernVM-FS Variant Symlink*:
-a symbolic link for which the target can be controlled by the CernVM-FS client configuration (for more info, see ['Variant Symlinks' in the official CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks)).
-
-!!! info "Default target for `host_injections` variant symlink"
-
-    Unless otherwise configured in the CernVM-FS client configuration for the EESSI repository, the `host_injections` symlink points to `/opt/eessi` on the client system:
-    ```
-    $ ls -l /cvmfs/software.eessi.io/host_injections
-    lrwxrwxrwx 1 cvmfs cvmfs 10 Oct  3 13:51 /cvmfs/software.eessi.io/host_injections -> /opt/eessi
-    ```
-
-As an example, let's imagine that we want to use a architecture-specific location on a shared filesystem as the target for the symlink. This has the advantage that one can make changes under `host_injections` that affect all nodes which share that CernVM-FS configuration. Configuring this in your CernVM-FS configuration would mean adding the following line in the client configuration file:
-
-```{ .ini .copy }
-EESSI_HOST_INJECTIONS=/shared_fs/path
-```
-
-!!! note "Don't forget to reload the CernVM-FS configuration"
-    After making a change to a CernVM-FS configuration file, you also need to reload the configuration:
-    ```{ .bash .copy }
-    sudo cvmfs_config reload
-    ```
+### Configuring CUDA driver location {: #driver_location }
 
 All CUDA-enabled software in EESSI expects the CUDA drivers to be available in a specific subdirectory of this `host_injections` directory.
 In addition, installations of the CUDA SDK included EESSI are stripped down to the files that we are allowed to redistribute;
