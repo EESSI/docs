@@ -58,7 +58,7 @@ nav:
       - Deploying software: adding_software/deploying_software.md
       - Build nodes: software_layer/build_nodes.md
   - Known issues:
-    - v2023.06: []
+    - v2023.06: known_issues/eessi-2023.06.md
     - v2022.02: []
     - pilot: []
   - Community and support:
