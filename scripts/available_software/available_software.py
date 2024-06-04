@@ -25,6 +25,9 @@ from natsort import natsorted
 
 EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
 
+# some CPU targets are excluded for now, because software layer is too incomplete currently
+EXCLUDE_CPU_TARGETS = ['x86_64/amd/zen4']
+
 
 # --------------------------------------------------------------------------------------------------------
 # MAIN
@@ -232,7 +235,8 @@ def modules_eessi() -> dict:
     if modulepath:
         module_unuse(modulepath)
 
-    for target in targets_eessi():
+    targets = [t for t in targets_eessi() if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
+    for target in targets:
         print(f"\t Collecting available modules for {target}... ", end="", flush=True)
         module_use(target + "/modules/all/")
         data[target] = module_avail(filter_fn=filter_fn_eessi_modules)
