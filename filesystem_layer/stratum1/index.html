@@ -812,47 +812,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-set-up-the-stratum-1" class="md-nav__link">
+  <a href="#configure-the-stratum-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: set up the Stratum 1
+      Configure the Stratum 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure the Stratum 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual configuration
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-request-a-firewall-exception" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-using-ansible" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: request a firewall exception
+      Configuration using Ansible
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-verification-of-the-stratum-1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#verification-of-the-stratum-1-using-curl" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Verification of the Stratum 1
+      Verification of the Stratum 1 using curl
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-request-an-eessi-dns-name" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#verification-of-the-stratum-1-using-a-cvmfs-client" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: request an EESSI DNS name
+      Verification of the Stratum 1 using a CVMFS client
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-include-your-stratum-1-in-the-eessi-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 5: include your Stratum 1 in the EESSI configuration
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1711,47 +1717,53 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-set-up-the-stratum-1" class="md-nav__link">
+  <a href="#configure-the-stratum-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: set up the Stratum 1
+      Configure the Stratum 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure the Stratum 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manual-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual configuration
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-request-a-firewall-exception" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-using-ansible" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: request a firewall exception
+      Configuration using Ansible
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-verification-of-the-stratum-1" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#verification-of-the-stratum-1-using-curl" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Verification of the Stratum 1
+      Verification of the Stratum 1 using curl
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-request-an-eessi-dns-name" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#verification-of-the-stratum-1-using-a-cvmfs-client" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: request an EESSI DNS name
+      Verification of the Stratum 1 using a CVMFS client
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-include-your-stratum-1-in-the-eessi-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 5: include your Stratum 1 in the EESSI configuration
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1774,106 +1786,94 @@
 
 
 <h1 id="setting-up-a-stratum-1">Setting up a Stratum 1<a class="headerlink" href="#setting-up-a-stratum-1" title="Permanent link">&para;</a></h1>
-<p>Setting up a Stratum 1 involves the following steps:</p>
-<ul>
-<li>set up the Stratum 1, preferably by running the Ansible playbook that we provide;</li>
-<li>request a Stratum 0 firewall exception for your Stratum 1 server;</li>
-<li>request a <code>&lt;your site&gt;.stratum1.cvmfs.eessi-infra.org</code> DNS entry;</li>
-<li>open a pull request to include the URL to your Stratum 1 in the EESSI configuration.</li>
-</ul>
-<p>The last two steps can be skipped if you want to host a "private" Stratum 1 for your site.</p>
+<p>The EESSI project provides a number of geographically distributed public Stratum 1 servers that you can use to make EESSI available on your machine(s).
+It is always recommended to have a local caching layer consisting of a few Squid proxies. 
+If you want to be even better protected against network outages and increase the bandwidth between your cluster nodes and the Stratum 1 servers,
+you could also consider setting up a local (private) Stratum 1 server that replicates the EESSI CVMFS repository.
+This guarantees that you always have a full and up-to-date copy of the entire stack available in your local network. </p>
 <h2 id="requirements-for-a-stratum-1">Requirements for a Stratum 1<a class="headerlink" href="#requirements-for-a-stratum-1" title="Permanent link">&para;</a></h2>
 <p>The main requirements for a Stratum 1 server are a good network connection to the clients it is going to serve,
-and sufficient disk space. For the EESSI repository, a few hundred gigabytes should suffice, but for production
-environments at least 1 TB would be recommended.</p>
+and sufficient disk space. As the EESSI repository is constantly growing, make sure that the disk space can easily be extended if necessary. 
+Currently, we recommend to have at least 1 TB available.</p>
 <p>In terms of cores and memory, a machine with just a few (~4) cores and 4-8 GB of memory should suffice.</p>
-<p>Various Linux distributions are supported, but we recommend one based on RHEL 7 or 8.</p>
-<p>Finally, make sure that ports 80 (for the Apache web server) and 8000 are open.</p>
-<h2 id="step-1-set-up-the-stratum-1">Step 1: set up the Stratum 1<a class="headerlink" href="#step-1-set-up-the-stratum-1" title="Permanent link">&para;</a></h2>
+<p>Various Linux distributions are supported, but we recommend one based on RHEL 8 or 9.</p>
+<p>Finally, make sure that ports 80 and 8000 are open to clients.</p>
+<h2 id="configure-the-stratum-1">Configure the Stratum 1<a class="headerlink" href="#configure-the-stratum-1" title="Permanent link">&para;</a></h2>
+<p>Stratum 1 servers have to synchronize the contents of their CVMFS repositories regularly, and usually they replicate from a CVMFS Stratum 0 server. 
+In order to ensure the stability and security of the EESSI Stratum 0 server, it has a strict firewall, and only the EESSI-maintained public Stratum 1 servers are allowed to replicate from it.
+However, EESSI provides a synchronisation server that can be used for setting up private Stratum 1 replica servers, and this is available at <code>http://aws-eu-west-s1-sync.eessi.science</code>.</p>
+<div class="admonition warn potential issues with intrusion prevention systems">
+<p class="admonition-title">Warn</p>
+<p>In the past we have seen a few occurrences of data transfer issues when files were being pulled in by or from a Stratum 1 server.
+In such cases the <code>cvmfs_server snapshot</code> command, used for synchronizing the Stratum 1, may break with errors like <code>failed to download &lt;URL to file&gt;</code>.
+Trying to manually download the mentioned file with <code>curl</code> will also not work, and result in errors like:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl: (56) Recv failure: Connection reset by peer
+</code></pre></div>
+In all cases this was due to an intrusion prevention system scanning the associated network, and hence scanning all files going in or out of the Stratum 1.
+Though it was a false-positive in all cases, this breaks the synchronization procedure of your Stratum 1.
+If this is the case, you can try switching to HTTPS by using <code>https://aws-eu-west-s1-sync.eessi.science</code> for synchronizing your Stratum 1.
+Even though there is no advantage for CVMFS itself in using HTTPS (it has built-in mechanisms for ensuring the integrity of the data),
+this will prevent the described issues, as the intrusion prevention system will not be able to inspect the encrypted data.
+However, not only does HTTPS introduce some overhead due to the encryption/decryption, it also makes caching in forward proxies impossible.
+Therefore, it is strongly discouraged to use HTTPS as default.</p>
+</div>
+<h3 id="manual-configuration">Manual configuration<a class="headerlink" href="#manual-configuration" title="Permanent link">&para;</a></h3>
+<p>In order to set up a Stratum 1 manually, you can make use of the instructions in the <a href="https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices/access/stratum1/">Private Stratum 1 replica server</a>
+section of the MultiXscale tutorial <a href="https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices/">"Best Practices for CernVM-FS in HPC"</a>.</p>
+<h3 id="configuration-using-ansible">Configuration using Ansible<a class="headerlink" href="#configuration-using-ansible" title="Permanent link">&para;</a></h3>
 <p>The recommended way for setting up an EESSI Stratum 1 is by running the Ansible playbook <code>stratum1.yml</code>
-from the <a href="https://github.com/EESSI/filesystem-layer">filesystem-layer repository on GitHub</a>.</p>
-<p>Installing a Stratum 1 requires a GEO API license key, which will be used to find the (geographically) closest Stratum 1 server for your client and proxies.
-More information on how to (freely) obtain this key is available in the CVMFS documentation: https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#geo-api-setup.</p>
+from the <a href="https://github.com/EESSI/filesystem-layer">filesystem-layer repository on GitHub</a>.
+For the commands in this section, we are assuming that you cloned this repository, and your working directory is <code>filesystem-layer</code>.</p>
+<div class="admonition note geo api">
+<p class="admonition-title">Note</p>
+<p>Installing a Stratum 1 usually requires a GEO API license key, which will be used to find the (geographically) closest Stratum 1 server for your client and proxies.
+However, for a private Stratum 1 this can be skipped, and you can disable the use of the GEO API in the configuration of your clients by setting <code>CVMFS_USE_GEOAPI=no</code>.
+In this case, they will just connect to your local Stratum 1 by default.</p>
+<p>If you do want to set up the GEO API, you can find more information on how to (freely) obtain this key in the CVMFS documentation: https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#geo-api-setup.</p>
 <p>You can put your license key in the local configuration file <code>inventory/local_site_specific_vars.yml</code>.</p>
-<p>Furthermore, the Stratum 1 runs a Squid server. The template configuration file can be found at <code>templates/eessi_stratum1_squid.conf.j2</code>.
-If you want to customize it, for instance for limiting the access to the Stratum 1, you can make your own version of this template file 
-and point to it by setting <code>local_stratum1_cvmfs_squid_conf_src</code> in <code>inventory/local_site_specific_vars.yml</code>.
-See the comments in the example file for more details.</p>
-<p>Start by installing Ansible:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ansible
+</div>
+<p>Start by installing Ansible, e.g.:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ansible
 </code></pre></div>
 <p>Then install Ansible roles for EESSI:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ansible-galaxy<span class="w"> </span>role<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.yml<span class="w"> </span>-p<span class="w"> </span>./roles<span class="w"> </span>--force
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ansible-galaxy<span class="w"> </span>role<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>./requirements.yml<span class="w"> </span>--force
 </code></pre></div>
-<p>Make sure you have enough space in <code>/srv</code> (on the Stratum 1) since the snapshot of the Stratum 0
-will end up there by default. To alter the directory where the snapshot gets copied to you can add
-this variable in <code>inventory/host_vars/&lt;url-or-ip-to-your-stratum1&gt;</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cvmfs_srv_mount:<span class="w"> </span>/srv
+<p>Make sure you have enough space in <code>/srv</code> on the Stratum 1, since the snapshots of the repositories
+will end up there by default. To alter the directory where the snapshots get stored you can manually
+create a symlink before running the playbook:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/lots/of/space/cvmfs<span class="w"> </span>/srv/cvmfs
+</code></pre></div></p>
+<p>Also make sure that you have added the hostname or IP address of your server to the
+<code>inventory/hosts</code> file, that you are able to log in to the server from the machine that is going to run the playbook
+(preferably using an SSH key), and that you can use <code>sudo</code>. </p>
+<p>Finally, install the Stratum 1 using:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># -b to run as root, optionally use -K if a sudo password is required, and optionally include your site-specific variables</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ansible-playbook<span class="w"> </span>-b<span class="w"> </span><span class="o">[</span>-K<span class="o">]</span><span class="w"> </span><span class="o">[</span>-e<span class="w"> </span>@inventory/local_site_specific_vars.yml<span class="o">]</span><span class="w"> </span>stratum1.yml
 </code></pre></div>
-<p>Make sure that you have added the hostname or IP address of your server to the
-<code>inventory/hosts</code> file. Finally, install the Stratum 1 using one of the two following options.</p>
-<p>Option 1:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># -b to run as root, optionally use -K if a sudo password is required</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ansible-playbook<span class="w"> </span>-b<span class="w"> </span><span class="o">[</span>-K<span class="o">]</span><span class="w"> </span>-e<span class="w"> </span>@inventory/local_site_specific_vars.yml<span class="w"> </span>stratum1.yml
+Running the playbook will automatically make replicas of all the repositories defined in <code>group_vars/all.yml</code>.</p>
+<h3 id="verification-of-the-stratum-1-using-curl">Verification of the Stratum 1 using <code>curl</code><a class="headerlink" href="#verification-of-the-stratum-1-using-curl" title="Permanent link">&para;</a></h3>
+<p>When the playbook has finished, your Stratum 1 should be ready. In order to test your Stratum 1,
+even without a client installed, you can use <code>curl</code>:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/software.eessi.io/.cvmfspublished
 </code></pre></div>
-<p>Option2:</p>
-<p>Create a ssh key pair and make sure the <code>ansible-host-keys.pub</code> is in the
-<code>$HOME/.ssh/authorized_keys</code> file on your Stratum 1 server.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ssh-keygen<span class="w"> </span>-b<span class="w"> </span><span class="m">2048</span><span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-f<span class="w"> </span>~/.ssh/ansible-host-keys<span class="w"> </span>-q<span class="w"> </span>-N<span class="w"> </span><span class="s2">&quot;&quot;</span>
+This should return something like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>HTTP/1.1<span class="w"> </span><span class="m">200</span><span class="w"> </span>OK
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>...
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Content-Type:<span class="w"> </span>application/x-cvmfs
 </code></pre></div>
-<p>Then run the playbook:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ansible-playbook<span class="w"> </span>-b<span class="w"> </span>--private-key<span class="w"> </span>~/.ssh/ansible-host-keys<span class="w"> </span>-e<span class="w"> </span>@inventory/local_site_specific_vars.yml<span class="w"> </span>stratum1.yml
+<p>Example with the EESSI Stratum 1 running in AWS:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://aws-eu-central-s1.eessi.science/cvmfs/software.eessi.io/.cvmfspublished
 </code></pre></div>
-<p>Running the playbook will automatically make replicas of all the repositories defined in <code>group_vars/all.yml</code>.</p>
-<h2 id="step-2-request-a-firewall-exception">Step 2: request a firewall exception<a class="headerlink" href="#step-2-request-a-firewall-exception" title="Permanent link">&para;</a></h2>
-<p>(This step is not implemented yet and can be skipped)</p>
-<p>You can request a firewall exception rule to be added for your Stratum 1 server by
-<a href="https://github.com/EESSI/filesystem-layer/issues/new">opening an issue on the GitHub page of the filesystem layer repository</a>.</p>
-<p>Make sure to include the IP address of your server.</p>
-<h2 id="step-3-verification-of-the-stratum-1">Step 3: Verification of the Stratum 1<a class="headerlink" href="#step-3-verification-of-the-stratum-1" title="Permanent link">&para;</a></h2>
-<p>When the playbook has finished your Stratum 1 should be ready. In order to test your Stratum 1, even
-without a client installed, you can use <code>curl</code>.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/software.eessi.io/.cvmfspublished
+<h3 id="verification-of-the-stratum-1-using-a-cvmfs-client">Verification of the Stratum 1 using a CVMFS client<a class="headerlink" href="#verification-of-the-stratum-1-using-a-cvmfs-client" title="Permanent link">&para;</a></h3>
+<p>You can, of course, also test access to your Stratum 1 from a client.
+This requires you to install a CernVM-FS client and add the Stratum 1 to the client configuration;
+this is explained in more detail on the <a href="../../getting_access/native_installation/">native installation page</a>.</p>
+<p>Then verify that the client connects to your new Stratum 1 by running:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cvmfs_config<span class="w"> </span>stat<span class="w"> </span>-v<span class="w"> </span>software.eessi.io
 </code></pre></div>
-This should return:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>HTTP/1.1<span class="w"> </span><span class="m">200</span><span class="w"> </span>OK
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>...
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>X-Cache:<span class="w"> </span>MISS<span class="w"> </span>from<span class="w"> </span>&lt;url-or-ip-to-your-stratum1&gt;
+<p>Assuming that your new Stratum 1 is working properly, this should return something like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Connection:<span class="w"> </span>http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/software.eessi.io<span class="w"> </span>through<span class="w"> </span>proxy<span class="w"> </span>DIRECT<span class="w"> </span><span class="o">(</span>online<span class="o">)</span>
 </code></pre></div>
-<p>The second time you run it, you should get a cache hit:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>X-Cache:<span class="w"> </span>HIT<span class="w"> </span>from<span class="w"> </span>&lt;url-or-ip-to-your-stratum1&gt;
-</code></pre></div>
-<p>Example with the Norwegian Stratum 1:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://bgo-no.stratum1.cvmfs.eessi-infra.org/cvmfs/software.eessi.io/.cvmfspublished
-</code></pre></div>
-<p>You can also test access to your Stratum 1 from a client, for which you will have to install the CVMFS
-<a href="https://github.com/EESSI/filesystem-layer#clients">client</a>. </p>
-<p>Then run the following command to add your newly created Stratum 1 to the existing list of EESSI Stratum 1 servers by creating a local CVMFS configuration file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;CVMFS_SERVER_URL=&quot;http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/@fqrn@;$CVMFS_SERVER_URL&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/cvmfs/domain.d/eessi-hpc.org.local
-</code></pre></div>
-<p>If this is the first time you set up the client you now run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>setup
-</code></pre></div>
-<p>If you already had configured the client before, you can simply reload the config:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload<span class="w"> </span>-c<span class="w"> </span>software.eessi.io
-</code></pre></div>
-<p>Finally, verify that the client connects to your new Stratum 1 by running:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>cvmfs_config<span class="w"> </span>stat<span class="w"> </span>-v<span class="w"> </span>software.eessi.io
-</code></pre></div>
-<p>Assuming that your new Stratum 1 is the geographically closest one to your client, this should return:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Connection:<span class="w"> </span>http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/software.eessi.io<span class="w"> </span>through<span class="w"> </span>proxy<span class="w"> </span>DIRECT<span class="w"> </span><span class="o">(</span>online<span class="o">)</span>
-</code></pre></div>
-<h2 id="step-4-request-an-eessi-dns-name">Step 4: request an EESSI DNS name<a class="headerlink" href="#step-4-request-an-eessi-dns-name" title="Permanent link">&para;</a></h2>
-<p>In order to keep the configuration clean and easy, all the EESSI Stratum 1 servers have a DNS name
-<code>&lt;your site&gt;.stratum1.cvmfs.eessi-infra.org</code>, where <code>&lt;your site&gt;</code> is often a short name or
-abbreviation followed by the country code (e.g. <code>rug-nl</code> or <code>bgo-no</code>).  You can request this for
-your Stratum 1 by mentioning this in the issue that you created in Step 2, or by opening another
-issue.</p>
-<h2 id="step-5-include-your-stratum-1-in-the-eessi-configuration">Step 5: include your Stratum 1 in the EESSI configuration<a class="headerlink" href="#step-5-include-your-stratum-1-in-the-eessi-configuration" title="Permanent link">&para;</a></h2>
-<p>If you want to include your Stratum 1 in the EESSI configuration, i.e. allow any (nearby) client to be able to use it,
-you can open a pull request with updated configuration files. You will only have to add the URL to your Stratum 1 to the 
-<code>urls</code> list of the <code>eessi_cvmfs_server_urls</code> variable in the
-<a href="https://github.com/EESSI/filesystem-layer/blob/main/inventory/group_vars/all.yml"><code>all.yml</code> file</a>.</p>
 
 
 
@@ -1894,7 +1894,7 @@ you can open a pull request with updated configuration files. You will only have
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 4, 2024</span>
   </span>
 
     
