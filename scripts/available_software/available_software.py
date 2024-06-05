@@ -17,7 +17,6 @@ import re
 import subprocess
 import sys
 import time
-from pathlib import Path
 from typing import Union, Tuple
 import numpy as np
 from mdutils.mdutils import MdUtils
@@ -35,11 +34,7 @@ EXCLUDE_CPU_TARGETS = ['x86_64/amd/zen4']
 
 def main():
     os.environ["SHELL"] = "/bin/bash"
-    current_dir = Path(__file__).resolve()
-    project_name = 'docs'
-    root_dir = next(
-        p for p in current_dir.parents if p.parts[-1] == project_name
-    )
+    root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     path_data_dir = os.path.join(root_dir, "docs/available_software/data")
 
     # Generate the JSON overviews
