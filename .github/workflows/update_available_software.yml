@@ -8,13 +8,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
         with:
           python-version: '3.10'
           architecture: x64
 
       - name: Mount EESSI
-        uses: eessi/github-action-eessi@v3.1.0
+        uses: eessi/github-action-eessi@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
         with:
           eessi_stack_version: '2023.06'
 
@@ -42,7 +42,7 @@ jobs:
           echo "json_data_changed=${json_data_changed}" >> $GITHUB_OUTPUT
 
       - name: create pull request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
         if: steps.update_available_software.outputs.json_data_changed == 'yes'
         with:
           add-paths: docs/available_software
