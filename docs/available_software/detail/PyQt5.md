@@ -21,7 +21,7 @@ To start using PyQt5, load one of these modules using a `module load` command li
 module load PyQt5/5.15.10-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Thu, 06 Jun 2024 at 06:28:56 UTC)*  
+*(This data was automatically generated on Thu, 06 Jun 2024 at 08:26:56 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
