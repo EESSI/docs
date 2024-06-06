@@ -10,7 +10,7 @@ system.
 To list the tests that are available in the EESSI test suite,
 use `reframe --list` (or `reframe -L` for short).
 
-If you have properly [configured ReFrame](#Configuring-ReFrame), you should
+If you have properly [configured ReFrame](installation-configuration.md), you should
 see a (potentially long) list of checks in the output:
 
 ```
@@ -71,7 +71,7 @@ ReFrame will generate various output and log files:
 * performance log files for each test, which include performance results for the test runs;
 
 We strongly recommend controlling where these files go by using the [common logging configuration that
-is provided by the EESSI test suite in your ReFrame configuration file](installation-configuration.md#logging)
+is provided by the EESSI test suite in your ReFrame configuration file](ReFrame-configuration-file.md#logging)
 and setting [`$RFM_PREFIX`](installation-configuration.md#RFM_PREFIX) (avoid using the cmd line option `--prefix`).
 
 If you do, and if you use [ReFrame v4.3.3 or more newer](installation-configuration.md#requirements),

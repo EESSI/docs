@@ -82,7 +82,7 @@ To install a full CUDA SDK under `host_injections`, use the `install_cuda_host_i
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh
 ```
 
-For example, to install CUDA 12.1.1 in the directory that the [`host_injections` variant symlink](#host_injections) points to,
+For example, to install CUDA 12.1.1 in the directory that the [`host_injections` variant symlink](host_injections.md) points to,
 using `/tmp/$USER/EESSI` as directory to store temporary files:
 ```
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula

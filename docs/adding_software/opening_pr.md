@@ -97,7 +97,7 @@ git push koala example_branch
    If all goes well, one or more bots :robot: should almost instantly create a comment in your pull request
    with an overview of how it is configured - you will need this information when providing build instructions.
 
-### Rebuilding software
+### Rebuilding software {: #rebuilding_software } 
 We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using the software. However, there are certain situations in which it is difficult or impossible to avoid.
 
 To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` directory. Use the following naming convention: `YYYYMMDD-eb-<EB_VERSION>-<APPLICATION_NAME>-<APPLICATION_VERSION>-<SHORT_DESCRIPTION>.yml`, where `YYYYMMDD` is the opening date of your PR. E.g. `2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml` was added in a PR on the 6th of May 2024 and used to rebuild CUDA-12.1.1 using EasyBuild 4.9.1 to resolve an issue with some runtime libraries missing from the initial CUDA 12.1.1 installation.

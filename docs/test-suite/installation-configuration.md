@@ -106,7 +106,7 @@ export RFM_CONFIG_FILES=$HOME/EESSI-test-suite/config/example.py
 
 Alternatively, you can use the `--config-file` (or `-C`) `reframe` option.
 
-See the [section on the ReFrame configuration file](#reframe-config-file) below for more information.
+See the [section on the ReFrame configuration file](ReFrame-configuration-file.md#reframe-config-file) for more information.
 
 #### Search path for tests (`$RFM_CHECK_SEARCH_PATH`)
 
@@ -145,7 +145,7 @@ This involves:
 Note that the default is for ReFrame to use the current directory as prefix.
 We recommend setting a prefix so that logs are not scattered around and nicely appended for each run.
 
-If our [common logging configuration](#logging) is used, the regular ReFrame log file will
+If our [common logging configuration](ReFrame-configuration-file.md#logging) is used, the regular ReFrame log file will
 also end up in the location specified by `$RFM_PREFIX`.
 
 !!! warning
