@@ -126,7 +126,7 @@ export RFM_CHECK_SEARCH_RECURSIVE=1
 
 Alternatively, you can use the `--checkpath` (or `-c`) and `--recursive` (or `-R`) `reframe` options.
 
-#### ReFrame prefix (`$RFM_PREFIX`) { #RFM_PREFIX }
+#### ReFrame prefix (`$RFM_PREFIX`) {: #RFM_PREFIX }
 
 *(see also [`RFM_PREFIX` in ReFrame docs](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_PREFIX))*
 
