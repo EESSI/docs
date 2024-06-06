@@ -30,7 +30,7 @@ jobs:
           cp docs/available_software/data/json_data.json docs/available_software/data/json_data.json.orig
           cp docs/available_software/data/json_data_detail.json docs/available_software/data/json_data_detail.json.orig
 
-          python scripts/available_software/requirements.txt
+          python scripts/available_software/available_software.py
           git status
 
           # determine whether pull request should be opened:
