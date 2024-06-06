@@ -21,25 +21,32 @@ jobs:
       - name: update overview of available software
         id: update_available_software
         run: |
-          cd scripts/available_software
-
           # install required Python packages in virtual environment
           python -m venv venv
           . venv/bin/activate
           pip install -r requirements.txt
 
-          python available_software.py
+          # copy current JSON data, so we can compare after updating it
+          cp docs/available_software/data/json_data.json docs/available_software/data/json_data.json.orig
+          cp docs/available_software/data/json_data_detail.json docs/available_software/data/json_data_detail.json.orig
+
+          python scripts/available_software/available_software.py
           git status
 
           # determine whether pull request should be opened:
           # if JSON files in docs/available_software/data have been updated, then a PR should be opened
-          json_data_changed=$((git diff --exit-code ../../docs/available_software/data > /dev/null && echo 'no') || echo 'yes')
-          if [[ ${json_data_changed} == "yes" ]]; then
-            echo "JSON files in docs/available_software/data have been changed, PR should be opened"
-          else
+          json_data_changed=$(python scripts/available_software/check_json_updates.py docs/available_software/data/json_data.json.orig docs/available_software/data/json_data.json)
+          json_data_detail_changed=$(python scripts/available_software/check_json_updates.py docs/available_software/data/json_data_detail.json.orig docs/available_software/data/json_data_detail.json)
+          if [[ ${json_data_changed} == "no changes" ]] && [[ ${json_data_detail_changed} == "no changes" ]]; then
             echo "JSON files in docs/available_software/data have not been changed, no need to open PR"
+            echo "json_data_changed=no" >> $GITHUB_OUTPUT
+          else
+            echo "JSON files in docs/available_software/data have been changed, PR should be opened"
+            echo "json_data_changed=yes" >> $GITHUB_OUTPUT
           fi
-          echo "json_data_changed=${json_data_changed}" >> $GITHUB_OUTPUT
+
+          # remove original JSON files, or they'll end up in the PR being opened
+          rm -f docs/available_software/data/json_data.json.orig  docs/available_software/data/json_data_detail.json.orig
 
       - name: create pull request
         uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
