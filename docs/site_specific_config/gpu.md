@@ -3,7 +3,7 @@
 More information on the actions that must be performed to ensure that GPU software included in EESSI
 can use the GPU in your system is available below.
 
-[Please open a support issue](support.md) if you need help or have questions regarding GPU support.
+[Please open a support issue](../support.md) if you need help or have questions regarding GPU support.
 
 !!! tip "Make sure the `${EESSI_VERSION}` version placeholder is defined!"
     In this page, we use `${EESSI_VERSION}` as a placeholder for the version of the EESSI repository,
@@ -54,7 +54,7 @@ If the corresponding full installation of the CUDA SDK is available there, the C
 
 ### Using NVIDIA GPUs via a native EESSI installation {: #nvidia_eessi_native }
 
-Here, we describe the steps to enable GPU support when you have a [native EESSI installation](getting_access/native_installation.md) on your system.
+Here, we describe the steps to enable GPU support when you have a [native EESSI installation](../getting_access/native_installation.md) on your system.
 
 !!! warning "Required permissions"
     To enable GPU support for EESSI on your system, you will typically need to have system administration rights, since you need write permissions on the folder to the target directory of the `host_injections` symlink.
@@ -89,7 +89,7 @@ using `/tmp/$USER/EESSI` as directory to store temporary files:
 ```
 You should choose the CUDA version you wish to install according to what CUDA versions are included in EESSI;
 see the output of `module avail CUDA/` after [setting up your environment for using
-EESSI](using_eessi/setting_up_environment.md).
+EESSI](../using_eessi/setting_up_environment.md).
 
 You can run `/cvmfs/software.eessi.io/scripts/install_cuda_host_injections.sh --help` to check all of the options.
 
@@ -113,7 +113,7 @@ We focus here on the [Apptainer](https://apptainer.org/)/[Singularity](https://s
 and have only tested the [`--nv` option](https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard)
 to enable access to GPUs from within the container.
 
-If you are using the [EESSI container](getting_access/eessi_container.md) to access the EESSI software,
+If you are using the [EESSI container](../getting_access/eessi_container.md) to access the EESSI software,
 the procedure for enabling GPU support is slightly different and will be documented here eventually.
 
 #### Exposing NVIDIA GPU drivers
