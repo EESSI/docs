@@ -24,13 +24,13 @@ jobs:
           # install required Python packages in virtual environment
           python -m venv venv
           . venv/bin/activate
-          pip install -r requirements.txt
+          pip install -r scripts/available_software/requirements.txt
 
           # copy current JSON data, so we can compare after updating it
           cp docs/available_software/data/json_data.json docs/available_software/data/json_data.json.orig
           cp docs/available_software/data/json_data_detail.json docs/available_software/data/json_data_detail.json.orig
 
-          python scripts/available_software/available_software.py
+          python scripts/available_software/requirements.txt
           git status
 
           # determine whether pull request should be opened:
