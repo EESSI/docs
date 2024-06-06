@@ -3,7 +3,7 @@ You may want to customize what happens when certain modules are loaded, for exam
 
 
 ## Location of the hooks
-The EESSI software stack provides its own set of hooks in `$LMOD_PACKAGE_PATH/SitePackage.lua`. This `SitePackage.lua` also searches for site-specific hooks in two additonal locations:
+The EESSI software stack provides its own set of hooks in `$LMOD_PACKAGE_PATH/SitePackage.lua`. This `SitePackage.lua` also searches for site-specific hooks in two additional locations:
 
 - `$EESSI_CVMFS_REPO/host_injections/$EESSI_VERSION/.lmod/SitePackage.lua`
 - `$EESSI_CVMFS_REPO/host_injections/$EESSI_VERSION/software/$EESSI_OS_TYPE/$EESSI_SOFTWARE_SUBDIR/.lmod/SitePackage.lua`
@@ -46,7 +46,7 @@ for the same reason that multiple hooks cannot be registered, we need to combine
 -- before registering it as a hook
 local function combined_load_hook(t)
     -- Call the EESSI load hook (if it exists)
-    -- Note that if you wanted to overwrite the EESSI hooks (not recommended!), you would ommit this
+    -- Note that if you wanted to overwrite the EESSI hooks (not recommended!), you would omit this
     if eessi_load_hook ~= nil then
         eessi_load_hook(t)
     end
@@ -149,7 +149,7 @@ before finally registering it as an Lmod hook
 hook.register("load", combined_load_hook)
 ```
 
-Thus, our full `$EESSI_CVMFS_REPO/host_injections/$EESSI_VERSION/software/linux/x86_64/amd/zen3/.lmod/SitePackage.lua` now looks like this (ommitting the comments):
+Thus, our full `$EESSI_CVMFS_REPO/host_injections/$EESSI_VERSION/software/linux/x86_64/amd/zen3/.lmod/SitePackage.lua` now looks like this (omitting the comments):
 
 ```lua
 require("strict")

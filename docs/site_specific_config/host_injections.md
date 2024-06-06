@@ -27,7 +27,7 @@ sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/shared_fs/path/to/host/injections/' >
     sudo cvmfs_config reload
     ```
 
-On a heterogenous system, you may want to use different targets for the variant symlink for different node types. For example, you might have two types of GPU nodes (`gpu1` and `gpu2`) for which the GPU drivers are _not_ in the same location, or not of the same version. Since those are both things we configure under `host_injections`, you'll need seperate `host_injections` directories for each node type. That can easily be achieved by putting e.g.
+On a heterogeneous system, you may want to use different targets for the variant symlink for different node types. For example, you might have two types of GPU nodes (`gpu1` and `gpu2`) for which the GPU drivers are _not_ in the same location, or not of the same version. Since those are both things we configure under `host_injections`, you'll need separate `host_injections` directories for each node type. That can easily be achieved by putting e.g.
 
 ```{bash}
 sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/shared_fs/path/to/host/injections/gpu1/' > /etc/cvmfs/domain.d/eessi.io.local"
