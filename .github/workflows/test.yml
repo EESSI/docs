@@ -20,7 +20,7 @@ jobs:
       with:
         check_filenames: true
         # MarkDown files in docs/available_software/detail are skipped because they are auto-generated
-        skip: '*.pdf,.git,*.json,docs/available_software/detail/*.md'
+        skip: '*.pdf,.git,*.json,./docs/available_software/detail/*.md'
 
     # - name: Markdown Linting Action
     #   uses: avto-dev/markdown-lint@v1.2.0
