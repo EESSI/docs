@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: "3.6"
       - name: Run flake8
-        uses: py-actions/flake8@v2
+        uses: py-actions/flake8@84ec6726560b6d5bd68f2a5bed83d62b52bb50ba # v2.3.0
         with:
           max-line-length: "120"
           path: "scripts/available_software"
