@@ -1,0 +1,1771 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/available_software/detail/R-bundle-Bioconductor/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.25">
+    
+    
+      
+        <title>R-bundle-Bioconductor - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#r-bundle-bioconductor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              R-bundle-Bioconductor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../filesystem_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filesystem layer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../compatibility_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compatibility layer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software layer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software_layer/cpu_targets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Supported CPU targets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_access/is_eessi_accessible/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is EESSI already installed?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_access/native_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Native
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_access/eessi_container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic usage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Basic usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/setting_up_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set up environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/basic_commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/eessi_demos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced usage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repositories/software.eessi.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repositories/riscv.eessi.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repositories/pilot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pilot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../filesystem_layer/stratum1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your Stratum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/building_on_eessi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software with EESSI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Test suite
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Test suite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/installation-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation & configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/ReFrame-configuration-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReFrame configuration file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/available-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Accelerators support
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Accelerators support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPUs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding software to EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Adding software to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For contributors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            For contributors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/contribution_policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribution policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/opening_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open PR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/debugging_failed_builds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For maintainers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            For maintainers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BTD bot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/building_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/deploying_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software_layer/build_nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build nodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Known issues
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Known issues
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../known_issues/eessi-2023.06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v2023.06
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v2022.02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pilot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community and support
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Community and support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../meetings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meetings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="r-bundle-bioconductor">R-bundle-Bioconductor<a class="headerlink" href="#r-bundle-bioconductor" title="Permanent link">&para;</a></h1>
+<p>Bioconductor provides tools for the analysis and coprehension of high-throughput genomic data.</p>
+<p>https://bioconductor.org</p>
+<h1 id="available-modules">Available modules<a class="headerlink" href="#available-modules" title="Permanent link">&para;</a></h1>
+<p>The overview below shows which R-bundle-Bioconductor installations are available per target architecture in EESSI, ordered based on software version (new to old).</p>
+<p>To start using R-bundle-Bioconductor, load one of these modules using a <code>module load</code> command like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>module<span class="w"> </span>load<span class="w"> </span>R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2
+</code></pre></div>
+<p><em>(This data was automatically generated on Thu, 06 Jun 2024 at 06:28:56 UTC)</em>  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;">aarch64/generic</th>
+<th style="text-align: center;">aarch64/neoverse_n1</th>
+<th style="text-align: center;">aarch64/neoverse_v1</th>
+<th style="text-align: center;">x86_64/generic</th>
+<th style="text-align: center;">x86_64/amd/zen2</th>
+<th style="text-align: center;">x86_64/amd/zen3</th>
+<th style="text-align: center;">x86_64/intel/haswell</th>
+<th style="text-align: center;">x86_64/intel/skylake_avx512</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+</tr>
+<tr>
+<td style="text-align: center;">R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+<td style="text-align: center;">x</td>
+</tr>
+</tbody>
+</table>
+<h3 id="r-bundle-bioconductor318-foss-2023a-r-432">R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2<a class="headerlink" href="#r-bundle-bioconductor318-foss-2023a-r-432" title="Permanent link">&para;</a></h3>
+<p>This is a list of extensions included in the module:</p>
+<p>affxparser-1.74.0, affy-1.80.0, affycoretools-1.74.0, affyio-1.72.0, AgiMicroRna-2.52.0, agricolae-1.3-7, ALDEx2-1.34.0, ALL-1.44.0, ANCOMBC-2.4.0, annaffy-1.74.0, annotate-1.80.0, AnnotationDbi-1.64.1, AnnotationFilter-1.26.0, AnnotationForge-1.44.0, AnnotationHub-3.10.0, anytime-0.3.9, aroma.affymetrix-3.2.1, aroma.apd-0.7.0, aroma.core-3.3.0, aroma.light-3.32.0, ash-1.0-15, ATACseqQC-1.26.0, AUCell-1.24.0, aws.s3-0.3.21, aws.signature-0.6.0, babelgene-22.9, ballgown-2.34.0, basilisk-1.14.2, basilisk.utils-1.14.1, batchelor-1.18.1, baySeq-2.36.0, beachmat-2.18.0, BH-1.84.0-0, Biobase-2.62.0, BiocBaseUtils-1.4.0, BiocFileCache-2.10.1, BiocGenerics-0.48.0, BiocIO-1.12.0, BiocManager-1.30.22, BiocNeighbors-1.20.2, BiocParallel-1.36.0, BiocSingular-1.18.0, BiocStyle-2.30.0, BiocVersion-3.18.1, biomaRt-2.58.0, biomformat-1.30.0, Biostrings-2.70.0, biovizBase-1.50.0, blme-1.0-5, bluster-1.12.0, bookdown-0.37, BSgenome-1.70.1, BSgenome.Cfamiliaris.UCSC.canFam3-1.4.0, BSgenome.Hsapiens.UCSC.hg19-1.4.3, BSgenome.Hsapiens.UCSC.hg38-1.4.5, BSgenome.Mmusculus.UCSC.mm10-1.4.3, bsseq-1.38.0, bumphunter-1.44.0, ca-0.71.1, CAGEfightR-1.22.0, CAGEr-2.8.0, CAMERA-1.58.0, Category-2.68.0, ccdata-1.28.0, ccmap-1.28.0, CGHbase-1.62.0, CGHcall-2.64.0, ChIPpeakAnno-3.36.0, chromVAR-1.24.0, clusterProfiler-4.10.0, CNEr-1.38.0, coloc-5.2.3, colorRamps-2.3.1, ComplexHeatmap-2.18.0, ConsensusClusterPlus-1.66.0, conumee-1.36.0, crossmeta-1.28.0, cummeRbund-2.44.0, cytolib-2.14.1, CytoML-2.14.0, dada2-1.30.0, ddPCRclust-1.22.0, DECIPHER-2.30.0, DeconRNASeq-1.44.0, decontam-1.22.0, decoupleR-2.8.0, DEGseq-1.56.1, DelayedArray-0.28.0, DelayedMatrixStats-1.24.0, densEstBayes-1.0-2.2, derfinder-1.36.0, derfinderHelper-1.36.0, DESeq2-1.42.0, diffcyt-1.22.0, dir.expiry-1.10.0, directlabels-2024.1.21, DirichletMultinomial-1.44.0, DNABarcodes-1.32.0, DNAcopy-1.76.0, DO.db-2.9, docopt-0.7.1, DOSE-3.28.2, dqrng-0.3.2, DRIMSeq-1.30.0, DropletUtils-1.22.0, DSS-2.50.1, dupRadar-1.32.0, DynDoc-1.80.0, EBImage-4.44.0, edgeR-4.0.12, egg-0.4.5, emmeans-1.10.0, enrichplot-1.22.0, EnsDb.Hsapiens.v75-2.99.0, EnsDb.Hsapiens.v79-2.99.0, EnsDb.Hsapiens.v86-2.99.0, ensembldb-2.26.0, escape-1.12.0, estimability-1.4.1, ExperimentHub-2.10.0, extraDistr-1.10.0, factoextra-1.0.7, fANCOVA-0.6-1, fda-6.1.4, FDb.InfiniumMethylation.hg19-2.2.0, fds-1.8, feature-1.2.15, fgsea-1.28.0, filelock-1.0.3, flowAI-1.32.0, flowClean-1.40.0, flowClust-3.40.0, flowCore-2.14.0, flowDensity-1.36.1, flowFP-1.60.0, flowMerge-2.50.0, flowPeaks-1.48.0, FlowSOM-2.10.0, FlowSorted.Blood.EPIC-2.6.0, FlowSorted.CordBloodCombined.450k-1.18.0, flowStats-4.14.1, flowViz-1.66.0, flowWorkspace-4.14.2, FRASER-1.14.0, fresh-0.2.0, gcrma-2.74.0, gdsfmt-1.38.0, genefilter-1.84.0, geneLenDataBase-1.38.0, geneplotter-1.80.0, GENESIS-2.32.0, GENIE3-1.24.0, GenomeInfoDb-1.38.5, GenomeInfoDbData-1.2.11, GenomicAlignments-1.38.2, GenomicFeatures-1.54.1, GenomicFiles-1.38.0, GenomicInteractions-1.36.0, GenomicRanges-1.54.1, GenomicScores-2.14.3, GEOmap-2.5-5, GEOquery-2.70.0, ggbio-1.50.0, ggcyto-1.30.0, ggdendro-0.1.23, ggnewscale-0.4.9, ggpointdensity-0.1.0, ggrastr-1.0.2, ggseqlogo-0.1, ggthemes-5.0.0, ggtree-3.10.0, GLAD-2.66.0, Glimma-2.12.0, GlobalAncova-4.20.0, globaltest-5.56.0, GO.db-3.18.0, GOSemSim-2.28.1, goseq-1.54.0, GOstats-2.68.0, graph-1.80.0, graphite-1.48.0, GSEABase-1.64.0, gsmoothr-0.1.7, gson-0.1.0, GSVA-1.50.0, Gviz-1.46.1, GWASExactHW-1.01, GWASTools-1.48.0, HDF5Array-1.30.0, HDO.db-0.99.1, hdrcde-3.4, heatmaply-1.5.0, hgu133plus2.db-3.13.0, HiCBricks-1.20.0, HiCcompare-1.24.0, HMMcopy-1.44.0, Homo.sapiens-1.3.1, IHW-1.30.0, IlluminaHumanMethylation450kanno.ilmn12.hg19-0.6.1, IlluminaHumanMethylation450kmanifest-0.4.0, IlluminaHumanMethylationEPICanno.ilm10b2.hg19-0.6.0, IlluminaHumanMethylationEPICanno.ilm10b4.hg19-0.6.0, IlluminaHumanMethylationEPICmanifest-0.3.0, illuminaio-0.44.0, impute-1.76.0, InteractionSet-1.30.0, interactiveDisplayBase-1.40.0, intervals-0.15.4, IRanges-2.36.0, isva-1.9, JASPAR2020-0.99.10, KEGGgraph-1.62.0, KEGGREST-1.42.0, LEA-3.14.0, limma-3.58.1, log4r-0.4.3, lpsymphony-1.30.0, lsa-0.73.3, lumi-2.54.0, M3Drop-1.28.0, marray-1.80.0, maSigPro-1.74.0, MassSpecWavelet-1.68.0, MatrixGenerics-1.14.0, MBA-0.1-0, MEDIPS-1.54.0, MetaboCoreUtils-1.10.0, metagenomeSeq-1.43.0, metaMA-3.1.3, metap-1.9, metapod-1.10.1, MethylSeekR-1.42.0, methylumi-2.48.0, Mfuzz-2.62.0, mia-1.10.0, minfi-1.48.0, missMethyl-1.36.0, mixOmics-6.26.0, mixsqp-0.3-54, MLInterfaces-1.82.0, MotifDb-1.44.0, motifmatchr-1.24.0, motifStack-1.46.0, MsCoreUtils-1.14.1, MsExperiment-1.4.0, MsFeatures-1.10.0, msigdbr-7.5.1, MSnbase-2.28.1, MSstats-4.10.0, MSstatsConvert-1.12.0, MSstatsLiP-1.8.1, MSstatsPTM-2.4.2, MSstatsTMT-2.10.0, MultiAssayExperiment-1.28.0, MultiDataSet-1.30.0, multtest-2.58.0, muscat-1.16.0, mutoss-0.1-13, mzID-1.40.0, mzR-2.36.0, NADA-1.6-1.1, ncdfFlow-2.48.0, NMF-0.26, NOISeq-2.46.0, numbat-1.3.2-1, oligo-1.66.0, oligoClasses-1.64.0, ontologyIndex-2.11, oompaBase-3.2.9, oompaData-3.1.3, openCyto-2.14.0, org.Hs.eg.db-3.18.0, org.Mm.eg.db-3.18.0, org.Rn.eg.db-3.18.0, OrganismDbi-1.44.0, OUTRIDER-1.20.0, pathview-1.42.0, pcaMethods-1.94.0, perm-1.0-0.4, PFAM.db-3.18.0, phyloseq-1.46.0, plyranges-1.22.0, pmp-1.14.0, polyester-1.38.0, poweRlaw-0.70.6, preprocessCore-1.64.0, pRoloc-1.42.0, pRolocdata-1.40.0, pRolocGUI-2.12.0, ProtGenerics-1.34.0, PRROC-1.3.1, PSCBS-0.66.0, PureCN-2.8.1, qap-0.1-2, QDNAseq-1.38.0, QFeatures-1.12.0, qlcMatrix-0.9.7, qqconf-1.3.2, quantsmooth-1.68.0, qvalue-2.34.0, R.devices-2.17.1, R.filesets-2.15.0, R.huge-0.10.1, rainbow-3.8, randomcoloR-1.1.0.1, rARPACK-0.11-0, RBGL-1.78.0, RcisTarget-1.22.0, RcppAnnoy-0.0.22, RcppHNSW-0.5.0, RcppML-0.3.7, RcppZiggurat-0.1.6, reactome.db-1.86.2, ReactomePA-1.46.0, regioneR-1.34.0, reldist-1.7-2, remaCor-0.0.16, Repitools-1.48.0, ReportingTools-2.42.3, ResidualMatrix-1.12.0, restfulr-0.0.15, Rfast-2.1.0, RFOC-3.4-10, rGADEM-2.50.0, Rgraphviz-2.46.0, rhdf5-2.46.1, rhdf5filters-1.14.1, Rhdf5lib-1.24.1, Rhtslib-2.4.1, Ringo-1.66.0, RNASeqPower-1.42.0, RnBeads-2.20.0, RnBeads.hg19-1.34.0, RnBeads.hg38-1.34.0, RnBeads.mm10-2.10.0, RnBeads.mm9-1.34.0, RnBeads.rn5-1.34.0, ROC-1.78.0, rols-2.30.0, ROntoTools-2.30.0, ropls-1.34.0, RPMG-2.2-7, RProtoBufLib-2.14.0, Rsamtools-2.18.0, RSEIS-4.1-6, Rsubread-2.16.1, rsvd-1.0.5, rtracklayer-1.62.0, Rwave-2.6-5, S4Arrays-1.2.0, S4Vectors-0.40.2, samr-3.0, SamSPECTRAL-1.56.0, SC3-1.30.0, ScaledMatrix-1.10.0, SCANVIS-1.16.0, scater-1.30.1, scattermore-1.2, scDblFinder-1.16.0, scistreer-1.2.0, scran-1.30.2, scrime-1.3.5, scuttle-1.12.0, SeqArray-1.42.0, seqLogo-1.68.0, SeqVarTools-1.40.0, seriation-1.5.4, Seurat-5.0.1, SeuratObject-5.0.1, shinyBS-0.61.1, shinydashboardPlus-2.0.3, shinyFiles-0.9.3, shinyhelper-0.3.2, shinypanel-0.1.5, shinyWidgets-0.8.1, ShortRead-1.60.0, siggenes-1.76.0, Signac-1.12.0, simplifyEnrichment-1.12.0, SingleCellExperiment-1.24.0, SingleR-2.4.1, sitmo-2.0.2, slingshot-2.10.0, SMVar-1.3.4, SNPRelate-1.36.0, snpStats-1.52.0, SparseArray-1.2.3, sparseMatrixStats-1.14.0, sparsesvd-0.2-2, SpatialExperiment-1.12.0, Spectra-1.12.0, SPIA-2.54.0, splancs-2.01-44, SPOTlight-1.6.7, stageR-1.24.0, struct-1.14.0, structToolbox-1.14.0, SummarizedExperiment-1.32.0, susieR-0.12.35, sva-3.50.0, TailRank-3.2.2, TFBSTools-1.40.0, TFMPvalue-0.0.9, tkWidgets-1.80.0, TrajectoryUtils-1.10.0, treeio-1.26.0, TreeSummarizedExperiment-2.10.0, TSP-1.2-4, TxDb.Hsapiens.UCSC.hg19.knownGene-3.2.2, TxDb.Mmusculus.UCSC.mm10.knownGene-3.10.0, tximport-1.30.0, UCell-2.6.2, uwot-0.1.16, variancePartition-1.32.2, VariantAnnotation-1.48.1, venn-1.12, vsn-3.70.0, waiter-0.2.5, wateRmelon-2.8.0, WGCNA-1.72-5, widgetTools-1.80.0, Wrench-1.20.0, xcms-4.0.2, XVector-0.42.0, zCompositions-1.5.0-1, zellkonverter-1.12.1, zlibbioc-1.48.0</p>
+<h3 id="r-bundle-bioconductor316-foss-2022b-r-422">R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2<a class="headerlink" href="#r-bundle-bioconductor316-foss-2022b-r-422" title="Permanent link">&para;</a></h3>
+<p>This is a list of extensions included in the module:</p>
+<p>affxparser-1.70.0, affy-1.76.0, affycoretools-1.70.0, affyio-1.68.0, AgiMicroRna-2.48.0, agricolae-1.3-5, ALDEx2-1.30.0, ALL-1.40.0, ANCOMBC-2.0.2, annaffy-1.70.0, annotate-1.76.0, AnnotationDbi-1.60.2, AnnotationFilter-1.22.0, AnnotationForge-1.40.1, AnnotationHub-3.6.0, anytime-0.3.9, aroma.affymetrix-3.2.1, aroma.apd-0.6.1, aroma.core-3.3.0, aroma.light-3.28.0, ash-1.0-15, ATACseqQC-1.22.0, AUCell-1.20.2, aws.s3-0.3.21, aws.signature-0.6.0, babelgene-22.9, ballgown-2.30.0, basilisk-1.10.2, basilisk.utils-1.10.0, batchelor-1.14.1, baySeq-2.31.0, beachmat-2.14.0, Biobase-2.58.0, BiocBaseUtils-1.0.0, BiocFileCache-2.6.1, BiocGenerics-0.44.0, BiocIO-1.8.0, BiocManager-1.30.20, BiocNeighbors-1.16.0, BiocParallel-1.32.5, BiocSingular-1.14.0, BiocStyle-2.26.0, BiocVersion-3.16.0, biomaRt-2.54.0, biomformat-1.26.0, Biostrings-2.66.0, biovizBase-1.46.0, blme-1.0-5, bluster-1.8.0, bookdown-0.33, BSgenome-1.66.3, BSgenome.Cfamiliaris.UCSC.canFam3-1.4.0, BSgenome.Hsapiens.UCSC.hg19-1.4.3, BSgenome.Hsapiens.UCSC.hg38-1.4.5, BSgenome.Mmusculus.UCSC.mm10-1.4.3, bsseq-1.34.0, bumphunter-1.40.0, ca-0.71.1, CAGEr-2.4.0, CAMERA-1.54.0, Category-2.64.0, ccdata-1.24.0, ccmap-1.24.0, CGHbase-1.58.0, CGHcall-2.60.0, ChIPpeakAnno-3.32.0, chromVAR-1.20.2, clusterProfiler-4.6.2, CNEr-1.34.0, coloc-5.1.0.1, colorRamps-2.3.1, ComplexHeatmap-2.14.0, ConsensusClusterPlus-1.62.0, conumee-1.32.0, crossmeta-1.24.0, cummeRbund-2.40.0, cytolib-2.10.1, CytoML-2.10.0, dada2-1.26.0, ddPCRclust-1.18.0, DECIPHER-2.26.0, DeconRNASeq-1.40.0, decontam-1.18.0, decoupleR-2.4.0, DEGseq-1.52.0, DelayedArray-0.24.0, DelayedMatrixStats-1.20.0, densEstBayes-1.0-2.1, derfinder-1.32.0, derfinderHelper-1.32.0, DESeq2-1.38.3, diffcyt-1.18.0, dir.expiry-1.6.0, DirichletMultinomial-1.40.0, DNABarcodes-1.28.0, DNAcopy-1.72.3, DO.db-2.9, docopt-0.7.1, DOSE-3.24.2, dqrng-0.3.0, DRIMSeq-1.26.0, DropletUtils-1.18.1, DSS-2.46.0, dupRadar-1.28.0, DynDoc-1.76.0, EBImage-4.40.0, edgeR-3.40.2, egg-0.4.5, emmeans-1.8.5, enrichplot-1.18.3, EnsDb.Hsapiens.v75-2.99.0, EnsDb.Hsapiens.v79-2.99.0, EnsDb.Hsapiens.v86-2.99.0, ensembldb-2.22.0, escape-1.8.0, estimability-1.4.1, ExperimentHub-2.6.0, extraDistr-1.9.1, factoextra-1.0.7, fda-6.0.5, FDb.InfiniumMethylation.hg19-2.2.0, fds-1.8, feature-1.2.15, fgsea-1.24.0, filelock-1.0.2, flowAI-1.28.0, flowClean-1.36.0, flowClust-3.36.0, flowCore-2.10.0, flowDensity-1.32.0, flowFP-1.56.3, flowMerge-2.46.0, flowPeaks-1.44.0, FlowSOM-2.6.0, FlowSorted.Blood.EPIC-2.2.0, FlowSorted.CordBloodCombined.450k-1.14.0, flowStats-4.10.0, flowViz-1.62.0, flowWorkspace-4.10.1, FRASER-1.10.2, fresh-0.2.0, gcrma-2.70.0, gdsfmt-1.34.0, genefilter-1.80.3, geneLenDataBase-1.34.0, geneplotter-1.76.0, GENESIS-2.28.0, GENIE3-1.20.0, GenomeInfoDb-1.34.9, GenomeInfoDbData-1.2.9, GenomicAlignments-1.34.1, GenomicFeatures-1.50.4, GenomicFiles-1.34.0, GenomicRanges-1.50.2, GenomicScores-2.10.0, GEOmap-2.5-0, GEOquery-2.66.0, ggbio-1.46.0, ggcyto-1.26.4, ggdendro-0.1.23, ggnewscale-0.4.8, ggpointdensity-0.1.0, ggrastr-1.0.1, ggseqlogo-0.1, ggthemes-4.2.4, ggtree-3.6.2, GLAD-2.62.0, Glimma-2.8.0, GlobalAncova-4.16.0, globaltest-5.52.0, GO.db-3.16.0, GOSemSim-2.24.0, goseq-1.50.0, GOstats-2.64.0, graph-1.76.0, graphite-1.44.0, GSEABase-1.60.0, gsmoothr-0.1.7, gson-0.1.0, GSVA-1.46.0, Gviz-1.42.1, GWASExactHW-1.01, GWASTools-1.44.0, HDF5Array-1.26.0, HDO.db-0.99.1, hdrcde-3.4, heatmaply-1.4.2, hgu133plus2.db-3.13.0, HiCBricks-1.16.0, HiCcompare-1.20.0, HMMcopy-1.40.0, Homo.sapiens-1.3.1, IHW-1.26.0, IlluminaHumanMethylation450kanno.ilmn12.hg19-0.6.1, IlluminaHumanMethylation450kmanifest-0.4.0, IlluminaHumanMethylationEPICanno.ilm10b2.hg19-0.6.0, IlluminaHumanMethylationEPICanno.ilm10b4.hg19-0.6.0, IlluminaHumanMethylationEPICmanifest-0.3.0, illuminaio-0.40.0, impute-1.72.3, InteractionSet-1.26.1, interactiveDisplayBase-1.36.0, intervals-0.15.4, IRanges-2.32.0, isva-1.9, JASPAR2020-0.99.10, KEGGgraph-1.58.3, KEGGREST-1.38.0, LEA-3.10.2, limma-3.54.2, log4r-0.4.3, lpsymphony-1.26.3, lsa-0.73.3, lumi-2.50.0, M3Drop-1.24.0, marray-1.76.0, maSigPro-1.70.0, MassSpecWavelet-1.64.1, MatrixGenerics-1.10.0, MBA-0.1-0, MEDIPS-1.50.0, metagenomeSeq-1.40.0, metaMA-3.1.3, metap-1.8, metapod-1.6.0, MethylSeekR-1.38.0, methylumi-2.44.0, Mfuzz-2.58.0, mia-1.6.0, minfi-1.44.0, missMethyl-1.32.0, mixOmics-6.22.0, mixsqp-0.3-48, MLInterfaces-1.78.0, MotifDb-1.40.0, motifmatchr-1.20.0, motifStack-1.42.0, MsCoreUtils-1.10.0, MsFeatures-1.6.0, msigdbr-7.5.1, MSnbase-2.24.2, MSstats-4.6.5, MSstatsConvert-1.8.3, MSstatsLiP-1.4.1, MSstatsPTM-2.0.3, MSstatsTMT-2.6.1, MultiAssayExperiment-1.24.0, MultiDataSet-1.26.0, multtest-2.54.0, muscat-1.12.1, mutoss-0.1-13, mzID-1.36.0, mzR-2.32.0, NADA-1.6-1.1, ncdfFlow-2.44.0, NMF-0.25, NOISeq-2.42.0, numbat-1.2.2, oligo-1.62.2, oligoClasses-1.60.0, ontologyIndex-2.10, oompaBase-3.2.9, oompaData-3.1.3, openCyto-2.10.1, org.Hs.eg.db-3.16.0, org.Mm.eg.db-3.16.0, org.Rn.eg.db-3.16.0, OrganismDbi-1.40.0, OUTRIDER-1.16.3, pathview-1.38.0, pcaMethods-1.90.0, perm-1.0-0.2, PFAM.db-3.16.0, phyloseq-1.42.0, pmp-1.10.0, polyester-1.34.0, poweRlaw-0.70.6, preprocessCore-1.60.2, pRoloc-1.38.2, pRolocdata-1.36.0, pRolocGUI-2.8.0, ProtGenerics-1.30.0, PRROC-1.3.1, PSCBS-0.66.0, PureCN-2.4.0, qap-0.1-2, QDNAseq-1.34.0, qlcMatrix-0.9.7, qqconf-1.3.1, quantsmooth-1.64.0, qvalue-2.30.0, R.devices-2.17.1, R.filesets-2.15.0, R.huge-0.9.0, rainbow-3.7, randomcoloR-1.1.0.1, rARPACK-0.11-0, RBGL-1.74.0, RcisTarget-1.18.2, RcppAnnoy-0.0.20, RcppHNSW-0.4.1, RcppML-0.3.7, RcppZiggurat-0.1.6, reactome.db-1.82.0, ReactomePA-1.42.0, regioneR-1.30.0, reldist-1.7-2, remaCor-0.0.11, Repitools-1.44.0, ReportingTools-2.38.0, ResidualMatrix-1.8.0, restfulr-0.0.15, Rfast-2.0.7, RFOC-3.4-6, rGADEM-2.46.0, Rgraphviz-2.42.0, rhdf5-2.42.0, rhdf5filters-1.10.0, Rhdf5lib-1.20.0, Rhtslib-2.0.0, Ringo-1.62.0, RNASeqPower-1.38.0, RnBeads-2.16.0, RnBeads.hg19-1.30.0, RnBeads.hg38-1.30.0, RnBeads.mm10-2.6.0, RnBeads.mm9-1.30.0, RnBeads.rn5-1.30.0, ROC-1.74.0, rols-2.26.0, ROntoTools-2.26.0, ropls-1.30.0, RPMG-2.2-3, RProtoBufLib-2.10.0, Rsamtools-2.14.0, RSEIS-4.1-4, Rsubread-2.12.3, rsvd-1.0.5, rtracklayer-1.58.0, Rwave-2.6-5, S4Vectors-0.36.2, samr-3.0, SamSPECTRAL-1.52.0, SC3-1.26.2, ScaledMatrix-1.6.0, SCANVIS-1.12.0, scater-1.26.1, scattermore-0.8, scDblFinder-1.12.0, scistreer-1.1.0, scran-1.26.2, scrime-1.3.5, scuttle-1.8.4, SeqArray-1.38.0, seqLogo-1.64.0, SeqVarTools-1.36.0, seriation-1.4.2, Seurat-4.3.0, SeuratObject-4.1.3, shinyBS-0.61.1, shinydashboardPlus-2.0.3, shinyFiles-0.9.3, shinyhelper-0.3.2, shinypanel-0.1.5, shinyWidgets-0.7.6, ShortRead-1.56.1, siggenes-1.72.0, Signac-1.9.0, simplifyEnrichment-1.8.0, SingleCellExperiment-1.20.0, SingleR-2.0.0, sitmo-2.0.2, slingshot-2.6.0, SMVar-1.3.4, SNPRelate-1.32.2, snpStats-1.48.0, sparseMatrixStats-1.10.0, sparsesvd-0.2-2, SpatialExperiment-1.8.1, SPIA-2.50.0, splancs-2.01-43, SPOTlight-1.2.0, stageR-1.20.0, struct-1.10.0, structToolbox-1.10.1, SummarizedExperiment-1.28.0, susieR-0.12.35, sva-3.46.0, TailRank-3.2.2, TFBSTools-1.36.0, TFMPvalue-0.0.9, tkWidgets-1.76.0, TrajectoryUtils-1.6.0, treeio-1.22.0, TreeSummarizedExperiment-2.6.0, TSP-1.2-3, TxDb.Hsapiens.UCSC.hg19.knownGene-3.2.2, TxDb.Mmusculus.UCSC.mm10.knownGene-3.10.0, tximport-1.26.1, UCell-2.2.0, uwot-0.1.14, variancePartition-1.28.7, VariantAnnotation-1.44.1, venn-1.11, vsn-3.66.0, waiter-0.2.5, wateRmelon-2.4.0, WGCNA-1.72-1, widgetTools-1.76.0, Wrench-1.16.0, xcms-3.20.0, XVector-0.38.0, zCompositions-1.4.0-1, zellkonverter-1.8.0, zlibbioc-1.44.0</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+      
+        <script src="../../javascripts/populate_overview.js"></script>
+      
+    
+  </body>
+</html>
