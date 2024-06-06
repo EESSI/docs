@@ -49,8 +49,6 @@ nav:
       - Usage: test-suite/usage.md
       - Available tests: test-suite/available-tests.md
       - Release notes: test-suite/release-notes.md
-    - Accelerators support:
-      - GPUs: gpu.md
   - Adding software to EESSI: 
     - Overview: adding_software/overview.md
     - For contributors:
