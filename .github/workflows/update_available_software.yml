@@ -24,7 +24,7 @@ jobs:
           # install required Python packages in virtual environment
           python -m venv venv
           . venv/bin/activate
-          pip install -r requirements.txt
+          pip install -r scripts/available_software/requirements.txt
 
           # copy current JSON data, so we can compare after updating it
           cp docs/available_software/data/json_data.json docs/available_software/data/json_data.json.orig
