@@ -28,7 +28,7 @@ nav:
     - Container: getting_access/eessi_container.md
     - Virtual machine on windows and macOS:
       - Windows with WSL: getting_access/eessi_wsl.md
-      - MacOS with Limaclt: getting_access/eessi_limactl.md
+      - macOS with Lima: getting_access/eessi_limactl.md
   - Basic usage:
     - Set up environment: using_eessi/setting_up_environment.md
     - Basic commands: using_eessi/basic_commands.md
