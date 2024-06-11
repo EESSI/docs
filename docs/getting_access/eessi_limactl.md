@@ -1,4 +1,4 @@
-# Installing EESSI with limactl on MacOS
+# Installing EESSI with Lima on MacOS
 
 ## Installation of Lima
 
