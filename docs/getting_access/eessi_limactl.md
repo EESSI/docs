@@ -8,7 +8,7 @@ See Lima documentation: [https://lima-vm.io/docs/installation/](https://lima-vm.
 brew install lima
 ```
 
-## Installing EESSI in limactl with EESSI template
+## Installing EESSI in `limactl` with EESSI template
 
 ### Example `eessi.yaml` file
 
