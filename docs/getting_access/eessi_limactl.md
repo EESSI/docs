@@ -1,6 +1,6 @@
 # Installing EESSI with limactl on MacOS
 
-## Istall lima
+## Istallation of Lima
 
 see lima documentation: [https://lima-vm.io/docs/installation/](https://lima-vm.io/docs/installation/)
 

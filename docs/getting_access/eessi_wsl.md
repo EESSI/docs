@@ -1,6 +1,6 @@
 # Installing EESSI with Windows Subsystem for Linux
 
-## Basic commmands with WSL
+## Basic commands with WSL
 
 ### List the available linux distributions for installation
 
