@@ -2,7 +2,7 @@
 
 ## Installation of Lima
 
-see lima documentation: [https://lima-vm.io/docs/installation/](https://lima-vm.io/docs/installation/)
+See Lima documentation: [https://lima-vm.io/docs/installation/](https://lima-vm.io/docs/installation/)
 
 ``` { .bash .copy }
 brew install lima
