@@ -118,6 +118,54 @@ Use the EESSI template to install a virtual machine with eessi installed. Create
         fi
        hint: See "/var/log/cloud-init-output.log" in the guest
     ```
+=== "Install a virtual machine with a Rocky 9 image"
+    ```
+    # A template to use the EESSI software stack (see https://eessi.io) on macOS
+    # $ limactl start ./eessi.yaml
+    # $ limactl shell eessi
+
+    images:
+    - location: "https://dl.rockylinux.org/pub/rocky/9.3/images/x86_64/Rocky-9-GenericCloud-Base-9.3-20231113.0.x86_64.qcow2"
+      arch: "x86_64"
+      digest: "sha256:7713278c37f29b0341b0a841ca3ec5c3724df86b4d97e7ee4a2a85def9b2e651"
+    - location: "https://dl.rockylinux.org/pub/rocky/9.3/images/aarch64/Rocky-9-GenericCloud-Base-9.3-20231113.0.aarch64.qcow2"
+      arch: "aarch64"
+      digest: "sha256:1948a5e00786dbf3230335339cf96491659e17444f5d00dabac0f095a7354cc1"
+    # Fallback to the latest release image.
+    # Hint: run `limactl prune` to invalidate the cache
+    - location: "https://dl.rockylinux.org/pub/rocky/9/images/x86_64/Rocky-9-GenericCloud.latest.x86_64.qcow2"
+      arch: "x86_64"
+    - location: "https://dl.rockylinux.org/pub/rocky/9/images/aarch64/Rocky-9-GenericCloud.latest.aarch64.qcow2"
+      arch: "aarch64"
+
+    mounts:
+    - location: "~"
+    - location: "/tmp/lima"
+      writable: true
+    containerd:
+      system: false
+      user: false
+    provision:
+    - mode: system
+      script: |
+        #!/bin/bash
+        sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
+        sudo yum install -y cvmfs
+        if [ ! -f /etc/cvmfs/default.local ]; then
+            sudo echo "CVMFS_HTTP_PROXY=DIRECT" >> /etc/cvmfs/default.local
+            sudo echo "CVMFS_QUOTA_LIMIT=10000" >> /etc/cvmfs/default.local
+        fi
+        sudo cvmfs_config setup
+    probes:
+    - script: |
+        #!/bin/bash
+        set -eux -o pipefail
+        if ! timeout 30s bash -c "until ls /cvmfs/software.eessi.io >/dev/null 2>&1; do sleep 3; done"; then
+          echo >&2 "EESSI repository is not available yet"
+          exit 1
+        fi
+      hint: See "/var/log/cloud-init-output.log" in the guest
+    ```
 
 ### Create the virtual machine with the `eessi.yaml` file
 
