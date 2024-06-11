@@ -1,6 +1,9 @@
 name: Update overview of available software in EESSI
 on:
   - workflow_dispatch
+  - schedule:
+    # run every 4 hours
+    - cron: '0 */4 * * *'
 jobs:
   update_available_software:
     runs-on: ubuntu-20.04
