@@ -63,7 +63,7 @@ passwd: password updated successfully
 Installation successful!
 ```
 
-## Installing EESSI in the Virtual machine
+## Installing EESSI in the virtual machine
 
 ``` { .bash .copy }
 # Installation commands for Debian-based distros like Ubuntu, ...
