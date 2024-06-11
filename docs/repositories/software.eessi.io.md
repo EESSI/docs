@@ -15,9 +15,7 @@ See [Using EESSI](../using_eessi/setting_up_environment.md).
 
 ## Available software
 
-Detailed overview of available software coming soon!
-
-For now, use `module avail` after [initializing the EESSI environment](../using_eessi/setting_up_environment.md).
+See [Available software](../available_software/overview.md).
 
 ### Architecture and micro-architecture support
 
