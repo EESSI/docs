@@ -19,7 +19,8 @@ jobs:
       uses: codespell-project/actions-codespell@22ff5a2e4b591290baf82d47c9feadac31c65441 # v1.0
       with:
         check_filenames: true
-        skip: '*.pdf,.git'
+        # MarkDown files in docs/available_software/detail are skipped because they are auto-generated
+        skip: '*.pdf,.git,*.json,./docs/available_software/detail/*.md'
 
     # - name: Markdown Linting Action
     #   uses: avto-dev/markdown-lint@v1.2.0

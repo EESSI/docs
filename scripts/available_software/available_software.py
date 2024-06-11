@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #
 # Copyright 2023-2023 Ghent University
 #
@@ -15,12 +16,17 @@ import json
 import os
 import re
 import subprocess
+import sys
 import time
-from pathlib import Path
 from typing import Union, Tuple
 import numpy as np
 from mdutils.mdutils import MdUtils
 from natsort import natsorted
+
+EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
+
+# some CPU targets are excluded for now, because software layer is too incomplete currently
+EXCLUDE_CPU_TARGETS = ['x86_64/amd/zen4']
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -29,11 +35,7 @@ from natsort import natsorted
 
 def main():
     os.environ["SHELL"] = "/bin/bash"
-    current_dir = Path(__file__).resolve()
-    project_name = 'docs'
-    root_dir = next(
-        p for p in current_dir.parents if p.parts[-1] == project_name
-    )
+    root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     path_data_dir = os.path.join(root_dir, "docs/available_software/data")
 
     # Generate the JSON overviews
@@ -85,6 +87,10 @@ def module(*args, filter_fn=lambda x: x) -> np.ndarray:
     @return: Array with the output of the module command.
     """
     lmod = os.getenv('LMOD_CMD')
+    if lmod is None:
+        sys.stderr.write("Lmod not found (via $LMOD_CMD)!\n")
+        sys.exit(1)
+
     proc = subprocess.run(
         [lmod, "python", "--terse"] + list(args),
         encoding="utf-8",
@@ -195,10 +201,14 @@ def targets_eessi() -> np.ndarray:
     Returns all the target names of EESSI.
     @return: target names
     """
+    if not os.path.exists(EESSI_TOPDIR):
+        sys.stderr.write(f"ERROR: {EESSI_TOPDIR} does not exist!\n")
+        sys.exit(1)
+
     commands = [
-        "find /cvmfs/software.eessi.io/versions/2023.06/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
+        f"find {EESSI_TOPDIR}/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
         "-name 'amd' \\) -type d",
-        'find /cvmfs/software.eessi.io/versions/2023.06/software/linux/*/{amd,intel}/* -maxdepth 0  -type d'
+        f'find {EESSI_TOPDIR}/software/linux/*/{{amd,intel}}/* -maxdepth 0  -type d'
     ]
     targets = np.array([])
 
@@ -216,8 +226,13 @@ def modules_eessi() -> dict:
     """
     print("Start collecting modules:")
     data = {}
-    module_unuse(os.getenv('MODULEPATH'))
-    for target in targets_eessi():
+
+    modulepath = os.getenv('MODULEPATH')
+    if modulepath:
+        module_unuse(modulepath)
+
+    targets = [t for t in targets_eessi() if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
+    for target in targets:
         print(f"\t Collecting available modules for {target}... ", end="", flush=True)
         module_use(target + "/modules/all/")
         data[target] = module_avail(filter_fn=filter_fn_eessi_modules)

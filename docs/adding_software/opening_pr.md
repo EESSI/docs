@@ -73,6 +73,7 @@ git checkout -b example_branch
 ```shell
 echo '  - example-1.2.3-GCC-12.3.0.eb' >> easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
 ```
+Note that the naming scheme is standardized and should be `eessi-<eessi_version>-eb-<eb_version>-<toolchain_version>.yml`. See the [official EasyBuild documentation on easystack files](https://docs.easybuild.io/easystack-files/) for more information on the syntax.
 
 4) Stage and commit the changes into your your branch with a sensible message
 
@@ -95,3 +96,26 @@ git push koala example_branch
 
    If all goes well, one or more bots :robot: should almost instantly create a comment in your pull request
    with an overview of how it is configured - you will need this information when providing build instructions.
+
+### Rebuilding software
+We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using the software. However, there are certain situations in which it is difficult or impossible to avoid.
+
+To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` directory. Use the following naming convention: `YYYYMMDD-eb-<EB_VERSION>-<APPLICATION_NAME>-<APPLICATION_VERSION>-<SHORT_DESCRIPTION>.yml`, where `YYYYMMDD` is the opening date of your PR. E.g. `2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml` was added in a PR on the 6th of May 2024 and used to rebuild CUDA-12.1.1 using EasyBuild 4.9.1 to resolve an issue with some runtime libraries missing from the initial CUDA 12.1.1 installation.
+
+At the top of your easystack file, please use comments to include a short description, and make sure to include any relevant links to related issues (e.g. from the GitHub repositories of EESSI, EasyBuild, or the software you are rebuilding).
+
+As an example, consider the full easystack file (`2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml`) used for the aforementioned CUDA rebuild: 
+
+```yaml
+# 2024.05.06
+# Original matching of files we could ship was not done correctly. We were
+# matching the basename for files (e.g., libcudart.so from libcudart.so.12)
+# rather than the name stub (libcudart)
+# See https://github.com/EESSI/software-layer/pull/559
+easyconfigs:
+  - CUDA-12.1.1.eb:
+        options:
+                accept-eula-for: CUDA
+```
+
+By separating rebuilds in dedicated files, we still maintain a complete software bill of materials: it is transparent what got rebuilt, for which reason, and when.
