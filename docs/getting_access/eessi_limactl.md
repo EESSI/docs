@@ -119,7 +119,7 @@ Use the EESSI template to install a virtual machine with eessi installed. Create
        hint: See "/var/log/cloud-init-output.log" in the guest
     ```
 
-### Create the virtual machine with the `eessi.yaml` file:
+### Create the virtual machine with the `eessi.yaml` file
 
 ``` { .bash .copy }
 limactl create --name eessi ./eessi.yaml
