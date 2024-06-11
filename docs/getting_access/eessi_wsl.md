@@ -92,7 +92,7 @@ sudo cvmfs_config setup
 sudo cvmfs_config wsl2_start
 ```
 
-EESSI should now be available in the Virtual machine
+EESSI should now be available in the virtual machine
 
 ```
 user@id:~$ source /cvmfs/software.eessi.io/versions/2023.06/init/bash
