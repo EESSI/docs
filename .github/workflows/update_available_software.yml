@@ -1,7 +1,7 @@
 name: Update overview of available software in EESSI
 on:
-  - workflow_dispatch:
-  - schedule:
+  workflow_dispatch:
+  schedule:
     # run every 4 hours
     - cron: '0 */4 * * *'
 jobs:
