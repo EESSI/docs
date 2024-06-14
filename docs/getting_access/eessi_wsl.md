@@ -91,7 +91,7 @@ sudo cvmfs_config setup
 
 ## Start cernVM-FS in Windows Subsystem for Linux
 
-When the virtual machine is restarted cernVM-FS needs to be remounted with following command.
+When the virtual machine is restarted CernVM-FS needs to be remounted with following command.
 
 ``` { .bash .copy }
 # start CernVM-FS on WSL
