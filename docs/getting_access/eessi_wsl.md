@@ -98,7 +98,7 @@ When the virtual machine is restarted cernVM-FS needs to be remounted with follo
 sudo cvmfs_config wsl2_start
 ```
 
-If you do not whish to do this you can set up the automounter. Examples are available [here](https://klust.github.io/windows-client-HPC/4_Cluster_Stack/4_01_EESSI/#example-setup-on-fedora-remix-in-wsl2).
+If you do not wish to do this you can set up the automounter. Examples are available [here](https://klust.github.io/windows-client-HPC/4_Cluster_Stack/4_01_EESSI/#example-setup-on-fedora-remix-in-wsl2).
 
 EESSI should now be available in the virtual machine
 
