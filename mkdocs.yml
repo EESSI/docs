@@ -26,7 +26,7 @@ nav:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
     - Native: getting_access/native_installation.md
     - Container: getting_access/eessi_container.md
-    - Virtual machine on windows and macOS:
+    - Virtual machine on Windows and macOS:
       - Windows with WSL: getting_access/eessi_wsl.md
       - macOS with Lima: getting_access/eessi_limactl.md
   - Basic usage:
