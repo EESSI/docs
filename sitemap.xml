@@ -1796,6 +1796,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/getting_access/eessi_limactl/</loc>
+         <lastmod>2024-06-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/getting_access/eessi_wsl/</loc>
+         <lastmod>2024-06-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/getting_access/is_eessi_accessible/</loc>
          <lastmod>2024-06-14</lastmod>
          <changefreq>daily</changefreq>
