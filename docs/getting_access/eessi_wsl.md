@@ -87,10 +87,18 @@ sudo bash -c "echo 'CVMFS_QUOTA_LIMIT=10000' >> /etc/cvmfs/default.local"
 
 # make sure that EESSI CernVM-FS repository is accessible
 sudo cvmfs_config setup
+```
 
+## Start cernVM-FS in Windows Subsystem for Linux
+
+When the virtual machine is restarted cernVM-FS needs to be remounted with following command.
+
+``` { .bash .copy }
 # start CernVM-FS on WSL
 sudo cvmfs_config wsl2_start
 ```
+
+If you do not whish to do this you can set up the automounter. Examples are available [here](https://klust.github.io/windows-client-HPC/4_Cluster_Stack/4_01_EESSI/#example-setup-on-fedora-remix-in-wsl2).
 
 EESSI should now be available in the virtual machine
 
