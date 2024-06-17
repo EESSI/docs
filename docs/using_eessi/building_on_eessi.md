@@ -83,24 +83,21 @@ module load netCDF/4.9.0-gompi-2022a
     
 Building and running software on top of EESSI without EasyBuild is not as straightforward and requires some considerations to take care of. 
 
-It is expected that you will have loaded all of your required dependencies as modules from the EESSI environment. Since EESSI sets `LIBRARY_PATH` for all of the modules and the `GCC` compiler is configured to use the compat layer, there should be no additional configuration required to execute a standard build process. The safest way to make sure all libraries will point to the required locations (and do not leak in from the host operating system) is starting an EESSI prefix shell before building. To do this: 
+It is expected that you will have loaded all of your required dependencies as modules from the EESSI environment. Since EESSI sets `LIBRARY_PATH` for all of the modules and the `GCC` compiler is configured to use the compat layer, there should be no additional configuration required to execute a standard build process. On the other hand, EESSI does not set `LD_LIBRARY_PATH`, so at runtime, the executable will need help finding the proper libraries that it needs. The easiest way to circumvent this is setting the environment variable `LD_RUN_PATH` during compile time as well. Thus, the dynamic linker will search for those paths when the program is executed. 
+
+The safest way to make sure all libraries will point to the required locations (and do not leak in from the host operating system) is starting an EESSI prefix shell before building. To do this: 
 
 * First of all, load the environment by starting an EESSI shell as described [here](https://www.eessi.io/docs/using_eessi/setting_up_environment). 
 * Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it (`foss` is a good option as it will also include MPI with OpenMPI and math libraries via FlexiBLAS/FFTW). 
+* Set manually `LD_RUN_PATH` to resolve libraries at runtime. `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to `libstdc++` from our GCC installation
+```sh
+export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
+```
 * Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used when checking the binary.
 * Once done, exit the EESSI prefix shell (with `exit`) or use another terminal to run your software.
 
-EESSI does not set `LD_LIBRARY_PATH`, so at runtime the executable will need help finding the proper libraries that it needs. The easiest approach is to set this variable manually before running your compiled application. Thus, assuming a new terminal with no EESSI shell loaded, you will need to:
-
-* Load dependencies for your software to run
-* Set manually `LD_LIBRARY_PATH` to resolve libraries at runtime
-```sh
-export LD_LIBRARY_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
-```
-   With this approach we leverage the fact that `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to `libstdc++` from our GCC installation
 * Run! 
 
-Note how this has to be done every time you want to run your software. A long term approach is to set add any library used by your software to the RPATH in your executable. This is also more reliable as your executable won't pick unexpected libraries from `LD_LIBRARY_PATH`.
 
 !!! Note RPATH should never point to a compatibility layer directory, only to software layer ones, as all resolving is done via the runtime linker (`ld-linux*.so`)  that is shipped with EESSI, which automatically searches these locations.
 
