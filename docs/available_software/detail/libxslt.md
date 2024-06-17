@@ -18,12 +18,13 @@ The overview below shows which libxslt installations are available per target ar
 To start using libxslt, load one of these modules using a `module load` command like:
 
 ```shell
-module load libxslt/1.1.38-GCCcore-12.3.0
+module load libxslt/1.1.38-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Fri, 14 Jun 2024 at 04:18:28 UTC)*  
+*(This data was automatically generated on Mon, 17 Jun 2024 at 16:20:44 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libxslt/1.1.38-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libxslt/1.1.38-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
 |libxslt/1.1.37-GCCcore-12.2.0|x|x|x|x|x|x|x|x|
