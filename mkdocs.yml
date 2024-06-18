@@ -22,19 +22,24 @@ nav:
     - Compatibility layer: compatibility_layer.md
     - Software layer: software_layer.md
     - Supported CPU targets: software_layer/cpu_targets.md
+  - Available software and repositories:
+      - Software: available_software/overview.md
+      - Repositories:
+        - Production: repositories/software.eessi.io.md
+        - RISC-V: repositories/riscv.eessi.io.md
+        - Pilot: repositories/pilot.md
   - Installation:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
     - Native: getting_access/native_installation.md
     - Container: getting_access/eessi_container.md
+    - Windows and macOS:
+      - Windows with WSL: getting_access/eessi_wsl.md
+      - macOS with Lima: getting_access/eessi_limactl.md
   - Basic usage:
     - Set up environment: using_eessi/setting_up_environment.md
     - Basic commands: using_eessi/basic_commands.md
     - Demos: using_eessi/eessi_demos.md
   - Advanced usage:
-    - Repositories:
-      - Production: repositories/software.eessi.io.md
-      - RISC-V: repositories/riscv.eessi.io.md
-      - Pilot: repositories/pilot.md
     - Setting up your Stratum: filesystem_layer/stratum1.md
     - Building software with EESSI: using_eessi/building_on_eessi.md
     - Test suite:
@@ -46,6 +51,8 @@ nav:
       - Release notes: test-suite/release-notes.md
     - Accelerators support:
       - GPUs: gpu.md
+    - Known issues and workarounds:
+      - v2023.06: known_issues/eessi-2023.06.md
   - Adding software to EESSI: 
     - Overview: adding_software/overview.md
     - For contributors:
@@ -57,10 +64,6 @@ nav:
       - Building software: adding_software/building_software.md
       - Deploying software: adding_software/deploying_software.md
       - Build nodes: software_layer/build_nodes.md
-  - Known issues:
-    - v2023.06: known_issues/eessi-2023.06.md
-    - v2022.02: []
-    - pilot: []
   - Community and support:
     - Getting support: support.md
     - Meetings: meetings.md
