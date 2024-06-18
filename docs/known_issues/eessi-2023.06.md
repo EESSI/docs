@@ -25,18 +25,7 @@ export OMPI_MCA_btl='^uct,ofi'
 export OMPI_MCA_pml='ucx'
 export OMPI_MCA_mtl='^ofi'
 ```
-</div>
 
-### `Bug in EESSI initialization and priority mechanisms: site OpenMPI or UCX not loaded`
-<div style="padding-left: 30px;">
-
-<p>This error may occur when bugs resolving or site-specific tuning is needed for OpenMPI or UCX.</p>
-
-<p>There is an issue on this problem opened with EESSI software layer repository.
-See: https://github.com/EESSI/software-layer/issues/456</p>
-
-<b>Workarounds</b>
-
-<p>The workaround is to specify site properties and allow defining lmod hooks in host injections (see https://github.com/EESSI/software-layer/pull/525).
+You may also set these additional environment variables via site-specific Lmod hooks. For more information about how to write and implement site-specific Lmod hooks, please check  [EESSI Site Specific Configuration LMOD Hooks](site_specific_config/lmod_hooks.md)
 </div>
 
