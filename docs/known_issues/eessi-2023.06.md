@@ -26,6 +26,30 @@ export OMPI_MCA_pml='ucx'
 export OMPI_MCA_mtl='^ofi'
 ```
 
-You may also set these additional environment variables via site-specific Lmod hooks. For more information about how to write and implement site-specific Lmod hooks, please check  [EESSI Site Specific Configuration LMOD Hooks](site_specific_config/lmod_hooks.md)
+You may also set these additional environment variables via site-specific Lmod hooks:
+```
+require("strict")
+local hook=require("Hook")
+
+-- Fix Failed to modify UD QP to INIT on mlx5_0: Operation not permitted
+function fix_ud_qp_init_openmpi(t)
+    local simpleName = string.match(t.modFullName, "(.-)/")
+    if simpleName == 'OpenMPI' then
+        setenv('OMPI_MCA_btl', '^uct,ofi')
+        setenv('OMPI_MCA_pml', 'ucx')
+        setenv('OMPI_MCA_mtl', '^ofi')
+    end
+end
+
+local function combined_load_hook(t)
+    if eessi_load_hook ~= nil then
+        eessi_load_hook(t)
+    end
+    fix_ud_qp_init_openmpi(t)
+end
+
+hook.register("load", combined_load_hook)
+```
+ For more information about how to write and implement site-specific Lmod hooks, please check  [EESSI Site Specific Configuration LMOD Hooks](site_specific_config/lmod_hooks.md)
 </div>
 
