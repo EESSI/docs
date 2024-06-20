@@ -1,5 +1,7 @@
 # Native installation
 
+## Installation for single clients
+
 Setting up native access to EESSI, that is a system-wide deployment that does not require workarounds like
 [using a container](eessi_container.md), requires the installation and configuration of [CernVM-FS](https://cernvm.cern.ch/fs).
 
@@ -62,14 +64,58 @@ The good news is that all of this only requires a handful commands :astonished: 
     sudo cvmfs_config setup
     ```
 
+## Installation for larger systems (e.g. clusters)
+
+When using CernVM-FS on a larger number of local clients, e.g. on a HPC cluster or set of workstations,
+it is very strongly recommended to at least set up some Squid proxies close to your clients.
+These Squid proxies will be used to cache content that was recently accessed by your clients,
+which reduces the load on the Stratum 1 servers and reduces the latency for your clients.
+As a rule of thumb, you should use about one proxy per 500 clients, and have a minimum of two.
+Instructions for setting up a Squid proxy can be found in the [CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-squid.html) and
+in the [CernVM-FS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/03_stratum1_proxies/#32-setting-up-a-proxy).
+
+Additionally, setting up a private Stratum 1, which will make a full copy of the repository,
+ can be beneficial to improve the latency and bandwidth even further, and to be better protected against network outages.
+Instructions for setting up your own EESSI Stratum 1 can be found in [setting up your own CernVM-FS Stratum 1 mirror server](../filesystem_layer/stratum1.md).
+
+### Configuring your client to use a Squid proxy
+
+If you have set up one or more Squid proxies, you will have to add them to your CernVM-FS client configuration.
+This can be done by removing `CVMFS_CLIENT_PROFILE="single"` from `/etc/cvmfs/default.local`, and add the following line:
+
+```
+CVMFS_HTTP_PROXY="http://ip-of-your-1st-proxy:port|http://ip-of-your-2nd-proxy:port"
+```
+
+In this case, both proxies are equally preferable.
+More advanced use cases can be found in [the CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-configure.html#proxy-list-examples).
+
+### Configuring your client to use a private Stratum 1 mirror server
+
+If you have set up your own Stratum 1 mirror server that replicates the EESSI CernVM-FS repositories,
+you can instruct your CernVM-FS client(s) to use it by prepending your newly created Stratum 1 to the existing list of EESSI Stratum 1 servers by creating a local CVMFS configuration file for the EESSI domain:
+
+```bash
+echo 'CVMFS_SERVER_URL="http://<url-or-ip-to-your-stratum1>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi.io.local
+```
+
 !!! note
+    By prepending your new Stratum 1 to the list of existing Stratum 1 servers, your clients should by default use the private Stratum 1.
+    In case of downtime of your private Stratum 1, they will also still be able to make use of the public EESSI Stratum 1 servers.
 
-    :point_up: The commands above only cover the basic installation of EESSI.
 
-    This is good enough for an individual client, or for testing purposes,
-    but for a production-quality setup you should also set up a Squid proxy cache.
+### Applying changes in the CernVM-FS client configuration files
 
-    For large-scale systems, like an HPC cluster, you should also consider setting up your own CernVM-FS Stratum-1 mirror server.
+After you have made any changes to the CernVM-FS client configuration, you will have to apply them.
+If this is the first time you set up the client, you can simply run:
 
-    For more details on this, please refer to the
-    [*Stratum 1 and proxies section* of the CernVM-FS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/03_stratum1_proxies/).
+```bash
+sudo cvmfs_config setup
+```
+
+If you already had configured the client before, you can reload the configuration for the EESSI repository (or, similarly, for any other repository) using:
+
+```bash
+sudo cvmfs_config reload -c software.eessi.io
+```
+

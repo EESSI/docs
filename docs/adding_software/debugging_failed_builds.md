@@ -238,6 +238,64 @@ After some time, this build fails while trying to build `Plumed`, and we can acc
 !!! Note
     While this might be faster than the easystack-based approach, this is _not_ how the bot builds. So why it _may_ reproduce the failure the bot encounters, it may not reproduce the bug _at all_ (no failure) or run into _different_ bugs. If you want to be sure, use the easystack-based approach.
 
+## Rebuilding software
+[Rebuilding software](opening_pr.md#rebuilding_software) requires an additional step at the beginning: the software first needs to be removed. We assume you've already [checked out the feature branch](#fetching-the-feature-branch). Then, you need to start the container with the additional `--fakeroot` argument, otherwise you will not be able to remove files from the `/cvmfs` prefix. Make sure to also include the `--save` argument, as we will need the tarball later on. E.g.
+```
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir} --fakeroot
+```
+Then, initialize the EESSI environment
+```
+source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
+```
+and get the diff file for the corresponding PR, e.g. for PR 123:
+```
+wget https://github.com/EESSI/software-layer/pull/123.diff
+```
+Finally, run the `EESSI-remove-software.sh` script
+```
+./EESSI-remove-software.sh`
+```
+
+This should remove any software specified in a [rebuild easystack](opening_pr.md#rebuilding_software) that got added in your current feature branch.
+
+Now, exit the container, paying attention to the instructions that are printed to resume later, e.g.:
+
+```
+Saved contents of tmp directory '/tmp/eessi.WZxeFUemH2' to tarball '/home/myuser/pr507/EESSI-1711538681.tgz' (to resume session add '--resume /home/myuser/pr507/EESSI-1711538681.tgz')
+```
+
+Now, continue with the original instructions to start the container (i.e. either [here](#starting-a-shell-in-the-eessi-container) or [with this alternate approach](#more-efficient-approach-for-multiplecontinued-debugging-sessions)) and make sure to add the `--resume` flag. This way, you are resuming from the tarball (i.e. with the software removed that has to be rebuilt), but in a new container in which you have regular (i.e. no root) permissions.
+
+## Running the test step
+If you are still in the prefix layer (i.e. after previously building something), exit it first:
+```
+$ exit
+logout
+Leaving Gentoo Prefix with exit status 0
+```
+Then, source the EESSI init script (again):
+```
+Apptainer> source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
+Environment set up to use EESSI (2023.06), have fun!
+{EESSI 2023.06} Apptainer>
+```
+
+!!! Note
+    If you are in a SLURM environment, make sure to run `for i in $(env | grep SLURM); do unset "${i%=*}"; done` to unset any SLURM environment variables. Failing to do so will cause `mpirun` to pick up on these and e.g. infer how many slots are available. If you run into errors of the form "There are not enough slots available in the system to satisfy the X slots that were requested by the application:", you probably forgot this step.
+
+Then, execute the `run_tests.sh` script. We are assuming you are still in the root of the `software-layer` repository that you cloned earlier:
+```
+./run_tests.sh
+```
+if all goes well, you should see (part of) the EESSI test suite being run by ReFrame, finishing with something like
+
+```
+[  PASSED  ] Ran X/Y test case(s) from Z check(s) (0 failure(s), 0 skipped, 0 aborted)
+```
+
+!!! Note
+    If you are running on a system with hyperthreading enabled, you may still run into the "There are not enough slots available in the system to satisfy the X slots that were requested by the application:" error from `mpirun`, because hardware threads are not considered to be slots by default by OpenMPIs `mpirun`. In this case, run with `OMPI_MCA_hwloc_base_use_hwthreads_as_cpus=1 ./run_tests.sh` (for OpenMPI 4.X) or `PRTE_MCA_rmaps_default_mapping_policy=:hwtcpus ./run_tests.sh` (for OpenMPI 5.X).
+
 ## Known causes of issues in EESSI
 
 ### The custom system prefix of the compatibility layer
