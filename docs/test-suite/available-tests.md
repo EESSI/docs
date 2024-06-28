@@ -75,9 +75,9 @@ reframe --run --name OSU-Micro-Benchmarks
 
 ## ESPResSo { #espresso }
 
-A test for [ESPResSo](https://espressomd.org/wordpress), a software package for performing and analysing scientific molecular dynamics simulations.
+A test for [ESPResSo](https://espressomd.org), a software package for performing and analysing scientific molecular dynamics simulations.
 
-it is implemented in [`tests/apps/espresso/`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/espresso).
+It is implemented in [`tests/apps/espresso/`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/espresso).
 
 To run this ESPResSo test, use:
 
@@ -91,7 +91,7 @@ A test for [QuantumESPRESSO](https://www.quantum-espresso.org), an integrated su
 
 It is implemented in [`tests/apps/QuantumESPRESSO.py`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/QuantumESPRESSO.py).
 
-To run this Osu Micro-Benchmark, use:
+To run this QuantumESPRESSO test, use:
 
 ```bash
 reframe --run --name QuantumESPRESSO
