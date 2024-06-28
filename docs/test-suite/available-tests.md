@@ -72,3 +72,31 @@ reframe --run --name OSU-Micro-Benchmarks
 
 !!! warning
     This test requires OSU Micro-Benchmarks v5.9 or newer, using an older OSU -Micro-Benchmark version will not work!
+
+## ESPResSo { #espresso }
+
+A test for [ESPResSo](https://espressomd.org/wordpress), a software package for performing and analysing scientific molecular dynamics simulations.
+
+it is implemented in [`tests/apps/espresso/`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/espresso).
+
+To run this ESPResSo test, use:
+
+```bash
+reframe --run --name ESPResSo
+```
+
+## QuantumESPRESSO { #quantumespresso }
+
+A test for [QuantumESPRESSO](https://www.quantum-espresso.org), an integrated suite of computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials (both norm-conserving and ultrasoft).
+
+It is implemented in [`tests/apps/QuantumESPRESSO.py`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/QuantumESPRESSO.py).
+
+To run this Osu Micro-Benchmark, use:
+
+```bash
+reframe --run --name QuantumESPRESSO
+```
+
+!!! warning
+    This test requires ReFrame v4.6.0 or newer, in older versions the QuantumESPRESSO test is not included in hpctestlib!
+
