@@ -1135,6 +1135,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#030-27-june-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.3.0 (27 june 2024)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#020-7-march-2024" class="md-nav__link">
     <span class="md-ellipsis">
       0.2.0 (7 march 2024)
@@ -1775,6 +1784,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#030-27-june-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.3.0 (27 june 2024)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#020-7-march-2024" class="md-nav__link">
     <span class="md-ellipsis">
       0.2.0 (7 march 2024)
@@ -1811,6 +1829,27 @@
 
 
 <h1 id="release-notes-for-eessi-test-suite">Release notes for EESSI test suite<a class="headerlink" href="#release-notes-for-eessi-test-suite" title="Permanent link">&para;</a></h1>
+<h2 id="030-27-june-2024">0.3.0 (27 june 2024)<a class="headerlink" href="#030-27-june-2024" title="Permanent link">&para;</a></h2>
+<p>This is a minor release of the EESSI test-suite</p>
+<p>It includes:</p>
+<ul>
+<li>Update config AWS MC cluster to use <code>software.eessi.io</code> (#126)</li>
+<li>Add test for QuantumESPRESSO (pw.x) (#128)</li>
+<li>Fix compact process binding for OpenMPI mpirun (#137)</li>
+<li>Use compact process binding for GROMACS (#139)</li>
+<li>Rename scale tags 1_cpn_2_nodes and 1_cpn_4_nodes (#140)</li>
+<li>Set SRUN_CPUS_PER_TASK for srun launcher (#141)</li>
+<li>Fix for "Failed to modify UD QP to INIT on mlx5_0" on Karolina CI runs (#142)</li>
+<li>Reduce the iteration count to make the OSU tests run faster, especially on slower interconnects (#143)</li>
+<li>Add test for ESPResSo (P3M) (#144)</li>
+<li>Use software.eessi.io repo in CI (#146)</li>
+<li>Add notes on release management to README (#148)</li>
+<li>Fix memory_per_node for Hortense (#151)</li>
+<li>Use MiB units for memory per node (#152)</li>
+<li>Added / updated memory for various systems in MiB units (#153)</li>
+<li>Add additional test for ESPRESSO (LJ) (#155)</li>
+<li>Bump default version used in CI (#157)</li>
+</ul>
 <h2 id="020-7-march-2024">0.2.0 (7 march 2024)<a class="headerlink" href="#020-7-march-2024" title="Permanent link">&para;</a></h2>
 <p>This is a minor release of the EESSI test-suite</p>
 <p>It includes:</p>
@@ -1869,7 +1908,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 8, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2024</span>
   </span>
 
     
