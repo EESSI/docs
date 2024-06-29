@@ -132,7 +132,7 @@ In order to get multi-node runs of ESPResSo working without having EESSI availab
 we also had to create a small wrapper script for the [`orted`
 command](https://www.open-mpi.org/doc/v4.1/man1/orted.1.php) that is used by [Open MPI](https://www.open-mpi.org)
 to start processes on remote nodes.
-This is necessary because `mpirun` launches `orted`, which must be run in an environment is which the EESSI repository
+This is necessary because `mpirun` launches `orted`, which must be run in an environment in which the EESSI repository
 is mounted.
 If not, MPI startup will fail with an error like "`error: execve(): orted: No such file or directory`".
 
