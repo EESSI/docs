@@ -19,8 +19,8 @@ On 27 June 2024, an additional installation of ESPResSo v4.2.2 that is optimized
 was added, which enables also running ESPResSo efficiently on [Deucalion](https://docs.macc.fccn.pt/deucalion),
 even though EESSI is not available yet system-wide on Deucalion (see below for more details).
 
-With the portable test for ESPResSo that is available in the [EESSI test suite](https://www.eessi.io/docs/test-suite)
-since v0.3.0 (released on 27 June 2024), we can now easily evaluate the scalability of
+With the [portable test for ESPResSo](https://www.eessi.io/docs/test-suite/available-tests/#espresso) that is available
+in the [EESSI test suite](https://www.eessi.io/docs/test-suite) we can easily evaluate the scalability of
 ESPResSo across EuroHPC systems, even if those systems have different system architectures.
 
 ## Simulating Lennard-Jones fluids using ESPResSo
@@ -30,7 +30,7 @@ ESPResSo across EuroHPC systems, even if those systems have different system arc
 ## Portable test to evaluate performance of ESPResSo
 
 To evaluate the performance of ESPResSo, we have implemented a *portable test* for ESPResSo in the [EESSI test suite](https://www.eessi.io/docs/test-suite);
-the results shown here were collected using [version 0.3.1](https://github.com/EESSI/test-suite/releases/tag/v0.3.1).
+the results shown here were collected using [version 0.3.2](https://github.com/EESSI/test-suite/releases/tag/v0.3.2).
 
 After [installing and configuring](https://www.eessi.io/docs/test-suite/installation-configuration) the EESSI test suite on Vega, Karolina, and Deucalion,
 running the Lennard-Jones (LJ) test case with ESPResSo 4.2.2 available in EESSI can be done with:
@@ -51,16 +51,14 @@ On Vega using 8 nodes (1024 MPI ranks, one per physical core), ESPResSo 4.2.2 ca
 On Deucalion using 8 nodes (384 cores), we observe a performance of roughly 62 million particles integrated per second.
 
 <figure markdown="span">
-![Performance of ESPResSo 4.2.2 on Vega, Karolina, Deucalion](espresso-4.2.2-foss-2023a-perf-part-sec-vega-karolina-deucalion-20240628.png){width=100%}
-<figcaption>Figure 1: Performance of ESPResSo 4.2.2 (weak scaling)</figcaption>
+![Performance of ESPResSo 4.2.2 on Vega, Karolina, Deucalion](espresso-4.2.2-foss-2023a-perf-part-sec-vega-karolina-deucalion-20240628.svg){width=100%}
 </figure>
 
 Plotting the parallel efficiency of ESPResSo 4.2.2 (weak scaling, 2000 particles per MPI rank) on the three EuroHPC systems we used
 shows that it decreases approximately linearly with the logarithm of the number of cores.
 
 <figure markdown="span">
-![Parallel efficiency of ESPResSo 4.2.2 on Vega, Karolina, Deucalion](espresso-4.2.2-foss-2023a-parallel-efficiency-vega-karolina-deucalion-20240628.png){width=100%}
-<figcaption>Figure 2: Parallel efficiency (weak scaling) of ESPResSo 4.2.2</figcaption>
+![Parallel efficiency of ESPResSo 4.2.2 on Vega, Karolina, Deucalion](espresso-4.2.2-foss-2023a-parallel-efficiency-vega-karolina-deucalion-20240628.svg){width=100%}
 </figure>
 
 ---
@@ -189,5 +187,5 @@ mpirun -np 96 python3 lj.py
 EOF
 ```
 
-*(the `lj.py` Python script is available in the EESSI test suite, see [here](https://github.com/EESSI/test-suite/blob/v0.3.0/eessi/testsuite/tests/apps/espresso/src/lj.py))*
+*(the `lj.py` Python script is available in the EESSI test suite, see [here](https://github.com/EESSI/test-suite/blob/v0.3.2/eessi/testsuite/tests/apps/espresso/src/lj.py))*
 
