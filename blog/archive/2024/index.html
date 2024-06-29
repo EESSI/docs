@@ -1729,6 +1729,171 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2024-06-28 00:00:00">June 28, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              6 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="portable-test-run-of-espresso-on-eurohpc-systems-via-eessi"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/">Portable test run of ESPResSo on EuroHPC systems via EESSI</a></h2>
+<figure>
+<img alt="ESPResSo logo" src="../../2024/06/espresso.png" width="30%" />
+</figure>
+<p>Since 14 June 2024, <a href="https://espressomd.org">ESPResSo</a> v4.2.2 is available in the EESSI production repository <code>software.eessi.io</code>,
+optimized for the <a href="https://www.eessi.io/docs/software_layer/cpu_targets">8 CPU targets</a> that are fully supported by version 2023.06 of EESSI.
+This allows running ESPResSo effortlessly on the EuroHPC systems where EESSI is already available,
+like <a href="https://doc.vega.izum.si">Vega</a> and <a href="https://docs.it4i.cz/karolina/introduction">Karolina</a>.</p>
+<p>On 27 June 2024, an additional installation of ESPResSo v4.2.2 that is optimized for Arm A64FX processors
+was added, which enables also running ESPResSo efficiently on <a href="https://docs.macc.fccn.pt/deucalion">Deucalion</a>,
+even though EESSI is not available yet system-wide on Deucalion (see below for more details).</p>
+<p>With the <a href="https://www.eessi.io/docs/test-suite/available-tests/#espresso">portable test for ESPResSo</a> that is available
+in the <a href="https://www.eessi.io/docs/test-suite">EESSI test suite</a> we can easily evaluate the scalability of
+ESPResSo across EuroHPC systems, even if those systems have different system architectures.</p>
+<h3 id="simulating-lennard-jones-fluids-using-espresso"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/#simulating-lennard-jones-fluids-using-espresso">Simulating Lennard-Jones fluids using ESPResSo</a></h3>
+<p><a href="https://en.wikipedia.org/wiki/Lennard-Jones_potential">Lennard-Jones fluids</a> model interacting soft spheres with a potential that is weakly attractive at medium range and strongly repulsive at short range. Originally designed to model noble gases, this simple setup now underpins most particle-based simulations, such as ionic liquids, polymers, proteins and colloids, where strongly repulsive pairwise potentials are desirable to prevent particles from overlapping with one another. In addition, solvated systems with atomistic resolution typically have a large excess of solvent atoms compared to solute atoms, thus Lennard-Jones interactions tend to account for a large portion of the simulation time. Compared to other potentials, the Lennard-Jones interaction is inexpensive to calculate, and its limited range allows us to partition the simulation domain into arbitrarily small regions that can be distributed among many processors.</p>
+<h3 id="portable-test-to-evaluate-performance-of-espresso"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/#portable-test-to-evaluate-performance-of-espresso">Portable test to evaluate performance of ESPResSo</a></h3>
+<p>To evaluate the performance of ESPResSo, we have implemented a <em>portable test</em> for ESPResSo in the <a href="https://www.eessi.io/docs/test-suite">EESSI test suite</a>;
+the results shown here were collected using <a href="https://github.com/EESSI/test-suite/releases/tag/v0.3.2">version 0.3.2</a>.</p>
+<p>After <a href="https://www.eessi.io/docs/test-suite/installation-configuration">installing and configuring</a> the EESSI test suite on Vega, Karolina, and Deucalion,
+running the Lennard-Jones (LJ) test case with ESPResSo 4.2.2 available in EESSI can be done with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span><span class="s2">&quot;ESPRESSO_LJ.*%module_name=ESPResSo/4.2.2&quot;</span>
+</code></pre></div>
+<p>This will automatically run the LJ test case with ESPResSo across all known <a href="https://www.eessi.io/docs/test-suite/usage/#scale-tags">scales</a>
+in the EESSI test suite, which range from single core up to 8 full nodes.</p>
+<h3 id="performance-scalability-results-on-vega-karolina-deucalion"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/#performance-scalability-results-on-vega-karolina-deucalion">Performance + scalability results on Vega, Karolina, Deucalion</a></h3>
+<p>The performance results of the tests are collected by ReFrame in a <a href="https://reframe-hpc.readthedocs.io/en/stable/tutorial.html#run-reports-and-performance-logging">detailed JSON report</a>.</p>
+<p>The parallel performance of ESPResSo, expressed in particles integrated per second, scales linearly with the number of cores.
+On Vega using 8 nodes (1024 MPI ranks, one per physical core), ESPResSo 4.2.2 can integrate the equations of motion of roughly 615 million particles every second.
+On Deucalion using 8 nodes (384 cores), we observe a performance of roughly 62 million particles integrated per second.</p>
+<figure>
+<img alt="Performance of ESPResSo 4.2.2 on Vega, Karolina, Deucalion" src="../../2024/06/espresso-4.2.2-foss-2023a-perf-part-sec-vega-karolina-deucalion-20240628.svg" width="100%" />
+</figure>
+<p>Plotting the parallel efficiency of ESPResSo 4.2.2 (weak scaling, 2000 particles per MPI rank) on the three EuroHPC systems we used
+shows that it decreases approximately linearly with the logarithm of the number of cores.</p>
+<figure>
+<img alt="Parallel efficiency of ESPResSo 4.2.2 on Vega, Karolina, Deucalion" src="../../2024/06/espresso-4.2.2-foss-2023a-parallel-efficiency-vega-karolina-deucalion-20240628.svg" width="100%" />
+</figure>
+<hr />
+<h3 id="running-espresso-on-deucalion-via-eessi-cvmfsexec"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/#running-espresso-on-deucalion-via-eessi-cvmfsexec">Running ESPResSo on Deucalion via EESSI + <code>cvmfsexec</code></a></h3>
+<p>While EESSI is already available system-wide on both Vega and Karolina for some time (see
+<a href="https://doc.vega.izum.si/eessi">here</a> and <a href="https://docs.it4i.cz/software/eessi">here</a> for more information,
+respectively),
+it was not available yet on Deucalion when these performance experiments were run.</p>
+<p>Nevertheless, we were able to leverage the optimized installation of ESPResSo for A64FX that is available
+in EESSI since 27 June 2024, by leveraging the <a href="https://github.com/cvmfs/cvmfsexec"><code>cvmfsexec</code></a> tool,
+and by creatively implementing two simple shell wrapper scripts.</p>
+<h4 id="cvmfsexec-wrapper-script"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/#cvmfsexec-wrapper-script"><code>cvmfsexec</code> wrapper script</a></h4>
+<p>The first wrapper script <code>cvmfsexec_eessi.sh</code> can be used to run a command in a subshell in which
+the EESSI <a href="https://cernvm.cern.ch/fs">CernVM-FS</a> repository (<code>software.eessi.io</code>) is mounted via <code>cvmfsexec</code>.
+This script can be used by regular users on Deucalion, it does not require any special privileges beyond
+the Linux kernel features that <code>cvmfsexec</code> leverages, like <a href="https://lwn.net/Articles/532593/">user namespaces</a>.</p>
+<p>Contents of <code>~/bin/cvmfsexec_eessi.sh</code>:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span>/cvmfs/software.eessi.io<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="c1"># run command directly, EESSI CernVM-FS repository is already mounted</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">else</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="c1"># run command via in subshell where EESSI CernVM-FS repository is mounted,</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="c1"># via cvmfsexec which is set up in a unique temporary directory</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="nv">orig_workdir</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/<span class="nv">$USER</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="nv">tmpdir</span><span class="o">=</span><span class="k">$(</span>mktemp<span class="w"> </span>-p<span class="w"> </span>/tmp/<span class="nv">$USER</span><span class="w"> </span>-d<span class="k">)</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$tmpdir</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/cvmfs/cvmfsexec.git<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$tmpdir</span>/git_clone.out<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>cvmfsexec
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span>./makedist<span class="w"> </span>default<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$tmpdir</span>/cvmfsexec_makedist.out<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$orig_workdir</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="nv">$tmpdir</span>/cvmfsexec/cvmfsexec<span class="w"> </span>software.eessi.io<span class="w"> </span>--<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span><span class="c1"># cleanup</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$tmpdir</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="k">fi</span>
+</code></pre></div></p>
+<p>Do make sure that this script is executable:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>~/bin/cvmfsexec_eessi.sh
+</code></pre></div></p>
+<p>A simple way to test this script is to use it to inspect the contents of the EESSI repository:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>ls<span class="w"> </span>/cvmfs/software.eessi.io
+</code></pre></div>
+<p>or to start an interactive shell in which the EESSI repository is mounted:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>/bin/bash<span class="w"> </span>-l
+</code></pre></div>
+<p>The job scripts that were submitted by ReFrame on Deucalion leverage <code>cvmfsexec_eessi.sh</code> to set up the
+environment and get access to the ESPResSo v4.2.2 installation that is available in EESSI (see below).</p>
+<h4 id="orted-wrapper-script"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/#orted-wrapper-script"><code>orted</code> wrapper script</a></h4>
+<p>In order to get multi-node runs of ESPResSo working without having EESSI available system-wide,
+we also had to create a small wrapper script for the <a href="https://www.open-mpi.org/doc/v4.1/man1/orted.1.php"><code>orted</code>
+command</a> that is used by <a href="https://www.open-mpi.org">Open MPI</a>
+to start processes on remote nodes.
+This is necessary because <code>mpirun</code> launches <code>orted</code>, which must be run in an environment in which the EESSI repository
+is mounted.
+If not, MPI startup will fail with an error like "<code>error: execve(): orted: No such file or directory</code>".</p>
+<p>This wrapper script must be named <code>orted</code>, and must be located in a path that is listed in <code>$PATH</code>.</p>
+<p>We placed it in <code>~/bin/orted</code>, and add <code>export PATH=$HOME/bin:$PATH</code> to our <code>~/.bashrc</code> login script.</p>
+<p>Contents of <code>~/bin/orted</code>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1"># first remove path to this orted wrapper from $PATH, to avoid infinite loop</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nv">orted_wrapper_dir</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="nv">$0</span><span class="k">)</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="nv">$orted_wrapper_dir</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="k">)</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>orted<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Do make sure that also this <code>orted</code> wrapper script is executable:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>~/bin/orted
+</code></pre></div></p>
+<p>If not, you will likely run into an error that starts with:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>An ORTE daemon has unexpectedly failed after launch ...
+</code></pre></div></p>
+<h4 id="slurm-job-script"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/#slurm-job-script">Slurm job script</a></h4>
+<p>We can use the <code>cvmfsexec_eessi.sh</code> script in a Slurm job script on Deucalion to
+initialize the EESSI environment in a subshell in which the EESSI CernVM-FS repository
+is mounted, and subsequently load the module for ESPResSo v4.2.2 and launch the Lennard-Jones fluid
+simulation via <code>mpirun</code>:</p>
+<p>Job script (example using 2 full 48-core nodes on A64FX partition of Deucalion):
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="c1">#SBATCH --ntasks=96</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="c1">#SBATCH --ntasks-per-node=48</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1">#SBATCH --cpus-per-task=1</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1">#SBATCH --time=5:0:0</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="c1">#SBATCH --partition normal-arm</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="c1">#SBATCH --export=None</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="c1">#SBATCH --mem=30000M</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="s">export EESSI_SOFTWARE_SUBDIR_OVERRIDE=aarch64/a64fx</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="s">source /cvmfs/software.eessi.io/versions/2023.06/init/bash</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="s">module load ESPResSo/4.2.2-foss-2023a</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="s">export SLURM_EXPORT_ENV=HOME,PATH,LD_LIBRARY_PATH,PYTHONPATH</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="s">mpirun -np 96 python3 lj.py</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="s">EOF</span>
+</code></pre></div></p>
+<p><em>(the <code>lj.py</code> Python script is available in the EESSI test suite, see <a href="https://github.com/EESSI/test-suite/blob/v0.3.2/eessi/testsuite/tests/apps/espresso/src/lj.py">here</a>)</em></p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/620876?v=4" alt="Kenneth Hoste">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2024-05-17 00:00:00">May 17, 2024</time></li>
         
         

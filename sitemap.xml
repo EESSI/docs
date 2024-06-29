@@ -1796,6 +1796,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/blog/2024/06/28/espresso-portable-test-run-eurohpc/</loc>
+         <lastmod>2024-06-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/filesystem_layer/stratum1/</loc>
          <lastmod>2024-06-29</lastmod>
          <changefreq>daily</changefreq>

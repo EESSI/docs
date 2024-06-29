@@ -8,11 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://eessi.github.io/docs/blog/2024/05/17/isc24/">
+        <link rel="canonical" href="https://eessi.github.io/docs/blog/2024/06/28/espresso-portable-test-run-eurohpc/">
       
       
+        <link rel="prev" href="../../../05/17/isc24/">
       
-        <link rel="next" href="../../../06/28/espresso-portable-test-run-eurohpc/">
       
       
       <link rel="icon" href="../../../../../img/logos/EESSI.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>EESSI promo tour @ ISC'24 (May 2024, Hamburg) - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>Portable test run of ESPResSo on EuroHPC systems via EESSI - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eessi-promo-tour-isc24-may-2024-hamburg" class="md-skip">
+        <a href="#portable-test-run-of-espresso-on-eurohpc-systems-via-eessi" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EESSI promo tour @ ISC'24 (May 2024, Hamburg)
+              Portable test run of ESPResSo on EuroHPC systems via EESSI
             
           </span>
         </div>
@@ -1717,46 +1717,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bof-session-on-eessi" class="md-nav__link">
+  <a href="#simulating-lennard-jones-fluids-using-espresso" class="md-nav__link">
     <span class="md-ellipsis">
-      BoF session on EESSI
+      Simulating Lennard-Jones fluids using ESPResSo
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workshops" class="md-nav__link">
+  <a href="#portable-test-to-evaluate-performance-of-espresso" class="md-nav__link">
     <span class="md-ellipsis">
-      Workshops
+      Portable test to evaluate performance of ESPResSo
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Workshops">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-scalability-results-on-vega-karolina-deucalion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance + scalability results on Vega, Karolina, Deucalion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-espresso-on-deucalion-via-eessi-cvmfsexec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running ESPResSo on Deucalion via EESSI + cvmfsexec
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running ESPResSo on Deucalion via EESSI + cvmfsexec">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#risc-v-workshop" class="md-nav__link">
+  <a href="#cvmfsexec-wrapper-script" class="md-nav__link">
     <span class="md-ellipsis">
-      RISC-V workshop
+      cvmfsexec wrapper script
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#ahug-workshop" class="md-nav__link">
+  <a href="#orted-wrapper-script" class="md-nav__link">
     <span class="md-ellipsis">
-      AHUG workshop
+      orted wrapper script
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pop-workshop" class="md-nav__link">
+  <a href="#slurm-job-script" class="md-nav__link">
     <span class="md-ellipsis">
-      POP workshop
+      Slurm job script
     </span>
   </a>
   
@@ -1764,48 +1782,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#talks-and-demos-on-eessi-at-exhibit" class="md-nav__link">
-    <span class="md-ellipsis">
-      Talks and demos on EESSI at exhibit
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Talks and demos on EESSI at exhibit">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#microsoft-azure-booth" class="md-nav__link">
-    <span class="md-ellipsis">
-      Microsoft Azure booth
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#eurohpc-booth" class="md-nav__link">
-    <span class="md-ellipsis">
-      EuroHPC booth
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#stickers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stickers!
-    </span>
-  </a>
   
 </li>
       
@@ -1853,16 +1829,46 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/49882639?v=4" alt="Lara Peeters">
+                      <img src="https://avatars.githubusercontent.com/u/33718780?v=4" alt="Caspar van Leeuwen">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          Lara Peeters
+                          Caspar van Leeuwen
                         
                       </strong>
                       <br>
-                      HPC-UGent
+                      SURF
+                    </span>
+                  </div>
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/41335185?v=4" alt="Satish Kamath">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Satish Kamath
+                        
+                      </strong>
+                      <br>
+                      SURF
+                    </span>
+                  </div>
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/42201407?v=4" alt="Jean-Noël Grad">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Jean-Noël Grad
+                        
+                      </strong>
+                      <br>
+                      University of Stuttgart
                     </span>
                   </div>
                 
@@ -1880,7 +1886,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-05-17 00:00:00" class="md-ellipsis">May 17, 2024</time>
+                        <time datetime="2024-06-28 00:00:00" class="md-ellipsis">June 28, 2024</time>
                       </div>
                     </li>
                     
@@ -1892,7 +1898,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              5 min read
+                              6 min read
                             
                           </span>
                         </div>
@@ -1915,100 +1921,138 @@
   
 
 
-<h1 id="eessi-promo-tour-isc24-may-2024-hamburg">EESSI promo tour @ ISC'24 (May 2024, Hamburg)<a class="headerlink" href="#eessi-promo-tour-isc24-may-2024-hamburg" title="Permanent link">&para;</a></h1>
+<h1 id="portable-test-run-of-espresso-on-eurohpc-systems-via-eessi">Portable test run of ESPResSo on EuroHPC systems via EESSI<a class="headerlink" href="#portable-test-run-of-espresso-on-eurohpc-systems-via-eessi" title="Permanent link">&para;</a></h1>
 <figure>
-<img alt="ISC logo" src="../../isc24-logo.png" width="70%" />
+<img alt="ESPResSo logo" src="../../espresso.png" width="30%" />
 </figure>
-<p>This week, we had the privilege of attending the <a href="https://www.isc-hpc.com">ISC'24</a> conference in the beautiful city of Hamburg, Germany.
-This was an excellent opportunity for us to showcase <a href="https://eessi.io">EESSI</a>, and gain valuable insights and feedback from the HPC community.</p>
+<p>Since 14 June 2024, <a href="https://espressomd.org">ESPResSo</a> v4.2.2 is available in the EESSI production repository <code>software.eessi.io</code>,
+optimized for the <a href="https://www.eessi.io/docs/software_layer/cpu_targets">8 CPU targets</a> that are fully supported by version 2023.06 of EESSI.
+This allows running ESPResSo effortlessly on the EuroHPC systems where EESSI is already available,
+like <a href="https://doc.vega.izum.si">Vega</a> and <a href="https://docs.it4i.cz/karolina/introduction">Karolina</a>.</p>
+<p>On 27 June 2024, an additional installation of ESPResSo v4.2.2 that is optimized for Arm A64FX processors
+was added, which enables also running ESPResSo efficiently on <a href="https://docs.macc.fccn.pt/deucalion">Deucalion</a>,
+even though EESSI is not available yet system-wide on Deucalion (see below for more details).</p>
+<p>With the <a href="https://www.eessi.io/docs/test-suite/available-tests/#espresso">portable test for ESPResSo</a> that is available
+in the <a href="https://www.eessi.io/docs/test-suite">EESSI test suite</a> we can easily evaluate the scalability of
+ESPResSo across EuroHPC systems, even if those systems have different system architectures.</p>
+<h2 id="simulating-lennard-jones-fluids-using-espresso">Simulating Lennard-Jones fluids using ESPResSo<a class="headerlink" href="#simulating-lennard-jones-fluids-using-espresso" title="Permanent link">&para;</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Lennard-Jones_potential">Lennard-Jones fluids</a> model interacting soft spheres with a potential that is weakly attractive at medium range and strongly repulsive at short range. Originally designed to model noble gases, this simple setup now underpins most particle-based simulations, such as ionic liquids, polymers, proteins and colloids, where strongly repulsive pairwise potentials are desirable to prevent particles from overlapping with one another. In addition, solvated systems with atomistic resolution typically have a large excess of solvent atoms compared to solute atoms, thus Lennard-Jones interactions tend to account for a large portion of the simulation time. Compared to other potentials, the Lennard-Jones interaction is inexpensive to calculate, and its limited range allows us to partition the simulation domain into arbitrarily small regions that can be distributed among many processors.</p>
+<h2 id="portable-test-to-evaluate-performance-of-espresso">Portable test to evaluate performance of ESPResSo<a class="headerlink" href="#portable-test-to-evaluate-performance-of-espresso" title="Permanent link">&para;</a></h2>
+<p>To evaluate the performance of ESPResSo, we have implemented a <em>portable test</em> for ESPResSo in the <a href="https://www.eessi.io/docs/test-suite">EESSI test suite</a>;
+the results shown here were collected using <a href="https://github.com/EESSI/test-suite/releases/tag/v0.3.2">version 0.3.2</a>.</p>
+<p>After <a href="https://www.eessi.io/docs/test-suite/installation-configuration">installing and configuring</a> the EESSI test suite on Vega, Karolina, and Deucalion,
+running the Lennard-Jones (LJ) test case with ESPResSo 4.2.2 available in EESSI can be done with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span><span class="s2">&quot;ESPRESSO_LJ.*%module_name=ESPResSo/4.2.2&quot;</span>
+</code></pre></div>
+<p>This will automatically run the LJ test case with ESPResSo across all known <a href="https://www.eessi.io/docs/test-suite/usage/#scale-tags">scales</a>
+in the EESSI test suite, which range from single core up to 8 full nodes.</p>
+<h2 id="performance-scalability-results-on-vega-karolina-deucalion">Performance + scalability results on Vega, Karolina, Deucalion<a class="headerlink" href="#performance-scalability-results-on-vega-karolina-deucalion" title="Permanent link">&para;</a></h2>
+<p>The performance results of the tests are collected by ReFrame in a <a href="https://reframe-hpc.readthedocs.io/en/stable/tutorial.html#run-reports-and-performance-logging">detailed JSON report</a>.</p>
+<p>The parallel performance of ESPResSo, expressed in particles integrated per second, scales linearly with the number of cores.
+On Vega using 8 nodes (1024 MPI ranks, one per physical core), ESPResSo 4.2.2 can integrate the equations of motion of roughly 615 million particles every second.
+On Deucalion using 8 nodes (384 cores), we observe a performance of roughly 62 million particles integrated per second.</p>
+<figure>
+<img alt="Performance of ESPResSo 4.2.2 on Vega, Karolina, Deucalion" src="../../espresso-4.2.2-foss-2023a-perf-part-sec-vega-karolina-deucalion-20240628.svg" width="100%" />
+</figure>
+<p>Plotting the parallel efficiency of ESPResSo 4.2.2 (weak scaling, 2000 particles per MPI rank) on the three EuroHPC systems we used
+shows that it decreases approximately linearly with the logarithm of the number of cores.</p>
+<figure>
+<img alt="Parallel efficiency of ESPResSo 4.2.2 on Vega, Karolina, Deucalion" src="../../espresso-4.2.2-foss-2023a-parallel-efficiency-vega-karolina-deucalion-20240628.svg" width="100%" />
+</figure>
 <hr />
-<h2 id="bof-session-on-eessi">BoF session on EESSI<a class="headerlink" href="#bof-session-on-eessi" title="Permanent link">&para;</a></h2>
-<p>The EESSI Birds-of-a-Feather (BoF) session on Tuesday morning, part of the official ISC'24 program, was the highlight of our activities in Hamburg.</p>
-<p>It was well attended, with well <strong>over 100</strong> people joining us at 9am.</p>
-<figure>
-<img alt="EESSI BoF session at ISC'24" src="../../isc24-bof.jpg" width="90%" />
-</figure>
-<p>During this session, we introduced the EESSI project with a short presentation, followed by a well-received <strong>live hands-on demo</strong> of installing and using EESSI by spinning up an "empty"
-Linux virtual machine instance in Amazon EC2 and getting optimized installations of popular scientific applications like GROMACS and TensorFlow running in a matter of minutes.</p>
-<p>During the second part of the BoF session, we engaged with the audience
-through an <strong>interactive poll</strong> and by letting attendees ask questions.</p>
-<p>The <strong>presentation slides</strong>, including the results of the interactive poll and questions that were raised by attendees, are <strong>available <a href="https://raw.githubusercontent.com/EESSI/meetings/main/other/isc24/EESSI-ISC24-BoF-with-poll-results-20240514.pdf">here</a></strong>.</p>
-<hr />
-<h2 id="workshops">Workshops<a class="headerlink" href="#workshops" title="Permanent link">&para;</a></h2>
-<p>During the last day of ISC'24, EESSI was present in no less than <em>three</em> different
-workshops.</p>
-<h3 id="risc-v-workshop">RISC-V workshop<a class="headerlink" href="#risc-v-workshop" title="Permanent link">&para;</a></h3>
-<p>At the <a href="https://riscv.epcc.ed.ac.uk/community/isc24-workshop"><em>Fourth International workshop on RISC-V for HPC</em></a>,
-Julián Morillo (<a href="https://www.bsc.es">BSC</a>) presented our paper
-<a href="https://riscv.epcc.ed.ac.uk/community/isc24-workshop/#preparing-to-hit-the-ground-running-adding-risc-v-support-to-eessi"><strong>"Preparing to Hit the Ground Running: Adding RISC-V support to
-EESSI"</strong></a>
-(slides available <a href="https://raw.githubusercontent.com/EESSI/meetings/main/other/isc24/EESSI-ISC24-RISC-V-workshop-20240517.pdf">here</a>).</p>
-<figure>
-<img alt="EESSI @ RISC-V workshop at ISC'24" src="../../isc24-riscv-workshop.jpg" width="80%" />
-</figure>
-<p>Julián covered the initial work that was done in the scope of the <a href="https://www.multixscale.eu">MultiXscale EuroHPC Centre-of-Excellence</a> to add support for RISC-V to EESSI, outlined the challenges we encountered, and shared the lessons we have learned along the way.</p>
-<h3 id="ahug-workshop">AHUG workshop<a class="headerlink" href="#ahug-workshop" title="Permanent link">&para;</a></h3>
-<p>During the <a href="https://arm-hpc-user-group.github.io/isc24-ahug-workshop">Arm HPC User Group (AHUG) workshop</a>, Kenneth Hoste
-(<a href="https://www.ugent.be/hpc/en">HPC-UGent</a>) gave a
-talk entitled <em>"Extending Arm’s Reach by Going EESSI"</em> (slides available <a href="https://raw.githubusercontent.com/EESSI/meetings/main/other/isc24/EESSI-ISC24-AHUG-workshop-20240517.pdf">here</a>).</p>
-<p>Next to a high-level introduction to EESSI, we briefly covered some
-of the challenges we encountered when testing the optimized software installations
-that we had built for the Arm Neoverse V1 microarchitecture, including
-bugs in <a href="https://gitlab.com/eessi/support/-/issues/41">OpenMPI</a> and <a href="https://gitlab.com/gromacs/gromacs/-/issues/5057">GROMACS</a>.</p>
-<figure>
-<img alt="EESSI @ Arm HPC User Group workshop at ISC'24" src="../../isc24-ahug-workshop.jpg" width="80%" />
-</figure>
-<p>Kenneth gave a live demonstration of how to get access to EESSI and start running
-the optimized software installations we provide through our CernVM-FS repository
-on a fresh AWS Graviton 3 instance in a matter of minutes.</p>
-<h3 id="pop-workshop">POP workshop<a class="headerlink" href="#pop-workshop" title="Permanent link">&para;</a></h3>
-<p>In the afternoon on Thursday, Lara Peeters (<a href="https://www.ugent.be/hpc/en">HPC-UGent</a>) presented <a href="https://www.multixscale.eu">MultiXscale</a> during the <a href="https://pop-coe.eu/news/events/readiness-of-HPC-extreme-scale-applications"><em>Readiness of HPC Extreme-scale Applications</em> workshop</a>, which was organised by the <a href="https://pop-coe.eu">POP EuroHPC Centre-of-Excellence</a>
-(slides available <a href="https://raw.githubusercontent.com/EESSI/meetings/main/other/isc24/EESSI-ISC24-POP-workshop-20240517.pdf">here</a>).</p>
-<figure>
-<img alt="EESSI @ POP workshop at ISC'24" src="../../isc24-pop-workshop-lara.jpg" width="80%" />
-</figure>
-<p>Lara outlined the pilot use cases on which MultiXscale focuses,
-and explained how EESSI helps to achieve the goals of MultiXscale
-in terms of Productivity, Performance, and Portability.</p>
-<figure>
-<img alt="Group picture @ POP workshop at ISC'24" src="../../isc24-pop-workshop-group-picture.jpg" width="80%" />
-</figure>
-<p>At the end of the workshop, a group picture was taken with both organisers
-and speakers, which was a great way to wrap up a busy week in Hamburg!</p>
-<hr />
-<h2 id="talks-and-demos-on-eessi-at-exhibit">Talks and demos on EESSI at exhibit<a class="headerlink" href="#talks-and-demos-on-eessi-at-exhibit" title="Permanent link">&para;</a></h2>
-<p>Not only was EESSI part of the official ISC'24 program via a dedicated BoF session and various workshops: we were also prominently present on the exhibit floor.</p>
-<h3 id="microsoft-azure-booth">Microsoft Azure booth<a class="headerlink" href="#microsoft-azure-booth" title="Permanent link">&para;</a></h3>
-<p><strong>Microsoft Azure</strong> invited us to give a <strong>1-hour introductory presentation</strong>
-on EESSI on both Monday <em>and</em> Wednesday at their booth during the ISC'24 exhibit,
-as well as to provide <strong>live demonstrations</strong> at the demo corner of their booth on Tuesday afternoon on how to get access to EESSI and the user experience it provides.</p>
-<figure>
-<img alt="Talk @ Microsoft Azure booth at ISC'24" src="../../isc24-azure-talk.jpg" width="80%" />
-</figure>
-<p>Exhibit attendees were welcome to pass by and ask questions, and did so throughout the full 4 hours we were present there.</p>
-<figure>
-<img alt="Demo @ Microsoft Azure booth at ISC'24" src="../../isc24-azure-demo.jpg" width="60%" />
-</figure>
-<p>Both Microsoft Azure and AWS have been graciously providing resources in their cloud infrastructure free-of-cost for developing, testing, and demonstrating EESSI for several years now.</p>
-<h3 id="eurohpc-booth">EuroHPC booth<a class="headerlink" href="#eurohpc-booth" title="Permanent link">&para;</a></h3>
-<p>The <a href="https://www.multixscale.eu">MultiXscale EuroHPC Centre-of-Excellence</a> we
-are actively involved in, and through which the development of EESSI is being co-funded since Jan'23,
-was invited by the <a href="https://eurohpc-ju.europa.eu">EuroHPC JU</a> to present the goals and
-preliminary achievements at their booth.</p>
-<figure>
-<img alt="Talk @ EuroHPC booth at ISC'24" src="../../isc24-eurohpc.jpg" width="80%" />
-</figure>
-<p>Elisabeth Ortega (<a href="https://hpcnow.com">HPCNow!</a>) did the honours to give
-the last talk at the EuroHPC JU booth of the ISC'24 exhibit.</p>
-<hr />
-<h2 id="stickers">Stickers!<a class="headerlink" href="#stickers" title="Permanent link">&para;</a></h2>
-<p>Last but not least: we handed out a boatload free stickers with the logo of both <a href="https://www.multixscale.eu">MultiXscale</a> and EESSI itself, as well as of various of the
-open source software projects we leverage, including <a href="https://easybuild.io">EasyBuild</a>, <a href="http://lmod.readthedocs.org">Lmod</a>, and <a href="https://cernvm.cern.ch/fs">CernVM-FS</a>.</p>
-<figure>
-<img alt="Stickers at ISC'24" src="../../isc24-stickers.jpg" width="60%" />
-</figure>
-<p>We have mostly exhausted our sticker collection during ISC'24, but don't worry: we will make sure we have more available
-at upcoming events...</p>
+<h2 id="running-espresso-on-deucalion-via-eessi-cvmfsexec">Running ESPResSo on Deucalion via EESSI + <code>cvmfsexec</code><a class="headerlink" href="#running-espresso-on-deucalion-via-eessi-cvmfsexec" title="Permanent link">&para;</a></h2>
+<p>While EESSI is already available system-wide on both Vega and Karolina for some time (see
+<a href="https://doc.vega.izum.si/eessi">here</a> and <a href="https://docs.it4i.cz/software/eessi">here</a> for more information,
+respectively),
+it was not available yet on Deucalion when these performance experiments were run.</p>
+<p>Nevertheless, we were able to leverage the optimized installation of ESPResSo for A64FX that is available
+in EESSI since 27 June 2024, by leveraging the <a href="https://github.com/cvmfs/cvmfsexec"><code>cvmfsexec</code></a> tool,
+and by creatively implementing two simple shell wrapper scripts.</p>
+<h3 id="cvmfsexec-wrapper-script"><code>cvmfsexec</code> wrapper script<a class="headerlink" href="#cvmfsexec-wrapper-script" title="Permanent link">&para;</a></h3>
+<p>The first wrapper script <code>cvmfsexec_eessi.sh</code> can be used to run a command in a subshell in which
+the EESSI <a href="https://cernvm.cern.ch/fs">CernVM-FS</a> repository (<code>software.eessi.io</code>) is mounted via <code>cvmfsexec</code>.
+This script can be used by regular users on Deucalion, it does not require any special privileges beyond
+the Linux kernel features that <code>cvmfsexec</code> leverages, like <a href="https://lwn.net/Articles/532593/">user namespaces</a>.</p>
+<p>Contents of <code>~/bin/cvmfsexec_eessi.sh</code>:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span>/cvmfs/software.eessi.io<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1"># run command directly, EESSI CernVM-FS repository is already mounted</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">else</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="c1"># run command via in subshell where EESSI CernVM-FS repository is mounted,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="c1"># via cvmfsexec which is set up in a unique temporary directory</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nv">orig_workdir</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/<span class="nv">$USER</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nv">tmpdir</span><span class="o">=</span><span class="k">$(</span>mktemp<span class="w"> </span>-p<span class="w"> </span>/tmp/<span class="nv">$USER</span><span class="w"> </span>-d<span class="k">)</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$tmpdir</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/cvmfs/cvmfsexec.git<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$tmpdir</span>/git_clone.out<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>cvmfsexec
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span>./makedist<span class="w"> </span>default<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$tmpdir</span>/cvmfsexec_makedist.out<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$orig_workdir</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nv">$tmpdir</span>/cvmfsexec/cvmfsexec<span class="w"> </span>software.eessi.io<span class="w"> </span>--<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="c1"># cleanup</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$tmpdir</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">fi</span>
+</code></pre></div></p>
+<p>Do make sure that this script is executable:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>~/bin/cvmfsexec_eessi.sh
+</code></pre></div></p>
+<p>A simple way to test this script is to use it to inspect the contents of the EESSI repository:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>ls<span class="w"> </span>/cvmfs/software.eessi.io
+</code></pre></div>
+<p>or to start an interactive shell in which the EESSI repository is mounted:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>/bin/bash<span class="w"> </span>-l
+</code></pre></div>
+<p>The job scripts that were submitted by ReFrame on Deucalion leverage <code>cvmfsexec_eessi.sh</code> to set up the
+environment and get access to the ESPResSo v4.2.2 installation that is available in EESSI (see below).</p>
+<h3 id="orted-wrapper-script"><code>orted</code> wrapper script<a class="headerlink" href="#orted-wrapper-script" title="Permanent link">&para;</a></h3>
+<p>In order to get multi-node runs of ESPResSo working without having EESSI available system-wide,
+we also had to create a small wrapper script for the <a href="https://www.open-mpi.org/doc/v4.1/man1/orted.1.php"><code>orted</code>
+command</a> that is used by <a href="https://www.open-mpi.org">Open MPI</a>
+to start processes on remote nodes.
+This is necessary because <code>mpirun</code> launches <code>orted</code>, which must be run in an environment in which the EESSI repository
+is mounted.
+If not, MPI startup will fail with an error like "<code>error: execve(): orted: No such file or directory</code>".</p>
+<p>This wrapper script must be named <code>orted</code>, and must be located in a path that is listed in <code>$PATH</code>.</p>
+<p>We placed it in <code>~/bin/orted</code>, and add <code>export PATH=$HOME/bin:$PATH</code> to our <code>~/.bashrc</code> login script.</p>
+<p>Contents of <code>~/bin/orted</code>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># first remove path to this orted wrapper from $PATH, to avoid infinite loop</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nv">orted_wrapper_dir</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="nv">$0</span><span class="k">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="nv">$orted_wrapper_dir</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="k">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>orted<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>Do make sure that also this <code>orted</code> wrapper script is executable:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>~/bin/orted
+</code></pre></div></p>
+<p>If not, you will likely run into an error that starts with:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>An ORTE daemon has unexpectedly failed after launch ...
+</code></pre></div></p>
+<h3 id="slurm-job-script">Slurm job script<a class="headerlink" href="#slurm-job-script" title="Permanent link">&para;</a></h3>
+<p>We can use the <code>cvmfsexec_eessi.sh</code> script in a Slurm job script on Deucalion to
+initialize the EESSI environment in a subshell in which the EESSI CernVM-FS repository
+is mounted, and subsequently load the module for ESPResSo v4.2.2 and launch the Lennard-Jones fluid
+simulation via <code>mpirun</code>:</p>
+<p>Job script (example using 2 full 48-core nodes on A64FX partition of Deucalion):
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="ch">#!/bin/bash</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">#SBATCH --ntasks=96</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">#SBATCH --ntasks-per-node=48</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">#SBATCH --cpus-per-task=1</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">#SBATCH --time=5:0:0</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1">#SBATCH --partition normal-arm</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">#SBATCH --export=None</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1">#SBATCH --mem=30000M</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="s">export EESSI_SOFTWARE_SUBDIR_OVERRIDE=aarch64/a64fx</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="s">source /cvmfs/software.eessi.io/versions/2023.06/init/bash</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="s">module load ESPResSo/4.2.2-foss-2023a</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="s">export SLURM_EXPORT_ENV=HOME,PATH,LD_LIBRARY_PATH,PYTHONPATH</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="s">mpirun -np 96 python3 lj.py</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="s">EOF</span>
+</code></pre></div></p>
+<p><em>(the <code>lj.py</code> Python script is available in the EESSI test suite, see <a href="https://github.com/EESSI/test-suite/blob/v0.3.2/eessi/testsuite/tests/apps/espresso/src/lj.py">here</a>)</em></p>
 
 
 
@@ -2029,7 +2073,7 @@ at upcoming events...</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 21, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 29, 2024</span>
   </span>
 
     
