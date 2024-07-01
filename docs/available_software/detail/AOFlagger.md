@@ -13,7 +13,7 @@ https://aoflagger.readthedocs.io/
 # Available modules
 
 
-The overview below shows which AOFlagger installations are available per HPC-UGent Tier-2cluster, ordered based on software version (new to old).
+The overview below shows which AOFlagger installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
 To start using AOFlagger, load one of these modules using a `module load` command like:
 
@@ -21,7 +21,7 @@ To start using AOFlagger, load one of these modules using a `module load` comman
 module load AOFlagger/3.4.0-foss-2023b
 ```
 
-*(This data was automatically generated on Tue, 12 Mar 2024 at 18:02:07 CET)*  
+*(This data was automatically generated on Thu, 20 Jun 2024 at 04:17:20 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

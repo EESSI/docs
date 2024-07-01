@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #
 # Copyright 2023-2023 Ghent University
 #
@@ -17,13 +18,15 @@ import re
 import subprocess
 import sys
 import time
-from pathlib import Path
 from typing import Union, Tuple
 import numpy as np
 from mdutils.mdutils import MdUtils
 from natsort import natsorted
 
 EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
+
+# some CPU targets are excluded for now, because software layer is too incomplete currently
+EXCLUDE_CPU_TARGETS = ['aarch64/a64fx', 'x86_64/amd/zen4']
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -32,11 +35,7 @@ EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
 
 def main():
     os.environ["SHELL"] = "/bin/bash"
-    current_dir = Path(__file__).resolve()
-    project_name = 'docs'
-    root_dir = next(
-        p for p in current_dir.parents if p.parts[-1] == project_name
-    )
+    root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     path_data_dir = os.path.join(root_dir, "docs/available_software/data")
 
     # Generate the JSON overviews
@@ -232,7 +231,8 @@ def modules_eessi() -> dict:
     if modulepath:
         module_unuse(modulepath)
 
-    for target in targets_eessi():
+    targets = [t for t in targets_eessi() if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
+    for target in targets:
         print(f"\t Collecting available modules for {target}... ", end="", flush=True)
         module_use(target + "/modules/all/")
         data[target] = module_avail(filter_fn=filter_fn_eessi_modules)
