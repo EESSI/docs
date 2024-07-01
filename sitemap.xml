@@ -136,6 +136,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/BCFtools/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/BLAST%2B/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
@@ -432,6 +437,11 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/HDF5/</loc>
+         <lastmod>2024-07-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/HTSlib/</loc>
          <lastmod>2024-07-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
