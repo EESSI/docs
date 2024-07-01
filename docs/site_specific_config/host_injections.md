@@ -1,8 +1,13 @@
 # How to configure EESSI
 
-## The `host_injections` variant symlink
+## Why configuration is necessary
 
-While the EESSI software stack aims to work 'out of the box', one cannot avoid some degree of site-specific configuration for certain functionality and/or performance tuning. For example, GPU drivers may be in different locations on different systems. Also, a site might want to tune the OpenMPI installation that comes with EESSI for optimal performance on the local hardware.
+Just [installing EESSI](../getting_access/native_installation.md) is enough to get started with the EESSI software stack on a CPU-based system. However, additional configuration is necessary in many other cases, such as
+- enabling GPU support on GPU-based systems
+- site-specific configuration / tuning of the MPI libraries provided by EESSI
+- overriding EESSI's MPI library with an ABI compatible host MPI
+
+## The `host_injections` variant symlink
 
 To allow such site-specific configuration, the EESSI repository includes a special directory where system administrations can install files that can be picked up by the software installations included in EESSI. This special directory is located in `/cvmfs/software.eessi.io/host_injections`, and it is a *CernVM-FS Variant Symlink*:
 a symbolic link for which the target can be controlled by the CernVM-FS client configuration (for more info, see ['Variant Symlinks' in the official CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks)).
