@@ -3,21 +3,21 @@
 In order for ReFrame to run tests on your system, it needs to know some properties about your system.
 For example, it needs to know what kind of job scheduler you have, which partitions the system has,
 how to submit to those partitions, etc.
-All of this has to be described in a *ReFrame configuration file* (see also the [section on `$RFM_CONFIG_FILES` above](#RFM_CONFIG_FILES)).
+All of this has to be described in a *ReFrame configuration file* (see also the [section on `$RFM_CONFIG_FILES`](installation-configuration.md#RFM_CONFIG_FILES)).
 
 This page is organized as follows:
 
-* available ReFrame configuration file
+* available ReFrame configuration files
 * Verifying your ReFrame configuration
 * How to write a ReFrame configuration file
 
 
-## Available ReFrame configuration file
+## Available ReFrame configuration files
 
 There are some available ReFrame configuration files for HPC systems and public cloud in the [config directory](https://github.com/EESSI/test-suite/tree/main/config/) for more inspiration.
 Below is a simple ReFrame configuration file with minimal changes required for getting you started on using the test suite for a CPU partition. Please check that `stagedir` is set to a path on a (shared) scratch filesystem for storing (temporary) files related to the tests, and `access` is set to a list of arguments that you would normally pass to the scheduler when submitting to this partition (for example '-p cpu' for submitting to a Slurm partition called cpu).
   
-To write a ReFrame configuration file for your system, check the section How to write a ReFrame configuration file.  
+To write a ReFrame configuration file for your system, check the section [How to write a ReFrame configuration file](#write-reframe-config).
 
 
 ```python
@@ -118,7 +118,7 @@ For example, to only show the `launcher` value for the `gpu` partition of the `e
 reframe --system example:gpu --show-config systems/0/partitions/@gpu/launcher
 ```
 
-## How to write a ReFrame configuration file
+## How to write a ReFrame configuration file {: #write-reframe-config}
 
 The [official ReFrame documentation](https://reframe-hpc.readthedocs.io/en/stable/configure.html) provides the full
 description on configuring ReFrame for your site. However, there are some configuration settings that are specifically
@@ -184,7 +184,7 @@ The most common configuration items defined at this level are:
   if not specified otherwise.
   We recommend setting the `$RFM_PREFIX` environment variable rather than specifying `prefix` in
   your configuration file, so our [common logging configuration](#logging) can pick up on it
-  (see also [`$RFM_PREFIX`](#RFM_PREFIX)).
+  (see also [`$RFM_PREFIX`](installation-configuration.md#RFM_PREFIX)).
 - [`stagedir`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.stagedir): A shared directory that is available on all nodes that will execute ReFrame tests. This is used for storing (temporary) files related to the test. Typically, you want to set this to a path on a (shared) scratch filesystem. Defining this is optional: the default is a '`stage`' directory inside the `prefix` directory.
 - [`partitions`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions): Details on system partitions, see below.
 
