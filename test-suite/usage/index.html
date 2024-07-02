@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../img/logos/EESSI.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
@@ -567,7 +567,7 @@
             
   
   <span class="md-ellipsis">
-    Installation
+    Installation and configuration
   </span>
   
 
@@ -577,7 +577,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Installation
+            Installation and configuration
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -712,6 +712,112 @@
   
   <span class="md-ellipsis">
     macOS with Lima
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuring EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/host_injections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to configure EESSI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/lmod_hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom LMOD hooks
   </span>
   
 
@@ -1301,7 +1407,7 @@
             
   
   <span class="md-ellipsis">
-    Accelerators support
+    Known issues and workarounds
   </span>
   
 
@@ -1310,70 +1416,6 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_4">
-            <span class="md-nav__icon md-icon"></span>
-            Accelerators support
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gpu/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GPUs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Known issues and workarounds
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_5">
             <span class="md-nav__icon md-icon"></span>
             Known issues and workarounds
           </label>
@@ -2039,7 +2081,7 @@ system.</p>
 <h2 id="listing-available-tests">Listing available tests<a class="headerlink" href="#listing-available-tests" title="Permanent link">&para;</a></h2>
 <p>To list the tests that are available in the EESSI test suite,
 use <code>reframe --list</code> (or <code>reframe -L</code> for short).</p>
-<p>If you have properly <a href="#Configuring-ReFrame">configured ReFrame</a>, you should
+<p>If you have properly <a href="../installation-configuration/">configured ReFrame</a>, you should
 see a (potentially long) list of checks in the output:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ reframe --list
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>...
@@ -2087,7 +2129,7 @@ and doing a <a href="#dry-run">dry run</a> first to make sure that the generated
 <li>output directories for each generated check, which include the test output;</li>
 <li>performance log files for each test, which include performance results for the test runs;</li>
 </ul>
-<p>We strongly recommend controlling where these files go by using the <a href="../installation-configuration/#logging">common logging configuration that
+<p>We strongly recommend controlling where these files go by using the <a href="../ReFrame-configuration-file/#logging">common logging configuration that
 is provided by the EESSI test suite in your ReFrame configuration file</a>
 and setting <a href="../installation-configuration/#RFM_PREFIX"><code>$RFM_PREFIX</code></a> (avoid using the cmd line option <code>--prefix</code>).</p>
 <p>If you do, and if you use <a href="../installation-configuration/#requirements">ReFrame v4.3.3 or more newer</a>,
@@ -2273,7 +2315,7 @@ this way that can result in broken checks.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 2, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2024</span>
   </span>
 
     
@@ -2338,7 +2380,7 @@ this way that can result in broken checks.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
       

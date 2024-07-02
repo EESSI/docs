@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../img/logos/EESSI.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
@@ -567,7 +567,7 @@
             
   
   <span class="md-ellipsis">
-    Installation
+    Installation and configuration
   </span>
   
 
@@ -577,7 +577,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Installation
+            Installation and configuration
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -712,6 +712,112 @@
   
   <span class="md-ellipsis">
     macOS with Lima
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuring EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/host_injections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to configure EESSI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/lmod_hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom LMOD hooks
   </span>
   
 
@@ -1304,7 +1410,7 @@
             
   
   <span class="md-ellipsis">
-    Accelerators support
+    Known issues and workarounds
   </span>
   
 
@@ -1313,70 +1419,6 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_4">
-            <span class="md-nav__icon md-icon"></span>
-            Accelerators support
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gpu/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GPUs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Known issues and workarounds
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_5">
             <span class="md-nav__icon md-icon"></span>
             Known issues and workarounds
           </label>
@@ -2102,7 +2144,7 @@ which you can use as a template to create your own.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CONFIG_FILES</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/config/example.py
 </code></pre></div>
 <p>Alternatively, you can use the <code>--config-file</code> (or <code>-C</code>) <code>reframe</code> option.</p>
-<p>See the <a href="#reframe-config-file">section on the ReFrame configuration file</a> below for more information.</p>
+<p>See the <a href="../ReFrame-configuration-file/#reframe-config-file">section on the ReFrame configuration file</a> for more information.</p>
 <h4 id="search-path-for-tests-rfm_check_search_path">Search path for tests (<code>$RFM_CHECK_SEARCH_PATH</code>)<a class="headerlink" href="#search-path-for-tests-rfm_check_search_path" title="Permanent link">&para;</a></h4>
 <p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_CHECK_SEARCH_PATH"><code>RFM_CHECK_SEARCH_PATH</code> in ReFrame docs</a>)</em></p>
 <p>Define the <code>$RFM_CHECK_SEARCH_PATH</code> environment variable to tell ReFrame which directory to search for tests.</p>
@@ -2126,7 +2168,7 @@ which you can use as a template to create your own.</p>
 </ul>
 <p>Note that the default is for ReFrame to use the current directory as prefix.
 We recommend setting a prefix so that logs are not scattered around and nicely appended for each run.</p>
-<p>If our <a href="#logging">common logging configuration</a> is used, the regular ReFrame log file will
+<p>If our <a href="../ReFrame-configuration-file/#logging">common logging configuration</a> is used, the regular ReFrame log file will
 also end up in the location specified by <code>$RFM_PREFIX</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2154,7 +2196,7 @@ only picks up on the <code>$RFM_PREFIX</code> environment variable to determine 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2024</span>
   </span>
 
     
@@ -2219,7 +2261,7 @@ only picks up on the <code>$RFM_PREFIX</code> environment variable to determine 
     <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
       

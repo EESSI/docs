@@ -14,11 +14,11 @@
         <link rel="prev" href="../available-tests/">
       
       
-        <link rel="next" href="../../gpu/">
+        <link rel="next" href="../../known_issues/eessi-2023.06/">
       
       
       <link rel="icon" href="../../img/logos/EESSI.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
     
     
       
@@ -567,7 +567,7 @@
             
   
   <span class="md-ellipsis">
-    Installation
+    Installation and configuration
   </span>
   
 
@@ -577,7 +577,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Installation
+            Installation and configuration
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -712,6 +712,112 @@
   
   <span class="md-ellipsis">
     macOS with Lima
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuring EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/host_injections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to configure EESSI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/lmod_hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom LMOD hooks
   </span>
   
 
@@ -1199,7 +1305,7 @@
             
   
   <span class="md-ellipsis">
-    Accelerators support
+    Known issues and workarounds
   </span>
   
 
@@ -1208,70 +1314,6 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_4">
-            <span class="md-nav__icon md-icon"></span>
-            Accelerators support
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../gpu/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GPUs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Known issues and workarounds
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_5">
             <span class="md-nav__icon md-icon"></span>
             Known issues and workarounds
           </label>
@@ -1879,12 +1921,12 @@
   <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py">hooks</a>,
   and <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/">tests</a>,
   which can be <a href="../installation-configuration/#pip-install">installed with "<code>pip install</code>"</a>.</li>
-<li>Tests for <a href="../usage/#gromacs">GROMACS</a> and <a href="../usage/#tensorflow">TensorFlow</a> in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps"><code>eessi.testsuite.tests.apps</code></a>
+<li>Tests for <a href="../available-tests/#gromacs">GROMACS</a> and <a href="../available-tests/#tensorflow">TensorFlow</a> in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps"><code>eessi.testsuite.tests.apps</code></a>
   that leverage the functionality provided by <code>eessi.testsuite.*</code>.</li>
-<li>Examples of <a href="../installation-configuration/#reframe-config-file">ReFrame configuration files</a> for various systems in
+<li>Examples of <a href="../ReFrame-configuration-file/#reframe-config-file">ReFrame configuration files</a> for various systems in
   the <a href="https://github.com/EESSI/test-suite/tree/main/config"><code>config</code> subdirectory</a>.</li>
-<li>A <a href="../installation-configuration/#logging"><code>common_logging_config()</code></a> function to facilitate the ReFrame logging configuration.</li>
-<li>A set of standard <em>device types</em> and <em>features</em> that can be used in the <a href="../installation-configuration/#partitions"><code>partitions</code> section of the ReFrame configuration file</a>.</li>
+<li>A <a href="../ReFrame-configuration-file/#logging"><code>common_logging_config()</code></a> function to facilitate the ReFrame logging configuration.</li>
+<li>A set of standard <em>device types</em> and <em>features</em> that can be used in the <a href="../ReFrame-configuration-file/#partitions"><code>partitions</code> section of the ReFrame configuration file</a>.</li>
 <li>A set of <a href="../usage/#filter-tag"><em>tags</em> (<code>CI</code> + <code>scale</code>) that can be used to filter checks</a>.</li>
 <li><a href="https://github.com/EESSI/test-suite/tree/main/scripts">Scripts</a> that show how to run the test suite.</li>
 </ul>
@@ -1908,7 +1950,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 28, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2024</span>
   </span>
 
     
@@ -1973,7 +2015,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
       
