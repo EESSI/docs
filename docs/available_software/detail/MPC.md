@@ -18,11 +18,12 @@ The overview below shows which MPC installations are available per target archit
 To start using MPC, load one of these modules using a `module load` command like:
 
 ```shell
-module load MPC/1.3.1-GCCcore-12.3.0
+module load MPC/1.3.1-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Sat, 06 Jul 2024 at 08:20:58 UTC)*  
+*(This data was automatically generated on Sat, 13 Jul 2024 at 12:27:33 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MPC/1.3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |MPC/1.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
