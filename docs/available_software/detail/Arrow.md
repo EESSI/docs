@@ -21,7 +21,7 @@ To start using Arrow, load one of these modules using a `module load` command li
 module load Arrow/14.0.1-gfbf-2023a
 ```
 
-*(This data was automatically generated on Sat, 13 Jul 2024 at 12:27:33 UTC)*  
+*(This data was automatically generated on Tue, 16 Jul 2024 at 20:20:09 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
