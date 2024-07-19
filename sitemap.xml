@@ -216,6 +216,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/CP2K/</loc>
+         <lastmod>2024-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/CUDA-Samples/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
@@ -577,6 +582,11 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/LibTIFF/</loc>
+         <lastmod>2024-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Libint/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1551,6 +1561,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/libvori/</loc>
+         <lastmod>2024-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/libwebp/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
@@ -1567,6 +1582,11 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/libxslt/</loc>
+         <lastmod>2024-07-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/libxsmm/</loc>
          <lastmod>2024-07-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
