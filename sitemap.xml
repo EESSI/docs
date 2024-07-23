@@ -1721,6 +1721,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/pyMBE/</loc>
+         <lastmod>2024-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/pybind11/</loc>
          <lastmod>2024-07-23</lastmod>
          <changefreq>daily</changefreq>
