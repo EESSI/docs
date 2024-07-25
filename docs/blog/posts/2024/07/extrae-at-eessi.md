@@ -4,7 +4,7 @@ date: 2024-07-23
 slug: extrae-now-available-at-EESSI 
 ---
 
-# Extrae available on EESSI
+# Extrae available in EESSI
 
 Thanks to the work developed under [MultiXscale CoE](https://www.multixscale.eu/) we are proud to announce that since 22 July 2024, [Extrae](https://tools.bsc.es/extrae) v4.2.0 is available in the EESSI production repository `software.eessi.io`, 
 optimized for the [8 CPU targets](https://www.eessi.io/docs/software_layer/cpu_targets) that are fully supported by version 2023.06 of EESSI.
@@ -55,5 +55,6 @@ Regarding the second one, it was reported to Extrae developers as an [issue](htt
 The last failing test was an issue related with the access to HW counters on the building/testing system. The problem was that the test assumed that Extrae (through [PAPI](https://icl.utk.edu/papi/)) can access HW counters (in this case, `PAPI_TOT_INS`). This might not be the case because this is very system-dependent, involving permissions, etc. As a solution, we committed a [patch](https://github.com/bsc-performance-tools/extrae/commit/3d8295cf45c4bf7068decd29c96bf755216a496f) to the Extrae repository. With that, the test will not fail if `PAPI_TOT_CYC` is unavailable in the testing system. As this has not been incorporated yet into the Extrae repository we also commited a [patch file](https://github.com/easybuilders/easybuild-easyconfigs/blob/develop/easybuild/easyconfigs/e/Extrae/Extrae-4.2.0-fix-hw-counters-checks.patch) to the EasyBuild-EasyConfigs repository that solves the problem with this specific test but also with others that suffered from the same issue.
 
 ## Finally, version 4.2.0
-Due to the bugfixes mentioned in previous section that were incorporated into the Extrae repository, we switched again to an updated version of Extrae (in this case v4.2.0).
+Due to the bugfixes mentioned in previous section that were incorporated into the Extrae repository, we switched again to an updated version of Extrae (in this case v4.2.0). With that updated version and the easyconfig (and patches) and easyblock modifications tests started to pass successfully in most of the testing platforms. We noticed, however, that in Extrae produced segmentation faults when using [libunwind](https://www.nongnu.org/libunwind/) in ARM architectures. Our approach to that was to report the issue to Extrae developers and to make this dependency architecture specific (i.e. forcing `--without-unwind` when building for ARM while keeping the dependency for the rest of architectures). We did this in a [Pull Request](https://github.com/easybuilders/easybuild-easyconfigs/pull/21017) to the EasyBuild-EasyConfigs repository that is alread merged. In this same [Pull Request](https://github.com/easybuilders/easybuild-easyconfigs/pull/21017) we added zlib as an explicit dependency in the easyconfig file for all architectures.
+Last issue we encountered was   
     
