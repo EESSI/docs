@@ -18,12 +18,13 @@ The overview below shows which Boost.MPI installations are available per target 
 To start using Boost.MPI, load one of these modules using a `module load` command like:
 
 ```shell
-module load Boost.MPI/1.82.0-gompi-2023a
+module load Boost.MPI/1.83.0-gompi-2023b
 ```
 
-*(This data was automatically generated on Fri, 19 Jul 2024 at 20:23:14 UTC)*  
+*(This data was automatically generated on Tue, 23 Jul 2024 at 20:16:33 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Boost.MPI/1.83.0-gompi-2023b|x|x|x|x|x|x|x|x|
 |Boost.MPI/1.82.0-gompi-2023a|x|x|x|x|x|x|x|x|
 |Boost.MPI/1.81.0-gompi-2022b|x|x|x|x|x|x|x|x|
