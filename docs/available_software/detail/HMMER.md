@@ -21,7 +21,7 @@ To start using HMMER, load one of these modules using a `module load` command li
 module load HMMER/3.4-gompi-2023a
 ```
 
-*(This data was automatically generated on Tue, 23 Jul 2024 at 20:16:33 UTC)*  
+*(This data was automatically generated on Fri, 26 Jul 2024 at 20:24:16 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
