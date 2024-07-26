@@ -1,6 +1,6 @@
 ---
 authors: [julianmorillo]
-date: 2024-07-23
+date: 2024-07-26
 slug: extrae-now-available-in-EESSI 
 ---
 
