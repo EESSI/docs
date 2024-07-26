@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://eessi.github.io/docs/blog/2024/06/28/espresso-portable-test-run-eurohpc/">
+        <link rel="canonical" href="https://eessi.github.io/docs/blog/2024/07/26/extrae-now-available-in-EESSI/">
       
       
-        <link rel="prev" href="../../../05/17/isc24/">
+        <link rel="prev" href="../../../06/28/espresso-portable-test-run-eurohpc/">
       
-      
-        <link rel="next" href="../../../07/26/extrae-now-available-in-EESSI/">
       
       
       <link rel="icon" href="../../../../../img/logos/EESSI.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Portable test run of ESPResSo on EuroHPC systems via EESSI - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>Extrae available in EESSI - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#portable-test-run-of-espresso-on-eurohpc-systems-via-eessi" class="md-skip">
+        <a href="#extrae-available-in-eessi" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Portable test run of ESPResSo on EuroHPC systems via EESSI
+              Extrae available in EESSI
             
           </span>
         </div>
@@ -1741,71 +1739,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#simulating-lennard-jones-fluids-using-espresso" class="md-nav__link">
+  <a href="#adapting-eessi-software-layer" class="md-nav__link">
     <span class="md-ellipsis">
-      Simulating Lennard-Jones fluids using ESPResSo
+      Adapting EESSI software layer
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#portable-test-to-evaluate-performance-of-espresso" class="md-nav__link">
+  <a href="#moving-to-version-416" class="md-nav__link">
     <span class="md-ellipsis">
-      Portable test to evaluate performance of ESPResSo
+      Moving to version 4.1.6
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#performance-scalability-results-on-vega-karolina-deucalion" class="md-nav__link">
+  <a href="#work-with-version-417" class="md-nav__link">
     <span class="md-ellipsis">
-      Performance + scalability results on Vega, Karolina, Deucalion
+      Work with version 4.1.7
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-espresso-on-deucalion-via-eessi-cvmfsexec" class="md-nav__link">
+  <a href="#finally-version-420" class="md-nav__link">
     <span class="md-ellipsis">
-      Running ESPResSo on Deucalion via EESSI + cvmfsexec
+      Finally, version 4.2.0
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Running ESPResSo on Deucalion via EESSI + cvmfsexec">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cvmfsexec-wrapper-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      cvmfsexec wrapper script
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#orted-wrapper-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      orted wrapper script
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#slurm-job-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slurm job script
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1838,61 +1803,16 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/620876?v=4" alt="Kenneth Hoste">
+                      <img src="https://avatars.githubusercontent.com/u/11518551?v=4" alt="Julián Morillo">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          Kenneth Hoste
+                          Julián Morillo
                         
                       </strong>
                       <br>
-                      HPC-UGent
-                    </span>
-                  </div>
-                
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/33718780?v=4" alt="Caspar van Leeuwen">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Caspar van Leeuwen
-                        
-                      </strong>
-                      <br>
-                      SURF
-                    </span>
-                  </div>
-                
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/41335185?v=4" alt="Satish Kamath">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Satish Kamath
-                        
-                      </strong>
-                      <br>
-                      SURF
-                    </span>
-                  </div>
-                
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/42201407?v=4" alt="Jean-Noël Grad">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Jean-Noël Grad
-                        
-                      </strong>
-                      <br>
-                      University of Stuttgart
+                      BSC
                     </span>
                   </div>
                 
@@ -1910,7 +1830,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2024-06-28 00:00:00" class="md-ellipsis">June 28, 2024</time>
+                        <time datetime="2024-07-26 00:00:00" class="md-ellipsis">July 26, 2024</time>
                       </div>
                     </li>
                     
@@ -1922,7 +1842,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              6 min read
+                              5 min read
                             
                           </span>
                         </div>
@@ -1945,138 +1865,50 @@
   
 
 
-<h1 id="portable-test-run-of-espresso-on-eurohpc-systems-via-eessi">Portable test run of ESPResSo on EuroHPC systems via EESSI<a class="headerlink" href="#portable-test-run-of-espresso-on-eurohpc-systems-via-eessi" title="Permanent link">&para;</a></h1>
-<figure>
-<img alt="ESPResSo logo" src="../../espresso.png" width="30%" />
-</figure>
-<p>Since 14 June 2024, <a href="https://espressomd.org">ESPResSo</a> v4.2.2 is available in the EESSI production repository <code>software.eessi.io</code>,
+<h1 id="extrae-available-in-eessi">Extrae available in EESSI<a class="headerlink" href="#extrae-available-in-eessi" title="Permanent link">&para;</a></h1>
+<p>Thanks to the work developed under <a href="https://www.multixscale.eu/">MultiXscale CoE</a> we are proud to announce that as of 22 July 2024, <a href="https://tools.bsc.es/extrae">Extrae</a> v4.2.0 is available in the EESSI production repository <code>software.eessi.io</code>, 
 optimized for the <a href="https://www.eessi.io/docs/software_layer/cpu_targets">8 CPU targets</a> that are fully supported by version 2023.06 of EESSI.
-This allows running ESPResSo effortlessly on the EuroHPC systems where EESSI is already available,
+This allows using Extrae effortlessly on the EuroHPC systems where EESSI is already available,
 like <a href="https://doc.vega.izum.si">Vega</a> and <a href="https://docs.it4i.cz/karolina/introduction">Karolina</a>.</p>
-<p>On 27 June 2024, an additional installation of ESPResSo v4.2.2 that is optimized for Arm A64FX processors
-was added, which enables also running ESPResSo efficiently on <a href="https://docs.macc.fccn.pt/deucalion">Deucalion</a>,
-even though EESSI is not available yet system-wide on Deucalion (see below for more details).</p>
-<p>With the <a href="https://www.eessi.io/docs/test-suite/available-tests/#espresso">portable test for ESPResSo</a> that is available
-in the <a href="https://www.eessi.io/docs/test-suite">EESSI test suite</a> we can easily evaluate the scalability of
-ESPResSo across EuroHPC systems, even if those systems have different system architectures.</p>
-<h2 id="simulating-lennard-jones-fluids-using-espresso">Simulating Lennard-Jones fluids using ESPResSo<a class="headerlink" href="#simulating-lennard-jones-fluids-using-espresso" title="Permanent link">&para;</a></h2>
-<p><a href="https://en.wikipedia.org/wiki/Lennard-Jones_potential">Lennard-Jones fluids</a> model interacting soft spheres with a potential that is weakly attractive at medium range and strongly repulsive at short range. Originally designed to model noble gases, this simple setup now underpins most particle-based simulations, such as ionic liquids, polymers, proteins and colloids, where strongly repulsive pairwise potentials are desirable to prevent particles from overlapping with one another. In addition, solvated systems with atomistic resolution typically have a large excess of solvent atoms compared to solute atoms, thus Lennard-Jones interactions tend to account for a large portion of the simulation time. Compared to other potentials, the Lennard-Jones interaction is inexpensive to calculate, and its limited range allows us to partition the simulation domain into arbitrarily small regions that can be distributed among many processors.</p>
-<h2 id="portable-test-to-evaluate-performance-of-espresso">Portable test to evaluate performance of ESPResSo<a class="headerlink" href="#portable-test-to-evaluate-performance-of-espresso" title="Permanent link">&para;</a></h2>
-<p>To evaluate the performance of ESPResSo, we have implemented a <em>portable test</em> for ESPResSo in the <a href="https://www.eessi.io/docs/test-suite">EESSI test suite</a>;
-the results shown here were collected using <a href="https://github.com/EESSI/test-suite/releases/tag/v0.3.2">version 0.3.2</a>.</p>
-<p>After <a href="https://www.eessi.io/docs/test-suite/installation-configuration">installing and configuring</a> the EESSI test suite on Vega, Karolina, and Deucalion,
-running the Lennard-Jones (LJ) test case with ESPResSo 4.2.2 available in EESSI can be done with:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span><span class="s2">&quot;ESPRESSO_LJ.*%module_name=ESPResSo/4.2.2&quot;</span>
-</code></pre></div>
-<p>This will automatically run the LJ test case with ESPResSo across all known <a href="https://www.eessi.io/docs/test-suite/usage/#scale-tags">scales</a>
-in the EESSI test suite, which range from single core up to 8 full nodes.</p>
-<h2 id="performance-scalability-results-on-vega-karolina-deucalion">Performance + scalability results on Vega, Karolina, Deucalion<a class="headerlink" href="#performance-scalability-results-on-vega-karolina-deucalion" title="Permanent link">&para;</a></h2>
-<p>The performance results of the tests are collected by ReFrame in a <a href="https://reframe-hpc.readthedocs.io/en/stable/tutorial.html#run-reports-and-performance-logging">detailed JSON report</a>.</p>
-<p>The parallel performance of ESPResSo, expressed in particles integrated per second, scales linearly with the number of cores.
-On Vega using 8 nodes (1024 MPI ranks, one per physical core), ESPResSo 4.2.2 can integrate the equations of motion of roughly 615 million particles every second.
-On Deucalion using 8 nodes (384 cores), we observe a performance of roughly 62 million particles integrated per second.</p>
-<figure>
-<img alt="Performance of ESPResSo 4.2.2 on Vega, Karolina, Deucalion" src="../../espresso-4.2.2-foss-2023a-perf-part-sec-vega-karolina-deucalion-20240628.svg" width="100%" />
-</figure>
-<p>Plotting the parallel efficiency of ESPResSo 4.2.2 (weak scaling, 2000 particles per MPI rank) on the three EuroHPC systems we used
-shows that it decreases approximately linearly with the logarithm of the number of cores.</p>
-<figure>
-<img alt="Parallel efficiency of ESPResSo 4.2.2 on Vega, Karolina, Deucalion" src="../../espresso-4.2.2-foss-2023a-parallel-efficiency-vega-karolina-deucalion-20240628.svg" width="100%" />
-</figure>
-<hr />
-<h2 id="running-espresso-on-deucalion-via-eessi-cvmfsexec">Running ESPResSo on Deucalion via EESSI + <code>cvmfsexec</code><a class="headerlink" href="#running-espresso-on-deucalion-via-eessi-cvmfsexec" title="Permanent link">&para;</a></h2>
-<p>While EESSI is already available system-wide on both Vega and Karolina for some time (see
-<a href="https://doc.vega.izum.si/eessi">here</a> and <a href="https://docs.it4i.cz/software/eessi">here</a> for more information,
-respectively),
-it was not available yet on Deucalion when these performance experiments were run.</p>
-<p>Nevertheless, we were able to leverage the optimized installation of ESPResSo for A64FX that is available
-in EESSI since 27 June 2024, by leveraging the <a href="https://github.com/cvmfs/cvmfsexec"><code>cvmfsexec</code></a> tool,
-and by creatively implementing two simple shell wrapper scripts.</p>
-<h3 id="cvmfsexec-wrapper-script"><code>cvmfsexec</code> wrapper script<a class="headerlink" href="#cvmfsexec-wrapper-script" title="Permanent link">&para;</a></h3>
-<p>The first wrapper script <code>cvmfsexec_eessi.sh</code> can be used to run a command in a subshell in which
-the EESSI <a href="https://cernvm.cern.ch/fs">CernVM-FS</a> repository (<code>software.eessi.io</code>) is mounted via <code>cvmfsexec</code>.
-This script can be used by regular users on Deucalion, it does not require any special privileges beyond
-the Linux kernel features that <code>cvmfsexec</code> leverages, like <a href="https://lwn.net/Articles/532593/">user namespaces</a>.</p>
-<p>Contents of <code>~/bin/cvmfsexec_eessi.sh</code>:
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/bin/bash</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span>/cvmfs/software.eessi.io<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1"># run command directly, EESSI CernVM-FS repository is already mounted</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">else</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="c1"># run command via in subshell where EESSI CernVM-FS repository is mounted,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="c1"># via cvmfsexec which is set up in a unique temporary directory</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nv">orig_workdir</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/<span class="nv">$USER</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nv">tmpdir</span><span class="o">=</span><span class="k">$(</span>mktemp<span class="w"> </span>-p<span class="w"> </span>/tmp/<span class="nv">$USER</span><span class="w"> </span>-d<span class="k">)</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$tmpdir</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/cvmfs/cvmfsexec.git<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$tmpdir</span>/git_clone.out<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span>cvmfsexec
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span>./makedist<span class="w"> </span>default<span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$tmpdir</span>/cvmfsexec_makedist.out<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$orig_workdir</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nv">$tmpdir</span>/cvmfsexec/cvmfsexec<span class="w"> </span>software.eessi.io<span class="w"> </span>--<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="c1"># cleanup</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$tmpdir</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">fi</span>
-</code></pre></div></p>
-<p>Do make sure that this script is executable:
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>~/bin/cvmfsexec_eessi.sh
-</code></pre></div></p>
-<p>A simple way to test this script is to use it to inspect the contents of the EESSI repository:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>ls<span class="w"> </span>/cvmfs/software.eessi.io
-</code></pre></div>
-<p>or to start an interactive shell in which the EESSI repository is mounted:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>/bin/bash<span class="w"> </span>-l
-</code></pre></div>
-<p>The job scripts that were submitted by ReFrame on Deucalion leverage <code>cvmfsexec_eessi.sh</code> to set up the
-environment and get access to the ESPResSo v4.2.2 installation that is available in EESSI (see below).</p>
-<h3 id="orted-wrapper-script"><code>orted</code> wrapper script<a class="headerlink" href="#orted-wrapper-script" title="Permanent link">&para;</a></h3>
-<p>In order to get multi-node runs of ESPResSo working without having EESSI available system-wide,
-we also had to create a small wrapper script for the <a href="https://www.open-mpi.org/doc/v4.1/man1/orted.1.php"><code>orted</code>
-command</a> that is used by <a href="https://www.open-mpi.org">Open MPI</a>
-to start processes on remote nodes.
-This is necessary because <code>mpirun</code> launches <code>orted</code>, which must be run in an environment in which the EESSI repository
-is mounted.
-If not, MPI startup will fail with an error like "<code>error: execve(): orted: No such file or directory</code>".</p>
-<p>This wrapper script must be named <code>orted</code>, and must be located in a path that is listed in <code>$PATH</code>.</p>
-<p>We placed it in <code>~/bin/orted</code>, and add <code>export PATH=$HOME/bin:$PATH</code> to our <code>~/.bashrc</code> login script.</p>
-<p>Contents of <code>~/bin/orted</code>:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/bash</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># first remove path to this orted wrapper from $PATH, to avoid infinite loop</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nv">orted_wrapper_dir</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="nv">$0</span><span class="k">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="nv">$orted_wrapper_dir</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;\n&#39;</span><span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="k">)</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span>orted<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
-</code></pre></div>
-<p>Do make sure that also this <code>orted</code> wrapper script is executable:
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>~/bin/orted
-</code></pre></div></p>
-<p>If not, you will likely run into an error that starts with:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>An ORTE daemon has unexpectedly failed after launch ...
-</code></pre></div></p>
-<h3 id="slurm-job-script">Slurm job script<a class="headerlink" href="#slurm-job-script" title="Permanent link">&para;</a></h3>
-<p>We can use the <code>cvmfsexec_eessi.sh</code> script in a Slurm job script on Deucalion to
-initialize the EESSI environment in a subshell in which the EESSI CernVM-FS repository
-is mounted, and subsequently load the module for ESPResSo v4.2.2 and launch the Lennard-Jones fluid
-simulation via <code>mpirun</code>:</p>
-<p>Job script (example using 2 full 48-core nodes on A64FX partition of Deucalion):
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="ch">#!/bin/bash</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">#SBATCH --ntasks=96</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">#SBATCH --ntasks-per-node=48</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">#SBATCH --cpus-per-task=1</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">#SBATCH --time=5:0:0</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1">#SBATCH --partition normal-arm</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">#SBATCH --export=None</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1">#SBATCH --mem=30000M</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>~/bin/cvmfsexec_eessi.sh<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="s">export EESSI_SOFTWARE_SUBDIR_OVERRIDE=aarch64/a64fx</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="s">source /cvmfs/software.eessi.io/versions/2023.06/init/bash</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="s">module load ESPResSo/4.2.2-foss-2023a</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="s">export SLURM_EXPORT_ENV=HOME,PATH,LD_LIBRARY_PATH,PYTHONPATH</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="s">mpirun -np 96 python3 lj.py</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="s">EOF</span>
-</code></pre></div></p>
-<p><em>(the <code>lj.py</code> Python script is available in the EESSI test suite, see <a href="https://github.com/EESSI/test-suite/blob/v0.3.2/eessi/testsuite/tests/apps/espresso/src/lj.py">here</a>)</em></p>
+<p>It is worth noting that from that date Extrae is also available in the EESSI RISC-V repository <code>risv.eessi.io</code>.</p>
+<p>Extrae is a package developed at <a href="https://www.bsc.es/es">BSC</a> devoted to generate <a href="https://tools.bsc.es/paraver">Paraver</a> trace-files for a post-mortem analysis of applications performance. Extrae is a tool that uses different interposition mechanisms to inject probes into the target application so as to gather information regarding the application performance. It is one of the <a href="https://pop-coe.eu/partners/tools">tools</a> used in the <a href="https://pop-coe.eu/">POP3 CoE</a>.</p>
+<p>The work to incorporate Extrae into EESSI started early in May. It took quite some time and effort but has resulted in a number of updates, improvements and bug fixes for Extrae. The following sections explain the work done describing the issues encountered and the solutions adopted.</p>
+<h2 id="adapting-eessi-software-layer">Adapting EESSI software layer<a class="headerlink" href="#adapting-eessi-software-layer" title="Permanent link">&para;</a></h2>
+<p>During the first attempt to build Extrae (in this case <code>v4.0.6</code>) in the EESSI context, we found out two issues:</p>
+<ol>
+<li>the <code>configure</code> script of Extrae was not able to find <code>binutils</code> in the location it is provided by the compat layer of EESSI, and</li>
+<li>the <code>configure</code>/<code>make</code> files of Extrae make use of <code>which</code> command that does not work in our build container. </li>
+</ol>
+<p>Both problems were solved by adding a <code>pre_configure_hook</code> in the <a href="https://github.com/EESSI/software-layer/commit/41149ac060b7580f2b15d3e04908ffabe207e046"><code>eb_hooks.py</code></a> file of the EESSI software layer that:</p>
+<ul>
+<li>avoids the use of <code>which</code> during configuration and building processes by replacing it with <code>command -v</code> in the necessary files, and</li>
+<li>specifies the correct path to <code>binutils</code> in EESSI compat layer by passing <code>--with-binutils</code> option to the Extrae <code>configure</code> script.</li>
+</ul>
+<h2 id="moving-to-version-416">Moving to version 4.1.6<a class="headerlink" href="#moving-to-version-416" title="Permanent link">&para;</a></h2>
+<p>By the time we completed this work, <code>v4.1.6</code> of Extrae was available so we decided to switch to that version as v4.0.6 was throwing errors in the test suite provided by Extrae through the <code>make check</code>command. </p>
+<p>When first trying to build this new version, we noticed that there were still problems with <code>binutils</code> detection because the configure scripts of Extrae assume that the <code>binutils</code> libraries are under a <code>lib</code> directory in the provided <code>binutils</code> path while in the EESSI compat layer they are directly in the provided directory (i.e. without the <code>/lib</code>). This was solved with a <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/20690/commits/e0bfd59cabd0bbb080c86073f179954486fe227e">patch file</a> committed to the <a href="https://github.com/easybuilders/easybuild-easyconfigs">EasyBuild easyconfigs repository</a>, that modifies both <code>configure</code> and <code>config/macros.m4</code> to make <code>binutils</code> detection more robust. This patch was also provided to Extrae developers to incorporate into future releases.</p>
+<p>The next step was to submit a <a href="https://github.com/easybuilders/easybuild-easyblocks/pull/3339">Pull Request</a> to the <a href="https://github.com/easybuilders/easybuild-easyblocks">EasyBuild easyblocks repository</a> with some modifications to the <code>extrae.py</code> easyblock that:</p>
+<ul>
+<li>Removed configure options <code>--enable-xml</code> and <code>--with-dwarf</code> that were no longer available in Extrae starting from v4.1.0.</li>
+<li>Added <code>--with-xml</code> option to specify <code>libxml2</code> root dir.</li>
+<li>Added <code>--enable-posix-clock</code> configure option for RISCV64 (needed to build Extrae as no lower level clock seems to be available yet in RISC-V architectures).</li>
+</ul>
+<p>With all of this in place, we managed to correctly build Extrae but found out that many tests failed to pass, including all 21 under the MPI directory. We reported this fact to Extrae developers who answered that there was a critical bug fix related to MPI tracing in version 4.1.7 so we switched to that version before continuing our work.</p>
+<h2 id="work-with-version-417">Work with version 4.1.7<a class="headerlink" href="#work-with-version-417" title="Permanent link">&para;</a></h2>
+<p>We tested the build of that version (of course including all the work done before for previous versions) and we still saw some errors in the <code>make check</code>phase. We focused first in the following 3:</p>
+<ul>
+<li><code>FAIL: mpi_commranksize_f_1proc.sh</code></li>
+<li><code>FAIL: pthread.sh</code></li>
+<li><code>FAIL: check_Extrae_xml_envvar_counters.sh</code></li>
+</ul>
+<p>Regarding the first one, we found a bug in the Extrae test itself: the <code>mpi_comm_ranksize_f_1proc.sh</code> was invoking <code>trace-ldpreload.sh</code> instead of the Fortran version <code>trace-ldpreloadf.sh</code> and this caused the test to fail. We submitted a <a href="https://github.com/bsc-performance-tools/extrae/pull/107">Pull Request</a> to the Extrae repository with the bugfix that has been already merged and incorporated into new releases.</p>
+<p>Regarding the second one, it was reported to Extrae developers as an <a href="https://github.com/bsc-performance-tools/extrae/issues/104">issue</a>. They suggested commenting out a call at <code>src/tracer/wrappers/pthread/pthread_wrapper.c</code> at line 240: <code>//Backend_Flush_pThread (pthread_self());</code>. We reported that this fixed the issue so this change has also been incorporated into the Extrae main branch for future releases.</p>
+<p>The last failing test was an issue related with the access to HW counters on the building/testing system. The problem was that the test assumed that Extrae (through <a href="https://icl.utk.edu/papi/">PAPI</a>) can access HW counters (in this case, <code>PAPI_TOT_INS</code>). This might not be the case because this is very system-dependent (since it involves permissions, etc). As a solution, we committed a <a href="https://github.com/bsc-performance-tools/extrae/commit/3d8295cf45c4bf7068decd29c96bf755216a496f">patch</a> to the Extrae repository which ensured that the test will not fail if <code>PAPI_TOT_CYC</code> is unavailable in the testing system. As this has not been incorporated yet into the Extrae repository, we also committed a <a href="https://github.com/easybuilders/easybuild-easyconfigs/blob/develop/easybuild/easyconfigs/e/Extrae/Extrae-4.2.0-fix-hw-counters-checks.patch">patch file</a> to the EasyBuild easyconfigs repository that solves the problem with this specific test but also with others that suffered from this same issue.</p>
+<h2 id="finally-version-420">Finally, version 4.2.0<a class="headerlink" href="#finally-version-420" title="Permanent link">&para;</a></h2>
+<p>Due to the bugfixes mentioned in previous section that were incorporated into the Extrae repository, we switched again to an updated version of Extrae (in this case v4.2.0). With that updated version and the easyconfig (and patches) and easyblock modifications tests started to pass successfully in most of the testing platforms. </p>
+<p>We noticed, however, that Extrae produced segmentation faults when using <a href="https://www.nongnu.org/libunwind/">libunwind</a> in ARM architectures. Our approach to that was to report the issue to Extrae developers and to make this dependency architecture specific (i.e. forcing <code>--without-unwind</code> when building for ARM while keeping the dependency for the rest of architectures). We did this in a <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21017">Pull Request</a> to the EasyBuild easyconfigs repository that is already merged. In this same <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21017">Pull Request</a> we added <code>zlib</code> as an explicit dependency in the easyconfig file for all architectures.</p>
+<p>The last issue we encountered was similar to the previous one but in this case was seen on some RISC-V platforms and related to dynamic memory instrumentation. We adopted the same approach and reported the issue to Extrae developers and added <code>--disable-instrument-dynamic-memory</code> to the configure options in a <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/20690/commits/a26b35cbc1dd6cf7129f866a5b2002febd289104">Pull Request</a> already merged into the EasyBuild-Easyconfigs repository.</p>
+<p>With that, all tests passed in all platforms and we were able to incorporate Extrae to the list of software available in both the <code>software.eessi.io</code> and <code>riscv.eessi.io</code> repositories of EESSI.</p>
 
 
 
@@ -2097,7 +1929,7 @@ simulation via <code>mpirun</code>:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 26, 2024</span>
   </span>
 
     

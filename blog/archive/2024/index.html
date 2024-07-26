@@ -1743,6 +1743,83 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/11518551?v=4" alt="Julián Morillo">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-07-26 00:00:00">July 26, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="extrae-available-in-eessi"><a class="toclink" href="../../2024/07/26/extrae-now-available-in-EESSI/">Extrae available in EESSI</a></h2>
+<p>Thanks to the work developed under <a href="https://www.multixscale.eu/">MultiXscale CoE</a> we are proud to announce that as of 22 July 2024, <a href="https://tools.bsc.es/extrae">Extrae</a> v4.2.0 is available in the EESSI production repository <code>software.eessi.io</code>, 
+optimized for the <a href="https://www.eessi.io/docs/software_layer/cpu_targets">8 CPU targets</a> that are fully supported by version 2023.06 of EESSI.
+This allows using Extrae effortlessly on the EuroHPC systems where EESSI is already available,
+like <a href="https://doc.vega.izum.si">Vega</a> and <a href="https://docs.it4i.cz/karolina/introduction">Karolina</a>.</p>
+<p>It is worth noting that from that date Extrae is also available in the EESSI RISC-V repository <code>risv.eessi.io</code>.</p>
+<p>Extrae is a package developed at <a href="https://www.bsc.es/es">BSC</a> devoted to generate <a href="https://tools.bsc.es/paraver">Paraver</a> trace-files for a post-mortem analysis of applications performance. Extrae is a tool that uses different interposition mechanisms to inject probes into the target application so as to gather information regarding the application performance. It is one of the <a href="https://pop-coe.eu/partners/tools">tools</a> used in the <a href="https://pop-coe.eu/">POP3 CoE</a>.</p>
+<p>The work to incorporate Extrae into EESSI started early in May. It took quite some time and effort but has resulted in a number of updates, improvements and bug fixes for Extrae. The following sections explain the work done describing the issues encountered and the solutions adopted.</p>
+<h3 id="adapting-eessi-software-layer"><a class="toclink" href="../../2024/07/26/extrae-now-available-in-EESSI/#adapting-eessi-software-layer">Adapting EESSI software layer</a></h3>
+<p>During the first attempt to build Extrae (in this case <code>v4.0.6</code>) in the EESSI context, we found out two issues:</p>
+<ol>
+<li>the <code>configure</code> script of Extrae was not able to find <code>binutils</code> in the location it is provided by the compat layer of EESSI, and</li>
+<li>the <code>configure</code>/<code>make</code> files of Extrae make use of <code>which</code> command that does not work in our build container. </li>
+</ol>
+<p>Both problems were solved by adding a <code>pre_configure_hook</code> in the <a href="https://github.com/EESSI/software-layer/commit/41149ac060b7580f2b15d3e04908ffabe207e046"><code>eb_hooks.py</code></a> file of the EESSI software layer that:</p>
+<ul>
+<li>avoids the use of <code>which</code> during configuration and building processes by replacing it with <code>command -v</code> in the necessary files, and</li>
+<li>specifies the correct path to <code>binutils</code> in EESSI compat layer by passing <code>--with-binutils</code> option to the Extrae <code>configure</code> script.</li>
+</ul>
+<h3 id="moving-to-version-416"><a class="toclink" href="../../2024/07/26/extrae-now-available-in-EESSI/#moving-to-version-416">Moving to version 4.1.6</a></h3>
+<p>By the time we completed this work, <code>v4.1.6</code> of Extrae was available so we decided to switch to that version as v4.0.6 was throwing errors in the test suite provided by Extrae through the <code>make check</code>command. </p>
+<p>When first trying to build this new version, we noticed that there were still problems with <code>binutils</code> detection because the configure scripts of Extrae assume that the <code>binutils</code> libraries are under a <code>lib</code> directory in the provided <code>binutils</code> path while in the EESSI compat layer they are directly in the provided directory (i.e. without the <code>/lib</code>). This was solved with a <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/20690/commits/e0bfd59cabd0bbb080c86073f179954486fe227e">patch file</a> committed to the <a href="https://github.com/easybuilders/easybuild-easyconfigs">EasyBuild easyconfigs repository</a>, that modifies both <code>configure</code> and <code>config/macros.m4</code> to make <code>binutils</code> detection more robust. This patch was also provided to Extrae developers to incorporate into future releases.</p>
+<p>The next step was to submit a <a href="https://github.com/easybuilders/easybuild-easyblocks/pull/3339">Pull Request</a> to the <a href="https://github.com/easybuilders/easybuild-easyblocks">EasyBuild easyblocks repository</a> with some modifications to the <code>extrae.py</code> easyblock that:</p>
+<ul>
+<li>Removed configure options <code>--enable-xml</code> and <code>--with-dwarf</code> that were no longer available in Extrae starting from v4.1.0.</li>
+<li>Added <code>--with-xml</code> option to specify <code>libxml2</code> root dir.</li>
+<li>Added <code>--enable-posix-clock</code> configure option for RISCV64 (needed to build Extrae as no lower level clock seems to be available yet in RISC-V architectures).</li>
+</ul>
+<p>With all of this in place, we managed to correctly build Extrae but found out that many tests failed to pass, including all 21 under the MPI directory. We reported this fact to Extrae developers who answered that there was a critical bug fix related to MPI tracing in version 4.1.7 so we switched to that version before continuing our work.</p>
+<h3 id="work-with-version-417"><a class="toclink" href="../../2024/07/26/extrae-now-available-in-EESSI/#work-with-version-417">Work with version 4.1.7</a></h3>
+<p>We tested the build of that version (of course including all the work done before for previous versions) and we still saw some errors in the <code>make check</code>phase. We focused first in the following 3:</p>
+<ul>
+<li><code>FAIL: mpi_commranksize_f_1proc.sh</code></li>
+<li><code>FAIL: pthread.sh</code></li>
+<li><code>FAIL: check_Extrae_xml_envvar_counters.sh</code></li>
+</ul>
+<p>Regarding the first one, we found a bug in the Extrae test itself: the <code>mpi_comm_ranksize_f_1proc.sh</code> was invoking <code>trace-ldpreload.sh</code> instead of the Fortran version <code>trace-ldpreloadf.sh</code> and this caused the test to fail. We submitted a <a href="https://github.com/bsc-performance-tools/extrae/pull/107">Pull Request</a> to the Extrae repository with the bugfix that has been already merged and incorporated into new releases.</p>
+<p>Regarding the second one, it was reported to Extrae developers as an <a href="https://github.com/bsc-performance-tools/extrae/issues/104">issue</a>. They suggested commenting out a call at <code>src/tracer/wrappers/pthread/pthread_wrapper.c</code> at line 240: <code>//Backend_Flush_pThread (pthread_self());</code>. We reported that this fixed the issue so this change has also been incorporated into the Extrae main branch for future releases.</p>
+<p>The last failing test was an issue related with the access to HW counters on the building/testing system. The problem was that the test assumed that Extrae (through <a href="https://icl.utk.edu/papi/">PAPI</a>) can access HW counters (in this case, <code>PAPI_TOT_INS</code>). This might not be the case because this is very system-dependent (since it involves permissions, etc). As a solution, we committed a <a href="https://github.com/bsc-performance-tools/extrae/commit/3d8295cf45c4bf7068decd29c96bf755216a496f">patch</a> to the Extrae repository which ensured that the test will not fail if <code>PAPI_TOT_CYC</code> is unavailable in the testing system. As this has not been incorporated yet into the Extrae repository, we also committed a <a href="https://github.com/easybuilders/easybuild-easyconfigs/blob/develop/easybuild/easyconfigs/e/Extrae/Extrae-4.2.0-fix-hw-counters-checks.patch">patch file</a> to the EasyBuild easyconfigs repository that solves the problem with this specific test but also with others that suffered from this same issue.</p>
+<h3 id="finally-version-420"><a class="toclink" href="../../2024/07/26/extrae-now-available-in-EESSI/#finally-version-420">Finally, version 4.2.0</a></h3>
+<p>Due to the bugfixes mentioned in previous section that were incorporated into the Extrae repository, we switched again to an updated version of Extrae (in this case v4.2.0). With that updated version and the easyconfig (and patches) and easyblock modifications tests started to pass successfully in most of the testing platforms. </p>
+<p>We noticed, however, that Extrae produced segmentation faults when using <a href="https://www.nongnu.org/libunwind/">libunwind</a> in ARM architectures. Our approach to that was to report the issue to Extrae developers and to make this dependency architecture specific (i.e. forcing <code>--without-unwind</code> when building for ARM while keeping the dependency for the rest of architectures). We did this in a <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21017">Pull Request</a> to the EasyBuild easyconfigs repository that is already merged. In this same <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/21017">Pull Request</a> we added <code>zlib</code> as an explicit dependency in the easyconfig file for all architectures.</p>
+<p>The last issue we encountered was similar to the previous one but in this case was seen on some RISC-V platforms and related to dynamic memory instrumentation. We adopted the same approach and reported the issue to Extrae developers and added <code>--disable-instrument-dynamic-memory</code> to the configure options in a <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/20690/commits/a26b35cbc1dd6cf7129f866a5b2002febd289104">Pull Request</a> already merged into the EasyBuild-Easyconfigs repository.</p>
+<p>With that, all tests passed in all platforms and we were able to incorporate Extrae to the list of software available in both the <code>software.eessi.io</code> and <code>riscv.eessi.io</code> repositories of EESSI.</p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
             <img src="https://avatars.githubusercontent.com/u/620876?v=4" alt="Kenneth Hoste">
           </span>
         
