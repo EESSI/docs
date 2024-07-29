@@ -328,9 +328,9 @@ The most common configuration items defined at this level are:
   [`eessi.testsuite.constants.SCALES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py)
   and define at which scales tests should be run, e.g. single core, half a node, a full node, two nodes, etc. This
   can be used to exclude running at certain scales on systems that would not support it. E.g. some systems might not
-  support requesting multiple partial nodes, which is what the `1cpn_2_nodes` (1 core per node, on two nodes) and
-  `1cpn_4_nodes` scales do. One could exclude these by setting e.g.
-  `features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1cpn_2_nodes', '1cpn_4_nodes']]`. With this
+  support requesting multiple partial nodes, which is what the `1cpn_2nodes` (1 core per node, on two nodes) and
+  `1cpn_4nodes` scales do. One could exclude these by setting e.g.
+  `features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1cpn_2nodes', '1cpn_4nodes']]`. With this
   configuration setting, ReFrame will run all the scales listed in `eessi.testsuite.constants.SCALES _except_
   those two. In a similar way, one could exclude all multinode tests if one just has a single node available.
 - [`devices`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.devices): This field specifies information on devices (for example) present in the partition. Device types are standardized in the EESSI test suite in the [`eessi.testsuite.constants.DEVICE_TYPES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) dictionary. This is used by the EESSI test suite to determine how many of these devices it can/should use per node.
