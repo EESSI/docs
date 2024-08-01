@@ -21,8 +21,8 @@ To start using xxHash, load one of these modules using a `module load` command l
 module load xxHash/0.8.2-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Thu, 01 Aug 2024 at 08:19:39 UTC)*  
+*(This data was automatically generated on Thu, 01 Aug 2024 at 20:22:54 UTC)*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xxHash/0.8.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|xxHash/0.8.2-GCCcore-12.3.0|x|x|x|x|x|x|-|x|x|

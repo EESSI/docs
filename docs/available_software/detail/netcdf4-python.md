@@ -21,11 +21,11 @@ To start using netcdf4-python, load one of these modules using a `module load` c
 module load netcdf4-python/1.6.4-foss-2023a
 ```
 
-*(This data was automatically generated on Thu, 01 Aug 2024 at 08:19:39 UTC)*  
+*(This data was automatically generated on Thu, 01 Aug 2024 at 20:22:54 UTC)*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|netcdf4-python/1.6.4-foss-2023a|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|netcdf4-python/1.6.4-foss-2023a|x|x|x|x|x|x|-|x|x|
 
 
 ### netcdf4-python/1.6.4-foss-2023a

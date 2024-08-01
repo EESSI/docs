@@ -21,11 +21,11 @@ To start using GROMACS, load one of these modules using a `module load` command 
 module load GROMACS/2024.1-foss-2023b
 ```
 
-*(This data was automatically generated on Thu, 01 Aug 2024 at 08:19:39 UTC)*  
+*(This data was automatically generated on Thu, 01 Aug 2024 at 20:22:54 UTC)*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GROMACS/2024.1-foss-2023b|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GROMACS/2024.1-foss-2023b|x|x|x|x|x|x|x|x|x|
 
 
 ### GROMACS/2024.1-foss-2023b
