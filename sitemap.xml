@@ -236,6 +236,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Cartopy/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Catch2/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
@@ -257,6 +262,11 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/CoinUtils/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Cython/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -342,6 +352,11 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/FastME/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Fiona/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1006,6 +1021,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/SciTools-Iris/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Shapely/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/SuiteSparse/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
@@ -1666,6 +1691,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/netcdf4-python/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/nettle/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
@@ -1751,6 +1781,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/pyproj/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/pystencils/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
@@ -1777,6 +1812,11 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/python-isal/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/python-xxhash/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -1896,7 +1936,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/xarray/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/xorg-macros/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/xxHash/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
