@@ -18,11 +18,12 @@ The overview below shows which libyaml installations are available per target ar
 To start using libyaml, load one of these modules using a `module load` command like:
 
 ```shell
-module load libyaml/0.2.5-GCCcore-12.3.0
+module load libyaml/0.2.5-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Tue, 11 Jun 2024 at 08:34:11 UTC)*  
+*(This data was automatically generated on Thu, 01 Aug 2024 at 04:19:00 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libyaml/0.2.5-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
 |libyaml/0.2.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|
