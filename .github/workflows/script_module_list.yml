@@ -39,6 +39,8 @@ jobs:
         with:
           python-version: '3.6'
       - name: Install dependencies
+      - uses: eessi/github-action-eessi@v3
+      - name: Make EESSI available
         run: |
           cd scripts/available_software
           python -m pip install --upgrade pip
