@@ -1,3 +1,3 @@
 #!/bin/bash
 
-PYTHONPATH=$PWD:$PYTHONPATH -m pytest -v -s
+PYTHONPATH=$PWD:$PYTHONPATH python -m pytest -v -s
