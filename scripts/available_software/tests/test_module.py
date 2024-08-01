@@ -1,5 +1,5 @@
 import os
-from available_software import module_avail, filter_fn_eessi_modules, module_swap, module_whatis
+from available_software import module_avail, filter_fn_eessi_modules, module_whatis
 
 
 class TestModule:

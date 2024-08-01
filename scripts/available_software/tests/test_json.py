@@ -6,6 +6,9 @@ from available_software import (generate_json_overview_data,
 import os
 import json
 
+GENERIC = "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic"
+ZEN2 = "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"
+
 
 class TestJSON:
     # ---------------------------
@@ -36,7 +39,7 @@ class TestJSON:
         modules = modules_eessi()
         json_data = generate_json_overview_data(modules)
         assert len(json_data.keys()) == 3
-        assert list(json_data["targets"]) == ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"]
+        assert list(json_data["targets"]) == [GENERIC, ZEN2]
         assert json_data["modules"] == {
                 "Markov": [1, 0],
                 "cfd": [1, 1],
