@@ -50,5 +50,6 @@ jobs:
           pip install -r requirements_tests.txt
       - name: Test with pytest
         run: |
+          . venv/bin/activate
           cd scripts/available_software
           ./test.sh
