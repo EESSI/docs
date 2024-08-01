@@ -11,7 +11,6 @@ in MarkDown format.
 @author: Michiel Lachaert (Ghent University)
 @author: Lara Peeters (Ghent University)
 """
-import argparse
 import json
 import os
 import re
@@ -252,7 +251,7 @@ def get_extra_info_eessi(json_data) -> dict:
     for software in modules:
         for mod in modules[software]['versions']:
             if software == "Java":
-                # TODO handle specific naming schema for Java 
+                # TODO handle specific naming schema for Java
                 # code cannot handle "Java/11(@Java/11.0.20)"
                 continue
             base_path = modules[software]['versions'][mod]['targets'][0] + '/modules/all/'
@@ -328,7 +327,6 @@ def generate_software_table_data(software_data: dict, targets: list) -> list:
     @param targets: List with all the target names
     @return: 1D list with all the data for the table
     """
-    #TODO: add same structure as https://github.com/laraPPr/EESSI_docs/blob/test_add_script_generate_software/docs/available_software/overview.md to table
     table_data = [" "] + [target[57:] for target in targets]
 
     for module_name, available in list(software_data.items())[::-1]:
@@ -474,13 +472,16 @@ def generate_markdown_overview(modules: dict) -> None:
 
 # FORMAT OVERVIEW JSON
 # {
-#     "targets": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"],
-#     "modules": {
-#         "Markov": [1, 0],
-#         "cfd": [1, 1],
-#         "llm": [0, 1],
-#         "science": [1, 1]
-#     }
+#   "targets": [
+#     "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic",
+#     "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"
+#   ],
+#   "modules": {
+#     "Markov": [1, 0],
+#     "cfd": [1, 1],
+#     "llm": [0, 1],
+#     "science": [1, 1]
+#   }
 # }
 def generate_json_overview_data(modules: dict) -> dict:
     """
@@ -535,16 +536,25 @@ def generate_json_overview(modules: dict, path_data_dir: str) -> str:
 # FORMAT DETAILED JSON:
 #
 # {
-#     "targets": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"],
-#     "software": {
-#         "cfd": {
-#             "targets": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/software.e    essi.io/versions/2023.06/software/linux/x86_64/amd/zen2"],
-#             "versions": {
-#                 "2.3.1": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic"],
-#                 "2.3.2": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic", "/cvmfs/so    ftware.e    essi.io/versions/2023.06/software/linux/x86_64/amd/zen2"]
-#             }
-#         }
+#   "targets": [
+#     "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic",
+#     "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"
+#   ],
+#   "software": {
+#     "cfd": {
+#       "targets": [
+#         "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic",
+#         "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"
+#       ],
+#       "versions": {
+#         "2.3.1": ["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic"],
+#         "2.3.2": [
+#           "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic",
+#           "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"
+#         ]
+#       }
 #     }
+#   }
 # }
 
 def generate_json_detailed_data(modules: dict) -> dict:

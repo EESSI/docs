@@ -1,6 +1,9 @@
 import os
 from available_software import modules_eessi, get_unique_software_names
 
+GENERIC = "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic"
+ZEN2 = "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"
+
 
 class TestData:
     # ---------------------------
@@ -24,7 +27,7 @@ class TestData:
     def test_data_eessi(self):
         sol = modules_eessi()
         assert len(sol) == 2
-        assert len(sol["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic"]) == 13
-        assert len(sol["/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"]) == 15
-        assert list(get_unique_software_names(sol["/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic"])) == ["Markov", "cfd", "science"]
-        assert list(get_unique_software_names(sol["/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2"])) == ["cfd", "llm", "science"]
+        assert len(sol[GENERIC]) == 13
+        assert len(sol[ZEN2]) == 15
+        assert list(get_unique_software_names(sol[GENERIC])) == ["Markov", "cfd", "science"]
+        assert list(get_unique_software_names(sol[ZEN2])) == ["cfd", "llm", "science"]
