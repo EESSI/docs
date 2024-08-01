@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 
+#
 # Copyright 2023-2023 Ghent University
 #
 # SPDX license identifier: GPL-3.0-or-later
