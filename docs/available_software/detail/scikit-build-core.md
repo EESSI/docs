@@ -21,11 +21,11 @@ To start using scikit-build-core, load one of these modules using a `module load
 module load scikit-build-core/0.9.3-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Thu, 01 Aug 2024 at 08:19:39 UTC)*  
+*(This data was automatically generated on Fri, 02 Aug 2024 at 01:07:04 UTC)*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-build-core/0.9.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|scikit-build-core/0.9.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 
 
 ### scikit-build-core/0.9.3-GCCcore-13.2.0
