@@ -28,8 +28,8 @@ For users:
 * [Overview of software](available_software/overview.md)
 * [How to run EESSI test suite](test-suite/index.md)
 * [How to use EESSI in CI](using_eessi/eessi_in_ci.md)
-  - [GitHub Actions](using_eessi/eessi_in_ci/#the-eessi-github-action)
-  - [GitLab CI/CD](using_eessi/eessi_in_ci/#the-eessi-gitlab-cicd-component)
+    - [GitHub Actions](using_eessi/eessi_in_ci.md/#the-eessi-github-action)
+    - [GitLab CI/CD](using_eessi/eessi_in_ci.md/#the-eessi-gitlab-cicd-component)
 * [Get help or report issue](support.md)
   
 For system administrators:
