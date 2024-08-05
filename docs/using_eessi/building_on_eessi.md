@@ -67,7 +67,39 @@ Finally, you should be able to load our newly build module:
 module load netCDF/4.9.0-gompi-2022a
 ```
 
-## Manually building software op top of EESSI
-Building software on top of EESSI would require your linker to use the same system-dependencies as the software in EESSI does. In other words: it requires you to link against libraries from the compatibility layer, instead of from your host OS.
+## Manually building software op top of EESSI (without EasyBuild)
 
-While we plan to support this in the future, manually building on top of EESSI is currently not supported yet in a trivial way.
+!!! warning
+
+    We are working on a module file that should make building on top of EESSI (without using EasyBuild)
+    more straightforward, particularly when using `Autotools` or `CMake`. Right now, it is a little convoluted
+    and requires you to have a decent grasp of
+    * What a runtime linker (`ld-linux*.so`) is and does
+    * How to influence the behaviour of the runtime linker with `LD_LIBRARY_PATH`
+    * The difference between `LIBRARY_PATH` and `LD_LIBRARY_PATH`
+    
+    As such, this documentation is intended for "experts" in the runtime linker and it's behaviour,
+    and most cases are untested. Any feedback on this topic is highly appreciated. 
+    
+Building and running software on top of EESSI without EasyBuild is not as straightforward and requires some considerations to take care of. 
+
+It is expected that you will have loaded all of your required dependencies as modules from the EESSI environment. Since EESSI sets `LIBRARY_PATH` for all of the modules and the `GCC` compiler is configured to use the compat layer, there should be no additional configuration required to execute a standard build process. On the other hand, EESSI does not set `LD_LIBRARY_PATH`, so at runtime, the executable will need help finding the proper libraries that it needs. The easiest way to circumvent this is setting the environment variable `LD_RUN_PATH` during compile time as well. Thus, the dynamic linker will search for those paths when the program is executed. 
+
+The safest way to make sure all libraries will point to the required locations (and do not leak in from the host operating system) is starting an EESSI prefix shell before building. To do this: 
+
+* First of all, load the environment by starting an EESSI shell as described [here](https://www.eessi.io/docs/using_eessi/setting_up_environment). 
+* Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it (`foss` is a good option as it will also include MPI with OpenMPI and math libraries via FlexiBLAS/FFTW). 
+* Set manually `LD_RUN_PATH` to resolve libraries at runtime. `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to `libstdc++` from our GCC installation
+```sh
+export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
+```
+* Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used when checking the binary.
+* Once done, exit the EESSI prefix shell (with `exit`) or use another terminal to run your software.
+
+* Run! 
+
+
+!!! Note RPATH should never point to a compatibility layer directory, only to software layer ones, as all resolving is done via the runtime linker (`ld-linux*.so`)  that is shipped with EESSI, which automatically searches these locations.
+
+The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for, i.e., if you add to your executable RPATH a `libhdf5.so`compiled for `intel_avx512`, you will not be able to run that binary in a machine with a different architecture. If this is an issue for you, you should look into how EESSI itself organises the location of binaries and perhaps leverage the relevant environment variables (e.g., `EESSI_SOFTWARE_SUBDIR`).
+
