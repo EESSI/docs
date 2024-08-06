@@ -21,7 +21,7 @@ To start using SQLite, load one of these modules using a `module load` command l
 module load SQLite/3.43.1-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Tue, 06 Aug 2024 at 04:19:11 UTC)*  
+*(This data was automatically generated on Tue, 06 Aug 2024 at 20:15:30 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
