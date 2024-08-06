@@ -79,6 +79,12 @@ A test for [ESPResSo](https://espressomd.org), a software package for performing
 
 It is implemented in [`tests/apps/espresso/`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/espresso).
 
+2 test cases are included:
+* P3M (ionic crystals)
+* LJ (Lennard Jones particle box)
+
+Both tests are weak scaling tests and therefore the number of particles are scaled based on the number of MPI ranks.
+
 To run this ESPResSo test, use:
 
 ```bash
