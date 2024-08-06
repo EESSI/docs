@@ -21,9 +21,9 @@ To start using ImageMagick, load one of these modules using a `module load` comm
 module load ImageMagick/7.1.1-15-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Fri, 02 Aug 2024 at 16:21:03 UTC)*  
+*(This data was automatically generated on Tue, 06 Aug 2024 at 04:19:11 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ImageMagick/7.1.1-15-GCCcore-12.3.0|x|x|x|x|x|x|-|x|x|
+|ImageMagick/7.1.1-15-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
 |ImageMagick/7.1.0-53-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
