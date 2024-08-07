@@ -79,6 +79,8 @@ plugins:
   - git-revision-date-localized
   # necessary for search to work
   - search
+  # Enable macros so we can use global variables
+  - macros
   - redirects:
       redirect_maps:
         adding_software.md: adding_software/overview.md
@@ -118,8 +120,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  # Enable macros so we can use global variables
-  - macros
 extra:
   # add links in bottom right
   social:
