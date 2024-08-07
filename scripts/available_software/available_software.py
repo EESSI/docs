@@ -412,9 +412,9 @@ def generate_detail_pages(json_path, dest_path) -> None:
     time_generated_template = os.environ.get('TIME_GENERATED_TEMPLATE')
     for software, content in data["software"].items():
         if time_generated_template:
-           time_generated = time_generated_template
+            time_generated = time_generated_template
         else:
-           time_generated = data["time_generated"]
+            time_generated = data["time_generated"]
         generate_software_detail_page(software, content, time_generated, all_targets, dest_path)
 
 
