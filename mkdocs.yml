@@ -118,11 +118,14 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Enable macros so we can use global variables
+  - macros
 extra:
   # add links in bottom right
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
+  generated_time: "Wed, 07 Aug 2024 at 17:08:54 CEST"
 extra_javascript:
   # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
