@@ -64,6 +64,16 @@ The good news is that all of this only requires a handful commands :astonished: 
     sudo cvmfs_config setup
     ```
 
+!!! Note
+    The default location for the cache directory is `/var/lib/cvmfs`. Please,
+    check that the partition on which this directory is stored is big enough to
+    store the cache (and other data). You may override this by adding
+    `CVMFS_CACHE_BASE=<some other directory for the cache>` to your
+    `default.local`, e.g., running
+    ``` { .bash .copy }
+    sudo bash -c "echo 'CVMFS_CACHE_BASE=<some other directory for the cache>' >> /etc/cvmfs/default.local"
+    ```
+
 ## Installation for larger systems (e.g. clusters)
 
 When using CernVM-FS on a larger number of local clients, e.g. on a HPC cluster or set of workstations,
