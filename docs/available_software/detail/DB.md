@@ -18,11 +18,12 @@ The overview below shows which DB installations are available per target archite
 To start using DB, load one of these modules using a `module load` command like:
 
 ```shell
-module load DB/18.1.40-GCCcore-12.2.0
+module load DB/18.1.40-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Tue, 06 Aug 2024 at 04:19:11 UTC)*  
+*(This data was automatically generated on Wed, 07 Aug 2024 at 04:26:29 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|DB/18.1.40-GCCcore-12.3.0|x|x|x|x|x|x|-|x|x|
 |DB/18.1.40-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
