@@ -21,8 +21,9 @@ To start using gnuplot, load one of these modules using a `module load` command 
 module load gnuplot/5.4.8-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Tue, 06 Aug 2024 at 04:19:11 UTC)*  
+*(This data was automatically generated on Wed, 07 Aug 2024 at 12:36:59 UTC)*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |gnuplot/5.4.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
+|gnuplot/5.4.6-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
