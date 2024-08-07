@@ -1,6 +1,5 @@
 name: Update overview of available software in EESSI
 on:
-  pull_request:
   workflow_dispatch:
   schedule:
     # run every 4 hours
@@ -40,7 +39,6 @@ jobs:
           ./scripts/update_generated_time.sh mkdocs.yml
           
           git status
-          git diff docs/available_software/detail/zstd.md
 
           # determine whether pull request should be opened:
           # if JSON files in docs/available_software/data have been updated, then a PR should be opened
