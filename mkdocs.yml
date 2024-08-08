@@ -79,6 +79,8 @@ plugins:
   - git-revision-date-localized
   # necessary for search to work
   - search
+  # Enable macros so we can use global variables
+  - macros
   - redirects:
       redirect_maps:
         adding_software.md: adding_software/overview.md
@@ -123,6 +125,8 @@ extra:
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
+  # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
+  generated_time: "Wed, 07 Aug 2024 at 17:08:54 CEST"
 extra_javascript:
   # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs

@@ -1,7 +1,9 @@
 from mdutils.mdutils import MdUtils
 from available_software import get_unique_software_names, modules_eessi, generate_table_data, generate_module_table
+from available_software import generate_detail_pages
 import os
 import filecmp
+import shutil
 
 
 class TestMarkdown:
@@ -22,6 +24,8 @@ class TestMarkdown:
     def teardown_class(cls):
         if os.path.exists("test_simple.md"):
             os.remove("test_simple.md")
+        if os.path.exists("detailed_md"):
+            shutil.rmtree("detailed_md")
 
     # ---------------------------
     # Markdown tests
@@ -41,3 +45,11 @@ class TestMarkdown:
         md_file.create_md_file()
         assert os.path.exists("test_simple.md")
         assert filecmp.cmp(self.path + "/data/test_md_simple_sol.md", "test_simple.md")
+
+    def test_md_detailed_template(self):
+        os.environ["TIME_GENERATED_TEMPLATE"] = "{{ generated_date }}"
+        os.mkdir('detailed_md')
+        generate_detail_pages(self.path + "/data/test_json_simple_sol_detail.json", 'detailed_md')
+        del os.environ["TIME_GENERATED_TEMPLATE"]
+        assert os.path.exists("detailed_md/science.md")
+        assert filecmp.cmp(self.path + "/data/test_md_template_detailed_science_sol.md", "detailed_md/science.md")

@@ -34,7 +34,10 @@ jobs:
           cp docs/available_software/data/json_data.json docs/available_software/data/json_data.json.orig
           cp docs/available_software/data/json_data_detail.json docs/available_software/data/json_data_detail.json.orig
 
+          export TIME_GENERATED_TEMPLATE="{{ generated_time }}"
           python scripts/available_software/available_software.py
+          ./scripts/update_generated_time.sh mkdocs.yml
+          
           git status
 
           # determine whether pull request should be opened:
