@@ -194,8 +194,8 @@ well as the specific test being carried out.
 | `1_core` | using 1 CPU core 1 GPU |
 | `2_cores` | using 2 CPU cores and 1 GPU |
 | `4_cores` | using 4 CPU cores and 1 GPU |
-| `1_cpn_2_nodes` | using 1 CPU core per node, 1 GPU per node, and 2 nodes |
-| `1_cpn_4_nodes` | using 1 CPU core per node, 1 GPU per node, and 4 nodes |
+| `1cpn_2nodes` | using 1 CPU core per node, 1 GPU per node, and 2 nodes |
+| `1cpn_4nodes` | using 1 CPU core per node, 1 GPU per node, and 4 nodes |
 | `1_8_node` | using 1/8th of a node (12.5% of available cores/GPUs, 1 at minimum) |
 | `1_4_node` | using a quarter of a node (25% of available cores/GPUs, 1 at minimum) |
 | `1_2_node` | using half of a node (50% of available cores/GPUs, 1 at minimum) |
