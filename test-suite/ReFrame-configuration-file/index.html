@@ -2255,9 +2255,9 @@ and one GPU partition) could for example look something like this:</p>
   <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants.SCALES</code></a>
   and define at which scales tests should be run, e.g. single core, half a node, a full node, two nodes, etc. This
   can be used to exclude running at certain scales on systems that would not support it. E.g. some systems might not
-  support requesting multiple partial nodes, which is what the <code>1_cpn_2_nodes</code> (1 core per node, on two nodes) and
-  <code>1_cpn_4_nodes</code> scales do. One could exclude these by setting e.g.
-  <code>features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1_cpn_2_nodes', '1_cpn_4_nodes']]</code>. With this
+  support requesting multiple partial nodes, which is what the <code>1cpn_2nodes</code> (1 core per node, on two nodes) and
+  <code>1cpn_4nodes</code> scales do. One could exclude these by setting e.g.
+  <code>features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1cpn_2nodes', '1cpn_4nodes']]</code>. With this
   configuration setting, ReFrame will run all the scales listed in `eessi.testsuite.constants.SCALES <em>except</em>
   those two. In a similar way, one could exclude all multinode tests if one just has a single node available.</li>
 <li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.devices"><code>devices</code></a>: This field specifies information on devices (for example) present in the partition. Device types are standardized in the EESSI test suite in the <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants.DEVICE_TYPES</code></a> dictionary. This is used by the EESSI test suite to determine how many of these devices it can/should use per node.
@@ -2363,7 +2363,7 @@ let ReFrame list the available tests:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 29, 2024</span>
   </span>
 
     
