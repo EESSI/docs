@@ -27,3 +27,4 @@ module load networkx/3.2.1-gfbf-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |networkx/3.2.1-gfbf-2023b|x|x|x|x|x|x|x|x|x|
 |networkx/3.1-gfbf-2023a|x|x|x|x|x|x|-|x|x|
+|networkx/3.0-gfbf-2022b|x|x|x|x|x|x|-|x|x|
