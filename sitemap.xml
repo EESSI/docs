@@ -1761,6 +1761,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/orjson/</loc>
+         <lastmod>2024-08-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/patchelf/</loc>
          <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
