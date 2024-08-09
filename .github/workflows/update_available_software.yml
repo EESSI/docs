@@ -59,7 +59,9 @@ jobs:
         uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
         if: steps.update_available_software.outputs.json_data_changed == 'yes'
         with:
-          add-paths: docs/available_software
+          add-paths: |
+            docs/available_software
+            mkdocs.yml
           branch: update-software-overview
           branch-suffix: timestamp
           commit-message: update overview of available software
