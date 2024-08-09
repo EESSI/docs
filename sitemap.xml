@@ -646,6 +646,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/MDAnalysis/</loc>
+         <lastmod>2024-08-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/MDI/</loc>
          <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
