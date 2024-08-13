@@ -29,7 +29,7 @@ To be useful in the aforementioned scenarios, tests need to satisfy a number of 
 
 ## Step-by-step tutorial for writing a portable ReFrame test
 
-In the next section, we will show how to write a test for the EESSI test suite by means of an example: we will create a test for [mpi4py](https://mpi4py.readthedocs.io/en/stable/) that executes an `MPI_REDUCE` to sum the ranks of all processes. If you're unfamiliar with MPI or `mpi4py`, you might want to read [Background of the mpi4py test](#background-of-mpi4py-test) before proceeding. The complete test developed in this tutorial can be found in the `tutorials/mpi4py` directory in  of the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
+In the next section, we will show how to write a test for the EESSI test suite by means of an example: we will create a test for [mpi4py](https://mpi4py.readthedocs.io/en/stable/) that executes an `MPI_REDUCE` to sum the ranks of all processes. If you're unfamiliar with MPI or `mpi4py`, or want to see the exact code this test will run, you may want to read [Background of the mpi4py test](#background-of-mpi4py-test) before proceeding. The complete test developed in this tutorial can be found in the `tutorials/mpi4py` directory in  of the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
 
 ### Step 1: writing job scripts to execute test
 Although not strictly needed for the implementation of a ReFrame test, it is useful to try and write a job script for how you would want to run this test on a given system. For example, on a system with 128-core nodes, managed by SLURM, we might have the following job scripts to execute the `mpi4py_reduce.py` code.
@@ -172,7 +172,7 @@ This test _works_, but is _not_ very portable. If we move to a system with 192 c
 
 ### Step 3: implementing as a portable ReFrame test {#as-portable-reframe-test}
 
-In the previous section, there were several system-specific items in the test. In this section, we will show how we use the EESSI hooks to avoid hard-coding system specific information. We do this by looking at the test step-by-step.
+In the previous section, there were several system-specific items in the test. In this section, we will show how we use the EESSI hooks to avoid hard-coding system specific information. We do this by replacing the system-specific parts of the test from Step 2 bit by bit. The full final test can be found under `tutorials/mpi4py/mpi4py_portable.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
 
 #### Replacing hard-coded test scales (mandatory)
 
