@@ -131,7 +131,7 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest):
     # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.builtins.run_after
     # See https://reframe-hpc.readthedocs.io/en/stable/pipeline.html for all steps in the pipeline
     # that reframe uses to execute tests. Note that after the init step, ReFrame has generated test instances for each
-    # of the combinations of paratmers above. Thus, now, there are 6 instances (2 module names * 3 scales). Here,
+    # of the combinations of parameters above. Thus, now, there are 6 instances (2 module names * 3 scales). Here,
     # we set the modules to load equal to one of the module names
     # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.modules
     @run_after('init')
@@ -333,7 +333,7 @@ And define an additional `performance_function`:
         return sn.extractsingle(r'^MAX_MEM_IN_MIB=(?P<perf>\S+)', self.stdout, 'perf', int)
 ```
 
-This results in the following output on 192-core nodes (we've ommitted some output for readability):
+This results in the following output on 192-core nodes (we've omitted some output for readability):
 
 ```bash
 [----------] start processing checks
@@ -398,7 +398,7 @@ def set_binding(self):
     hooks.set_compact_process_binding(self)
 ```
 
-For pure MPI codes, it will bind rank 0 to core 0, rank 1 to core 1, etc. For hybrid codes (MPI + OpenMP, or otherwise codes that do both multiprocessing and multithreading at the same time), it will bind to consequitive sets of cores. E.g. if a single process uses 4 cores, it will bind rank 0 to cores 0-3, rank 1 to cores 4-7, etc. 
+For pure MPI codes, it will bind rank 0 to core 0, rank 1 to core 1, etc. For hybrid codes (MPI + OpenMP, or otherwise codes that do both multiprocessing and multithreading at the same time), it will bind to consecuitive sets of cores. E.g. if a single process uses 4 cores, it will bind rank 0 to cores 0-3, rank 1 to cores 4-7, etc. 
 
 To impose this binding, the hook sets environment variables that should be respected by the parallel launcher used to launch your application. Check the [TODO: API Documentation] to see which parallel launchers are currently supported. The use of this hook is optional, but generally recommended for all multiprocessing codes.
 
