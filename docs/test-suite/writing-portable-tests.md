@@ -170,7 +170,7 @@ This single test class will generate 6 test instances: tests with 2, 128 and 256
 
 This test _works_, but is _not_ very portable. If we move to a system with 192 cores per node, the current `scale` parameter is a bit awkward. The test would still run, but we wouldn't have a test instance that just tests this on a full (single) node or a full two nodes. Furthermore, if we add a new `mpi4py` module in EESSI, we would have to alter the test to add the name to the list, since the module names are hardcoded in this test.
 
-### Step 3: implementing as a portable ReFrame test {#as-portable-reframe-test}
+### Step 3: implementing as a portable ReFrame test { #as-portable-reframe-test }
 
 In the previous section, there were several system-specific items in the test. In this section, we will show how we use the EESSI hooks to avoid hard-coding system specific information. We do this by replacing the system-specific parts of the test from Step 2 bit by bit. The full final test can be found under `tutorials/mpi4py/mpi4py_portable.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
 
@@ -456,7 +456,7 @@ The `mpi4py` scales almost indefinitely, but if we were to set it for the sake o
 ```
 on a system with 192 cores per node. I.e. any test of 2 nodes (384 cores) or above would be skipped because it exceeds our max task count.
 
-### Background of the mpi4py test {#background-of-mpi4py-test}
+### Background of the mpi4py test { #background-of-mpi4py-test }
 To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
 
 The MPI standard defines how to communicate between multiple processes that work on a common computational task. Each process that is part of the computational task gets a unique identifier (0 to N-1 for N processes), the MPI rank, which can e.g. be used to distribute a workload. The MPI standard defines communication between two given processes (so-called point-to-point communication), but also between a set of N processes (so-called collective communication).
