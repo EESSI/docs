@@ -52,6 +52,7 @@ nav:
       - ReFrame configuration file: test-suite/ReFrame-configuration-file.md
       - Usage: test-suite/usage.md
       - Available tests: test-suite/available-tests.md
+      - Writing tests: test-suite/writing-portable-tests.md
       - Release notes: test-suite/release-notes.md
     - Known issues and workarounds:
       - v2023.06: known_issues/eessi-2023.06.md
