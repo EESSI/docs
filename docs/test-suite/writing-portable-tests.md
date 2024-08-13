@@ -24,7 +24,7 @@ To be useful in the aforementioned scenarios, tests need to satisfy a number of 
 - Multiple test cases may be implemented for a single software package.
 - Tests should run in a reasonable amount of time (less than 1 hour) for all the scales for which it is defined to be valid.
 - There should be at least one light test case that can be run in less then ~5 minutes. This test should be marked with the 'CI' tag.
-- Tests should only use a reasonable amount of memory, so that _most_ systems will be able to run them. For low core counts (1-4 cores), 8-16 GB is reasonable. For higher core counts, keeping a memory useage to less than 1 GB/core will ensure that _mosts_ systems will be able to run it.
+- Tests should only use a reasonable amount of memory, so that _most_ systems will be able to run them. For low core counts (1-4 cores), 8-16 GB is reasonable. For higher core counts, keeping a memory usage to less than 1 GB/core will ensure that _mosts_ systems will be able to run it.
 - Tests should be portable, meaning they should not contain any system-specific information. If assumptions are made that might not be satisfied on every system (e.g. a test needs at least X cores to run), the test should check for it, and be skipped if the system does not satisfy the requirement.
 
 ## Step-by-step tutorial for writing a portable ReFrame test
@@ -321,7 +321,7 @@ When developing the test, we don't know how much memory the node will have on wh
 We can declare this need using the `req_memory_per_node` hook. This hook is mandatory for all tests. If you are on a system with a scheduler that runs jobs within a cgroup, getting the memory consumption is easy. You can (temporarily) add the following to the class body of your test:
 
 ```python
-   # Temporarily define postrun_cmds to make it easy to find out memory useage
+   # Temporarily define postrun_cmds to make it easy to find out memory usage
     postrun_cmds = ['MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
 ```
 
@@ -365,7 +365,7 @@ P: max_mem_in_mib: 403 MiB (r:0, l:None, u:None)
 P: max_mem_in_mib: 195 MiB (r:0, l:None, u:None)
 ```
 
-If you are _not_ on a system where your scheduler runs jobs in cgroups, you will have to figure out the memory consumption in another way (e.g. by checking memory useage in `top` while running the test).
+If you are _not_ on a system where your scheduler runs jobs in cgroups, you will have to figure out the memory consumption in another way (e.g. by checking memory usage in `top` while running the test).
 
 We now have a pretty good idea how the memory per node scales: for our smallest process counts (1 core), it's about 200 MiB per process, while for our largest process counts (16 nodes, 16*192 processes), it's 22018 MiB per node (or about 115 MiB per process). If we wanted to do really well, we could define a linear function (with offset) and fit it through the data (and round up to be on the safe side, i.e. make sure there is _enough_ memory). Then, we could call the hook like this:
 
