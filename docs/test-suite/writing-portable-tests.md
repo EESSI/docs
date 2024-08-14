@@ -79,7 +79,9 @@ This module tests mpi4py's MPI_Reduce call
 import reframe as rfm
 import reframe.utility.sanity as sn
 
-from reframe.core.builtins import variable, parameter, run_after  # added only to make the linter happy
+# added only to make the linter happy
+from reframe.core.builtins import variable, parameter, run_after, performance_function, sanity_function
+
 
 # This python decorator indicates to ReFrame that this class defines a test
 # Our class inherits from rfm.RunOnlyRegressionTest, since this test does not have a compilation stage
@@ -94,11 +96,10 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest):
 
     # Typically, we list here the name of our cluster as it is specified in our ReFrame configuration file
     # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.valid_systems
-    valid_systems = ['my_cluster']
+    valid_systems = ['snellius']
 
-    # ReFrame will generate a test for each value of a parameter, in this case each module name
+    # ReFrame will generate a test for each module
     # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.builtins.parameter
-    # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.modules
     module_name = parameter(['mpi4py/3.1.4-gompi-2023a', 'mpi4py/3.1.5-gompi-2023b'])
 
     # ReFrame will generate a test for each scale
@@ -122,7 +123,7 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest):
     # Define which options to pass to the executable
     # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.executable_opts
     executable_opts = ['mpi4py_reduce.py', '--n_iter', f'{n_iterations}', '--n_warmup', f'{n_warmup}']
-    
+
     # Define a time limit for the scheduler running this test
     # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.time_limit
     time_limit = '5m00s'
@@ -144,7 +145,8 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest):
         # Set the number of tasks, self.scale is now a single number out of the parameter list
         # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.num_tasks
         self.num_tasks = self.scale
-        # Set the number of tasks per node to either be equal to the number of tasks, but at most 128, since we have 128-core nodes
+        # Set the number of tasks per node to either be equal to the number of tasks, but at most 128,
+        # since we have 128-core nodes
         # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.num_tasks_per_node
         self.num_tasks_per_node = min(self.num_tasks, 128)
 
@@ -154,7 +156,7 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest):
     @sanity_function
     def validate(self):
         # Sum of 0, ..., N-1 is (N * (N-1) / 2)
-        sum_of_ranks = round(self.num_tasks * ((self.num_tasks-1) / 2))
+        sum_of_ranks = round(self.scale * ((self.scale - 1) / 2))
         # https://reframe-hpc.readthedocs.io/en/stable/deferrable_functions_reference.html#reframe.utility.sanity.assert_found
         return sn.assert_found(r'Sum of all ranks: %s' % sum_of_ranks, self.stdout)
 
