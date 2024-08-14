@@ -16,7 +16,7 @@ which makes it very easy to preview the result of the changes you make locally.
 
 * First, install ``mkdocs``:
 
-        pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
+        pip install mkdocs-material mkdocs-git-revision-date-localized-plugin mkdocs-macros-plugin mkdocs-redirects
 
 * Build the documentation:
 
