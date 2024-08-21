@@ -321,11 +321,18 @@ There may be other hooks that facilitate valid system selection for your tests, 
 
 When developing the test, we don't know how much memory the node will have on which it will run. However, we _do_ know how much our application _needs_.
 
-We can declare this need using the `req_memory_per_node` hook. This hook is mandatory for all tests. If you are on a system with a scheduler that runs jobs within a cgroup, getting the memory consumption is easy. You can (temporarily) add the following to the class body of your test:
+We can declare this need using the `req_memory_per_node` hook. This hook is mandatory for all tests. If you are on a system with a scheduler that runs jobs within a cgroup and where you can use `mpirun` as the parallel launcher command in the ReFrame configuration, getting the memory consumption is easy. You can (temporarily) add a `postrun_cmds` the following to the class body of your test that extracts the maximum memory that was used within your cgroup. For cgroups v1, the syntax would be:
 
 ```python
    # Temporarily define postrun_cmds to make it easy to find out memory usage
     postrun_cmds = ['MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
+```
+
+For cgroups v2, the syntax would be:
+
+```python
+   # Temporarily define postrun_cmds to make it easy to find out memory usage
+   postrun_cmds = ['MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/$(</proc/self/cpuset)/memory.peak)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
 ```
 
 And define an additional `performance_function`:
@@ -367,6 +374,18 @@ P: max_mem_in_mib: 403 MiB (r:0, l:None, u:None)
 [       OK ] (13/13) EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_core /aa83ba9e @snellius:genoa+default
 P: max_mem_in_mib: 195 MiB (r:0, l:None, u:None)
 ```
+
+!!! note
+    If, for some reason, you cannot use `mpirun` as the parallel launcher, but have to use the schedulers parallel launcher (e.g. `srun` for SLURM), you cannot directly use the `postrun_cmds` approach above. The reason is that `srun` creates its own cgroup, so the application you are testing runs in that cgroup, while the `postrun_cmds` will run in the cgroup of the parent job. A workaround is to generate the job scripts for your test with ReFrame's `--dry-run` argument, and then manually adapt the line that launches your application to
+    ```bash
+    srun bash -c '<my_program> && MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes) && echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"'
+    ```
+    for cgroups v1, or
+    ```bash
+    srun bash -c '<my_program> && MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/$(</proc/self/cpuset)/memory.peak) && echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"'
+    ```
+    for cgroups v2.
+    This way, the parallel launcher (`srun`) creates a new cgroup in which it will run _both_ your program, as well as check the maximum memory usage _in that same cgroup_.
 
 If you are _not_ on a system where your scheduler runs jobs in cgroups, you will have to figure out the memory consumption in another way (e.g. by checking memory usage in `top` while running the test).
 
