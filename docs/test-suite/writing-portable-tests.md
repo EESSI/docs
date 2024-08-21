@@ -12,7 +12,7 @@ In this tutorial, you will learn how to write a test for the [EESSI test suite](
 - Regular (e.g. daily) runs, on a set of HPC clusters, to identify performance regressions
 - By an end-user of EESSI, who runs either a specific test or the full test suite, to validate the functionality of EESSI (or a particular software in EESSI) on the end-user's system
 
-The test suite will contain a combination of real-life use cases for end-user scientific software (e.g. tests for GROMACS, TensorFlow, CP2K, OpenFOAM, etc) and low level tests (e.g. OSU Microbenchmarks).
+The test suite contains a combination of real-life use cases for end-user scientific software (e.g. tests for GROMACS, TensorFlow, CP2K, OpenFOAM, etc) and low level tests (e.g. OSU Microbenchmarks).
 
 The tests in the EESSI test suite are developed using the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/). Typically, ReFrame tests hardcode system specific information (core counts, performance references, etc) in the test definition. The EESSI test suite aims to be portable, and implements a series of standard [hooks](#REFERENCE_TO_HOOKS_API_DOCS) to replace information that is typically hardcoded. All system-specific information is then limited to the ReFrame configuration file. As an example: rather than hardcoding that a test should run with 128 tasks (i.e. because a system has 128 core nodes), the EESSI test suite has a hook that can define a test should be run on a "single, full node". The hook queries the ReFrame configuration file for the amount of cores per node, and specifies this number as the corresponding amount of tasks. Thus, on a 64-core node, this test would run with 64 tasks, while on a 128-core node, it would run 128 tasks.
 
@@ -21,7 +21,7 @@ The tests in the EESSI test suite are developed using the [ReFrame HPC testing f
 To be useful in the aforementioned scenarios, tests need to satisfy a number of requirements. 
 
 - Tests are implemented in the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/).
-- Multiple test cases may be implemented for a single software package.
+- Multiple tests may be implemented for a single software package.
 - Tests should run in a reasonable amount of time (less than 1 hour) for all the scales for which it is defined to be valid.
 - There should be at least one light test case that can be run in less then ~5 minutes. This test should be marked with the 'CI' tag.
 - Tests should only use a reasonable amount of memory, so that _most_ systems will be able to run them. For low core counts (1-4 cores), 8-16 GB is reasonable. For higher core counts, keeping a memory usage to less than 1 GB/core will ensure that _mosts_ systems will be able to run it.
@@ -29,9 +29,9 @@ To be useful in the aforementioned scenarios, tests need to satisfy a number of 
 
 ## Step-by-step tutorial for writing a portable ReFrame test
 
-In the next section, we will show how to write a test for the EESSI test suite by means of an example: we will create a test for [mpi4py](https://mpi4py.readthedocs.io/en/stable/) that executes an `MPI_REDUCE` to sum the ranks of all processes. If you're unfamiliar with MPI or `mpi4py`, or want to see the exact code this test will run, you may want to read [Background of the mpi4py test](#background-of-mpi4py-test) before proceeding. The complete test developed in this tutorial can be found in the `tutorials/mpi4py` directory in  of the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
+In the next section, we will show how to write a test for the EESSI test suite by means of an example: we will create a test for [mpi4py](https://mpi4py.readthedocs.io/en/stable/) that executes an `MPI_REDUCE` call to sum the ranks of all processes. If you're unfamiliar with MPI or `mpi4py`, or want to see the exact code this test will run, you may want to read [Background of the mpi4py test](#background-of-mpi4py-test) before proceeding. The complete test developed in this tutorial can be found in the `tutorials/mpi4py` directory in  of the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
 
-### Step 1: writing job scripts to execute test
+### Step 1: writing job scripts to execute tests
 Although not strictly needed for the implementation of a ReFrame test, it is useful to try and write a job script for how you would want to run this test on a given system. For example, on a system with 128-core nodes, managed by SLURM, we might have the following job scripts to execute the `mpi4py_reduce.py` code.
 
 To run on 2 cores:
@@ -66,7 +66,7 @@ module load mpi4py/3.1.5-gompi-2023b
 mpirun -np 256 python3 mpi4py_reduce.py --n_iter 1000 --n_warmup 100
 ```
 
-Clearly, such job scripts are not very portable: these only work on SLURM systems, we had to duplicate a lot to run on different scales, we would have to duplicate even more if we wanted to run test `mpi4py` versions, etc. This is where `ReFrame` comes in: it has support for different schedulers, and allows one to easily specify a range of parameters (such as the number of tasks in the above example) to create tests for.
+Clearly, such job scripts are not very portable: these only work on SLURM systems, we had to duplicate a lot to run on different scales, we would have to duplicate even more if we wanted to test multiple `mpi4py` versions, etc. This is where `ReFrame` comes in: it has support for different schedulers, and allows one to easily specify a range of parameters (such as the number of tasks in the above example) to create tests for.
 
 ### Step 2: implementing as a non-portable ReFrame test
 First, let us implement this as a non-portable test in ReFrame. This code can be found under `tutorials/mpi4py/mpi4py_system_specific.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository. We will not elaborate on how to write ReFrame tests, it is well-documented in the official [ReFrame documentation](https://reframe-hpc.readthedocs.io/en/stable/index.html). We have put extensive comments in the test definition below, to make it easier to understand when you have limited familiarity with ReFrame. Whenever the variables below have a specific meaning in ReFrame, we referenced the official documentation:
@@ -170,7 +170,7 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest):
 
 This single test class will generate 6 test instances: tests with 2, 128 and 256 tasks for each of the two modules, respectively. It will check the sum of ranks produced at the end in the output, which is how ReFrame will validate that the test ran correctly. Finally, it will also print the performance number that was extracted by the `performance_function`.
 
-This test _works_, but is _not_ very portable. If we move to a system with 192 cores per node, the current `scale` parameter is a bit awkward. The test would still run, but we wouldn't have a test instance that just tests this on a full (single) node or a full two nodes. Furthermore, if we add a new `mpi4py` module in EESSI, we would have to alter the test to add the name to the list, since the module names are hardcoded in this test.
+This test _works_, but is _not_ very portable. If we move to a system with 192 cores per node, the current `scale` parameter is a bit awkward. The test would still run, but we wouldn't have a test instance that just tests this on a full (single) node or two full nodes. Furthermore, if we add a new `mpi4py` module in EESSI, we would have to alter the test to add the name to the list, since the module names are hardcoded in this test.
 
 ### Step 3: implementing as a portable ReFrame test { #as-portable-reframe-test }
 
@@ -239,7 +239,7 @@ from eessi.testsuite.constants import SCALES, COMPUTE_UNIT, CPU
         hooks.assign_tasks_per_compute_unit(self, COMPUTE_UNIT[CPU])
 ```
 
-The first hook ([set_tag_scale](TODO: API reference)) sets a number of custom attributes for the current test, based on the scale (`self.num_nodes`, `self.default_num_cpus_per_node`, `self.default_num_gpus_per_node`, `self.node_part`). These are not used by ReFrame, but can be used by later hooks from the EESSI test suite. It also sets a ReFrame `tag` for convenience. These are useful for quick test selection, e.g. by running ReFrame with `--tag 1_node` one would only run the tests generated for the scale `1_node`. Calling this hook is mandatory for all tests, as it will ensure standardization of tag names based on the scales.
+The first hook ([set_tag_scale](TODO: API reference)) sets a number of custom attributes for the current test, based on the scale (`self.num_nodes`, `self.default_num_cpus_per_node`, `self.default_num_gpus_per_node`, `self.node_part`). These are not used by ReFrame, but can be used by later hooks from the EESSI test suite. It also sets a ReFrame scale `tag` for convenience. These scale `tag`s are useful for quick test selection, e.g. by running ReFrame with `--tag 1_node` one would only run the tests generated for the scale `1_node`. Calling this hook is mandatory for all tests, as it ensures standardization of tag names based on the scales.
 
 The second hook, `assign_tasks_per_compute_unit`, is used to set the task count. This hook sets the `self.num_tasks` and `self.num_tasks_per_node` we hardcoded before. In addition, it sets the `self.num_cpus_per_task`. In this case, we call it with the `COMPUTE_UNIT[CPU]` argument, which means one task will be launched per (physical) CPU available. Thus, for the `1_node` scale, this would run the `mpi4py` test with 128 tasks on a 128-core node, and with 192 tasks on a 192-core node. Check the [API reference](TODO) for other valid `COMPUTE_UNIT`'s.
 
@@ -297,7 +297,7 @@ from eessi.testsuite.constants import FEATURES, GPU, GPU_VENDOR, GPU_VENDORS, NV
 valid_systems = f'+{FEATURES[GPU]} %{GPU_VENDOR}={GPU_VENDORS[NVIDIA]}'
 ```
 
-which will make sure that a test instance is only generated for partitions in the ReFrame configuration file that specify that they _have_ the corresponding feature and extras:
+which makes sure that a test instance is only generated for partitions (as defined in the ReFrame configuration file) that specify that they _have_ the corresponding feature and extras:
 
 ```python
 from eessi.testsuite.constants import FEATURES, GPU, GPU_VENDOR, GPU_VENDORS, NVIDIA
@@ -312,7 +312,7 @@ from eessi.testsuite.constants import FEATURES, GPU, GPU_VENDOR, GPU_VENDORS, NV
 
 In practice, one will rarely hard-code this `valid_systems` string. Instead, we have a hook [filter_valid_systems_by_device_type](TODO API REF). It does the above, and a bit more: it also checks if the module that the test is generated for is CUDA-enabled (in case of a test for `NVIDIA` GPUs), and _only then_ will it generate a GPU-based test. Calling this hook is mandatory for all tests (even if just to declare they need a CPU to run).
 
-Another aspect is that not all systems may be able to run tests of all of the standard `SCALES`. Thus, a test can also declare it needs a certain _scale_. I.e. a test for the `16_nodes` scale clearly needs a partition with at least 16 nodes. This is taken care of by the [filter_supported_scales](TODO API REF) hook. Calling this hook is also mandatory for all tests.
+Another aspect is that not all ReFrame partitions may be able to run tests of all of the standard `SCALES`. Each ReFrame partition must add the subset of `SCALES` it supports to its list of features.  A test case can declare it needs a certain scale. For example, a test case using the `16_nodes` scale needs a partition with at least 16 nodes. The [filter_supported_scales](TODO API REF) hook then filters out all partitions that do not support running jobs on 16 nodes. Calling this hook is also mandatory for all tests.
 
 There may be other hooks that facilitate valid system selection for your tests, but please check the [API documentation](TODO: INSERT REFERENCE TO API DOCS) for a full list.
 
@@ -369,7 +369,7 @@ P: max_mem_in_mib: 195 MiB (r:0, l:None, u:None)
 
 If you are _not_ on a system where your scheduler runs jobs in cgroups, you will have to figure out the memory consumption in another way (e.g. by checking memory usage in `top` while running the test).
 
-We now have a pretty good idea how the memory per node scales: for our smallest process counts (1 core), it's about 200 MiB per process, while for our largest process counts (16 nodes, 16*192 processes), it's 22018 MiB per node (or about 115 MiB per process). If we wanted to do really well, we could define a linear function (with offset) and fit it through the data (and round up to be on the safe side, i.e. make sure there is _enough_ memory). Then, we could call the hook like this:
+We now have a pretty good idea how the memory per node scales: for our smallest process count (1 core), it's about 200 MiB per process, while for our largest process count (16 nodes, 16*192 processes), it's 22018 MiB per node (or about 115 MiB per process). If we wanted to do really well, we could define a linear function (with offset) and fit it through the data (and round up to be on the safe side, i.e. make sure there is _enough_ memory). Then, we could call the hook like this:
 
 ```python
 @run_after('setup')
@@ -378,7 +378,7 @@ def request_mem(self):
     hooks.req_memory_per_node(self, app_mem_req=mem_required)
 ```
 
-In this case, however, the memory consumption is so low per process that we won't go through that effort, and simply request 256 MiB per task that is launched on a node. Thus, we call our hook using:
+In this case, however, the memory consumption per process is low enough that we don't have go through that effort, and generously request 256 MiB per task that is launched on a node. Thus, we call our hook using:
 
 ```python
 @run_after('setup')
@@ -388,7 +388,7 @@ def request_mem(self):
 ```
 Note that requesting too high an amount of memory means the test will be skipped on nodes that cannot meet that requirement (even if they might have been able to run it without _actually_ running out of memory). Requesting too little will risk nodes running out of memory while running the test. Note that many HPC systems have an amount memory of around 1-2 GB/core. It's good to ensure (if you can) that the memory requests for all valid `SCALES` for your test do not exceed the total amount of memory available on typical nodes.
 
-#### Requesting task and/or process binding (optional)
+#### Requesting task/process/thread binding (recommended)
 
 Binding processes to a set of cores prevents the OS from migrating such processes to other cores. Especially on multi-socket systems, process migration can cause performance hits, especially if a process is moved to a CPU core on the other socket. Since this is controlled by the OS, and dependent on what other processes are running on the node, it may cause unpredictable performance: in some runs, processes might be migrated, while in others, they aren't.
 
@@ -412,18 +412,18 @@ def set_binding(self):
     hooks.set_compact_thread_binding(self)
 ```
 
-The use of this hook is optional. Note that thread binding can sometimes cause unwanted behaviour: even if e.g. 8 cores are allocated to the process and 8 threads are launched, we have seen codes that bind all those threads to a single core (e.g. core 0) when core binding is enabled. Please verify that enabling core binding does not introduce any unwanted binding behaviour for your code.
+The use of this hook is optional but recommended in most cases. Note that thread binding can sometimes cause unwanted behaviour: even if e.g. 8 cores are allocated to the process and 8 threads are launched, we have seen codes that bind all those threads to a single core (e.g. core 0) when core binding is enabled. Please verify that enabling core binding does not introduce any unwanted binding behaviour for your code.
 
-#### Defining OMP_NUM_THREADS (optional)
+#### Defining OMP_NUM_THREADS (recommended)
 
 The `set_omp_num_threads` hook sets the `OMP_NUM_THREADS` environment variable based on the number of `cpus_per_task` defined in the ReFrame test (which in turn is typically set by the `assign_tasks_per_compute_unit` hook). For OpenMP codes, it is generally recommended to call this hook, to ensure they launch the correct amount of threads.
 
 #### Skipping tests instances when required (optional)
-Preferably, we prevent test instances from being generated (i.e. before ReFrame's `setup` phase) if we know that they cannot run on a certain system. However, sometimes we need information on the nodes that will run it, which is only available _after_ the `setup` phase. That is the case for anything where we need information from e.g. the [reframe.core.pipeline.RegressionTest.current_partition](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.current_partition). The `assign_tasks_per_compute_unit` hook for example needs uses this property to get the core count of a node, and thus needs to be executed after the `setup` phase.
+Preferably, we prevent test instances from being generated (i.e. before ReFrame's `setup` phase) if we know that they cannot run on a certain system. However, sometimes we need information on the nodes that will run it, which is only available _after_ the `setup` phase. That is the case for anything where we need information from e.g. the [reframe.core.pipeline.RegressionTest.current_partition](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.current_partition). The `assign_tasks_per_compute_unit` hook for example uses this property to get the core count of a node, and thus needs to be executed after the `setup` phase.
 
-For example, we might know that a test case only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called. E.g. the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
+For example, we might know that a test only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called. E.g. the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
 
-We can skip any generated test instances using the `skip_if` function. E.g. to skip the test if the total task count exceeds 300, we'd need to call `skip_if` _after_ the task count has been set by `assign_tasks_per_compute_unit`:
+We can skip any generated test cases using the `skip_if` function. E.g. to skip the test if the total task count exceeds 300, we'd need to call `skip_if` _after_ the task count has been set by `assign_tasks_per_compute_unit`:
 
 ```python
 @run_after('setup')
@@ -466,7 +466,7 @@ The MPI standard defines how to communicate between multiple processes that work
 An example of such a collective operation is the [MPI_REDUCE](https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report/node130.htm#Node130) call. It reduces data elements from multiple processes with a certain operation, e.g. it takes the sum of all elements or multiplication of all elements.
 
 #### The mpi4py test
-In this example, we will implement a test that does an `MPI_Reduce` on the rank, using the sum operation. This makes it easy to validate the result, as we know that for N processes, the theoretical sum of all ranks (0, 1, ... N-1) is `(N * (N-1) / 2)`.
+In this example, we will implement a test that does an `MPI_Reduce` on the rank, using the `MPI.SUM` operation. This makes it easy to validate the result, as we know that for N processes, the theoretical sum of all ranks (0, 1, ... N-1) is `(N * (N-1) / 2)`.
 
 Our initial code is a python script `mpi4py_reduce.py`, which can be found in `tutorials/mpi4py/src/mpi4py_reduce.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository:
 ```python
@@ -523,4 +523,4 @@ Sum of all ranks: 6
 Time elapsed: 3.609e-06
 ```
 
-This started 4 processes, with ranks 0, 1, 2, 3, and then summed all the ranks (`0+1+2+3=6`) on the process with rank 0, which finally printed all this output. The whole reduction operation is performed `n_iter` times, so that we get a more accurate timing.
+This started 4 processes, with ranks 0, 1, 2, 3, and then summed all the ranks (`0+1+2+3=6`) on the process with rank 0, which finally printed all this output. The whole reduction operation is performed `n_iter` times, so that we get a more reproducible timing.
