@@ -22,9 +22,9 @@ To be useful in the aforementioned scenarios, tests need to satisfy a number of 
 
 - Tests are implemented in the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/).
 - Multiple tests may be implemented for a single software package.
-- Tests should run in a reasonable amount of time (less than 1 hour) for all the scales for which it is defined to be valid.
-- There should be at least one light test case that can be run in less then ~5 minutes. This test should be marked with the 'CI' tag.
-- Tests should only use a reasonable amount of memory, so that _most_ systems will be able to run them. For low core counts (1-4 cores), 8-16 GB is reasonable. For higher core counts, keeping a memory usage to less than 1 GB/core will ensure that _mosts_ systems will be able to run it.
+- Tests should run in a reasonable amount of time (less than 1 hour) for all the scales for which it is defined to be valid (on a recent CPU/GPU).
+- There should be at least one light-weight (short, low-core, low-memory) test case. On a decently sized machine (in 2024, that means about 8 cores and 16 GB memory), this test case should run in less than 5 minutes. This test should be marked with the 'CI' tag.
+- Tests should only use a reasonable amount of memory, so that _most_ systems will be able to run them. For low core counts (1-8 cores), 8-16 GB is reasonable. For higher core counts, keeping a memory usage to less than 1 GB/core will ensure that _mosts_ systems will be able to run it.
 - Tests should be portable, meaning they should not contain any system-specific information. If assumptions are made that might not be satisfied on every system (e.g. a test needs at least X cores to run), the test should check for it, and be skipped if the system does not satisfy the requirement.
 
 ## Step-by-step tutorial for writing a portable ReFrame test
