@@ -48,6 +48,7 @@ To run on one full node:
 ```
 #!/bin/bash
 #SBATCH --ntasks=128  # 2 tasks, since 2 processes is the minimal size on which I can do a reduction
+#SBATCH --ntasks-per-node=128
 #SBATCH --cpus-per-task=1  # 1 core per task (this is a pure multiprocessing test, each process only uses 1 thread)
 #SBATCH --time=5:00  # This test is very fast. It shouldn't need more than 5 minutes
 source /cvmfs/software.eessi.io/versions/2023.06/init/bash
