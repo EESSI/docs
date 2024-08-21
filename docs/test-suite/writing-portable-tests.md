@@ -325,14 +325,14 @@ We can declare this need using the `req_memory_per_node` hook. This hook is mand
 
 ```python
    # Temporarily define postrun_cmds to make it easy to find out memory usage
-    postrun_cmds = ['MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
+    postrun_cmds = ['MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
 ```
 
 For cgroups v2, the syntax would be:
 
 ```python
    # Temporarily define postrun_cmds to make it easy to find out memory usage
-   postrun_cmds = ['MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/$(</proc/self/cpuset)/memory.peak)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
+   postrun_cmds = ['MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/$(</proc/self/cpuset)/memory.peak)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
 ```
 
 And define an additional `performance_function`:
@@ -378,11 +378,11 @@ P: max_mem_in_mib: 195 MiB (r:0, l:None, u:None)
 !!! note
     If, for some reason, you cannot use `mpirun` as the parallel launcher, but have to use the schedulers parallel launcher (e.g. `srun` for SLURM), you cannot directly use the `postrun_cmds` approach above. The reason is that `srun` creates its own cgroup, so the application you are testing runs in that cgroup, while the `postrun_cmds` will run in the cgroup of the parent job. A workaround is to generate the job scripts for your test with ReFrame's `--dry-run` argument, go into the staging directory ReFrame created, manually adapt the line that launches your application to
     ```bash
-    srun bash -c '<my_program> && MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes) && echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"'
+    srun bash -c '<my_program> && MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes) && echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"'
     ```
     for cgroups v1, or
     ```bash
-    srun bash -c '<my_program> && MAX_MEM_IN_BYTES=$(cat /sys/fs/cgroup/$(</proc/self/cpuset)/memory.peak) && echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"'
+    srun bash -c '<my_program> && MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/$(</proc/self/cpuset)/memory.peak) && echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"'
     ```
     for cgroups v2, and then launch your batch job manually.
     This way, the parallel launcher (`srun`) creates a new cgroup in which it will run _both_ your program, as well as check the maximum memory usage _in that same cgroup_.
