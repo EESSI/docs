@@ -2,8 +2,8 @@ name: Update overview of available software in EESSI
 on:
   workflow_dispatch:
   schedule:
-    # run every 4 hours
-    - cron: '0 */4 * * *'
+    # run twice a day (noon + midnight)
+    - cron: '0 */12 * * *'
 jobs:
   update_available_software:
     if: github.repository_owner == 'EESSI'   # Prevent running on forks
