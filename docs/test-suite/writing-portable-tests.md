@@ -375,18 +375,6 @@ P: max_mem_in_mib: 403 MiB (r:0, l:None, u:None)
 P: max_mem_in_mib: 195 MiB (r:0, l:None, u:None)
 ```
 
-!!! note
-    If, for some reason, you cannot use `mpirun` as the parallel launcher, but have to use the schedulers parallel launcher (e.g. `srun` for SLURM), you cannot directly use the `postrun_cmds` approach above. The reason is that `srun` creates its own cgroup, so the application you are testing runs in that cgroup, while the `postrun_cmds` will run in the cgroup of the parent job. A workaround is to generate the job scripts for your test with ReFrame's `--dry-run` argument, go into the staging directory ReFrame created, manually adapt the line that launches your application to
-    ```bash
-    srun bash -c '<my_program> && MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes) && echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"'
-    ```
-    for cgroups v1, or
-    ```bash
-    srun bash -c '<my_program> && MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/$(</proc/self/cpuset)/memory.peak) && echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"'
-    ```
-    for cgroups v2, and then launch your batch job manually.
-    This way, the parallel launcher (`srun`) creates a new cgroup in which it will run _both_ your program, as well as check the maximum memory usage _in that same cgroup_.
-
 If you are _not_ on a system where your scheduler runs jobs in cgroups, you will have to figure out the memory consumption in another way (e.g. by checking memory usage in `top` while running the test).
 
 We now have a pretty good idea how the memory per node scales: for our smallest process count (1 core), it's about 200 MiB per process, while for our largest process count (16 nodes, 16*192 processes), it's 22018 MiB per node (or about 115 MiB per process). If we wanted to do really well, we could define a linear function (with offset) and fit it through the data (and round up to be on the safe side, i.e. make sure there is _enough_ memory). Then, we could call the hook like this:
