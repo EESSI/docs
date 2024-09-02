@@ -321,18 +321,18 @@ There may be other hooks that facilitate valid system selection for your tests, 
 
 When developing the test, we don't know how much memory the node will have on which it will run. However, we _do_ know how much our application _needs_.
 
-We can declare this need using the `req_memory_per_node` hook. This hook is mandatory for all tests. If you are on a system with a scheduler that runs jobs within a cgroup and where you can use `mpirun` as the parallel launcher command in the ReFrame configuration, getting the memory consumption is easy. You can (temporarily) add a `postrun_cmds` the following to the class body of your test that extracts the maximum memory that was used within your cgroup. For cgroups v1, the syntax would be:
+We can declare this need using the `req_memory_per_node` hook. This hook is mandatory for all tests. If you are on a system with a scheduler that runs jobs within a cgroup and where you can use `mpirun` or `srun` as the parallel launcher command in the ReFrame configuration, getting the memory consumption is easy. You can (temporarily) add a `postrun_cmds` the following to the class body of your test that extracts the maximum memory that was used within your cgroup. For cgroups v1, the syntax would be:
 
 ```python
    # Temporarily define postrun_cmds to make it easy to find out memory usage
-    postrun_cmds = ['MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/memory/$(</proc/self/cpuset)/memory.max_usage_in_bytes)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
+    postrun_cmds = ['MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/memory/$(</proc/self/cpuset)/../memory.max_usage_in_bytes)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
 ```
 
 For cgroups v2, the syntax would be:
 
 ```python
    # Temporarily define postrun_cmds to make it easy to find out memory usage
-   postrun_cmds = ['MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/$(</proc/self/cpuset)/memory.peak)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
+   postrun_cmds = ['MAX_MEM_IN_BYTES=$(</sys/fs/cgroup/$(</proc/self/cpuset)/../../../memory.peak)', 'echo "MAX_MEM_IN_MIB=$(($MAX_MEM_IN_BYTES/1048576))"']
 ```
 
 And define an additional `performance_function`:
