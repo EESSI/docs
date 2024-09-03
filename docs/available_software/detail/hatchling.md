@@ -39,4 +39,4 @@ editables-0.5, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0
 
 This is a list of extensions included in the module:
 
-editables-0.3, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0, pathspec-0.11.1, pluggy-1.2.0, trove_classifiers-2023.5.24
+editables-0.3, hatch-requirements-txt-0.4.1, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0, pathspec-0.11.1, pluggy-1.2.0, trove_classifiers-2023.5.24
