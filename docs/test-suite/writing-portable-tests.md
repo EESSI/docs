@@ -100,6 +100,9 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest):
     valid_systems = ['snellius']
 
     # ReFrame will generate a test for each module
+    # NOTE: each parameter adds a new dimension to the parametrization space. 
+    # (EG 4 parameters with (3,3,2,2) possible values will result in 36 tests).
+    # Be mindful of how many parameters you add to avoid the number of tests generated being excessive.
     # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.builtins.parameter
     module_name = parameter(['mpi4py/3.1.4-gompi-2023a', 'mpi4py/3.1.5-gompi-2023b'])
 
