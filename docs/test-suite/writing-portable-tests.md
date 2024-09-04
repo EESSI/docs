@@ -469,6 +469,10 @@ The `mpi4py` scales almost indefinitely, but if we were to set it for the sake o
 ```
 on a system with 192 cores per node. I.e. any test of 2 nodes (384 cores) or above would be skipped because it exceeds our max task count.
 
+**NOTE**: The order in which [ReFrame pipeline hooks](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#pipeline-hooks) (methods decorated with `run_after` or `run_before`) are called is the same in which they are attached/defined.
+This is important in case we want to call hooks for the same stage (`init`/`setup`/...) in different functions (for cleanliness of the code or any other reason).
+For example, any pipeline hook attached to the `setup` step making use of `self.num_tasks`, should be defined after the function calling the test-suite hook `assign_tasks_per_compute_unit`
+
 ### Background of the mpi4py test { #background-of-mpi4py-test }
 To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
 
