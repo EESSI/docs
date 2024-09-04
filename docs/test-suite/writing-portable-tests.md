@@ -14,7 +14,7 @@ In this tutorial, you will learn how to write a test for the [EESSI test suite](
 
 The test suite contains a combination of real-life use cases for end-user scientific software (e.g. tests for GROMACS, TensorFlow, CP2K, OpenFOAM, etc) and low level tests (e.g. OSU Microbenchmarks).
 
-The tests in the EESSI test suite are developed using the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/). Typically, ReFrame tests hardcode system specific information (core counts, performance references, etc) in the test definition. The EESSI test suite aims to be portable, and implements a series of standard [hooks](#REFERENCE_TO_HOOKS_API_DOCS) to replace information that is typically hardcoded. All system-specific information is then limited to the ReFrame configuration file. As an example: rather than hardcoding that a test should run with 128 tasks (i.e. because a system has 128 core nodes), the EESSI test suite has a hook that can define a test should be run on a "single, full node". The hook queries the ReFrame configuration file for the amount of cores per node, and specifies this number as the corresponding amount of tasks. Thus, on a 64-core node, this test would run with 64 tasks, while on a 128-core node, it would run 128 tasks.
+The tests in the EESSI test suite are developed using the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/). Typically, ReFrame tests hardcode system specific information (core counts, performance references, etc) in the test definition. The EESSI test suite aims to be portable, and implements a series of standard [hooks](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) to replace information that is typically hardcoded. All system-specific information is then limited to the ReFrame configuration file. As an example: rather than hardcoding that a test should run with 128 tasks (i.e. because a system has 128 core nodes), the EESSI test suite has a hook that can define a test should be run on a "single, full node". The hook queries the ReFrame configuration file for the amount of cores per node, and specifies this number as the corresponding amount of tasks. Thus, on a 64-core node, this test would run with 64 tasks, while on a 128-core node, it would run 128 tasks.
 
 ## Test requirements
 
@@ -58,7 +58,7 @@ mpirun -np 128 python3 mpi4py_reduce.py --n_iter 1000 --n_warmup 100
 To run on two full nodes
 ```shell
 #!/bin/bash
-#SBATCH --ntasks=256 # 2 tasks, since 2 processes is the minimal size on which I can do a reduction
+#SBATCH --ntasks=256 # min. 2 tasks in total, since 2 processes is the minimal size on which I can do a reduction
 #SBATCH --ntasks-per-node=128 
 #SBATCH --cpus-per-task=1  # 1 core per task (this is a pure multiprocessing test, each process only uses 1 thread)
 #SBATCH --time=5:00  # This test is very fast. It shouldn't need more than 5 minutes
@@ -198,7 +198,7 @@ from eessi.testsuite.constants import SCALES
     scale = parameter(SCALES.keys())
 ```
 
-the `SCALES` constant (TODO: API reference) contains a set of default scales at which we run all tests. For our `mpi4py` example, that is sufficient. 
+the `SCALES` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) contains a set of default scales at which we run all tests. For our `mpi4py` example, that is sufficient. 
 
 !!! note
     It might be that particular tests do not make sense at certain scales. An example is code that only has multithreading, but no multiprocessing support, and is thus only able to run on a single node. In that case, we filter the set of `SCALES` down to only those where `num_nodes = 1`, and parameterize the test across those scales:
@@ -243,9 +243,9 @@ from eessi.testsuite.constants import SCALES, COMPUTE_UNIT, CPU
         hooks.assign_tasks_per_compute_unit(self, COMPUTE_UNIT[CPU])
 ```
 
-The first hook ([set_tag_scale](TODO: API reference)) sets a number of custom attributes for the current test, based on the scale (`self.num_nodes`, `self.default_num_cpus_per_node`, `self.default_num_gpus_per_node`, `self.node_part`). These are not used by ReFrame, but can be used by later hooks from the EESSI test suite. It also sets a ReFrame scale `tag` for convenience. These scale `tag`s are useful for quick test selection, e.g. by running ReFrame with `--tag 1_node` one would only run the tests generated for the scale `1_node`. Calling this hook is mandatory for all tests, as it ensures standardization of tag names based on the scales.
+The first [hook](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) (`set_tag_scale`) sets a number of custom attributes for the current test, based on the scale (`self.num_nodes`, `self.default_num_cpus_per_node`, `self.default_num_gpus_per_node`, `self.node_part`). These are not used by ReFrame, but can be used by later hooks from the EESSI test suite. It also sets a ReFrame scale `tag` for convenience. These scale `tag`s are useful for quick test selection, e.g. by running ReFrame with `--tag 1_node` one would only run the tests generated for the scale `1_node`. Calling this hook is mandatory for all tests, as it ensures standardization of tag names based on the scales.
 
-The second hook, `assign_tasks_per_compute_unit`, is used to set the task count. This hook sets the `self.num_tasks` and `self.num_tasks_per_node` we hardcoded before. In addition, it sets the `self.num_cpus_per_task`. In this case, we call it with the `COMPUTE_UNIT[CPU]` argument, which means one task will be launched per (physical) CPU available. Thus, for the `1_node` scale, this would run the `mpi4py` test with 128 tasks on a 128-core node, and with 192 tasks on a 192-core node. Check the [API reference](TODO) for other valid `COMPUTE_UNIT`'s.
+The second hook, `assign_tasks_per_compute_unit`, is used to set the task count. This hook sets the `self.num_tasks` and `self.num_tasks_per_node` we hardcoded before. In addition, it sets the `self.num_cpus_per_task`. In this case, we call it with the `COMPUTE_UNIT[CPU]` argument, which means one task will be launched per (physical) CPU available. Thus, for the `1_node` scale, this would run the `mpi4py` test with 128 tasks on a 128-core node, and with 192 tasks on a 192-core node. Check the [code](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) for other valid `COMPUTE_UNIT`'s.
 
 #### Replacing hard-coded module names (mandatory)
 
@@ -314,11 +314,11 @@ from eessi.testsuite.constants import FEATURES, GPU, GPU_VENDOR, GPU_VENDORS, NV
 },
 ```
 
-In practice, one will rarely hard-code this `valid_systems` string. Instead, we have a hook [filter_valid_systems_by_device_type](TODO API REF). It does the above, and a bit more: it also checks if the module that the test is generated for is CUDA-enabled (in case of a test for `NVIDIA` GPUs), and _only then_ will it generate a GPU-based test. Calling this hook is mandatory for all tests (even if just to declare they need a CPU to run).
+In practice, one will rarely hard-code this `valid_systems` string. Instead, we have a [hook](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) `filter_valid_systems_by_device_type`. It does the above, and a bit more: it also checks if the module that the test is generated for is CUDA-enabled (in case of a test for `NVIDIA` GPUs), and _only then_ will it generate a GPU-based test. Calling this hook is mandatory for all tests (even if just to declare they need a CPU to run).
 
-Another aspect is that not all ReFrame partitions may be able to run tests of all of the standard `SCALES`. Each ReFrame partition must add the subset of `SCALES` it supports to its list of features.  A test case can declare it needs a certain scale. For example, a test case using the `16_nodes` scale needs a partition with at least 16 nodes. The [filter_supported_scales](TODO API REF) hook then filters out all partitions that do not support running jobs on 16 nodes. Calling this hook is also mandatory for all tests.
+Another aspect is that not all ReFrame partitions may be able to run tests of all of the standard `SCALES`. Each ReFrame partition must add the subset of `SCALES` it supports to its list of features.  A test case can declare it needs a certain scale. For example, a test case using the `16_nodes` scale needs a partition with at least 16 nodes. The `filter_supported_scales` [hook](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) then filters out all partitions that do not support running jobs on 16 nodes. Calling this hook is also mandatory for all tests.
 
-There may be other hooks that facilitate valid system selection for your tests, but please check the [API documentation](TODO: INSERT REFERENCE TO API DOCS) for a full list.
+There may be other hooks that facilitate valid system selection for your tests, but please check the [code](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) for a full list.
 
 #### Requesting sufficient memory (mandatory)
 
