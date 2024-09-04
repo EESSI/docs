@@ -35,7 +35,7 @@ In the next section, we will show how to write a test for the EESSI test suite b
 Although not strictly needed for the implementation of a ReFrame test, it is useful to try and write a job script for how you would want to run this test on a given system. For example, on a system with 128-core nodes, managed by SLURM, we might have the following job scripts to execute the `mpi4py_reduce.py` code.
 
 To run on 2 cores:
-```
+```shell
 #!/bin/bash
 #SBATCH --ntasks=2  # 2 tasks, since 2 processes is the minimal size on which I can do a reduction
 #SBATCH --cpus-per-task=1  # 1 core per task (this is a pure multiprocessing test, each process only uses 1 thread)
@@ -45,9 +45,9 @@ module load mpi4py/3.1.5-gompi-2023b
 mpirun -np 2 python3 mpi4py_reduce.py --n_iter 1000 --n_warmup 100
 ```
 To run on one full node:
-```
+```shell
 #!/bin/bash
-#SBATCH --ntasks=128  # 2 tasks, since 2 processes is the minimal size on which I can do a reduction
+#SBATCH --ntasks=128  # min. 2 tasks in total, since 2 processes is the minimal size on which I can do a reduction
 #SBATCH --ntasks-per-node=128
 #SBATCH --cpus-per-task=1  # 1 core per task (this is a pure multiprocessing test, each process only uses 1 thread)
 #SBATCH --time=5:00  # This test is very fast. It shouldn't need more than 5 minutes
@@ -56,7 +56,7 @@ module load mpi4py/3.1.5-gompi-2023b
 mpirun -np 128 python3 mpi4py_reduce.py --n_iter 1000 --n_warmup 100
 ```
 To run on two full nodes
-```
+```shell
 #!/bin/bash
 #SBATCH --ntasks=256 # 2 tasks, since 2 processes is the minimal size on which I can do a reduction
 #SBATCH --ntasks-per-node=128 
@@ -249,13 +249,13 @@ The second hook, `assign_tasks_per_compute_unit`, is used to set the task count.
 
 #### Replacing hard-coded module names (mandatory)
 
-If we write an `mpi4py` test, we typically want to run this for _all_ `mpi4py` modules that are currently on our `$MODULEPATH`. We do that by replacing
+If we write an `mpi4py` test, we typically want to run this for _all_ `mpi4py` modules that are available via our current `$MODULEPATH`. We do that by replacing
 
 ```python
     module_name = parameter(['mpi4py/3.1.4-gompi-2023a', 'mpi4py/3.1.5-gompi-2023b'])
 ```
 
-by
+by using the `find_modules` utility function:
 
 ```python
 from eessi.testsuite.utils import find_modules
@@ -279,7 +279,7 @@ by
         hooks.set_modules(self)
 ```
 
-This hook assumes that `self.module_name` has been set, but has the added advantage that a user running the EESSI test suite can overwrite the modules to load from the command line when running ReFrame (see [Overriding test parameters](https://www.eessi.io/docs/test-suite/usage/#overriding-test-parameters-advanced)).
+The `set_modules` hook assumes that `self.module_name` has been set, but has the added advantage that a user running the EESSI test suite can overwrite the modules to load from the command line when running ReFrame (see [Overriding test parameters](https://www.eessi.io/docs/test-suite/usage/#overriding-test-parameters-advanced)).
 
 #### Replacing hard-coded valid_systems (mandatory)
 
@@ -289,9 +289,9 @@ The `valid_systems` attribute is a mandatory attribute to specify in a ReFrame t
 valid_systems = [*]
 ```
 
-Normally, `valid_systems` is used as a way of guaranteeing that a system has the necessary properties to run the test. E.g. if we know that `my_gpu_system` has NVIDIA GPUs, and I have a test written for NVIDIA GPUs. I would specify `valid_systems['my_gpu_system']` for that test. This, however, is a surrogate for declaring what my test _needs_: I'm saying it needs `my_gpu_system`, while in fact I could make the more general statement 'this test needs NVIDIA GPUs'.
+Normally, `valid_systems` is used as a way of guaranteeing that a system has the necessary properties to run the test. For example, if we know that `my_gpu_system` has NVIDIA GPUs and I have a test written for NVIDIA GPUs, I would specify `valid_systems['my_gpu_system']` for that test. This, however, is a surrogate for declaring what my test _needs_: I'm saying it needs `my_gpu_system`, while in fact I could make the more general statement 'this test needs NVIDIA GPUs'.
 
-To keep the test system-agnostic we _can_ declare what the test needs by using ReFrame's concept of partition `features` (a string) and/or `extras` (a key-value pair) [see valid_systems documentation](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.valid_systems). E.g. a test could declare it _needs_ the `gpu` feature. Such a test will only be created by ReFrame for partitions that declare (in the ReFrame configuration file) that they have the `gpu` feature.
+To keep the test system-agnostic we _can_ declare what the test needs by using ReFrame's concept of partition `features` (a string) and/or `extras` (a key-value pair); [see the ReFrame documentation on `valid_systems`](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.valid_systems). For example, a test could declare it _needs_ the `gpu` feature. Such a test will only be created by ReFrame for partitions that declare (in the ReFrame configuration file) that they have the `gpu` feature.
 
 Since `features` and `extras` are full text fields, we standardize those in the EESSI test suite in the `eessi/testsuite/constants.py` file. For example, tests that require an NVIDIA GPU could specify
 
@@ -413,9 +413,9 @@ def set_binding(self):
 
 For pure MPI codes, it will bind rank 0 to core 0, rank 1 to core 1, etc. For hybrid codes (MPI + OpenMP, or otherwise codes that do both multiprocessing and multithreading at the same time), it will bind to consecuitive sets of cores. E.g. if a single process uses 4 cores, it will bind rank 0 to cores 0-3, rank 1 to cores 4-7, etc. 
 
-To impose this binding, the hook sets environment variables that should be respected by the parallel launcher used to launch your application. Check the [TODO: API Documentation] to see which parallel launchers are currently supported. The use of this hook is optional, but generally recommended for all multiprocessing codes.
+To impose this binding, the hook sets environment variables that should be respected by the parallel launcher used to launch your application. Check the [code](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) to see which parallel launchers are currently supported. The use of this hook is optional, but generally recommended for all multiprocessing codes.
 
-For multithreading codes, there `set_compact_thread_binding` hook is an equivalent hook that can do thread binding, if supported multithreading frameworks are used (e.g. Intel or GNU OpenMP, see the [TODO API documentation] for all supported frameworks):
+For multithreading codes, there `set_compact_thread_binding` hook is an equivalent hook that can do thread binding, if supported multithreading frameworks are used (e.g. Intel or GNU OpenMP, see the [code](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) for all supported frameworks):
 
 ```python
 @run_after('setup')
@@ -427,14 +427,14 @@ The use of this hook is optional but recommended in most cases. Note that thread
 
 #### Defining OMP_NUM_THREADS (recommended)
 
-The `set_omp_num_threads` hook sets the `OMP_NUM_THREADS` environment variable based on the number of `cpus_per_task` defined in the ReFrame test (which in turn is typically set by the `assign_tasks_per_compute_unit` hook). For OpenMP codes, it is generally recommended to call this hook, to ensure they launch the correct amount of threads.
+The `set_omp_num_threads` hook sets the `$OMP_NUM_THREADS` environment variable based on the number of `cpus_per_task` defined in the ReFrame test (which in turn is typically set by the `assign_tasks_per_compute_unit` hook). For OpenMP codes, it is generally recommended to call this hook, to ensure they launch the correct amount of threads.
 
 #### Skipping tests instances when required (optional)
 Preferably, we prevent test instances from being generated (i.e. before ReFrame's `setup` phase) if we know that they cannot run on a certain system. However, sometimes we need information on the nodes that will run it, which is only available _after_ the `setup` phase. That is the case for anything where we need information from e.g. the [reframe.core.pipeline.RegressionTest.current_partition](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.current_partition). The `assign_tasks_per_compute_unit` hook for example uses this property to get the core count of a node, and thus needs to be executed after the `setup` phase.
 
-For example, we might know that a test only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called. E.g. the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
+For example, we might know that a test only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called. For example, the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
 
-We can skip any generated test cases using the `skip_if` function. E.g. to skip the test if the total task count exceeds 300, we'd need to call `skip_if` _after_ the task count has been set by `assign_tasks_per_compute_unit`:
+We can skip any generated test cases using the `skip_if` function. For example, to skip the test if the total task count exceeds 300, we'd need to call `skip_if` _after_ the task count has been set by `assign_tasks_per_compute_unit`:
 
 ```python
 @run_after('setup')
@@ -469,9 +469,12 @@ The `mpi4py` scales almost indefinitely, but if we were to set it for the sake o
 ```
 on a system with 192 cores per node. I.e. any test of 2 nodes (384 cores) or above would be skipped because it exceeds our max task count.
 
-**NOTE**: The order in which [ReFrame pipeline hooks](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#pipeline-hooks) (methods decorated with `run_after` or `run_before`) are called is the same in which they are attached/defined.
-This is important in case we want to call hooks for the same stage (`init`/`setup`/...) in different functions (for cleanliness of the code or any other reason).
-For example, any pipeline hook attached to the `setup` step making use of `self.num_tasks`, should be defined after the function calling the test-suite hook `assign_tasks_per_compute_unit`
+!!! note
+    The order in which [ReFrame pipeline hooks](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#pipeline-hooks) (methods decorated with `run_after` or `run_before`) are called is the same in which they are attached/defined.
+
+    This is important in case we want to call hooks for the same stage (`init`/`setup`/...) in different functions (for cleanliness of the code or any other reason).
+
+    For example, any pipeline hook attached to the `setup` step making use of `self.num_tasks`, should be defined after the function calling the test-suite hook `assign_tasks_per_compute_unit`.
 
 ### Background of the mpi4py test { #background-of-mpi4py-test }
 To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
