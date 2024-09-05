@@ -217,6 +217,10 @@
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Critic2/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Cython/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
@@ -385,6 +389,10 @@
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/HPL/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/HTSlib/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
@@ -510,6 +518,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/MAFFT/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/MBX/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
@@ -789,6 +801,10 @@
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Ruby/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Rust/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
@@ -810,6 +826,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/SIP/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/SQLAlchemy/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
@@ -870,6 +890,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Tkinter/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Transrate/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
@@ -1013,11 +1037,19 @@
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/colorize/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/cpio/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/cppy/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/crb-blast/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
@@ -1105,6 +1137,10 @@
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/geopandas/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/gfbf/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
@@ -1146,6 +1182,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/gzip/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/h5netcdf/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
@@ -1206,6 +1246,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/libcerf/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/libcint/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
@@ -1445,6 +1489,10 @@
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/psycopg2/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/pyMBE/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
@@ -1569,6 +1617,10 @@
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/wradlib/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/wrapt/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
@@ -1594,6 +1646,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/xxd/</loc>
+         <lastmod>2024-09-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/yell/</loc>
          <lastmod>2024-09-05</lastmod>
     </url>
     <url>
