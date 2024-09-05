@@ -75,7 +75,8 @@ nav:
     - Contact info: contact.md
   - Blog: blog/index.md
 plugins:
-  - blog
+  - blog:
+      blog_toc: true
   # show revision date at bottom of each page
   - git-revision-date-localized
   # necessary for search to work
