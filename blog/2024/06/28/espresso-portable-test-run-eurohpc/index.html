@@ -1980,6 +1980,8 @@ even though EESSI is not available yet system-wide on Deucalion (see below for m
 <p>With the <a href="https://www.eessi.io/docs/test-suite/available-tests/#espresso">portable test for ESPResSo</a> that is available
 in the <a href="https://www.eessi.io/docs/test-suite">EESSI test suite</a> we can easily evaluate the scalability of
 ESPResSo across EuroHPC systems, even if those systems have different system architectures.</p>
+<!-- more -->
+
 <h2 id="simulating-lennard-jones-fluids-using-espresso">Simulating Lennard-Jones fluids using ESPResSo<a class="headerlink" href="#simulating-lennard-jones-fluids-using-espresso" title="Permanent link">&para;</a></h2>
 <p><a href="https://en.wikipedia.org/wiki/Lennard-Jones_potential">Lennard-Jones fluids</a> model interacting soft spheres with a potential that is weakly attractive at medium range and strongly repulsive at short range. Originally designed to model noble gases, this simple setup now underpins most particle-based simulations, such as ionic liquids, polymers, proteins and colloids, where strongly repulsive pairwise potentials are desirable to prevent particles from overlapping with one another. In addition, solvated systems with atomistic resolution typically have a large excess of solvent atoms compared to solute atoms, thus Lennard-Jones interactions tend to account for a large portion of the simulation time. Compared to other potentials, the Lennard-Jones interaction is inexpensive to calculate, and its limited range allows us to partition the simulation domain into arbitrarily small regions that can be distributed among many processors.</p>
 <h2 id="portable-test-to-evaluate-performance-of-espresso">Portable test to evaluate performance of ESPResSo<a class="headerlink" href="#portable-test-to-evaluate-performance-of-espresso" title="Permanent link">&para;</a></h2>
@@ -2118,7 +2120,7 @@ simulation via <code>mpirun</code>:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 15, 2024</span>
   </span>
 
     
