@@ -13,6 +13,8 @@ like [Vega](https://doc.vega.izum.si) and [Karolina](https://docs.it4i.cz/karoli
 
 It is worth noting that from that date Extrae is also available in the EESSI RISC-V repository `risv.eessi.io`.
 
+<!-- more -->
+
 Extrae is a package developed at [BSC](https://www.bsc.es/es) devoted to generate [Paraver](https://tools.bsc.es/paraver) trace-files for a post-mortem analysis of applications performance. Extrae is a tool that uses different interposition mechanisms to inject probes into the target application so as to gather information regarding the application performance. It is one of the [tools](https://pop-coe.eu/partners/tools) used in the [POP3 CoE](https://pop-coe.eu/).
 
 The work to incorporate Extrae into EESSI started early in May. It took quite some time and effort but has resulted in a number of updates, improvements and bug fixes for Extrae. The following sections explain the work done describing the issues encountered and the solutions adopted.

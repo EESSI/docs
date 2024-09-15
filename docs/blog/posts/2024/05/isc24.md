@@ -13,6 +13,7 @@ slug: isc24
 This week, we had the privilege of attending the [ISC'24](https://www.isc-hpc.com) conference in the beautiful city of Hamburg, Germany.
 This was an excellent opportunity for us to showcase [EESSI](https://eessi.io), and gain valuable insights and feedback from the HPC community.
 
+<!-- more -->
 ---
 
 ## BoF session on EESSI
