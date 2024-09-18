@@ -18,15 +18,22 @@ The overview below shows which ReFrame installations are available per target ar
 To start using ReFrame, load one of these modules using a `module load` command like:
 
 ```shell
-module load ReFrame/4.3.3
+module load ReFrame/4.6.2
 ```
 
 *(This data was automatically generated on {{ generated_time }})*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ReFrame/4.6.2|x|x|x|x|x|x|x|x|x|
 |ReFrame/4.3.3|x|x|x|x|x|x|x|x|x|
 
+
+### ReFrame/4.6.2
+
+This is a list of extensions included in the module:
+
+pip-24.0, reframe-4.6.2, setuptools-68.0.0, wheel-0.42.0
 
 ### ReFrame/4.3.3
 
