@@ -13,6 +13,7 @@ it if you use continuous integration within those ecosystems.
 
 The EESSI GitHub Action can be found on the [GitHub Marketplace](https://github.com/marketplace),
 at [https://github.com/marketplace/actions/eessi](https://github.com/marketplace/actions/eessi) .
+at [https://github.com/marketplace/actions/eessi](https://github.com/marketplace/actions/eessi).
 Below is a minimal example of how to leverage the action, for detailed usage please refer to the official action
 documentation.
 
@@ -33,7 +34,7 @@ jobs:
 ## The EESSI GitLab CI/CD component
 
 The EESSI GitLab CI/CD component can be found in the [GitLab CI/CD Catalog](https://gitlab.com/explore/catalog), at
-[https://gitlab.com/explore/catalog/eessi/gitlab-eessi](https://gitlab.com/explore/catalog/eessi/gitlab-eessi) .
+[https://gitlab.com/explore/catalog/eessi/gitlab-eessi](https://gitlab.com/explore/catalog/eessi/gitlab-eessi).
 Below is a minimal example of how to leverage the component, for detailed usage please refer to the official
 component documentation.
 
