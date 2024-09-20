@@ -25,4 +25,4 @@ module load Cbc/2.10.11-foss-2023a
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cbc/2.10.11-foss-2023a|x|x|x|x|x|x|-|x|x|
+|Cbc/2.10.11-foss-2023a|x|x|x|x|x|x|x|x|x|
