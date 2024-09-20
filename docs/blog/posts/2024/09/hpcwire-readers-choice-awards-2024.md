@@ -14,11 +14,11 @@ in the "Best HPC Programming Tool or Technology" category.
 
 To vote, you should:
 
-1) [Fill out and submit the form](https://www.hpcwire.com/2024-hpcwire-readers-choice-awards-voting-is-open)
+1. [Fill out and submit the form](https://www.hpcwire.com/2024-hpcwire-readers-choice-awards-voting-is-open)
    to register yourself as an HPCWire reader and access your ballot;
-2) [Access your ballot here](https://www.surveymonkey.com/r/hpcwireRCA24);
-3) Select your favorite in one or more categories;
-4) Submit your vote by filling in your name, organisation, and email address (to avoid ballot stuffing),
+2. [Access your ballot here](https://www.surveymonkey.com/r/hpcwireRCA24);
+3. Select your favorite in one or more categories;
+4. Submit your vote by filling in your name, organisation, and email address (to avoid ballot stuffing),
    and hitting the `Done` button.
 
 Note that you are not required to vote for all categories,
