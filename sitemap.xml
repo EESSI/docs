@@ -121,11 +121,23 @@
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/BamTools/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Bazel/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/BeautifulSoup/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Bio-DB-HTS/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Bio-SearchIO-hmmer/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
@@ -153,11 +165,19 @@
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Bowtie2/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Brotli/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Brunsli/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/CD-HIT/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
@@ -370,6 +390,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Gdk-Pixbuf/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/GenomeTools/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
@@ -593,6 +617,10 @@
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Mash/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Mesa/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
@@ -601,7 +629,15 @@
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/MetaEuk/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/MetalWalls/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/MultiQC/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
@@ -966,6 +1002,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/UnZip/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/VCFtools/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
@@ -1453,6 +1493,10 @@
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/lpsolve/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/lxml/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
@@ -1534,6 +1578,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/orjson/</loc>
+         <lastmod>2024-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/parallel/</loc>
          <lastmod>2024-09-20</lastmod>
     </url>
     <url>
