@@ -6,6 +6,10 @@ slug: hpcwire-readers-choice-awards-2024
 
 # EESSI nominated for HPCwire Readers’ Choice Awards 2024
 
+<figure markdown="span">
+![HPCwire Readers' Choice Awards 2024](hpcwire-readers-choice-awards-2024.jpg){width=50%}
+</figure>
+
 [EESSI](https://www.eessi.io/docs/) has been nominated for the
 [HPCwire Readers’ Choice Awards 2024](https://www.hpcwire.com/2024-hpcwire-readers-choice-awards-voting-is-open),
 in the "Best HPC Programming Tool or Technology" category.
