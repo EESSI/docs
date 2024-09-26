@@ -353,6 +353,10 @@
          <lastmod>2024-09-26</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/GDB/</loc>
+         <lastmod>2024-09-26</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/GDRCopy/</loc>
          <lastmod>2024-09-26</lastmod>
     </url>
@@ -462,6 +466,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/ISA-L/</loc>
+         <lastmod>2024-09-26</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/ISL/</loc>
          <lastmod>2024-09-26</lastmod>
     </url>
     <url>
@@ -1017,6 +1025,10 @@
          <lastmod>2024-09-26</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Vim/</loc>
+         <lastmod>2024-09-26</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Voro%2B%2B/</loc>
          <lastmod>2024-09-26</lastmod>
     </url>
@@ -1114,6 +1126,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/casacore/</loc>
+         <lastmod>2024-09-26</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/ccache/</loc>
          <lastmod>2024-09-26</lastmod>
     </url>
     <url>
@@ -1286,6 +1302,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/hatchling/</loc>
+         <lastmod>2024-09-26</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/hiredis/</loc>
          <lastmod>2024-09-26</lastmod>
     </url>
     <url>
@@ -1710,6 +1730,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/time/</loc>
+         <lastmod>2024-09-26</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/tmux/</loc>
          <lastmod>2024-09-26</lastmod>
     </url>
     <url>
