@@ -27,4 +27,4 @@ module load OSU-Micro-Benchmarks/7.2-gompi-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OSU-Micro-Benchmarks/7.2-gompi-2023b|x|x|x|x|x|x|x|x|x|
 |OSU-Micro-Benchmarks/7.2-gompi-2023a-CUDA-12.1.1|x|x|x|x|x|x|-|x|x|
-|OSU-Micro-Benchmarks/7.1-1-gompi-2023a|x|x|x|x|x|x|-|x|x|
+|OSU-Micro-Benchmarks/7.1-1-gompi-2023a|x|x|x|x|x|x|x|x|x|
