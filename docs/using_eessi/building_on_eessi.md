@@ -90,9 +90,9 @@ The safest way to make sure all libraries will point to the required locations (
 * First of all, load the environment by starting an EESSI shell as described [here](https://www.eessi.io/docs/using_eessi/setting_up_environment). 
 * Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it (`foss` is a good option as it will also include MPI with OpenMPI and math libraries via FlexiBLAS/FFTW). 
 * Set manually `LD_RUN_PATH` to resolve libraries at runtime. `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to `libstdc++` from our GCC installation
-```sh
-export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
-```
+    ```sh
+        export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
+    ```
 * Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used when checking the binary.
 * Once done, exit the EESSI prefix shell (with `exit`) or use another terminal to run your software.
 
