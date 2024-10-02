@@ -444,7 +444,7 @@ You can also use the reframe option `--detect-host-topology` to create the topol
 Run the followiging command on the cluster of which you need the topology.
 
 ```bash
-reframe --detect-host-topology[=FILE] [--config-file config/sytem.py or set RFM_CONFIG_FILES]
+reframe --detect-host-topology[=FILE]
 ```
 
 The output will be put in a file if this is specified or printed in the output. It will look something like this.
