@@ -26,6 +26,7 @@ module load netcdf4-python/1.6.4-foss-2023a
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |netcdf4-python/1.6.4-foss-2023a|x|x|x|x|x|x|x|x|x|
+|netcdf4-python/1.6.3-foss-2022b|x|x|x|x|x|x|-|x|x|
 
 
 ### netcdf4-python/1.6.4-foss-2023a
@@ -33,3 +34,9 @@ module load netcdf4-python/1.6.4-foss-2023a
 This is a list of extensions included in the module:
 
 cftime-1.6.2, netcdf4-python-1.6.4
+
+### netcdf4-python/1.6.3-foss-2022b
+
+This is a list of extensions included in the module:
+
+cftime-1.6.2, netcdf4-python-1.6.3
