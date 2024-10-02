@@ -28,6 +28,7 @@ module load meson-python/0.15.0-GCCcore-13.2.0
 |meson-python/0.15.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |meson-python/0.15.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
 |meson-python/0.13.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
+|meson-python/0.11.0-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
 
 
 ### meson-python/0.15.0-GCCcore-13.2.0
@@ -47,3 +48,9 @@ meson-python-0.15.0, pyproject-metadata-0.7.1
 This is a list of extensions included in the module:
 
 meson-python-0.13.2, pyproject-metadata-0.7.1
+
+### meson-python/0.11.0-GCCcore-12.2.0
+
+This is a list of extensions included in the module:
+
+meson-python-0.11.0, pyproject-metadata-0.6.1
