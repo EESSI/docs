@@ -26,5 +26,5 @@ module load tbb/2021.13.0-GCCcore-13.2.0
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |tbb/2021.13.0-GCCcore-13.2.0|-|-|-|x|x|x|x|x|x|
-|tbb/2021.11.0-GCCcore-12.3.0|-|-|-|x|x|x|x|x|x|
+|tbb/2021.11.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
 |tbb/2021.10.0-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
