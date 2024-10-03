@@ -613,6 +613,9 @@ The output will be put in a file if this is specified or printed in the output. 
   "num_sockets": 2
 }
 ```
+
+</details>
+
 !!! note
     ReFrame 4.5.1 will generate more parameter than it can parse. To resolve this issue you can remove the following parameters: `vendor`, `model` and/or `platform`.
 
