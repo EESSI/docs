@@ -449,6 +449,8 @@ reframe --detect-host-topology[=FILE]
 
 The output will be put in a file if this is specified or printed in the output. It will look something like this:
 
+<details>
+
 ```json
 {
   "arch": "skylake_avx512",
@@ -611,7 +613,7 @@ The output will be put in a file if this is specified or printed in the output. 
   "num_sockets": 2
 }
 ```
-
-If reframe has generated information on `vendor`, `model` and/or `platform`, please remove it from the file as these will not be able to be parsed by the test-suite.
+!!! note
+    ReFrame 4.5.1 will generate more parameter than it can parse. To resolve this issue you can remove the following parameters: `vendor`, `model` and/or `platform`.
 
 For ReFrame to find the topology file it needs to be in the following path `~/.reframe/topology/<system_name>-<partition_name>/processor.json`
