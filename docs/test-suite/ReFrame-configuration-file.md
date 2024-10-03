@@ -441,7 +441,7 @@ ReFrame will store the processor information for your system in `~/.reframe/topo
 
 You can also use the reframe option `--detect-host-topology` to create the topology file yourself.
 
-Run the followiging command on the cluster of which you need the topology.
+Run the following command on the cluster of which you need the topology.
 
 ```bash
 reframe --detect-host-topology[=FILE]
