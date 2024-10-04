@@ -1258,6 +1258,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Auto-detection of processor information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-of-topology-file-by-reframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creation of topology file by ReFrame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-topology-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create topology file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2007,6 +2031,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Auto-detection of processor information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-of-topology-file-by-reframe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creation of topology file by ReFrame
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-topology-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create topology file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2384,6 +2432,7 @@ the regular ReFrame log ends up. Note that the performance logs do <em>not</em> 
 in the standard ReFrame prefix (by default the current directory, unless otherwise set with <code>$RFM_PREFIX</code> or <code>--prefix</code>).</p>
 <h3 id="cpu-auto-detection">Auto-detection of processor information<a class="headerlink" href="#cpu-auto-detection" title="Permanent link">&para;</a></h3>
 <p>You can let ReFrame <a href="https://reframe-hpc.readthedocs.io/en/stable/configure.html#proc-autodetection">auto-detect the processor information</a> for your system.</p>
+<h4 id="creation-of-topology-file-by-reframe">Creation of topology file by ReFrame<a class="headerlink" href="#creation-of-topology-file-by-reframe" title="Permanent link">&para;</a></h4>
 <p>ReFrame will automatically use auto-detection when two conditions are met:</p>
 <ol>
 <li>The <a href="#partitions"><code>partitions</code> section of you configuration file</a> does <em>not</em> specify <code>processor</code> information for a
@@ -2405,6 +2454,183 @@ let ReFrame list the available tests:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>reframe --list
 </code></pre></div>
 <p>ReFrame will store the processor information for your system in <code>~/.reframe/topology/&lt;system&gt;-&lt;partition&gt;/processor.json</code>.</p>
+<h4 id="create-topology-file">Create topology file<a class="headerlink" href="#create-topology-file" title="Permanent link">&para;</a></h4>
+<p>You can also use the reframe option <code>--detect-host-topology</code> to create the topology file yourself.</p>
+<p>Run the following command on the cluster of which you need the topology.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>reframe<span class="w"> </span>--detect-host-topology<span class="o">[=</span>FILE<span class="o">]</span>
+</code></pre></div>
+<p>The output will be put in a file if this is specified or printed in the output. It will look something like this:</p>
+<details>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nt">&quot;arch&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;skylake_avx512&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="nt">&quot;topology&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="nt">&quot;numa_nodes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">      </span><span class="s2">&quot;0x111111111&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">      </span><span class="s2">&quot;0x222222222&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">      </span><span class="s2">&quot;0x444444444&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">      </span><span class="s2">&quot;0x888888888&quot;</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="nt">&quot;sockets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">      </span><span class="s2">&quot;0x555555555&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">      </span><span class="s2">&quot;0xaaaaaaaaa&quot;</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">    </span><span class="nt">&quot;cores&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">      </span><span class="s2">&quot;0x000000001&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">      </span><span class="s2">&quot;0x000000002&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">      </span><span class="s2">&quot;0x000000004&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">      </span><span class="s2">&quot;0x000000008&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">      </span><span class="s2">&quot;0x000000010&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">      </span><span class="s2">&quot;0x000000020&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">      </span><span class="s2">&quot;0x000000040&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">      </span><span class="s2">&quot;0x000000080&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">      </span><span class="s2">&quot;0x000000100&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">      </span><span class="s2">&quot;0x000000200&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">      </span><span class="s2">&quot;0x000000400&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">      </span><span class="s2">&quot;0x000000800&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">      </span><span class="s2">&quot;0x000001000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">      </span><span class="s2">&quot;0x000002000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">      </span><span class="s2">&quot;0x000004000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">      </span><span class="s2">&quot;0x000008000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">      </span><span class="s2">&quot;0x000010000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="w">      </span><span class="s2">&quot;0x000020000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a><span class="w">      </span><span class="s2">&quot;0x000040000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a><span class="w">      </span><span class="s2">&quot;0x000080000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a><span class="w">      </span><span class="s2">&quot;0x000100000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a><span class="w">      </span><span class="s2">&quot;0x000200000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a><span class="w">      </span><span class="s2">&quot;0x000400000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a><span class="w">      </span><span class="s2">&quot;0x000800000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a><span class="w">      </span><span class="s2">&quot;0x001000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a><span class="w">      </span><span class="s2">&quot;0x002000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a><span class="w">      </span><span class="s2">&quot;0x004000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a><span class="w">      </span><span class="s2">&quot;0x008000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a><span class="w">      </span><span class="s2">&quot;0x010000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-44" name="__codelineno-16-44" href="#__codelineno-16-44"></a><span class="w">      </span><span class="s2">&quot;0x020000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-45" name="__codelineno-16-45" href="#__codelineno-16-45"></a><span class="w">      </span><span class="s2">&quot;0x040000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-46" name="__codelineno-16-46" href="#__codelineno-16-46"></a><span class="w">      </span><span class="s2">&quot;0x080000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-47" name="__codelineno-16-47" href="#__codelineno-16-47"></a><span class="w">      </span><span class="s2">&quot;0x100000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-48" name="__codelineno-16-48" href="#__codelineno-16-48"></a><span class="w">      </span><span class="s2">&quot;0x200000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-49" name="__codelineno-16-49" href="#__codelineno-16-49"></a><span class="w">      </span><span class="s2">&quot;0x400000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-50" name="__codelineno-16-50" href="#__codelineno-16-50"></a><span class="w">      </span><span class="s2">&quot;0x800000000&quot;</span>
+<a id="__codelineno-16-51" name="__codelineno-16-51" href="#__codelineno-16-51"></a><span class="w">    </span><span class="p">],</span>
+<a id="__codelineno-16-52" name="__codelineno-16-52" href="#__codelineno-16-52"></a><span class="w">    </span><span class="nt">&quot;caches&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-16-53" name="__codelineno-16-53" href="#__codelineno-16-53"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-16-54" name="__codelineno-16-54" href="#__codelineno-16-54"></a><span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;L2&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-55" name="__codelineno-16-55" href="#__codelineno-16-55"></a><span class="w">        </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1048576</span><span class="p">,</span>
+<a id="__codelineno-16-56" name="__codelineno-16-56" href="#__codelineno-16-56"></a><span class="w">        </span><span class="nt">&quot;linesize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span>
+<a id="__codelineno-16-57" name="__codelineno-16-57" href="#__codelineno-16-57"></a><span class="w">        </span><span class="nt">&quot;associativity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span>
+<a id="__codelineno-16-58" name="__codelineno-16-58" href="#__codelineno-16-58"></a><span class="w">        </span><span class="nt">&quot;num_cpus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-16-59" name="__codelineno-16-59" href="#__codelineno-16-59"></a><span class="w">        </span><span class="nt">&quot;cpusets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-16-60" name="__codelineno-16-60" href="#__codelineno-16-60"></a><span class="w">          </span><span class="s2">&quot;0x000000001&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-61" name="__codelineno-16-61" href="#__codelineno-16-61"></a><span class="w">          </span><span class="s2">&quot;0x000000002&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-62" name="__codelineno-16-62" href="#__codelineno-16-62"></a><span class="w">          </span><span class="s2">&quot;0x000000004&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-63" name="__codelineno-16-63" href="#__codelineno-16-63"></a><span class="w">          </span><span class="s2">&quot;0x000000008&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-64" name="__codelineno-16-64" href="#__codelineno-16-64"></a><span class="w">          </span><span class="s2">&quot;0x000000010&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-65" name="__codelineno-16-65" href="#__codelineno-16-65"></a><span class="w">          </span><span class="s2">&quot;0x000000020&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-66" name="__codelineno-16-66" href="#__codelineno-16-66"></a><span class="w">          </span><span class="s2">&quot;0x000000040&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-67" name="__codelineno-16-67" href="#__codelineno-16-67"></a><span class="w">          </span><span class="s2">&quot;0x000000080&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-68" name="__codelineno-16-68" href="#__codelineno-16-68"></a><span class="w">          </span><span class="s2">&quot;0x000000100&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-69" name="__codelineno-16-69" href="#__codelineno-16-69"></a><span class="w">          </span><span class="s2">&quot;0x000000200&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-70" name="__codelineno-16-70" href="#__codelineno-16-70"></a><span class="w">          </span><span class="s2">&quot;0x000000400&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-71" name="__codelineno-16-71" href="#__codelineno-16-71"></a><span class="w">          </span><span class="s2">&quot;0x000000800&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-72" name="__codelineno-16-72" href="#__codelineno-16-72"></a><span class="w">          </span><span class="s2">&quot;0x000001000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-73" name="__codelineno-16-73" href="#__codelineno-16-73"></a><span class="w">          </span><span class="s2">&quot;0x000002000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-74" name="__codelineno-16-74" href="#__codelineno-16-74"></a><span class="w">          </span><span class="s2">&quot;0x000004000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-75" name="__codelineno-16-75" href="#__codelineno-16-75"></a><span class="w">          </span><span class="s2">&quot;0x000008000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-76" name="__codelineno-16-76" href="#__codelineno-16-76"></a><span class="w">          </span><span class="s2">&quot;0x000010000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-77" name="__codelineno-16-77" href="#__codelineno-16-77"></a><span class="w">          </span><span class="s2">&quot;0x000020000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-78" name="__codelineno-16-78" href="#__codelineno-16-78"></a><span class="w">          </span><span class="s2">&quot;0x000040000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-79" name="__codelineno-16-79" href="#__codelineno-16-79"></a><span class="w">          </span><span class="s2">&quot;0x000080000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-80" name="__codelineno-16-80" href="#__codelineno-16-80"></a><span class="w">          </span><span class="s2">&quot;0x000100000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-81" name="__codelineno-16-81" href="#__codelineno-16-81"></a><span class="w">          </span><span class="s2">&quot;0x000200000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-82" name="__codelineno-16-82" href="#__codelineno-16-82"></a><span class="w">          </span><span class="s2">&quot;0x000400000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-83" name="__codelineno-16-83" href="#__codelineno-16-83"></a><span class="w">          </span><span class="s2">&quot;0x000800000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-84" name="__codelineno-16-84" href="#__codelineno-16-84"></a><span class="w">          </span><span class="s2">&quot;0x001000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-85" name="__codelineno-16-85" href="#__codelineno-16-85"></a><span class="w">          </span><span class="s2">&quot;0x002000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-86" name="__codelineno-16-86" href="#__codelineno-16-86"></a><span class="w">          </span><span class="s2">&quot;0x004000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-87" name="__codelineno-16-87" href="#__codelineno-16-87"></a><span class="w">          </span><span class="s2">&quot;0x008000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-88" name="__codelineno-16-88" href="#__codelineno-16-88"></a><span class="w">          </span><span class="s2">&quot;0x010000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-89" name="__codelineno-16-89" href="#__codelineno-16-89"></a><span class="w">          </span><span class="s2">&quot;0x020000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-90" name="__codelineno-16-90" href="#__codelineno-16-90"></a><span class="w">          </span><span class="s2">&quot;0x040000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-91" name="__codelineno-16-91" href="#__codelineno-16-91"></a><span class="w">          </span><span class="s2">&quot;0x080000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-92" name="__codelineno-16-92" href="#__codelineno-16-92"></a><span class="w">          </span><span class="s2">&quot;0x100000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-93" name="__codelineno-16-93" href="#__codelineno-16-93"></a><span class="w">          </span><span class="s2">&quot;0x200000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-94" name="__codelineno-16-94" href="#__codelineno-16-94"></a><span class="w">          </span><span class="s2">&quot;0x400000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-95" name="__codelineno-16-95" href="#__codelineno-16-95"></a><span class="w">          </span><span class="s2">&quot;0x800000000&quot;</span>
+<a id="__codelineno-16-96" name="__codelineno-16-96" href="#__codelineno-16-96"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-16-97" name="__codelineno-16-97" href="#__codelineno-16-97"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-16-98" name="__codelineno-16-98" href="#__codelineno-16-98"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-16-99" name="__codelineno-16-99" href="#__codelineno-16-99"></a><span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;L1&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-100" name="__codelineno-16-100" href="#__codelineno-16-100"></a><span class="w">        </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">32768</span><span class="p">,</span>
+<a id="__codelineno-16-101" name="__codelineno-16-101" href="#__codelineno-16-101"></a><span class="w">        </span><span class="nt">&quot;linesize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span>
+<a id="__codelineno-16-102" name="__codelineno-16-102" href="#__codelineno-16-102"></a><span class="w">        </span><span class="nt">&quot;associativity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<a id="__codelineno-16-103" name="__codelineno-16-103" href="#__codelineno-16-103"></a><span class="w">        </span><span class="nt">&quot;num_cpus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-16-104" name="__codelineno-16-104" href="#__codelineno-16-104"></a><span class="w">        </span><span class="nt">&quot;cpusets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-16-105" name="__codelineno-16-105" href="#__codelineno-16-105"></a><span class="w">          </span><span class="s2">&quot;0x000000001&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-106" name="__codelineno-16-106" href="#__codelineno-16-106"></a><span class="w">          </span><span class="s2">&quot;0x000000002&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-107" name="__codelineno-16-107" href="#__codelineno-16-107"></a><span class="w">          </span><span class="s2">&quot;0x000000004&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-108" name="__codelineno-16-108" href="#__codelineno-16-108"></a><span class="w">          </span><span class="s2">&quot;0x000000008&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-109" name="__codelineno-16-109" href="#__codelineno-16-109"></a><span class="w">          </span><span class="s2">&quot;0x000000010&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-110" name="__codelineno-16-110" href="#__codelineno-16-110"></a><span class="w">          </span><span class="s2">&quot;0x000000020&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-111" name="__codelineno-16-111" href="#__codelineno-16-111"></a><span class="w">          </span><span class="s2">&quot;0x000000040&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-112" name="__codelineno-16-112" href="#__codelineno-16-112"></a><span class="w">          </span><span class="s2">&quot;0x000000080&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-113" name="__codelineno-16-113" href="#__codelineno-16-113"></a><span class="w">          </span><span class="s2">&quot;0x000000100&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-114" name="__codelineno-16-114" href="#__codelineno-16-114"></a><span class="w">          </span><span class="s2">&quot;0x000000200&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-115" name="__codelineno-16-115" href="#__codelineno-16-115"></a><span class="w">          </span><span class="s2">&quot;0x000000400&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-116" name="__codelineno-16-116" href="#__codelineno-16-116"></a><span class="w">          </span><span class="s2">&quot;0x000000800&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-117" name="__codelineno-16-117" href="#__codelineno-16-117"></a><span class="w">          </span><span class="s2">&quot;0x000001000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-118" name="__codelineno-16-118" href="#__codelineno-16-118"></a><span class="w">          </span><span class="s2">&quot;0x000002000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-119" name="__codelineno-16-119" href="#__codelineno-16-119"></a><span class="w">          </span><span class="s2">&quot;0x000004000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-120" name="__codelineno-16-120" href="#__codelineno-16-120"></a><span class="w">          </span><span class="s2">&quot;0x000008000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-121" name="__codelineno-16-121" href="#__codelineno-16-121"></a><span class="w">          </span><span class="s2">&quot;0x000010000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-122" name="__codelineno-16-122" href="#__codelineno-16-122"></a><span class="w">          </span><span class="s2">&quot;0x000020000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-123" name="__codelineno-16-123" href="#__codelineno-16-123"></a><span class="w">          </span><span class="s2">&quot;0x000040000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-124" name="__codelineno-16-124" href="#__codelineno-16-124"></a><span class="w">          </span><span class="s2">&quot;0x000080000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-125" name="__codelineno-16-125" href="#__codelineno-16-125"></a><span class="w">          </span><span class="s2">&quot;0x000100000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-126" name="__codelineno-16-126" href="#__codelineno-16-126"></a><span class="w">          </span><span class="s2">&quot;0x000200000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-127" name="__codelineno-16-127" href="#__codelineno-16-127"></a><span class="w">          </span><span class="s2">&quot;0x000400000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-128" name="__codelineno-16-128" href="#__codelineno-16-128"></a><span class="w">          </span><span class="s2">&quot;0x000800000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-129" name="__codelineno-16-129" href="#__codelineno-16-129"></a><span class="w">          </span><span class="s2">&quot;0x001000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-130" name="__codelineno-16-130" href="#__codelineno-16-130"></a><span class="w">          </span><span class="s2">&quot;0x002000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-131" name="__codelineno-16-131" href="#__codelineno-16-131"></a><span class="w">          </span><span class="s2">&quot;0x004000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-132" name="__codelineno-16-132" href="#__codelineno-16-132"></a><span class="w">          </span><span class="s2">&quot;0x008000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-133" name="__codelineno-16-133" href="#__codelineno-16-133"></a><span class="w">          </span><span class="s2">&quot;0x010000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-134" name="__codelineno-16-134" href="#__codelineno-16-134"></a><span class="w">          </span><span class="s2">&quot;0x020000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-135" name="__codelineno-16-135" href="#__codelineno-16-135"></a><span class="w">          </span><span class="s2">&quot;0x040000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-136" name="__codelineno-16-136" href="#__codelineno-16-136"></a><span class="w">          </span><span class="s2">&quot;0x080000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-137" name="__codelineno-16-137" href="#__codelineno-16-137"></a><span class="w">          </span><span class="s2">&quot;0x100000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-138" name="__codelineno-16-138" href="#__codelineno-16-138"></a><span class="w">          </span><span class="s2">&quot;0x200000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-139" name="__codelineno-16-139" href="#__codelineno-16-139"></a><span class="w">          </span><span class="s2">&quot;0x400000000&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-140" name="__codelineno-16-140" href="#__codelineno-16-140"></a><span class="w">          </span><span class="s2">&quot;0x800000000&quot;</span>
+<a id="__codelineno-16-141" name="__codelineno-16-141" href="#__codelineno-16-141"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-16-142" name="__codelineno-16-142" href="#__codelineno-16-142"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-16-143" name="__codelineno-16-143" href="#__codelineno-16-143"></a><span class="w">      </span><span class="p">{</span>
+<a id="__codelineno-16-144" name="__codelineno-16-144" href="#__codelineno-16-144"></a><span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;L3&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-145" name="__codelineno-16-145" href="#__codelineno-16-145"></a><span class="w">        </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25952256</span><span class="p">,</span>
+<a id="__codelineno-16-146" name="__codelineno-16-146" href="#__codelineno-16-146"></a><span class="w">        </span><span class="nt">&quot;linesize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span>
+<a id="__codelineno-16-147" name="__codelineno-16-147" href="#__codelineno-16-147"></a><span class="w">        </span><span class="nt">&quot;associativity&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span>
+<a id="__codelineno-16-148" name="__codelineno-16-148" href="#__codelineno-16-148"></a><span class="w">        </span><span class="nt">&quot;num_cpus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<a id="__codelineno-16-149" name="__codelineno-16-149" href="#__codelineno-16-149"></a><span class="w">        </span><span class="nt">&quot;cpusets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-16-150" name="__codelineno-16-150" href="#__codelineno-16-150"></a><span class="w">          </span><span class="s2">&quot;0x555555555&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-151" name="__codelineno-16-151" href="#__codelineno-16-151"></a><span class="w">          </span><span class="s2">&quot;0xaaaaaaaaa&quot;</span>
+<a id="__codelineno-16-152" name="__codelineno-16-152" href="#__codelineno-16-152"></a><span class="w">        </span><span class="p">]</span>
+<a id="__codelineno-16-153" name="__codelineno-16-153" href="#__codelineno-16-153"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-16-154" name="__codelineno-16-154" href="#__codelineno-16-154"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-16-155" name="__codelineno-16-155" href="#__codelineno-16-155"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-16-156" name="__codelineno-16-156" href="#__codelineno-16-156"></a><span class="w">  </span><span class="nt">&quot;num_cpus&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span>
+<a id="__codelineno-16-157" name="__codelineno-16-157" href="#__codelineno-16-157"></a><span class="w">  </span><span class="nt">&quot;num_cpus_per_core&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-16-158" name="__codelineno-16-158" href="#__codelineno-16-158"></a><span class="w">  </span><span class="nt">&quot;num_cpus_per_socket&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<a id="__codelineno-16-159" name="__codelineno-16-159" href="#__codelineno-16-159"></a><span class="w">  </span><span class="nt">&quot;num_sockets&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-16-160" name="__codelineno-16-160" href="#__codelineno-16-160"></a><span class="p">}</span>
+</code></pre></div>
+
+</details>
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ReFrame 4.5.1 will generate more parameter than it can parse. To resolve this issue you can remove the following parameters: <code>vendor</code>, <code>model</code> and/or <code>platform</code>.</p>
+</div>
+<p>For ReFrame to find the topology file it needs to be in the following path <code>~/.reframe/topology/&lt;system_name&gt;-&lt;partition_name&gt;/processor.json</code></p>
 
 
 
@@ -2425,7 +2651,7 @@ let ReFrame list the available tests:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 3, 2024</span>
   </span>
 
     
