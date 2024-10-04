@@ -55,6 +55,10 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 * Tier-2 clusters: [General documentation](https://docs.hpc.ugent.be)
 * VSC Tier-1 Hortense: [General documentation](https://docs.vscentrum.be/gent/tier1_hortense.html)
 
+#### Vrije Universiteit Brussel
+
+* Hydra: [General documentation](https://hpc.vub.be)
+
 ### Netherlands
 
 #### SURF
