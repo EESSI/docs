@@ -68,3 +68,11 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 #### University of Groningen
 
 * Hábrók: [General documentation](https://wiki.hpc.rug.nl/habrok/introduction/cluster_description)
+
+### Norway
+
+#### Sigma2 AS / Norwegian Research Infrastructure Services
+
+* Betzy: [General documentation](https://documentation.sigma2.no/hpc_machines/betzy.html#betzy) | [EESSI @ Betzy](https://documentation.sigma2.no/software/eessi.html)
+* Fram: [General documentation](https://documentation.sigma2.no/hpc_machines/fram.html#fram) | [EESSI @ Fram](https://documentation.sigma2.no/software/eessi.html)
+* Saga: [General documentation](https://documentation.sigma2.no/hpc_machines/saga.html#saga) | [EESSI @ Saga](https://documentation.sigma2.no/software/eessi.html)
