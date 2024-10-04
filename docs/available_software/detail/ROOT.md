@@ -9,7 +9,7 @@ ROOT
 
 The ROOT system provides a set of OO frameworks with all the functionality    needed to handle and analyze large amounts of data in a very efficient way.
 
-https://root.cern.ch/drupal/
+https://root.cern.ch
 # Available modules
 
 
@@ -26,4 +26,4 @@ module load ROOT/6.30.06-foss-2023a
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ROOT/6.30.06-foss-2023a|x|x|x|x|x|x|x|x|x|
-|ROOT/6.26.10-foss-2022b|-|-|-|x|x|x|-|x|x|
+|ROOT/6.26.10-foss-2022b|x|x|x|x|x|x|-|x|x|
