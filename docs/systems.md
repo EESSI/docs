@@ -21,7 +21,7 @@ and you can try [running our demos](using_eessi/eessi_demos.md).
 
     If they have any questions, please suggest to [**contact the EESSI support team**](support.md).
 
-    In the mean time, you can try using one of the alternative ways of accessing EESSI,
+    In the meantime, you can try using one of the alternative ways of accessing EESSI,
     like [using a container](getting_access/eessi_container.md).
 
 ---
