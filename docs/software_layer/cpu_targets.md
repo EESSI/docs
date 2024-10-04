@@ -7,7 +7,8 @@ In the 2023.06 version of the EESSI repository, the following CPU microarchitect
 * `aarch64/neoverse_v1`: AWS Graviton 3
 * `x86_64/generic`: fallback for older Intel + AMD CPUs (like Intel Sandy Bridge, ...)
 * `x86_64/amd/zen2`: AMD Rome
-* `x86_64/amd/zen3`: AMD Milan, AMD Milan X
+* `x86_64/amd/zen3`: AMD Milan, AMD Milan-X
+* `x86_64/amd/zen4`: AMD Genoa, AMD Genoa-X
 * `x86_64/intel/haswell`: Intel Haswell, Broadwell
 * `x86_64/intel/skylake_avx512`: Intel Skylake, Cascade Lake, Ice Lake, ...
 
