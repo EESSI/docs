@@ -48,6 +48,7 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 ## Other European systems
 
+
 ### Belgium
 
 #### Ghent University
@@ -59,6 +60,14 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 * Hydra: [General documentation](https://hpc.vub.be)
 
+
+### Germany
+
+#### EMBL Heidelberg
+
+* HPC cluster: [General documentation](https://www.embl.org/about/info/it-services/it-infrastructure)
+
+
 ### Netherlands
 
 #### SURF
@@ -68,6 +77,7 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 #### University of Groningen
 
 * Hábrók: [General documentation](https://wiki.hpc.rug.nl/habrok/introduction/cluster_description)
+
 
 ### Norway
 
