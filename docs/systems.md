@@ -73,6 +73,7 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 #### SURF
 
 * Snellius: [General documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Snellius) | [EESSI @ Snellius](https://servicedesk.surf.nl/wiki/display/WIKI/RC+component+EESSI+Client)
+* Research Cloud: [General documentation](https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Cloud) | [EESSI @ Research Cloud](https://servicedesk.surf.nl/wiki/display/WIKI/RC+component+EESSI+Client)
 
 #### University of Groningen
 
