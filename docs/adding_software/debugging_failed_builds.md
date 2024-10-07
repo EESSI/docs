@@ -159,7 +159,7 @@ source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
 ```
 
 !!! Note
-    If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVFMS_REPO}` and `${EESSI_VERSION}` environment variables at the end of the previous step.
+    If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` environment variables at the end of the previous step.
 
 !!! Note
     If you want to build with generic optimization, you should run `export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic` before sourcing.
