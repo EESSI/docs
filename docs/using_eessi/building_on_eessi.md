@@ -19,15 +19,14 @@ The `EESSI-extend` module recognizes a few environment variables. To print an up
 module help EESSI-extend/2023.06-easybuild
 ```
 
-The key environment variables it will respect are:
- - EESSI_USER_INSTALL can be set to a location to install modules for use by the user only. The location must already exist on the filesystem. Set this environment variable if you're an end-user who wants to install additional software just for yourself.
- - EESSI_PROJECT_INSTALL can be set to a location to install modules for use by a project. The location must already exist on the filesystem and you should ensure that the location has the correct Linux group and the SGID permission is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all members of the group have permission to read and write installations. Set this environment variable if you're an end-user who's part of a project, and wants to create additional installations that should be available to all project members.
- - EESSI_SITE_INSTALL is either defined or not and cannot be used with another environment variable. A site installation is done in a defined location and any installations there are (by default) world readable. Set this environmnet variable if you are a site hosting a system that has EESSI available, and you want to build on top to make additional modules available to all of your users.
- - EESSI_CVMFS_INSTALL is either defined or not and cannot be used with another environment variable. A CVMFS installation targets a defined location which will be ingested into CVMFS and is only useful for CVMFS administrators. Set this environment variable if you manage your own CVMFS repository where the software has to be built on top of EESSI.
+The installation prefix is determined by `EESSI-extend` through the following logic:
+1. If `EESSI_CVMFS_INSTALL` is set, software inst installed in `EESSI_SOFTWARE_PATH`. This variable shouldn't be used by users and would only be used by CVMFS administrators of the EESSI repository.
+2. If `EESSI_SITE_INSTALL` is set (and this is set by default when the EESSI environment is initialized) and the EESSI site installation prefix (`/cvmfs/software.eessi.io/host_injections/...`) is writeable, this prefix will be used. This is typically where sites hosting a system that has EESSI deployed would install additional software on top of EESSI and make it available to all their users.
+3. If `EESSI_PROJECT_INSTALL` is set (and `EESSI_USER_INSTALL` is not set), this prefix will be used. You should use this if you want to install additional software on top of EESSI that should also be useable by your project partners on the same system.
+4. If `EESSI_USER_INSTALL` is set, this prefix will be used. You should use this if yo uwant to install additional software on top of EESSI just for your own user.
+If none of the above apply, the default is a user installation in `$HOME/EESSI` (i.e. effectively the same as setting `EESSI_USER_INSTALL=$HOME/EESSI`).
 
-Note that if none of the environment variables above are defined, an EESSI_USER_INSTALL is assumed with a value of $HOME/EESSI.
-
-Here, we assume you are just an end-user and load the `EESSI-extend` module with the default installation prefix:
+Here, we assume you are just an end-user, not having set any of the above environment variables, and loading the `EESSI-extend` module with the default installation prefix:
 
 ```
 module load EESSI-extend/2023.06-easybuild
@@ -86,32 +85,29 @@ eb netcdf4-python-1.6.5-foss-2023b.eb
 
 ### Using the newly built module
 
-Our new module is readily available on the `MODULEPATH`:
+If the installation was done in the site installation path (i.e. `EESSI_SITE_INSTALL` was set, and things were installed in `/cvmfs/software.eessi.io/host_injections/...`), the modules are available by default to anyone who has initialized the EESSI software environment.
+
+If the installation through `EESSI-extend` was done in a `EESSI_PROJECT_INSTALL` or `EESSI_USER_INSTALL` location, one has to make sure to load the `EESSI-extend` module before loading the module of interest, since this adds those prefixes to the `MODULEPATH`.
+
+If we don't have the `EESSI-extend` module loaded, it will not find any modules installed in the `EESSI_PROJECT_INSTALL` or `EESSI_USER_INSTALL` locations:
 ```
+$ module unload EESSI-extend
+$ module av netcdf4-python/1.6.5-foss-2023b
+No module(s) or extension(s) found!
+```
+
+But, if we load `EESSI-extend` first:
+
+```
+$ module load EESSI-extend/2023.06-easybuild
 $ module av netcdf4-python/1.6.5-foss-2023b
 
 ---- /home/<user>/eessi/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all ----
    netcdf4-python/1.6.5-foss-2023b
 ```
 
-Note however that it is the `EESSI-extend` module that added this to our `MODULEPATH`. If we unload that module, the user-installation is no longer on the `MODULEPATH`
-```
-$ module av netcdf4-python/1.6.5-foss-2023b
-No module(s) or extension(s) found!
-```
 
-This means you'll _always_ need to load the `EESSI-extend` module if you want to use these modules. For example, if you want to load this module in a job, you should have
-
-```
-# Loading EESSI-extend makes the netcdf4-python module available on the MODULEPATH
-module load EESSI-extend/2023.06-easybuild
-module load netcdf4-python/1.6.5-foss-2023b
-```
-
-in your job script.
-
-!!! Note
-    The `EESSI-extend` module does _not_ add `EESSI_SITE_INSTALL` to the `MODULEPATH`. As a system administrator, you will have to make sure that's on the `MODULEPATH` of your users through other means if you want your users to be able to use module installed by `EESSI-extend`.
+This means you'll _always_ need to load the `EESSI-extend` module if you want to use these modules (also, and particularly when you want to use them in a job script).
 
 ## Manually building software op top of EESSI
 Building software on top of EESSI would require your linker to use the same system-dependencies as the software in EESSI does. In other words: it requires you to link against libraries from the compatibility layer, instead of from your host OS.
