@@ -6,66 +6,112 @@ Building on top of EESSI with EasyBuild is relatively straightforward. One cruci
 ### Starting the EESSI software environment
 Start your environment as described [here](../using_eessi/setting_up_environment.md)
 
-### Configure EasyBuild
-To configure EasyBuild, first, check out the [EESSI software-layer repository](https://github.com/EESSI/software-layer.git). We advise you to check out the branch corresponding to the version of EESSI you would like to use.
+### Using the EESSI-extend module
+The `EESSI-extend` module facilitates building on top of EESSI using EasyBuild. It does a few key things:
 
-If you are unsure which version you are using, you can run
-```
-echo ${EESSI_VERSION}
-```
-to check it.
+1. It configures EasyBuild to match how the rest of the EESSI software is build
+2. It configures EasyBuild to use a certain installation path (e.g. in your homedir), taking into account the hardware architecture you are building on
+3. It adds the relevant subdirectory from your installation path to your `MODULEPATH`, to make sure your newly installed modules are available
+4. It loads the EasyBuild module
 
-To build on top of e.g. version `2023.06` of the EESSI software stack, we check it out, and go into that directory:
+The `EESSI-extend` module recognizes a few environment variables. To print an up-to-date list, check the module itself
+```
+module help EESSI-extend/2023.06-easybuild
+```
+
+The key environment variables it will respect are:
+ - EESSI_USER_INSTALL can be set to a location to install modules for use by the user only. The location must already exist on the filesystem. Set this environment variable if you're an end-user who wants to install additional software just for yourself.
+ - EESSI_PROJECT_INSTALL can be set to a location to install modules for use by a project. The location must already exist on the filesystem and you should ensure that the location has the correct Linux group and the SGID permission is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all members of the group have permission to read and write installations. Set this environment variable if you're an end-user who's part of a project, and wants to create additional installations that should be available to all project members.
+ - EESSI_SITE_INSTALL is either defined or not and cannot be used with another environment variable. A site installation is done in a defined location and any installations there are (by default) world readable. Set this environmnet variable if you are a site hosting a system that has EESSI available, and you want to build on top to make additional modules available to all of your users.
+ - EESSI_CVMFS_INSTALL is either defined or not and cannot be used with another environment variable. A CVMFS installation targets a defined location which will be ingested into CVMFS and is only useful for CVMFS administrators. Set this environment variable if you manage your own CVMFS repository where the software has to be built on top of EESSI.
+
+Note that if none of the environment variables above are defined, an EESSI_USER_INSTALL is assumed with a value of $HOME/EESSI.
+
+Here, we assume you are just an end-user and load the `EESSI-extend` module with the default installation prefix:
 
 ```
-git clone https://github.com/EESSI/software-layer/ --branch 2023.06
-cd software-layer
+module load EESSI-extend/2023.06-easybuild
 ```
-Then, you have to pick a working directory (that you have write access to) where EasyBuild can do the build, and an install directory (with sufficient storage space), where EasyBuild can install it. In this example, we create a temporary directory in `/tmp/` as our working directory, and use `$HOME/.local/easybuild` as our installpath:
-```
-export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-build.XXXXXXXXXX)
-source configure_easybuild
-export EASYBUILD_INSTALLPATH="${HOME}/.local/easybuild"
-```
-Next, you load the EasyBuild module that you want to use, e.g. 
-```
-module load EasyBuild/4.8.2
-```
-Finally, you can check the current configuration for EasyBuild using
+
+Now, if we check the EasyBuild configuration
+
+
 ```
 eb --show-config
+allow-loaded-modules (E) = EasyBuild, EESSI-extend
+buildpath            (E) = /tmp/<user>/easybuild/build
+containerpath        (E) = /tmp/<user>/easybuild/containers
+debug                (E) = True
+experimental         (E) = True
+filter-deps          (E) = Autoconf, Automake, Autotools, binutils, bzip2, DBus, flex, gettext, gperf, help2man, intltool, libreadline, libtool, M4, makeinfo, ncurses, util-linux, XZ, zlib
+filter-env-vars      (E) = LD_LIBRARY_PATH
+hooks                (E) = /cvmfs/software.eessi.io/versions/2023.06/init/easybuild/eb_hooks.py
+ignore-osdeps        (E) = True
+installpath          (E) = /home/<user>/eessi/versions/2023.06/software/linux/x86_64/amd/zen2
+module-extensions    (E) = True
+packagepath          (E) = /tmp/<user>/easybuild/packages
+prefix               (E) = /tmp/<user>/easybuild
+read-only-installdir (E) = True
+repositorypath       (E) = /tmp/<user>/easybuild/ebfiles_repo
+robot-paths          (D) = /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2/software/EasyBuild/4.9.4/easybuild/easyconfigs
+rpath                (E) = True
+sourcepath           (E) = /tmp/<user>/easybuild/sources
+sticky-bit           (E) = True
+sysroot              (E) = /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64
+trace                (E) = True
+umask                (E) = 077
+zip-logs             (E) = bzip2
 ```
 
-!!! Note
-    We use EasyBuild's default behaviour in optimizing for the host architecture. Since the EESSI initialization script also loads the EESSI stack that is optimized for your host architecture, this matches nicely. However, if you work on a cluster with heterogeneous node types, you have to realize you can only use these builds on the same architecture as where you build them. You can use different `EASYBUILD_INSTALLPATH`s if you want to build for different host architectures. For example, when you are on a system that has a mix of `AMD zen3` and `AMD zen4` nodes, you might want to use `EASYBUILD_INSTALLPATH=$HOME/.local/easybuild/zen3` when building on a `zen3` node, `EASYBUILD_INSTALLPATH=$HOME/.local/easybuild/zen4` when building on a `zen4` node. Then, in the step beloww, instead of the `module use` command listed there, you can use `module use $HOME/.local/easybuild/zen3/modules/all` when you want to run on a `zen3` node and `module use $HOME/.local/easybuild/zen4/modules/all` when you want to run on a `zen4` node.
+Apart from the `installpath`, this is exactly how EasyBuild is configured when software is built for EESSI itself.
+
+!!! note
+    Be aware that `EESSI-extend` will optimize the installation for your current hardware architecture, and the `installpath` also contains this architecture in it's directory structure (just like regular EESSI installations do). This means you should run the installation on the node type on which you also want to use the software. If you want the installation to be present for multiple node types, you can simply run it once on each type of node.
+
+And, if we check our `MODULEPATH`, we see that the `installpath` that EasyBuild will use here is prepended
+```
+$ echo $MODULEPATH
+/home/<user>/eessi/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all:...
+```
 
 ### Building
-Now, you are ready to build. For example, at the time of writing, `netCDF-4.9.0-gompi-2022a.eb` was not in the EESSI environment yet, so you can build it yourself:
+Now, you are ready to build. For example, suppose you want to install `netcdf4-python-1.6.5-foss-2023b.eb` (which is not present at the time of writing), you run:
+
 ```
-eb netCDF-4.9.0-gompi-2022a.eb
+eb netcdf4-python-1.6.5-foss-2023b.eb
 ```
 
 !!! Note
-    If this netCDF module is available by the time you are trying, you can force a local rebuild by adding the `--rebuild` argument in order to experiment with building locally, or pick a different EasyConfig to build.
+    If this netCDF for python module is available by the time you are trying, you can force a local rebuild by adding the `--rebuild` argument in order to experiment with building locally, or pick a different EasyConfig to build.
 
 ### Using the newly built module
-First, you'll need to add the subdirectory of the `EASYBUILD_INSTALLPATH` that contains the modules to the `MODULEPATH`. You can do that using:
+
+Our new module is readily available on the `MODULEPATH`:
+```
+$ module av netcdf4-python/1.6.5-foss-2023b
+
+---- /home/<user>/eessi/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all ----
+   netcdf4-python/1.6.5-foss-2023b
+```
+
+Note however that it is the `EESSI-extend` module that added this to our `MODULEPATH`. If we unload that module, the user-installation is no longer on the `MODULEPATH`
+```
+$ module av netcdf4-python/1.6.5-foss-2023b
+No module(s) or extension(s) found!
+```
+
+This means you'll _always_ need to load the `EESSI-extend` module if you want to use these modules. For example, if you want to load this module in a job, you should have
 
 ```
-module use ${EASYBUILD_INSTALLPATH}/modules/all
+# Loading EESSI-extend makes the netcdf4-python module available on the MODULEPATH
+module load EESSI-extend/2023.06-easybuild
+module load netcdf4-python/1.6.5-foss-2023b
 ```
 
-you may want to do this as part of your `.bashrc`.
+in your job script.
 
 !!! Note
-    Be careful adding to the `MODULEPATH` in your `.bashrc` if you are on a cluster with heterogeneous architectures. You don't want to pick up on a module that was not compiled for the correct architectures accidentally.
-
-Since your module is built on top of the EESSI environment, that needs to be loaded first (as described [here](../using_eessi/setting_up_environment.md)), if you haven't already done so.
-
-Finally, you should be able to load our newly build module:
-```
-module load netCDF/4.9.0-gompi-2022a
-```
+    The `EESSI-extend` module does _not_ add `EESSI_SITE_INSTALL` to the `MODULEPATH`. As a system administrator, you will have to make sure that's on the `MODULEPATH` of your users through other means if you want your users to be able to use module installed by `EESSI-extend`.
 
 ## Manually building software op top of EESSI
 Building software on top of EESSI would require your linker to use the same system-dependencies as the software in EESSI does. In other words: it requires you to link against libraries from the compatibility layer, instead of from your host OS.
