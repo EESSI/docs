@@ -9,7 +9,7 @@ Start your environment as described [here](../using_eessi/setting_up_environment
 ### Using the EESSI-extend module
 The `EESSI-extend` module facilitates building on top of EESSI using EasyBuild. It does a few key things:
 
-1. It configures EasyBuild to match how the rest of the EESSI software is build
+1. It configures EasyBuild to match how the rest of the EESSI software is built
 2. It configures EasyBuild to use a certain installation path (e.g. in your homedir), taking into account the hardware architecture you are building on
 3. It adds the relevant subdirectory from your installation path to your `MODULEPATH`, to make sure your newly installed modules are available
 4. It loads the EasyBuild module
@@ -20,12 +20,12 @@ module help EESSI-extend/2023.06-easybuild
 ```
 
 The key environment variables it will respect are:
- - EESSI_USER_INSTALL can be set to a location to install modules for use by the user only. The location must already exist on the filesystem. Set this environment variable if you're an end-user who wants to install additional software just for yourself.
- - EESSI_PROJECT_INSTALL can be set to a location to install modules for use by a project. The location must already exist on the filesystem and you should ensure that the location has the correct Linux group and the SGID permission is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all members of the group have permission to read and write installations. Set this environment variable if you're an end-user who's part of a project, and wants to create additional installations that should be available to all project members.
- - EESSI_SITE_INSTALL is either defined or not and cannot be used with another environment variable. A site installation is done in a defined location and any installations there are (by default) world readable. Set this environmnet variable if you are a site hosting a system that has EESSI available, and you want to build on top to make additional modules available to all of your users.
+ - `EESSI_USER_INSTALL` can be set to a location to install modules for use by the user only. The location must already exist on the filesystem. Set this environment variable if you're an end-user who wants to install additional software just for yourself.
+ - `EESSI_PROJECT_INSTALL` can be set to a location to install modules for use by a project. The location must already exist on the filesystem and you should ensure that the location has the correct Linux group and the SGID permission is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all members of the group have permission to read and write installations. Set this environment variable if you're an end-user who's part of a project, and wants to create additional installations that should be available to all project members.
+ - `EESSI_SITE_INSTALL` is either defined or not and cannot be used with another environment variable. A site installation is done in a defined location and any installations there are (by default) world readable. Set this environment variable if you are a site hosting a system that has EESSI available, and you want to build on top to make additional modules available to all of your users.
  - EESSI_CVMFS_INSTALL is either defined or not and cannot be used with another environment variable. A CVMFS installation targets a defined location which will be ingested into CVMFS and is only useful for CVMFS administrators. Set this environment variable if you manage your own CVMFS repository where the software has to be built on top of EESSI.
 
-Note that if none of the environment variables above are defined, an EESSI_USER_INSTALL is assumed with a value of $HOME/EESSI.
+Note that if none of the environment variables above are defined, an `EESSI_USER_INSTALL` is assumed with a value of `$HOME/EESSI`.
 
 Here, we assume you are just an end-user and load the `EESSI-extend` module with the default installation prefix:
 
