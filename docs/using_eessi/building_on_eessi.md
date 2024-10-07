@@ -9,7 +9,7 @@ Start your environment as described [here](../using_eessi/setting_up_environment
 ### Using the EESSI-extend module
 The `EESSI-extend` module facilitates building on top of EESSI using EasyBuild. It does a few key things:
 
-1. It configures EasyBuild to match how the rest of the EESSI software is build
+1. It configures EasyBuild to match how the rest of the EESSI software is built
 2. It configures EasyBuild to use a certain installation path (e.g. in your homedir), taking into account the hardware architecture you are building on
 3. It adds the relevant subdirectory from your installation path to your `MODULEPATH`, to make sure your newly installed modules are available
 4. It loads the EasyBuild module
