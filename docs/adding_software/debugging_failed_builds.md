@@ -41,14 +41,14 @@ git checkout LAMMPS_23Jun2022
 ```
 
 ### Starting a shell in the EESSI container
-Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer` repository
+Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer` repository. Use `-r` to specify which EESSI repository (e.g. `software.eessi.io`, `dev.eessi.io`, ...) should be mounted in the container
 ```
-./eessi_container.sh --access rw
+./eessi_container.sh --access rw -r software.eessi.io
 ```
 
 If you want to install NVIDIA GPU software, make sure to also add the `--nvidia all` argument, to insure that your GPU drivers get mounted inside the container:
 ```
-./eessi_container.sh --access rw --nvidia all
+./eessi_container.sh --access rw -r software.eessi.io --nvidia all
 ```
 
 !!! Note
@@ -72,7 +72,7 @@ eessi_pr_dir=${HOME}/pr360
 
 Now, we start the container
 ```
-SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw -r software.eessi.io --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}
 ```
 
 Here, the `SINGULARITY_CACHEDIR` makes sure that if the container was already downloaded, and is present in the cache, it is not redownloaded. The host injections will just be picked up from `${eessi_common_dir}/host_injections` (if those were already installed before). And finally, the `--save` makes sure that everything that you build in the container gets stored in a tarball as soon as you exit the container.
@@ -92,7 +92,7 @@ Note that the tarballs can be quite sizeable, so make sure to pick a filesystem 
 
 Next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off, having all dependencies already built and available.
 ```
-SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}/EESSI-1698056784.tgz
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw -r software.eessi.io --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}/EESSI-1698056784.tgz
 ```
 
 For a detailed description on using the script `eessi_container.sh`, see [here](../getting_access/eessi_container.md).
@@ -106,10 +106,10 @@ For a detailed description on using the script `eessi_container.sh`, see [here](
 ### Start the Gentoo Prefix environment
 The next step is to start the Gentoo Prefix environment. 
 
-Before we start, check the current values of `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` so that you can reset them later:
+First, you'll have to set which repository and version of EESSI you are building for. For example:
 ```
-echo ${EESSI_CVMFS_REPO}
-echo ${EESSI_VERSION}
+export EESSI_CVMFS_REPO=/cvmfs/software.eessi.io
+export EESSI_VERSION=2023.06
 ```
 
 Then, we set `EESSI_OS_TYPE` and `EESSI_CPU_FAMILY` and run the `startprefix` command to start the Gentoo Prefix environment:
@@ -119,10 +119,10 @@ export EESSI_CPU_FAMILY=$(uname -m)
 ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
 ```
 
-Now, reset the `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` in your prefix environment with the initial values (printed in the echo statements above)
+Unfortunately, there is no way to retain the `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` in your prefix environment, so we have to set them again. For example:
 ```
-export EESSI_CVMFS_REPO=...
-export EESSI_VERSION=...
+export EESSI_CVMFS_REPO=/cvmfs/software.eessi.io
+export EESSI_VERSION=2023.06
 ```
 
 !!! Note
@@ -159,7 +159,7 @@ source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
 ```
 
 !!! Note
-    If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVFMS_REPO}` and `${EESSI_VERSION}` environment variables at the end of the previous step.
+    If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` environment variables at the end of the previous step.
 
 !!! Note
     If you want to build with generic optimization, you should run `export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic` before sourcing.
@@ -174,7 +174,7 @@ In this example, we create a unique temporary directory inside `/tmp` to serve b
 
 ```
 export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-debug.XXXXXXXXXX)
-source configure_easybuild
+source scripts/utils.sh && source configure_easybuild
 ```
 Among other things, the `configure_easybuild` script sets the install path for EasyBuild to point to the correct installation directory in (to `${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_SOFTWARE_SUBDIR}`). This is the exact same path the `bot` uses to build, and uses a writeable overlay filesystem in the container to write to a path in `/cvmfs` (which normally is read-only). This is identical to what the `bot` does.
 
@@ -241,7 +241,7 @@ After some time, this build fails while trying to build `Plumed`, and we can acc
 ## Rebuilding software
 [Rebuilding software](opening_pr.md#rebuilding_software) requires an additional step at the beginning: the software first needs to be removed. We assume you've already [checked out the feature branch](#fetching-the-feature-branch). Then, you need to start the container with the additional `--fakeroot` argument, otherwise you will not be able to remove files from the `/cvmfs` prefix. Make sure to also include the `--save` argument, as we will need the tarball later on. E.g.
 ```
-SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir} --fakeroot
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw -r software.eessi.io --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir} --fakeroot
 ```
 Then, initialize the EESSI environment
 ```
