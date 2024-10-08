@@ -1,6 +1,21 @@
 # Setting up your environment
 
-To set up the EESSI environment, simply run the command:
+To set up the EESSI environment, either use EESSI with Lmod:
+
+``` { .bash .copy }
+export MODULEPATH=/cvmfs/software.eessi.io/init/modules:$MODULEPATH
+module load EESSI/2023.06
+```
+NOTE: Existing loaded modules may impact the EESSI environment.
+
+Should Lmod be unavailable, you can still use EESSI as a module by directly sourcing the initialization script:
+
+``` { .bash .copy }
+source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+```
+:clap: Your environment is now set up, you are ready to start running software provided by EESSI!
+
+Or use EESSI by running the command:
 
 ``` { .bash .copy }
 source /cvmfs/software.eessi.io/versions/2023.06/init/bash
