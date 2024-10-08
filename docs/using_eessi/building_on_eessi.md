@@ -20,10 +20,10 @@ module help EESSI-extend/2023.06-easybuild
 ```
 
 The installation prefix is determined by `EESSI-extend` through the following logic:
-1. If `EESSI_CVMFS_INSTALL` is set, software is installed in `EESSI_SOFTWARE_PATH`. This variable shouldn't be used by users and would only be used by CVMFS administrators of the EESSI repository.
-2. If `EESSI_SITE_INSTALL` is set and the EESSI site installation prefix (`/cvmfs/software.eessi.io/host_injections/...`) is writeable, this prefix will be used. This is typically where sites hosting a system that has EESSI deployed would install additional software on top of EESSI and make it available to all their users.
-3. If `EESSI_PROJECT_INSTALL` is set (and `EESSI_USER_INSTALL` is not set), this prefix will be used. You should use this if you want to install additional software on top of EESSI that should also be usable by your project partners on the same system.
-4. If `EESSI_USER_INSTALL` is set, this prefix will be used. You should use this if yo uwant to install additional software on top of EESSI just for your own user.
+1. If `$EESSI_CVMFS_INSTALL` is set, software is installed in `$EESSI_SOFTWARE_PATH`. This variable shouldn't be used by users and would only be used by CVMFS administrators of the EESSI repository.
+2. If `$EESSI_SITE_INSTALL` is set and if the EESSI site installation prefix (`$EESSI_SITE_INSTALLPATH`) is writeable, this prefix will be used. This is typically where sites hosting a system that has EESSI deployed would install additional software on top of EESSI and make it available to all their users.
+3. If `$EESSI_PROJECT_INSTALL` is set (and `$EESSI_USER_INSTALL` is not set), this prefix will be used. You should use this if you want to install additional software on top of EESSI that should also be usable by your project partners on the same system.
+4. If `$EESSI_USER_INSTALL` is set, this prefix will be used. You should use this if yo uwant to install additional software on top of EESSI just for your own user.
 If none of the above apply, the default is a user installation in `$HOME/EESSI` (i.e. effectively the same as setting `EESSI_USER_INSTALL=$HOME/EESSI`).
 
 Here, we assume you are just an end-user, not having set any of the above environment variables, and loading the `EESSI-extend` module with the default installation prefix:
