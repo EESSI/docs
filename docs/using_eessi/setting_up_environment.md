@@ -2,17 +2,31 @@
 
 To set up the EESSI environment, either use EESSI with Lmod:
 
+A. If already using Lmod version >= 8.6, consider unsetting the MODULEPATH:
+
 ``` { .bash .copy }
-export MODULEPATH=/cvmfs/software.eessi.io/init/modules:$MODULEPATH
+unset MODULEPATH
+export MODULEPATH=/cvmfs/software.eessi.io/init/modules
 module load EESSI/2023.06
 ```
-NOTE: Existing loaded modules may impact the EESSI environment.
 
-Should Lmod be unavailable, you can still use EESSI as a module by directly sourcing the initialization script:
+:clap: Your environment is now set up, you are ready to start running software provided by EESSI!
+
+B. If using an older version of Lmod or any other tool utilizing MODULEPATH, unset MODULEPATH to prevent Lmod from attempting to build a cache: 
+
+``` { .bash .copy }
+unset MODULEPATH
+source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+```
+
+:clap: Your environment is now set up, you are ready to start running software provided by EESSI!
+
+C. Should Lmod be unavailable and MODULEPATH not utilized, you can use EESSI as a module by directly sourcing the initialization script:
 
 ``` { .bash .copy }
 source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 ```
+
 :clap: Your environment is now set up, you are ready to start running software provided by EESSI!
 
 Or use EESSI by running the command:
