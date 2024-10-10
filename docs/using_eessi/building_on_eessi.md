@@ -89,7 +89,7 @@ EESSI uses a [compatibility layer](../compatibility_layer.md) to ensure that it 
 
 * First of all, load the environment by starting an EESSI shell as described [here](https://www.eessi.io/docs/using_eessi/setting_up_environment). 
 * Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it (`foss` is a good option as it will also include MPI with OpenMPI and math libraries via FlexiBLAS/FFTW). 
-* Set manually `LD_RUN_PATH` to resolve libraries at runtime. `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to `libstdc++` from our GCC installation
+* Set manually `LD_RUN_PATH` to resolve libraries at runtime. `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to `libstdc++` from our GCC installation to avoid picking up the one from the host:
     ```sh
         export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
     ```
