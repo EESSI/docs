@@ -24,7 +24,7 @@ build:
   stage: build
   artifacts:
     paths:
-      - *.png
+      - msx_map.png
   script:
     # Create directory for personal R library
     - mkdir $CI_BUILDS_DIR/R
@@ -34,8 +34,7 @@ build:
     # Install eessirmaps, the rnaturalearth dep and create the plot
     - R -e "install.packages('rnaturalearthdata', repos = 'https://cran.rstudio.com/');
       remotes::install_gitlab('neves-p/eessirmaps', upgrade = FALSE);
-      eessirmaps::multixscale_map(); ggplot2::ggsave('msx_map.png', create.dir = TRUE)"
-
+      eessirmaps::multixscale_map(); ggplot2::ggsave('msx_map.png', bg = 'white')"
 ```
 
 Note how we simply include the EESSI GitLab CI component and set up a blank directory for our user R libraries. Apart from the [`rnaturalearthdata`](https://cran.r-project.org/package=rnaturalearthdata) R package, all the other dependencies are taken care of by the `R-bundle-CRAN/2023.12-foss-2023a` EESSI module. This is true for the system and R package dependencies.
