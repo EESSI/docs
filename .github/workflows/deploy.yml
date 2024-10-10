@@ -2,7 +2,7 @@
 name: deploy documentation (only on push to main branch)
 on:
   push:
-    branches: main
+    branches: main, dev.eessi.io
 # Declare default permissions as read only.
 permissions: read-all
 jobs:
