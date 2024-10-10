@@ -101,5 +101,5 @@ EESSI uses a [compatibility layer](../compatibility_layer.md) to ensure that it 
 
 !!! Note RPATH should never point to a compatibility layer directory, only to software layer ones, as all resolving is done via the runtime linker (`ld-linux*.so`)  that is shipped with EESSI, which automatically searches these locations.
 
-The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for, i.e., if you add to your executable RPATH a `libhdf5.so`compiled for `intel_avx512`, you will not be able to run that binary in a machine with a different architecture. If this is an issue for you, you should look into how EESSI itself organises the location of binaries and perhaps leverage the relevant environment variables (e.g., `EESSI_SOFTWARE_SUBDIR`).
+The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for, i.e., if you add to your executable RPATH a `libhdf5.so`compiled for `intel_avx512`, you will not be able to run that binary on a machine with a different architecture. If this is an issue for you, you should look into how EESSI itself organises the location of binaries and perhaps leverage the relevant environment variables (e.g., `EESSI_SOFTWARE_SUBDIR`).
 
