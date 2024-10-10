@@ -25,4 +25,4 @@ module load fastjet/3.4.2-gompi-2023a
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastjet/3.4.2-gompi-2023a|x|x|x|x|x|x|-|x|x|
+|fastjet/3.4.2-gompi-2023a|x|x|x|x|x|x|x|x|x|

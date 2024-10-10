@@ -91,7 +91,7 @@ You should choose the CUDA version you wish to install according to what CUDA ve
 see the output of `module avail CUDA/` after [setting up your environment for using
 EESSI](../using_eessi/setting_up_environment.md).
 
-You can run `/cvmfs/software.eessi.io/scripts/install_cuda_host_injections.sh --help` to check all of the options.
+You can run `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --help` to check all of the options.
 
 !!! tip
 

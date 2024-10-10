@@ -23,6 +23,8 @@ With the [portable test for ESPResSo](https://www.eessi.io/docs/test-suite/avail
 in the [EESSI test suite](https://www.eessi.io/docs/test-suite) we can easily evaluate the scalability of
 ESPResSo across EuroHPC systems, even if those systems have different system architectures.
 
+<!-- more -->
+
 ## Simulating Lennard-Jones fluids using ESPResSo
 
 [Lennard-Jones fluids](https://en.wikipedia.org/wiki/Lennard-Jones_potential) model interacting soft spheres with a potential that is weakly attractive at medium range and strongly repulsive at short range. Originally designed to model noble gases, this simple setup now underpins most particle-based simulations, such as ionic liquids, polymers, proteins and colloids, where strongly repulsive pairwise potentials are desirable to prevent particles from overlapping with one another. In addition, solvated systems with atomistic resolution typically have a large excess of solvent atoms compared to solute atoms, thus Lennard-Jones interactions tend to account for a large portion of the simulation time. Compared to other potentials, the Lennard-Jones interaction is inexpensive to calculate, and its limited range allows us to partition the simulation domain into arbitrarily small regions that can be distributed among many processors.

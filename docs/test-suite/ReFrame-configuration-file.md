@@ -409,6 +409,8 @@ in the standard ReFrame prefix (by default the current directory, unless otherwi
 
 You can let ReFrame [auto-detect the processor information](https://reframe-hpc.readthedocs.io/en/stable/configure.html#proc-autodetection) for your system.
 
+#### Creation of topology file by ReFrame
+
 ReFrame will automatically use auto-detection when two conditions are met:
 
 1. The [`partitions` section of you configuration file](#partitions) does *not* specify `processor` information for a
@@ -434,3 +436,187 @@ reframe --list
 ```
 
 ReFrame will store the processor information for your system in `~/.reframe/topology/<system>-<partition>/processor.json`.
+
+#### Create topology file
+
+You can also use the reframe option `--detect-host-topology` to create the topology file yourself.
+
+Run the following command on the cluster of which you need the topology.
+
+```bash
+reframe --detect-host-topology[=FILE]
+```
+
+The output will be put in a file if this is specified or printed in the output. It will look something like this:
+
+<details>
+
+```json
+{
+  "arch": "skylake_avx512",
+  "topology": {
+    "numa_nodes": [
+      "0x111111111",
+      "0x222222222",
+      "0x444444444",
+      "0x888888888"
+    ],
+    "sockets": [
+      "0x555555555",
+      "0xaaaaaaaaa"
+    ],
+    "cores": [
+      "0x000000001",
+      "0x000000002",
+      "0x000000004",
+      "0x000000008",
+      "0x000000010",
+      "0x000000020",
+      "0x000000040",
+      "0x000000080",
+      "0x000000100",
+      "0x000000200",
+      "0x000000400",
+      "0x000000800",
+      "0x000001000",
+      "0x000002000",
+      "0x000004000",
+      "0x000008000",
+      "0x000010000",
+      "0x000020000",
+      "0x000040000",
+      "0x000080000",
+      "0x000100000",
+      "0x000200000",
+      "0x000400000",
+      "0x000800000",
+      "0x001000000",
+      "0x002000000",
+      "0x004000000",
+      "0x008000000",
+      "0x010000000",
+      "0x020000000",
+      "0x040000000",
+      "0x080000000",
+      "0x100000000",
+      "0x200000000",
+      "0x400000000",
+      "0x800000000"
+    ],
+    "caches": [
+      {
+        "type": "L2",
+        "size": 1048576,
+        "linesize": 64,
+        "associativity": 16,
+        "num_cpus": 1,
+        "cpusets": [
+          "0x000000001",
+          "0x000000002",
+          "0x000000004",
+          "0x000000008",
+          "0x000000010",
+          "0x000000020",
+          "0x000000040",
+          "0x000000080",
+          "0x000000100",
+          "0x000000200",
+          "0x000000400",
+          "0x000000800",
+          "0x000001000",
+          "0x000002000",
+          "0x000004000",
+          "0x000008000",
+          "0x000010000",
+          "0x000020000",
+          "0x000040000",
+          "0x000080000",
+          "0x000100000",
+          "0x000200000",
+          "0x000400000",
+          "0x000800000",
+          "0x001000000",
+          "0x002000000",
+          "0x004000000",
+          "0x008000000",
+          "0x010000000",
+          "0x020000000",
+          "0x040000000",
+          "0x080000000",
+          "0x100000000",
+          "0x200000000",
+          "0x400000000",
+          "0x800000000"
+        ]
+      },
+      {
+        "type": "L1",
+        "size": 32768,
+        "linesize": 64,
+        "associativity": 8,
+        "num_cpus": 1,
+        "cpusets": [
+          "0x000000001",
+          "0x000000002",
+          "0x000000004",
+          "0x000000008",
+          "0x000000010",
+          "0x000000020",
+          "0x000000040",
+          "0x000000080",
+          "0x000000100",
+          "0x000000200",
+          "0x000000400",
+          "0x000000800",
+          "0x000001000",
+          "0x000002000",
+          "0x000004000",
+          "0x000008000",
+          "0x000010000",
+          "0x000020000",
+          "0x000040000",
+          "0x000080000",
+          "0x000100000",
+          "0x000200000",
+          "0x000400000",
+          "0x000800000",
+          "0x001000000",
+          "0x002000000",
+          "0x004000000",
+          "0x008000000",
+          "0x010000000",
+          "0x020000000",
+          "0x040000000",
+          "0x080000000",
+          "0x100000000",
+          "0x200000000",
+          "0x400000000",
+          "0x800000000"
+        ]
+      },
+      {
+        "type": "L3",
+        "size": 25952256,
+        "linesize": 64,
+        "associativity": 11,
+        "num_cpus": 18,
+        "cpusets": [
+          "0x555555555",
+          "0xaaaaaaaaa"
+        ]
+      }
+    ]
+  },
+  "num_cpus": 36,
+  "num_cpus_per_core": 1,
+  "num_cpus_per_socket": 18,
+  "num_sockets": 2
+}
+```
+
+</details>
+
+!!! note
+    ReFrame 4.5.1 will generate more parameter than it can parse. To resolve this issue you can remove the following parameters: `vendor`, `model` and/or `platform`.
+
+For ReFrame to find the topology file it needs to be in the following path `~/.reframe/topology/<system_name>-<partition_name>/processor.json`

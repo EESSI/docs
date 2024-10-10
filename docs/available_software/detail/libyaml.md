@@ -27,3 +27,4 @@ module load libyaml/0.2.5-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libyaml/0.2.5-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |libyaml/0.2.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
+|libyaml/0.2.5-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
