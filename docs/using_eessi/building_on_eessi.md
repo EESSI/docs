@@ -74,7 +74,7 @@ module load netCDF/4.9.0-gompi-2022a
     We are working on a module file that should make building on top of EESSI (without using EasyBuild)
     more straightforward, particularly when using `Autotools` or `CMake`. Right now, it is a little convoluted
     and requires you to have a decent grasp of
-    * What a runtime linker (`ld-linux*.so`) is and does
+    * What a runtime dynamic linker (`ld-linux*.so`) is and does
     * How to influence the behaviour of the runtime linker with `LD_LIBRARY_PATH`
     * The difference between `LIBRARY_PATH` and `LD_LIBRARY_PATH`
     
