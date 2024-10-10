@@ -42,6 +42,8 @@ Note how we simply include the EESSI GitLab CI component and set up a blank dire
 
 Then we simply have to install our package to the CI environment and call the `multixscale_map()` function to produce the plot, which is uploaded as an artifact from the CI environment. We can then retrieve the [artifact archive](https://gitlab.com/neves-p/eessirmaps/-/jobs/8057216299/artifacts/download), unpack it and obtain the map.
 
-
+<figure markdown="span">
+![MultiXscale CoE country map](msx_map.png)
+</figure>
 
 
