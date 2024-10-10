@@ -81,7 +81,7 @@ module load netCDF/4.9.0-gompi-2022a
     As such, this documentation is intended for "experts" in the runtime linker and it's behaviour,
     and most cases are untested. Any feedback on this topic is highly appreciated. 
     
-Building and running software on top of EESSI without EasyBuild is not as straightforward and requires some considerations to take care of. 
+Building and running software on top of EESSI without EasyBuild is not straightforward and requires some considerations to take care of. 
 
 It is expected that you will have loaded all of your required dependencies as modules from the EESSI environment. Since EESSI sets `LIBRARY_PATH` for all of the modules and the `GCC` compiler is configured to use the compat layer, there should be no additional configuration required to execute a standard build process. On the other hand, EESSI does not set `LD_LIBRARY_PATH`, so at runtime, the executable will need help finding the proper libraries that it needs. The easiest way to circumvent this is setting the environment variable `LD_RUN_PATH` during compile time as well. Thus, the dynamic linker will search for those paths when the program is executed. 
 
