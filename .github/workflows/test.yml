@@ -30,6 +30,13 @@ jobs:
           # config: '/lint/config/changelog.yml'
     #     args: '.'
 
+
+    - name: checkout test suite
+      uses: actions/checkout@v3
+      with:
+        repository: eessi/test-suite
+        path: src
+
     - name: install mkdocs + plugins
       run: |
           pip install -r requirements.txt
