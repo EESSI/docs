@@ -18,10 +18,10 @@ dev.eessi.io
     └── easystacks
 ```
 
-Creating a PR that adds an entry to an easystack file under on of the projects will allow authorised users to trigger 
+Creating a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) that adds an entry to an easystack file under one of the projects will allow authorized users to trigger 
 a build with the command `bot: build` through a GitHub comment.
 
-## Building development versions
+Deploying pre-release builds of software
 
 ### easyconfig files and `--software-commit`
 The approach to build and install software is similar to that of `software.eessi.io`. 
@@ -49,12 +49,12 @@ sources = ['%(software_commit)s.tar.gz']
 ```
 
 One can also make new changes to the easyconfig file, for example, if the new functionality requires new build or 
-runtime dependencies, patches, flags, etc. It's a good idea to try installing from a specific commit locally first,
+runtime dependencies, patches, configuration options, etc. It's a good idea to try installing from a specific commit locally first,
 to at least see if everything is parsed correctly and confirm that the right sources are being downloaded.
 
 ### Easystack files and triggering builds
 
-After the easyconfig file has been created and added to `projectX/easyconfigs`, an easystack file that picks it up
+After the easyconfig file has been created and added to the `easyconfigs` subdirectory, an [easystack file](https://docs.easybuild.io/easystack-files) that picks it up
 needs to be in place. This easystack file must follow a naming convention: `software-eb-X.Y.Z-dev.yml`,
 where X.Y.Z correspond to the EasyBuild version used to install the software. 
 Following our example for `ESPREsSo`, it would look like: 
