@@ -37,7 +37,7 @@ build:
       eessirmaps::multixscale_map(); ggplot2::ggsave('msx_map.png', bg = 'white')"
 ```
 
-Note how we simply include the EESSI GitLab CI component and set up a blank directory for our user R libraries. Apart from the [`rnaturalearthdata`](https://cran.r-project.org/package=rnaturalearthdata) R package, all the other dependencies are taken care of by the `R-bundle-CRAN/2023.12-foss-2023a` EESSI module. This is true for the system and R package dependencies.
+Note how we simply include the EESSI GitLab CI component and set up a blank directory for our user R libraries. Remember, because of EESSI, the environment that you develop in will be _exactly_ the same as the one the CI is run in. Apart from the [`rnaturalearthdata`](https://cran.r-project.org/package=rnaturalearthdata) R package, all the other dependencies are taken care of by the `R-bundle-CRAN/2023.12-foss-2023a` EESSI module. This is true for the system and R package dependencies.
 
 Then we simply have to install our package to the CI environment and call the `multixscale_map()` function to produce the plot, which is uploaded as an artifact from the CI environment. We can then retrieve the [artifact archive](https://gitlab.com/neves-p/eessirmaps/-/jobs/8057216299/artifacts/download), unpack it and obtain the map.
 
