@@ -55,16 +55,20 @@ to at least see if everything is parsed correctly and confirm that the right sou
 ### Easystack files and triggering builds
 
 After the easyconfig file has been created and added to the `easyconfigs` subdirectory, an [easystack file](https://docs.easybuild.io/easystack-files) that picks it up
-needs to be in place. This easystack file must follow a naming convention: `software-eb-X.Y.Z-dev.yml`,
-where X.Y.Z correspond to the EasyBuild version used to install the software. 
-Following our example for `ESPREsSo`, it would look like: 
+needs to be in place. 
 
-``` yml
-easyconfigs:
-  - ESPResSo-4.2.2-foss-2023a-software-commit.eb:
-      options:
-        software-commit: 2ba17de6096933275abec0550981d9122e4e5f28 # release 4.2.2
-```
+!!! note "Naming convention for easystack files"
+
+    The easystack files must follow a naming convention: `software-eb-X.Y.Z-dev.yml`,
+    where X.Y.Z correspond to the EasyBuild version used to install the software. 
+    Following our example for `ESPREsSo`, it would look like: 
+    
+    ``` yml
+    easyconfigs:
+      - ESPResSo-4.2.2-foss-2023a-software-commit.eb:
+          options:
+            software-commit: 2ba17de6096933275abec0550981d9122e4e5f28 # release 4.2.2
+    ```
 
 The `ESPResSo-4.2.2-foss-2023a-software-commit.eb` would be the easyconfig file added in the step above. 
 Note the option passing the `software-commit` for the development version that should be built. 
