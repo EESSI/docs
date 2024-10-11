@@ -4,7 +4,7 @@ date: 2024-10-11
 slug: ci-workflow-for-EESSI 
 ---
 
-# CI workflow for EESSI
+# An example CI workflow that leverages EESSI CI tools
 
 [EESSI's CI workflows](https://www.eessi.io/docs/using_eessi/eessi_in_ci/) are available on [GitHub Actions](https://github.com/marketplace/actions/eessi) and as a [GitLab CI/CD component](https://gitlab.com/explore/catalog/eessi/gitlab-eessi). Enabling this is as simple as adding EESSI's CI to your workflow of choice, giving you access to the entire EESSI software stack optimized for the relevant CPU architecture(s) in your runner's environment. If you are developing an application on top of the EESSI software stack, for example, this means you don't need to invest heavily in configuring and maintaining a CI setup: EESSI does that for you so you can focus on your code. With the EESSI CI workflows you don't have to worry about figuring out how to optimize build and runtime dependencies as these will be streamed seamlessly to your runner's environment.
 
