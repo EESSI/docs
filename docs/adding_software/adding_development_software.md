@@ -2,23 +2,25 @@
 
 ## What is `dev.eessi.io`?
 
-`dev.eessi.io` is the development repository of EESSI. With it, developers can build and deploy non-production ready versions of their software to a CernVM-FS repository. This way, development version can easily be tested on systems where `dev.eessi.io` is available.
+`dev.eessi.io` is the [development repository of EESSI](repositories/dev.eessi.io.md).
 
 ## Adding software
 
-Using `dev.eessi.io` is similar to using EESSI's production repository `software.eessi.io`. Software builds are triggered by a bot listening to pull requests in GitHub repository (at the moment https://github.com/EESSI/dev.eessi.io). This repository is organised by project, where corresponding easystack files and easyconfig files are placed.
+Using `dev.eessi.io` is similar to using EESSI's production repository `software.eessi.io`.
+Software builds are triggered by a [bot](https://www.eessi.io/docs/bot/) listening to pull 
+requests in [GitHub repositories](https://github.com/search?q=org%3AEESSI+dev.eessi.io&type=repositories). 
+Each GitHub repository, where corresponding easystack files and easyconfig files are placed.
+
+To see this in practice, refer to the [dev.eessi.io-example GitHub repository](https://github.com/EESSI/dev.eessi.io-example). In this GitHub repository you will find templates for some software installations and the appropriate directory structure, that is:
 
 ```
-dev.eessi.io
-├── project1
-│   ├── easyconfigs
-│   └── easystacks
-└── project2
-    ├── easyconfigs
-    └── easystacks
+dev.eessi.io-example
+├── easyconfigs
+└── easystacks
 ```
 
-Creating a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) that adds an entry to an easystack file under one of the projects will allow authorized users to trigger 
+Creating a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) 
+that adds an entry to an easystack file under one of the projects will allow authorized users to trigger 
 a build with the command `bot: build` through a GitHub comment.
 
 Deploying pre-release builds of software
@@ -28,7 +30,7 @@ The approach to build and install software is similar to that of `software.eessi
 It requires an easyconfig file which for `dev.eessi.io` need not be part of https://easybuilders/easybuild-easyconfigs 
 as these easyconfigs can simply be placed under `project/easyconfigs`.
 
-To allow for development builds, we leverage the `--software-commit` functionality (requires EasyBuild v4.9.3 or higher). This lets us build a given application from
+To allow for development builds, we leverage the `--software-commit` functionality (requires [EasyBuild](https://easybuild.io/) v4.9.3 or higher). This lets us build a given application from
 a specific commit in repository. This can also be done from a fork, by changing the `github_account` field in the easyconfig file. 
 We've created a template for `ESPResSo` based on the standard eaasyconfig of the most recent version. The relevant fields are:
 
@@ -36,7 +38,7 @@ We've created a template for `ESPResSo` based on the standard eaasyconfig of the
 easyblock = 'CMakeMake'
 
 name = 'ESPResSo'
-version = '4.2.2'
+version = 'devel'
 versionsuffix = '-%(software_commit)s'
 
 homepage = 'https://espressomd.org/wordpress'
@@ -59,18 +61,19 @@ needs to be in place.
 
 !!! note "Naming convention for easystack files"
 
-    The easystack files must follow a naming convention: `software-eb-X.Y.Z-dev.yml`,
-    where X.Y.Z correspond to the EasyBuild version used to install the software. 
-    Following our example for `ESPREsSo`, it would look like: 
+    The easystack files must follow a naming convention and be named something
+    like: `software-eb-X.Y.Z-dev.yml`, where X.Y.Z correspond to the EasyBuild
+    version used to install the software. Following our example for 
+    `ESPREsSo`, it would look like: 
     
     ``` yml
     easyconfigs:
-      - ESPResSo-4.2.2-foss-2023a-software-commit.eb:
+      - ESPResSo-devel-foss-2023a-software-commit.eb:
           options:
             software-commit: 2ba17de6096933275abec0550981d9122e4e5f28 # release 4.2.2
     ```
 
-The `ESPResSo-4.2.2-foss-2023a-software-commit.eb` would be the easyconfig file added in the step above. 
+The `ESPResSo-devel-foss-2023a-software-commit.eb` would be the easyconfig file added in the step above. 
 Note the option passing the `software-commit` for the development version that should be built. 
 For the sake of this example, the chosen commit actually corresponds to the 4.2.2 release.
 
