@@ -20,6 +20,7 @@ module help EESSI-extend/2023.06-easybuild
 ```
 
 The installation prefix is determined by `EESSI-extend` through the following logic:
+
 1. If `$EESSI_CVMFS_INSTALL` is set, software is installed in `$EESSI_SOFTWARE_PATH`. This variable shouldn't be used by users and would only be used by CVMFS administrators of the EESSI repository.
 2. If `$EESSI_SITE_INSTALL` is set, the EESSI site installation prefix (`$EESSI_SITE_SOFTWARE_PATH`) will be used. This is typically where sites hosting a system that has EESSI deployed would install additional software on top of EESSI and make it available to all their users.
 3. If `$EESSI_PROJECT_INSTALL` is set (and `$EESSI_USER_INSTALL` is not set), this prefix will be used. You should use this if you want to install additional software on top of EESSI that should also be usable by your project partners on the same system. For example, if you have a project space at `/project/my_project` that all your project partners can access, you could set `export EESSI_PROJECT_INSTALL=/project/my_project/eessi`. Make sure that this directory has the SGID permission set (`chmod g+s $EESSI_PROJECT_INSTALL`). This way, all the additional installations done with `EESSI-extend` will be put in that prefix, and will get the correct UNIX file permissions so that all your project partners can access it.
