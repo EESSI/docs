@@ -178,7 +178,165 @@ This test _works_, but is _not_ very portable. If we move to a system with 192 c
 
 ### Step 3: implementing as a portable ReFrame test { #as-portable-reframe-test }
 
-In the previous section, there were several system-specific items in the test. In this section, we will show how we use the EESSI hooks to avoid hard-coding system specific information. We do this by replacing the system-specific parts of the test from Step 2 bit by bit. The full final test can be found under `tutorials/mpi4py/mpi4py_portable.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
+In step 2, there were several system-specific items in the test. In this section, we will show how we use inheritance from the `EESSI_Mixin` class to avoid hard-coding system specific information. The full final test can be found under `tutorials/mpi4py/mpi4py_portable.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
+
+#### How EESSI_Mixin works
+
+The `EESSI_Mixin` class provides standardized functionality that should be useful to all tests in the EESSI test-suite. One of it's key functions is to make sure tests dynamically try to determine sensible values for the things that were system specific in Step 2. For example, instead of hard coding a task count, the test inheriting from `EESSI_Mixin` will determine this dynamically based on the amount of available cores per node, and a declaration from the inheriting test class about how you want to instantiated tasks.
+
+For example, if you want to launch one task for each core, the test that inherits from `EESSI_Mixin` would only have to declare
+
+```
+compute_unit = COMPUTE_UNIT[CPU]
+```
+
+The `EESSI_Mixin` class then takes care of querying the ReFrame config file for the node topology, and setting the correct number of tasks for each node.
+
+Another feature is that it sets defaults for a few items, such as the `valid_prog_environs = ['default']`. These will likely be the same for _most_ tests in the EESSI test suite, and when they _do_ need to be different, one can easily overwrite them in the child class.
+
+Most of the functionality in the `EESSI_Mixin` class require certain class attributes (such as the `compute_unit` above) to be set by the child class, so that the `EESSI_Mixin` class can use those as input. It is important that these attributes are set _before_ the stage in which the `EESSI_Mixin` class needs them (see the stages of the [ReFrame regression pipeline](https://reframe-hpc.readthedocs.io/en/stable/pipeline.html)). To support test developers, the `EESSI_Mixin` class checks if these attributes are set, and gives verbose feedback in case any attributes are missing.
+
+#### Inheriting from EESSI_Mixin
+
+The first step is to actually inherit from the `EESSI_Mixin` class:
+
+```
+from eessi.testsuite.eessi_mixin import EESSI_Mixin
+...
+@rfm.simple_test
+class EESSI_MPI4PY(rfm.RunOnlyRegressionTest, EESSI_Mixin):
+```
+
+#### Removing hard-coded test scales
+
+First, we remove 
+
+```
+    # ReFrame will generate a test for each scale
+    scale = parameter([2, 128, 256])
+```
+from the test. The `EESSI_Mixin` class will define the default set of scales on which this test will be run as
+```
+from eessi.testsuite.constants import SCALES
+...
+    scale = parameter(SCALES.keys())
+```
+
+This will ensure the test will run at all of the default scales, as defined by the `SCALES` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py).
+
+If, and only if, your test can not run on all of those scales should you overwrite this parameter in your child class. For example, if you have a test that does not support running on multiple nodes, you could define a filtering function outside of the class
+```
+def filter_scales():
+    return [
+        k for (k,v) in SCALES.items()
+        if v['num_nodes'] == 1
+    ]
+```
+and then in the class body overwrite the scales with a subset of items from the `SCALES` constant:
+```
+    scale = parameter(filter_scales())
+```
+
+Next, we also remove
+
+```
+   @run_after('init')
+    def define_task_count(self):
+        self.num_tasks = self.scale
+        self.num_tasks_per_node = min(self.num_tasks, 128)
+```
+
+as `num_tasks` and and `num_tasks_per_node` will be set by the `assign_tasks_per_compute_unit` [hook](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py), which is invoked by the `EESSI_Mixin` class.
+
+
+
+
+We define the following class variables:
+
+
+
+```
+from eessi.testsuite.utils import find_modules
+...
+    module_name = parameter(find_modules('mpi4py'))
+```
+
+BLA BLA TODO: Explain per attribute that needs to be set how to set it, and before which phase
+
+
+
+### Background of the mpi4py test { #background-of-mpi4py-test }
+To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
+
+The MPI standard defines how to communicate between multiple processes that work on a common computational task. Each process that is part of the computational task gets a unique identifier (0 to N-1 for N processes), the MPI rank, which can e.g. be used to distribute a workload. The MPI standard defines communication between two given processes (so-called point-to-point communication), but also between a set of N processes (so-called collective communication).
+
+An example of such a collective operation is the [MPI_REDUCE](https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report/node130.htm#Node130) call. It reduces data elements from multiple processes with a certain operation, e.g. it takes the sum of all elements or multiplication of all elements.
+
+#### The mpi4py test
+In this example, we will implement a test that does an `MPI_Reduce` on the rank, using the `MPI.SUM` operation. This makes it easy to validate the result, as we know that for N processes, the theoretical sum of all ranks (0, 1, ... N-1) is `(N * (N-1) / 2)`.
+
+Our initial code is a python script `mpi4py_reduce.py`, which can be found in `tutorials/mpi4py/src/mpi4py_reduce.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository:
+```python
+#!/usr/bin/env python
+"""
+MPI_Reduce on MPI rank. This should result in a total of (size * (size - 1) / 2),
+where size is the total number of ranks.
+Prints the total number of ranks, the sum of all ranks, and the time elapsed for the reduction."
+"""
+
+import argparse
+import time
+
+from mpi4py import MPI
+
+parser = argparse.ArgumentParser(description='mpi4py reduction benchmark',
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument('--n_warmup', type=int, default=100,
+                    help='Number of warmup iterations')
+parser.add_argument('--n_iter', type=int, default=1000,
+                    help='Number of benchmark iterations')
+args = parser.parse_args()
+
+n_warmup = args.n_warmup
+n_iter = args.n_iter
+
+size = MPI.COMM_WORLD.Get_size()
+rank = MPI.COMM_WORLD.Get_rank()
+name = MPI.Get_processor_name()
+
+# Warmup
+t0 = time.time()
+for i in range(n_warmup):
+    total = MPI.COMM_WORLD.reduce(rank, op=MPI.SUM)
+
+# Actual reduction, multiple iterations for accuracy of timing
+t1 = time.time()
+for i in range(n_iter):
+    total = MPI.COMM_WORLD.reduce(rank, op=MPI.SUM)
+t2 = time.time()
+total_time = (t2 - t1) / n_iter
+
+if rank == 0:
+    print(f"Total ranks: {size}")
+    print(f"Sum of all ranks: {total}")  # Should be (size * (size-1) / 2)
+    print(f"Time elapsed: {total_time:.3e}")
+```
+
+Assuming we have `mpi4py` available, we could run this manually using
+```
+$ mpirun -np 4 python3 mpi4py_reduce.py
+Total ranks: 4
+Sum of all ranks: 6
+Time elapsed: 3.609e-06
+```
+
+This started 4 processes, with ranks 0, 1, 2, 3, and then summed all the ranks (`0+1+2+3=6`) on the process with rank 0, which finally printed all this output. The whole reduction operation is performed `n_iter` times, so that we get a more reproducible timing.
+
+### Legacy: former step 3: implementing as a portable ReFrame test { #as-portable-reframe-test-legacy }
+
+The approach using inheritance from the `eessi_mixin` class, described above, is strongly preferred and recommended. There might be certain tests that do not fit the standardized approach of `eessi_mixin`, but usually that will be solvable by overwriting hooks set by `eessi_mixin` in the inheriting class. In the rare case that your test is so exotic that even this doesn't provide a sensible solution, you can still invoke the hooks used by `eessi_mixin` manually. Note that this used to be the default way of writing tests for the EESSI test suite.
+
+In step 2, there were several system-specific items in the test. In this section, we will show how we use the EESSI hooks to avoid hard-coding system specific information. We do this by replacing the system-specific parts of the test from Step 2 bit by bit. The full final test can be found under `tutorials/mpi4py/mpi4py_portable_legacy.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
 
 #### Replacing hard-coded test scales (mandatory)
 
@@ -476,69 +634,4 @@ on a system with 192 cores per node. I.e. any test of 2 nodes (384 cores) or abo
 
     For example, any pipeline hook attached to the `setup` step making use of `self.num_tasks`, should be defined after the function calling the test-suite hook `assign_tasks_per_compute_unit`.
 
-### Background of the mpi4py test { #background-of-mpi4py-test }
-To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
 
-The MPI standard defines how to communicate between multiple processes that work on a common computational task. Each process that is part of the computational task gets a unique identifier (0 to N-1 for N processes), the MPI rank, which can e.g. be used to distribute a workload. The MPI standard defines communication between two given processes (so-called point-to-point communication), but also between a set of N processes (so-called collective communication).
-
-An example of such a collective operation is the [MPI_REDUCE](https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report/node130.htm#Node130) call. It reduces data elements from multiple processes with a certain operation, e.g. it takes the sum of all elements or multiplication of all elements.
-
-#### The mpi4py test
-In this example, we will implement a test that does an `MPI_Reduce` on the rank, using the `MPI.SUM` operation. This makes it easy to validate the result, as we know that for N processes, the theoretical sum of all ranks (0, 1, ... N-1) is `(N * (N-1) / 2)`.
-
-Our initial code is a python script `mpi4py_reduce.py`, which can be found in `tutorials/mpi4py/src/mpi4py_reduce.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository:
-```python
-#!/usr/bin/env python
-"""
-MPI_Reduce on MPI rank. This should result in a total of (size * (size - 1) / 2),
-where size is the total number of ranks.
-Prints the total number of ranks, the sum of all ranks, and the time elapsed for the reduction."
-"""
-
-import argparse
-import time
-
-from mpi4py import MPI
-
-parser = argparse.ArgumentParser(description='mpi4py reduction benchmark',
-                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--n_warmup', type=int, default=100,
-                    help='Number of warmup iterations')
-parser.add_argument('--n_iter', type=int, default=1000,
-                    help='Number of benchmark iterations')
-args = parser.parse_args()
-
-n_warmup = args.n_warmup
-n_iter = args.n_iter
-
-size = MPI.COMM_WORLD.Get_size()
-rank = MPI.COMM_WORLD.Get_rank()
-name = MPI.Get_processor_name()
-
-# Warmup
-t0 = time.time()
-for i in range(n_warmup):
-    total = MPI.COMM_WORLD.reduce(rank, op=MPI.SUM)
-
-# Actual reduction, multiple iterations for accuracy of timing
-t1 = time.time()
-for i in range(n_iter):
-    total = MPI.COMM_WORLD.reduce(rank, op=MPI.SUM)
-t2 = time.time()
-total_time = (t2 - t1) / n_iter
-
-if rank == 0:
-    print(f"Total ranks: {size}")
-    print(f"Sum of all ranks: {total}")  # Should be (size * (size-1) / 2)
-    print(f"Time elapsed: {total_time:.3e}")
-```
-
-Assuming we have `mpi4py` available, we could run this manually using
-```
-$ mpirun -np 4 python3 mpi4py_reduce.py
-Total ranks: 4
-Sum of all ranks: 6
-Time elapsed: 3.609e-06
-```
-
-This started 4 processes, with ranks 0, 1, 2, 3, and then summed all the ranks (`0+1+2+3=6`) on the process with rank 0, which finally printed all this output. The whole reduction operation is performed `n_iter` times, so that we get a more reproducible timing.
