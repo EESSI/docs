@@ -4,7 +4,7 @@ To set up the EESSI environment, you can either load an EESSI module with Lmod o
 
 ## Loading an EESSI module with Lmod
 
-There are a few different scenarios where you may want to use EESSI with Lmod:
+There are a few different scenarios where you may want to set up the EESSI environment by loading an EESSI module with Lmod:
 
 1.  You already using Lmod version >= 8.6
 
