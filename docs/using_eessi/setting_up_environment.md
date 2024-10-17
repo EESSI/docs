@@ -32,7 +32,7 @@ There are a few different scenarios where you may want to set up the EESSI envir
 
     :clap: Your environment is now set up, you are ready to start running software provided by EESSI!
 
-3.  Should Lmod be unavailable and `MODULEPATH` not utilized, you can use EESSI as a module by directly sourcing the Lmod initialization script:
+3.  Should Lmod be unavailable and `MODULEPATH` not utilized, you can initialise EESSI via an Lmod module by directly sourcing the Lmod initialisation script (this script automatically loads the EESSI module):
 
     ``` { .bash .copy }
     source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
