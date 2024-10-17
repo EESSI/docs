@@ -8,7 +8,7 @@ There are a few different scenarios where you may want to set up the EESSI envir
 
 1.  You are already using Lmod with version >= 8.6
 
-    In this case you should consider unsetting the `MODULEPATH`, as you do not really want to mix modules coming from EESSI and from your system
+    In this case, we recommend unsetting the `MODULEPATH`, because EESSI is not designed to mix modules coming from EESSI and from your system.
     since they are effectively two different OSes (though this may not be possible at some sites, and some compromise may be necessary):
 
     ``` { .bash .copy }
