@@ -54,10 +54,27 @@ One can also make new changes to the easyconfig file, for example, if the new fu
 runtime dependencies, patches, configuration options, etc. It's a good idea to try installing from a specific commit locally first,
 to at least see if everything is parsed correctly and confirm that the right sources are being downloaded.
 
-### Easystack files and triggering builds
+### Installation details
 
-After the easyconfig file has been created and added to the `easyconfigs` subdirectory, an [easystack file](https://docs.easybuild.io/easystack-files) that picks it up
-needs to be in place. 
+There are a few additional details one should keep in mind when building for `dev.eessi.io` when compared to the [production repository](repositories/software.eessi.io.md).
+
+#### Versions, dependencies, tags
+
+Standard EESSI installations are 
+
+#### Patch files
+
+If your specific development build requires patch files, you should add these to the `easyconfigs/` directory. If the necessary patch is part of an EasyBuild release, then this may not be necessary, as these will be directly taken from EasyBuild.
+
+#### Checksums
+
+EasyBuild's easyconfig files typically contain [checksums](https://docs.easybuild.io/writing-easyconfig-files/?h=checksums#common_easyconfig_param_sources_checksums) as their use is highly recommended.
+By default, EasyBuild will compute the checksums of sources and patch files it needs for a given installation, and compare them with the values in the easyconfig file. Because builds 
+for `dev.eessi.io` change much more often, hard coded checksums become a problem, as they'd need to be updated with every new build.
+
+#### Easystack files 
+After an easyconfig file has been created and added to the `easyconfigs` subdirectory, an [easystack file](https://docs.easybuild.io/easystack-files) that picks it up
+needs to be in place so that a build can be triggered.
 
 !!! note "Naming convention for easystack files"
 
@@ -73,15 +90,18 @@ needs to be in place.
             software-commit: 2ba17de6096933275abec0550981d9122e4e5f28 # release 4.2.2
     ```
 
-The `ESPResSo-devel-foss-2023a-software-commit.eb` would be the easyconfig file added in the step above. 
-Note the option passing the `software-commit` for the development version that should be built. 
+The `ESPResSo-devel-foss-2023a-software-commit.eb` would be the easyconfig file added in our example step above. 
+Note the option passing the `software-commit` for the development version that should be built.
 For the sake of this example, the chosen commit actually corresponds to the 4.2.2 release.
+
+### Triggering builds
 
 To trigger a build, all one needs to do is open a PR with the changes adding the easyconfig and easystack 
 files and commenting `bot: build`. This can only be done by previously authorized users. 
-The current build cluster builds for the `zen2` CPU microarchitecture, but this is likely to change.
+The current build cluster builds only for the `zen2` CPU microarchitecture, but this is likely to change.
 
 Once a build is complete and the `bot:deploy` label is added, a staging PR can be merged to deploy the
 application to the `dev.eessi.io` cvmfs repository. On a system with `dev.eessi.io` mounted, then all
 that is left is to `module use /cvmfs/dev.eessi.io/versions/2023.06/modules/all` and try out the software!
 
+There is currently no initialisation script or module for `dev.eessi.io`, but this feature is coming soon.
