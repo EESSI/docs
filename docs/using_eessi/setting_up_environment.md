@@ -40,7 +40,7 @@ There are a few different scenarios where you may want to set up the EESSI envir
 
     :clap: Your environment is now set up, you are ready to start running software provided by EESSI!
 
-## Use the EESSI `bash` initialisation script
+## Sourcing the EESSI `bash` initialisation script
 
 You can initialise EESSI (in a non-reversible way) by running the command:
 
