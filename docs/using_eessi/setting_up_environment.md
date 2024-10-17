@@ -1,6 +1,6 @@
 # Setting up your environment
 
-To set up the EESSI environment, you can either use EESSI with Lmod or use a bash initialisation script.
+To set up the EESSI environment, you can either load an EESSI module with Lmod or source a bash initialisation script.
 
 ## Using EESSI with Lmod
 
