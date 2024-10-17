@@ -19,7 +19,7 @@ There are a few different scenarios where you may want to set up the EESSI envir
 
     :clap: Your environment is now set up, you are ready to start running software provided by EESSI!
 
-2.  You are using an older version of Lmod or any other tool utilizing `MODULEPATH` (Tmod, etc.)
+2.  You are using an Lmod with a version older than 8.6 or any other tool utilizing `MODULEPATH` (Tmod, etc.)
 
     You should unset MODULEPATH to prevent Lmod from attempting to build a cache for your module tree (as this can be very slow if you have
     a lot of modules). Again, unsetting the MODULEPATH should be considered as a good idea in general so you do not mix local and EESSI
