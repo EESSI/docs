@@ -51,6 +51,8 @@ There are a few different scenarios where you may want to set up the EESSI envir
 
 You can initialise EESSI (in a non-reversible way) by running the command:
 
+   !!! info "This is supported exclusively for bash shell users. If you're using a different shell, please use the alternative approach"
+
 ``` { .bash .copy }
 source /cvmfs/software.eessi.io/versions/2023.06/init/bash
 ```
