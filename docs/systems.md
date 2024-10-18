@@ -67,6 +67,15 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 * HPC cluster: [General documentation](https://www.embl.org/about/info/it-services/it-infrastructure)
 
+#### University of Stuttgart
+
+* Ant: [General documentation](https://www2.icp.uni-stuttgart.de/~jgrad/hpc/_pages/_hpc_facilities/ant.html)
+
+### Greece
+
+#### Aristotle University of Thessaloniki
+
+* Aristotle: [General documentation](https://hpc.it.auth.gr/nodes-summary_en/) | [EESSI @ Aristotle](https://hpc.it.auth.gr/software/eessi/)
 
 ### Netherlands
 
