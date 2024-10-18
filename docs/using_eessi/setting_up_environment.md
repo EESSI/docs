@@ -7,6 +7,7 @@ To set up the EESSI environment, you can either load an EESSI module with Lmod o
 There are a few different scenarios where you may want to set up the EESSI environment by loading an EESSI module with Lmod:
 
     !!! note "Why do we recommend to unset `MODULEPATH`?"
+
         Unsetting `MODULEPATH` may not be possible at some sites, and some compromise or workaround may
         be necessary. The underlying reason to suggest this is that EESSI and your system are most likely based on
         two different operating system distributions - EESSI uses Gentoo Prefix, your system almost certainly uses some other
