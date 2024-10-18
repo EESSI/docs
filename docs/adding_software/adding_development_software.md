@@ -50,27 +50,42 @@ source_urls = ['https://github.com/%(github_account)s/%(name)s/archive/']
 sources = ['%(software_commit)s.tar.gz']
 ```
 
+!!! note `--software-commit` disables `--robot`
+
+    Using `--software-commit` disables the use of `--robot`, so make sure that you explictly include
+    new dependencies that might need to be installed. Otherwise, the easyconfig files won't be found.
+
 One can also make new changes to the easyconfig file, for example, if the new functionality requires new build or 
 runtime dependencies, patches, configuration options, etc. It's a good idea to try installing from a specific commit locally first,
 to at least see if everything is parsed correctly and confirm that the right sources are being downloaded.
 
 ### Installation details
 
-There are a few additional details one should keep in mind when building for `dev.eessi.io` when compared to the [production repository](repositories/software.eessi.io.md).
+While the prcess to build for `dev.eessi.io` is similar to the one for the [production repository](repositories/software.eessi.io.md) there 
+are a few additional details to keep in mind.
 
 #### Versions, dependencies, tags
 
-Standard EESSI installations are 
+Installations to the EESSI production repository refer to specific versions of applications, however, Development builds can't follow the same 
+approach as they are most often not pegged to a release. Because of this, it is possible to add a descriptive "version" name to the `version` field
+in the easyconfig file for a give (set of) installations. Note that some applications are built with custom easyblocks which may
+use the `version` field to determine how the installation is meant to work (e.g., versions >2 need to copy files from to a new directory). Make sure
+that you account for this otherwise you may install software differently than intended. If you encounter issues, you can open an issue in our
+[support portal](https://gitlab.com/eessi/support#eessi-support-portal).
 
 #### Patch files
 
-If your specific development build requires patch files, you should add these to the `easyconfigs/` directory. If the necessary patch is part of an EasyBuild release, then this may not be necessary, as these will be directly taken from EasyBuild.
+If your specific development build requires patch files, you should add these to the `easyconfigs/` directory. If the necessary patch is part of an
+EasyBuild release, then this may not be necessary, as these will be directly taken from EasyBuild. If it is a new patch that is not on an EasyBuild
+release, then include it in the `easyconfigs/` directory.
 
 #### Checksums
 
-EasyBuild's easyconfig files typically contain [checksums](https://docs.easybuild.io/writing-easyconfig-files/?h=checksums#common_easyconfig_param_sources_checksums) as their use is highly recommended.
-By default, EasyBuild will compute the checksums of sources and patch files it needs for a given installation, and compare them with the values in the easyconfig file. Because builds 
-for `dev.eessi.io` change much more often, hard coded checksums become a problem, as they'd need to be updated with every new build.
+EasyBuild's easyconfig files typically contain [checksums](https://docs.easybuild.io/writing-easyconfig-files/?h=checksums#common_easyconfig_param_sources_checksums)
+ as their use is highly recommended. By default, EasyBuild will compute the checksums of sources and patch files it needs for
+  a given installation, and compare them with the values in the easyconfig file. Because builds for `dev.eessi.io` change much
+   more often, hard coded checksums become a problem, as they'd need to be updated with every new build. For this reason, we
+    recommend not including checksums in your development easyconfig files (unless you need to, for a specific reason).
 
 #### Easystack files 
 After an easyconfig file has been created and added to the `easyconfigs` subdirectory, an [easystack file](https://docs.easybuild.io/easystack-files) that picks it up
