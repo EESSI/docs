@@ -20,7 +20,22 @@ dev.eessi.io-example
 └── easystacks
 ```
 
-### easyconfig files and `--software-commit`
+### Quick steps to build for `dev.eessi.io`
+
+- Obtain commit ID from GitHub or GitLab repository with source to build
+- Fork the project's `dev.eessi.io` repository on GitHub, or checkout to a new branch if you can do so.
+- If needed, prepare an easyconfig template using `--software-commit` and add it to `easyconfigs/`
+- Add an easystack file in `easystacks/` that with the easyconfig file above, add the
+commit ID to `software-commit` under `options`.
+- Open a PR from the fork or branch to the main branch of the application's `dev.eessi.io` GitHub repository.
+- Instruct the bot to start a build by adding a comment with `bot: build`.
+- Confirm the build worked correctly. If so, you can deploy the software by adding the label `bot:build` to the
+pull request.
+- Once the staging PR is approved, the development build will become available on `dev.eessi.io` in a few minutes!
+
+### Installation details
+
+#### easyconfig files and `--software-commit`
 The approach to build and install software is similar to that of `software.eessi.io`. 
 It requires one or more easyconfig files. Easybuild files used for building for `dev.eessi.io`
 do not need to be a part of an [EasyBuild release](https://easybuilders/easybuild-easyconfigs), unlike builds for 
@@ -55,7 +70,6 @@ One can also make new changes to the easyconfig file, for example, if the new fu
 runtime dependencies, patches, configuration options, etc. It's a good idea to try installing from a specific commit locally first,
 to at least see if everything is parsed correctly and confirm that the right sources are being downloaded.
 
-### Installation details
 
 While the process to build for `dev.eessi.io` is similar to the one for the [production repository](../repositories/software.eessi.io.md) there 
 are a few additional details to keep in mind.
@@ -64,7 +78,7 @@ are a few additional details to keep in mind.
 
 Installations to the EESSI production repository refer to specific versions of applications, however, Development builds can't follow the same 
 approach as they are most often not pegged to a release. Because of this, it is possible to add a descriptive "version" name to the `version` field
-in the easyconfig file for a give (set of) installations. 
+in the easyconfig file for a given (set of) installations. 
 
 Note that some applications are built with custom easyblocks which may
 use the `version` field to determine how the installation is meant to work (e.g., versions >2 need to copy files from to a new directory). Make sure
@@ -75,7 +89,7 @@ that you account for this, otherwise you may install software differently than i
 
 Installations in `dev.eessi.io` are done _on top_ of `software.eessi.io`. That means if your development build depends on some application that is
 already installed in `software.eessi.io`, then that will simply be used. However, if you need to add a new dependency, then this must included as 
-part of the build. That means including an easybuild file for it, and adding it to the right easystack file.
+part of the build. That means including an easystack file for it, and adding it to the right easystack file.
 
 #### Using commit IDs or tags for `--software-commit`
 
@@ -121,7 +135,8 @@ For the sake of this example, the chosen commit actually corresponds to the 4.2.
 
 ### Triggering builds
 
-To trigger a build, all one needs to do is open a PR with the changes adding the easyconfig and easystack 
+We use the [EESSI build-test-deploy bot](../bot.md) to handle software builds.
+All one needs to do is open a PR with the changes adding the easyconfig and easystack 
 files and commenting `bot: build`. This can only be done by previously authorized users. 
 The current build cluster builds only for the `zen2` CPU microarchitecture, but this is likely to change.
 
