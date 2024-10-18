@@ -2,16 +2,17 @@
 
 ## What is `dev.eessi.io`?
 
-`dev.eessi.io` is the [development repository of EESSI](repositories/dev.eessi.io.md).
+`dev.eessi.io` is the [development repository of EESSI](../repositories/dev.eessi.io.md).
 
 ## Adding software
 
 Using `dev.eessi.io` is similar to using EESSI's production repository `software.eessi.io`.
 Software builds are triggered by a [bot](https://www.eessi.io/docs/bot/) listening to pull 
 requests in [GitHub repositories](https://github.com/search?q=org%3AEESSI+dev.eessi.io&type=repositories). 
-Each GitHub repository, where corresponding easystack files and easyconfig files are placed.
+These builds require custom easyconfig and easystack files, which should be in specific directories.
 
-To see this in practice, refer to the [dev.eessi.io-example GitHub repository](https://github.com/EESSI/dev.eessi.io-example). In this GitHub repository you will find templates for some software installations and the appropriate directory structure, that is:
+To see this in practice, refer to the [dev.eessi.io-example GitHub repository](https://github.com/EESSI/dev.eessi.io-example).
+ In this GitHub repository you will find templates for some software installations with the appropriate directory structure, that is:
 
 ```
 dev.eessi.io-example
@@ -19,16 +20,11 @@ dev.eessi.io-example
 └── easystacks
 ```
 
-Creating a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) 
-that adds an entry to an easystack file under one of the projects will allow authorized users to trigger 
-a build with the command `bot: build` through a GitHub comment.
-
-Deploying pre-release builds of software
-
 ### easyconfig files and `--software-commit`
 The approach to build and install software is similar to that of `software.eessi.io`. 
-It requires an easyconfig file which for `dev.eessi.io` need not be part of https://easybuilders/easybuild-easyconfigs 
-as these easyconfigs can simply be placed under `project/easyconfigs`.
+It requires one or more easyconfig files. Easybuild files used for building for `dev.eessi.io`
+do not need to be a part of an [EasyBuild release](https://easybuilders/easybuild-easyconfigs), unlike builds for 
+`software.eessi.io`. In this case, the development easyconfigs can simply be placed under `project/easyconfigs`.
 
 To allow for development builds, we leverage the `--software-commit` functionality (requires [EasyBuild](https://easybuild.io/) v4.9.3 or higher). This lets us build a given application from
 a specific commit in repository. This can also be done from a fork, by changing the `github_account` field in the easyconfig file. 
@@ -50,7 +46,7 @@ source_urls = ['https://github.com/%(github_account)s/%(name)s/archive/']
 sources = ['%(software_commit)s.tar.gz']
 ```
 
-!!! note `--software-commit` disables `--robot`
+!!! warning "`--software-commit` disables `--robot`"
 
     Using `--software-commit` disables the use of `--robot`, so make sure that you explictly include
     new dependencies that might need to be installed. Otherwise, the easyconfig files won't be found.
@@ -61,17 +57,31 @@ to at least see if everything is parsed correctly and confirm that the right sou
 
 ### Installation details
 
-While the prcess to build for `dev.eessi.io` is similar to the one for the [production repository](repositories/software.eessi.io.md) there 
+While the process to build for `dev.eessi.io` is similar to the one for the [production repository](../repositories/software.eessi.io.md) there 
 are a few additional details to keep in mind.
 
-#### Versions, dependencies, tags
+#### Versions
 
 Installations to the EESSI production repository refer to specific versions of applications, however, Development builds can't follow the same 
 approach as they are most often not pegged to a release. Because of this, it is possible to add a descriptive "version" name to the `version` field
-in the easyconfig file for a give (set of) installations. Note that some applications are built with custom easyblocks which may
+in the easyconfig file for a give (set of) installations. 
+
+Note that some applications are built with custom easyblocks which may
 use the `version` field to determine how the installation is meant to work (e.g., versions >2 need to copy files from to a new directory). Make sure
-that you account for this otherwise you may install software differently than intended. If you encounter issues, you can open an issue in our
+that you account for this, otherwise you may install software differently than intended. If you encounter issues, you can open an issue in our
 [support portal](https://gitlab.com/eessi/support#eessi-support-portal).
+
+#### Installing dependencies
+
+Installations in `dev.eessi.io` are done _on top_ of `software.eessi.io`. That means if your development build depends on some application that is
+already installed in `software.eessi.io`, then that will simply be used. However, if you need to add a new dependency, then this must included as 
+part of the build. That means including an easybuild file for it, and adding it to the right easystack file.
+
+#### Using commit IDs or tags for `--software-commit`
+
+Installing with `--software-commit` requires that you include either a commit ID or a tag. The installation procedure will use the commit ID or tag to 
+obtain the source from the right state. Because tags can be changed to point to a different commit ID, we recommend you avoid using them but stick with
+the commit ID itself. You can then include this in the `versionsuffix` on your easyconfig file, to generate a unique (if ugly) module name.
 
 #### Patch files
 
