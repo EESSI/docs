@@ -46,7 +46,7 @@ commit ID to `software-commit` under `options`.
 #### easyconfig files and `--software-commit`
 The approach to build and install software is similar to that of `software.eessi.io`. 
 It requires one or more easyconfig files. Easybuild files used for building for `dev.eessi.io`
-do not need to be a part of an [EasyBuild release](https://easybuilders/easybuild-easyconfigs), unlike builds for 
+do not need to be a part of an [EasyBuild release](https://github.com/easybuilders/easybuild-easyconfigs), unlike builds for 
 `software.eessi.io`. In this case, the development easyconfigs can simply be placed under `project/easyconfigs`.
 
 To allow for development builds, we leverage the `--software-commit` functionality (requires [EasyBuild](https://easybuild.io/) v4.9.3 or higher). This lets us build a given application from
