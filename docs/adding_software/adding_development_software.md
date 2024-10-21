@@ -31,15 +31,14 @@ dev.eessi.io-example
 
 ### Quick steps to build for `dev.eessi.io`
 
-- Obtain commit ID from GitHub or GitLab repository with source to build
+- Obtain commit ID from GitHub or GitLab repository with source to build.
 - Fork the project's `dev.eessi.io` repository on GitHub, or checkout to a new branch if you can do so.
 - If needed, prepare an easyconfig template using `--software-commit` and add it to `easyconfigs/`
 - Add an easystack file in `easystacks/` that with the easyconfig file above, add the
 commit ID to `software-commit` under `options`.
 - Open a PR from the fork or branch to the main branch of the application's `dev.eessi.io` GitHub repository.
 - Instruct the bot to start a build by adding a comment with `bot: build`.
-- Confirm the build worked correctly. If so, you can deploy the software by adding the label `bot:build` to the
-pull request.
+- Confirm the build worked correctly. If so, you can deploy the software by adding the label `bot:build` to the pull request.
 - Once the staging PR is approved, the development build will become available on `dev.eessi.io` in a few minutes!
 
 ### Installation details
