@@ -1,5 +1,14 @@
 # Adding software to `dev.eessi.io`
 
+!!! warning "`dev.eessi.io` is still in active development and focused on MultiXscale"
+
+    The `dev.eessi.io` repository and functionality is still in its earlie stages.
+    The repository, build, and deploy procedures are functional, but may change
+    often for the time being. 
+    
+    Our focus is currently on including and supporting developers and applications in the 
+    [MultiXscale CoE](https://multixscale.eu).
+
 ## What is `dev.eessi.io`?
 
 `dev.eessi.io` is the [development repository of EESSI](../repositories/dev.eessi.io.md).
@@ -63,7 +72,7 @@ sources = ['%(software_commit)s.tar.gz']
 
 !!! warning "`--software-commit` disables `--robot`"
 
-    Using `--software-commit` disables the use of `--robot`, so make sure that you explictly include
+    Using `--software-commit` disables the use of `--robot`, so make sure that you explicitly include
     new dependencies that might need to be installed. Otherwise, the easyconfig files won't be found.
 
 One can also make new changes to the easyconfig file, for example, if the new functionality requires new build or 
