@@ -8,7 +8,7 @@ There are a few different scenarios where you may want to set up the EESSI envir
 
    !!! note "Why do we recommend to unset `MODULEPATH`?"
 
-    Unsetting the `$MODULEPATH` environment variable, which tells Lmod in which directories environment module files are available, may be necessary. The underlying reason to suggest this is that EESSI and your system are most likely based on two different operating system distributions - EESSI uses [compatibility layer ](../compatibility_layer.md "EESSI compatibility layer"), your system almost certainly uses some other Linux distribution. If you can find a way to ensure that the _software stacks_ from your site and EESSI do not mix (in particular when someone is building new software!), then this should be good enough.
+   Unsetting the `$MODULEPATH` environment variable, which tells Lmod in which directories environment module files are available, may be necessary. The underlying reason to suggest this is that EESSI and your system are most likely based on two different operating system distributions - EESSI uses [compatibility layer ](../compatibility_layer.md "EESSI compatibility layer"), your system almost certainly uses some other Linux distribution. If you can find a way to ensure that the _software stacks_ from your site and EESSI do not mix (in particular when someone is building new software!), then this should be good enough.
 
 1.  You are already using Lmod with version >= 8.6
 
