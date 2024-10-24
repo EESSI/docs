@@ -8,28 +8,22 @@ There are a few different scenarios where you may want to set up the EESSI envir
 
    !!! note "Why do we recommend to unset `MODULEPATH`?"
 
-        Unsetting MODULEPATH may not be possible at some sites, and some compromise or workaround may
-        be necessary. The underlying reason to suggest this is that EESSI and your system are most likely based on
-        two different operating system distributions - EESSI uses Gentoo Prefix, your system almost certainly uses some other
-        distribution. If you can find a way to ensure that the _software stacks_ from your site and EESSI do not mix
-        (in particular when someone is building new software!), then this should be good enough.
+    Unsetting the `$MODULEPATH` environment variable, which tells Lmod in which directories environment module files are available, may be necessary. The underlying reason to suggest this is that EESSI and your system are most likely based on two different operating system distributions - EESSI uses [compatibility layer ](../compatibility_layer.md "EESSI compatibility layer"), your system almost certainly uses some other Linux distribution. If you can find a way to ensure that the _software stacks_ from your site and EESSI do not mix (in particular when someone is building new software!), then this should be good enough.
 
 1.  You are already using Lmod with version >= 8.6
 
-    In this case, we _recommend_ unsetting the `MODULEPATH`, because EESSI is not designed to mix modules coming from EESSI and from your system.
+    In this case, we _recommend_ unsetting `$MODULEPATH`, because EESSI is not designed to mix modules coming from EESSI and from your system.
 
     ``` { .bash .copy }
-    unset MODULEPATH
     export MODULEPATH=/cvmfs/software.eessi.io/init/modules
     module load EESSI/2023.06
     ```
 
     :clap: Your environment is now set up, you are ready to start running software provided by EESSI!
 
-2.  You are using an Lmod with a version older than 8.6 or any other tool utilizing `MODULEPATH` (Tmod, etc.)
+2.  You are using an Lmod with a version older than 8.6 or any other tool utilizing `MODULEPATH` ([Tcl-based Environment Modules](https://modules.sourceforge.net/))
 
-    You should unset MODULEPATH to prevent Lmod from attempting to build a cache for your module tree (as this can be very slow if you have
-    a lot of modules). Again, unsetting the MODULEPATH should be considered as a good idea in general so you do not mix local and EESSI
+    You should unset `$MODULEPATH` to prevent Lmod from attempting to build a cache for your module tree (as this can be very slow if you have a lot of modules). Again, unsetting the `$MODULEPATH` should be considered as a good idea in general so you do not mix local and EESSI
     modules: 
 
     ``` { .bash .copy }
@@ -39,7 +33,7 @@ There are a few different scenarios where you may want to set up the EESSI envir
 
     :clap: Your environment is now set up, you are ready to start running software provided by EESSI!
 
-3.  Should Lmod be unavailable and `MODULEPATH` not utilized, you can initialise EESSI via an Lmod module by directly sourcing the Lmod initialisation script (this script automatically loads the EESSI module):
+3.  Should Lmod be unavailable and `MODULEPATH` not utilized, you can initialise EESSI via an Lmod module by directly sourcing the Lmod initialisation script (this script automatically loads the EESSI module)
 
     ``` { .bash .copy }
     source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
