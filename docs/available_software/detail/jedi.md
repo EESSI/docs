@@ -26,6 +26,7 @@ module load jedi/0.19.1-GCCcore-13.2.0
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |jedi/0.19.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
+|jedi/0.19.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
 
 
 ### jedi/0.19.1-GCCcore-13.2.0
@@ -33,3 +34,9 @@ module load jedi/0.19.1-GCCcore-13.2.0
 This is a list of extensions included in the module:
 
 jedi-0.19.1, parso-0.8.3
+
+### jedi/0.19.0-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+jedi-0.19.0, parso-0.8.3

@@ -29,6 +29,11 @@ authors:
     description: BSC
     avatar: https://avatars.githubusercontent.com/u/11518551?v=4
     slug: https://github.com/julianmorillo
+  Neves-P:
+    name: Pedro Santos Neves
+    description: CIT - University of Groningen
+    avatar: https://avatars.githubusercontent.com/u/10762799?v=4
+    slug: https://github.com/Neves-P
   trz42:
     name: Thomas Röblitz
     description: University of Bergen
@@ -39,11 +44,6 @@ authors:
     description: University of Groningen
     avatar: https://avatars.githubusercontent.com/u/11518551?v=4
     slug: https://github.com/bedroge
-  NevesP:
-    name: Pedro Santos Neves
-    description: University of Groningen
-    avatar: https://avatars.githubusercontent.com/u/11991359?v=4
-    slug: https://github.com/Neves-P
   TopRichard:
     name: Richard Topouchian
     description: University of Bergen
