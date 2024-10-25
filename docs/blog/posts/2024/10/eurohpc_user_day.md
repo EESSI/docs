@@ -58,7 +58,7 @@ including:
 
 * Where are both the central and mirror servers of EESSI hosted? (answer: currently at the University of Groningen,
 and in AWS & Azure, respectively, but they can be easily relocated if there is a reason to);
-* Are customized builds of software are possible on top of EESSI? (answer: yes, see also [here](../../../../using_eessi/building_on_eessi.md));
+* Are customized builds of software possible on top of EESSI? (answer: yes, see also [here](../../../../using_eessi/building_on_eessi.md));
 * What are the challenges with supporting NVIDIA GPUs? (answer: see [here](../../../../site_specific_config/gpu.md)).
 
 Some attendees also provided some nice feedback on their initial experience with EESSI:
