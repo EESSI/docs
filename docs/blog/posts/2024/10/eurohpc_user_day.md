@@ -1,5 +1,5 @@
 ---
-authors: [boegel, laraPPr, casparvl, satishskamath, trz42, TopRichard, bedroge, NevesP]
+authors: [boegel, laraPPr, casparvl, satishskamath, trz42, TopRichard, bedroge, Neves-P]
 date: 2024-10-25
 slug: eurohpc_user_day_2024
 ---
