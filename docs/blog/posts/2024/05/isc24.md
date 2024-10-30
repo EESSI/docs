@@ -43,10 +43,10 @@ workshops.
 
 ### RISC-V workshop
 
-At the [*Fourth International workshop on RISC-V for HPC*](https://riscv.epcc.ed.ac.uk/community/isc24-workshop),
+At the [*Fourth International workshop on RISC-V for HPC*](https://riscv.epcc.ed.ac.uk/community/workshops/isc24-workshop/),
 Julián Morillo ([BSC](https://www.bsc.es)) presented our paper
 [**"Preparing to Hit the Ground Running: Adding RISC-V support to
-EESSI"**](https://riscv.epcc.ed.ac.uk/community/isc24-workshop/#preparing-to-hit-the-ground-running-adding-risc-v-support-to-eessi)
+EESSI"**](https://riscv.epcc.ed.ac.uk/community/workshops/isc24-workshop/#preparing-to-hit-the-ground-running-adding-risc-v-support-to-eessi)
 (slides available [here](https://raw.githubusercontent.com/EESSI/meetings/main/other/isc24/EESSI-ISC24-RISC-V-workshop-20240517.pdf)).
 
 <figure markdown="span">
