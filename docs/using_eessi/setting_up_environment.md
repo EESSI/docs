@@ -93,6 +93,8 @@ available to use. If you would like to see what environment variables the module
 
 !!! warning "This is supported exclusively for `bash` shell users. If you're using a different shell, please use [the alternative approach](#loading-an-eessi-environment-module)"
 
+    You can to see what your current shell is with the command `echo $SHELL`
+
 You can initialise EESSI (in a non-reversible way) by running the command:
 
 ``` { .bash .copy }
