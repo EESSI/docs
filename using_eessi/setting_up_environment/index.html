@@ -895,6 +895,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Set up environment
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -904,6 +915,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loading-an-eessi-environment-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading an EESSI environment module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sourcing-the-eessi-bash-initialisation-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sourcing the EESSI bash initialisation script
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1802,6 +1850,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#loading-an-eessi-environment-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loading an EESSI environment module
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sourcing-the-eessi-bash-initialisation-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sourcing the EESSI bash initialisation script
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1819,29 +1893,105 @@
 
 
 <h1 id="setting-up-your-environment">Setting up your environment<a class="headerlink" href="#setting-up-your-environment" title="Permanent link">&para;</a></h1>
-<p>To set up the EESSI environment, simply run the command:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/bash
+<p>In Unix-like systems, <em>environment variables</em> are used to configure the environment in which applications and scripts
+run. To set up EESSI, you need to configure a specific set of environment variables so that your operating system is
+aware that EESSI exists and is to be used. We have prepared a few automated approaches that do this for you: you can
+either load an EESSI <a href="https://lmod.readthedocs.io/en/latest/#overview">environment module</a> or <code>source</code> an
+initialisation script for <code>bash</code>.</p>
+<p>With any of the approaches below, the <strong>first</strong> time you use them they may seem to take a while as any necessary data
+is downloaded in the background from a Stratum 1 server (which is part of the CernVM-FS infrastructure used to
+distribute files for EESSI).</p>
+<h2 id="loading-an-eessi-environment-module">Loading an EESSI environment module<a class="headerlink" href="#loading-an-eessi-environment-module" title="Permanent link">&para;</a></h2>
+<p>There are a few different scenarios where you may want to set up the EESSI environment by loading an EESSI
+<em>environment module</em>. The simplest scenario is one where you do not already have a environment module tool on your
+system, in this case we configure the <a href="https://lmod.readthedocs.io/en/latest/#">Lmod module tool</a> shipped with EESSI
+and automatically load the EESSI environment module:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 </code></pre></div>
-<p>This may take a while as data is downloaded from a Stratum 1 server which is
-part of the CernVM-FS infrastructure to distribute files. You should see the
-following output:</p>
-<div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="l l-Scalar l-Scalar-Plain">Found EESSI repo @ /cvmfs/software.eessi.io/versions/2023.06!</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="l l-Scalar l-Scalar-Plain">archdetect says x86_64/amd/zen2</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="l l-Scalar l-Scalar-Plain">Using x86_64/amd/zen2 as software subdirectory.</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="l l-Scalar l-Scalar-Plain">Using /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all as the directory to be added to MODULEPATH.</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="l l-Scalar l-Scalar-Plain">Found Lmod configuration file at /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2/.lmod/lmodrc.lua</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="l l-Scalar l-Scalar-Plain">Initializing Lmod...</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="l l-Scalar l-Scalar-Plain">Prepending /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all to $MODULEPATH...</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="l l-Scalar l-Scalar-Plain">Environment set up to use EESSI (2023.06), have fun!</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="l l-Scalar l-Scalar-Plain">{EESSI 2023.06} [user@system ~]$</span><span class="w"> </span><span class="c1"># (2)!</span>
+This command configures Lmod for your system and automatically loads the <code>EESSI</code> module so that EESSI is immediately
+available to use. If you would like to see what environment variables the module sets, you can use <code>module show EESSI</code>.</p>
+<p><img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44f.svg" title=":clap:" /> Your environment is now set up, you are ready to start running software provided by EESSI!</p>
+<details class="tip">
+<summary>What if I don't use a <code>bash</code> shell?</summary>
+<p>The example above is shown for a <code>bash</code> shell but the environment module approach supports all the shells that Lmod
+itself supports (<code>bash</code>, <code>csh</code>, <code>fish</code>, <code>ksh</code>, <code>zsh</code>):
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 </code></pre></div>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">source</span> /cvmfs/software.eessi.io/versions/2023.06/init/lmod/csh
+</code></pre></div>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">source</span> /cvmfs/software.eessi.io/versions/2023.06/init/lmod/fish
+</code></pre></div>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/lmod/ksh
+</code></pre></div>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/lmod/zsh
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>What if I already have Lmod installed or another module tool is available on the system?</summary>
+<p>You can check if the module command is already defined for your system and what version it has with
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>module<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>module<span class="w"> </span>--version
+</code></pre></div></p>
 <ol>
-<li>What is reported here depends on the CPU architecture of the machine you are
-    running the <code>source</code> command.</li>
-<li>This is the prompt indicating that you have access to the EESSI software
-    stack.</li>
+<li>
+<p>If you are already using Lmod (modules based on Lua) with version &gt;= 8.6:</p>
+<p>In this case, we <em>recommend</em> resetting <code>$MODULEPATH</code>, because EESSI is not designed to mix modules coming from
+EESSI and from your system.</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>module<span class="w"> </span>unuse<span class="w"> </span><span class="nv">$MODULEPATH</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>module<span class="w"> </span>use<span class="w"> </span>/cvmfs/software.eessi.io/init/modules
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI/2023.06
+</code></pre></div>
+<p><img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44f.svg" title=":clap:" /> Your environment is now set up, you are ready to start running software provided by EESSI!</p>
+</li>
+<li>
+<p>If you are using an Lmod with a version older than 8.6 or any other module tool utilizing <code>MODULEPATH</code> (e.g., 
+    <a href="https://modules.sourceforge.net/">Tcl-based Environment Modules</a>):</p>
+<p>It is recommended to unset <code>$MODULEPATH</code> to prevent Lmod from attempting to build a cache for your module tree
+(as this can be very slow if you have a lot of modules). Again, unsetting the <code>$MODULEPATH</code> should be
+considered as a good idea in general so you do not mix local and EESSI modules. You then will need to
+initialise a compatible version of Lmod, for example the one shipped with EESSI: </p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">unset</span><span class="w"> </span>MODULEPATH
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+</code></pre></div>
+<p><img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44f.svg" title=":clap:" /> Your environment is now set up, you are ready to start running software provided by EESSI!</p>
+</li>
 </ol>
-<p>The last line is the shell prompt.</p>
+<div class="admonition note">
+<p class="admonition-title">Why do we recommend to unset <code>MODULEPATH</code>?</p>
+<p>Unsetting the <code>$MODULEPATH</code> environment variable, which tells Lmod in which directories environment module
+files are available, may be necessary. The underlying reason to suggest this is that EESSI and your system are
+most likely based on two different operating system distributions - EESSI uses it's
+<a href="../../compatibility_layer/" title="EESSI compatibility layer">compatibility layer</a>, your system almost certainly uses
+some other Linux distribution. If you can find a way to ensure that the <em>software stacks</em> from your site and
+EESSI do not mix (in particular when someone is building new software!), then this should be good enough.</p>
+</div>
+</details>
+<h2 id="sourcing-the-eessi-bash-initialisation-script">Sourcing the EESSI <code>bash</code> initialisation script<a class="headerlink" href="#sourcing-the-eessi-bash-initialisation-script" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">This is supported exclusively for <code>bash</code> shell users. If you're using a different shell, please use <a href="#loading-an-eessi-environment-module">the alternative approach</a></p>
+<p>You can to see what your current shell is with the command <code>echo $SHELL</code></p>
+</div>
+<p>You can initialise EESSI (in a non-reversible way) by running the command:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/bash
+</code></pre></div>
+<p>You should see the following output:</p>
+<div class="no-copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Found<span class="w"> </span>EESSI<span class="w"> </span>repo<span class="w"> </span>@<span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06!
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>archdetect<span class="w"> </span>says<span class="w"> </span>x86_64/amd/zen2<span class="w">  </span><span class="c1"># (1)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>archdetect<span class="w"> </span>could<span class="w"> </span>not<span class="w"> </span>detect<span class="w"> </span>any<span class="w"> </span>accelerators
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Using<span class="w"> </span>x86_64/amd/zen2<span class="w"> </span>as<span class="w"> </span>software<span class="w"> </span>subdirectory.
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>Found<span class="w"> </span>Lmod<span class="w"> </span>configuration<span class="w"> </span>file<span class="w"> </span>at<span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2/.lmod/lmodrc.lua
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>Found<span class="w"> </span>Lmod<span class="w"> </span>SitePackage.lua<span class="w"> </span>file<span class="w"> </span>at<span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2/.lmod/SitePackage.lua
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>Using<span class="w"> </span>/cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen2<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>site<span class="w"> </span>extension<span class="w"> </span>directory<span class="w"> </span><span class="k">for</span><span class="w"> </span>installations.
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>Using<span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>directory<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>MODULEPATH.
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>Using<span class="w"> </span>/cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen2/modules/all<span class="w"> </span>as<span class="w"> </span>the<span class="w"> </span>site<span class="w"> </span>extension<span class="w"> </span>directory<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>MODULEPATH.
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>Found<span class="w"> </span>libcurl<span class="w"> </span>CAs<span class="w"> </span>file<span class="w"> </span>at<span class="w"> </span>RHEL<span class="w"> </span>location,<span class="w"> </span>setting<span class="w"> </span>CURL_CA_BUNDLE
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>Initializing<span class="w"> </span>Lmod...
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>Prepending<span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all<span class="w"> </span>to<span class="w"> </span><span class="nv">$MODULEPATH</span>...
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>Prepending<span class="w"> </span>site<span class="w"> </span>path<span class="w"> </span>/cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen2/modules/all<span class="w"> </span>to<span class="w"> </span><span class="nv">$MODULEPATH</span>...
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>Environment<span class="w"> </span><span class="nb">set</span><span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span>EESSI<span class="w"> </span><span class="o">(</span><span class="m">2023</span>.06<span class="o">)</span>,<span class="w"> </span>have<span class="w"> </span>fun!
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="o">{</span>EESSI<span class="w"> </span><span class="m">2023</span>.06<span class="o">}</span><span class="w"> </span><span class="o">[</span>user@system<span class="w"> </span>~<span class="o">]</span>$<span class="w">  </span><span class="c1"># (2)!</span>
+</code></pre></div>
+<p>What is reported at <code>(1)</code> depends on the CPU architecture of the machine you are running the <code>source</code> command.</p>
+<p>At <code>(2)</code> is the prompt indicating that you have access to the EESSI software stack.</p>
 <p><img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44f.svg" title=":clap:" /> Your environment is now set up, you are ready to start running software provided by EESSI!</p>
 
 
@@ -1863,7 +2013,7 @@ following output:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 31, 2024</span>
   </span>
 
     
