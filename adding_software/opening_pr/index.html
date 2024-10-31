@@ -1917,11 +1917,11 @@
 <p>To add software to EESSI, you should go through the semi-automatic software installation procedure by:</p>
 <ul>
 <li>1) Making a pull request to the <a href="https://github.com/EESSI/software-layer">software-layer</a> repository
-     to (add or) update an <a href="https://docs.easybuild.io/easystack-files">easystack file</a> <img alt="📚" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4da.svg" title=":books:" /> that is used by
+     to (add or) update an <a href="https://docs.easybuild.io/easystack-files">easystack file</a> <img alt="📚" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4da.svg" title=":books:" /> that is used by
      <a href="https://docs.easybuild.io/">EasyBuild</a> to install software;</li>
-<li>2) Instructing the <a href="../../bot/">bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f916.svg" title=":robot:" /></a> to build the software on all <a href="../../software_layer/cpu_targets/">supported CPU microarchitectures</a>;</li>
-<li>3) Instructing the <a href="../../bot/">bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f916.svg" title=":robot:" /></a> to deploy the built software for ingestion into the EESSI repository;</li>
-<li>4) Merging the pull request once CI indicates that the software has been ingested. <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></li>
+<li>2) Instructing the <a href="../../bot/">bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /></a> to build the software on all <a href="../../software_layer/cpu_targets/">supported CPU microarchitectures</a>;</li>
+<li>3) Instructing the <a href="../../bot/">bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /></a> to deploy the built software for ingestion into the EESSI repository;</li>
+<li>4) Merging the pull request once CI indicates that the software has been ingested. <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1930,10 +1930,10 @@
 <h3 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h3>
 <p>Before you can make a pull request to the <a href="https://github.com/EESSI/software-layer">software-layer</a>,
 you should <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a> the repository in your GitHub account.</p>
-<p>For the remainder of these instructions, we assume that your GitHub account is <code>@koala</code> <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f428.svg" title=":koala:" />.</p>
+<p>For the remainder of these instructions, we assume that your GitHub account is <code>@koala</code> <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f428.svg" title=":koala:" />.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Don't forget to replace <code>koala</code> <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f428.svg" title=":koala:" /> with the name of your GitHub account in the commands below!</p>
+<p>Don't forget to replace <code>koala</code> <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f428.svg" title=":koala:" /> with the name of your GitHub account in the commands below!</p>
 </div>
 <p>1) Clone the <a href="https://github.com/EESSI/software-layer">EESSI/software-layer</a> repository:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir EESSI
@@ -1941,7 +1941,7 @@ you should <a href="https://docs.github.com/en/get-started/quickstart/fork-a-rep
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git clone https://github.com/EESSI/software-layer
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>cd software-layer
 </code></pre></div>
-<p>2) Add your fork <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f428.svg" title=":koala:" /> as a <a href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories">remote</a></p>
+<p>2) Add your fork <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f428.svg" title=":koala:" /> as a <a href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories">remote</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git remote add koala git@github.com:koala/software-layer.git
 </code></pre></div>
 <p>3) Check out the branch that corresponds to the version of EESSI repository you want to add software to,
@@ -1971,14 +1971,14 @@ Note that the naming scheme is standardized and should be <code>eessi-&lt;eessi_
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>add<span class="w"> </span>easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;{2023.06}[GCC/12.3.0] example 1.2.3&quot;</span>
 </code></pre></div>
-<p>5) Push your branch to your fork <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f428.svg" title=":koala:" /> of the <a href="https://github.com/EESSI/software-layer">software-layer</a> repository</p>
+<p>5) Push your branch to your fork <img alt="🐨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f428.svg" title=":koala:" /> of the <a href="https://github.com/EESSI/software-layer">software-layer</a> repository</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>push<span class="w"> </span>koala<span class="w"> </span>example_branch
 </code></pre></div>
 <p>6) Go to the <a href="https://github.com/EESSI/software-layer">GitHub web interface</a> to open your pull request,
    or use the helpful link that should show up in the output of the <code>git push</code> command.</p>
 <p><strong>Make sure you target the correct branch</strong>: the one that corresponds to the version of EESSI you want to add
    software to (like <code>2023.06-software.eessi.io</code>).</p>
-<p>If all goes well, one or more bots <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f916.svg" title=":robot:" /> should almost instantly create a comment in your pull request
+<p>If all goes well, one or more bots <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /> should almost instantly create a comment in your pull request
    with an overview of how it is configured - you will need this information when providing build instructions.</p>
 <h3 id="rebuilding_software">Rebuilding software<a class="headerlink" href="#rebuilding_software" title="Permanent link">&para;</a></h3>
 <p>We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using the software. However, there are certain situations in which it is difficult or impossible to avoid.</p>
