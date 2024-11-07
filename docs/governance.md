@@ -9,7 +9,7 @@ _Interim Steering Committee_ whose role is to progress this adoption while also 
 ## Members of the _Interim Steering Committee_
 
 The members of the _Interim Steering Committee_ are listed below. Each member of the _Interim Steering Committee_ also
-nominate an alternate should they not be able to attend a meeting of the commitee.
+nominate an alternate should they not be able to attend a meeting of the committee.
 
 * Alan O'Cais ([CECAM](https://www.cecam.org/), [University of Barcelona](https://web.ub.edu/inici)), :material-github: [@ocaisa](https://github.com/ocaisa)
     * _Alternate: Davide Grassano ([CECAM](https://www.cecam.org/)), :material-github: [@crivella](https://github.com/crivella)_
