@@ -14,7 +14,7 @@ nominate an alternate should they not be able to attend a meeting of the committ
 * Alan O'Cais ([CECAM](https://www.cecam.org/), [University of Barcelona](https://web.ub.edu/inici)), :material-github: [@ocaisa](https://github.com/ocaisa)
     * _Alternate: Davide Grassano ([CECAM](https://www.cecam.org/)), :material-github: [@crivella](https://github.com/crivella)_
 * Bob Dröge ([University of Groningen](https://www.rug.nl/)), :material-github: [@bedroge](https://github.com/bedroge)
-    * _Alternate: TBC ([University of Groningen](https://www.rug.nl/)), :material-github: [@](https://github.com/)_
+    * _Alternate: Henk-Jan Zilverberg ([University of Groningen](https://www.rug.nl/)), :material-github: [@zilverberg](https://github.com/zilverberg)_
 * Caspar van Leeuwen ([SURF](https://www.surf.nl/en)), :material-github: [@casparvl](https://github.com/casparvl)
     * _Alternate: Satish Kamath ([SURF](https://www.surf.nl/en)), :material-github: [@satishskamath](https://github.com/satishskamath)_
 * Kenneth Hoste ([Ghent University](https://www.ugent.be/en)), [@boegel](https://github.com/boegel)
