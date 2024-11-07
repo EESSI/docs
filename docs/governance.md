@@ -1,7 +1,7 @@
 # EESSI Governance
 
 EESSI recognises that formal governance is essential given the ambitions of the project, not just for EESSI
-itself but also to those who would adopt EESSI and/or fund it's development.
+itself but also to those who would adopt EESSI and/or fund its development.
 
 EESSI is, therefore, in the process of adopting a formal governance model. To facilitate this process it has created an
 _Interim Steering Committee_ whose role is to progress this adoption while also providing direction to the project.
