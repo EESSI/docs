@@ -27,7 +27,7 @@ We had a short meeting there with the local team about how we could leverage [Sn
 the Dutch national supercomputer, for building and testing software installations for EESSI.
 
 <figure markdown="span">
-![Selfie in front of Snellius at SURF](Snellius-selfie.jpg){width=70%}
+![Selfie in front of Snellius at SURF](Snellius-selfie.webp){width=70%}
 </figure>
 
 We also got to visit the commercial datacenter at the [Amsterdam Science Park](https://www.amsterdamsciencepark.nl)
@@ -50,7 +50,7 @@ the EESSI side of the project during one of the parallel sessions: *HPC ecosyste
 The slides of this presentation are available [here](EuroHPC-User-Day-2024-20241022-MultiXscale-EESSI.pdf).
 
 <figure markdown="span">
-![MultiXscale talk during parallel session at EuroHPC User Day](MultiXscale-talk.jpg){width=70%}
+![MultiXscale talk during parallel session at EuroHPC User Day](MultiXscale-talk.webp){width=70%}
 </figure>
 
 During the Q&A after our talk various attendees asked interesting questions about specific aspects of EESSI,
@@ -86,7 +86,7 @@ Lilit Axner (Programme Manager Infrastructure at EuroHPC JU) answered that a fed
 and that more news will be shared soon on this.
 
 <figure markdown="span">
-![System overview of Vega being presented](Vega-talk.jpg){width=70%}
+![System overview of Vega being presented](Vega-talk.webp){width=70%}
 </figure>
 
 In the short presentation on the [EuroHPC JU system Vega](https://izum.si/en/vega-en) we got explicitly mentioned again,
@@ -100,7 +100,7 @@ project.
 On Wednesday, the MultiXscale project was part of the walk-in networking session *Application Support, Training and Skills*.
 
 <figure markdown="span">
-![MultiXscale booth at EuroHPC User Day](MultiXscale-booth-1.jpg){width=70%}
+![MultiXscale booth at EuroHPC User Day](MultiXscale-booth-1.webp){width=70%}
 </figure>
 
 During this session we were running a live demonstration of a small
@@ -116,7 +116,7 @@ including:
 * An A100 GPU in the EuroHPC system [Vega](https://izum.si/en/vega-en);
 
 <figure markdown="span">
-![MultiXscale booth at EuroHPC User Day](MultiXscale-booth-2.jpg){width=70%}
+![MultiXscale booth at EuroHPC User Day](MultiXscale-booth-2.webp){width=70%}
 </figure>
 
 Attendees could participate in a contest to win a Raspberry Pi 5 starter kit
@@ -126,7 +126,7 @@ At the end of the session we did a random draw among the participants who answer
 and Giorgos Kosta (CaSToRC - The Cyprus Institute) came out as the lucky winner!
 
 <figure markdown="span">
-![EuroHPC User Forum being presented](RPi-winner.jpg){width=40%}
+![EuroHPC User Forum being presented](RPi-winner.webp){width=40%}
 </figure>
 
 
