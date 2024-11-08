@@ -75,6 +75,7 @@ nav:
         # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
     - Contact info: contact.md
   - Systems where EESSI is available: systems.md
+  - Governance: governance.md
   - Blog: blog/index.md
 plugins:
   - blog:
