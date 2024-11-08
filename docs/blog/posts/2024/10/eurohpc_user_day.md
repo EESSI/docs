@@ -7,7 +7,7 @@ slug: eurohpc_user_day_2024
 # EuroHPC User Day (22-23 Oct 2024, Amsterdam)
 
 <figure markdown="span">
-![EuroHPC User Day 2024](eurohpc_user_day_2024.png){width=30%}
+![EuroHPC User Day 2024](eurohpc_user_day_2024.webp){width=30%}
 </figure>
 
 We had a great time at the [EuroHPC User Day 2024 in Amsterdam](https://eurohpc-ju.europa.eu/news-events/events/eurohpc-user-day-2024-2024-10-22_en) earlier this week.
@@ -138,8 +138,8 @@ was being presented during a plenary session.
 Attendees were invited to connect with the EuroHPC User Forum representatives and each other
 via the dedicated Slack that has been created for it.
 
-![EuroHPC User Forum being presented](user-forum-1.png){width=48%}
-![EuroHPC User Forum being presented](user-forum-2.png){width=48%}
+![EuroHPC User Forum being presented](user-forum-1.webp){width=48%}
+![EuroHPC User Forum being presented](user-forum-2.webp){width=48%}
 
 Lara Peeters, who is also active in [MultiXscale EuroHPC Centre-of-Excellence](https://multixscale.eu),
 is part of the EuroHPC User Forum, representing Digital Humanities.
@@ -150,5 +150,5 @@ is part of the EuroHPC User Forum, representing Digital Humanities.
 We are already looking forward to engaging with the EuroHPC user community next year in Denmark!
 
 <figure markdown="span">
-![EuroHPC User Day closing](EuroHPC-User-Day-thank-you.png){width=70%}
+![EuroHPC User Day closing](EuroHPC-User-Day-thank-you.webp){width=70%}
 </figure>
