@@ -184,13 +184,13 @@ In step 2, there were several system-specific items in the test. In this section
 
 The `EESSI_Mixin` class provides standardized functionality that should be useful to all tests in the EESSI test-suite. One of it's key functions is to make sure tests dynamically try to determine sensible values for the things that were system specific in Step 2. For example, instead of hard coding a task count, the test inheriting from `EESSI_Mixin` will determine this dynamically based on the amount of available cores per node, and a declaration from the inheriting test class about how you want to instantiated tasks.
 
-For example, if you want to launch one task for each core, the test that inherits from `EESSI_Mixin` would only have to declare
+To illustrate this, suppose want to launch one task for each core for your test. In that case, your test (that inherits from `EESSI_Mixin`) would only have to declare
 
 ```
 compute_unit = COMPUTE_UNIT[CPU]
 ```
 
-The `EESSI_Mixin` class then takes care of querying the ReFrame config file for the node topology, and setting the correct number of tasks for each node.
+The `EESSI_Mixin` class then takes care of querying the ReFrame config file for the cpu topology of the node, and setting the correct number of tasks per node.
 
 Another feature is that it sets defaults for a few items, such as the `valid_prog_environs = ['default']`. These will likely be the same for _most_ tests in the EESSI test suite, and when they _do_ need to be different, one can easily overwrite them in the child class.
 
@@ -206,6 +206,7 @@ from eessi.testsuite.eessi_mixin import EESSI_Mixin
 @rfm.simple_test
 class EESSI_MPI4PY(rfm.RunOnlyRegressionTest, EESSI_Mixin):
 ```
+
 
 #### Removing hard-coded test scales
 
@@ -248,18 +249,41 @@ Next, we also remove
 
 as `num_tasks` and and `num_tasks_per_node` will be set by the `assign_tasks_per_compute_unit` [hook](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py), which is invoked by the `EESSI_Mixin` class.
 
+Instead, we only set the `compute_unit`. A task will be launched for each compute unit. E.g.
+```
+    compute_unit = COMPUTE_UNIT[CPU]
+```
+will launch one task per (physical) CPU core. Other options are `COMPUTE_UNIT[HWTHREAD]` (one task per hardware thread), `COMPUTE_UNIT[NUMA_NODE]` (one task per numa node), `COMPUTE_UNIT[CPU_SOCKET]` (one task per CPU socket), `CPUTE_UNIT[GPU]` (one task per GPU) and `COMPUTE_UNIT[NODE]` (one task per node). Check the `COMPUTE_UNIT` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) for the full list of valid compute units. The number of cores per task will automatically be set based on this as the ratio of the number of cores in a node to the number of tasks per node (rounded down).
 
 
-
-We define the following class variables:
-
-
+#### Replacing hard-coded module names
+Instead of hard-coding a module name, we parameterize over all module names that match a certain regular expression. 
 
 ```
 from eessi.testsuite.utils import find_modules
 ...
     module_name = parameter(find_modules('mpi4py'))
 ```
+
+#### Replacing hard-coded system names and programming environments
+First, we remove the hard-coded system name and programming environment. I.e. we remove
+```
+    valid_prog_environs = ['default']
+    valid_systems = ['snellius']
+```
+The `EESSI_Mixin` class sets `valid_prog_environs = ['default']` by default, so that is no longer needed in the child class (but it can be overwritten if needed). The `valid_systems` is instead replaced by a declaration of what type of device type is needed. We'll create an `mpi4py` test that runs on CPU only:
+```
+    device_type = DEVICE_TYPES[CPU]
+```
+but note if we would have wanted to also generate test instances to test GPU <=> GPU communication, we could have defined this as a paremeter:
+```
+    device_type = parameter([DEVICE_TYPES[CPU], DEVICE_TYPES[GPU]])
+```
+
+The device type that is set will be used by the `filter_valid_systems_by_device_type` hook to check in the ReFrame configuration file which of the current partitions contain the relevant device. Typically, we don't set the `DEVICE_TYPES[CPU]` on a GPU partition in the ReFrame configuration, so that we skip all CPU-only tests on GPU nodes.
+
+`EESSI_Mixin` also filters based on the supported scales, which can again be configured per partition in the ReFrame configuration file. This can e.g. be used to avoid running large-scale tests on partitions that don't have enough nodes to run them.
+
 
 BLA BLA TODO: Explain per attribute that needs to be set how to set it, and before which phase
 
