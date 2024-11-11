@@ -28,9 +28,6 @@ The good news is that all of this only requires a handful commands :astonished: 
     sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
     sudo yum install -y cvmfs
 
-    # install EESSI configuration for CernVM-FS
-    sudo yum install -y https://github.com/EESSI/filesystem-layer/releases/download/latest/cvmfs-config-eessi-latest.noarch.rpm
-
     # create client configuration file for CernVM-FS (no squid proxy, 10GB local CernVM-FS client cache)
     sudo bash -c "echo 'CVMFS_CLIENT_PROFILE="single"' > /etc/cvmfs/default.local"
     sudo bash -c "echo 'CVMFS_QUOTA_LIMIT=10000' >> /etc/cvmfs/default.local"
@@ -51,10 +48,6 @@ The good news is that all of this only requires a handful commands :astonished: 
     rm -f cvmfs-release-latest_all.deb
     sudo apt-get update
     sudo apt-get install -y cvmfs
-
-    # install EESSI configuration for CernVM-FS
-    wget https://github.com/EESSI/filesystem-layer/releases/download/latest/cvmfs-config-eessi_latest_all.deb
-    sudo dpkg -i cvmfs-config-eessi_latest_all.deb
 
     # create client configuration file for CernVM-FS (no squid proxy, 10GB local CernVM-FS client cache)
     sudo bash -c "echo 'CVMFS_CLIENT_PROFILE="single"' > /etc/cvmfs/default.local"
