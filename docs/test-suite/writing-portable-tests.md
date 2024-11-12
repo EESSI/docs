@@ -334,7 +334,7 @@ def set_binding(self):
     hooks.set_compact_thread_binding(self)
 ```
 
-#### Skipping tests instances when required (optional)
+#### Skipping tests instances when required (optional) [#skipping-test-instances]
 Preferably, we prevent test instances from being generated (i.e. before ReFrame's `setup` phase) if we know that they cannot run on a certain system. However, sometimes we need information on the nodes that will run it, which is only available _after_ the `setup` phase. That is the case for anything where we need information from e.g. the [reframe.core.pipeline.RegressionTest.current_partition](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.current_partition).
 
 For example, we might know that a test only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called (which is done by `EESSI_Mixin` in after the `setup` stage). For example, the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
@@ -373,6 +373,27 @@ The `mpi4py` scales almost indefinitely, but if we were to set it for the sake o
 ...
 ```
 on a system with 192 cores per node. I.e. any test of 2 nodes (384 cores) or above would be skipped because it exceeds our max task count.
+
+#### Setting a time limit (optional)
+By default, the `EESSI_Mixin` class sets a time limit for jobs of 1 hour. You can overwrite this in your child class:
+```
+time_limit = '5m00s'
+```
+For the appropriate string formatting, please check the [ReFrame documentation on time_limit](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.time_limit). We already had this in the non-portable version of our `mpi4py` test and will keep it in the portable version: since this is a very quick test, specifying a lower time limit will help in getting the jobs scheduled more quickly.
+
+Note that for the test to be portable, the time limit should be set such that it is sufficient _regardless of node architecture_. It is pretty hard to guarantee this with a single, fixed time limit for all test scales, without knowing upfront what architecture the test will be run on, and thus how many tasks will be launched. For strong scaling tests, you might want a higher time limit for low task counts, whereas for weak scaling tests you might want a higher time limit for higher task counts. You can consider setting the time limit after setup, and making it dependend on the task count.
+
+Suppose we have a weak scaling test that takes 5 minutes for a single task, and 60 minutes for 10k tasks. We can set a time limit based on linear interpolation between those task counts:
+```
+@run_after('setup')
+def set_time_limit(self):
+    # linearly interpolate between the single and 10k task count
+    minutes = 5 + self.num_tasks * ((60-5) / 10000)
+    self.time_limit = '%sm00s' % minutes
+```
+Note that this is typically an overestimate of how long the test will take for intermediate task counts, but that's ok: we'd rather overestimate than underestimate the runtime.
+
+To be even safer, one could consider combining this with logic to [skip tests](#skipping-test-instances) if the 10k task count is exceeded.
 
 #### Summary
 To make the test portable, we added additional imports:
