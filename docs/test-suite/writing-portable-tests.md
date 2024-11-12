@@ -566,7 +566,7 @@ This started 4 processes, with ranks 0, 1, 2, 3, and then summed all the ranks (
 
 ### Step 3: implementing as a portable ReFrame test without using EESSI_Mixin { #as-portable-reframe-test-legacy }
 
-The approach using inheritance from the `EESS_Mixin` class, described above, is strongly preferred and recommended. There might be certain tests that do not fit the standardized approach of `EESSI_Mixin`, but usually that will be solvable by overwriting hooks set by `EESSI_Mixin` in the inheriting class. In the rare case that your test is so exotic that even this doesn't provide a sensible solution, you can still invoke the hooks used by `EESSI_Mixin` manually. Note that this used to be the default way of writing tests for the EESSI test suite.
+The approach using inheritance from the `EESSI_Mixin` class, described above, is strongly preferred and recommended. There might be certain tests that do not fit the standardized approach of `EESSI_Mixin`, but usually that will be solvable by overwriting hooks set by `EESSI_Mixin` in the inheriting class. In the rare case that your test is so exotic that even this doesn't provide a sensible solution, you can still invoke the hooks used by `EESSI_Mixin` manually. Note that this used to be the default way of writing tests for the EESSI test suite.
 
 In step 2, there were several system-specific items in the test. In this section, we will show how we use the EESSI hooks to avoid hard-coding system specific information. We do this by replacing the system-specific parts of the test from Step 2 bit by bit. The full final test can be found under `tutorials/mpi4py/mpi4py_portable_legacy.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
 
