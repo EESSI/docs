@@ -334,7 +334,7 @@ def set_binding(self):
     hooks.set_compact_thread_binding(self)
 ```
 
-#### Skipping tests instances when required (optional) [#skipping-test-instances]
+#### Skipping tests instances when required (optional) { #skipping-test-instances }
 Preferably, we prevent test instances from being generated (i.e. before ReFrame's `setup` phase) if we know that they cannot run on a certain system. However, sometimes we need information on the nodes that will run it, which is only available _after_ the `setup` phase. That is the case for anything where we need information from e.g. the [reframe.core.pipeline.RegressionTest.current_partition](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.current_partition).
 
 For example, we might know that a test only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called (which is done by `EESSI_Mixin` in after the `setup` stage). For example, the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
