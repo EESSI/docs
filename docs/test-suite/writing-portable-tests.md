@@ -289,7 +289,7 @@ The `EESSI_Mixin` class sets `valid_prog_environs = ['default']` by default, so 
 ```
     device_type = DEVICE_TYPES[CPU]
 ```
-but note if we would have wanted to also generate test instances to test GPU <=> GPU communication, we could have defined this as a paremeter:
+but note if we would have wanted to also generate test instances to test GPU <=> GPU communication, we could have defined this as a parameter:
 ```
     device_type = parameter([DEVICE_TYPES[CPU], DEVICE_TYPES[GPU]])
 ```
@@ -311,7 +311,7 @@ def required_mem_per_node(self):
     return self.num_tasks_per_node * 100 + 250
 ```
 
-While rounding up is advisable, do keep your estimate realistic. Too high a memory request will mean the test will get skipped on systems that cannot satisfy that memory request. Most HPC systems have at least 1 GB per core, and most laptop/desktops have at least 8 GB total. Desiging a test so that it fits within those memory constraints will ensure it can be run almost anywhere.
+While rounding up is advisable, do keep your estimate realistic. Too high a memory request will mean the test will get skipped on systems that cannot satisfy that memory request. Most HPC systems have at least 1 GB per core, and most laptop/desktops have at least 8 GB total. Designing a test so that it fits within those memory constraints will ensure it can be run almost anywhere.
 
 !!! note
     The easiest way to get the memory consumption of your test at various task counts is to execute it on a system which runs jobs in [cgroups](https://en.wikipedia.org/wiki/Cgroups), define `measure_memory_usage = True` in your class body, and make the `required_mem_per_node` function return a constant amount of memory equal to the available memory per node on your test system. This will cause the `EESSI_Mixin` class to read out the maximum memory usage of the cgroup (on the head node of your allocation, in case of multi-node tests) and report it as a performance number.
