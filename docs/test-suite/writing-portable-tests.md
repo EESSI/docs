@@ -14,7 +14,7 @@ In this tutorial, you will learn how to write a test for the [EESSI test suite](
 
 The test suite contains a combination of real-life use cases for end-user scientific software (e.g. tests for GROMACS, TensorFlow, CP2K, OpenFOAM, etc) and low level tests (e.g. OSU Microbenchmarks).
 
-The tests in the EESSI test suite are developed using the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/). Typically, ReFrame tests hardcode system specific information (core counts, performance references, etc) in the test definition. The EESSI test suite aims to be portable, and implements a series of standard [hooks](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) to replace information that is typically hardcoded. All system-specific information is then limited to the ReFrame configuration file. As an example: rather than hardcoding that a test should run with 128 tasks (i.e. because a system has 128 core nodes), the EESSI test suite has a hook that can define a test should be run on a "single, full node". The hook queries the ReFrame configuration file for the amount of cores per node, and specifies this number as the corresponding amount of tasks. Thus, on a 64-core node, this test would run with 64 tasks, while on a 128-core node, it would run 128 tasks.
+The tests in the EESSI test suite are developed using the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/). Typically, ReFrame tests hardcode system specific information (core counts, performance references, etc) in the test definition. The EESSI test suite aims to be portable, and implements a [mixin class](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/eessi_mixin.py) that invokes a series of standard [hooks](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) to replace information that is typically hardcoded. All system-specific information is then limited to the ReFrame configuration file. As an example: rather than hardcoding that a test should run with 128 tasks (i.e. because a system has 128 core nodes), the EESSI test suite has a hook that can define a test should be run on a "single, full node". The hook queries the ReFrame configuration file for the amount of cores per node, and specifies this number as the corresponding amount of tasks. Thus, on a 64-core node, this test would run with 64 tasks, while on a 128-core node, it would run 128 tasks.
 
 ## Test requirements
 
@@ -472,8 +472,9 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest, EESSI_Mixin):
     @performance_function('s')
     def time(self):
         return sn.extractsingle(r'^Time elapsed:\s+(?P<perf>\S+)', self.stdout, 'perf', float)
-
 ```
+
+Note that with only 34 lines of code, this is now very quick and easy to write, because of the default behaviour from the `EESSI_Mixin` class.
 
 ### Background of the mpi4py test { #background-of-mpi4py-test }
 To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
