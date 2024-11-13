@@ -97,6 +97,7 @@ plugins:
         contributing_sw/overview.md: adding_software/overview.md
         software_layer/adding_software.md: adding_software/overview.md
         pilot.md: repositories/pilot.md
+        gpu.md: site_specific_config/gpu.md
 markdown_extensions:
   # enable adding HTML attributes and CSS classes
   - attr_list
