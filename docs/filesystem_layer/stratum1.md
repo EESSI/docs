@@ -94,8 +94,9 @@ Finally, install the Stratum 1 using:
 # -b to run as root, optionally use -K if a sudo password is required, and optionally include your site-specific variables
 ansible-playbook -b [-K] [-e @inventory/local_site_specific_vars.yml] stratum1.yml
 ```
-Running the playbook will automatically make replicas of all the repositories defined in `group_vars/all.yml`.
-If you only want to replicate the `software.eessi.io` repository, you can remove the other ones from this file.
+Running the playbook will automatically make replicas of all the EESSI repositories defined in `inventory/group_vars/all.yml`.
+If you only want to replicate the main software repository (`software.eessi.io`),
+you can remove the other ones from the `eessi_cvmfs_repositories` list in this file.
 
 
 ### Verification of the Stratum 1 using `curl`
