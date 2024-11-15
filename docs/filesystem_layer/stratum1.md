@@ -58,7 +58,7 @@ For the commands in this section, we are assuming that you cloned this repositor
     
     If you do want to set up the GEO API, you can find more information on how to (freely) obtain this key in the CVMFS documentation: https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#geo-api-setup.
     
-    You can put your license key in the local configuration file `inventory/local_site_specific_vars.yml`.
+    You can put your license key in the local configuration file `inventory/local_site_specific_vars.yml` with the variables `cvmfs_geo_license_key` and `cvmfs_geo_account_id`.
 
 Start by installing Ansible, e.g.:
 
