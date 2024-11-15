@@ -109,8 +109,15 @@ you can instruct your CernVM-FS client(s) to use it by prepending your newly cre
 echo 'CVMFS_SERVER_URL="http://<url-or-ip-to-your-stratum1>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi.io.local
 ```
 
+It is also strongly recommended to disable the GEO API when using a private Stratum 1, because you want your private Stratum 1 to be picked first anyway.
+In order to do this, add the following to `/etc/cvmfs/domain.d/eessi.io.local`:
+
+```bash
+CVMFS_USE_GEOAPI=no
+```
+
 !!! note
-    By prepending your new Stratum 1 to the list of existing Stratum 1 servers, your clients should by default use the private Stratum 1.
+    By prepending your new Stratum 1 to the list of existing Stratum 1 servers and disabling the GEO API, your clients should by default use the private Stratum 1.
     In case of downtime of your private Stratum 1, they will also still be able to make use of the public EESSI Stratum 1 servers.
 
 
