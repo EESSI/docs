@@ -79,9 +79,14 @@ create a symlink before running the playbook:
 sudo ln -s /lots/of/space/cvmfs /srv/cvmfs
 ```
 
-Also make sure that you have added the hostname or IP address of your server to the
-`inventory/hosts` file, that you are able to log in to the server from the machine that is going to run the playbook
-(preferably using an SSH key), and that you can use `sudo`. 
+Also make sure that:
+  - you are able to log in to the server from the machine that is going to run the playbook (preferably using an SSH key);
+  - you can use `sudo` on this machine;
+  - you add the hostname or IP address of your server to a `cvmfsstratum1servers` section in the `inventory/hosts` file, e.g.:
+```
+[cvmfsstratum1servers]
+12.34.56.789 ansible_ssh_user=yourusername
+```
 
 Finally, install the Stratum 1 using:
 
