@@ -1,0 +1,2380 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/adding_software/adding_development_software/">
+      
+      
+        <link rel="prev" href="../debugging_failed_builds/">
+      
+      
+        <link rel="next" href="../../bot/">
+      
+      
+      <link rel="icon" href="../../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Development repository - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adding-software-to-deveessiio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Development repository
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filesystem_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filesystem layer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compatibility_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compatibility layer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software layer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/cpu_targets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Supported CPU targets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Available software and repositories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Available software and repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../available_software/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/software.eessi.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/riscv.eessi.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/pilot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pilot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/dev.eessi.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Installation and configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/is_eessi_accessible/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is EESSI already installed?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/native_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Native
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/eessi_container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Windows and macOS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Windows and macOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/eessi_wsl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows with WSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/eessi_limactl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    macOS with Lima
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuring EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/host_injections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to configure EESSI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../site_specific_config/lmod_hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom LMOD hooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic usage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Basic usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/setting_up_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set up environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/basic_commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/eessi_demos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/eessi_in_ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EESSI in CI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced usage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filesystem_layer/stratum1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your Stratum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/building_on_eessi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software with EESSI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Test suite
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test suite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/installation-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation & configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/ReFrame-configuration-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReFrame configuration file
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/available-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/writing-portable-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Known issues and workarounds
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Known issues and workarounds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../known_issues/eessi-2023.06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v2023.06
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding software to EESSI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Adding software to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For contributors
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            For contributors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribution_policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribution policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opening_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open PR
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../debugging_failed_builds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Development repository
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Development repository
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-deveessiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is dev.eessi.io?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-steps-to-build-for-deveessiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick steps to build for dev.eessi.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig-files-and-software-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      easyconfig files and --software-commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-commit-ids-or-tags-for-software-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using commit IDs or tags for --software-commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checksums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easystack-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easystack files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triggering-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggering builds
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For maintainers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            For maintainers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BTD bot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/build_nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build nodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community and support
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Community and support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting support
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meetings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Talks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systems where EESSI is available
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-deveessiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is dev.eessi.io?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-steps-to-build-for-deveessiio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick steps to build for dev.eessi.io
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation details
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#easyconfig-files-and-software-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      easyconfig files and --software-commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-commit-ids-or-tags-for-software-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using commit IDs or tags for --software-commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patch files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checksums" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checksums
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easystack-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Easystack files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#triggering-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Triggering builds
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="adding-software-to-deveessiio">Adding software to <code>dev.eessi.io</code><a class="headerlink" href="#adding-software-to-deveessiio" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title"><code>dev.eessi.io</code> is still in active development and focused on MultiXscale</p>
+<p>The <code>dev.eessi.io</code> repository and functionality is still in its early stages.
+The repository itself and build + deploy procedure for it are functional, but may change
+often for the time being. </p>
+<p>Our focus is currently on including and supporting developers and applications in the 
+<a href="https://multixscale.eu">MultiXscale CoE</a>.</p>
+</div>
+<h2 id="what-is-deveessiio">What is <code>dev.eessi.io</code>?<a class="headerlink" href="#what-is-deveessiio" title="Permanent link">&para;</a></h2>
+<p><code>dev.eessi.io</code> is the <a href="../../repositories/dev.eessi.io/">development repository of EESSI</a>.</p>
+<h2 id="adding-software">Adding software<a class="headerlink" href="#adding-software" title="Permanent link">&para;</a></h2>
+<p>Using <code>dev.eessi.io</code> is similar to using EESSI's production repository <code>software.eessi.io</code>.
+Software builds are triggered by a <a href="https://www.eessi.io/docs/bot/">bot</a> listening to pull 
+requests in <a href="https://github.com/search?q=org%3AEESSI+dev.eessi.io&amp;type=repositories">GitHub repositories</a>. 
+These builds require custom easyconfig and easystack files, which should be in specific directories.</p>
+<p>To see this in practice, refer to the <a href="https://github.com/EESSI/dev.eessi.io-example">dev.eessi.io-example GitHub repository</a>.
+ In this GitHub repository you will find templates for some software installations with the appropriate directory structure, that is:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dev.eessi.io-example
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── easyconfigs
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>└── easystacks
+</code></pre></div>
+<h3 id="quick-steps-to-build-for-deveessiio">Quick steps to build for <code>dev.eessi.io</code><a class="headerlink" href="#quick-steps-to-build-for-deveessiio" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Obtain commit ID from GitHub or GitLab repository with source to build.</li>
+<li>Fork the project's <code>dev.eessi.io</code> repository on GitHub, or checkout to a new branch if you can do so.</li>
+<li>If needed, prepare an easyconfig template using <code>--software-commit</code> and add it to <code>easyconfigs/</code></li>
+<li>Add an easystack file in <code>easystacks/</code> that with the easyconfig file above, add the
+commit ID to <code>software-commit</code> under <code>options</code>.</li>
+<li>Open a PR from the fork or branch to the main branch of the application's <code>dev.eessi.io</code> GitHub repository.</li>
+<li>Instruct the bot to start a build by adding a comment with <code>bot: build</code>.</li>
+<li>Confirm the build worked correctly. If so, you can deploy the software by adding the label <code>bot:build</code> to the pull request.</li>
+<li>Once the staging PR is approved, the development build will become available on <code>dev.eessi.io</code> in a few minutes!</li>
+</ul>
+<h3 id="installation-details">Installation details<a class="headerlink" href="#installation-details" title="Permanent link">&para;</a></h3>
+<h4 id="easyconfig-files-and-software-commit">easyconfig files and <code>--software-commit</code><a class="headerlink" href="#easyconfig-files-and-software-commit" title="Permanent link">&para;</a></h4>
+<p>The approach to build and install software is similar to that of <code>software.eessi.io</code>. 
+It requires one or more easyconfig files. Easyconfig files used for building for <code>dev.eessi.io</code>
+do not need to be a part of an <a href="https://github.com/easybuilders/easybuild-easyconfigs">EasyBuild release</a>, unlike builds for 
+<code>software.eessi.io</code>. In this case, the development easyconfigs can be located under <code>easyconfigs/</code> in the <code>dev.eessi.io</code> repository being used.</p>
+<p>To allow for development builds, we leverage the <code>--software-commit</code> functionality (requires <a href="https://easybuild.io/">EasyBuild</a> v4.9.3 or higher). This lets us build a given application from
+a specific commit in repository. This can also be done from a fork, by changing the <code>github_account</code> field in the easyconfig file. 
+We've created a template for <code>ESPResSo</code> based on the standard eaasyconfig of the most recent version. The relevant fields are:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;CMakeMake&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;ESPResSo&#39;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;devel&#39;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">versionsuffix</span> <span class="o">=</span> <span class="s1">&#39;-</span><span class="si">%(software_commit)s</span><span class="s1">&#39;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">homepage</span> <span class="o">=</span> <span class="s1">&#39;https://espressomd.org/wordpress&#39;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;A software package for performing and analyzing scientific Molecular Dynamics simulations.&quot;&quot;&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">github_account</span> <span class="o">=</span> <span class="s1">&#39;espressomd&#39;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">source_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://github.com/</span><span class="si">%(github_account)s</span><span class="s1">/</span><span class="si">%(name)s</span><span class="s1">/archive/&#39;</span><span class="p">]</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">%(software_commit)s</span><span class="s1">.tar.gz&#39;</span><span class="p">]</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title"><code>--software-commit</code> disables <code>--robot</code></p>
+<p>Using <code>--software-commit</code> disables the use of <code>--robot</code>, so make sure that you explicitly include
+new dependencies that might need to be installed. Otherwise, the easyconfig files won't be found.</p>
+</div>
+<p>You can also make additional changes to the easyconfig file, for example, if the new functionality requires new build or
+runtime dependencies, patches, configuration options, etc. It's a good idea to try installing from a specific commit locally first,
+to at least see if everything is parsed correctly and confirm that the right sources are being downloaded.</p>
+<p>While the process to build for <code>dev.eessi.io</code> is similar to the one for the <a href="../../repositories/software.eessi.io/">production repository</a>, there 
+are a few additional details to keep in mind.</p>
+<h4 id="software-version">Software version<a class="headerlink" href="#software-version" title="Permanent link">&para;</a></h4>
+<p>Installations to the EESSI production repository refer to specific versions of applications. However, development builds can't follow the same 
+approach as they are most often not pegged to a release. Because of this, it is possible to include a descriptive "version" label to the <code>version</code> parameter
+in the easyconfig file for a given (set of) installations. </p>
+<p>Note that some applications are built with custom easyblocks, which may
+use the <code>version</code> parameter to determine how the installation is meant to work (for example, recent versions need to copy files from to a new directory). Make sure
+that you account for this, otherwise you may install software differently than intended. If you encounter issues, you can open an issue in our
+<a href="https://gitlab.com/eessi/support#eessi-support-portal">support portal</a>.</p>
+<h4 id="installing-dependencies">Installing dependencies<a class="headerlink" href="#installing-dependencies" title="Permanent link">&para;</a></h4>
+<p>Installations in <code>dev.eessi.io</code> are done <em>on top</em> of <code>software.eessi.io</code>. That means if your development build depends on some application that is
+already installed in <code>software.eessi.io</code>, then that will simply be used. However, if you need to add a new dependency, then this must included as 
+part of the build. That means including an easyconfig file for it, and adding it to the right easystack file.</p>
+<h4 id="using-commit-ids-or-tags-for-software-commit">Using commit IDs or tags for <code>--software-commit</code><a class="headerlink" href="#using-commit-ids-or-tags-for-software-commit" title="Permanent link">&para;</a></h4>
+<p>Installing with <code>--software-commit</code> requires that you include either a commit ID or a tag. The installation procedure will use this to
+obtain the sources for the build. Because tags can be changed to point to a different commit ID, we recommend you avoid using them and sticking to
+the commit ID itself. You can then include this in the <code>versionsuffix</code> on your easyconfig file, to generate a unique (though "ugly") module name.</p>
+<h4 id="patch-files">Patch files<a class="headerlink" href="#patch-files" title="Permanent link">&para;</a></h4>
+<p>If your specific development build requires patch files, you should add these to the <code>easyconfigs/</code> directory. If the necessary patch is part of an
+EasyBuild release, then this may not be necessary, as these will be directly taken from EasyBuild. If it is a new patch that is not on an EasyBuild
+release, then include it in the <code>easyconfigs/</code> directory.</p>
+<h4 id="checksums">Checksums<a class="headerlink" href="#checksums" title="Permanent link">&para;</a></h4>
+<p>EasyBuild's easyconfig files typically contain <a href="https://docs.easybuild.io/writing-easyconfig-files/?h=checksums#common_easyconfig_param_sources_checksums">checksums</a>
+ as their use is highly recommended. By default, EasyBuild will compute the checksums of sources and patch files it needs for
+  a given installation, and compare them with the values in the easyconfig file. Because builds for <code>dev.eessi.io</code> change much
+   more often, hard coded checksums become a problem, as they'd need to be updated with every new build. For this reason, we
+    recommend not including checksums in your development easyconfig files (unless you need to, for a specific reason).</p>
+<h4 id="easystack-files">Easystack files<a class="headerlink" href="#easystack-files" title="Permanent link">&para;</a></h4>
+<p>After an easyconfig file has been created and added to the <code>easyconfigs</code> subdirectory, an <a href="https://docs.easybuild.io/easystack-files">easystack file</a> that picks it up
+needs to be in place so that a build can be triggered.</p>
+<div class="admonition note">
+<p class="admonition-title">Naming convention for easystack files</p>
+<p>The easystack files must follow a naming convention and be named something
+like: <code>software-eb-X.Y.Z-dev.yml</code>, where X.Y.Z correspond to the EasyBuild
+version used to install the software. Following our example for 
+<code>ESPREsSo</code>, it would look like: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">easyconfigs</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ESPResSo-devel-foss-2023a-software-commit.eb</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="nt">software-commit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2ba17de6096933275abec0550981d9122e4e5f28</span><span class="w"> </span><span class="c1"># release 4.2.2</span>
+</code></pre></div>
+</div>
+<p><code>ESPResSo-devel-foss-2023a-software-commit.eb</code> would be the name of the easyconfig file added in our example step above. 
+Note the option passing the <code>software-commit</code> for the development version that should be built.
+For the sake of this example, the chosen commit actually corresponds to the <a href="https://github.com/espressomd/espresso/releases/tag/4.2.2">4.2.2 release of ESPResSo</a>.</p>
+<h3 id="triggering-builds">Triggering builds<a class="headerlink" href="#triggering-builds" title="Permanent link">&para;</a></h3>
+<p>We use the <a href="../../bot/">EESSI build-test-deploy bot</a> to handle software builds.
+All one needs to do is open a PR with the changes adding the easyconfig and easystack 
+files and commenting <code>bot: build</code>. This can only be done by previously authorized users. 
+The current build cluster for <code>dev.eessi.io</code> builds only for the <code>zen2</code> CPU microarchitecture, but this is likely to change.</p>
+<p>Once a build is complete and the <code>bot:deploy</code> label is added, a staging PR can be merged to deploy the
+application to the <code>dev.eessi.io</code> cvmfs repository. On a system with <code>dev.eessi.io</code> mounted, then all
+that is left is to <code>module use /cvmfs/dev.eessi.io/versions/2023.06/modules/all</code> and try out the software!</p>
+<p>There is currently no initialisation script or module for <code>dev.eessi.io</code>, but this feature is coming soon.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+      
+        <script src="../../available_software/javascripts/populate_overview.js"></script>
+      
+    
+  </body>
+</html>
