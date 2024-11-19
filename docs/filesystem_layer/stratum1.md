@@ -58,7 +58,7 @@ For the commands in this section, we are assuming that you cloned this repositor
     
     If you do want to set up the GEO API, you can find more information on how to (freely) obtain this key in the CVMFS documentation: https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#geo-api-setup.
     
-    You can put your license key in the local configuration file `inventory/local_site_specific_vars.yml`.
+    You can put your license key in the local configuration file `inventory/local_site_specific_vars.yml` with the variables `cvmfs_geo_license_key` and `cvmfs_geo_account_id`.
 
 Start by installing Ansible, e.g.:
 
@@ -79,9 +79,14 @@ create a symlink before running the playbook:
 sudo ln -s /lots/of/space/cvmfs /srv/cvmfs
 ```
 
-Also make sure that you have added the hostname or IP address of your server to the
-`inventory/hosts` file, that you are able to log in to the server from the machine that is going to run the playbook
-(preferably using an SSH key), and that you can use `sudo`. 
+Also make sure that:
+  - you are able to log in to the server from the machine that is going to run the playbook (preferably using an SSH key);
+  - you can use `sudo` on this machine;
+  - you add the hostname or IP address of your server to a `cvmfsstratum1servers` section in the `inventory/hosts` file, e.g.:
+```
+[cvmfsstratum1servers]
+12.34.56.789 ansible_ssh_user=yourusername
+```
 
 Finally, install the Stratum 1 using:
 
@@ -89,7 +94,9 @@ Finally, install the Stratum 1 using:
 # -b to run as root, optionally use -K if a sudo password is required, and optionally include your site-specific variables
 ansible-playbook -b [-K] [-e @inventory/local_site_specific_vars.yml] stratum1.yml
 ```
-Running the playbook will automatically make replicas of all the repositories defined in `group_vars/all.yml`.
+Running the playbook will automatically make replicas of all the EESSI repositories defined in `inventory/group_vars/all.yml`.
+If you only want to replicate the main software repository (`software.eessi.io`),
+you can remove the other ones from the `eessi_cvmfs_repositories` list in this file.
 
 
 ### Verification of the Stratum 1 using `curl`
