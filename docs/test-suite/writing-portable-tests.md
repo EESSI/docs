@@ -325,6 +325,27 @@ def assign_tasks_per_compute_unit(self):
 ```
 function. Note that this function also calls other hooks (such as `hooks.assign_task_per_compute_unit`) that you probably still want to invoke. Check the `EESSI_Mixin` [class definition](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/eessi_mixin.py) to see which hooks you still want to call.
 
+#### CI Tag
+As mentioned in the [Test requirements](#test-requirements), there should be at least one light-weight (short, low-core, low-memory) test case, which should be marked with the `CI` tag. The `EESSI_Mixin` class will automatically add the `CI` tag if both `bench_name` (the current variant) and `bench_name_ci` (the CI variant) are defined. The `mpi4py` test contains only one test case (which is very light-weight). In this case, it is sufficient to set both to the same name in the class body:
+```python
+bench_name = 'mpi4pi'
+bench_name_ci = 'mpi4pi'
+```
+
+Suppose that our test has 2 variants, of which only `'variant1'` should be marked `CI`. In that case, we can define `bench_name` as a parameter:
+```python
+    bench_name = parameter(['variant1', 'variant2'])
+    bench_name_ci = 'variant1'
+```
+Next, we can define a hook that does different things depending on the variant, for example: 
+```python
+@run_after('init')
+def do_something(self):
+    if self.bench_name == 'variant1':
+        do_this()
+    elif self.bench_name == 'variant2':
+        do_that()
+```
 
 #### Thread binding (optional)
 Thread binding is not done by default, but can be done by invoking the `hooks.set_compact_thread_binding` hook:
