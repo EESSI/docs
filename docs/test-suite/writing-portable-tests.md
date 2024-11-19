@@ -182,11 +182,11 @@ In step 2, there were several system-specific items in the test. In this section
 
 #### How EESSI_Mixin works
 
-The `EESSI_Mixin` class provides standardized functionality that should be useful to all tests in the EESSI test-suite. One of it's key functions is to make sure tests dynamically try to determine sensible values for the things that were system specific in Step 2. For example, instead of hard coding a task count, the test inheriting from `EESSI_Mixin` will determine this dynamically based on the amount of available cores per node, and a declaration from the inheriting test class about how you want to instantiated tasks.
+The `EESSI_Mixin` class provides standardized functionality that should be useful to all tests in the EESSI test-suite. One of its key functions is to make sure tests dynamically try to determine sensible values for the things that were system specific in Step 2. For example, instead of hard coding a task count, the test inheriting from `EESSI_Mixin` will determine this dynamically based on the amount of available cores per node, and a declaration from the inheriting test class about how you want to instantiate tasks.
 
-To illustrate this, suppose want to launch one task for each core for your test. In that case, your test (that inherits from `EESSI_Mixin`) would only have to declare
+To illustrate this, suppose you want to launch your test with one task per CPU core. In that case, your test (that inherits from `EESSI_Mixin`) only has to declare
 
-```
+```python
 compute_unit = COMPUTE_UNIT[CPU]
 ```
 
@@ -211,7 +211,7 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest, EESSI_Mixin):
 
 First, we remove 
 
-```
+```python
     # ReFrame will generate a test for each scale
     scale = parameter([2, 128, 256])
 ```
@@ -222,7 +222,7 @@ from eessi.testsuite.constants import SCALES
     scale = parameter(SCALES.keys())
 ```
 
-This will ensure the test will run at all of the default scales, as defined by the `SCALES` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py).
+This ensures the test will run a test case for each of the default scales, as defined by the `SCALES` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py).
 
 If, and only if, your test can not run on all of those scales should you overwrite this parameter in your child class. For example, if you have a test that does not support running on multiple nodes, you could define a filtering function outside of the class
 ```
@@ -232,7 +232,7 @@ def filter_scales():
         if v['num_nodes'] == 1
     ]
 ```
-and then in the class body overwrite the scales with a subset of items from the `SCALES` constant:
+and then in the class body overwrite the scale parameter with a subset of items from the `SCALES` constant:
 ```
     scale = parameter(filter_scales())
 ```
@@ -248,11 +248,11 @@ Next, we also remove
 
 as `num_tasks` and and `num_tasks_per_node` will be set by the `assign_tasks_per_compute_unit` [hook](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py), which is invoked by the `EESSI_Mixin` class.
 
-Instead, we only set the `compute_unit`. A task will be launched for each compute unit. E.g.
+Instead, we only set the `compute_unit`. The number of launched tasks will be equal to the number of compute units. E.g.
 ```
     compute_unit = COMPUTE_UNIT[CPU]
 ```
-will launch one task per (physical) CPU core. Other options are `COMPUTE_UNIT[HWTHREAD]` (one task per hardware thread), `COMPUTE_UNIT[NUMA_NODE]` (one task per numa node), `COMPUTE_UNIT[CPU_SOCKET]` (one task per CPU socket), `COMPUTE_UNIT[GPU]` (one task per GPU) and `COMPUTE_UNIT[NODE]` (one task per node). Check the `COMPUTE_UNIT` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) for the full list of valid compute units. The number of cores per task will automatically be set based on this as the ratio of the number of cores in a node to the number of tasks per node (rounded down). The `EESSI_Mixin` class will also set the `OMP_NUM_THREADS` environment variable equal to the number of cores per task.
+will launch one task per (physical) CPU core. Other options are `COMPUTE_UNIT[HWTHREAD]` (one task per hardware thread), `COMPUTE_UNIT[NUMA_NODE]` (one task per numa node), `COMPUTE_UNIT[CPU_SOCKET]` (one task per CPU socket), `COMPUTE_UNIT[GPU]` (one task per GPU) and `COMPUTE_UNIT[NODE]` (one task per node). Check the `COMPUTE_UNIT` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) for the full list of valid compute units. The number of cores per task will automatically be set based on this as the ratio of the number of cores in a node to the number of tasks per node (rounded down). Aditionally, the `EESSI_Mixin` class will set the `OMP_NUM_THREADS` environment variable equal to the number of cores per task.
 
 !!! note
     `compute_unit` needs to be set in ReFrame's `setup` phase (or earlier). For the different phases of the pipeline, please see the [documentation on how ReFrame executes tests](https://reframe-hpc.readthedocs.io/en/stable/pipeline.html).
@@ -266,7 +266,7 @@ from eessi.testsuite.utils import find_modules
     module_name = parameter(find_modules('mpi4py'))
 ```
 
-This parameter will be a list of all module names matching the expression, and each test instance will load the respective module before running the test.
+This parameter generates all module names available on the current system matching the expression, and each test instance will load the respective module before running the test.
 
 Furthermore, we remove the hook that sets `self.module`:
 ```
@@ -285,7 +285,7 @@ First, we remove the hard-coded system name and programming environment. I.e. we
     valid_prog_environs = ['default']
     valid_systems = ['snellius']
 ```
-The `EESSI_Mixin` class sets `valid_prog_environs = ['default']` by default, so that is no longer needed in the child class (but it can be overwritten if needed). The `valid_systems` is instead replaced by a declaration of what type of device type is needed. We'll create an `mpi4py` test that runs on CPU only:
+The `EESSI_Mixin` class sets `valid_prog_environs = ['default']` by default, so that is no longer needed in the child class (but it can be overwritten if needed). The `valid_systems` is instead replaced by a declaration of what type of device type is needed. We'll create an `mpi4py` test that runs on CPUs only:
 ```
     device_type = DEVICE_TYPES[CPU]
 ```
@@ -301,10 +301,10 @@ The device type that is set will be used by the `filter_valid_systems_by_device_
 !!! note
     `device_type` needs to be set in ReFrame's `init` phase (or earlier)
 
-#### Requesting sufficient memory
-To make sure you get an allocation with sufficient memory, your test should declare how much memory it needs per node by defining a `required_mem_per_node` function in your test class that returns the required memory per node (in MiB). Note that the amount of required memory generally depends on the amount of tasks that are launched per node (`self.num_tasks_per_node`).
+#### Requesting sufficient RAM memory
+To make sure you get an allocation with sufficient memory, your test should declare how much memory per node it needs by defining a `required_mem_per_node` function in your test class that returns the required memory per node (in MiB). Note that the amount of required memory generally depends on the amount of tasks that are launched per node (`self.num_tasks_per_node`).
 
-Our `mpi4py` test takes around 200 MB per task, plus about 70 MB for every additional task. We round this up a little so that we can be sure the test won't run out of memory if memory consumption is slightly different on a different system. Thus, we define:
+Our `mpi4py` test takes around 200 MB when running with a single task, plus about 70 MB for every additional task. We round this up a little so that we can be sure the test won't run out of memory if memory consumption is slightly different on a different system. Thus, we define:
 
 ```
 def required_mem_per_node(self):
@@ -323,7 +323,7 @@ The `EESSI_Mixin` class binds processes to their respective number of cores auto
 def assign_tasks_per_compute_unit(self):
     ...
 ```
-function. Note that this also calls other hooks (such as `hooks.assign_task_per_compute_unit`) that you probably still want to invoke. Check the `EESSI_Mixin` [class definition](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/eessi_mixin.py) to see which hooks you still want to call.
+function. Note that this function also calls other hooks (such as `hooks.assign_task_per_compute_unit`) that you probably still want to invoke. Check the `EESSI_Mixin` [class definition](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/eessi_mixin.py) to see which hooks you still want to call.
 
 
 #### Thread binding (optional)
@@ -334,7 +334,7 @@ def set_binding(self):
     hooks.set_compact_thread_binding(self)
 ```
 
-#### Skipping tests instances when required (optional) { #skipping-test-instances }
+#### Skipping test instances when required (optional) { #skipping-test-instances }
 Preferably, we prevent test instances from being generated (i.e. before ReFrame's `setup` phase) if we know that they cannot run on a certain system. However, sometimes we need information on the nodes that will run it, which is only available _after_ the `setup` phase. That is the case for anything where we need information from e.g. the [reframe.core.pipeline.RegressionTest.current_partition](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.current_partition).
 
 For example, we might know that a test only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called (which is done by `EESSI_Mixin` in after the `setup` stage). For example, the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
@@ -350,7 +350,7 @@ We can skip any generated test cases using the `skip_if` function. For example, 
                  f'Skipping test: more than {max_tasks} tasks are requested ({self.num_tasks})')
 ```
 
-The `mpi4py` scales almost indefinitely, but if we were to set it for the sake of this example, one would see:
+The `mpi4py` test scales up to a very high core count, but if we were to set it for the sake of this example, one would see:
 ```bash
 [ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=16_nodes /38aea144 @snellius:genoa+default
 [     SKIP ] ( 1/13) Skipping test: more than 300 tasks are requested (3072)
@@ -381,15 +381,15 @@ time_limit = '5m00s'
 ```
 For the appropriate string formatting, please check the [ReFrame documentation on time_limit](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.time_limit). We already had this in the non-portable version of our `mpi4py` test and will keep it in the portable version: since this is a very quick test, specifying a lower time limit will help in getting the jobs scheduled more quickly.
 
-Note that for the test to be portable, the time limit should be set such that it is sufficient _regardless of node architecture_. It is pretty hard to guarantee this with a single, fixed time limit for all test scales, without knowing upfront what architecture the test will be run on, and thus how many tasks will be launched. For strong scaling tests, you might want a higher time limit for low task counts, whereas for weak scaling tests you might want a higher time limit for higher task counts. You can consider setting the time limit after setup, and making it dependent on the task count.
+Note that for the test to be portable, the time limit should be set such that it is sufficient _regardless of node architecture and scale_. It is pretty hard to guarantee this with a single, fixed time limit, without knowing upfront what architecture the test will be run on, and thus how many tasks will be launched. For strong scaling tests, you might want a higher time limit for low task counts, whereas for weak scaling tests you might want a higher time limit for higher task counts. To do so, you can consider setting the time limit after setup, and making it dependent on the task count.
 
-Suppose we have a weak scaling test that takes 5 minutes for a single task, and 60 minutes for 10k tasks. We can set a time limit based on linear interpolation between those task counts:
+Suppose we have a weak scaling test that takes 5 minutes with a single task, and 60 minutes with 10k tasks. We can set a time limit based on linear interpolation between those task counts:
 ```
 @run_after('setup')
 def set_time_limit(self):
     # linearly interpolate between the single and 10k task count
     minutes = 5 + self.num_tasks * ((60-5) / 10000)
-    self.time_limit = '%sm00s' % minutes
+    self.time_limit = f'{minutes}m00s'
 ```
 Note that this is typically an overestimate of how long the test will take for intermediate task counts, but that's ok: we'd rather overestimate than underestimate the runtime.
 
@@ -432,14 +432,14 @@ def required_mem_per_node(self):
     return self.num_tasks_per_node * 100 + 250
 ```
 
-Removed the ReFrame pipeline hook that set the `self.modules`:
+Removed the ReFrame pipeline hook that sets `self.modules`:
 ```
 @run_after('init')
 def set_modules(self):
      self.modules = [self.module_name]
 ```
 
-Removed the ReFrame pipeline hook that set the number of tasks and number of tasks per node:
+Removed the ReFrame pipeline hook that sets the number of tasks and number of tasks per node:
 ```
 @run_after('init')
 def define_task_count(self):
