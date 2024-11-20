@@ -255,7 +255,7 @@ Instead, we only set the `compute_unit`. The number of launched tasks will be eq
 will launch one task per (physical) CPU core. Other options are `COMPUTE_UNIT[HWTHREAD]` (one task per hardware thread), `COMPUTE_UNIT[NUMA_NODE]` (one task per numa node), `COMPUTE_UNIT[CPU_SOCKET]` (one task per CPU socket), `COMPUTE_UNIT[GPU]` (one task per GPU) and `COMPUTE_UNIT[NODE]` (one task per node). Check the `COMPUTE_UNIT` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) for the full list of valid compute units. The number of cores per task will automatically be set based on this as the ratio of the number of cores in a node to the number of tasks per node (rounded down). Additionally, the `EESSI_Mixin` class will set the `OMP_NUM_THREADS` environment variable equal to the number of cores per task.
 
 !!! note
-    `compute_unit` needs to be set in ReFrame's `setup` phase (or earlier). For the different phases of the pipeline, please see the [documentation on how ReFrame executes tests](https://reframe-hpc.readthedocs.io/en/stable/pipeline.html).
+    `compute_unit` needs to be set before (or in) ReFrame's `setup` phase. For the different phases of the pipeline, please see the [documentation on how ReFrame executes tests](https://reframe-hpc.readthedocs.io/en/stable/pipeline.html).
 
 #### Replacing hard-coded module names
 Instead of hard-coding a module name, we parameterize over all module names that match a certain regular expression. 
@@ -277,7 +277,7 @@ def set_modules(self):
 This is now taken care of by the `EESSI_Mixin` class.
 
 !!! note
-    `module_name` needs to be set in ReFrame's `init` phase (or earlier)
+    `module_name` needs to be set before (or in) ReFrame's `init` phase
 
 #### Replacing hard-coded system names and programming environments
 First, we remove the hard-coded system name and programming environment. I.e. we remove
@@ -299,7 +299,7 @@ The device type that is set will be used by the `filter_valid_systems_by_device_
 `EESSI_Mixin` also filters based on the supported scales, which can again be configured per partition in the ReFrame configuration file. This can e.g. be used to avoid running large-scale tests on partitions that don't have enough nodes to run them.
 
 !!! note
-    `device_type` needs to be set in ReFrame's `init` phase (or earlier)
+    `device_type` needs to be set before (or in) ReFrame's `init` phase
 
 #### Requesting sufficient RAM memory
 To make sure you get an allocation with sufficient memory, your test should declare how much memory per node it needs by defining a `required_mem_per_node` function in your test class that returns the required memory per node (in MiB). Note that the amount of required memory generally depends on the amount of tasks that are launched per node (`self.num_tasks_per_node`).
