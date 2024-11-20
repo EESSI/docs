@@ -200,7 +200,7 @@ Most of the functionality in the `EESSI_Mixin` class require certain class attri
 
 The first step is to actually inherit from the `EESSI_Mixin` class:
 
-```
+```python
 from eessi.testsuite.eessi_mixin import EESSI_Mixin
 ...
 @rfm.simple_test
@@ -216,7 +216,7 @@ First, we remove
     scale = parameter([2, 128, 256])
 ```
 from the test. The `EESSI_Mixin` class will define the default set of scales on which this test will be run as
-```
+```python
 from eessi.testsuite.constants import SCALES
 ...
     scale = parameter(SCALES.keys())
@@ -225,7 +225,7 @@ from eessi.testsuite.constants import SCALES
 This ensures the test will run a test case for each of the default scales, as defined by the `SCALES` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py).
 
 If, and only if, your test can not run on all of those scales should you overwrite this parameter in your child class. For example, if you have a test that does not support running on multiple nodes, you could define a filtering function outside of the class
-```
+```python
 def filter_scales():
     return [
         k for (k,v) in SCALES.items()
@@ -233,13 +233,13 @@ def filter_scales():
     ]
 ```
 and then in the class body overwrite the scale parameter with a subset of items from the `SCALES` constant:
-```
+```python
     scale = parameter(filter_scales())
 ```
 
 Next, we also remove
 
-```
+```python
    @run_after('init')
     def define_task_count(self):
         self.num_tasks = self.scale
@@ -249,7 +249,7 @@ Next, we also remove
 as `num_tasks` and and `num_tasks_per_node` will be set by the `assign_tasks_per_compute_unit` [hook](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py), which is invoked by the `EESSI_Mixin` class.
 
 Instead, we only set the `compute_unit`. The number of launched tasks will be equal to the number of compute units. E.g.
-```
+```python
     compute_unit = COMPUTE_UNIT[CPU]
 ```
 will launch one task per (physical) CPU core. Other options are `COMPUTE_UNIT[HWTHREAD]` (one task per hardware thread), `COMPUTE_UNIT[NUMA_NODE]` (one task per numa node), `COMPUTE_UNIT[CPU_SOCKET]` (one task per CPU socket), `COMPUTE_UNIT[GPU]` (one task per GPU) and `COMPUTE_UNIT[NODE]` (one task per node). Check the `COMPUTE_UNIT` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) for the full list of valid compute units. The number of cores per task will automatically be set based on this as the ratio of the number of cores in a node to the number of tasks per node (rounded down). Additionally, the `EESSI_Mixin` class will set the `OMP_NUM_THREADS` environment variable equal to the number of cores per task.
@@ -260,7 +260,7 @@ will launch one task per (physical) CPU core. Other options are `COMPUTE_UNIT[HW
 #### Replacing hard-coded module names
 Instead of hard-coding a module name, we parameterize over all module names that match a certain regular expression. 
 
-```
+```python
 from eessi.testsuite.utils import find_modules
 ...
     module_name = parameter(find_modules('mpi4py'))
@@ -269,7 +269,7 @@ from eessi.testsuite.utils import find_modules
 This parameter generates all module names available on the current system matching the expression, and each test instance will load the respective module before running the test.
 
 Furthermore, we remove the hook that sets `self.module`:
-```
+```python
 @run_after('init')
 def set_modules(self):
     self.modules = [self.module_name]
@@ -281,16 +281,16 @@ This is now taken care of by the `EESSI_Mixin` class.
 
 #### Replacing hard-coded system names and programming environments
 First, we remove the hard-coded system name and programming environment. I.e. we remove
-```
+```python
     valid_prog_environs = ['default']
     valid_systems = ['snellius']
 ```
 The `EESSI_Mixin` class sets `valid_prog_environs = ['default']` by default, so that is no longer needed in the child class (but it can be overwritten if needed). The `valid_systems` is instead replaced by a declaration of what type of device type is needed. We'll create an `mpi4py` test that runs on CPUs only:
-```
+```python
     device_type = DEVICE_TYPES[CPU]
 ```
 but note if we would have wanted to also generate test instances to test GPU <=> GPU communication, we could have defined this as a parameter:
-```
+```python
     device_type = parameter([DEVICE_TYPES[CPU], DEVICE_TYPES[GPU]])
 ```
 
@@ -306,7 +306,7 @@ To make sure you get an allocation with sufficient memory, your test should decl
 
 Our `mpi4py` test takes around 200 MB when running with a single task, plus about 70 MB for every additional task. We round this up a little so that we can be sure the test won't run out of memory if memory consumption is slightly different on a different system. Thus, we define:
 
-```
+```python
 def required_mem_per_node(self):
     return self.num_tasks_per_node * 100 + 250
 ```
@@ -318,7 +318,7 @@ While rounding up is advisable, do keep your estimate realistic. Too high a memo
 
 #### Process binding
 The `EESSI_Mixin` class binds processes to their respective number of cores automatically using the `hooks.set_compact_process_binding` hook. E.g. for a pure MPI test like `mpi4py`, each task will be bound to a single core. For hybrid tests that do both multiprocessing and multithreading, tasks are bound to a sequential number of cores. E.g. on a node with 128 cores and a hybrid test with 64 tasks and 2 threads per task, the first task will be bound to core 0 and 1, second task to core 2 and 3, etc. To override this behaviour, one would have to overwrite the
-```
+```python
 @run_after('setup')
 def assign_tasks_per_compute_unit(self):
     ...
@@ -349,7 +349,7 @@ def do_something(self):
 
 #### Thread binding (optional)
 Thread binding is not done by default, but can be done by invoking the `hooks.set_compact_thread_binding` hook:
-```
+```python
 @run_after('setup')
 def set_binding(self):
     hooks.set_compact_thread_binding(self)
@@ -397,7 +397,7 @@ on a system with 192 cores per node. I.e. any test of 2 nodes (384 cores) or abo
 
 #### Setting a time limit (optional)
 By default, the `EESSI_Mixin` class sets a time limit for jobs of 1 hour. You can overwrite this in your child class:
-```
+```python
 time_limit = '5m00s'
 ```
 For the appropriate string formatting, please check the [ReFrame documentation on time_limit](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.time_limit). We already had this in the non-portable version of our `mpi4py` test and will keep it in the portable version: since this is a very quick test, specifying a lower time limit will help in getting the jobs scheduled more quickly.
@@ -405,7 +405,7 @@ For the appropriate string formatting, please check the [ReFrame documentation o
 Note that for the test to be portable, the time limit should be set such that it is sufficient _regardless of node architecture and scale_. It is pretty hard to guarantee this with a single, fixed time limit, without knowing upfront what architecture the test will be run on, and thus how many tasks will be launched. For strong scaling tests, you might want a higher time limit for low task counts, whereas for weak scaling tests you might want a higher time limit for higher task counts. To do so, you can consider setting the time limit after setup, and making it dependent on the task count.
 
 Suppose we have a weak scaling test that takes 5 minutes with a single task, and 60 minutes with 10k tasks. We can set a time limit based on linear interpolation between those task counts:
-```
+```python
 @run_after('setup')
 def set_time_limit(self):
     # linearly interpolate between the single and 10k task count
@@ -418,20 +418,20 @@ To be even safer, one could consider combining this with logic to [skip tests](#
 
 #### Summary
 To make the test portable, we added additional imports:
-```
+```python
 from eessi.testsuite.eessi_mixin import EESSI_Mixin
 from eessi.testsuite.constants import COMPUTE_UNIT, DEVICE_TYPES, CPU
 from eessi.testsuite.utils import find_modules
 ```
 
 Made sure the test inherits from `EESSI_Mixin`:
-```
+```python
 @rfm.simple_test
 class EESSI_MPI4PY(rfm.runOnlyRegressionTest, EESSI_Mixin):
 ```
 
 Removed the following from the class body:
-```
+```python
 valid_prog_environs = ['default']
 valid_systems = ['snellius']
 
@@ -440,7 +440,7 @@ scale = parameter([2, 128, 256])
 ```
 
 Added the following to the class body:
-```
+```python
 device_type = DEVICE_TYPES[CPU]
 compute_unit = COMPUTE_UNIT[CPU]
 
@@ -448,20 +448,20 @@ module_name = parameter(find_modules('mpi4py'))
 ```
 
 Defined the class method:
-```
+```python
 def required_mem_per_node(self):
     return self.num_tasks_per_node * 100 + 250
 ```
 
 Removed the ReFrame pipeline hook that sets `self.modules`:
-```
+```python
 @run_after('init')
 def set_modules(self):
      self.modules = [self.module_name]
 ```
 
 Removed the ReFrame pipeline hook that sets the number of tasks and number of tasks per node:
-```
+```python
 @run_after('init')
 def define_task_count(self):
     # Set the number of tasks, self.scale is now a single number out of the parameter list
@@ -474,7 +474,7 @@ def define_task_count(self):
 ```
 
 The final test is thus:
-```
+```python
 """
 This module tests mpi4py's MPI_Reduce call
 """
@@ -576,7 +576,7 @@ if rank == 0:
 ```
 
 Assuming we have `mpi4py` available, we could run this manually using
-```
+```bash
 $ mpirun -np 4 python3 mpi4py_reduce.py
 Total ranks: 4
 Sum of all ranks: 6
