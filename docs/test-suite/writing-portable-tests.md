@@ -14,7 +14,7 @@ In this tutorial, you will learn how to write a test for the [EESSI test suite](
 
 The test suite contains a combination of real-life use cases for end-user scientific software (e.g. tests for GROMACS, TensorFlow, CP2K, OpenFOAM, etc) and low level tests (e.g. OSU Microbenchmarks).
 
-The tests in the EESSI test suite are developed using the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/). Typically, ReFrame tests hardcode system specific information (core counts, performance references, etc) in the test definition. The EESSI test suite aims to be portable, and implements a series of standard [hooks](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) to replace information that is typically hardcoded. All system-specific information is then limited to the ReFrame configuration file. As an example: rather than hardcoding that a test should run with 128 tasks (i.e. because a system has 128 core nodes), the EESSI test suite has a hook that can define a test should be run on a "single, full node". The hook queries the ReFrame configuration file for the amount of cores per node, and specifies this number as the corresponding amount of tasks. Thus, on a 64-core node, this test would run with 64 tasks, while on a 128-core node, it would run 128 tasks.
+The tests in the EESSI test suite are developed using the [ReFrame HPC testing framework](https://reframe-hpc.readthedocs.io/en/stable/). Typically, ReFrame tests hardcode system specific information (core counts, performance references, etc) in the test definition. The EESSI test suite aims to be portable, and implements a [mixin class](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/eessi_mixin.py) that invokes a series of standard [hooks](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py) to replace information that is typically hardcoded. All system-specific information is then limited to the ReFrame configuration file. As an example: rather than hardcoding that a test should run with 128 tasks (i.e. because a system has 128 core nodes), the EESSI test suite has a hook that can define a test should be run on a "single, full node". The hook queries the ReFrame configuration file for the amount of cores per node, and specifies this number as the corresponding amount of tasks. Thus, on a 64-core node, this test would run with 64 tasks, while on a 128-core node, it would run 128 tasks.
 
 ## Test requirements
 
@@ -178,7 +178,418 @@ This test _works_, but is _not_ very portable. If we move to a system with 192 c
 
 ### Step 3: implementing as a portable ReFrame test { #as-portable-reframe-test }
 
-In the previous section, there were several system-specific items in the test. In this section, we will show how we use the EESSI hooks to avoid hard-coding system specific information. We do this by replacing the system-specific parts of the test from Step 2 bit by bit. The full final test can be found under `tutorials/mpi4py/mpi4py_portable.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
+In step 2, there were several system-specific items in the test. In this section, we will show how we use inheritance from the `EESSI_Mixin` class to avoid hard-coding system specific information. The full final test can be found under `tutorials/mpi4py/mpi4py_portable_mixin.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
+
+#### How EESSI_Mixin works
+
+The `EESSI_Mixin` class provides standardized functionality that should be useful to all tests in the EESSI test-suite. One of its key functions is to make sure tests dynamically try to determine sensible values for the things that were system specific in Step 2. For example, instead of hard coding a task count, the test inheriting from `EESSI_Mixin` will determine this dynamically based on the amount of available cores per node, and a declaration from the inheriting test class about how you want to instantiate tasks.
+
+To illustrate this, suppose you want to launch your test with one task per CPU core. In that case, your test (that inherits from `EESSI_Mixin`) only has to declare
+
+```python
+compute_unit = COMPUTE_UNIT[CPU]
+```
+
+The `EESSI_Mixin` class then takes care of querying the ReFrame config file for the cpu topology of the node, and setting the correct number of tasks per node.
+
+Another feature is that it sets defaults for a few items, such as the `valid_prog_environs = ['default']`. These will likely be the same for _most_ tests in the EESSI test suite, and when they _do_ need to be different, one can easily overwrite them in the child class.
+
+Most of the functionality in the `EESSI_Mixin` class require certain class attributes (such as the `compute_unit` above) to be set by the child class, so that the `EESSI_Mixin` class can use those as input. It is important that these attributes are set _before_ the stage in which the `EESSI_Mixin` class needs them (see the stages of the [ReFrame regression pipeline](https://reframe-hpc.readthedocs.io/en/stable/pipeline.html)). To support test developers, the `EESSI_Mixin` class checks if these attributes are set, and gives verbose feedback in case any attributes are missing.
+
+#### Inheriting from EESSI_Mixin
+
+The first step is to actually inherit from the `EESSI_Mixin` class:
+
+```python
+from eessi.testsuite.eessi_mixin import EESSI_Mixin
+...
+@rfm.simple_test
+class EESSI_MPI4PY(rfm.RunOnlyRegressionTest, EESSI_Mixin):
+```
+
+#### Removing hard-coded test scales
+
+First, we remove 
+
+```python
+    # ReFrame will generate a test for each scale
+    scale = parameter([2, 128, 256])
+```
+from the test. The `EESSI_Mixin` class will define the default set of scales on which this test will be run as
+```python
+from eessi.testsuite.constants import SCALES
+...
+    scale = parameter(SCALES.keys())
+```
+
+This ensures the test will run a test case for each of the default scales, as defined by the `SCALES` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py).
+
+If, and only if, your test can not run on all of those scales should you overwrite this parameter in your child class. For example, if you have a test that does not support running on multiple nodes, you could define a filtering function outside of the class
+```python
+def filter_scales():
+    return [
+        k for (k,v) in SCALES.items()
+        if v['num_nodes'] == 1
+    ]
+```
+and then in the class body overwrite the scale parameter with a subset of items from the `SCALES` constant:
+```python
+    scale = parameter(filter_scales())
+```
+
+Next, we also remove
+
+```python
+   @run_after('init')
+    def define_task_count(self):
+        self.num_tasks = self.scale
+        self.num_tasks_per_node = min(self.num_tasks, 128)
+```
+
+as `num_tasks` and and `num_tasks_per_node` will be set by the `assign_tasks_per_compute_unit` [hook](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/hooks.py), which is invoked by the `EESSI_Mixin` class.
+
+Instead, we only set the `compute_unit`. The number of launched tasks will be equal to the number of compute units. E.g.
+```python
+    compute_unit = COMPUTE_UNIT[CPU]
+```
+will launch one task per (physical) CPU core. Other options are `COMPUTE_UNIT[HWTHREAD]` (one task per hardware thread), `COMPUTE_UNIT[NUMA_NODE]` (one task per numa node), `COMPUTE_UNIT[CPU_SOCKET]` (one task per CPU socket), `COMPUTE_UNIT[GPU]` (one task per GPU) and `COMPUTE_UNIT[NODE]` (one task per node). Check the `COMPUTE_UNIT` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) for the full list of valid compute units. The number of cores per task will automatically be set based on this as the ratio of the number of cores in a node to the number of tasks per node (rounded down). Additionally, the `EESSI_Mixin` class will set the `OMP_NUM_THREADS` environment variable equal to the number of cores per task.
+
+!!! note
+    `compute_unit` needs to be set before (or in) ReFrame's `setup` phase. For the different phases of the pipeline, please see the [documentation on how ReFrame executes tests](https://reframe-hpc.readthedocs.io/en/stable/pipeline.html).
+
+#### Replacing hard-coded module names
+Instead of hard-coding a module name, we parameterize over all module names that match a certain regular expression. 
+
+```python
+from eessi.testsuite.utils import find_modules
+...
+    module_name = parameter(find_modules('mpi4py'))
+```
+
+This parameter generates all module names available on the current system matching the expression, and each test instance will load the respective module before running the test.
+
+Furthermore, we remove the hook that sets `self.module`:
+```python
+@run_after('init')
+def set_modules(self):
+    self.modules = [self.module_name]
+```
+This is now taken care of by the `EESSI_Mixin` class.
+
+!!! note
+    `module_name` needs to be set before (or in) ReFrame's `init` phase
+
+#### Replacing hard-coded system names and programming environments
+First, we remove the hard-coded system name and programming environment. I.e. we remove
+```python
+    valid_prog_environs = ['default']
+    valid_systems = ['snellius']
+```
+The `EESSI_Mixin` class sets `valid_prog_environs = ['default']` by default, so that is no longer needed in the child class (but it can be overwritten if needed). The `valid_systems` is instead replaced by a declaration of what type of device type is needed. We'll create an `mpi4py` test that runs on CPUs only:
+```python
+    device_type = DEVICE_TYPES[CPU]
+```
+but note if we would have wanted to also generate test instances to test GPU <=> GPU communication, we could have defined this as a parameter:
+```python
+    device_type = parameter([DEVICE_TYPES[CPU], DEVICE_TYPES[GPU]])
+```
+
+The device type that is set will be used by the `filter_valid_systems_by_device_type` hook to check in the ReFrame configuration file which of the current partitions contain the relevant device. Typically, we don't set the `DEVICE_TYPES[CPU]` on a GPU partition in the ReFrame configuration, so that we skip all CPU-only tests on GPU nodes. Check the `DEVICE_TYPES` [constant](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) for the full list of valid compute units.
+
+`EESSI_Mixin` also filters based on the supported scales, which can again be configured per partition in the ReFrame configuration file. This can e.g. be used to avoid running large-scale tests on partitions that don't have enough nodes to run them.
+
+!!! note
+    `device_type` needs to be set before (or in) ReFrame's `init` phase
+
+#### Requesting sufficient RAM memory
+To make sure you get an allocation with sufficient memory, your test should declare how much memory per node it needs by defining a `required_mem_per_node` function in your test class that returns the required memory per node (in MiB). Note that the amount of required memory generally depends on the amount of tasks that are launched per node (`self.num_tasks_per_node`).
+
+Our `mpi4py` test takes around 200 MB when running with a single task, plus about 70 MB for every additional task. We round this up a little so that we can be sure the test won't run out of memory if memory consumption is slightly different on a different system. Thus, we define:
+
+```python
+def required_mem_per_node(self):
+    return self.num_tasks_per_node * 100 + 250
+```
+
+While rounding up is advisable, do keep your estimate realistic. Too high a memory request will mean the test will get skipped on systems that cannot satisfy that memory request. Most HPC systems have at least 1 GB per core, and most laptop/desktops have at least 8 GB total. Designing a test so that it fits within those memory constraints will ensure it can be run almost anywhere.
+
+!!! note
+    The easiest way to get the memory consumption of your test at various task counts is to execute it on a system which runs jobs in [cgroups](https://en.wikipedia.org/wiki/Cgroups), define `measure_memory_usage = True` in your class body, and make the `required_mem_per_node` function return a constant amount of memory equal to the available memory per node on your test system. This will cause the `EESSI_Mixin` class to read out the maximum memory usage of the cgroup (on the head node of your allocation, in case of multi-node tests) and report it as a performance number.
+
+#### Process binding
+The `EESSI_Mixin` class binds processes to their respective number of cores automatically using the `hooks.set_compact_process_binding` hook. E.g. for a pure MPI test like `mpi4py`, each task will be bound to a single core. For hybrid tests that do both multiprocessing and multithreading, tasks are bound to a sequential number of cores. E.g. on a node with 128 cores and a hybrid test with 64 tasks and 2 threads per task, the first task will be bound to core 0 and 1, second task to core 2 and 3, etc. To override this behaviour, one would have to overwrite the
+```python
+@run_after('setup')
+def assign_tasks_per_compute_unit(self):
+    ...
+```
+function. Note that this function also calls other hooks (such as `hooks.assign_task_per_compute_unit`) that you probably still want to invoke. Check the `EESSI_Mixin` [class definition](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/eessi_mixin.py) to see which hooks you still want to call.
+
+#### CI Tag
+As mentioned in the [Test requirements](#test-requirements), there should be at least one light-weight (short, low-core, low-memory) test case, which should be marked with the `CI` tag. The `EESSI_Mixin` class will automatically add the `CI` tag if both `bench_name` (the current variant) and `bench_name_ci` (the CI variant) are defined. The `mpi4py` test contains only one test case (which is very light-weight). In this case, it is sufficient to set both to the same name in the class body:
+```python
+bench_name = 'mpi4pi'
+bench_name_ci = 'mpi4pi'
+```
+
+Suppose that our test has 2 variants, of which only `'variant1'` should be marked `CI`. In that case, we can define `bench_name` as a parameter:
+```python
+    bench_name = parameter(['variant1', 'variant2'])
+    bench_name_ci = 'variant1'
+```
+Next, we can define a hook that does different things depending on the variant, for example: 
+```python
+@run_after('init')
+def do_something(self):
+    if self.bench_name == 'variant1':
+        do_this()
+    elif self.bench_name == 'variant2':
+        do_that()
+```
+
+#### Thread binding (optional)
+Thread binding is not done by default, but can be done by invoking the `hooks.set_compact_thread_binding` hook:
+```python
+@run_after('setup')
+def set_binding(self):
+    hooks.set_compact_thread_binding(self)
+```
+
+#### Skipping test instances when required (optional) { #skipping-test-instances }
+Preferably, we prevent test instances from being generated (i.e. before ReFrame's `setup` phase) if we know that they cannot run on a certain system. However, sometimes we need information on the nodes that will run it, which is only available _after_ the `setup` phase. That is the case for anything where we need information from e.g. the [reframe.core.pipeline.RegressionTest.current_partition](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.current_partition).
+
+For example, we might know that a test only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called (which is done by `EESSI_Mixin` in after the `setup` stage). For example, the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
+
+We can skip any generated test cases using the `skip_if` function. For example, to skip the test if the total task count exceeds 300, we'd need to call `skip_if` _after_ the `setup` stage (so that `self.num_tasks` is already set):
+
+```python
+@run_after('setup')
+    hooks.assign_tasks_per_compute_unit(test=self, compute_unit=COMPUTE_UNIT[CPU])
+
+    max_tasks = 300
+    self.skip_if(self.num_tasks > max_tasks,
+                 f'Skipping test: more than {max_tasks} tasks are requested ({self.num_tasks})')
+```
+
+The `mpi4py` test scales up to a very high core count, but if we were to set it for the sake of this example, one would see:
+```bash
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=16_nodes /38aea144 @snellius:genoa+default
+[     SKIP ] ( 1/13) Skipping test: more than 300 tasks are requested (3072)
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=8_nodes /bfc4d3d4 @snellius:genoa+default
+[     SKIP ] ( 2/13) Skipping test: more than 300 tasks are requested (1536)
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=4_nodes /8de369bc @snellius:genoa+default
+[     SKIP ] ( 3/13) Skipping test: more than 300 tasks are requested (768)
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=2_nodes /364146ba @snellius:genoa+default
+[     SKIP ] ( 4/13) Skipping test: more than 300 tasks are requested (384)
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_node /8225edb3 @snellius:genoa+default
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_2_node /4acf483a @snellius:genoa+default
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_4_node /fc3d689b @snellius:genoa+default
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_8_node /73046a73 @snellius:genoa+default
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1cpn_4nodes /f08712a2 @snellius:genoa+default
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1cpn_2nodes /23cd550b @snellius:genoa+default
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=4_cores /bb8e1349 @snellius:genoa+default
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=2_cores /4c0c7c9e @snellius:genoa+default
+[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_core /aa83ba9e @snellius:genoa+default
+
+...
+```
+on a system with 192 cores per node. I.e. any test of 2 nodes (384 cores) or above would be skipped because it exceeds our max task count.
+
+#### Setting a time limit (optional)
+By default, the `EESSI_Mixin` class sets a time limit for jobs of 1 hour. You can overwrite this in your child class:
+```python
+time_limit = '5m00s'
+```
+For the appropriate string formatting, please check the [ReFrame documentation on time_limit](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.time_limit). We already had this in the non-portable version of our `mpi4py` test and will keep it in the portable version: since this is a very quick test, specifying a lower time limit will help in getting the jobs scheduled more quickly.
+
+Note that for the test to be portable, the time limit should be set such that it is sufficient _regardless of node architecture and scale_. It is pretty hard to guarantee this with a single, fixed time limit, without knowing upfront what architecture the test will be run on, and thus how many tasks will be launched. For strong scaling tests, you might want a higher time limit for low task counts, whereas for weak scaling tests you might want a higher time limit for higher task counts. To do so, you can consider setting the time limit after setup, and making it dependent on the task count.
+
+Suppose we have a weak scaling test that takes 5 minutes with a single task, and 60 minutes with 10k tasks. We can set a time limit based on linear interpolation between those task counts:
+```python
+@run_after('setup')
+def set_time_limit(self):
+    # linearly interpolate between the single and 10k task count
+    minutes = 5 + self.num_tasks * ((60-5) / 10000)
+    self.time_limit = f'{minutes}m00s'
+```
+Note that this is typically an overestimate of how long the test will take for intermediate task counts, but that's ok: we'd rather overestimate than underestimate the runtime.
+
+To be even safer, one could consider combining this with logic to [skip tests](#skipping-test-instances) if the 10k task count is exceeded.
+
+#### Summary
+To make the test portable, we added additional imports:
+```python
+from eessi.testsuite.eessi_mixin import EESSI_Mixin
+from eessi.testsuite.constants import COMPUTE_UNIT, DEVICE_TYPES, CPU
+from eessi.testsuite.utils import find_modules
+```
+
+Made sure the test inherits from `EESSI_Mixin`:
+```python
+@rfm.simple_test
+class EESSI_MPI4PY(rfm.runOnlyRegressionTest, EESSI_Mixin):
+```
+
+Removed the following from the class body:
+```python
+valid_prog_environs = ['default']
+valid_systems = ['snellius']
+
+module_name = parameter(['mpi4py/3.1.4-gompi-2023a', 'mpi4py/3.1.5-gompi-2023b'])
+scale = parameter([2, 128, 256])
+```
+
+Added the following to the class body:
+```python
+device_type = DEVICE_TYPES[CPU]
+compute_unit = COMPUTE_UNIT[CPU]
+
+module_name = parameter(find_modules('mpi4py'))
+```
+
+Defined the class method:
+```python
+def required_mem_per_node(self):
+    return self.num_tasks_per_node * 100 + 250
+```
+
+Removed the ReFrame pipeline hook that sets `self.modules`:
+```python
+@run_after('init')
+def set_modules(self):
+     self.modules = [self.module_name]
+```
+
+Removed the ReFrame pipeline hook that sets the number of tasks and number of tasks per node:
+```python
+@run_after('init')
+def define_task_count(self):
+    # Set the number of tasks, self.scale is now a single number out of the parameter list
+    # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.num_tasks
+    self.num_tasks = self.scale
+    # Set the number of tasks per node to either be equal to the number of tasks, but at most 128,
+    # since we have 128-core nodes
+    # https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.num_tasks_per_node
+    self.num_tasks_per_node = min(self.num_tasks, 128)
+```
+
+The final test is thus:
+```python
+"""
+This module tests mpi4py's MPI_Reduce call
+"""
+
+import reframe as rfm
+import reframe.utility.sanity as sn
+
+from reframe.core.builtins import variable, parameter, run_after, performance_function, sanity_function
+
+from eessi.testsuite.eessi_mixin import EESSI_Mixin
+from eessi.testsuite.constants import COMPUTE_UNIT, DEVICE_TYPES, CPU
+from eessi.testsuite.utils import find_modules
+
+@rfm.simple_test
+class EESSI_MPI4PY(rfm.RunOnlyRegressionTest, EESSI_Mixin):
+    device_type = DEVICE_TYPES[CPU]
+    compute_unit = COMPUTE_UNIT[CPU]
+
+    module_name = parameter(find_modules('mpi4py'))
+
+    n_iterations = variable(int, value=1000)
+    n_warmup = variable(int, value=100)
+
+    executable = 'python3'
+    executable_opts = ['mpi4py_reduce.py', '--n_iter', f'{n_iterations}', '--n_warmup', f'{n_warmup}']
+
+    time_limit = '5m00s'
+
+    def required_mem_per_node(self):
+        return self.num_tasks_per_node * 100 + 250
+
+    @sanity_function
+    def validate(self):
+        sum_of_ranks = round(self.num_tasks * ((self.num_tasks - 1) / 2))
+        return sn.assert_found(r'Sum of all ranks: %s' % sum_of_ranks, self.stdout)
+
+    @performance_function('s')
+    def time(self):
+        return sn.extractsingle(r'^Time elapsed:\s+(?P<perf>\S+)', self.stdout, 'perf', float)
+```
+
+Note that with only 34 lines of code, this is now very quick and easy to write, because of the default behaviour from the `EESSI_Mixin` class.
+
+### Background of the mpi4py test { #background-of-mpi4py-test }
+To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
+
+The MPI standard defines how to communicate between multiple processes that work on a common computational task. Each process that is part of the computational task gets a unique identifier (0 to N-1 for N processes), the MPI rank, which can e.g. be used to distribute a workload. The MPI standard defines communication between two given processes (so-called point-to-point communication), but also between a set of N processes (so-called collective communication).
+
+An example of such a collective operation is the [MPI_REDUCE](https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report/node130.htm#Node130) call. It reduces data elements from multiple processes with a certain operation, e.g. it takes the sum of all elements or multiplication of all elements.
+
+#### The mpi4py test
+In this example, we will implement a test that does an `MPI_Reduce` on the rank, using the `MPI.SUM` operation. This makes it easy to validate the result, as we know that for N processes, the theoretical sum of all ranks (0, 1, ... N-1) is `(N * (N-1) / 2)`.
+
+Our initial code is a python script `mpi4py_reduce.py`, which can be found in `tutorials/mpi4py/src/mpi4py_reduce.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository:
+```python
+#!/usr/bin/env python
+"""
+MPI_Reduce on MPI rank. This should result in a total of (size * (size - 1) / 2),
+where size is the total number of ranks.
+Prints the total number of ranks, the sum of all ranks, and the time elapsed for the reduction."
+"""
+
+import argparse
+import time
+
+from mpi4py import MPI
+
+parser = argparse.ArgumentParser(description='mpi4py reduction benchmark',
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument('--n_warmup', type=int, default=100,
+                    help='Number of warmup iterations')
+parser.add_argument('--n_iter', type=int, default=1000,
+                    help='Number of benchmark iterations')
+args = parser.parse_args()
+
+n_warmup = args.n_warmup
+n_iter = args.n_iter
+
+size = MPI.COMM_WORLD.Get_size()
+rank = MPI.COMM_WORLD.Get_rank()
+name = MPI.Get_processor_name()
+
+# Warmup
+t0 = time.time()
+for i in range(n_warmup):
+    total = MPI.COMM_WORLD.reduce(rank, op=MPI.SUM)
+
+# Actual reduction, multiple iterations for accuracy of timing
+t1 = time.time()
+for i in range(n_iter):
+    total = MPI.COMM_WORLD.reduce(rank, op=MPI.SUM)
+t2 = time.time()
+total_time = (t2 - t1) / n_iter
+
+if rank == 0:
+    print(f"Total ranks: {size}")
+    print(f"Sum of all ranks: {total}")  # Should be (size * (size-1) / 2)
+    print(f"Time elapsed: {total_time:.3e}")
+```
+
+Assuming we have `mpi4py` available, we could run this manually using
+```bash
+$ mpirun -np 4 python3 mpi4py_reduce.py
+Total ranks: 4
+Sum of all ranks: 6
+Time elapsed: 3.609e-06
+```
+
+This started 4 processes, with ranks 0, 1, 2, 3, and then summed all the ranks (`0+1+2+3=6`) on the process with rank 0, which finally printed all this output. The whole reduction operation is performed `n_iter` times, so that we get a more reproducible timing.
+
+### Step 3: implementing as a portable ReFrame test without using EESSI_Mixin { #as-portable-reframe-test-legacy }
+
+The approach using inheritance from the `EESSI_Mixin` class, described above, is strongly preferred and recommended. There might be certain tests that do not fit the standardized approach of `EESSI_Mixin`, but usually that will be solvable by overwriting hooks set by `EESSI_Mixin` in the inheriting class. In the rare case that your test is so exotic that even this doesn't provide a sensible solution, you can still invoke the hooks used by `EESSI_Mixin` manually. Note that this used to be the default way of writing tests for the EESSI test suite.
+
+In step 2, there were several system-specific items in the test. In this section, we will show how we use the EESSI hooks to avoid hard-coding system specific information. We do this by replacing the system-specific parts of the test from Step 2 bit by bit. The full final test can be found under `tutorials/mpi4py/mpi4py_portable_legacy.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository.
 
 #### Replacing hard-coded test scales (mandatory)
 
@@ -429,116 +840,5 @@ The use of this hook is optional but recommended in most cases. Note that thread
 
 The `set_omp_num_threads` hook sets the `$OMP_NUM_THREADS` environment variable based on the number of `cpus_per_task` defined in the ReFrame test (which in turn is typically set by the `assign_tasks_per_compute_unit` hook). For OpenMP codes, it is generally recommended to call this hook, to ensure they launch the correct amount of threads.
 
-#### Skipping tests instances when required (optional)
-Preferably, we prevent test instances from being generated (i.e. before ReFrame's `setup` phase) if we know that they cannot run on a certain system. However, sometimes we need information on the nodes that will run it, which is only available _after_ the `setup` phase. That is the case for anything where we need information from e.g. the [reframe.core.pipeline.RegressionTest.current_partition](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#reframe.core.pipeline.RegressionTest.current_partition). The `assign_tasks_per_compute_unit` hook for example uses this property to get the core count of a node, and thus needs to be executed after the `setup` phase.
 
-For example, we might know that a test only scales to around 300 tasks, and above that, execution time increases rapidly. In that case, we'd want to skip any test instance that results in a larger amount of tasks, but we only know this after `assign_tasks_per_compute_unit` has been called. For example, the `2_nodes` scale would run fine on systems with 128 cores per node, but would exceed the task limit of 300 on systems with `192` cores per node.
 
-We can skip any generated test cases using the `skip_if` function. For example, to skip the test if the total task count exceeds 300, we'd need to call `skip_if` _after_ the task count has been set by `assign_tasks_per_compute_unit`:
-
-```python
-@run_after('setup')
-    hooks.assign_tasks_per_compute_unit(test=self, compute_unit=COMPUTE_UNIT[CPU])
-
-    max_tasks = 300
-    self.skip_if(self.num_tasks > max_tasks,
-                 f'Skipping test: more than {max_tasks} tasks are requested ({self.num_tasks})')
-```
-
-The `mpi4py` scales almost indefinitely, but if we were to set it for the sake of this example, one would see:
-```bash
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=16_nodes /38aea144 @snellius:genoa+default
-[     SKIP ] ( 1/13) Skipping test: more than 300 tasks are requested (3072)
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=8_nodes /bfc4d3d4 @snellius:genoa+default
-[     SKIP ] ( 2/13) Skipping test: more than 300 tasks are requested (1536)
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=4_nodes /8de369bc @snellius:genoa+default
-[     SKIP ] ( 3/13) Skipping test: more than 300 tasks are requested (768)
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=2_nodes /364146ba @snellius:genoa+default
-[     SKIP ] ( 4/13) Skipping test: more than 300 tasks are requested (384)
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_node /8225edb3 @snellius:genoa+default
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_2_node /4acf483a @snellius:genoa+default
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_4_node /fc3d689b @snellius:genoa+default
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_8_node /73046a73 @snellius:genoa+default
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1cpn_4nodes /f08712a2 @snellius:genoa+default
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1cpn_2nodes /23cd550b @snellius:genoa+default
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=4_cores /bb8e1349 @snellius:genoa+default
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=2_cores /4c0c7c9e @snellius:genoa+default
-[ RUN      ] EESSI_MPI4PY %module_name=mpi4py/3.1.5-gompi-2023b %scale=1_core /aa83ba9e @snellius:genoa+default
-
-...
-```
-on a system with 192 cores per node. I.e. any test of 2 nodes (384 cores) or above would be skipped because it exceeds our max task count.
-
-!!! note
-    The order in which [ReFrame pipeline hooks](https://reframe-hpc.readthedocs.io/en/stable/regression_test_api.html#pipeline-hooks) (methods decorated with `run_after` or `run_before`) are called is the same in which they are attached/defined.
-
-    This is important in case we want to call hooks for the same stage (`init`/`setup`/...) in different functions (for cleanliness of the code or any other reason).
-
-    For example, any pipeline hook attached to the `setup` step making use of `self.num_tasks`, should be defined after the function calling the test-suite hook `assign_tasks_per_compute_unit`.
-
-### Background of the mpi4py test { #background-of-mpi4py-test }
-To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
-
-The MPI standard defines how to communicate between multiple processes that work on a common computational task. Each process that is part of the computational task gets a unique identifier (0 to N-1 for N processes), the MPI rank, which can e.g. be used to distribute a workload. The MPI standard defines communication between two given processes (so-called point-to-point communication), but also between a set of N processes (so-called collective communication).
-
-An example of such a collective operation is the [MPI_REDUCE](https://www.mpi-forum.org/docs/mpi-4.1/mpi41-report/node130.htm#Node130) call. It reduces data elements from multiple processes with a certain operation, e.g. it takes the sum of all elements or multiplication of all elements.
-
-#### The mpi4py test
-In this example, we will implement a test that does an `MPI_Reduce` on the rank, using the `MPI.SUM` operation. This makes it easy to validate the result, as we know that for N processes, the theoretical sum of all ranks (0, 1, ... N-1) is `(N * (N-1) / 2)`.
-
-Our initial code is a python script `mpi4py_reduce.py`, which can be found in `tutorials/mpi4py/src/mpi4py_reduce.py` in the [EESSI test suite](https://github.com/EESSI/test-suite/) repository:
-```python
-#!/usr/bin/env python
-"""
-MPI_Reduce on MPI rank. This should result in a total of (size * (size - 1) / 2),
-where size is the total number of ranks.
-Prints the total number of ranks, the sum of all ranks, and the time elapsed for the reduction."
-"""
-
-import argparse
-import time
-
-from mpi4py import MPI
-
-parser = argparse.ArgumentParser(description='mpi4py reduction benchmark',
-                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--n_warmup', type=int, default=100,
-                    help='Number of warmup iterations')
-parser.add_argument('--n_iter', type=int, default=1000,
-                    help='Number of benchmark iterations')
-args = parser.parse_args()
-
-n_warmup = args.n_warmup
-n_iter = args.n_iter
-
-size = MPI.COMM_WORLD.Get_size()
-rank = MPI.COMM_WORLD.Get_rank()
-name = MPI.Get_processor_name()
-
-# Warmup
-t0 = time.time()
-for i in range(n_warmup):
-    total = MPI.COMM_WORLD.reduce(rank, op=MPI.SUM)
-
-# Actual reduction, multiple iterations for accuracy of timing
-t1 = time.time()
-for i in range(n_iter):
-    total = MPI.COMM_WORLD.reduce(rank, op=MPI.SUM)
-t2 = time.time()
-total_time = (t2 - t1) / n_iter
-
-if rank == 0:
-    print(f"Total ranks: {size}")
-    print(f"Sum of all ranks: {total}")  # Should be (size * (size-1) / 2)
-    print(f"Time elapsed: {total_time:.3e}")
-```
-
-Assuming we have `mpi4py` available, we could run this manually using
-```
-$ mpirun -np 4 python3 mpi4py_reduce.py
-Total ranks: 4
-Sum of all ranks: 6
-Time elapsed: 3.609e-06
-```
-
-This started 4 processes, with ranks 0, 1, 2, 3, and then summed all the ranks (`0+1+2+3=6`) on the process with rank 0, which finally printed all this output. The whole reduction operation is performed `n_iter` times, so that we get a more reproducible timing.
