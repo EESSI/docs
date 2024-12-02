@@ -38,6 +38,9 @@ the publisher of [HPCWire](https://www.hpcwire.com).
 
 ## Picture at EuroHPC JU booth
 
+It is important to highlight that the funding provided by the EuroHPC JU to the MultiXscale Centre-of-Excellence
+has been a huge catalyst in the last couple of years for EESSI, which forms the technical pillar of MultiXscale.
+
 [Anders Dam Jensen](https://www.linkedin.com/in/anders-dam-jensen-7a4900/), CEO of EuroHPC JU, and Daniel Opalka,
 head of Research & Innovation at EuroHPC JU, were more than happy to take a commemorative picture at
 the EuroHPC JU booth, together with representatives of some of the MultiXscale partners (Ghent University,
@@ -46,9 +49,6 @@ HPCNow!, and SURF).
 <figure markdown="span">
 ![EuroHPC User Day 2024](eessi-hpcwire-award-2024-eurohpc-booth-sc24.webp){width=80%}
 </figure>
-
-It is important to highlight that the funding provided by the EuroHPC JU to the MultiXscale Centre-of-Excellence
-has been a huge catalyst in the last couple of years for EESSI, which forms the technical pillar of MultiXscale.
 
 
 ## More info
