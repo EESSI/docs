@@ -29,7 +29,7 @@ This news was revealed at the [Supercomputing 2024 (SC'24) conference in Atlanta
 </figure>
 
 A modest award ceremony was held at the [Do IT Now](https://www.doitnowgroup.com) booth on the SC'24 exhibit floor,
-since [HPCNow!](https://hpcnow.com) (now also known as Do IT Now Spain)
+since [HPCNow!](https://hpcnow.com) (part of the Do IT Now Group)
 is a partner in the [MultiXscale EuroHPC Centre-of-Excellence](https://www.multixscale.eu).
 
 The handover of the award plaque was done by [Tom Tabor, CEO of Tabor Communications, Inc.](https://tomtabor.com/),
