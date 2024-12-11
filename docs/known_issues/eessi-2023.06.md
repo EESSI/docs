@@ -55,4 +55,4 @@ hook.register("load", combined_load_hook)
 
 ### GCC-12.2.0 and foss-2022b based modules cannot be loaded on `zen4` architecture
 
-The `zen4` architecture was released late 2022. As a result, the compilers and BLAS libraries that are part of the 2022b toolchain generation do not yet (fully) support this architecture. Concretely, it was found [in this pr](https://github.com/EESSI/software-layer/pull/567) that unit tests in the OpenBLAS version that is part of the foss-2022b toolchain were failing. As a result, it was decided that we would not support this toolchain-generation at all on the `zen4` architecture.
+The `zen4` architecture was released late 2022. As a result, the compilers and BLAS libraries that are part of the 2022b toolchain generation did not yet (fully) support this architecture. Concretely, it was found [in this pr](https://github.com/EESSI/software-layer/pull/567) that unit tests in the OpenBLAS version that is part of the foss-2022b toolchain were failing. As a result, it was decided that we would not support this toolchain-generation at all on the `zen4` architecture.
