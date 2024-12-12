@@ -1151,9 +1151,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manually-building-software-op-top-of-eessi" class="md-nav__link">
+  <a href="#manually-building-software-op-top-of-eessi-without-easybuild" class="md-nav__link">
     <span class="md-ellipsis">
-      Manually building software op top of EESSI
+      Manually building software op top of EESSI (without EasyBuild)
     </span>
   </a>
   
@@ -2012,9 +2012,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#manually-building-software-op-top-of-eessi" class="md-nav__link">
+  <a href="#manually-building-software-op-top-of-eessi-without-easybuild" class="md-nav__link">
     <span class="md-ellipsis">
-      Manually building software op top of EESSI
+      Manually building software op top of EESSI (without EasyBuild)
     </span>
   </a>
   
@@ -2124,9 +2124,46 @@
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>   netcdf4-python/1.6.5-foss-2023b
 </code></pre></div>
 <p>This means you'll <em>always</em> need to load the <code>EESSI-extend</code> module if you want to use these modules (also, and particularly when you want to use them in a job script).</p>
-<h2 id="manually-building-software-op-top-of-eessi">Manually building software op top of EESSI<a class="headerlink" href="#manually-building-software-op-top-of-eessi" title="Permanent link">&para;</a></h2>
-<p>Building software on top of EESSI would require your linker to use the same system-dependencies as the software in EESSI does. In other words: it requires you to link against libraries from the compatibility layer, instead of from your host OS.</p>
-<p>While we plan to support this in the future, manually building on top of EESSI is currently not supported yet in a trivial way.</p>
+<h2 id="manually-building-software-op-top-of-eessi-without-easybuild">Manually building software op top of EESSI (without EasyBuild)<a class="headerlink" href="#manually-building-software-op-top-of-eessi-without-easybuild" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We are working on a module file that should make building on top of EESSI (without using EasyBuild)
+more straightforward, particularly when using <code>Autotools</code> or <code>CMake</code>. Right now, it is a little convoluted
+and requires you to have a decent grasp of
+* What a runtime dynamic linker (<code>ld-linux*.so</code>) is and does
+* How to influence the behaviour of the runtime linker with <code>LD_LIBRARY_PATH</code>
+* The difference between <code>LIBRARY_PATH</code> and <code>LD_LIBRARY_PATH</code></p>
+<p>As such, this documentation is intended for "experts" in the runtime linker and it's behaviour,
+and most cases are untested. Any feedback on this topic is highly appreciated. </p>
+</div>
+<p>Building and running software on top of EESSI without EasyBuild is not straightforward and requires some considerations to take care of. </p>
+<p>It is expected that you will have loaded all of your required dependencies as modules from the EESSI environment. Since EESSI sets
+<code>LIBRARY_PATH</code> for all of the modules and the <code>GCC</code> compiler is configured to use the compat layer, there should be no additional configuration
+required to execute a standard build process. On the other hand, EESSI does not set <code>LD_LIBRARY_PATH</code> so, <em>at runtime</em>, the executable will need help
+finding the libraries that it needs to actually execute. The easiest way to circumvent this requirement is by setting the environment variable <code>LD_RUN_PATH</code>
+during compile time as well. With <code>LD_RUN_PATH</code> set, the program will be able to tell the dynamic linker to search in those paths when the program is being
+executed. </p>
+<p>EESSI uses a <a href="../../compatibility_layer/">compatibility layer</a> to ensure that it takes as few libraries from the host as possible. The safest way to make sure
+all libraries will point to the required locations in the compatibility layer (and do not leak in from the host operating system) is starting an EESSI prefix
+shell before building. To do this: </p>
+<ul>
+<li>First of all, load the environment by starting an EESSI shell as described <a href="https://www.eessi.io/docs/using_eessi/setting_up_environment">here</a>. </li>
+<li>Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it (<code>foss</code> is a good option as it will also
+  include MPI with OpenMPI and math libraries via FlexiBLAS/FFTW). </li>
+<li>Set manually <code>LD_RUN_PATH</code> to resolve libraries at runtime. <code>LIBRARY_PATH</code> should contain all the paths we need, and we also need to include the path to
+  <code>libstdc++</code> from our GCC installation to avoid picking up the one from the host:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">LD_RUN_PATH</span><span class="o">=</span><span class="nv">$LIBRARY_PATH</span>:<span class="nv">$EBROOTGCCcore</span>/lib64
+</code></pre></div></li>
+<li>
+<p>Compile and make sure the library resolution points to the EESSI stack. For this, <code>ldd</code> from compatibility layer and <strong>not</strong> <code>/usr/bin/ldd</code> should be used
+  when checking the binary.</p>
+</li>
+<li>
+<p>Run! </p>
+</li>
+</ul>
+<p>!!! Note RPATH should never point to a compatibility layer directory, only to software layer ones, as all resolving is done via the runtime linker (<code>ld-linux*.so</code>)  that is shipped with EESSI, which automatically searches these locations.</p>
+<p>The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for, i.e., if you add to your executable RPATH a <code>libhdf5.so</code>compiled for <code>intel_avx512</code>, you will not be able to run that binary on a machine with a different architecture. If this is an issue for you, you should look into how EESSI itself organises the location of binaries and perhaps leverage the relevant environment variables (e.g., <code>EESSI_SOFTWARE_SUBDIR</code>).</p>
 
 
 
@@ -2147,7 +2184,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 12, 2024</span>
   </span>
 
     
