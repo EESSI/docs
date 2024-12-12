@@ -1,0 +1,51 @@
+authors:
+  boegel:
+    name: Kenneth Hoste
+    description: HPC-UGent
+    avatar: https://avatars.githubusercontent.com/u/620876?v=4
+    slug: https://github.com/boegel
+  casparvl:
+    name: Caspar van Leeuwen
+    description: SURF
+    avatar: https://avatars.githubusercontent.com/u/33718780?v=4
+    slug: https://github.com/casparvl
+  jngrad:
+    name: Jean-Noël Grad
+    description: University of Stuttgart
+    avatar: https://avatars.githubusercontent.com/u/42201407?v=4
+    slug: https://github.com/jngrad
+  laraPPr:
+    name: Lara Peeters
+    description: HPC-UGent
+    avatar: https://avatars.githubusercontent.com/u/49882639?v=4
+    slug: https://github.com/laraPPr
+  satishskamath:
+    name: Satish Kamath
+    description: SURF
+    avatar: https://avatars.githubusercontent.com/u/41335185?v=4
+    slug: https://github.com/satishskamath
+  julianmorillo:
+    name: Julián Morillo
+    description: BSC
+    avatar: https://avatars.githubusercontent.com/u/11518551?v=4
+    slug: https://github.com/julianmorillo
+  Neves-P:
+    name: Pedro Santos Neves
+    description: CIT - University of Groningen
+    avatar: https://avatars.githubusercontent.com/u/10762799?v=4
+    slug: https://github.com/Neves-P
+  trz42:
+    name: Thomas Röblitz
+    description: University of Bergen
+    avatar: https://avatars.githubusercontent.com/u/12829274?v=4
+    slug: https://github.com/trz42
+  bedroge:
+    name: Bob Dröge
+    description: University of Groningen
+    avatar: https://avatars.githubusercontent.com/u/11991359?v=4
+    slug: https://github.com/bedroge
+  TopRichard:
+    name: Richard Topouchian
+    description: University of Bergen
+    avatar: https://avatars.githubusercontent.com/u/121792457?v=4
+    slug: https://github.com/TopRichard

@@ -41,14 +41,14 @@ git checkout LAMMPS_23Jun2022
 ```
 
 ### Starting a shell in the EESSI container
-Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer` repository
+Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer` repository. Use `-r` to specify which EESSI repository (e.g. `software.eessi.io`, `dev.eessi.io`, ...) should be mounted in the container
 ```
-./eessi_container.sh --access rw
+./eessi_container.sh --access rw -r software.eessi.io
 ```
 
 If you want to install NVIDIA GPU software, make sure to also add the `--nvidia all` argument, to insure that your GPU drivers get mounted inside the container:
 ```
-./eessi_container.sh --access rw --nvidia all
+./eessi_container.sh --access rw -r software.eessi.io --nvidia all
 ```
 
 !!! Note
@@ -61,7 +61,7 @@ If you want to install NVIDIA GPU software, make sure to also add the `--nvidia 
 While the above works perfectly well, you might not be able to complete your debugging session in one go. With the above approach, several steps will just be repeated every time you start a debugging session:
 
 - Downloading the container
-- Installing `CUDA` in your [host injections](../gpu.md#host_injections) directory (only if you use the `EESSI-install-software.sh` script, see below)
+- Installing `CUDA` in your [host injections](../site_specific_config/host_injections.md) directory (only if you use the `EESSI-install-software.sh` script, see below)
 - Installing all dependencies (before you get to the package that actually fails to build)
 
 To avoid this, we create two directories. One holds the container & `host_injections`, which are (typically) common between multiple PRs and thus you don't have to redownload the container / reinstall the `host_injections` if you start working on another PR. The other will hold the PR-specific data: a tarball storing the software you'll build in your interactive debugging session. The paths we pick here are just example, you can pick any persistent, writeable location for this:
@@ -72,7 +72,7 @@ eessi_pr_dir=${HOME}/pr360
 
 Now, we start the container
 ```
-SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw -r software.eessi.io --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}
 ```
 
 Here, the `SINGULARITY_CACHEDIR` makes sure that if the container was already downloaded, and is present in the cache, it is not redownloaded. The host injections will just be picked up from `${eessi_common_dir}/host_injections` (if those were already installed before). And finally, the `--save` makes sure that everything that you build in the container gets stored in a tarball as soon as you exit the container.
@@ -92,7 +92,7 @@ Note that the tarballs can be quite sizeable, so make sure to pick a filesystem 
 
 Next time you want to continue investigating this issue, you can start the container with `--resume DIR/TGZ` and continue where you left off, having all dependencies already built and available.
 ```
-SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}/EESSI-1698056784.tgz
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw -r software.eessi.io --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir}/EESSI-1698056784.tgz
 ```
 
 For a detailed description on using the script `eessi_container.sh`, see [here](../getting_access/eessi_container.md).
@@ -106,10 +106,10 @@ For a detailed description on using the script `eessi_container.sh`, see [here](
 ### Start the Gentoo Prefix environment
 The next step is to start the Gentoo Prefix environment. 
 
-Before we start, check the current values of `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` so that you can reset them later:
+First, you'll have to set which repository and version of EESSI you are building for. For example:
 ```
-echo ${EESSI_CVMFS_REPO}
-echo ${EESSI_VERSION}
+export EESSI_CVMFS_REPO=/cvmfs/software.eessi.io
+export EESSI_VERSION=2023.06
 ```
 
 Then, we set `EESSI_OS_TYPE` and `EESSI_CPU_FAMILY` and run the `startprefix` command to start the Gentoo Prefix environment:
@@ -119,10 +119,10 @@ export EESSI_CPU_FAMILY=$(uname -m)
 ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/startprefix
 ```
 
-Now, reset the `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` in your prefix environment with the initial values (printed in the echo statements above)
+Unfortunately, there is no way to retain the `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` in your prefix environment, so we have to set them again. For example:
 ```
-export EESSI_CVMFS_REPO=...
-export EESSI_VERSION=...
+export EESSI_CVMFS_REPO=/cvmfs/software.eessi.io
+export EESSI_VERSION=2023.06
 ```
 
 !!! Note
@@ -135,7 +135,7 @@ export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${E
 ```
 
 ## Building software with the `EESSI-install-software.sh` script
-The Automatic build and deploy [bot](../bot.md) installs software by executing the `EESSI-install-software.sh` script. The advantage is that running this script is the closest you can get to replicating the bot's behaviour - and thus the failure. The downside is that if a PR adds a lot of software, it may take quite a long time to run - even if you might already know what the problematic software package is. In that case, you might be better off following the steps under (Building software from an easystack file)[#building-software-from-an-easystack-file] or (Building an individual package)[#building-an-individual-package].
+The Automatic build and deploy [bot](../bot.md) installs software by executing the `EESSI-install-software.sh` script. The advantage is that running this script is the closest you can get to replicating the bot's behaviour - and thus the failure. The downside is that if a PR adds a lot of software, it may take quite a long time to run - even if you might already know what the problematic software package is. In that case, you might be better off following the steps under [Building software from an easystack file](#building-software-from-an-easystack-file) or [Building an individual package](#building-an-individual-package).
 
 Note that you could also combine approaches: first build everything using the `EESSI-install-software.sh` script, until you reproduce the failure. Then, start making modifications (e.g. changes to the EasyConfig, patches, etc) and trying to rebuild that package individually to test your changes.
 
@@ -159,7 +159,7 @@ source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
 ```
 
 !!! Note
-    If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVFMS_REPO}` and `${EESSI_VERSION}` environment variables at the end of the previous step.
+    If you get an error `bash: /versions//init/bash: No such file or directory`, you forgot to reset the `${EESSI_CVMFS_REPO}` and `${EESSI_VERSION}` environment variables at the end of the previous step.
 
 !!! Note
     If you want to build with generic optimization, you should run `export EESSI_CPU_FAMILY=$(uname -m) && export EESSI_SOFTWARE_SUBDIR_OVERRIDE=${EESSI_CPU_FAMILY}/generic` before sourcing.
@@ -174,7 +174,7 @@ In this example, we create a unique temporary directory inside `/tmp` to serve b
 
 ```
 export WORKDIR=$(mktemp --directory --tmpdir=/tmp  -t eessi-debug.XXXXXXXXXX)
-source configure_easybuild
+source scripts/utils.sh && source configure_easybuild
 ```
 Among other things, the `configure_easybuild` script sets the install path for EasyBuild to point to the correct installation directory in (to `${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_SOFTWARE_SUBDIR}`). This is the exact same path the `bot` uses to build, and uses a writeable overlay filesystem in the container to write to a path in `/cvmfs` (which normally is read-only). This is identical to what the `bot` does.
 
@@ -237,6 +237,64 @@ After some time, this build fails while trying to build `Plumed`, and we can acc
 
 !!! Note
     While this might be faster than the easystack-based approach, this is _not_ how the bot builds. So why it _may_ reproduce the failure the bot encounters, it may not reproduce the bug _at all_ (no failure) or run into _different_ bugs. If you want to be sure, use the easystack-based approach.
+
+## Rebuilding software
+[Rebuilding software](opening_pr.md#rebuilding_software) requires an additional step at the beginning: the software first needs to be removed. We assume you've already [checked out the feature branch](#fetching-the-feature-branch). Then, you need to start the container with the additional `--fakeroot` argument, otherwise you will not be able to remove files from the `/cvmfs` prefix. Make sure to also include the `--save` argument, as we will need the tarball later on. E.g.
+```
+SINGULARITY_CACHEDIR=${eessi_common_dir}/container_cache ./eessi_container.sh --access rw -r software.eessi.io --nvidia all --host-injections ${eessi_common_dir}/host_injections --save ${eessi_pr_dir} --fakeroot
+```
+Then, initialize the EESSI environment
+```
+source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
+```
+and get the diff file for the corresponding PR, e.g. for PR 123:
+```
+wget https://github.com/EESSI/software-layer/pull/123.diff
+```
+Finally, run the `EESSI-remove-software.sh` script
+```
+./EESSI-remove-software.sh`
+```
+
+This should remove any software specified in a [rebuild easystack](opening_pr.md#rebuilding_software) that got added in your current feature branch.
+
+Now, exit the container, paying attention to the instructions that are printed to resume later, e.g.:
+
+```
+Saved contents of tmp directory '/tmp/eessi.WZxeFUemH2' to tarball '/home/myuser/pr507/EESSI-1711538681.tgz' (to resume session add '--resume /home/myuser/pr507/EESSI-1711538681.tgz')
+```
+
+Now, continue with the original instructions to start the container (i.e. either [here](#starting-a-shell-in-the-eessi-container) or [with this alternate approach](#more-efficient-approach-for-multiplecontinued-debugging-sessions)) and make sure to add the `--resume` flag. This way, you are resuming from the tarball (i.e. with the software removed that has to be rebuilt), but in a new container in which you have regular (i.e. no root) permissions.
+
+## Running the test step
+If you are still in the prefix layer (i.e. after previously building something), exit it first:
+```
+$ exit
+logout
+Leaving Gentoo Prefix with exit status 0
+```
+Then, source the EESSI init script (again):
+```
+Apptainer> source ${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/init/bash
+Environment set up to use EESSI (2023.06), have fun!
+{EESSI 2023.06} Apptainer>
+```
+
+!!! Note
+    If you are in a SLURM environment, make sure to run `for i in $(env | grep SLURM); do unset "${i%=*}"; done` to unset any SLURM environment variables. Failing to do so will cause `mpirun` to pick up on these and e.g. infer how many slots are available. If you run into errors of the form "There are not enough slots available in the system to satisfy the X slots that were requested by the application:", you probably forgot this step.
+
+Then, execute the `run_tests.sh` script. We are assuming you are still in the root of the `software-layer` repository that you cloned earlier:
+```
+./run_tests.sh
+```
+if all goes well, you should see (part of) the EESSI test suite being run by ReFrame, finishing with something like
+
+```
+[  PASSED  ] Ran X/Y test case(s) from Z check(s) (0 failure(s), 0 skipped, 0 aborted)
+```
+
+!!! Note
+    If you are running on a system with hyperthreading enabled, you may still run into the "There are not enough slots available in the system to satisfy the X slots that were requested by the application:" error from `mpirun`, because hardware threads are not considered to be slots by default by OpenMPIs `mpirun`. In this case, run with `OMPI_MCA_hwloc_base_use_hwthreads_as_cpus=1 ./run_tests.sh` (for OpenMPI 4.X) or `PRTE_MCA_rmaps_default_mapping_policy=:hwtcpus ./run_tests.sh` (for OpenMPI 5.X).
 
 ## Known causes of issues in EESSI
 

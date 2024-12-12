@@ -3,21 +3,21 @@
 In order for ReFrame to run tests on your system, it needs to know some properties about your system.
 For example, it needs to know what kind of job scheduler you have, which partitions the system has,
 how to submit to those partitions, etc.
-All of this has to be described in a *ReFrame configuration file* (see also the [section on `$RFM_CONFIG_FILES` above](#RFM_CONFIG_FILES)).
+All of this has to be described in a *ReFrame configuration file* (see also the [section on `$RFM_CONFIG_FILES`](installation-configuration.md#RFM_CONFIG_FILES)).
 
 This page is organized as follows:
 
-* available ReFrame configuration file
+* available ReFrame configuration files
 * Verifying your ReFrame configuration
 * How to write a ReFrame configuration file
 
 
-## Available ReFrame configuration file
+## Available ReFrame configuration files
 
 There are some available ReFrame configuration files for HPC systems and public cloud in the [config directory](https://github.com/EESSI/test-suite/tree/main/config/) for more inspiration.
 Below is a simple ReFrame configuration file with minimal changes required for getting you started on using the test suite for a CPU partition. Please check that `stagedir` is set to a path on a (shared) scratch filesystem for storing (temporary) files related to the tests, and `access` is set to a list of arguments that you would normally pass to the scheduler when submitting to this partition (for example '-p cpu' for submitting to a Slurm partition called cpu).
   
-To write a ReFrame configuration file for your system, check the section How to write a ReFrame configuration file.  
+To write a ReFrame configuration file for your system, check the section [How to write a ReFrame configuration file](#write-reframe-config).
 
 
 ```python
@@ -118,7 +118,7 @@ For example, to only show the `launcher` value for the `gpu` partition of the `e
 reframe --system example:gpu --show-config systems/0/partitions/@gpu/launcher
 ```
 
-## How to write a ReFrame configuration file
+## How to write a ReFrame configuration file {: #write-reframe-config}
 
 The [official ReFrame documentation](https://reframe-hpc.readthedocs.io/en/stable/configure.html) provides the full
 description on configuring ReFrame for your site. However, there are some configuration settings that are specifically
@@ -184,7 +184,7 @@ The most common configuration items defined at this level are:
   if not specified otherwise.
   We recommend setting the `$RFM_PREFIX` environment variable rather than specifying `prefix` in
   your configuration file, so our [common logging configuration](#logging) can pick up on it
-  (see also [`$RFM_PREFIX`](#RFM_PREFIX)).
+  (see also [`$RFM_PREFIX`](installation-configuration.md#RFM_PREFIX)).
 - [`stagedir`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.stagedir): A shared directory that is available on all nodes that will execute ReFrame tests. This is used for storing (temporary) files related to the test. Typically, you want to set this to a path on a (shared) scratch filesystem. Defining this is optional: the default is a '`stage`' directory inside the `prefix` directory.
 - [`partitions`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions): Details on system partitions, see below.
 
@@ -328,9 +328,9 @@ The most common configuration items defined at this level are:
   [`eessi.testsuite.constants.SCALES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py)
   and define at which scales tests should be run, e.g. single core, half a node, a full node, two nodes, etc. This
   can be used to exclude running at certain scales on systems that would not support it. E.g. some systems might not
-  support requesting multiple partial nodes, which is what the `1_cpn_2_nodes` (1 core per node, on two nodes) and
-  `1_cpn_4_nodes` scales do. One could exclude these by setting e.g.
-  `features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1_cpn_2_nodes', '1_cpn_4_nodes']]`. With this
+  support requesting multiple partial nodes, which is what the `1cpn_2nodes` (1 core per node, on two nodes) and
+  `1cpn_4nodes` scales do. One could exclude these by setting e.g.
+  `features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1cpn_2nodes', '1cpn_4nodes']]`. With this
   configuration setting, ReFrame will run all the scales listed in `eessi.testsuite.constants.SCALES _except_
   those two. In a similar way, one could exclude all multinode tests if one just has a single node available.
 - [`devices`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.devices): This field specifies information on devices (for example) present in the partition. Device types are standardized in the EESSI test suite in the [`eessi.testsuite.constants.DEVICE_TYPES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) dictionary. This is used by the EESSI test suite to determine how many of these devices it can/should use per node.
@@ -409,6 +409,8 @@ in the standard ReFrame prefix (by default the current directory, unless otherwi
 
 You can let ReFrame [auto-detect the processor information](https://reframe-hpc.readthedocs.io/en/stable/configure.html#proc-autodetection) for your system.
 
+#### Creation of topology file by ReFrame
+
 ReFrame will automatically use auto-detection when two conditions are met:
 
 1. The [`partitions` section of you configuration file](#partitions) does *not* specify `processor` information for a
@@ -434,3 +436,187 @@ reframe --list
 ```
 
 ReFrame will store the processor information for your system in `~/.reframe/topology/<system>-<partition>/processor.json`.
+
+#### Create topology file
+
+You can also use the reframe option `--detect-host-topology` to create the topology file yourself.
+
+Run the following command on the cluster of which you need the topology.
+
+```bash
+reframe --detect-host-topology[=FILE]
+```
+
+The output will be put in a file if this is specified or printed in the output. It will look something like this:
+
+<details>
+
+```json
+{
+  "arch": "skylake_avx512",
+  "topology": {
+    "numa_nodes": [
+      "0x111111111",
+      "0x222222222",
+      "0x444444444",
+      "0x888888888"
+    ],
+    "sockets": [
+      "0x555555555",
+      "0xaaaaaaaaa"
+    ],
+    "cores": [
+      "0x000000001",
+      "0x000000002",
+      "0x000000004",
+      "0x000000008",
+      "0x000000010",
+      "0x000000020",
+      "0x000000040",
+      "0x000000080",
+      "0x000000100",
+      "0x000000200",
+      "0x000000400",
+      "0x000000800",
+      "0x000001000",
+      "0x000002000",
+      "0x000004000",
+      "0x000008000",
+      "0x000010000",
+      "0x000020000",
+      "0x000040000",
+      "0x000080000",
+      "0x000100000",
+      "0x000200000",
+      "0x000400000",
+      "0x000800000",
+      "0x001000000",
+      "0x002000000",
+      "0x004000000",
+      "0x008000000",
+      "0x010000000",
+      "0x020000000",
+      "0x040000000",
+      "0x080000000",
+      "0x100000000",
+      "0x200000000",
+      "0x400000000",
+      "0x800000000"
+    ],
+    "caches": [
+      {
+        "type": "L2",
+        "size": 1048576,
+        "linesize": 64,
+        "associativity": 16,
+        "num_cpus": 1,
+        "cpusets": [
+          "0x000000001",
+          "0x000000002",
+          "0x000000004",
+          "0x000000008",
+          "0x000000010",
+          "0x000000020",
+          "0x000000040",
+          "0x000000080",
+          "0x000000100",
+          "0x000000200",
+          "0x000000400",
+          "0x000000800",
+          "0x000001000",
+          "0x000002000",
+          "0x000004000",
+          "0x000008000",
+          "0x000010000",
+          "0x000020000",
+          "0x000040000",
+          "0x000080000",
+          "0x000100000",
+          "0x000200000",
+          "0x000400000",
+          "0x000800000",
+          "0x001000000",
+          "0x002000000",
+          "0x004000000",
+          "0x008000000",
+          "0x010000000",
+          "0x020000000",
+          "0x040000000",
+          "0x080000000",
+          "0x100000000",
+          "0x200000000",
+          "0x400000000",
+          "0x800000000"
+        ]
+      },
+      {
+        "type": "L1",
+        "size": 32768,
+        "linesize": 64,
+        "associativity": 8,
+        "num_cpus": 1,
+        "cpusets": [
+          "0x000000001",
+          "0x000000002",
+          "0x000000004",
+          "0x000000008",
+          "0x000000010",
+          "0x000000020",
+          "0x000000040",
+          "0x000000080",
+          "0x000000100",
+          "0x000000200",
+          "0x000000400",
+          "0x000000800",
+          "0x000001000",
+          "0x000002000",
+          "0x000004000",
+          "0x000008000",
+          "0x000010000",
+          "0x000020000",
+          "0x000040000",
+          "0x000080000",
+          "0x000100000",
+          "0x000200000",
+          "0x000400000",
+          "0x000800000",
+          "0x001000000",
+          "0x002000000",
+          "0x004000000",
+          "0x008000000",
+          "0x010000000",
+          "0x020000000",
+          "0x040000000",
+          "0x080000000",
+          "0x100000000",
+          "0x200000000",
+          "0x400000000",
+          "0x800000000"
+        ]
+      },
+      {
+        "type": "L3",
+        "size": 25952256,
+        "linesize": 64,
+        "associativity": 11,
+        "num_cpus": 18,
+        "cpusets": [
+          "0x555555555",
+          "0xaaaaaaaaa"
+        ]
+      }
+    ]
+  },
+  "num_cpus": 36,
+  "num_cpus_per_core": 1,
+  "num_cpus_per_socket": 18,
+  "num_sockets": 2
+}
+```
+
+</details>
+
+!!! note
+    ReFrame 4.5.1 will generate more parameter than it can parse. To resolve this issue you can remove the following parameters: `vendor`, `model` and/or `platform`.
+
+For ReFrame to find the topology file it needs to be in the following path `~/.reframe/topology/<system_name>-<partition_name>/processor.json`

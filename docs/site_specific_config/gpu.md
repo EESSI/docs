@@ -3,7 +3,7 @@
 More information on the actions that must be performed to ensure that GPU software included in EESSI
 can use the GPU in your system is available below.
 
-[Please open a support issue](support.md) if you need help or have questions regarding GPU support.
+[Please open a support issue](../support.md) if you need help or have questions regarding GPU support.
 
 !!! tip "Make sure the `${EESSI_VERSION}` version placeholder is defined!"
     In this page, we use `${EESSI_VERSION}` as a placeholder for the version of the EESSI repository,
@@ -39,33 +39,7 @@ An additional requirement is necessary if you want to be able to compile CUDA-en
 
 Below, we describe how to make sure that the EESSI software stack can find your NVIDIA GPU drivers and (optionally) full installations of the CUDA SDK.
 
-### `host_injections` variant symlink {: #host_injections }
-
-In the EESSI repository, a special directory has been prepared where system administrators can install files that can be picked up by
-software installations included in EESSI. This gives the ability to administrators to influence the behaviour (and capabilities) of the EESSI software stack.
-
-This special directory is located in `/cvmfs/software.eessi.io/host_injections`, and it is a *CernVM-FS Variant Symlink*:
-a symbolic link for which the target can be controlled by the CernVM-FS client configuration (for more info, see ['Variant Symlinks' in the official CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks)).
-
-!!! info "Default target for `host_injections` variant symlink"
-
-    Unless otherwise configured in the CernVM-FS client configuration for the EESSI repository, the `host_injections` symlink points to `/opt/eessi` on the client system:
-    ```
-    $ ls -l /cvmfs/software.eessi.io/host_injections
-    lrwxrwxrwx 1 cvmfs cvmfs 10 Oct  3 13:51 /cvmfs/software.eessi.io/host_injections -> /opt/eessi
-    ```
-
-As an example, let's imagine that we want to use a architecture-specific location on a shared filesystem as the target for the symlink. This has the advantage that one can make changes under `host_injections` that affect all nodes which share that CernVM-FS configuration. Configuring this in your CernVM-FS configuration would mean adding the following line in the client configuration file:
-
-```{ .ini .copy }
-EESSI_HOST_INJECTIONS=/shared_fs/path
-```
-
-!!! note "Don't forget to reload the CernVM-FS configuration"
-    After making a change to a CernVM-FS configuration file, you also need to reload the configuration:
-    ```{ .bash .copy }
-    sudo cvmfs_config reload
-    ```
+### Configuring CUDA driver location {: #driver_location }
 
 All CUDA-enabled software in EESSI expects the CUDA drivers to be available in a specific subdirectory of this `host_injections` directory.
 In addition, installations of the CUDA SDK included EESSI are stripped down to the files that we are allowed to redistribute;
@@ -80,7 +54,7 @@ If the corresponding full installation of the CUDA SDK is available there, the C
 
 ### Using NVIDIA GPUs via a native EESSI installation {: #nvidia_eessi_native }
 
-Here, we describe the steps to enable GPU support when you have a [native EESSI installation](getting_access/native_installation.md) on your system.
+Here, we describe the steps to enable GPU support when you have a [native EESSI installation](../getting_access/native_installation.md) on your system.
 
 !!! warning "Required permissions"
     To enable GPU support for EESSI on your system, you will typically need to have system administration rights, since you need write permissions on the folder to the target directory of the `host_injections` symlink.
@@ -108,16 +82,16 @@ To install a full CUDA SDK under `host_injections`, use the `install_cuda_host_i
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh
 ```
 
-For example, to install CUDA 12.1.1 in the directory that the [`host_injections` variant symlink](#host_injections) points to,
+For example, to install CUDA 12.1.1 in the directory that the [`host_injections` variant symlink](host_injections.md) points to,
 using `/tmp/$USER/EESSI` as directory to store temporary files:
 ```
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
 ```
 You should choose the CUDA version you wish to install according to what CUDA versions are included in EESSI;
 see the output of `module avail CUDA/` after [setting up your environment for using
-EESSI](using_eessi/setting_up_environment.md).
+EESSI](../using_eessi/setting_up_environment.md).
 
-You can run `/cvmfs/software.eessi.io/scripts/install_cuda_host_injections.sh --help` to check all of the options.
+You can run `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --help` to check all of the options.
 
 !!! tip
 
@@ -139,7 +113,7 @@ We focus here on the [Apptainer](https://apptainer.org/)/[Singularity](https://s
 and have only tested the [`--nv` option](https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard)
 to enable access to GPUs from within the container.
 
-If you are using the [EESSI container](getting_access/eessi_container.md) to access the EESSI software,
+If you are using the [EESSI container](../getting_access/eessi_container.md) to access the EESSI software,
 the procedure for enabling GPU support is slightly different and will be documented here eventually.
 
 #### Exposing NVIDIA GPU drivers

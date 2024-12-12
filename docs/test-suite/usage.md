@@ -10,7 +10,7 @@ system.
 To list the tests that are available in the EESSI test suite,
 use `reframe --list` (or `reframe -L` for short).
 
-If you have properly [configured ReFrame](#Configuring-ReFrame), you should
+If you have properly [configured ReFrame](installation-configuration.md), you should
 see a (potentially long) list of checks in the output:
 
 ```
@@ -71,7 +71,7 @@ ReFrame will generate various output and log files:
 * performance log files for each test, which include performance results for the test runs;
 
 We strongly recommend controlling where these files go by using the [common logging configuration that
-is provided by the EESSI test suite in your ReFrame configuration file](installation-configuration.md#logging)
+is provided by the EESSI test suite in your ReFrame configuration file](ReFrame-configuration-file.md#logging)
 and setting [`$RFM_PREFIX`](installation-configuration.md#RFM_PREFIX) (avoid using the cmd line option `--prefix`).
 
 If you do, and if you use [ReFrame v4.3.3 or more newer](installation-configuration.md#requirements),
@@ -194,8 +194,8 @@ well as the specific test being carried out.
 | `1_core` | using 1 CPU core 1 GPU |
 | `2_cores` | using 2 CPU cores and 1 GPU |
 | `4_cores` | using 4 CPU cores and 1 GPU |
-| `1_cpn_2_nodes` | using 1 CPU core per node, 1 GPU per node, and 2 nodes |
-| `1_cpn_4_nodes` | using 1 CPU core per node, 1 GPU per node, and 4 nodes |
+| `1cpn_2nodes` | using 1 CPU core per node, 1 GPU per node, and 2 nodes |
+| `1cpn_4nodes` | using 1 CPU core per node, 1 GPU per node, and 4 nodes |
 | `1_8_node` | using 1/8th of a node (12.5% of available cores/GPUs, 1 at minimum) |
 | `1_4_node` | using a quarter of a node (25% of available cores/GPUs, 1 at minimum) |
 | `1_2_node` | using half of a node (50% of available cores/GPUs, 1 at minimum) |

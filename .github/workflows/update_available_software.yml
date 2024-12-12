@@ -1,0 +1,71 @@
+name: Update overview of available software in EESSI
+on:
+  workflow_dispatch:
+  schedule:
+    # run twice a day (noon + midnight)
+    - cron: '0 */12 * * *'
+jobs:
+  update_available_software:
+    if: github.repository_owner == 'EESSI'   # Prevent running on forks
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+
+      - name: set up Python
+        uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
+        with:
+          python-version: '3.10'
+          architecture: x64
+
+      - name: Mount EESSI
+        uses: eessi/github-action-eessi@e1f8f20638ea417a18d23ab29443ee34794ff900 # v3.1.0
+        with:
+          eessi_stack_version: '2023.06'
+
+      - name: update overview of available software
+        id: update_available_software
+        run: |
+          # install required Python packages in virtual environment
+          python -m venv venv
+          . venv/bin/activate
+          pip install -r scripts/available_software/requirements.txt
+
+          # copy current JSON data, so we can compare after updating it
+          cp docs/available_software/data/json_data.json docs/available_software/data/json_data.json.orig
+          cp docs/available_software/data/json_data_detail.json docs/available_software/data/json_data_detail.json.orig
+
+          export TIME_GENERATED_TEMPLATE="{{ generated_time }}"
+          python scripts/available_software/available_software.py
+          ./scripts/update_generated_time.sh mkdocs.yml
+          
+          git status
+
+          # determine whether pull request should be opened:
+          # if JSON files in docs/available_software/data have been updated, then a PR should be opened
+          json_data_changed=$(python scripts/available_software/check_json_updates.py docs/available_software/data/json_data.json.orig docs/available_software/data/json_data.json)
+          json_data_detail_changed=$(python scripts/available_software/check_json_updates.py docs/available_software/data/json_data_detail.json.orig docs/available_software/data/json_data_detail.json)
+          if [[ ${json_data_changed} == "no changes" ]] && [[ ${json_data_detail_changed} == "no changes" ]]; then
+            echo "JSON files in docs/available_software/data have not been changed, no need to open PR"
+            echo "json_data_changed=no" >> $GITHUB_OUTPUT
+          else
+            echo "JSON files in docs/available_software/data have been changed, PR should be opened"
+            echo "json_data_changed=yes" >> $GITHUB_OUTPUT
+          fi
+
+          # remove original JSON files, or they'll end up in the PR being opened
+          rm -f docs/available_software/data/json_data.json.orig  docs/available_software/data/json_data_detail.json.orig
+
+      - name: create pull request
+        uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
+        if: steps.update_available_software.outputs.json_data_changed == 'yes'
+        with:
+          add-paths: |
+            docs/available_software
+            mkdocs.yml
+          branch: update-software-overview
+          branch-suffix: timestamp
+          commit-message: update overview of available software
+          title: update overview of available software
+          body: ''
+          token: ${{ secrets.EESSIBOT_GITHUB_TOKEN }}
+          push-to-fork: EESSIbot/docs
