@@ -82,7 +82,7 @@ Now, you are ready to build. For example, suppose you want to install `netcdf4-p
 eb netcdf4-python-1.6.5-foss-2023b.eb
 ```
 
-!!! Note
+!!! note
     If this netCDF for python module is available by the time you are trying, you can force a local rebuild by adding the `--rebuild` argument in order to experiment with building locally, or pick a different EasyConfig to build.
 
 ### Using the newly built module
@@ -151,7 +151,10 @@ shell before building. To do this:
 * Run! 
 
 
-!!! Note RPATH should never point to a compatibility layer directory, only to software layer ones, as all resolving is done via the runtime linker (`ld-linux*.so`)  that is shipped with EESSI, which automatically searches these locations.
+!!! warning
+
+    RPATH should never point to a compatibility layer directory, only to software layer ones, as all resolving is done via the runtime linker (`ld-linux*.so`)
+    that is shipped with EESSI, which automatically searches these locations.
 
 The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for, i.e., if you add to your executable RPATH a `libhdf5.so`compiled for `intel_avx512`, you will not be able to run that binary on a machine with a different architecture. If this is an issue for you, you should look into how EESSI itself organises the location of binaries and perhaps leverage the relevant environment variables (e.g., `EESSI_SOFTWARE_SUBDIR`).
 
