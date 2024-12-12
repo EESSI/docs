@@ -94,7 +94,6 @@ EESSI uses a [compatibility layer](../compatibility_layer.md) to ensure that it 
         export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
     ```
 * Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used when checking the binary.
-* Once done, exit the EESSI prefix shell (with `exit`) or use another terminal to run your software.
 
 * Run! 
 
