@@ -104,4 +104,4 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 ### AWS
 
-* ParallelCluster [General documentation](https://docs.aws.amazon.com/parallelcluster/) | [EESSI @ ParallelCluster](https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/env/eessi)
+* AWS ParallelCluster [General documentation](https://docs.aws.amazon.com/parallelcluster/) | [EESSI @ AWS ParallelCluster](https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/env/eessi)
