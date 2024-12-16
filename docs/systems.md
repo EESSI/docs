@@ -100,6 +100,16 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 ---
 
+## Other World Wide systems
+
+### United States of America
+
+#### Michigan State University
+
+* Institute for Cyber-Enabled Research (ICER): [General documentation](https://icer.msu.edu/)
+
+---
+
 ## Other infrastructures
 
 ### AWS
