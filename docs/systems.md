@@ -100,7 +100,7 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 ---
 
-## Other World Wide systems
+## Systems outside of Europe
 
 ### United States of America
 
