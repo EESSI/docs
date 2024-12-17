@@ -66,7 +66,7 @@ EESSI is supported in the ARM partition of Deucalion with plans to expand to the
 
 #### Vrije Universiteit Brussel
 
-* Hydra: [General documentation](https://hpc.vub.be)
+* Hydra: [General documentation](https://hpc.vub.be/docs/) | [EESSI @ Hydra](https://hpc.vub.be/docs/software/modules/#european-environment-for-scientific-software-installations)
 
 
 ### Germany
