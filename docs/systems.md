@@ -88,7 +88,7 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 #### University of Groningen
 
 * Hábrók: [General documentation](https://wiki.hpc.rug.nl/habrok/introduction/cluster_description)
-
+* Managed Linux workspace (LWP): [General documentation](https://lwpwiki.webhosting.rug.nl/) | [EESSI @ LWP](https://lwpwiki.webhosting.rug.nl/index.php/EESSI)
 
 ### Norway
 
