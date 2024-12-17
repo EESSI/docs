@@ -98,6 +98,17 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 * Fram: [General documentation](https://documentation.sigma2.no/hpc_machines/fram.html#fram) | [EESSI @ Fram](https://documentation.sigma2.no/software/eessi.html)
 * Saga: [General documentation](https://documentation.sigma2.no/hpc_machines/saga.html#saga) | [EESSI @ Saga](https://documentation.sigma2.no/software/eessi.html)
 
+
+### Spain
+
+### Barcelona Supercomputing Center
+
+* thunder
+* arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
+This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
+This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+
 ---
 
 ## Other infrastructures
