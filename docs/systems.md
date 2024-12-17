@@ -44,6 +44,14 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 * [General documentation](https://doc.vega.izum.si)
 * [EESSI @ Vega](https://doc.vega.izum.si/eessi)
 
+### Deucalion (Portugal)
+
+Deucalion is the EuroHPC JU supercomputer hosted by [the Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
+EESSI is supported in the ARM partition of Deucalion with plans to expand to the remaining partitions.
+
+* [General documentation](https://docs.deucalion.macc.fccn.pt/)
+
+
 ---
 
 ## Other European systems
