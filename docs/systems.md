@@ -119,6 +119,16 @@ This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/re
 
 ---
 
+## Systems outside of Europe
+
+### United States of America
+
+#### Michigan State University
+
+* Institute for Cyber-Enabled Research (ICER): [General documentation](https://icer.msu.edu/)
+
+---
+
 ## Other infrastructures
 
 ### AWS
