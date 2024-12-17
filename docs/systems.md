@@ -58,7 +58,7 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 #### Vrije Universiteit Brussel
 
-* Hydra: [General documentation](https://hpc.vub.be)
+* Hydra: [General documentation](https://hpc.vub.be/docs/) | [EESSI @ Hydra](https://hpc.vub.be/docs/software/modules/#european-environment-for-scientific-software-installations)
 
 
 ### Germany
