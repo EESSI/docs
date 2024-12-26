@@ -347,6 +347,22 @@ def do_something(self):
         do_that()
 ```
 
+#### Readonly files
+To avoid excessive copying of test input files into each stage directory, it is
+highly recommended to specify a list of files and/or dirs in `sourcesdir` that
+are needed but not modified during the test, and thus can be symlinked into the
+stage dirs. In this case, file `mpi4py_reduce.py` does not change during the
+test, so it can be safely symlinked:
+```
+readonly_files = ['mpi4py_reduce.py']
+```
+We’ve made the `readonly_files` attribute mandatory for all tests to ensure it’s
+not overlooked. If you are sure no files should be symlinked in your test, set
+it to `['']`:
+```
+readonly_files = ['']
+```
+
 #### Thread binding (optional)
 Thread binding is not done by default, but can be done by invoking the `hooks.set_compact_thread_binding` hook:
 ```python
@@ -503,6 +519,11 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest, EESSI_Mixin):
 
     time_limit = '5m00s'
 
+    bench_name = 'mpi4pi'
+    bench_name_ci = 'mpi4pi'
+
+    readonly_files = ['mpi4py_reduce.py']
+
     def required_mem_per_node(self):
         return self.num_tasks_per_node * 100 + 250
 
@@ -516,7 +537,7 @@ class EESSI_MPI4PY(rfm.RunOnlyRegressionTest, EESSI_Mixin):
         return sn.extractsingle(r'^Time elapsed:\s+(?P<perf>\S+)', self.stdout, 'perf', float)
 ```
 
-Note that with only 34 lines of code, this is now very quick and easy to write, because of the default behaviour from the `EESSI_Mixin` class.
+Note that with only 44 lines of code, this is now very quick and easy to write, because of the default behaviour from the `EESSI_Mixin` class.
 
 ### Background of the mpi4py test { #background-of-mpi4py-test }
 To understand what this test does, you need to know some basics of MPI. If you know about MPI, you can skip this section.
