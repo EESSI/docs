@@ -105,7 +105,7 @@ EESSI is supported in the ARM partition of Deucalion with plans to expand to the
 * Betzy: [General documentation](https://documentation.sigma2.no/hpc_machines/betzy.html#betzy) | [EESSI @ Betzy](https://documentation.sigma2.no/software/eessi.html)
 * Fram: [General documentation](https://documentation.sigma2.no/hpc_machines/fram.html#fram) | [EESSI @ Fram](https://documentation.sigma2.no/software/eessi.html)
 * Saga: [General documentation](https://documentation.sigma2.no/hpc_machines/saga.html#saga) | [EESSI @ Saga](https://documentation.sigma2.no/software/eessi.html)
-
+* [Norwegian Ai Cloud](https://www.naic.no/) - Provide a VM provisioning system with EESSI preconfigured. Users can provision VMs on local OpenStack based cloud and on commercial clouds Google and Azure
 
 ### Spain
 
