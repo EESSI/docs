@@ -171,7 +171,7 @@ int main(int argc, char **argv)
 
 ```
 
-As described in the steps above, prepare the environment and load the required dependencies. For this case, we will use `gompi/2023b as the toolchain to compile it.
+As described in the steps above, prepare the environment and load the required dependencies. For this case, we will use `gompi/2023b` as the toolchain to compile it.
 
 ```
 # Starting the environment
