@@ -181,7 +181,7 @@ $ source /cvmfs/software.eessi.io/versions/2023.06/init/bash
 {EESSI 2023.06} $ m̀l gompi/2023b
 ```
 
-Now, set the `LD_RUN_PATH` environment variable for all the libraries to point to the runtime libraries, then compile the code. From the previous text, we are assuming that you are using GCC as the compiler, but please change the `$EBROOTGCCCORE variable accordingly in case you are using any other kind of compiler that you want to prevent picking from the host.
+Now, set the `LD_RUN_PATH` environment variable for all the libraries to point to the runtime libraries, then compile the code.
 
 ```
 # Setting LD_RUN_PATH
