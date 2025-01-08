@@ -191,7 +191,7 @@ Now, set the `LD_RUN_PATH` environment variable for all the libraries to point t
 {EESSI 2023.06} $ mpicc -o HelloWorld mpi.c
 ```
 
-This is the moment to check if the compiler picked all the libraries from the compatibility layer.
+This is the moment to check if the compiler picked all the libraries from the software and compatibility layer, not the host.
 
 Look at the difference on the library solving when using the compatibility layer ldd from the host one:
 
