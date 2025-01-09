@@ -4,4 +4,4 @@
 
 see also https://pretalx.surf.nl/acud-2024/talk/SUCPTY/
 
-* [slides (PDF)](https://raw.githubusercontent.com/eessi/docs/main/talks/20241212_SURF-ACUD2024/EESSI_SURF_ACUD_2024.pdf)
+* [slides (PDF)](EESSI_SURF_ACUD_2024.pdf)
