@@ -143,13 +143,98 @@ shell before building. To do this:
 * Set manually `LD_RUN_PATH` to resolve libraries at runtime. `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to
   `libstdc++` from our GCC installation to avoid picking up the one from the host:
   ```sh
-      export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCcore/lib64
+      export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCCORE/lib64
   ```
 * Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used
   when checking the binary.
 
 * Run! 
 
+To exemplify this, take the classic MPI Hello World example code:
+
+```
+/*The Parallel Hello World Program*/
+#include <stdio.h>
+#include <mpi.h>
+
+int main(int argc, char **argv)
+{
+   int node;
+
+   MPI_Init(&argc,&argv);
+   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+   printf("Hello World from MPI rank %d\n", rank);
+
+   MPI_Finalize();
+}
+
+```
+
+As described in the steps above, prepare the environment and load the required dependencies. For this case, we will use `gompi/2023b` as the toolchain to compile it.
+
+```
+# Starting the environment
+$ source /cvmfs/software.eessi.io/versions/2023.06/init/bash
+
+# Loading the toolchain
+{EESSI 2023.06} $ module load gompi/2023b
+```
+
+Now, set the `LD_RUN_PATH` environment variable for all the libraries to point to the runtime libraries, then compile the code.
+
+```
+# Setting LD_RUN_PATH
+{EESSI 2023.06}$ export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCCORE/lib64
+
+# Compile the code manually
+{EESSI 2023.06} $ mpicc -o HelloWorld mpi.c
+```
+
+This is the moment to check if the compiler picked all the libraries from the software and compatibility layer, not the host.
+
+Look at the difference on the library solving when using the compatibility layer ldd from the host one:
+
+```sh
+
+# ldd from the compatibility layer, notice how all libraries are resolved from the software layer -> "/cvmfs/software.eessi.io/versions/2023.06/software", the libc and the interpreter point to the compatibility layer, so all good to go!
+
+{EESSI 2023.06} $ ldd HelloWorld
+	linux-vdso.so.1 (0x00007ffce03af000)
+	libmpi.so.40 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/OpenMPI/4.1.6-GCC-13.2.0/lib/libmpi.so.40 (0x00007fadd9e84000)
+	libc.so.6 => /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib64/libc.so.6 (0x00007fadd9ca8000)
+[...]
+	libevent_pthreads-2.1.so.7 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/libevent/2.1.12-GCCcore-13.2.0/lib64/libevent_pthreads-2.1.so.7 (0x00007fadd98f0000)
+	libm.so.6 => /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib/../lib64/libm.so.6 (0x00007fadd9810000)
+	/cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib64/ld-linux-x86-64.so.2 (0x00007fadd9fab000)
+
+```
+
+```sh
+
+# ldd from the host, even though the libraries point to the software layer, now the linker ld-linux-x86-64.so.2 from the compat layer directly points to "/lib64/ld-linux-x86-64.so.2" from the host to do the resolving, resulting in the GLIBC mismatch as libc is also resolved in the host and not the compat layer
+
+{EESSI 2023.06} $ /usr/bin/ldd HelloWorld
+./HelloWorld: /lib64/libc.so.6: version `GLIBC_2.36' not found (required by /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/libevent/2.1.12-GCCcore-13.2.0/lib64/libevent_core-2.1.so.7)
+./HelloWorld: /lib64/libc.so.6: version `GLIBC_ABI_DT_RELR' not found (required by /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib/../lib64/libm.so.6)
+	linux-vdso.so.1 (0x00007fffe4fd3000)
+	libmpi.so.40 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/OpenMPI/4.1.6-GCC-13.2.0/lib/libmpi.so.40 (0x00007f1fdf571000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f1fdf200000)
+	[...]
+	libevent_pthreads-2.1.so.7 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/libevent/2.1.12-GCCcore-13.2.0/lib64/libevent_pthreads-2.1.so.7 (0x00007f1fdf420000)
+	libm.so.6 => /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib/../lib64/libm.so.6 (0x00007f1fdeeb1000)
+	/cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib64/ld-linux-x86-64.so.2 => /lib64/ld-linux-x86-64.so.2 (0x00007f1fdf698000)
+
+```
+Now is the moment of truth, if everything looks right when checking with ldd, you should be fine to run the program:
+
+```
+{EESSI 2023.06} $ mpirun -n 2 HelloWorld
+Hello World from Node 0
+Hello World from Node 1
+
+```
+Even when closing the shell and restarting the environment, the libraries should point to the directories we set in `LD_RUN_PATH`, still, remember to load the required dependencies before running the binary.
 
 !!! warning
 
