@@ -2160,10 +2160,10 @@ Below is a simple ReFrame configuration file with minimal changes required for g
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="sd">simple ReFrame configuration file</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="sd">&quot;&quot;&quot;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span> <span class="nn">os</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">from</span> <span class="nn">eessi.testsuite.common_config</span> <span class="kn">import</span> <span class="n">common_logging_config</span><span class="p">,</span> <span class="n">common_eessi_init</span><span class="p">,</span> <span class="n">format_perfvars</span><span class="p">,</span> <span class="n">perflog_format</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kn">from</span> <span class="nn">eessi.testsuite.constants</span> <span class="kn">import</span> <span class="o">*</span>  
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">from</span><span class="w"> </span><span class="nn">eessi.testsuite.common_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">common_logging_config</span><span class="p">,</span> <span class="n">common_eessi_init</span><span class="p">,</span> <span class="n">format_perfvars</span><span class="p">,</span> <span class="n">perflog_format</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kn">from</span><span class="w"> </span><span class="nn">eessi.testsuite.constants</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>  
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">site_configuration</span> <span class="o">=</span> <span class="p">{</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="s1">&#39;systems&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -2250,8 +2250,8 @@ which defines the most common configuration settings.</p>
 <h3 id="python-imports">Python imports<a class="headerlink" href="#python-imports" title="Permanent link">&para;</a></h3>
 <p>The EESSI test suite standardizes a few string-based values as constants, as well as the logging format used by ReFrame.
 Every ReFrame configuration file used for running the EESSI test suite should therefore start with the following import statements:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">eessi.testsuite.common_config</span> <span class="kn">import</span> <span class="n">common_logging_config</span><span class="p">,</span> <span class="n">common_eessi_init</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span> <span class="nn">eessi.testsuite.constants</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">eessi.testsuite.common_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">common_logging_config</span><span class="p">,</span> <span class="n">common_eessi_init</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">eessi.testsuite.constants</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </code></pre></div>
 <h3 id="high-level-system-info-systems">High-level system info (<code>systems</code>)<a class="headerlink" href="#high-level-system-info-systems" title="Permanent link">&para;</a></h3>
 <p>First, we describe the system at its highest level through the
@@ -2480,7 +2480,7 @@ the scheduler, see for example the <a href="https://github.com/EESSI/test-suite/
 configuration in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/common_config.py"><code>eessi.testsuite.common_config</code></a>
 that provides a reasonable default. It can be used by importing <code>common_logging_config</code> and calling it as a function
 to define the '<code>logging</code> setting:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span> <span class="nn">eessi.testsuite.common_config</span> <span class="kn">import</span> <span class="n">common_logging_config</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">eessi.testsuite.common_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">common_logging_config</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">site_configuration</span> <span class="o">=</span> <span class="p">{</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="o">...</span>
