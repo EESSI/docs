@@ -178,7 +178,7 @@ As described in the steps above, prepare the environment and load the required d
 $ source /cvmfs/software.eessi.io/versions/2023.06/init/bash
 
 # Loading the toolchain
-{EESSI 2023.06} $ m̀l gompi/2023b
+{EESSI 2023.06} $ module load gompi/2023b
 ```
 
 Now, set the `LD_RUN_PATH` environment variable for all the libraries to point to the runtime libraries, then compile the code.
