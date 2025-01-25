@@ -27,4 +27,4 @@ module load Boost/1.83.0-GCC-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Boost/1.83.0-GCC-13.2.0|x|x|x|x|x|x|x|x|x|
 |Boost/1.82.0-GCC-12.3.0|x|x|x|x|x|x|x|x|x|
-|Boost/1.81.0-GCC-12.2.0|x|x|x|x|x|x|-|x|x|
+|Boost/1.81.0-GCC-12.2.0|x|x|x|x|x|x|x|x|x|

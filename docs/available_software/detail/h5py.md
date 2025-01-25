@@ -27,4 +27,4 @@ module load h5py/3.11.0-foss-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |h5py/3.11.0-foss-2023b|x|x|x|x|x|x|x|x|x|
 |h5py/3.9.0-foss-2023a|x|x|x|x|x|x|x|x|x|
-|h5py/3.8.0-foss-2022b|x|x|x|x|x|x|-|x|x|
+|h5py/3.8.0-foss-2022b|x|x|x|x|x|x|x|x|x|

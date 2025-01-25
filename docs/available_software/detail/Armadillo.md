@@ -27,4 +27,4 @@ module load Armadillo/12.8.0-foss-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Armadillo/12.8.0-foss-2023b|x|x|x|x|x|x|x|x|x|
 |Armadillo/12.6.2-foss-2023a|x|x|x|x|x|x|x|x|x|
-|Armadillo/11.4.3-foss-2022b|x|x|x|x|x|x|-|x|x|
+|Armadillo/11.4.3-foss-2022b|x|x|x|x|x|x|x|x|x|

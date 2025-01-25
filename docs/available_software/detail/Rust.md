@@ -29,4 +29,4 @@ module load Rust/1.76.0-GCCcore-13.2.0
 |Rust/1.75.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
 |Rust/1.73.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |Rust/1.70.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|Rust/1.65.0-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|Rust/1.65.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

@@ -27,4 +27,4 @@ module load SQLite/3.43.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SQLite/3.43.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |SQLite/3.42.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|SQLite/3.39.4-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|SQLite/3.39.4-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

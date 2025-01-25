@@ -27,4 +27,4 @@ module load arpack-ng/3.9.0-foss-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |arpack-ng/3.9.0-foss-2023b|x|x|x|x|x|x|x|x|x|
 |arpack-ng/3.9.0-foss-2023a|x|x|x|x|x|x|x|x|x|
-|arpack-ng/3.8.0-foss-2022b|x|x|x|x|x|x|-|x|x|
+|arpack-ng/3.8.0-foss-2022b|x|x|x|x|x|x|x|x|x|

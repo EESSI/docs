@@ -27,4 +27,4 @@ module load FriBidi/1.0.13-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FriBidi/1.0.13-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |FriBidi/1.0.12-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|FriBidi/1.0.12-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|FriBidi/1.0.12-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

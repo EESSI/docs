@@ -27,4 +27,4 @@ module load ImageMagick/7.1.1-34-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ImageMagick/7.1.1-34-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |ImageMagick/7.1.1-15-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|ImageMagick/7.1.0-53-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|ImageMagick/7.1.0-53-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

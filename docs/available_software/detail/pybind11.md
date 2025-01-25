@@ -27,4 +27,4 @@ module load pybind11/2.11.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |pybind11/2.11.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |pybind11/2.11.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|pybind11/2.10.3-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|pybind11/2.10.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

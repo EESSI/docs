@@ -27,4 +27,4 @@ module load libiconv/1.17-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libiconv/1.17-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |libiconv/1.17-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|libiconv/1.17-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|libiconv/1.17-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

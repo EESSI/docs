@@ -27,4 +27,4 @@ module load libjpeg-turbo/3.0.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libjpeg-turbo/3.0.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |libjpeg-turbo/2.1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|libjpeg-turbo/2.1.4-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|libjpeg-turbo/2.1.4-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

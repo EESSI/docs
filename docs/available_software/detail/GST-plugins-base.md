@@ -27,4 +27,4 @@ module load GST-plugins-base/1.24.8-GCC-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GST-plugins-base/1.24.8-GCC-13.2.0|x|x|x|x|x|x|x|x|x|
 |GST-plugins-base/1.22.5-GCC-12.3.0|x|x|x|x|x|x|x|x|x|
-|GST-plugins-base/1.22.1-GCC-12.2.0|x|x|x|x|x|x|-|x|x|
+|GST-plugins-base/1.22.1-GCC-12.2.0|x|x|x|x|x|x|x|x|x|

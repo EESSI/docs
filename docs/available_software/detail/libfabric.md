@@ -27,4 +27,4 @@ module load libfabric/1.19.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libfabric/1.19.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |libfabric/1.18.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|libfabric/1.16.1-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|libfabric/1.16.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

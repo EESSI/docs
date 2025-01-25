@@ -27,4 +27,4 @@ module load Abseil/20240116.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Abseil/20240116.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |Abseil/20230125.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|Abseil/20230125.2-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|Abseil/20230125.2-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

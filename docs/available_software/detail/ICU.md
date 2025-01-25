@@ -27,4 +27,4 @@ module load ICU/74.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ICU/74.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |ICU/73.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|ICU/72.1-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|ICU/72.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

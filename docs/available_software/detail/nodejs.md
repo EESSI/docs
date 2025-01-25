@@ -27,4 +27,4 @@ module load nodejs/20.9.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |nodejs/20.9.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |nodejs/18.17.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|nodejs/18.12.1-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|nodejs/18.12.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|
