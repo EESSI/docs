@@ -27,4 +27,4 @@ module load OpenBLAS/0.3.24-GCC-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OpenBLAS/0.3.24-GCC-13.2.0|x|x|x|x|x|x|x|x|x|
 |OpenBLAS/0.3.23-GCC-12.3.0|x|x|x|x|x|x|x|x|x|
-|OpenBLAS/0.3.21-GCC-12.2.0|x|x|x|x|x|x|-|x|x|
+|OpenBLAS/0.3.21-GCC-12.2.0|x|x|x|x|x|x|x|x|x|

@@ -27,7 +27,7 @@ module load Arrow/16.1.0-gfbf-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Arrow/16.1.0-gfbf-2023b|x|x|x|x|x|x|x|x|x|
 |Arrow/14.0.1-gfbf-2023a|x|x|x|x|x|x|x|x|x|
-|Arrow/11.0.0-gfbf-2022b|x|x|x|x|x|x|-|x|x|
+|Arrow/11.0.0-gfbf-2022b|x|x|x|x|x|x|x|x|x|
 
 
 ### Arrow/16.1.0-gfbf-2023b

@@ -27,4 +27,4 @@ module load netCDF/4.9.2-gompi-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |netCDF/4.9.2-gompi-2023b|x|x|x|x|x|x|x|x|x|
 |netCDF/4.9.2-gompi-2023a|x|x|x|x|x|x|x|x|x|
-|netCDF/4.9.0-gompi-2022b|x|x|x|x|x|x|-|x|x|
+|netCDF/4.9.0-gompi-2022b|x|x|x|x|x|x|x|x|x|

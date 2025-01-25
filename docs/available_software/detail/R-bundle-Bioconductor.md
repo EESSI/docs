@@ -26,7 +26,7 @@ module load R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2|x|x|x|x|x|x|-|x|x|
+|R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|x|x|
 
 
 ### R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2

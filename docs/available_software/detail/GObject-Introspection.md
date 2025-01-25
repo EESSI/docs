@@ -27,4 +27,4 @@ module load GObject-Introspection/1.78.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GObject-Introspection/1.78.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |GObject-Introspection/1.76.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|GObject-Introspection/1.74.0-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|GObject-Introspection/1.74.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

@@ -27,4 +27,4 @@ module load FFTW.MPI/3.3.10-gompi-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FFTW.MPI/3.3.10-gompi-2023b|x|x|x|x|x|x|x|x|x|
 |FFTW.MPI/3.3.10-gompi-2023a|x|x|x|x|x|x|x|x|x|
-|FFTW.MPI/3.3.10-gompi-2022b|x|x|x|x|x|x|-|x|x|
+|FFTW.MPI/3.3.10-gompi-2022b|x|x|x|x|x|x|x|x|x|

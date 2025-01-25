@@ -27,4 +27,4 @@ module load nettle/3.9.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |nettle/3.9.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |nettle/3.9.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|nettle/3.8.1-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|nettle/3.8.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

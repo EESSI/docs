@@ -27,4 +27,4 @@ module load Pango/1.51.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Pango/1.51.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |Pango/1.50.14-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|Pango/1.50.12-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|Pango/1.50.12-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

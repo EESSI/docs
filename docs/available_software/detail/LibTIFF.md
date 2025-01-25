@@ -27,4 +27,4 @@ module load LibTIFF/4.6.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |LibTIFF/4.6.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |LibTIFF/4.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|LibTIFF/4.4.0-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|LibTIFF/4.4.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

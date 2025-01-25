@@ -27,4 +27,4 @@ module load libxslt/1.1.38-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libxslt/1.1.38-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |libxslt/1.1.38-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|libxslt/1.1.37-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|libxslt/1.1.37-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

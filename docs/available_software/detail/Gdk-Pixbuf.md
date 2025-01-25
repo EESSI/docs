@@ -27,4 +27,4 @@ module load Gdk-Pixbuf/2.42.10-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Gdk-Pixbuf/2.42.10-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |Gdk-Pixbuf/2.42.10-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|Gdk-Pixbuf/2.42.10-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|Gdk-Pixbuf/2.42.10-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

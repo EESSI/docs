@@ -27,7 +27,7 @@ module load matplotlib/3.8.2-gfbf-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |matplotlib/3.8.2-gfbf-2023b|x|x|x|x|x|x|x|x|x|
 |matplotlib/3.7.2-gfbf-2023a|x|x|x|x|x|x|x|x|x|
-|matplotlib/3.7.0-gfbf-2022b|x|x|x|x|x|x|-|x|x|
+|matplotlib/3.7.0-gfbf-2022b|x|x|x|x|x|x|x|x|x|
 
 
 ### matplotlib/3.8.2-gfbf-2023b

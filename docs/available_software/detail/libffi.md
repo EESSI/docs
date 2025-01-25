@@ -27,4 +27,4 @@ module load libffi/3.4.4-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libffi/3.4.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |libffi/3.4.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|libffi/3.4.4-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|libffi/3.4.4-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

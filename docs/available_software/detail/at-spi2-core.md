@@ -27,4 +27,4 @@ module load at-spi2-core/2.50.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |at-spi2-core/2.50.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |at-spi2-core/2.49.91-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|at-spi2-core/2.46.0-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|at-spi2-core/2.46.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

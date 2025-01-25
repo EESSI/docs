@@ -27,4 +27,4 @@ module load make/4.4.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |make/4.4.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |make/4.4.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|make/4.3-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|make/4.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

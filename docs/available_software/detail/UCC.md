@@ -27,4 +27,4 @@ module load UCC/1.2.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |UCC/1.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |UCC/1.2.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|UCC/1.1.0-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|UCC/1.1.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

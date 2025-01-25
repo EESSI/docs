@@ -27,4 +27,4 @@ module load double-conversion/3.3.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |double-conversion/3.3.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |double-conversion/3.3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|double-conversion/3.2.1-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|double-conversion/3.2.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

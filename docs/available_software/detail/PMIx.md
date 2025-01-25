@@ -27,4 +27,4 @@ module load PMIx/4.2.6-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PMIx/4.2.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |PMIx/4.2.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|PMIx/4.2.2-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|PMIx/4.2.2-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

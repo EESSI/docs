@@ -27,4 +27,4 @@ module load NLopt/2.7.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |NLopt/2.7.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |NLopt/2.7.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|NLopt/2.7.1-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|NLopt/2.7.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

@@ -27,4 +27,4 @@ module load Valgrind/3.23.0-gompi-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Valgrind/3.23.0-gompi-2023b|x|x|x|x|x|x|x|x|x|
 |Valgrind/3.21.0-gompi-2023a|x|x|x|x|x|x|x|x|x|
-|Valgrind/3.21.0-gompi-2022b|x|x|x|x|x|x|-|x|x|
+|Valgrind/3.21.0-gompi-2022b|x|x|x|x|x|x|x|x|x|

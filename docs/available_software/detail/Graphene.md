@@ -27,4 +27,4 @@ module load Graphene/1.10.8-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Graphene/1.10.8-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |Graphene/1.10.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|Graphene/1.10.8-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|Graphene/1.10.8-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

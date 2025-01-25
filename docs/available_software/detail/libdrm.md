@@ -27,4 +27,4 @@ module load libdrm/2.4.117-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libdrm/2.4.117-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |libdrm/2.4.115-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|libdrm/2.4.114-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|libdrm/2.4.114-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

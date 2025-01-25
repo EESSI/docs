@@ -27,4 +27,4 @@ module load Ghostscript/10.02.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Ghostscript/10.02.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |Ghostscript/10.01.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|Ghostscript/10.0.0-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|Ghostscript/10.0.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

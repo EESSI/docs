@@ -27,4 +27,4 @@ module load wxWidgets/3.2.6-GCC-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |wxWidgets/3.2.6-GCC-13.2.0|x|x|x|x|x|x|x|x|x|
 |wxWidgets/3.2.2.1-GCC-12.3.0|x|x|x|x|x|x|x|x|x|
-|wxWidgets/3.2.2.1-GCC-12.2.0|x|x|x|x|x|x|-|x|x|
+|wxWidgets/3.2.2.1-GCC-12.2.0|x|x|x|x|x|x|x|x|x|

@@ -27,4 +27,4 @@ module load expat/2.5.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |expat/2.5.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |expat/2.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|expat/2.4.9-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|expat/2.4.9-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

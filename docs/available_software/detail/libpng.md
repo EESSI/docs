@@ -27,4 +27,4 @@ module load libpng/1.6.40-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libpng/1.6.40-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |libpng/1.6.39-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|libpng/1.6.38-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|libpng/1.6.38-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|

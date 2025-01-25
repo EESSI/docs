@@ -27,4 +27,4 @@ module load Tk/8.6.13-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Tk/8.6.13-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
 |Tk/8.6.13-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
-|Tk/8.6.12-GCCcore-12.2.0|x|x|x|x|x|x|-|x|x|
+|Tk/8.6.12-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|
