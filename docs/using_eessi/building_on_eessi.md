@@ -110,7 +110,7 @@ $ module av netcdf4-python/1.6.5-foss-2023b
 
 This means you'll _always_ need to load the `EESSI-extend` module if you want to use these modules (also, and particularly when you want to use them in a job script).
 
-## Manually building software op top of EESSI (without EasyBuild)
+## Manually building software on top of EESSI (without EasyBuild)
 
 !!! warning
 
