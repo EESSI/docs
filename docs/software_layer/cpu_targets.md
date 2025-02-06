@@ -11,6 +11,6 @@ In the 2023.06 version of the EESSI repository, the following CPU microarchitect
 * `x86_64/amd/zen4`: AMD Genoa, Genoa-X, Bergamo, Siena
 * `x86_64/intel/haswell`: Intel Haswell, Broadwell
 * `x86_64/intel/skylake_avx512`: Intel Skylake, Cascade Lake, Ice Lake, Cooper Lake
-* `x86_64/intel/sapphire_rapids`: Intel Sapphire Rapids, Emerald Rapids
+* `x86_64/intel/sapphirerapids`: Intel Sapphire Rapids, Emerald Rapids
 
 The names of these CPU targets correspond to the names used by [archspec](https://github.com/archspec/archspec).
