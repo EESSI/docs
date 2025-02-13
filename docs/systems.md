@@ -75,6 +75,10 @@ EESSI is supported in the ARM partition of Deucalion with plans to expand to the
 
 * HPC cluster: [General documentation](https://www.embl.org/about/info/it-services/it-infrastructure)
 
+#### Jülich Supercomputing Centre
+
+* JUSUF: [General documentation](https://apps.fz-juelich.de/jsc/hps/jusuf/index.html)
+
 #### University of Stuttgart
 
 * Ant: [General documentation](https://www2.icp.uni-stuttgart.de/~jgrad/hpc/_pages/_hpc_facilities/ant.html)
