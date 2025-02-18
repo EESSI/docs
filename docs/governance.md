@@ -8,7 +8,8 @@ The value of EESSI grows exponentially with two things: the amount of systems th
 
 The second goal of this governance is to make clear how and by whom decisions in EESSI are taken. This is because _trust_ in this process is important, both to infrastructure providers making the EESSI software stack is available on their systems, as well as by end-users of the software. Note that this concerns both large decisions (e.g. which architectures to support) and small decisions (e.g. whether to accept a certain contribution to add software to EESSI).
 
-To achieve both goals, our governance is based on the meritocracy governance model.<!-- Is this indeed what we want? Is this what we actually describe below? We COULD be less open, and it COULD be better for the security aspect of things... Maybe we should just revisit this at the end - we could say it is inspired by, et...--->
+To achieve both goals, our governance is based on the meritocracy governance model.
+<!-- Is this indeed what we want? Is this what we actually describe below? We COULD be less open, and it COULD be better for the security aspect of things... Maybe we should just revisit this at the end - we could say it is inspired by, et...--->
 
 ## Roles and Responsibilities
 
