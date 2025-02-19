@@ -85,9 +85,16 @@ Owners in the Github sense, not in the legal sense
 
 - Anyone who uses the EESSI software
 
+## Support
 
-EESSI recognises that formal governance is essential given the ambitions of the project, not just for EESSI
-itself but also to those who would adopt EESSI and/or fund its development.
+... Something on community support. Something on being open to professional support options...
 
-EESSI is, therefore, in the process of adopting a formal governance model. To facilitate this process it has created an
-_Interim Steering Committee_ whose role is to progress this adoption while also providing direction to the project.
+## Decision making process
+
+... might need to check carefully what gets covered here, and what in the roles and responsibilities section. But probably this should state: deployers get to decide X. Maintainers Y. In principle every deployer has the power to take their own decisions. If any of these roles feel the decision may be controversial, they should contact the full team. A consensus-based approach is then preferred. If voting is needed, +1 / 0 / -1 are options, and a result larger than zero means it's adopted. Negative voters are strongly encouraged to come up with alternatives.
+
+... Discuss some appeal procedure (steering committee?)
+
+## Contribution process
+
+... Everyone can contribute after signing contributor agremeent?
