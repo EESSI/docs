@@ -26,4 +26,3 @@ class InjectLDJsonPlugin(BasePlugin):
             soup.head.append(script_tag)
 
         return str(soup)
-    
