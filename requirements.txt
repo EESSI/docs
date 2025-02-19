@@ -4,4 +4,6 @@ mkdocs-redirects
 mkdocs-git-revision-date-localized-plugin
 mkdocs-toc-sidebar-plugin
 mkdocs-macros-plugin
+pyyaml
+beautifulsoup4
 ./mkdocs-ldjson-plugin
