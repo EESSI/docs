@@ -11,13 +11,16 @@ in MarkDown format.
 @author: Michiel Lachaert (Ghent University)
 @author: Lara Peeters (Ghent University)
 """
+import copy
 import json
 import os
 import re
 import subprocess
 import sys
 import time
+import yaml
 from typing import Union, Tuple
+from string import Template
 import numpy as np
 from mdutils.mdutils import MdUtils
 from natsort import natsorted
@@ -339,6 +342,41 @@ def generate_software_table_data(software_data: dict, targets: list) -> list:
     return table_data
 
 
+# LD+JSON Template with placeholders
+ldjson_template = Template("""
+{
+    "json_ld": {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "$name",
+        "url": "$homepage",
+        "softwareVersion": "$version",
+        "description": "$description",
+        "operatingSystem": "LINUX",
+        "applicationCategory": "DeveloperApplication",
+        "softwareRequirements": "See https://www.eessi.io/docs/ for how to make EESSI available on your system",
+        "license": "Not confirmed",
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 5
+            },
+            "author": {
+                "@type": "Organization",
+                "name": "EESSI"
+            },
+            "reviewBody": "Application has been successfully made available on all architectures supported by EESSI"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": 0
+        }
+    }
+}
+""")
+
+
 def generate_software_detail_page(
         software_name: str,
         software_data: dict,
@@ -357,15 +395,20 @@ def generate_software_detail_page(
     """
     sorted_versions = dict_sort(software_data["versions"])
     newest_version = list(sorted_versions.keys())[-1]
+    ldjson_software_data = copy.deepcopy(software_data)
 
     filename = f"{path}/{software_name}.md"
     md_file = MdUtils(file_name=filename, title=f"{software_name}")
     if 'description' in software_data.keys():
         description = software_data['description']
         md_file.new_paragraph(f"{description}")
+    else:
+        ldjson_software_data['description'] = ''
     if 'homepage' in software_data.keys():
         homepage = software_data['homepage']
         md_file.new_paragraph(f"{homepage}")
+    else:
+        ldjson_software_data["homepage"] = ''
 
     md_file.new_header(level=1, title="Available modules")
 
@@ -396,7 +439,17 @@ def generate_software_detail_page(
     with open(filename) as f:
         read_data = f.read()
     with open(filename, 'w') as f:
-        f.write("---\nhide:\n  - toc\n---\n" + read_data)
+        # Add the software name
+        ldjson_software_data['name'] = software_name
+        # Just output the supported versions (with toolchains)
+        ldjson_software_data["version"] = list(sorted_versions.keys())
+        # Make the description safe for json (and remove surrounding quotes)
+        ldjson_software_data['description'] = json.dumps(ldjson_software_data['description'])[1:-1]
+        json_str = ldjson_template.substitute(ldjson_software_data)  # Replace placeholders
+        json_topmatter = json.loads(json_str)
+        json_topmatter["hide"] = ["toc"]
+        yaml_topmatter = yaml.dump(json_topmatter)
+        f.write("---\n" + yaml_topmatter + "\n---\n" + read_data)
 
 
 def generate_detail_pages(json_path, dest_path) -> None:
