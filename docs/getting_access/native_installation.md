@@ -74,6 +74,25 @@ The good news is that all of this only requires a handful commands :astonished: 
     sudo bash -c "echo 'CVMFS_CACHE_BASE=<some other directory for the cache>' >> /etc/cvmfs/default.local"
     ```
 
+!!! Warning
+    When using the default setting `CVMFS_CLIENT_PROFILE="single"`,  `CVMFS_HTTP_PROXY` is set to `auto;DIRECT`. Ìn case you have setup with a private Stratum 1 with no proxy, this can lead to unintended requests to Web Proxy Auto Discovery (WPAD) infrastructure before falling back to direct connections. Removing the `auto` ensures direct connections without unnecesary WPAD requests.
+    ```bash
+      sudo bash -c "echo 'CVMFS_HTTP_PROXY=direct' >> /etc/cvmfs/default.local"
+    ```
+
+  Additionally, if you have a local proxy configured with:
+
+    ```bash
+      CVMFS_HTTP_PROXY=<local-proxy>;DIRECT
+    ```
+
+  and the local proxy becomes unavailable, the client will not directly contact the Stratum 1. Instead, it will failover to CERN/FNAL fallback proxies as its set in CernVM-FS's general configuration:
+
+      ```bash
+      CVMFS_FALLBACK_PROXY="http://cvmfsbproxy.cern.ch:3126;http://cvmfsbproxy.fnal.gov:3126 # Taken from /cvmfs/cvmfs- config.cern.ch/etc/cvmfs/common.conf
+      ```
+  Be aware that in such cases, the `DIRECT` directive is silently ignored.
+
 ## Installation for larger systems (e.g. clusters)
 
 When using CernVM-FS on a larger number of local clients, e.g. on a HPC cluster or set of workstations,
