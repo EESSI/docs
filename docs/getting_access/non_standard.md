@@ -107,7 +107,7 @@ An ORTE daemon has unexpectedly failed after launch ...
 
 ### Slurm job script
 
-The `cvmfsexec_eessi.sh` can be used insided a Slurm job script inside your HPC system to initialize the EESSI environment in a subshell which the EESSI CernVM-FS repository is mounted. Thus, you will be able to load any module from EESSI you might need.
+The `cvmfsexec_eessi.sh` can be used inside a Slurm job script inside your HPC system to initialize the EESSI environment in a subshell which the EESSI CernVM-FS repository is mounted. Thus, you will be able to load any module from EESSI you might need.
 
 Example job script:
 
