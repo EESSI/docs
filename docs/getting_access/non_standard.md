@@ -128,3 +128,108 @@ EOF
 
 ```
 You can see the original blog post on how they used this solution in Deucalion [here](https://www.eessi.io/docs/blog/2024/06/28/espresso-portable-test-run-eurohpc/#running-espresso-on-deucalion-via-eessi-cvmfsexec). 
+
+## Via `squashfs` +  cvmfs's `shrinkwrap` utility
+
+CernVM-FS provides the Shrinkwrap utility, allowing users to create a portable snapshot of a CVMFS repository. This can be exported and distributed without the need of a CVMFS client or network access.
+
+To create an export of EESSI in user space, you will first need to create the config file `software.eessi.io.config`:
+
+```bash
+CVMFS_REPOSITORIES=software.eessi.io
+CVMFS_REPOSITORY_NAME=software.eessi.io
+CVMFS_CONFIG_REPOSITORY=cvmfs-config.cern.ch
+CVMFS_SERVER_URL='http://aws-eu-west-s1-sync.eessi.science/cvmfs/software.eessi.io'
+CVMFS_HTTP_PROXY=DIRECT # Avoid filling up any local squid's cache
+CVMFS_CACHE_BASE=/tmp/shrinkwrap
+CVMFS_KEYS_DIR=/etc/cvmfs/keys/eessi.io # Need to be provided for shrinkwrap
+CVMFS_SHARED_CACHE=no # Important as libcvmfs does not support shared caches
+CVMFS_USER=cvmfs
+CVMFS_UID_MAP=uid.map
+CVMFS_GID_MAP=gid.map
+
+```
+You will need to create the files `uid.map` and `gid.map` with the respective value you will use preceded by a `*`. P.e., assuming UID 1000, set the two following files:
+
+```bash
+    $ cat uid.map
+    * 1000
+
+    $ cat gid.map
+    * 1000
+```
+In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. Contents are:
+
+```bash
+/versions/2023.06/compat/linux/x86_64/*
+/versions/2023.06/init/*
+/versions/2023.06/scripts/*
+/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/.lmod/*
+/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/modules/*
+/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/*
+# Exclude the Gentoo ebuild repo and cache files
+!/versions/2023.06/compat/linux/x86_64/var/db/repos/gentoo
+!/versions/2023.06/compat/linux/x86_64/var/cache
+
+```
+
+Then, execute `cvmfs_shrinkwrap`to create the export:
+
+```bash
+$ cvmfs_shrinkwrap -r software.eessi.io -f software.eessi.io.config -t software.eessi.io.spec --dest-base /tmp/cvmfs -j 4
+
+LibCvmfs version 2.12, revision 31
+(libcvmfs) (manager 'standard') switching proxy from (none) to DIRECT. Reason: set random start proxy from the first proxy group [Current host: http://aws-eu-west-s1-sync.eessi.science/cvmfs/software.eessi.io]
+(libcvmfs) (manager 'external') switching proxy from (none) to DIRECT. Reason: cloned [Current host: http://aws-eu-west-s1-sync.eessi.science/cvmfs/software.eessi.io]
+(libcvmfs) Starting 4 workers
+(libcvmfs) cntByte|0|Byte count of projected repository
+cntDir|1|Number of directories from source repository
+cntFile|0|Number of files from source repository
+cntSymlink|0|Number of symlinks from source repository
+dataBytes|0|Bytes transferred from source to destination
+dataBytesDeduped|0|Number of bytes not copied due to deduplication
+dataFiles|0|Number of data files transferred from source to destination
+dataFilesDeduped|0|Number of files not copied due to deduplication
+entriesDest|1|Number of file system entries processed in the destination
+entriesSrc|1|Number of file system entries processed in the source
+
+....
+
+# This takes a long time
+```
+
+Once completed, the contents will be available in /tmp/cvmfs. You can create an squashfs image from it:
+
+```bash
+    sudo mksquashfs /tmp/cvmfs software.eessi.io.sqsh
+
+```
+
+This squashfs image can be mounted in any container:
+
+```bash
+    apptainer shell -B software.eessi.io.sqsh:/cvmfs:image-src=/ docker://ubuntu
+
+```
+
+Right now its a manual process but there is work in progress towards an automated solution.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
