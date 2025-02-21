@@ -36,8 +36,8 @@ function populate_overview(json_data) {
 	    console.log(all_targets)
             console.log([...[{"title": "name"}], ...all_targets])
             const table = new DataTable('#overview_table', {
-		columns: [...[{"title": "name"}], ...all_targets],
-                paging: false,
+		        columns: [...[{"title": "name"}], ...all_targets],
+                paging: true,
                 columnDefs: [
                     {
                         targets: "_all",
