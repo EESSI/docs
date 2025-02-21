@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Bioconductor provides tools for the analysis and coprehension of high-throughput
+    genomic data.
+  license: Not confirmed
+  name: R-bundle-Bioconductor
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2'', ''R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2'']'
+  url: https://bioconductor.org
 ---
 
 R-bundle-Bioconductor
@@ -23,10 +49,10 @@ module load R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2
 
 *(This data was automatically generated on {{ generated_time }})*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|x|x|
-|R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2|x|x|x|x|x|x|x|x|-|x|
+|R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2|x|x|x|x|x|x|x|x|-|x|
 
 
 ### R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2
