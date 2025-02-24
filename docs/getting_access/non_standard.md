@@ -4,7 +4,7 @@ In case that an EESSI installation is not possible or desirable, there are a cou
 
 ## Using cvmfsexec
 
-This option relies on the [cvmfsexec package](https://github.com/cvmfs/cvmfsexec) provided by CernVM-FS team. It will allow you to mount cvmfs as an unprivileged user, so no need to have a native cvmfs installation.
+This option only works for RHEL-like systems and relies on the [cvmfsexec package](https://github.com/cvmfs/cvmfsexec) provided by CernVM-FS team. It will allow you to mount cvmfs as an unprivileged user, so no need to have a native cvmfs installation.
 
 ### `cvmfsexec_eessi.sh`  wrapper script
 
