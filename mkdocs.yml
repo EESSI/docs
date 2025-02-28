@@ -148,5 +148,5 @@ extra_javascript:
 extra_css:
   # CSS for popultate_overview
   - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
-  - https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.css
+  - available_software/css/style_table.css
   - https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css
