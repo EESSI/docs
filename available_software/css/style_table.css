@@ -1,0 +1,29 @@
+/* source https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.css */
+
+/*
+ * # Fomantic UI - 2.9.2
+ * https://github.com/fomantic/Fomantic-UI
+ * https://fomantic-ui.com/
+ *
+ * Copyright 2023 Contributors
+ * Released under the MIT license
+ * https://opensource.org/licenses/MIT
+ *
+ */
+.ui.table{
+    font-size: 1em;
+    width: 100%;
+    background: #fff;
+    margin: 1em 0;
+    border: 1px solid rgba(34, 36, 38, .15);
+    box-shadow: none;
+    border-radius: .28571429rem;
+    text-align: left;
+    vertical-align: middle;
+    color: rgba(0, 0, 0, .87);
+    border-collapse: separate;
+    border-spacing: 0;
+ }
+.ui.celled.table>tbody>tr>td,.ui.celled.table>tbody>tr>th,.ui.celled.table>tfoot>tr>td,.ui.celled.table>tfoot>tr>th,.ui.celled.table>thead>tr>th,.ui.celled.table>tr>td,.ui.celled.table>tr>th{
+    border-left:1px solid rgba(34,36,38,.1);
+ }
