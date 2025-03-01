@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Git is a free and open source distributed version control system designedto
+    handle everything from small to very large projects with speed and efficiency.
+  license: Not confirmed
+  name: git
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''git/2.38.1-GCCcore-12.2.0-nodocs'', ''git/2.41.0-GCCcore-12.3.0-nodocs'',
+    ''git/2.42.0-GCCcore-13.2.0'']'
+  url: https://git-scm.com
 ---
 
 git

@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The Open MPI Project is an open source MPI-3 implementation.
+  license: Not confirmed
+  name: OpenMPI
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''OpenMPI/4.1.4-GCC-12.2.0'', ''OpenMPI/4.1.5-GCC-12.3.0'', ''OpenMPI/4.1.6-GCC-13.2.0'']'
+  url: https://www.open-mpi.org/
 ---
 
 OpenMPI

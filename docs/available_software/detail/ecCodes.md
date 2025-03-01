@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'ecCodes is a package developed by ECMWF which provides an application
+    programming interface and a set of tools for decoding and encoding messages in
+    the following formats: WMO FM-92 GRIB edition 1 and edition 2, WMO FM-94 BUFR
+    edition 3 and edition 4, WMO GTS abbreviated header (only decoding).'
+  license: Not confirmed
+  name: ecCodes
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''ecCodes/2.31.0-gompi-2023a'', ''ecCodes/2.31.0-gompi-2023b'']'
+  url: https://software.ecmwf.int/wiki/display/ECC/ecCodes+Home
 ---
 
 ecCodes

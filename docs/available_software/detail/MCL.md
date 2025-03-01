@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The MCL algorithm is short for the Markov Cluster Algorithm, a fastand
+    scalable unsupervised cluster algorithm for graphs (also known as networks) basedon
+    simulation of (stochastic) flow in graphs.
+  license: Not confirmed
+  name: MCL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''MCL/22.282-GCCcore-12.3.0'']'
+  url: https://micans.org/mcl/
 ---
 
 MCL

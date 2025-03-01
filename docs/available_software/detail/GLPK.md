@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The GLPK (GNU Linear Programming Kit) package is intended for solving
+    large-scale linear programming (LP), mixed integer programming (MIP), and other
+    related problems. It is a set of routines written in ANSI C and organized in the
+    form of a callable library.
+  license: Not confirmed
+  name: GLPK
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''GLPK/5.0-GCCcore-12.2.0'', ''GLPK/5.0-GCCcore-12.3.0'', ''GLPK/5.0-GCCcore-13.2.0'']'
+  url: https://www.gnu.org/software/glpk/
 ---
 
 GLPK

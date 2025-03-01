@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'GL2PS: an OpenGL to PostScript printing library'
+  license: Not confirmed
+  name: GL2PS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''GL2PS/1.4.2-GCCcore-12.2.0'', ''GL2PS/1.4.2-GCCcore-12.3.0'']'
+  url: https://www.geuz.org/gl2ps/
 ---
 
 GL2PS

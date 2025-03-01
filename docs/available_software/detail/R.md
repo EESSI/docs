@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: R is a free software environment for statistical computing and graphics.
+  license: Not confirmed
+  name: R
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''R/4.2.2-foss-2022b'', ''R/4.3.2-gfbf-2023a'', ''R/4.4.1-gfbf-2023b'']'
+  url: https://www.r-project.org/
 ---
 
 R

@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Cap\u2019n Proto is an insanely fast data interchange format and capability-based\
+    \ RPC system."
+  license: Not confirmed
+  name: CapnProto
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''CapnProto/0.10.3-GCCcore-12.2.0'', ''CapnProto/1.0.1-GCCcore-12.3.0'']'
+  url: https://capnproto.org
 ---
 
 CapnProto

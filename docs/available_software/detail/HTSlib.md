@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: A C library for reading/writing high-throughput sequencing data. This
+    package includes the utilities bgzip and tabix
+  license: Not confirmed
+  name: HTSlib
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''HTSlib/1.17-GCC-12.2.0'', ''HTSlib/1.18-GCC-12.3.0'', ''HTSlib/1.19.1-GCC-13.2.0'']'
+  url: https://www.htslib.org/
 ---
 
 HTSlib

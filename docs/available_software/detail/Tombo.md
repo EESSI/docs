@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Tombo is a suite of tools primarily for the identification of modified
+    nucleotides from raw nanopore sequencing data.
+  license: Not confirmed
+  name: Tombo
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Tombo/1.5.1-foss-2023a'']'
+  url: https://github.com/nanoporetech/tombo
 ---
 
 Tombo

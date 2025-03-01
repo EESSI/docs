@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: WhatsHap is a software for phasing genomic variants using DNAsequencing
+    reads, also called read-based phasing or haplotype assembly. It isespecially suitable
+    for long reads, but works also well with short reads.
+  license: Not confirmed
+  name: WhatsHap
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''WhatsHap/2.1-foss-2022b'', ''WhatsHap/2.2-foss-2023a'']'
+  url: https://whatshap.readthedocs.io
 ---
 
 WhatsHap

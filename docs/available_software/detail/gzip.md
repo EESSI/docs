@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: gzip (GNU zip) is a popular data compression program as a replacement
+    for compress
+  license: Not confirmed
+  name: gzip
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''gzip/1.12-GCCcore-12.2.0'', ''gzip/1.12-GCCcore-12.3.0'', ''gzip/1.13-GCCcore-13.2.0'']'
+  url: https://www.gnu.org/software/gzip/
 ---
 
 gzip

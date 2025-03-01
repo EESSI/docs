@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Rivet toolkit (Robust Independent Validation of Experiment and Theory)To
+    use your own analysis you must append the path to `RIVET_ANALYSIS_PATH`.
+  license: Not confirmed
+  name: Rivet
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Rivet/3.1.9-gompi-2023a-HepMC3-3.2.6'']'
+  url: https://gitlab.com/hepcedar/rivet
 ---
 
 Rivet

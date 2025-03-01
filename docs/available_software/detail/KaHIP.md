@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The graph partitioning framework KaHIP -- Karlsruhe High Quality Partitioning.
+  license: Not confirmed
+  name: KaHIP
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''KaHIP/3.14-gompi-2022b'', ''KaHIP/3.16-gompi-2023a'']'
+  url: https://kahip.github.io/
 ---
 
 KaHIP

@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Quantum ESPRESSO  is an integrated suite of computer codesfor electronic-structure
+    calculations and materials modeling at the nanoscale.It is based on density-functional
+    theory, plane waves, and pseudopotentials(both norm-conserving and ultrasoft).
+  license: Not confirmed
+  name: QuantumESPRESSO
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''QuantumESPRESSO/7.2-foss-2022b'', ''QuantumESPRESSO/7.3.1-foss-2023a'']'
+  url: https://www.quantum-espresso.org
 ---
 
 QuantumESPRESSO

@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: pybind11 is a lightweight header-only library that exposes C++ types
+    in Python and vice versa, mainly to create Python bindings of existing C++ code.
+  license: Not confirmed
+  name: pybind11
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''pybind11/2.10.3-GCCcore-12.2.0'', ''pybind11/2.11.1-GCCcore-12.3.0'',
+    ''pybind11/2.11.1-GCCcore-13.2.0'']'
+  url: https://pybind11.readthedocs.io
 ---
 
 pybind11

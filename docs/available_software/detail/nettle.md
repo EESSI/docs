@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Nettle is a cryptographic library that is designed to fit easily in
+    more or less any context: In crypto toolkits for object-oriented languages (C++,
+    Python, Pike, ...), in applications like LSH or GNUPG, or even in kernel space.'
+  license: Not confirmed
+  name: nettle
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''nettle/3.8.1-GCCcore-12.2.0'', ''nettle/3.9.1-GCCcore-12.3.0'',
+    ''nettle/3.9.1-GCCcore-13.2.0'']'
+  url: https://www.lysator.liu.se/~nisse/nettle/
 ---
 
 nettle

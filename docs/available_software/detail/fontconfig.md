@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Fontconfig is a library designed to provide system-wide font configuration,
+    customization and application access.
+  license: Not confirmed
+  name: fontconfig
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''fontconfig/2.14.1-GCCcore-12.2.0'', ''fontconfig/2.14.2-GCCcore-12.3.0'',
+    ''fontconfig/2.14.2-GCCcore-13.2.0'']'
+  url: https://www.freedesktop.org/wiki/Software/fontconfig/
 ---
 
 fontconfig

@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Burrows-Wheeler Aligner (BWA) is an efficient program that aligns relatively
+    short nucleotide sequences against a long reference sequence such as the human
+    genome.
+  license: Not confirmed
+  name: BWA
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''BWA/0.7.17-20220923-GCCcore-12.3.0'', ''BWA/0.7.18-GCCcore-12.3.0'']'
+  url: http://bio-bwa.sourceforge.net/
 ---
 
 BWA

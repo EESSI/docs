@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: R interface to the Apache Arrow C++ library
+  license: Not confirmed
+  name: arrow-R
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''arrow-R/11.0.0.3-foss-2022b-R-4.2.2'', ''arrow-R/14.0.1-foss-2023a-R-4.3.2'']'
+  url: https://cran.r-project.org/web/packages/arrow
 ---
 
 arrow-R

@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: ASE is a python package providing an open source Atomic Simulation
+    Environment in the Python scripting language.From version 3.20.1 we also include
+    the ase-ext package, it contains optional reimplementationsin C of functions in
+    ASE.  ASE uses it automatically when installed.
+  license: Not confirmed
+  name: ASE
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''ASE/3.22.1-gfbf-2022b'']'
+  url: https://wiki.fysik.dtu.dk/ase
 ---
 
 ASE

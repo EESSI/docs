@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Code to parse output from hmmsearch, hmmscan, phmmer and nhmmer, compatiblewith
+    both version 2 and version 3 of the HMMER package from http://hmmer.org.
+  license: Not confirmed
+  name: Bio-SearchIO-hmmer
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Bio-SearchIO-hmmer/1.7.3-GCC-12.2.0'']'
+  url: https://metacpan.org/pod/Bio::SearchIO::hmmer3
 ---
 
 Bio-SearchIO-hmmer

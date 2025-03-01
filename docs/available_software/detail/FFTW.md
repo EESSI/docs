@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: FFTW is a C subroutine library for computing the discrete Fourier transform
+    (DFT)in one or more dimensions, of arbitrary input size, and of both real and
+    complex data.
+  license: Not confirmed
+  name: FFTW
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''FFTW/3.3.10-GCC-12.2.0'', ''FFTW/3.3.10-GCC-12.3.0'', ''FFTW/3.3.10-GCC-13.2.0'']'
+  url: https://www.fftw.org
 ---
 
 FFTW

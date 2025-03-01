@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Libxslt is the XSLT C library developed for the GNOME project (but
+    usable outside of the Gnome platform).
+  license: Not confirmed
+  name: libxslt
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libxslt/1.1.37-GCCcore-12.2.0'', ''libxslt/1.1.38-GCCcore-12.3.0'',
+    ''libxslt/1.1.38-GCCcore-13.2.0'']'
+  url: http://xmlsoft.org/
 ---
 
 libxslt

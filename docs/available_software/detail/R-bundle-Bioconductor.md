@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Bioconductor provides tools for the analysis and coprehension of high-throughput
+    genomic data.
+  license: Not confirmed
+  name: R-bundle-Bioconductor
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2'', ''R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2'']'
+  url: https://bioconductor.org
 ---
 
 R-bundle-Bioconductor

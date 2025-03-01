@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: GNU Compiler Collection (GCC) based compiler toolchain, including FlexiBLAS
+    (BLAS and LAPACK support) and (serial) FFTW.
+  license: Not confirmed
+  name: gfbf
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''gfbf/2022b'', ''gfbf/2023a'', ''gfbf/2023b'']'
+  url: (none)
 ---
 
 gfbf

@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Libgcrypt is a general purpose cryptographic library originally based
+    on code from GnuPG
+  license: Not confirmed
+  name: libgcrypt
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libgcrypt/1.10.3-GCCcore-12.3.0'']'
+  url: https://gnupg.org/related_software/libgcrypt/index.html
 ---
 
 libgcrypt

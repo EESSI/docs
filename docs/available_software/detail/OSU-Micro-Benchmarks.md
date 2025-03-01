@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: OSU Micro-Benchmarks
+  license: Not confirmed
+  name: OSU-Micro-Benchmarks
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''OSU-Micro-Benchmarks/7.1-1-gompi-2023a'', ''OSU-Micro-Benchmarks/7.2-gompi-2023a-CUDA-12.1.1'',
+    ''OSU-Micro-Benchmarks/7.2-gompi-2023b'']'
+  url: https://mvapich.cse.ohio-state.edu/benchmarks/
 ---
 
 OSU-Micro-Benchmarks

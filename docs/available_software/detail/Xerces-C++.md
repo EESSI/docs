@@ -1,6 +1,35 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Xerces-C++ is a validating XML parser written in a portablesubset of
+    C++. Xerces-C++ makes it easy to give your application the ability toread and
+    write XML data. A shared library is provided for parsing, generating,manipulating,
+    and validating XML documents using the DOM, SAX, and SAX2APIs.
+  license: Not confirmed
+  name: Xerces-C++
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Xerces-C++/3.2.4-GCCcore-12.2.0'', ''Xerces-C++/3.2.4-GCCcore-12.3.0'',
+    ''Xerces-C++/3.2.5-GCCcore-13.2.0'']'
+  url: https://xerces.apache.org/xerces-c/
 ---
 
 Xerces-C++

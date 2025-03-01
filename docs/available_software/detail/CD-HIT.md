@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: CD-HIT is a very widely used program for clustering and  comparing
+    protein or nucleotide sequences.
+  license: Not confirmed
+  name: CD-HIT
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''CD-HIT/4.8.1-GCC-12.2.0'']'
+  url: http://weizhongli-lab.org/cd-hit/
 ---
 
 CD-HIT

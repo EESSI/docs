@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Libtirpc is a port of Suns Transport-Independent RPC library to Linux.
+  license: Not confirmed
+  name: libtirpc
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libtirpc/1.3.3-GCCcore-12.2.0'', ''libtirpc/1.3.3-GCCcore-12.3.0'',
+    ''libtirpc/1.3.4-GCCcore-13.2.0'']'
+  url: https://sourceforge.net/projects/libtirpc/
 ---
 
 libtirpc

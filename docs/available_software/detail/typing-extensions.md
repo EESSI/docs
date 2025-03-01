@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Typing Extensions - Backported and Experimental Type Hints for Python
+  license: Not confirmed
+  name: typing-extensions
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''typing-extensions/4.9.0-GCCcore-12.3.0'', ''typing-extensions/4.10.0-GCCcore-13.2.0'']'
+  url: https://github.com/python/typing_extensions
 ---
 
 typing-extensions

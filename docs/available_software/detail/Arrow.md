@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Apache Arrow (incl. PyArrow Python bindings), a cross-language development
+    platform for in-memory data.
+  license: Not confirmed
+  name: Arrow
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Arrow/11.0.0-gfbf-2022b'', ''Arrow/14.0.1-gfbf-2023a'', ''Arrow/16.1.0-gfbf-2023b'']'
+  url: https://arrow.apache.org
 ---
 
 Arrow

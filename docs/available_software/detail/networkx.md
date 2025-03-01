@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: NetworkX is a Python package for the creation, manipulation,and study
+    of the structure, dynamics, and functions of complex networks.
+  license: Not confirmed
+  name: networkx
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''networkx/3.0-gfbf-2022b'', ''networkx/3.1-gfbf-2023a'', ''networkx/3.2.1-gfbf-2023b'']'
+  url: https://pypi.python.org/pypi/networkx
 ---
 
 networkx

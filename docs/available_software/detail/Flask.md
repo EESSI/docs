@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Flask is a lightweight WSGI web application framework. It is designed
+    to makegetting started quick and easy, with the ability to scale up to complexapplications.This
+    module includes the Flask extensions: Flask-Cors'
+  license: Not confirmed
+  name: Flask
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Flask/2.2.3-GCCcore-12.2.0'']'
+  url: https://www.palletsprojects.com/p/flask/
 ---
 
 Flask

@@ -1,6 +1,36 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'IPython provides a rich architecture for interactive computing with:
+    Powerful interactive shells (terminal and Qt-based). A browser-based notebook
+    with support for code, text, mathematical expressions, inline plots and other
+    rich media. Support for interactive data visualization and use of GUI toolkits.
+    Flexible, embeddable interpreters to load into your own projects. Easy to use,
+    high performance tools for parallel computing.'
+  license: Not confirmed
+  name: IPython
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''IPython/8.14.0-GCCcore-12.3.0'', ''IPython/8.17.2-GCCcore-13.2.0'']'
+  url: https://ipython.org/index.html
 ---
 
 IPython

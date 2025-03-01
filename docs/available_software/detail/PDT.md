@@ -1,6 +1,35 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Program Database Toolkit (PDT) is a framework for analyzing source
+    code written in several programming languages and for making rich program knowledge
+    accessible to developers of static and dynamic analysis tools. PDT implements
+    a standard program representation, the program database (PDB), that can be accessed
+    in a uniform way through a class library supporting common PDB operations.
+  license: Not confirmed
+  name: PDT
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''PDT/3.25.2-GCCcore-13.2.0'']'
+  url: https://www.cs.uoregon.edu/research/pdt/
 ---
 
 PDT

@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Bundle of R packages from CRAN
+  license: Not confirmed
+  name: R-bundle-CRAN
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''R-bundle-CRAN/2023.12-foss-2023a'', ''R-bundle-CRAN/2024.06-foss-2023b'']'
+  url: https://www.r-project.org/
 ---
 
 R-bundle-CRAN

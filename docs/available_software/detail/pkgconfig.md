@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: pkgconfig is a Python module to interface with the pkg-config command
+    line tool
+  license: Not confirmed
+  name: pkgconfig
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''pkgconfig/1.5.5-GCCcore-12.2.0-python'', ''pkgconfig/1.5.5-GCCcore-12.3.0-python'']'
+  url: https://github.com/matze/pkgconfig
 ---
 
 pkgconfig

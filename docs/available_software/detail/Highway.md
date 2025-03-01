@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Highway is a C++ library for SIMD (Single Instruction, Multiple Data),
+    i.e. applying the sameoperation to 'lanes'.
+  license: Not confirmed
+  name: Highway
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Highway/1.0.3-GCCcore-12.2.0'', ''Highway/1.0.4-GCCcore-12.3.0'']'
+  url: https://github.com/google/highway
 ---
 
 Highway
