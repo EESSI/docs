@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: WSClean (w-stacking clean) is a fast generic widefield imager.It implements
+    several gridding algorithms and offers fully-automated multi-scalemulti-frequency
+    deconvolution.
+  license: Not confirmed
+  name: WSClean
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''WSClean/3.4-foss-2023b'', ''WSClean/3.5-foss-2023b'']'
+  url: https://wsclean.readthedocs.io/
 ---
 
 WSClean

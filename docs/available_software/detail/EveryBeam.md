@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Library that provides the antenna response pattern for several instruments,such
+    as LOFAR (and LOBES), SKA (OSKAR), MWA, JVLA, etc.
+  license: Not confirmed
+  name: EveryBeam
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''EveryBeam/0.5.2-foss-2023b'', ''EveryBeam/0.6.1-foss-2023b'']'
+  url: https://everybeam.readthedocs.io/
 ---
 
 EveryBeam

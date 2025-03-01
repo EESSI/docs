@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Multi-format archive and compression library
+  license: Not confirmed
+  name: libarchive
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libarchive/3.6.1-GCCcore-12.2.0'', ''libarchive/3.6.2-GCCcore-12.3.0'',
+    ''libarchive/3.7.2-GCCcore-13.2.0'']'
+  url: https://www.libarchive.org/
 ---
 
 libarchive

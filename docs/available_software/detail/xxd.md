@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: xxd is part of the VIM package and this will only install xxd, not
+    vim!xxd converts to/from hexdumps of binary files.
+  license: Not confirmed
+  name: xxd
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''xxd/9.0.2112-GCCcore-12.3.0'', ''xxd/9.1.0307-GCCcore-13.2.0'']'
+  url: https://www.vim.org
 ---
 
 xxd

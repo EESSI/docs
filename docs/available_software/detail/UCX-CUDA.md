@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Unified Communication XAn open-source production grade communication
+    framework for data centricand high-performance applicationsThis module adds the
+    UCX CUDA support.
+  license: Not confirmed
+  name: UCX-CUDA
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''UCX-CUDA/1.14.1-GCCcore-12.3.0-CUDA-12.1.1'']'
+  url: http://www.openucx.org/
 ---
 
 UCX-CUDA

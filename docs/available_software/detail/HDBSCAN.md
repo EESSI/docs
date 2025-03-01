@@ -1,6 +1,35 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The hdbscan library is a suite of tools to use unsupervised learning
+    to find clusters, or dense regions, of a dataset. The primary algorithm is HDBSCAN*
+    as proposed by Campello, Moulavi, and Sander. The library provides a high performance
+    implementation of this algorithm, along with tools for analysing the resulting
+    clustering.
+  license: Not confirmed
+  name: HDBSCAN
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''HDBSCAN/0.8.38.post1-foss-2023a'']'
+  url: http://hdbscan.readthedocs.io/en/latest/
 ---
 
 HDBSCAN

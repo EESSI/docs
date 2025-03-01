@@ -1,6 +1,36 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The Genome Analysis Toolkit or GATK is a software package developed
+    at the Broad Institute to analyse next-generation resequencing data. The toolkit
+    offers a wide variety of tools, with a primary focus on variant discovery and
+    genotyping as well as strong emphasis on data quality assurance. Its robust architecture,
+    powerful processing engine and high-performance computing features make it capable
+    of taking on projects of any size.
+  license: Not confirmed
+  name: GATK
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''GATK/4.5.0.0-GCCcore-12.3.0-Java-17'']'
+  url: https://www.broadinstitute.org/gatk/
 ---
 
 GATK

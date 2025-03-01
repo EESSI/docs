@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: HarfBuzz is an OpenType text shaping engine.
+  license: Not confirmed
+  name: HarfBuzz
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''HarfBuzz/5.3.1-GCCcore-12.2.0'', ''HarfBuzz/5.3.1-GCCcore-12.3.0'',
+    ''HarfBuzz/8.2.2-GCCcore-13.2.0'']'
+  url: https://www.freedesktop.org/wiki/Software/HarfBuzz
 ---
 
 HarfBuzz

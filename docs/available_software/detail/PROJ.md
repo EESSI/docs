@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Program proj is a standard Unix filter function which convertsgeographic
+    longitude and latitude coordinates into cartesian coordinates
+  license: Not confirmed
+  name: PROJ
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''PROJ/9.1.1-GCCcore-12.2.0'', ''PROJ/9.2.0-GCCcore-12.3.0'',
+    ''PROJ/9.3.1-GCCcore-13.2.0'']'
+  url: https://proj.org
 ---
 
 PROJ

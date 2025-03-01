@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Ruby gem for colorizing text using ANSI escape sequences.Extends String
+    class or add a ColorizedString with methods to set the text color, background
+    color and text effects.
+  license: Not confirmed
+  name: colorize
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''colorize/0.7.7-GCC-12.3.0'']'
+  url: https://github.com/fazibear/colorize
 ---
 
 colorize

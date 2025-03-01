@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Pillow is the 'friendly PIL fork' by Alex Clark and Contributors. PIL
+    is the Python Imaging Library by Fredrik Lundh and Contributors.
+  license: Not confirmed
+  name: Pillow
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Pillow/9.4.0-GCCcore-12.2.0'', ''Pillow/10.0.0-GCCcore-12.3.0'',
+    ''Pillow/10.2.0-GCCcore-13.2.0'']'
+  url: https://pillow.readthedocs.org/
 ---
 
 Pillow

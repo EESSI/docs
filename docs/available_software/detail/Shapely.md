@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Shapely is a BSD-licensed Python package for manipulation and analysis
+    of planar geometric objects.It is based on the widely deployed GEOS (the engine
+    of PostGIS) and JTS (from which GEOS is ported) libraries.
+  license: Not confirmed
+  name: Shapely
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Shapely/2.0.1-gfbf-2023a'']'
+  url: https://github.com/Toblerity/Shapely
 ---
 
 Shapely

@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: EasyBuild is a software build and installation framework written in
+    Python that allows you to install software in a structured, repeatable and robust
+    way.
+  license: Not confirmed
+  name: EasyBuild
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''EasyBuild/4.8.2'', ''EasyBuild/4.9.0'', ''EasyBuild/4.9.1'',
+    ''EasyBuild/4.9.2'', ''EasyBuild/4.9.3'', ''EasyBuild/4.9.4'']'
+  url: https://easybuilders.github.io/easybuild
 ---
 
 EasyBuild

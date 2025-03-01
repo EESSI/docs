@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Bundle of Python packages for scientific software
+  license: Not confirmed
+  name: SciPy-bundle
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''SciPy-bundle/2023.02-gfbf-2022b'', ''SciPy-bundle/2023.07-gfbf-2023a'',
+    ''SciPy-bundle/2023.11-gfbf-2023b'']'
+  url: https://python.org/
 ---
 
 SciPy-bundle

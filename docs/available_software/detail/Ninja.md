@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Ninja is a small build system with a focus on speed.
+  license: Not confirmed
+  name: Ninja
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Ninja/1.11.1-GCCcore-12.2.0'', ''Ninja/1.11.1-GCCcore-12.3.0'',
+    ''Ninja/1.11.1-GCCcore-13.2.0'']'
+  url: https://ninja-build.org/
 ---
 
 Ninja

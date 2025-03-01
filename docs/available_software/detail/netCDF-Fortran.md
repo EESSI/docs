@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: NetCDF (network Common Data Form) is a set of software libraries and
+    machine-independent data formats that support the creation, access, and sharing
+    of array-oriented scientific data.
+  license: Not confirmed
+  name: netCDF-Fortran
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''netCDF-Fortran/4.6.0-gompi-2022b'', ''netCDF-Fortran/4.6.1-gompi-2023a'']'
+  url: https://www.unidata.ucar.edu/software/netcdf/
 ---
 
 netCDF-Fortran

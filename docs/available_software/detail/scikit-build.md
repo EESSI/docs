@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Scikit-Build, or skbuild, is an improved build system generatorfor
+    CPython C/C++/Fortran/Cython extensions.
+  license: Not confirmed
+  name: scikit-build
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''scikit-build/0.17.6-GCCcore-12.3.0'', ''scikit-build/0.17.6-GCCcore-13.2.0'']'
+  url: https://scikit-build.readthedocs.io/en/latest
 ---
 
 scikit-build

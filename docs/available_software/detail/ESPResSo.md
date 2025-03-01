@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: A software package for performing and analyzing scientific Molecular
+    Dynamics simulations.
+  license: Not confirmed
+  name: ESPResSo
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''ESPResSo/4.2.1-foss-2023a'', ''ESPResSo/4.2.2-foss-2023a'',
+    ''ESPResSo/4.2.2-foss-2023b'']'
+  url: https://espressomd.org/wordpress
 ---
 
 ESPResSo

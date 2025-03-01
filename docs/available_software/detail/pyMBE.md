@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'pyMBE: the Python-based Molecule Builder for ESPResSopyMBE provides
+    tools to facilitate building up molecules with complex architecturesin the Molecular
+    Dynamics software ESPResSo.'
+  license: Not confirmed
+  name: pyMBE
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''pyMBE/0.8.0-foss-2023b'']'
+  url: ''
 ---
 
 pyMBE

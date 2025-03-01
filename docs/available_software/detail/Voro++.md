@@ -1,6 +1,36 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Voro++ is a software library for carrying out three-dimensional computations
+    of the Voronoitessellation. A distinguishing feature of the Voro++ library is
+    that it carries out cell-based calculations,computing the Voronoi cell for each
+    particle individually. It is particularly well-suited for applications thatrely
+    on cell-based statistics, where features of Voronoi cells (eg. volume, centroid,
+    number of faces) can be usedto analyze a system of particles.
+  license: Not confirmed
+  name: Voro++
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Voro++/0.4.6-GCCcore-12.3.0'', ''Voro++/0.4.6-GCCcore-13.2.0'']'
+  url: http://math.lbl.gov/voro++/
 ---
 
 Voro++

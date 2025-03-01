@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: JsonCpp is a C++ library that allows manipulating JSON values, including
+    serialization and deserialization to and from strings. It can also preserve existing
+    comment in unserialization/serialization steps, making it a convenient format
+    to store user input files.
+  license: Not confirmed
+  name: JsonCpp
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''JsonCpp/1.9.5-GCCcore-12.3.0'']'
+  url: https://open-source-parsers.github.io/jsoncpp-docs/doxygen/index.html
 ---
 
 JsonCpp

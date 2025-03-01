@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Biopython is a set of freely available tools for biological computation
+    written in Python by an international team of developers. It is a distributed
+    collaborative effort to develop Python libraries and applications which address
+    the needs of current and future work in bioinformatics.
+  license: Not confirmed
+  name: Biopython
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Biopython/1.81-foss-2022b'', ''Biopython/1.83-foss-2023a'']'
+  url: https://www.biopython.org
 ---
 
 Biopython

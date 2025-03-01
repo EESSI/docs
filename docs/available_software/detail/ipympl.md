@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Leveraging the Jupyter interactive widgets framework, ipympl enables
+    theinteractive features of matplotlib in the Jupyter notebook and in JupyterLab.Besides,
+    the figure canvas element is a proper Jupyter interactive widget whichcan be positioned
+    in interactive widget layouts.
+  license: Not confirmed
+  name: ipympl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''ipympl/0.9.3-foss-2023a'', ''ipympl/0.9.3-gfbf-2023a'']'
+  url: https://matplotlib.org/ipympl
 ---
 
 ipympl

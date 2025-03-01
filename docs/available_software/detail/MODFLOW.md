@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: MODFLOW is the USGS's modular hydrologic model. MODFLOW is considered
+    an international standard for simulating and predicting groundwater conditions
+    and groundwater/surface-water interactions.
+  license: Not confirmed
+  name: MODFLOW
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''MODFLOW/6.4.4-foss-2023a'']'
+  url: https://www.usgs.gov/mission-areas/water-resources/science/modflow-and-related-programs
 ---
 
 MODFLOW

@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'A Python library for phylogenetics and phylogenetic computing: reading,
+    writing, simulation, processing and manipulation of phylogenetic trees (phylogenies)
+    and characters.'
+  license: Not confirmed
+  name: DendroPy
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''DendroPy/4.5.2-GCCcore-12.2.0'', ''DendroPy/4.6.1-GCCcore-12.3.0'']'
+  url: https://dendropy.org/
 ---
 
 DendroPy

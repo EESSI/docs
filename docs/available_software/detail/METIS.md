@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: METIS is a set of serial programs for partitioning graphs, partitioning
+    finite element meshes, and producing fill reducing orderings for sparse matrices.
+    The algorithms implemented in METIS are based on the multilevel recursive-bisection,
+    multilevel k-way, and multi-constraint partitioning schemes.
+  license: Not confirmed
+  name: METIS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''METIS/5.1.0-GCCcore-12.2.0'', ''METIS/5.1.0-GCCcore-12.3.0'']'
+  url: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
 ---
 
 METIS

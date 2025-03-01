@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: GNU version of make utility
+  license: Not confirmed
+  name: make
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''make/4.3-GCCcore-12.2.0'', ''make/4.4.1-GCCcore-12.3.0'', ''make/4.4.1-GCCcore-13.2.0'']'
+  url: https://www.gnu.org/software/make/make.html
 ---
 
 make

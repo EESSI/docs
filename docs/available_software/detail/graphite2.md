@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Graphite is a "smart font" system developed specifically to handle
+    the complexities of lesser-known languages of the world.
+  license: Not confirmed
+  name: graphite2
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''graphite2/1.3.14-GCCcore-12.2.0'', ''graphite2/1.3.14-GCCcore-12.3.0'',
+    ''graphite2/1.3.14-GCCcore-13.2.0'']'
+  url: https://scripts.sil.org/cms/scripts/page.php?site_id=projects&item_id=graphite_home
 ---
 
 graphite2

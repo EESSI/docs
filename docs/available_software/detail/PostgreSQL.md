@@ -1,6 +1,37 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: PostgreSQL is a powerful, open source object-relational database system.
+    It is fully ACID compliant, has full support for foreign keys, joins, views, triggers,
+    and stored procedures (in multiple languages). It includes most SQL:2008 data
+    types, including INTEGER, NUMERIC, BOOLEAN, CHAR, VARCHAR, DATE, INTERVAL, and
+    TIMESTAMP. It also supports storage of binary large objects, including pictures,
+    sounds, or video. It has native programming interfaces for C/C++, Java, .Net,
+    Perl, Python, Ruby, Tcl, ODBC, among others, and exceptional documentation.
+  license: Not confirmed
+  name: PostgreSQL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''PostgreSQL/16.1-GCCcore-12.3.0'', ''PostgreSQL/16.1-GCCcore-13.2.0'']'
+  url: https://www.postgresql.org/
 ---
 
 PostgreSQL

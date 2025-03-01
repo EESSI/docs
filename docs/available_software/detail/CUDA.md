@@ -1,6 +1,35 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: CUDA (formerly Compute Unified Device Architecture) is a parallel computing
+    platform and programming model created by NVIDIA and implemented by the graphics
+    processing units (GPUs) that they produce. CUDA gives developers access to the
+    virtual instruction set and memory of the parallel computational elements in CUDA
+    GPUs.
+  license: Not confirmed
+  name: CUDA
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''CUDA/12.1.1'']'
+  url: https://developer.nvidia.com/cuda-toolkit
 ---
 
 CUDA

@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The OpenSSL Project is a collaborative effort to develop a robust,
+    commercial-grade, full-featured, and Open Source toolchain implementing the Secure
+    Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well
+    as a full-strength general purpose cryptography library.
+  license: Not confirmed
+  name: OpenSSL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''OpenSSL/1.1'']'
+  url: https://www.openssl.org/
 ---
 
 OpenSSL

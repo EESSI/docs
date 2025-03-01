@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: yelp-tools is a collection of scripts and build utilities to help create,manage,
+    and publish documentation for Yelp and the web. Most of the heavylifting is done
+    by packages like yelp-xsl and itstool. This package justwraps things up in a developer-friendly
+    way.
+  license: Not confirmed
+  name: yelp-tools
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''yelp-tools/42.1-GCCcore-12.3.0'']'
+  url: https://gitlab.gnome.org/GNOME/yelp-tools
 ---
 
 yelp-tools

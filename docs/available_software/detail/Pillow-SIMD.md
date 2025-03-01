@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Pillow is the 'friendly PIL fork' by Alex Clark and Contributors. PIL
+    is the Python Imaging Library by Fredrik Lundh and Contributors.
+  license: Not confirmed
+  name: Pillow-SIMD
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Pillow-SIMD/9.5.0-GCCcore-12.3.0'']'
+  url: https://github.com/uploadcare/pillow-simd
 ---
 
 Pillow-SIMD

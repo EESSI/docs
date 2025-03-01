@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: A fast, distributed, high performance gradient boosting (GBT, GBDT,
+    GBRT, GBMor MART) framework based on decision tree algorithms, used for ranking,classification
+    and many other machine learning tasks.
+  license: Not confirmed
+  name: LightGBM
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''LightGBM/4.5.0-foss-2023a'']'
+  url: https://lightgbm.readthedocs.io
 ---
 
 LightGBM

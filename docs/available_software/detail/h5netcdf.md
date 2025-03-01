@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: A Python interface for the netCDF4 file-format that reads and writes
+    local orremote HDF5 files directly via h5py or h5pyd, without relying on the UnidatanetCDF
+    library.
+  license: Not confirmed
+  name: h5netcdf
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''h5netcdf/1.2.0-foss-2023a'']'
+  url: https://h5netcdf.org/
 ---
 
 h5netcdf
