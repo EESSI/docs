@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Samples for CUDA Developers which demonstrates features in CUDA Toolkit
+  license: Not confirmed
+  name: CUDA-Samples
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''CUDA-Samples/12.1-GCC-12.3.0-CUDA-12.1.1'']'
+  url: https://github.com/NVIDIA/cuda-samples
 ---
 
 CUDA-Samples

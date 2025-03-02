@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: This project is meant as a zero configurationreplacement for setuptools-rust
+    and milksnake. It supports buildingwheels for python 3.5+ on windows, linux, mac
+    and freebsd, can uploadthem to pypi and has basic pypy and graalpy support.
+  license: Not confirmed
+  name: maturin
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''maturin/1.1.0-GCCcore-12.3.0'', ''maturin/1.4.0-GCCcore-12.3.0-Rust-1.75.0'',
+    ''maturin/1.5.0-GCCcore-13.2.0-Rust-1.76.0'']'
+  url: https://github.com/pyo3/maturin
 ---
 
 maturin

@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Hatch Jupyter Builder is a plugin for the hatchling Python build backend.
+    It isprimarily targeted for package authors who are providing JavaScript as part
+    oftheir Python packages.Typical use cases are Jupyter Lab Extensions and Jupyter
+    Widgets.
+  license: Not confirmed
+  name: hatch-jupyter-builder
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''hatch-jupyter-builder/0.9.1-GCCcore-12.3.0'']'
+  url: https://hatch-jupyter-builder.readthedocs.io
 ---
 
 hatch-jupyter-builder

@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version.
+  license: Not confirmed
+  name: OpenBLAS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''OpenBLAS/0.3.21-GCC-12.2.0'', ''OpenBLAS/0.3.23-GCC-12.3.0'',
+    ''OpenBLAS/0.3.24-GCC-13.2.0'']'
+  url: http://www.openblas.net/
 ---
 
 OpenBLAS

@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: ARPACK is a collection of Fortran77 subroutines designed to solve large
+    scale eigenvalue problems.
+  license: Not confirmed
+  name: arpack-ng
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''arpack-ng/3.8.0-foss-2022b'', ''arpack-ng/3.9.0-foss-2023a'',
+    ''arpack-ng/3.9.0-foss-2023b'']'
+  url: https://github.com/opencollab/arpack-ng
 ---
 
 arpack-ng

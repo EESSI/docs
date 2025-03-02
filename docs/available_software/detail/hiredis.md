@@ -1,6 +1,35 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Hiredis is a minimalistic C client library for the Redis database.It
+    is minimalistic because it just adds minimal support for the protocol,but at the
+    same time it uses a high level printf-alike API in order tomake it much higher
+    level than otherwise suggested by its minimal code baseand the lack of explicit
+    bindings for every Redis command.
+  license: Not confirmed
+  name: hiredis
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''hiredis/1.2.0-GCCcore-12.3.0'']'
+  url: https://github.com/redis/hiredis
 ---
 
 hiredis

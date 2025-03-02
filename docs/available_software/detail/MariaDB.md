@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'MariaDB is an enhanced, drop-in replacement for MySQL.Included engines:
+    myISAM, Aria, InnoDB, RocksDB, TokuDB, OQGraph, Mroonga.'
+  license: Not confirmed
+  name: MariaDB
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''MariaDB/11.6.0-GCC-12.3.0'']'
+  url: https://mariadb.org/
 ---
 
 MariaDB

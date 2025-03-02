@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Boost provides free peer-reviewed portable C++ source libraries.
+  license: Not confirmed
+  name: Boost
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Boost/1.81.0-GCC-12.2.0'', ''Boost/1.82.0-GCC-12.3.0'', ''Boost/1.83.0-GCC-13.2.0'']'
+  url: https://www.boost.org/
 ---
 
 Boost

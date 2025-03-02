@@ -1,6 +1,36 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Libaec provides fast lossless compression of 1 up to 32 bit wide signed
+    or unsigned integers(samples). The library achieves best results for low entropy
+    data as often encountered in space imaginginstrument data or numerical model output
+    from weather or climate simulations. While floating point representationsare not
+    directly supported, they can also be efficiently coded by grouping exponents and
+    mantissa.
+  license: Not confirmed
+  name: libaec
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libaec/1.0.6-GCCcore-12.3.0'', ''libaec/1.0.6-GCCcore-13.2.0'']'
+  url: https://gitlab.dkrz.de/k202009/libaec
 ---
 
 libaec

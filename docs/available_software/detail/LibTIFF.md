@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'tiff: Library and tools for reading and writing TIFF data files'
+  license: Not confirmed
+  name: LibTIFF
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''LibTIFF/4.4.0-GCCcore-12.2.0'', ''LibTIFF/4.5.0-GCCcore-12.3.0'',
+    ''LibTIFF/4.6.0-GCCcore-13.2.0'']'
+  url: https://libtiff.gitlab.io/libtiff/
 ---
 
 LibTIFF

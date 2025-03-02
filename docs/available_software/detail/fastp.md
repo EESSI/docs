@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: A tool designed to provide fast all-in-one preprocessing for FastQ
+    files. This tool is developed in C++ with multithreading supported to afford high
+    performance.
+  license: Not confirmed
+  name: fastp
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''fastp/0.23.4-GCC-12.2.0'', ''fastp/0.23.4-GCC-12.3.0'']'
+  url: https://github.com/OpenGene/fastp
 ---
 
 fastp

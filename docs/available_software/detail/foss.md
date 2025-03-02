@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: GNU Compiler Collection (GCC) based compiler toolchain, including OpenMPI
+    for MPI support, OpenBLAS (BLAS and LAPACK support), FFTW and ScaLAPACK.
+  license: Not confirmed
+  name: foss
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''foss/2022b'', ''foss/2023a'', ''foss/2023b'']'
+  url: https://easybuild.readthedocs.io/en/master/Common-toolchains.html#foss-toolchain
 ---
 
 foss

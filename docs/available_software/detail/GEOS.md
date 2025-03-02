@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: GEOS (Geometry Engine - Open Source) is a C++ port of the Java Topology
+    Suite (JTS)
+  license: Not confirmed
+  name: GEOS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''GEOS/3.11.1-GCC-12.2.0'', ''GEOS/3.12.0-GCC-12.3.0'', ''GEOS/3.12.1-GCC-13.2.0'']'
+  url: https://trac.osgeo.org/geos
 ---
 
 GEOS

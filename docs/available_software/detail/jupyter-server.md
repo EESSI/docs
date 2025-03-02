@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The Jupyter Server provides the backend (i.e. the core services, APIs,
+    and RESTendpoints) for Jupyter web applications like Jupyter notebook, JupyterLab,
+    andVoila.
+  license: Not confirmed
+  name: jupyter-server
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''jupyter-server/2.7.2-GCCcore-12.3.0'']'
+  url: https://jupyter.org/
 ---
 
 jupyter-server

@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: FreeImage is an Open Source library project for developers who would
+    like to support popular graphicsimage formats like PNG, BMP, JPEG, TIFF and others
+    as needed by today's multimedia applications. FreeImage is easy touse, fast, multithreading
+    safe.
+  license: Not confirmed
+  name: FreeImage
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''FreeImage/3.18.0-GCCcore-12.3.0'']'
+  url: http://freeimage.sourceforge.net
 ---
 
 FreeImage

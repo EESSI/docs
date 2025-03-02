@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Widely applicable Lattics-Boltzmann from Erlangen is a block-structured
+    high-performance framework for multiphysics simulations
+  license: Not confirmed
+  name: waLBerla
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''waLBerla/6.1-foss-2022b'', ''waLBerla/6.1-foss-2023a'']'
+  url: https://walberla.net/index.html
 ---
 
 waLBerla

@@ -1,6 +1,35 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: matplotlib is a python 2D plotting library which produces publication
+    quality figures in a variety of hardcopy formats and interactive environments
+    across platforms. matplotlib can be used in python scripts, the python and ipython
+    shell, web application servers, and six graphical user interface toolkits.
+  license: Not confirmed
+  name: matplotlib
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''matplotlib/3.7.0-gfbf-2022b'', ''matplotlib/3.7.2-gfbf-2023a'',
+    ''matplotlib/3.8.2-gfbf-2023b'']'
+  url: https://matplotlib.org
 ---
 
 matplotlib

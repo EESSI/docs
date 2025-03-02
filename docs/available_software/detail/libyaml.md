@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: LibYAML is a YAML parser and emitter written in C.
+  license: Not confirmed
+  name: libyaml
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libyaml/0.2.5-GCCcore-12.2.0'', ''libyaml/0.2.5-GCCcore-12.3.0'',
+    ''libyaml/0.2.5-GCCcore-13.2.0'']'
+  url: https://pyyaml.org/wiki/LibYAML
 ---
 
 libyaml

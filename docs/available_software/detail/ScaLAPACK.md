@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The ScaLAPACK (or Scalable LAPACK) library includes a subset of LAPACK
+    routines redesigned for distributed memory MIMD parallel computers.
+  license: Not confirmed
+  name: ScaLAPACK
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''ScaLAPACK/2.2.0-gompi-2022b-fb'', ''ScaLAPACK/2.2.0-gompi-2023a-fb'',
+    ''ScaLAPACK/2.2.0-gompi-2023b-fb'']'
+  url: https://www.netlib.org/scalapack/
 ---
 
 ScaLAPACK

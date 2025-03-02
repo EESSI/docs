@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Tcl (Tool Command Language) is a very powerful but easy to learn dynamic
+    programming language, suitable for a very wide range of uses, including web and
+    desktop applications, networking, administration, testing and many more.
+  license: Not confirmed
+  name: Tcl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Tcl/8.6.12-GCCcore-12.2.0'', ''Tcl/8.6.13-GCCcore-12.3.0'',
+    ''Tcl/8.6.13-GCCcore-13.2.0'']'
+  url: https://www.tcl.tk/
 ---
 
 Tcl

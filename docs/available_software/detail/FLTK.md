@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft
+    Windows, and MacOS X. FLTK provides modern GUI functionality without the bloat
+    and supports 3D graphics via OpenGL and its built-in GLUT emulation.
+  license: Not confirmed
+  name: FLTK
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''FLTK/1.3.8-GCCcore-12.3.0'']'
+  url: https://www.fltk.org
 ---
 
 FLTK

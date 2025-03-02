@@ -1,6 +1,35 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The numactl program allows you to run your application program on specific
+    cpu's and memory nodes. It does this by supplying a NUMA memory policy to the
+    operating system before running your program. The libnuma library provides convenient
+    ways for you to add NUMA memory policies into your own program.
+  license: Not confirmed
+  name: numactl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''numactl/2.0.16-GCCcore-12.2.0'', ''numactl/2.0.16-GCCcore-12.3.0'',
+    ''numactl/2.0.16-GCCcore-13.2.0'']'
+  url: https://github.com/numactl/numactl
 ---
 
 numactl

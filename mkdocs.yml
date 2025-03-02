@@ -100,6 +100,8 @@ plugins:
         software_layer/adding_software.md: adding_software/overview.md
         pilot.md: repositories/pilot.md
         gpu.md: site_specific_config/gpu.md
+  # Enable our custom plugin for json-ld metadata
+  - inject_ld_json
 markdown_extensions:
   # enable adding HTML attributes and CSS classes
   - attr_list
@@ -134,7 +136,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Sat, 25 Jan 2025 at 01:25:08 UTC"
+  generated_time: "Sun, 02 Mar 2025 at 01:47:18 UTC"
 extra_javascript:
   # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
@@ -142,6 +144,9 @@ extra_javascript:
   - https://code.jquery.com/jquery-3.7.0.min.js
   - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
   - available_software/javascripts/populate_overview.js
+  - https://cdn.datatables.net/plug-ins/2.2.2/pagination/bootstrap_input.js
 extra_css:
   # CSS for popultate_overview
   - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
+  - available_software/css/style_table.css
+  - https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css

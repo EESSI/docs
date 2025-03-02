@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: MDAnalysis is an object-oriented Python library to analyze trajectories
+    from molecular dynamics (MD)simulations in many popular formats.
+  license: Not confirmed
+  name: MDAnalysis
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''MDAnalysis/2.4.2-foss-2022b'']'
+  url: https://www.mdanalysis.org/
 ---
 
 MDAnalysis

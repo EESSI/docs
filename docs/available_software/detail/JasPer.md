@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The JasPer Project is an open-source initiative to provide a free software-based
+    reference implementation of the codec specified in the JPEG-2000 Part-1 standard.
+  license: Not confirmed
+  name: JasPer
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''JasPer/4.0.0-GCCcore-12.2.0'', ''JasPer/4.0.0-GCCcore-12.3.0'',
+    ''JasPer/4.0.0-GCCcore-13.2.0'']'
+  url: https://www.ece.uvic.ca/~frodo/jasper/
 ---
 
 JasPer

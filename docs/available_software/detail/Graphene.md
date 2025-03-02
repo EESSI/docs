@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Graphene is a thin layer of types for graphic libraries
+  license: Not confirmed
+  name: Graphene
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Graphene/1.10.8-GCCcore-12.2.0'', ''Graphene/1.10.8-GCCcore-12.3.0'',
+    ''Graphene/1.10.8-GCCcore-13.2.0'']'
+  url: https://ebassi.github.io/graphene/
 ---
 
 Graphene

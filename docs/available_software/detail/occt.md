@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Open CASCADE Technology (OCCT) is an object-oriented C++class library
+    designed for rapid production of sophisticated domain-specificCAD/CAM/CAE applications.
+  license: Not confirmed
+  name: occt
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''occt/7.8.0-GCCcore-12.3.0'']'
+  url: https://www.opencascade.com/
 ---
 
 occt

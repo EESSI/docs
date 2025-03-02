@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Python packaging and dependency management made easy. Poetry helps
+    you declare, manage and install dependencies of Python projects, ensuring you
+    have the right stack everywhere.
+  license: Not confirmed
+  name: poetry
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''poetry/1.5.1-GCCcore-12.3.0'', ''poetry/1.6.1-GCCcore-13.2.0'']'
+  url: https://python-poetry.org
 ---
 
 poetry

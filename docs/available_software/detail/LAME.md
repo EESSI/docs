@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed
+    under the LGPL.
+  license: Not confirmed
+  name: LAME
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''LAME/3.100-GCCcore-12.2.0'', ''LAME/3.100-GCCcore-12.3.0'',
+    ''LAME/3.100-GCCcore-13.2.0'']'
+  url: http://lame.sourceforge.net/
 ---
 
 LAME

@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: C++ library implementing the Voronoi integration as well as the compressed
+    bqbfile format. The present version of libvori is a very early developmentversion,
+    which is hard-coded to work with the CP2k program package.
+  license: Not confirmed
+  name: libvori
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libvori/220621-GCCcore-12.3.0'']'
+  url: https://brehm-research.de/libvori.php
 ---
 
 libvori

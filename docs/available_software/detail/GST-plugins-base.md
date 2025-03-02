@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: GStreamer is a library for constructing graphs of media-handling components.
+    The applications it supports range from simple Ogg/Vorbis playback, audio/video
+    streaming to complex audio (mixing) and video (non-linear editing) processing.
+  license: Not confirmed
+  name: GST-plugins-base
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''GST-plugins-base/1.22.1-GCC-12.2.0'', ''GST-plugins-base/1.22.5-GCC-12.3.0'',
+    ''GST-plugins-base/1.24.8-GCC-13.2.0'']'
+  url: https://gstreamer.freedesktop.org/
 ---
 
 GST-plugins-base

@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Libsndfile is a C library for reading and writing files containing
+    sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one
+    standard library interface.
+  license: Not confirmed
+  name: libsndfile
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libsndfile/1.2.0-GCCcore-12.2.0'', ''libsndfile/1.2.2-GCCcore-12.3.0'',
+    ''libsndfile/1.2.2-GCCcore-13.2.0'']'
+  url: http://www.mega-nerd.com/libsndfile
 ---
 
 libsndfile

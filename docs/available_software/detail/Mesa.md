@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Mesa is an open-source implementation of the OpenGL specification -
+    a system for rendering interactive 3D graphics.
+  license: Not confirmed
+  name: Mesa
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Mesa/22.2.4-GCCcore-12.2.0'', ''Mesa/23.1.4-GCCcore-12.3.0'',
+    ''Mesa/23.1.9-GCCcore-13.2.0'']'
+  url: https://www.mesa3d.org/
 ---
 
 Mesa

@@ -1,6 +1,32 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: libpng is the official PNG reference library
+  license: Not confirmed
+  name: libpng
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''libpng/1.6.38-GCCcore-12.2.0'', ''libpng/1.6.39-GCCcore-12.3.0'',
+    ''libpng/1.6.40-GCCcore-13.2.0'']'
+  url: http://www.libpng.org/pub/png/libpng.html
 ---
 
 libpng

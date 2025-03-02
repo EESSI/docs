@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: ScaFaCoS is a library of scalable fast coulomb solvers.
+  license: Not confirmed
+  name: ScaFaCoS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''ScaFaCoS/1.0.4-foss-2023a'', ''ScaFaCoS/1.0.4-foss-2023b'']'
+  url: http://www.scafacos.de/
 ---
 
 ScaFaCoS

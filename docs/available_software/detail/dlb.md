@@ -1,6 +1,34 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: DLB is a dynamic library designed to speed up HPC hybrid applications
+    (i.e.,two levels of parallelism) by improving the load balance of the outer level
+    ofparallelism (e.g., MPI) by dynamically redistributing the computationalresources
+    at the inner level of parallelism (e.g., OpenMP). at run time.
+  license: Not confirmed
+  name: dlb
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''dlb/3.4-gompi-2023b'']'
+  url: https://pm.bsc.es/dlb/
 ---
 
 dlb

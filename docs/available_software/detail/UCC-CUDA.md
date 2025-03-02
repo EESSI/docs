@@ -1,6 +1,33 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: UCC (Unified Collective Communication) is a collectivecommunication
+    operations API and library that is flexible, complete, and feature-rich for current
+    and emerging programming models and runtimes.This module adds the UCC CUDA support.
+  license: Not confirmed
+  name: UCC-CUDA
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''UCC-CUDA/1.2.0-GCCcore-12.3.0-CUDA-12.1.1'']'
+  url: https://www.openucx.org/
 ---
 
 UCC-CUDA

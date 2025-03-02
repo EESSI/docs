@@ -1,6 +1,35 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The PGPLOT Graphics Subroutine Library is a Fortran- or C-callable,device-independent
+    graphics package for making simple scientific graphs. It is intendedfor making
+    graphical images of publication quality with minimum effort on the part ofthe
+    user. For most applications, the program can be device-independent, and the outputcan
+    be directed to the appropriate device at run time.
+  license: Not confirmed
+  name: PGPLOT
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''PGPLOT/5.2.2-GCCcore-13.2.0'']'
+  url: https://sites.astro.caltech.edu/~tjp/pgplot/
 ---
 
 PGPLOT
