@@ -26,6 +26,7 @@ This table gives an overview of all the available software in EESSI per specific
             <th colspan="1">zen4</th>
             <th colspan="1">haswell</th>
             <th colspan="1">skylake_avx512</th>
+            <th colspan="1">sapphirerapids</th>
         </tr>
     </thead>
 </table>
