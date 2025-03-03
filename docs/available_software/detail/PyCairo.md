@@ -5,10 +5,9 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: A low-latency GPU memory copy library based on NVIDIA GPUDirect RDMA
-    technology.
+  description: Python bindings for the cairo library
   license: Not confirmed
-  name: GDRCopy
+  name: PyCairo
   offers:
     '@type': Offer
     price: 0
@@ -25,31 +24,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''GDRCopy/2.3.1-GCCcore-12.3.0'', ''GDRCopy/2.4-GCCcore-13.2.0'']'
-  url: https://github.com/NVIDIA/gdrcopy
+  softwareVersion: '[''PyCairo/1.25.0-GCCcore-12.3.0'']'
+  url: https://pycairo.readthedocs.io/
 ---
 
-GDRCopy
+PyCairo
 =======
 
 
-A low-latency GPU memory copy library based on NVIDIA GPUDirect RDMA technology.
+Python bindings for the cairo library
 
-https://github.com/NVIDIA/gdrcopy
+https://pycairo.readthedocs.io/
 # Available modules
 
 
-The overview below shows which GDRCopy installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which PyCairo installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using GDRCopy, load one of these modules using a `module load` command like:
+To start using PyCairo, load one of these modules using a `module load` command like:
 
 ```shell
-module load GDRCopy/2.4-GCCcore-13.2.0
+module load PyCairo/1.25.0-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*  
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GDRCopy/2.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
-|GDRCopy/2.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
+|PyCairo/1.25.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
