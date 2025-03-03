@@ -8,13 +8,13 @@ This table gives an overview of all the available software in EESSI per specific
         <tr>
             <th rowspan="3">Name</th>
             <th colspan="3">aarch64</th>
-            <th colspan="6">x86_64</th>
+            <th colspan="7">x86_64</th>
         </tr>
         </tr>
             <th colspan="3"></th>
             <th colspan="1"></th>
             <th colspan="3">amd</th>
-            <th colspan="2">intel</th>
+            <th colspan="3">intel</th>
         </tr>
         <tr>
             <th colspan="1">generic</th>
