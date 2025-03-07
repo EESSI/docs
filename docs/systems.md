@@ -113,13 +113,17 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 
 ### Spain
 
-### Barcelona Supercomputing Center
+#### Barcelona Supercomputing Center
 
 * thunder
 * arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
 This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
 * arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
 This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+
+#### Galicia Supercomputing Center (CESGA)
+
+* FinisTerrae III: [General documentation](https://cesga-docs.gitlab.io/ft3-user-guide/overview.html) | [EESSI @ FinisTerrae III](https://cesga-docs.gitlab.io/ft3-user-guide/compilers_and_dev_tools.html#eessi)
 
 ---
 
