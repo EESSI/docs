@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../img/logos/EESSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
       
 
@@ -2260,7 +2260,7 @@ Below is a simple ReFrame configuration file with minimal changes required for g
 <a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>                        <span class="p">}</span>
 <a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>                    <span class="p">],</span>
 <a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>                    <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>                        <span class="n">FEATURES</span><span class="p">[</span><span class="n">CPU</span><span class="p">]</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">CPU</span>
 <a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>                    <span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">SCALES</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
 <a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>                <span class="p">}</span>
 <a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>            <span class="p">]</span>
@@ -2386,7 +2386,7 @@ and one GPU partition) could for example look something like this:</p>
 <a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>                    <span class="s1">&#39;environs&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">],</span>
 <a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>                    <span class="s1">&#39;max_jobs&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
 <a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>                    <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>                        <span class="n">FEATURES</span><span class="p">[</span><span class="n">CPU</span><span class="p">]</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">CPU</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>                    <span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">SCALES</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
 <a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>                <span class="p">},</span>
 <a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>                <span class="p">{</span>
@@ -2406,16 +2406,16 @@ and one GPU partition) could for example look something like this:</p>
 <a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>                    <span class="p">],</span>
 <a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>                    <span class="s1">&#39;devices&#39;</span><span class="p">:</span> <span class="p">[</span>
 <a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>                        <span class="p">{</span>
-<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>                            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">DEVICE_TYPES</span><span class="p">[</span><span class="n">GPU</span><span class="p">],</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>                            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">DEVICE_TYPES</span><span class="o">.</span><span class="n">GPU</span><span class="p">,</span>
 <a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>                            <span class="s1">&#39;num_devices&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
 <a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>                        <span class="p">}</span>
 <a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>                    <span class="p">],</span>
 <a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>                    <span class="s1">&#39;features&#39;</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>                        <span class="n">FEATURES</span><span class="p">[</span><span class="n">CPU</span><span class="p">],</span>
-<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>                        <span class="n">FEATURES</span><span class="p">[</span><span class="n">GPU</span><span class="p">],</span>
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">CPU</span><span class="p">,</span>
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">GPU</span><span class="p">,</span>
 <a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>                    <span class="p">],</span>
 <a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>                    <span class="s1">&#39;extras&#39;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a>                        <span class="n">GPU_VENDOR</span><span class="p">:</span> <span class="n">GPU_VENDORS</span><span class="p">[</span><span class="n">NVIDIA</span><span class="p">],</span>
+<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a>                        <span class="n">EXTRAS</span><span class="o">.</span><span class="n">GPU_VENDOR</span><span class="p">:</span> <span class="n">GPU_VENDORS</span><span class="o">.</span><span class="n">NVIDIA</span><span class="p">,</span>
 <a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>                    <span class="p">},</span>
 <a id="__codelineno-6-47" name="__codelineno-6-47" href="#__codelineno-6-47"></a>                <span class="p">},</span>
 <a id="__codelineno-6-48" name="__codelineno-6-48" href="#__codelineno-6-48"></a>            <span class="p">]</span>
@@ -2484,8 +2484,8 @@ and one GPU partition) could for example look something like this:</p>
   <em>feature</em> (for example if GPUs are available). Feature names are standardized in the EESSI test suite in
   <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants.FEATURES</code></a>
   dictionary.
-  Typically, you want to define <code>features: [FEATURES[CPU]] + list(SCALES.keys())</code> for CPU based partitions, and
-  <code>features: [FEATURES[GPU]] + list(SCALES.keys())</code> for GPU based partitions. The first tells the EESSI test suite
+  Typically, you want to define <code>features: [FEATURES.CPU] + list(SCALES.keys())</code> for CPU based partitions, and
+  <code>features: [FEATURES.GPU] + list(SCALES.keys())</code> for GPU based partitions. The first tells the EESSI test suite
   that this partition can only run CPU-based tests, whereas second indicates that this partition can only run GPU-based
   tests. You <em>can</em> define a single partition to have <em>both</em> the CPU and GPU features (since <code>features</code> is a Python list).
   However, since the CPU-based tests will not ask your batch scheduler for GPU resources, this <em>may</em> fail on batch
@@ -2498,22 +2498,22 @@ and one GPU partition) could for example look something like this:</p>
   can be used to exclude running at certain scales on systems that would not support it. E.g. some systems might not
   support requesting multiple partial nodes, which is what the <code>1cpn_2nodes</code> (1 core per node, on two nodes) and
   <code>1cpn_4nodes</code> scales do. One could exclude these by setting e.g.
-  <code>features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1cpn_2nodes', '1cpn_4nodes']]</code>. With this
+  <code>features: [FEATURES.CPU] + [s for s in SCALES if s not in ['1cpn_2nodes', '1cpn_4nodes']]</code>. With this
   configuration setting, ReFrame will run all the scales listed in `eessi.testsuite.constants.SCALES <em>except</em>
   those two. In a similar way, one could exclude all multinode tests if one just has a single node available.</li>
 <li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.devices"><code>devices</code></a>: This field specifies information on devices (for example) present in the partition. Device types are standardized in the EESSI test suite in the <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants.DEVICE_TYPES</code></a> dictionary. This is used by the EESSI test suite to determine how many of these devices it can/should use per node.
   Typically, there is no need to define <code>devices</code> for CPU partitions.
   For GPU partitions, you want to define something like:
   <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="s1">&#39;devices&#39;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">DEVICE_TYPES</span><span class="p">[</span><span class="n">GPU</span><span class="p">],</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">DEVICE_TYPES</span><span class="o">.</span><span class="n">GPU</span><span class="p">,</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="s1">&#39;num_devices&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>  <span class="c1"># or however many GPUs you have per node</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">}</span>
 </code></pre></div></li>
-<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.extras"><code>extras</code></a>: This field specifies extra information on the partition, such as the GPU vendor. Valid fields for <code>extras</code> are standardized as constants in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants</code></a> (for example <code>GPU_VENDOR</code>). This is used by the EESSI test suite to decide if a partition can run a test that <em>specifically</em> requires a certain brand of GPU.
+<li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.extras"><code>extras</code></a>: This field specifies extra information on the partition, such as the GPU vendor. Valid fields for <code>extras</code> are standardized as constants in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py"><code>eessi.testsuite.constants</code></a> (for example <code>EXTRAS.GPU_VENDOR</code>). This is used by the EESSI test suite to decide if a partition can run a test that <em>specifically</em> requires a certain brand of GPU.
   Typically, there is no need to define <code>extras</code> for CPU partitions.
   For GPU partitions, you typically want to specify the GPU vendor, for example:
   <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="s1">&#39;extras&#39;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">GPU_VENDOR</span><span class="p">:</span> <span class="n">GPU_VENDORS</span><span class="p">[</span><span class="n">NVIDIA</span><span class="p">]</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">EXTRAS</span><span class="o">.</span><span class="n">GPU_VENDOR</span><span class="p">:</span> <span class="n">GPU_VENDORS</span><span class="o">.</span><span class="n">NVIDIA</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">}</span>
 </code></pre></div></li>
 </ul>
@@ -2782,7 +2782,7 @@ let ReFrame list the available tests:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 3, 2024 08:17:47">October 3, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 14, 2025 09:14:25">March 14, 2025</span>
   </span>
 
     
