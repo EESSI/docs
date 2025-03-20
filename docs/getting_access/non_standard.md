@@ -70,7 +70,7 @@ Notice how now that EESSI is mounted, you will need to [set up the environment](
 
 ### `orted`  wrapper script
 
-In order to get multi-node runs of software working without having EESSI available system-wide, we also had to create a small wrapper script for the `orted` command that is used by Open MPI to start processes on remote nodes. This is necessary because `mpirun` launches `orted`, which must be run in an environment in which the EESSI repository is mounted. If not, MPI startup will fail with an error like
+In order to get multi-node runs of software working without having EESSI available system-wide, you also need to create a small wrapper script for the `orted` command that is used by Open MPI to start processes on remote nodes. This is necessary because `mpirun` launches `orted`, which must be run in an environment in which the EESSI repository is mounted. If not, MPI startup may fail with an error like
 
 ```bash
 "error: execve(): orted: No such file or directory".
