@@ -39,7 +39,7 @@ and the [Software License Agreement (SLA) for NVIDIA cuDNN](https://docs.nvidia.
 do not allow for full redistribution. In EESSI, we are (currently) only allowed to
 redistribute the files needed to *run* CUDA and cuDNN software.
 
-!!! note "Full CUDA SDK or cuDNN SDK only needed to *compile* CUDA or cuDNN software"
+!!! note "A full CUDA SDK or cuDNN SDK is only needed to *compile* CUDA or cuDNN software"
     Without a full CUDA SDK or cuDNN SDK on the host system, you will still
     be able to *run* CUDA-enabled or cuDNN-enabled software from the EESSI stack,
     you just won't be able to *compile* additional CUDA or cuDNN software.
