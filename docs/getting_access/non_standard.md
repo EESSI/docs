@@ -149,7 +149,7 @@ CVMFS_UID_MAP=uid.map
 CVMFS_GID_MAP=gid.map
 
 ```
-You will need to create the files `uid.map` and `gid.map` with the respective value you will use preceded by a `*`. P.e., assuming UID 1000, set the two following files:
+You will need to create the files `uid.map` and `gid.map` with the respective value you will use preceded by a `*`. For example, assuming UID 1000, set the two following files:
 
 ```bash
     $ cat uid.map
