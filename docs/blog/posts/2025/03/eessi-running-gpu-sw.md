@@ -594,8 +594,8 @@ When the correct combination of CPU/GPU packages is pre-built on EESSI, the mean
 
 Azure offers a wide range of GPU-accelerated virtual machines, making it an excellent platform for testing EESSI's cloud readiness. The table below highlights some of the common CPU/GPU combinations available:
 
-| VM Series | CPU Type | GPU Type | CUDA Compute Capability | 
-|-----------|----------|----------|-------------------------|
+| VM Series | CPU Type | CUDA Compute Capability | GPU Type | 
+|-----------|----------|-------------------------|----------|
 | NCv3-series | Broadwell | cc 7.0 | NVIDIA Tesla V100 |
 | NCasT4_v3-series | Zen2 | cc 7.5 | NVIDIA Tesla T4 |
 | NC A100 v4-series | Zen3 | cc 8.0 | NVIDIA A100 |
