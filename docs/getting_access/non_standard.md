@@ -131,7 +131,7 @@ You can see the original blog post on how they used this solution in Deucalion [
 
 ## Via `squashfs` +  cvmfs's `shrinkwrap` utility
 
-CernVM-FS provides the Shrinkwrap utility, allowing users to create a portable snapshot of a CVMFS repository. This can be exported and distributed without the need of a CVMFS client or network access.
+CernVM-FS provides the [Shrinkwrap utility](https://cvmfs.readthedocs.io/en/stable/cpt-shrinkwrap.html), allowing users to create a portable snapshot of a CVMFS repository. This can be exported and distributed without the need of a CVMFS client or network access.
 
 To create an export of EESSI in user space, you will first need to create the config file `software.eessi.io.config`:
 
@@ -149,14 +149,16 @@ CVMFS_UID_MAP=uid.map
 CVMFS_GID_MAP=gid.map
 
 ```
-You will need to create the files `uid.map` and `gid.map` with the respective value you will use preceded by a `*`. For example, assuming UID 1000, set the two following files:
+You will need to create the files `uid.map` and `gid.map` with the respective value you will use preceded by a `*`. You will probably want to use the UID and GID of the current user, so, to set the two files:
 
 ```bash
+    $ echo '*' $(id -u $USER) > uid.map
     $ cat uid.map
-    * 1000
+    * 1001
 
+    $ echo '*' $(id -g $USER) > gid.map
     $ cat gid.map
-    * 1000
+    * 1001
 ```
 In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. Contents are:
 
@@ -195,13 +197,13 @@ entriesSrc|1|Number of file system entries processed in the source
 
 ....
 
-# This takes a long time
+# This takes a long time and space depending on how much you want to export
 ```
 
 Once completed, the contents will be available in /tmp/cvmfs. You can create an squashfs image from it:
 
 ```bash
-    sudo mksquashfs /tmp/cvmfs software.eessi.io.sqsh
+    mksquashfs /tmp/cvmfs software.eessi.io.sqsh
 
 ```
 
