@@ -212,7 +212,7 @@ This squashfs image can be mounted in any container:
 
 ```
 
-Right now its a manual process but there is work in progress towards an automated solution.
+Right now, this may seem like quite a manual process, but there is work in progress towards creating a script to automate this process.
 
 
 
