@@ -78,7 +78,7 @@ In order to get multi-node runs of software working without having EESSI availab
 
 This wrapper script must be named `orted`, and must be located in a path that is listed in `$PATH`.
 
-We placed it in `~/bin/orted`, and you can add `export PATH=$HOME/bin:$PATH` to your `~/.bashrc` login script.
+For example, it can be placed in `~/bin/orted`, and you can add `export PATH=$HOME/bin:$PATH` to your `~/.bashrc` login script.
 
 Contents of ~/bin/orted:
 
