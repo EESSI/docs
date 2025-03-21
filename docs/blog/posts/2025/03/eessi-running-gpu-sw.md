@@ -90,7 +90,7 @@ module load EESSI-extend
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
 
 # Build GROMACS module from EasyBuild
-cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader)
+cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1)
 eb --force --robot GROMACS-2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0.eb --cuda-compute-capabilities="$cc"
 
 # Load GROMACS module
@@ -142,7 +142,7 @@ module load EESSI-extend
 ./scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
 
 # Build GROMACS module from EasyBuild
-cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader)
+cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1)
 eb --force --robot GROMACS-2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0.eb --cuda-compute-capabilities="$cc"
 
 # Load GROMACS module
@@ -274,7 +274,7 @@ The most straightforward way to check GPU-enabled module is `deviceQuery` from `
 $ ml avail CUDA-Samples
 No module(s) or extension(s) found!
 
-$ cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader)
+$ cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1)
 $ eb --force --robot CUDA-Samples-12.1-GCC-12.3.0-CUDA-12.1.1.eb --cuda-compute-capabilities="$cc"
 == Temporary log file in case of crash ...
 ... 
@@ -339,7 +339,7 @@ Result = PASS
 We're also going to build `GROMACS` and `ESPResSo` with GPU support. All of this can be done in a similar way as building CUDA above, with just EESSI-extend and EasyBuild.
 
 ```
-cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader)
+cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1)
 
 eb --force --robot GROMACS-2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0.eb --cuda-compute-capabilities="$cc"
 
@@ -375,220 +375,50 @@ On Fedora, /tmp is mounted as a tmpfs with a limited size, which keeps everythin
 
 These findings led to several improvements in our installation script and documentation, providing more robust cross-distribution support for EESSI with GPU capabilities.
 
-The installation of EESSI and building the GPU-enabled software used the same approach as described in the previous section. Read more about this in the following section.
+The installation of EESSI and building the GPU-enabled software used the same approach as described in the previous section.
 
 ## Fast Deployment: Automating EESSI Installation with GPU Support on Azure
 
+<figure markdown="span">
+![EESSI Azure VM Boot Diagram](eessi-azure-boot-diagram.webp){width=100%}
+</figure>
+
+The image above depicts the complete installation and execution workflow with specific timing points at each stage of the process. Let's walk through these timing points:
+
+**VM Provisioning and Setup**:
+
+  - **bootTime1**: VM is provisioned and booted, ready for access (varies from **seconds to minutes** based on numerous factors like VM size, provider load, and image type)
+  - **bootTime2**: SSH connection established to the VM (typically takes only **seconds** once the VM is running)
+  - **bootTime3**: NVIDIA drivers installation complete (**seconds** if drivers are already installed **or several minutes** if they need to be installed and configured)
+  - **bootTime4**: EESSI installation scripts downloaded and ready to execute (just **seconds** to download and prepare the install script)
+
+**Running install.sh**:
+
+  - **installTime1**: Best case scenario - CUDA module is already available on EESSI CVMFS, allowing immediate access to GPU-enabled software (this took only **12-30 seconds** on **Azure NC_A100** with a single GPU with compute capability 8.0 and on **ND_A100** with 8 GPUs)
+  - **installTime2**: CUDA modules need local installation - each CUDA download is approximately 4GB (we install both CUDA 12.1.1 and 12.4.0), adding significant time but establishing GPU capability (installing a single CUDA version takes around **5 minutes**)
+
+**Running run-demo.sh**:
+
+  - **runTime1**: Best case scenario - The scientific module (GROMACS/ESPResSo) is available on EESSI CVMFS and can be loaded and run immediately (module loading time is minimal, **around 2 seconds**)
+  - **runTime2**: Module not found, but CUDA is available in host_injections - only module building is required (building **GROMACS** takes approximately **30 minutes** even without running tests!)
+  - **runTime3**: Most time-intensive scenario - Module not found and CUDA not available in host_injections, requiring **CUDA installation** to fill the stubs from CVMFS CUDA Lmod module (similar to installTime2, **about 5 minutes** per CUDA version), followed by module building
+
 Although automating the installation process is not a primary objective of the EESSI project itself, it becomes crucial for our specific goal of deploying EESSI on Azure. Cloud services are billed by usage time, so minimizing the setup duration directly reduces costs. Being able to quickly spin up a machine and immediately begin processing scientific data represents a significant economic and practical benefit.
 
-To address this need, we've developed a script that automates the essential installation process in a single operation. The script handles:
+To streamline this process, we've developed installation and demonstration scripts that provide a common approach for testing on various systems. The scripts handle EESSI installation, GPU library linking, CUDA installation when required, and verification of GPU functionality.
 
-1. EESSI native installation (CernVM-FS setup)
-2. GPU library linking for EESSI
-3. Optional CUDA instalation, when required
-4. Verification of GPU functionality using deviceQuery
+For a complete implementation of these scripts, visit the [EESSI GPU demo repository](https://github.com/EESSI/eessi-demo). This repository contains everything needed to set up and test GPU-enabled scientific software on EESSI, including detailed instructions for various scenarios.
 
+You can set up an Azure VM with full GPU support in just a few commands:
 
-We are not including `NVIDIA driver installation` step in this script!
-
-We are using the Azure Nvidia VM image and GPU driver extension, so the Nvidia drivers are installed for us the first time we SSH into the VM. After that, we run our script `./install.sh`.
-
-### install.sh
-
-!!! note "EESSI_SKIP_REMOVED_MODULES_CHECK workaround."
-    We need to set "export EESSI_SKIP_REMOVED_MODULES_CHECK=1" as a quick workaround 
-    because GPU software has been moved to an accelerator-specific subdirectory recently. 
-
-In the install script we presume that CUDA and CUDA-Samples modules are always build together.
-This is the reason we only check for CUDA-Samples in the script:
-`if module is-avail CUDA-Samples; then`
-
-
-```bash
-#!/usr/bin/env bash
-set -e
-umask 002
-
-# Record start time
-start_time=$(date +%s)
-
-# Install EESSI
-sudo mkdir -p /opt/eessi
-sudo chmod 777 /opt/eessi
-# Taken from: https://github.com/EESSI/eessi-demo/blob/main/scripts/install_cvmfs_eessi.sh
-echo "Installing EESSI"
-sudo ./scripts/install_cvmfs_eessi.sh
-
-# Source EESSI
-echo "Sourcing lmod"
-source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
-module load EESSI
-export EESSI_SKIP_REMOVED_MODULES_CHECK=1
-
-# Link DRIVER libraries
-echo "Linking NVIDIA drivers to host_libraries"
-# Once the changes are merged, use the line below from upstream.
-# /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/link_nvidia_host_libraries.shi
-./scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
-
-# Check if CUDA-Samples module is available
-echo "Checking availablity of CUDA-Samples"
-module load EESSI-extend
-
-if module is-avail CUDA-Samples; then
-    echo "CUDA-Samples module available, no need to build it."
-else
-    echo "CUDA-Samples module not found. Need to build it from scratch."
-
-    # Install CUDA to host_injections.
-    echo "Installing CUDA 12.1.1 to host_injections"
-    # Once the changes are merged, use the line below from upstream.
-    # /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
-    ./scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
-
-    # Build CUDA-Samples from Easyconfig via EESSI-extend
-    cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader)
-    eb --force --robot CUDA-Samples-12.1-GCC-12.3.0-CUDA-12.1.1.eb --cuda-compute-capabilities="$cc"
-fi
-
-module load CUDA-Samples
-deviceQuery
-
-# Calculate and display execution time
-end_time=$(date +%s)
-execution_time=$((end_time - start_time))
-echo "Time to Science: $execution_time seconds"
 ```
-
-### run-demo.sh
-
-We've also prepared a simple demonstration of running GROMACS and ESPResSo on both CPU and GPU 
-to validate that we're indeed running the GPU-enabled versions of these packages.
-
-The script is called `run-demo.sh`:
-
-```bash
-#!/usr/bin/env bash
-set -e
-
-# Record start time
-start_time=$(date +%s)
-
-# Source 
-echo "Sourcing lmod"
-source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
-module load EESSI
-module load EESSI-extend
-export EESSI_SKIP_REMOVED_MODULES_CHECK=1
-
-cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader)
-
-echo "Checking availablity of ESPResSo/4.2.2-foss-2023a"
-if module is-avail ESPResSo/4.2.2-foss-2023a ; then
-    echo "ESPResSo/4.2.2-foss-2023a module available, no need to build it."
-else
-    echo "No ESPResSo/4.2.2-foss-2023a module found, building from scratch."
-    eb --force --robot ESPResSo-4.2.2-foss-2023a.eb --skip-test-step
-fi
-
-echo "Checking availablity of ESPResSo/4.2.2-foss-2023a-CUDA-12.1.1"
-if module is-avail ESPResSo/4.2.2-foss-2023a-CUDA-12.1.1 ; then
-    echo "ESPResSo/4.2.2-foss-2023a-CUDA-12.1.1 module available, no need to build it."
-else
-    echo "No ESPResSo/4.2.2-foss-2023a-CUDA-12.1.1 module found, building from scratch."
-    eb --force --robot ESPResSo-4.2.2-foss-2023a-CUDA-12.1.1.eb --cuda-compute-capabilities="$cc" --skip-test-step
-fi
-
-echo "Checking availablity of GROMACS/2024.4-foss-2023b"
-if module is-avail GROMACS/2024.4-foss-2023b ; then
-    echo "GROMACS/2024.4-foss-2023b module available, no need to build it."
-else
-    echo "No GROMACS/2024.4-foss-2023b module found, building from scratch."
-    eb --force --robot GROMACS.2024.4-foss-2023b.eb --skip-test-step
-fi
-
-echo "Checking availablity of GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0"
-if module is-avail GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0 ; then
-    echo "GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0 module available, no need to build it."
-else
-    echo "No GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0 module found, building from scratch."
-    eb --force --robot GROMACS-2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0.eb --cuda-compute-capabilities="$cc" --skip-test-step
-fi
-
-# Calculate and display execution time
-end_time=$(date +%s)
-execution_time=$((end_time - start_time))
-echo "Time to Science: $execution_time seconds"
-
-
-echo "Running TESTS:"
-
-cd GROMACS
-echo "GROMACS CPU"
-module load GROMACS/2024.4-foss-2023b
-./run-cpu.sh || echo "ERROR!"
-./run-cpu.sh || echo "ERROR!"
-./run-cpu.sh || echo "ERROR!"
-module unload GROMACS/2024.4-foss-2023b
-
-echo "GROMACS GPU"
-module load GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0
-./run-gpu.sh || echo "ERROR!"
-./run-gpu.sh || echo "ERROR!"
-./run-gpu.sh || echo "ERROR!"
-module unload GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0
-cd ..
-
-cd ESPResSo
-echo "ESPResSo CPU"
-module load ESPResSo/4.2.2-foss-2023a
-module load matplotlib/3.7.2-gfbf-2023a
-module load tqdm/4.66.1-GCCcore-12.3.0
-module load mpl-ascii/0.10.0-gfbf-2023a
-./run-cpu.sh || echo "ERROR!"
-./run-cpu.sh || echo "ERROR!"
-./run-cpu.sh || echo "ERROR!"
-module unload ESPResSo/4.2.2-foss-2023a
-
-echo "ESPResSo GPU"
-module load ESPResSo/4.2.2-foss-2023a-CUDA-12.1.1
-module load matplotlib/3.7.2-gfbf-2023a
-module load tqdm/4.66.1-GCCcore-12.3.0
-module load mpl-ascii/0.10.0-gfbf-2023a
-./run-gpu.sh || echo "ERROR!"
-./run-gpu.sh || echo "ERROR!"
-./run-gpu.sh || echo "ERROR!"
-module unload ESPResSo/4.2.2-foss-2023a-CUDA-12.1.1
-cd ..
-```
-
-It will build the GROMACS and ESPResSo modules if necessary, then run the provided examples from the [EESSI-demo repository](https://github.com/EESSI/eessi-demo) three times on CPU and three times on GPU.
-
-For convenience and practical purposes, all the scripts for installation and demo runs are available in a single package at the [EESSI GPU demo repository](https://github.com/EESSI/eessi-gpu-demo).
-
-You can set up an Azure VM like this:
-```
-git clone https://github.com/EESSI/eessi-gpu-demo.git
-cd eessi-gpu-demo
+git clone https://github.com/EESSI/eessi-demo.git
+cd eessi-demo/gpu
 ./install.sh
-./run-demo.sh
+
+./run-demo-ESPResSo-4.2.2-foss-2023a-CUDA-12.1.1.sh
+./run-demo-GROMACS-2024.4-foss-2023b-CUDA-12.4.0.sh
 ```
-
-## Reflection on Performance Metrics - Mean-Time-to-Science
-
-We tracked the time from VM provisioning to running the first GPU-enabled package (CUDA-Samples). This "mean-time-to-science" measurement shows how quickly researchers can begin productive work using EESSI on cloud resources.
-
-After provisioning a Nvidia-enabled VM in Azure, EESSI can be up and running in as little as 15 seconds.
-
-However, it takes about 1-2 minutes for the VM to install the drivers, and another 9-10 minutes for the EESSI installation with full CUDA support, including support for building new GPU-enabled software if CUDA is not found in EESSI.
-
-After CUDA installation, we needed to build the GPU-enabled version of GROMACS for our demo, which took about 25 minutes (without tests). The CPU-only version ran the demo in 5m46s, while the GPU-enabled version completed it in just 1m3s.
-
-Sometimes the CPU-only version of GROMACS crashes with ERROR: `PME tuning was still active`, which has been documented in the [GROMACS paper](https://arxiv.org/pdf/2407.03148) section `4.5 Performance Counter Handling`.
-
-We also performed an equivalent test using ESPResSo. The GPU-enabled version took about 6 minutes to build (without tests). The CPU-only version ran the demo in 2m3s, while the GPU-enabled version completed it in just 9s.
-
-When the correct combination of CPU/GPU packages is pre-built on EESSI, the mean-time-to-science can be as fast as 15 seconds from SSH connection to running GPU-enabled software on Azure.
 
 ## Scaling to the Cloud: EESSI on Azure GPU Instances
 
@@ -608,6 +438,7 @@ Azure offers a wide range of GPU-accelerated virtual machines, making it an exce
 | NVads V710 v5-series | Zen4 | N/A | AMD Radeon Pro V710 |
 
 The CUDA Compute Capability is particularly important as it determines which CUDA features and instructions are available to software. For example:
+
 - Capability 7.0-7.5 (V100, T4): Supports Tensor Cores (for AI acceleration), independent thread scheduling
 - Capability 8.0-8.6 (A100, A10): Adds third-generation Tensor Cores, Sparse Matrix operations, and faster FP16 computation
 - Capability 9.0 (H100): Introduces fourth-generation Tensor Cores, Transformer Engine, and significantly improved FP8 performance
@@ -623,11 +454,41 @@ These target combinations allow us to cover a significant portion of the hardwar
 
 In the course of our testing, we encountered an issue where `nvidia-smi` was not available on certain A10 Graphics cards, which led us to use T4 GPUs instead for some of the testing. This is an important consideration when selecting Azure VM types for GPU computing with EESSI.
 
+## Reflection on Performance Metrics - Mean-Time-to-Science
+
+We tracked the time from VM provisioning to running the first GPU-enabled package to establish our "mean-time-to-science" metric. This measurement shows how quickly researchers can begin productive work using EESSI on various hardware configurations.
+
+Here's a breakdown of our findings across different hardware platforms:
+
+| Hardware Configuration | Scenario | Mean-Time-to-Science |
+|------------------------|----------|----------------------|
+| Azure NC_A100 (single A100, CC 8.0) | Scenario 1 | ~15 seconds |
+| Azure ND_A100 (8x A100, CC 8.0) | Scenario 1 | ~30 seconds |
+| Azure NC_A100 (single A100, CC 8.0) | Scenario 2 | ~10 minutes |
+| Azure NC_A100 (single A100, CC 8.0) | Scenario 3 | ~35 minutes |
+| Desktop PC with RTX 3060 (CC 8.6) | Scenario 3 | ~35 minutes |
+| Desktop PC with RTX 2060 (CC 7.5) | Scenario 3 | ~40 minutes |
+
+Key observations from our data:
+
+1. **Optimal Scenario**: When the correct combination of CPU/GPU packages is pre-built on EESSI (Scenario 1), the mean-time-to-science can be as fast as 15 seconds from SSH connection to running GPU-enabled software on Azure.
+
+2. **Software Installation Overheads**: CUDA installation adds approximately 10 minutes, while building a complex scientific application like GROMACS adds about 25 minutes.
+
+3. **Performance Gains**: The GPU-accelerated versions consistently deliver 5-13x speedups compared to CPU-only versions. Being able to run GPU enabled packages on correct hardware allows huge computational boost.
+
+4. **Hardware Differences**: Enterprise GPUs like the NVIDIA A100 deliver the best performance, but consumer GPUs like the RTX 3060 and even the RTX 2060 can provide comparable speedups for scientific workloads.
+
+
+Interesting finding was related to the GPU version of GROMACS, which occasionally crashes with the error: `PME tuning was still active`. This has been documented in the [GROMACS paper](https://arxiv.org/pdf/2407.03148) section `4.5 Performance Counter Handling`.
+
+These metrics confirm that the time investment for setting up EESSI with GPU support is minimal compared to the performance benefits gained, especially when pre-built packages are available. Even in scenarios requiring custom builds, the setup time (20-40 minutes) is quickly balanced by the significant runtime speedups for scientific applications.
+
 ## Conclusion
 
 The integration of GPU support in EESSI significantly enhances scientific computing capabilities while maintaining the project's core principles of compatibility and ease of use. By providing a structured approach to handling GPU dependencies and offering tools for custom builds, EESSI enables researchers to leverage GPU acceleration across a variety of environments—from desktop workstations to cloud infrastructure.
 
-Our testing on consumer hardware and Azure VMs demonstrates the flexibility of this approach, while our automation scripts reduce the mean-time-to-science to just minutes. The performance improvements are substantial, with GPU-accelerated software running 5-10 times faster than CPU-only versions in our benchmarks.
+Our testing on consumer hardware and Azure VMs demonstrates the flexibility of this approach, while our automation scripts reduce the mean-time-to-science to just minutes. The performance improvements are substantial, with GPU-accelerated software running 5-13 times faster than CPU-only versions in our benchmarks.
 
 As the EESSI project continues to evolve, we plan to expand our pre-built offerings for common CPU/GPU combinations and improve the tooling for custom builds. This will further reduce barriers to entry for GPU-accelerated scientific computing and enable researchers to focus on their science rather than software configuration.
 
