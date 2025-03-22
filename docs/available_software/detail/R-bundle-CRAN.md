@@ -48,10 +48,10 @@ module load R-bundle-CRAN/2024.06-foss-2023b
 
 *(This data was automatically generated on {{ generated_time }})*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R-bundle-CRAN/2024.06-foss-2023b|x|x|x|x|x|x|x|x|x|x|
-|R-bundle-CRAN/2023.12-foss-2023a|x|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|R-bundle-CRAN/2024.06-foss-2023b|x|x|x|-|x|x|x|x|x|x|x|
+|R-bundle-CRAN/2023.12-foss-2023a|x|x|x|-|x|x|x|x|x|x|x|
 
 
 ### R-bundle-CRAN/2024.06-foss-2023b
