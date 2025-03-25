@@ -89,6 +89,12 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 
 * Aristotle: [General documentation](https://hpc.it.auth.gr/nodes-summary_en/) | [EESSI @ Aristotle](https://hpc.it.auth.gr/software/eessi/)
 
+### Luxembourg
+
+#### University of Luxembourg
+
+* ULHPC platform: [General documentation](https://hpc-docs.uni.lu/) | [EESSI @ ULHPC](https://hpc-docs.uni.lu/software/eessi/)
+
 ### Netherlands
 
 #### SURF
