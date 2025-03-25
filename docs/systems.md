@@ -115,6 +115,7 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 
 #### Barcelona Supercomputing Center
 
+* MareNostrum 5: [General documentation](https://www.bsc.es/supportkc/)
 * thunder
 * arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
 This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
