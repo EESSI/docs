@@ -12,7 +12,7 @@ It's the question every computational scientist asks when setting up a new envir
 
 In the high-stakes world of scientific computing, every minute spent configuring software is a minute not spent on discovery. That's why we've developed a metric we call **Mean-Time-To-Science** – the total time from system access to running your first scientific computation. By optimizing this crucial metric, EESSI's GPU support transforms the traditional hours-long setup process into a seamless experience that keeps researchers focused on their science.
 
-Although EESSI aims to provide pre-built software for all common HPC architectures, GPU support introduces multiplicative requirements for software builds. Each GPU compute capability (e.g., CC7.5, CC8.0, CC8.6) needs to be combined with each CPU architecture (zen2, zen3, generic x86_64), creating a large matrix of possible configurations. While it's possible to pre-build all software for all possible CPU/GPU combinations, testing all the configuration is not possible - the combination might not exist in the real-world.
+Although EESSI aims to provide pre-built software for all common HPC architectures, GPU support introduces multiplicative requirements for software builds. Each GPU compute capability (e.g., CC7.5, CC8.0, CC8.6) needs to be combined with each CPU architecture (zen2, zen3, generic x86_64), creating a large matrix of possible configurations. While it's possible to pre-build all software for all CPU/GPU combinations, testing all the configurations is not - the combination of CPU/GPU might not even exist in the real-world.
 
 To address this challenge, we're developing additional documentation highlighting which CPU/GPU combinations are already built into EESSI. Additionally, we provide the tools and process for users to build any EasyBuild-enabled software on EESSI, allowing them to create architecture-specific builds for their particular needs when a specific combination isn't available in the standard distribution.
 
@@ -65,7 +65,7 @@ but you need to build and run software which is not in EESSI CVMFS.
 
 In this case, you'll need to install CUDA libraries locally ([NVIDIA's licensing requirements](https://docs.nvidia.com/cuda/eula/index.html)) into the `host_injections` directory where the current CUDA module lib stubs point to.
 
-Check the provided script in the docs: [full CUDA installation](https://www.eessi.io/docs/site_specific_config/gpu/#installing-full-cuda-sdk-optional)
+Check the provided script in the docs: [full CUDA installation](../../../../site_specific_config/gpu.md#installing-full-cuda-sdk-optional)
 
 We'll use `GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0` again as our example.
 
@@ -185,7 +185,7 @@ This driver is available through Ubuntu's standard package repositories:
 sudo apt install nvidia-driver-550
 ```
 
-The installation process followed the [native installation method](https://www.eessi.io/docs/getting_access/native_installation/) outlined in the EESSI documentation.
+The installation process followed the [native installation method](../../../../getting_access/native_installation.md) outlined in the EESSI documentation.
 After installing the NVIDIA drivers, we used the EESSI-provided scripts to [link the driver libraries](../../../../site_specific_config/gpu.md#exposing-nvidia-gpu-drivers) properly.
 
 As part of this initiative, we updated the NVIDIA library linking script - [link_nvidia_host_libraries.sh](https://github.com/EESSI/software-layer/blob/2023.06-software.eessi.io/scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh) 
@@ -199,7 +199,7 @@ One interesting edge-case we encountered was on Desktop Ubuntu-based systems whe
 
 After that, we should be able to load and run GPU enabled software from EESSI.
 
-When we [load the EESSI environment](https://www.eessi.io/docs/using_eessi/setting_up_environment/#loading-an-eessi-environment-module)
+When we [load the EESSI environment](../../../../using_eessi/setting_up_environment.md#loading-an-eessi-environment-module)
 and show available modules, we found:
 
 ```
@@ -243,8 +243,8 @@ $ ml avail ESPResSo
 
 ```
 
-This means we have to opt for Scenario 3 and build from source with GPU enabled, which is straightforward with the provided scripts and [EESSI-extend](https://www.eessi.io/docs/using_eessi/eessi-extend/).
-To build GPU-enabled software, we first need a [full CUDA installation](https://www.eessi.io/docs/site_specific_config/gpu/#installing-full-cuda-sdk-optional).
+This means we have to opt for Scenario 3 and build from source with GPU enabled, which is straightforward with the provided scripts and [EESSI-extend](../../../../using_eessi/building_on_eessi.md).
+To build GPU-enabled software, we first need a [full CUDA installation](../../../../site_specific_config/gpu.md#installing-full-cuda-sdk-optional).
 
 ```
 $ ml load EESSI-extend
