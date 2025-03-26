@@ -1,0 +1,2760 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/blog/2025/03/24/gpu-support-in-eessi/">
+      
+      
+        <link rel="prev" href="../../../02/10/integration-efp/">
+      
+      
+      
+      <link rel="icon" href="../../../../../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>GPU Support in EESSI: From Zero to Science in Seconds - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    
+      <link rel="stylesheet" href="../../../../../available_software/css/style_table.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gpu-support-in-eessi-from-zero-to-science-in-seconds" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../../../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GPU Support in EESSI: From Zero to Science in Seconds
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../../../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../filesystem_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Filesystem layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../compatibility_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compatibility layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../software_layer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../software_layer/cpu_targets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Supported CPU targets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Available software and repositories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Available software and repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../available_software/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Repositories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../repositories/software.eessi.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../repositories/riscv.eessi.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RISC-V
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../repositories/pilot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pilot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../repositories/dev.eessi.io/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Installation and configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting_access/is_eessi_accessible/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Is EESSI already installed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting_access/native_installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Native
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting_access/eessi_container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Windows and macOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Windows and macOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting_access/eessi_wsl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows with WSL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../getting_access/eessi_limactl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    macOS with Lima
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuring EESSI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../site_specific_config/host_injections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to configure EESSI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../site_specific_config/gpu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GPU support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../site_specific_config/lmod_hooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom LMOD hooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Basic usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../using_eessi/setting_up_environment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set up environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../using_eessi/basic_commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../using_eessi/eessi_demos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../using_eessi/eessi_in_ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EESSI in CI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../filesystem_layer/stratum1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up your Stratum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../using_eessi/building_on_eessi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software with EESSI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Test suite
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test suite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../test-suite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../test-suite/installation-configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation & configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../test-suite/ReFrame-configuration-file/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ReFrame configuration file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../test-suite/usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../test-suite/available-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../test-suite/writing-portable-tests/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../test-suite/release-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Release notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Known issues and workarounds
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Known issues and workarounds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../known_issues/eessi-2023.06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v2023.06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Adding software to EESSI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Adding software to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../adding_software/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For contributors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            For contributors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../adding_software/contribution_policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contribution policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../adding_software/opening_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open PR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../adding_software/debugging_failed_builds/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../adding_software/adding_development_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For maintainers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            For maintainers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../bot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BTD bot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../adding_software/building_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../adding_software/deploying_software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../software_layer/build_nodes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community and support
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Community and support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../meetings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Meetings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../talks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Talks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../systems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systems where EESSI is available
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running GPU software - scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running GPU software - scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scenario_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario No.1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario No.2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scenario_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scenario No.3
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop_" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bringing HPC to the Scientist's Desktop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bringing HPC to the Scientist&#39;s Desktop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-eessi-with-nvidia-rtx-2060-on-linux-mint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing EESSI with NVIDIA RTX 2060 on Linux Mint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-eessi-with-nvidia-rtx-3060-on-fedora-and-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing EESSI with Nvidia RTX 3060 on Fedora and Ubuntu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fast-deployment-automating-eessi-installation-with-gpu-support-on-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fast Deployment: Automating EESSI Installation with GPU Support on Azure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaling-to-the-cloud-eessi-on-azure-gpu-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling to the Cloud: EESSI on Azure GPU Instances
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-on-performance-metrics-mean-time-to-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reflection on Performance Metrics - Mean-Time-to-Science
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/1187034?v=4" alt="Pavel Grochal">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Pavel Grochal
+                        
+                      </strong>
+                      <br>
+                      Inuits
+                    </span>
+                  </div>
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/9018134?v=4" alt="Anthony Beerens">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Anthony Beerens
+                        
+                      </strong>
+                      <br>
+                      Inuits
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-03-24 00:00:00+00:00" class="md-ellipsis">March 24, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              17 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+  
+  
+
+
+<h1 id="gpu-support-in-eessi-from-zero-to-science-in-seconds">GPU Support in EESSI: From Zero to Science in Seconds<a class="headerlink" href="#gpu-support-in-eessi-from-zero-to-science-in-seconds" title="Permanent link">&para;</a></h1>
+<p>"How long until I can run my simulation?" </p>
+<p>It's the question every computational scientist asks when setting up a new environment. With GPU-accelerated EESSI, the answer might surprise you: as little as 15 seconds from login to launching your first computation.</p>
+<p>In the high-stakes world of scientific computing, every minute spent configuring software is a minute not spent on discovery. That's why we've developed a metric we call <strong>Mean-Time-To-Science</strong> – the total time from system access to running your first scientific computation. By optimizing this crucial metric, EESSI's GPU support transforms the traditional hours-long setup process into a seamless experience that keeps researchers focused on their science.</p>
+<p>Although EESSI aims to provide pre-built software for all common HPC architectures, GPU support introduces multiplicative requirements for software builds. Each GPU compute capability (e.g., CC7.5, CC8.0, CC8.6) needs to be combined with each CPU architecture (zen2, zen3, generic x86_64), creating a large matrix of possible configurations. While it's possible to pre-build all software for all CPU/GPU combinations, testing all the configurations is not - the combination of CPU/GPU might not even exist in the real-world.</p>
+<p>To address this challenge, we're developing additional documentation highlighting which CPU/GPU combinations are already built into EESSI. Additionally, we provide the tools and process for users to build any EasyBuild-enabled software on EESSI, allowing them to create architecture-specific builds for their particular needs when a specific combination isn't available in the standard distribution.</p>
+<!-- more -->
+
+<h2 id="scenarios">Running GPU software - scenarios<a class="headerlink" href="#scenarios" title="Permanent link">&para;</a></h2>
+<figure>
+<img alt="EESSI GPU Workflow" src="../../eessi-gpu-workflow.webp" width="100%" />
+</figure>
+<p>There are 3 possible scenarios when you want to run GPU-enabled software via EESSI, as pictured in the image above.
+Each scenario requires different amounts of time to execute. 
+This leads us to establish a new metric: <strong>Mean-Time-To-Science</strong> - the time it takes from setting up your environment to running your first scientific computation.</p>
+<p>Those following scenarios are simplified version and should serve as high overview and general example to follow.
+Exact install script used in our tests is stated at the end of this blogpost.</p>
+<h3 id="scenario_1">Scenario No.1<a class="headerlink" href="#scenario_1" title="Permanent link">&para;</a></h3>
+<p>Both CUDA and the required MODULE are already built for your CPU and GPU architecture.
+In our example, we'll use GROMACS as the module.</p>
+<p>You can load all the dependencies just by loading the GROMACS module.
+We just need to ensure we load the correct module built with CUDA support.
+We'll use <code>GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0</code> as our example:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># Scenario 1
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># Install EESSI
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a># https://github.com/EESSI/eessi-demo/blob/main/scripts/install_cvmfs_eessi.sh
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>./install_cvmfs_eessi.sh
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a># Load EESSI
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a># Link the NVIDIA host libraries to host_injections
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>./scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a># Load GROMACS module
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>module load GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a># Run GROMACS
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>gmx mdrun -s ion_channel.tpr -maxh 0.50 -resethway -noconfout -nsteps 10000 -g logfile
+</code></pre></div>
+<strong>Mean-Time-To-Science</strong> ~= <strong><em>20s</em></strong></p>
+<h3 id="scenario_2">Scenario No.2<a class="headerlink" href="#scenario_2" title="Permanent link">&para;</a></h3>
+<p>CUDA module is provided by EESSI, 
+but you need to build and run software which is not in EESSI CVMFS.</p>
+<p>In this case, you'll need to install CUDA libraries locally (<a href="https://docs.nvidia.com/cuda/eula/index.html">NVIDIA's licensing requirements</a>) into the <code>host_injections</code> directory where the current CUDA module lib stubs point to.</p>
+<p>Check the provided script in the docs: <a href="../../../../../site_specific_config/gpu/#installing-full-cuda-sdk-optional">full CUDA installation</a></p>
+<p>We'll use <code>GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0</code> again as our example.</p>
+<div class="admonition note">
+<p class="admonition-title">install_cuda_* WORK IN PROGRESS !</p>
+<p>At the time of writing, there are currently 2 scripts used to install CUDA libraries to <code>host_injections</code>:</p>
+<ul>
+<li>
+<p>Older: <code>install_cuda_host_injections.sh</code> which installs only one selected CUDA version (CUDA-12.1.1 in our examples)</p>
+</li>
+<li>
+<p>Newer: <code>install_cuda_and_libraries.sh</code> which uses Easystacks and will be the preferred method for installing CUDA to <code>host_injections</code></p>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">This blogpost example:</p>
+<p>Since it is currently faster to run: <code>install_cuda_host_injections.sh</code>,
+we are currently using it in our examples.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># Scenario 2
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># Install EESSI
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># https://github.com/EESSI/eessi-demo/blob/main/scripts/install_cvmfs_eessi.sh
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>./install_cvmfs_eessi.sh
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a># Load EESSI and EESSI-extend
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>module load EESSI-extend
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a># Link the NVIDIA host libraries to host_injections
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>./scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a># Install CUDA to host_injections
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a># Build GROMACS module from EasyBuild
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1)
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>eb --force --robot GROMACS-2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0.eb --cuda-compute-capabilities=&quot;$cc&quot;
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a># Load GROMACS module
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>module load GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a># Run GROMACS
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>gmx mdrun -s ion_channel.tpr -maxh 0.50 -resethway -noconfout -nsteps 10000 -g logfile
+</code></pre></div>
+<p><strong>Mean-Time-To-Science</strong> ~= <strong><em>10 minutes</em></strong> (CUDA Download + Installation)</p>
+<p><strong>Mean-Time-To-Science (GROMACS)</strong> ~= <strong><em>25 minutes</em></strong> (GROMACS Build without Tests)</p>
+<h3 id="scenario_3">Scenario No.3<a class="headerlink" href="#scenario_3" title="Permanent link">&para;</a></h3>
+<p>CUDA module is missing - This is an unlikely scenario, but we're including it for completeness.</p>
+<p>In this scenario, we need to install CUDA libraries and build the module ourselves. 
+Then we need to build our scientific module.</p>
+<p>This scenario is mostly similar to the second one, but we need to build the CUDA lmod module as an additional step.
+This is also the most universal way to run EESSI modules. You can run anything which can be built by EasyBuild!</p>
+<p>In this case, you'll need to install CUDA libraries and the lmod module locally (with a tweaked script).</p>
+<p>We'll use <code>GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0</code> again as our example.</p>
+<div class="admonition note">
+<p class="admonition-title">This blogpost example:</p>
+<p>We're using a slightly modified version of <code>install_cuda_host_injections.sh</code> 
+in our examples for faster execution.</p>
+<p>This version doesn't discard the lmod .lua module
+but includes it to correct PATH which EESSI recognize. 
+(remove <code>--installpath-modules=${tmpdir}</code> in the script.)</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># Scenario 3
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a># Install EESSI
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a># https://github.com/EESSI/eessi-demo/blob/main/scripts/install_cvmfs_eessi.sh
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>./install_cvmfs_eessi.sh
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a># Load EESSI and EESSI-extend
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>module load EESSI-extend
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a># Link the NVIDIA host libraries to host_injections
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>./scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a># Install CUDA to host_injections
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a># /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a># We are using modified version of this script, which doesn&#39;t use `--installpath-modules=${tmpdir}`
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>./scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a># Build GROMACS module from EasyBuild
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1)
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>eb --force --robot GROMACS-2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0.eb --cuda-compute-capabilities=&quot;$cc&quot;
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a># Load GROMACS module
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>module load GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a># Run GROMACS
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>gmx mdrun -s ion_channel.tpr -maxh 0.50 -resethway -noconfout -nsteps 10000 -g logfile
+</code></pre></div>
+<p><strong>Mean-Time-To-Science</strong> ~= <strong><em>10 minutes</em></strong> (CUDA Download + Installation)</p>
+<p><strong>Mean-Time-To-Science (GROMACS)</strong> ~= <strong><em>25 minutes</em></strong> (GROMACS Build without Tests) </p>
+<h2 id="desktop_">Bringing HPC to the Scientist's Desktop<a class="headerlink" href="#desktop_" title="Permanent link">&para;</a></h2>
+<p>To demonstrate EESSI's flexibility, we developed and tested the installation process on consumer-grade gaming PCs 
+equipped with NVIDIA RTX 2060 and NVIDIA RTX 3060 GPUs, running several operating systems. </p>
+<h3 id="testing-eessi-with-nvidia-rtx-2060-on-linux-mint">Testing EESSI with NVIDIA RTX 2060 on Linux Mint<a class="headerlink" href="#testing-eessi-with-nvidia-rtx-2060-on-linux-mint" title="Permanent link">&para;</a></h3>
+<p>Our first test system was equipped with an NVIDIA RTX 2060 GPU running Linux Mint (Ubuntu-based). </p>
+<p>The <a href="https://www.nvidia.com/en-gb/geforce/graphics-cards/compare/?section=compare-20">NVIDIA RTX 2060</a> 
+features 1,920 CUDA cores, 6GB of GDDR6 memory and CUDA Compute Capability 7.5.
+Despite being marketed for gaming, this GPU is capable of running many scientific workloads. </p>
+<p>For optimal performance with the NVIDIA RTX 2060, we installed NVIDIA driver version 550, which provides support for CUDA 12.x.
+This driver is available through Ubuntu's standard package repositories:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo apt install nvidia-driver-550
+</code></pre></div>
+<p>The installation process followed the <a href="../../../../../getting_access/native_installation/">native installation method</a> outlined in the EESSI documentation.
+After installing the NVIDIA drivers, we used the EESSI-provided scripts to <a href="../../../../../site_specific_config/gpu/#exposing-nvidia-gpu-drivers">link the driver libraries</a> properly.</p>
+<p>As part of this initiative, we updated the NVIDIA library linking script - <a href="https://github.com/EESSI/software-layer/blob/2023.06-software.eessi.io/scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh">link_nvidia_host_libraries.sh</a> 
+to better handle edge-cases and improve maintainability. The changes are available in this <a href="https://github.com/EESSI/software-layer/pull/922">Pull Request</a>.</p>
+<p>One interesting edge-case we encountered was on Desktop Ubuntu-based systems where NVIDIA also installs i386 libraries for compatibility with certain games and frameworks. These i386 libraries caused errors in the linking script, so we implemented filtering to exclude them as they aren't needed for scientific computing. The updated script now properly identifies and links only the required x86_64 libraries. </p>
+<figure>
+<img alt="steam-installer" src="../../steam-installer.webp" width="100%" />
+</figure>
+<p>After that, we should be able to load and run GPU enabled software from EESSI.</p>
+<p>When we <a href="../../../../../using_eessi/setting_up_environment/#loading-an-eessi-environment-module">load the EESSI environment</a>
+and show available modules, we found:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>EESSI/2023.06 loaded successfully
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>$ ml avail CUDA
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>No module(s) or extension(s) found!
+</code></pre></div>
+<p>Unfortunately, there are no CUDA modules for our CPU architecture
+(<em>generic</em> <em>x86_64</em> CPU - Intel(R) Core(TM) i5-3550 CPU @ 3.30GHz) 
+at the time of writing this blogpost.</p>
+<p>For demonstration purposes, we've chosen <strong>GROMACS</strong> and <strong>ESPResSo</strong> to showcase GPU-enabled module speedup with properly compiled packages, but they are only available for CPU.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$ ml avail GROMACS
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>--- /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/generic/modules/all ---
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>   GROMACS/2024.1-foss-2023b
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>   GROMACS/2024.3-foss-2023b    
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>   GROMACS/2024.4-foss-2023b (D)
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  Where:
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>   D:  Default Module
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>$ ml avail ESPResSo
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>--- /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/generic/modules/all ---
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>   ESPResSo/4.2.1-foss-2023a
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>   ESPResSo/4.2.2-foss-2023a
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>   ESPResSo/4.2.2-foss-2023b (D)
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>   QuantumESPRESSO/7.2-foss-2022b
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>   QuantumESPRESSO/7.3.1-foss-2023a (D)
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  Where:
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>   D:  Default Module
+</code></pre></div>
+<p>This means we have to opt for Scenario 3 and build from source with GPU enabled, which is straightforward with the provided scripts and <a href="../../../../../using_eessi/building_on_eessi/">EESSI-extend</a>.
+To build GPU-enabled software, we first need a <a href="../../../../../site_specific_config/gpu/#installing-full-cuda-sdk-optional">full CUDA installation</a>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ ml load EESSI-extend
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>-- Using /tmp/$USER as a temporary working directory for installations, you can override this by setting the environment variable WORKING_DIR and reloading the module (e.g., /dev/shm is a common option)
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Configuring for use of EESSI_USER_INSTALL under /home/darkless/eessi
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>-- To create installations for EESSI, you _must_ have write permissions to /home/darkless/eessi/versions/2023.06/software/linux/x86_64/generic
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>-- You may wish to configure a sources directory for EasyBuild (for example, via setting the environment variable EASYBUILD_SOURCEPATH) to allow you to reuse existing sources for packages.
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>$ ml
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>Currently Loaded Modules:
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>  1) EESSI/2023.06   2) EasyBuild/4.9.4   3) EESSI-extend/2023.06-easybuild
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>$ export EESSI_SKIP_REMOVED_MODULES_CHECK=1
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>$ ./scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>== Temporary log file in case of crash /tmp/eb-orctkvdy/easybuild-oui6mf4a.log
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>== found valid index for /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/generic/software/EasyBuild/4.9.4/easybuild/easyconfigs, so using it...
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>== processing EasyBuild easyconfig /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/generic/software/EasyBuild/4.9.4/easybuild/easyconfigs/c/CUDA/CUDA-12.1.1.eb
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>== building and installing CUDA/12.1.1...
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>  &gt;&gt; installation prefix: /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/generic/software/CUDA/12.1.1
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>== fetching files...
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>Downloading cuda_12.1.1_530.30.02_linux.run ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ 3.3/4.3 GB 10.5 MB/s 0:01:35
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>∙●∙ Installing CUDA/12.1.1: fetching files (0 out of 17 steps done) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:05:14
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>... 
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a> --- rest of the output ---
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>...
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>CUDA installation at /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/generic/software/CUDA/12.1.1 succeeded!
+</code></pre></div>
+<p>The most straightforward way to check GPU-enabled module is <code>deviceQuery</code> from <code>CUDA-Samples</code>, which identifies present GPU hardware.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ ml avail CUDA-Samples
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>No module(s) or extension(s) found!
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>$ cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1)
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>$ eb --force --robot CUDA-Samples-12.1-GCC-12.3.0-CUDA-12.1.1.eb --cuda-compute-capabilities=&quot;$cc&quot;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>== Temporary log file in case of crash ...
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>... 
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a> --- rest of the output ---
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>...
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>CUDA-Samples installation at /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/generic/software/CUDA-Samples/12.1-GCC-12.3.0-CUDA-12.1.1 succeeded!
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>$ ml load CUDA-Samples
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>$ deviceQuery
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>deviceQuery Starting...
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a> CUDA Device Query (Runtime API) version (CUDART static linking)
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>Detected 1 CUDA Capable device(s)
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>Device 0: &quot;NVIDIA GeForce RTX 2060&quot;
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>  CUDA Driver Version / Runtime Version          12.4 / 12.1
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>  CUDA Capability Major/Minor version number:    7.5
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>  Total amount of global memory:                 5917 MBytes (6204162048 bytes)
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>  (030) Multiprocessors, (064) CUDA Cores/MP:    1920 CUDA Cores
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>  GPU Max Clock rate:                            1710 MHz (1.71 GHz)
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>  Memory Clock rate:                             7001 Mhz
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>  Memory Bus Width:                              192-bit
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>  L2 Cache Size:                                 3145728 bytes
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>  Maximum Texture Dimension Size (x,y,z)         1D=(131072), 2D=(131072, 65536), 3D=(16384, 16384, 16384)
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>  Maximum Layered 1D Texture Size, (num) layers  1D=(32768), 2048 layers
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>  Maximum Layered 2D Texture Size, (num) layers  2D=(32768, 32768), 2048 layers
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>  Total amount of constant memory:               65536 bytes
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>  Total amount of shared memory per block:       49152 bytes
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>  Total shared memory per multiprocessor:        65536 bytes
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>  Total number of registers available per block: 65536
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>  Warp size:                                     32
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>  Maximum number of threads per multiprocessor:  1024
+<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>  Maximum number of threads per block:           1024
+<a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>  Max dimension size of a thread block (x,y,z): (1024, 1024, 64)
+<a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>  Max dimension size of a grid size    (x,y,z): (2147483647, 65535, 65535)
+<a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>  Maximum memory pitch:                          2147483647 bytes
+<a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>  Texture alignment:                             512 bytes
+<a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>  Concurrent copy and kernel execution:          Yes with 3 copy engine(s)
+<a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a>  Run time limit on kernels:                     Yes
+<a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a>  Integrated GPU sharing Host Memory:            No
+<a id="__codelineno-7-48" name="__codelineno-7-48" href="#__codelineno-7-48"></a>  Support host page-locked memory mapping:       Yes
+<a id="__codelineno-7-49" name="__codelineno-7-49" href="#__codelineno-7-49"></a>  Alignment requirement for Surfaces:            Yes
+<a id="__codelineno-7-50" name="__codelineno-7-50" href="#__codelineno-7-50"></a>  Device has ECC support:                        Disabled
+<a id="__codelineno-7-51" name="__codelineno-7-51" href="#__codelineno-7-51"></a>  Device supports Unified Addressing (UVA):      Yes
+<a id="__codelineno-7-52" name="__codelineno-7-52" href="#__codelineno-7-52"></a>  Device supports Managed Memory:                Yes
+<a id="__codelineno-7-53" name="__codelineno-7-53" href="#__codelineno-7-53"></a>  Device supports Compute Preemption:            Yes
+<a id="__codelineno-7-54" name="__codelineno-7-54" href="#__codelineno-7-54"></a>  Supports Cooperative Kernel Launch:            Yes
+<a id="__codelineno-7-55" name="__codelineno-7-55" href="#__codelineno-7-55"></a>  Supports MultiDevice Co-op Kernel Launch:      Yes
+<a id="__codelineno-7-56" name="__codelineno-7-56" href="#__codelineno-7-56"></a>  Device PCI Domain ID / Bus ID / location ID:   0 / 1 / 0
+<a id="__codelineno-7-57" name="__codelineno-7-57" href="#__codelineno-7-57"></a>  Compute Mode:
+<a id="__codelineno-7-58" name="__codelineno-7-58" href="#__codelineno-7-58"></a>     &lt; Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) &gt;
+<a id="__codelineno-7-59" name="__codelineno-7-59" href="#__codelineno-7-59"></a>
+<a id="__codelineno-7-60" name="__codelineno-7-60" href="#__codelineno-7-60"></a>deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 12.4, CUDA Runtime Version = 12.1, NumDevs = 1
+<a id="__codelineno-7-61" name="__codelineno-7-61" href="#__codelineno-7-61"></a>Result = PASS
+</code></pre></div>
+<p>We're also going to build <code>GROMACS</code> and <code>ESPResSo</code> with GPU support. All of this can be done in a similar way as building CUDA above, with just EESSI-extend and EasyBuild.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cc=$(nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1)
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>eb --force --robot GROMACS-2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0.eb --cuda-compute-capabilities=&quot;$cc&quot;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>eb --force --robot ESPResSo-4.2.2-foss-2023a-CUDA-12.1.1.eb --cuda-compute-capabilities=&quot;$cc&quot;
+</code></pre></div>
+<p>After this, we can run GROMACS and ESPResSo with GPU support enabled.</p>
+<p>For testing and reproducibility, we created an installation script to provide a common approach for testing various systems. This script is described in detail below.</p>
+<h3 id="testing-eessi-with-nvidia-rtx-3060-on-fedora-and-ubuntu">Testing EESSI with Nvidia RTX 3060 on Fedora and Ubuntu<a class="headerlink" href="#testing-eessi-with-nvidia-rtx-3060-on-fedora-and-ubuntu" title="Permanent link">&para;</a></h3>
+<p>We conducted additional testing with the <a href="https://www.nvidia.com/en-gb/geforce/graphics-cards/30-series/rtx-3060-3060ti/">NVIDIA RTX 3060</a> GPU (3,584 CUDA cores, 12GB GDDR6 memory, CUDA Compute Capability 8.6) on multiple operating systems: Ubuntu 24.04 and Fedora 41. This allowed us to identify and address additional distribution-specific installation challenges.</p>
+<p>The basic native installation procedure was identical to the RTX 2060 setup, requiring NVIDIA driver 550 and the same EESSI configuration steps. However, we encountered several distribution-specific issues during testing.</p>
+<p>On Ubuntu, we discovered that the nvidia-cuda-toolkit package created redundant CUDA libraries. For example, running <code>ldconfig -p | tr -s ' ' | cut -d ' ' -f4 | grep libOpenCL</code> showed multiple instances of the same library:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>/usr/local/cuda/targets/x86_64-linux/lib/libOpenCL.so.1
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>/lib/x86_64-linux-gnu/libOpenCL.so.1
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>/usr/local/cuda/targets/x86_64-linux/lib/libOpenCL.so
+</code></pre></div>
+<p>This redundancy caused conflicts when the EESSI library linking script attempted to create symlinks. The script would fail because it couldn't determine which library version to use when multiple were present. We'll be updating the linking script in the future to handle this edge case.</p>
+<p>We encountered different issues on Fedora 41.
+When attempting a native EESSI installation, cvmfs failed to install with the error "nothing provides redhat-release &gt;= 5 needed by cvmfs-release-4-1.noarch", which has been fixed by <a href="https://github.com/cvmfs/cvmfs/pull/3774">PR #3774</a>.</p>
+<p>Container environments presented another set of challenges.
+On Fedora, /tmp is mounted as a tmpfs with a limited size, which keeps everything in RAM. During the installation of CUDA, EasyBuild requires significant space in /tmp, which exceeded the default size limit of 8GB on the tested system. Increasing this size limit caused the machine to freeze due to RAM flooding with data from /tmp. After removing the tmpfs mount, EasyBuild could perform its build, but then the CUDA installer failed with a segfault. There was no output from the installer, and the log file at /var/log/cuda-installer.log provided no error messages. The only clue we had was a crash report from Fedora indicating that the CUDA installer failed in a function named getHomeDir.</p>
+<p>These findings led to several improvements in our installation script and documentation, providing more robust cross-distribution support for EESSI with GPU capabilities.</p>
+<p>The installation of EESSI and building the GPU-enabled software used the same approach as described in the previous section.</p>
+<h2 id="fast-deployment-automating-eessi-installation-with-gpu-support-on-azure">Fast Deployment: Automating EESSI Installation with GPU Support on Azure<a class="headerlink" href="#fast-deployment-automating-eessi-installation-with-gpu-support-on-azure" title="Permanent link">&para;</a></h2>
+<figure>
+<img alt="EESSI Azure VM Boot Diagram" src="../../eessi-azure-boot-diagram.webp" width="100%" />
+</figure>
+<p>The image above depicts the complete installation and execution workflow with specific timing points at each stage of the process. Let's walk through these timing points:</p>
+<p><strong>VM Provisioning and Setup</strong>:</p>
+<ul>
+<li><strong>bootTime1</strong>: VM is provisioned and booted, ready for access (varies from <strong>seconds to minutes</strong> based on numerous factors like VM size, provider load, and image type)</li>
+<li><strong>bootTime2</strong>: SSH connection established to the VM (typically takes only <strong>seconds</strong> once the VM is running)</li>
+<li><strong>bootTime3</strong>: NVIDIA drivers installation complete (<strong>seconds</strong> if drivers are already installed <strong>or several minutes</strong> if they need to be installed and configured)</li>
+<li><strong>bootTime4</strong>: EESSI installation scripts downloaded and ready to execute (just <strong>seconds</strong> to download and prepare the install script)</li>
+</ul>
+<p><strong>Running install.sh</strong>:</p>
+<ul>
+<li><strong>installTime1</strong>: Best case scenario - CUDA module is already available on EESSI CVMFS, allowing immediate access to GPU-enabled software (this took only <strong>12-30 seconds</strong> on <strong>Azure NC_A100</strong> with a single GPU with compute capability 8.0 and on <strong>ND_A100</strong> with 8 GPUs)</li>
+<li><strong>installTime2</strong>: CUDA modules need local installation - each CUDA download is approximately 4GB (we install both CUDA 12.1.1 and 12.4.0), adding significant time but establishing GPU capability (installing a single CUDA version takes around <strong>5 minutes</strong>)</li>
+</ul>
+<p><strong>Running run-demo.sh</strong>:</p>
+<ul>
+<li><strong>runTime1</strong>: Best case scenario - The scientific module (GROMACS/ESPResSo) is available on EESSI CVMFS and can be loaded and run immediately (module loading time is minimal, <strong>around 2 seconds</strong>)</li>
+<li><strong>runTime2</strong>: Module not found, but CUDA is available in host_injections - only module building is required (building <strong>GROMACS</strong> takes approximately <strong>30 minutes</strong> even without running tests!)</li>
+<li><strong>runTime3</strong>: Most time-intensive scenario - Module not found and CUDA not available in host_injections, requiring <strong>CUDA installation</strong> to fill the stubs from CVMFS CUDA Lmod module (similar to installTime2, <strong>about 5 minutes</strong> per CUDA version), followed by module building</li>
+</ul>
+<p>Although automating the installation process is not a primary objective of the EESSI project itself, it becomes crucial for our specific goal of deploying EESSI on Azure. Cloud services are billed by usage time, so minimizing the setup duration directly reduces costs. Being able to quickly spin up a machine and immediately begin processing scientific data represents a significant economic and practical benefit.</p>
+<p>To streamline this process, we've developed installation and demonstration scripts that provide a common approach for testing on various systems. The scripts handle EESSI installation, GPU library linking, CUDA installation when required, and verification of GPU functionality.</p>
+<p>For a complete implementation of these scripts, visit the <a href="https://github.com/EESSI/eessi-demo">EESSI GPU demo repository</a>. This repository contains everything needed to set up and test GPU-enabled scientific software on EESSI, including detailed instructions for various scenarios.</p>
+<p>You can set up an Azure VM with full GPU support in just a few commands:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>git clone https://github.com/EESSI/eessi-demo.git
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>cd eessi-demo/gpu
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>./install.sh
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>./run-demo-ESPResSo-4.2.2-foss-2023a-CUDA-12.1.1.sh
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>./run-demo-GROMACS-2024.4-foss-2023b-CUDA-12.4.0.sh
+</code></pre></div>
+<h2 id="scaling-to-the-cloud-eessi-on-azure-gpu-instances">Scaling to the Cloud: EESSI on Azure GPU Instances<a class="headerlink" href="#scaling-to-the-cloud-eessi-on-azure-gpu-instances" title="Permanent link">&para;</a></h2>
+<p>Azure offers a wide range of GPU-accelerated virtual machines, making it an excellent platform for testing EESSI's cloud readiness. The table below highlights some of the common CPU/GPU combinations available:</p>
+<table>
+<thead>
+<tr>
+<th>VM Series</th>
+<th>CPU Type</th>
+<th>CUDA Compute Capability</th>
+<th>GPU Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NCv3-series</td>
+<td>Broadwell</td>
+<td>cc 7.0</td>
+<td>NVIDIA Tesla V100</td>
+</tr>
+<tr>
+<td>NCasT4_v3-series</td>
+<td>Zen2</td>
+<td>cc 7.5</td>
+<td>NVIDIA Tesla T4</td>
+</tr>
+<tr>
+<td>NC A100 v4-series</td>
+<td>Zen3</td>
+<td>cc 8.0</td>
+<td>NVIDIA A100</td>
+</tr>
+<tr>
+<td>NC H100 v5-series</td>
+<td>Zen4</td>
+<td>cc 9.0</td>
+<td>NVIDIA H100 NVL</td>
+</tr>
+<tr>
+<td>ND A100 v4-series</td>
+<td>Zen2</td>
+<td>cc 8.0</td>
+<td>8x NVIDIA A100</td>
+</tr>
+<tr>
+<td>ND H100 v5-series</td>
+<td>Sapphire Rapids</td>
+<td>cc 9.0</td>
+<td>8x NVIDIA H100</td>
+</tr>
+<tr>
+<td>NVv3-series</td>
+<td>Broadwell</td>
+<td>cc 5.2</td>
+<td>NVIDIA Tesla M60</td>
+</tr>
+<tr>
+<td>NVv4-series</td>
+<td>Zen2</td>
+<td>N/A</td>
+<td>AMD Radeon Instinct MI25</td>
+</tr>
+<tr>
+<td>NVads A10 v5-series</td>
+<td>Zen3</td>
+<td>cc 8.6</td>
+<td>NVIDIA A10</td>
+</tr>
+<tr>
+<td>NVads V710 v5-series</td>
+<td>Zen4</td>
+<td>N/A</td>
+<td>AMD Radeon Pro V710</td>
+</tr>
+</tbody>
+</table>
+<p>The CUDA Compute Capability is particularly important as it determines which CUDA features and instructions are available to software. For example:</p>
+<ul>
+<li>Capability 7.0-7.5 (V100, T4): Supports Tensor Cores (for AI acceleration), independent thread scheduling</li>
+<li>Capability 8.0-8.6 (A100, A10): Adds third-generation Tensor Cores, Sparse Matrix operations, and faster FP16 computation</li>
+<li>Capability 9.0 (H100): Introduces fourth-generation Tensor Cores, Transformer Engine, and significantly improved FP8 performance</li>
+</ul>
+<p>Among these combinations, we're focusing our build and optimization efforts on the configurations found in Azure and also in European HPC environments:</p>
+<ul>
+<li>AMD zen2 - cc 7.5, cc 8.0 (NCasT4_v3-series, ND A100 v4-series)</li>
+<li>AMD zen3 - cc 8.0, cc 8.6 (NC A100 v4-series, NVads A10 v5-series)</li>
+<li>AMD zen4 - cc 9.0 (NC H100 v5-series)</li>
+<li>Broadwell - cc 5.2, cc 7.0 (NVv3-series, NCv3-series)</li>
+</ul>
+<p>These target combinations allow us to cover a significant portion of the hardware landscape with pre-built packages, ensuring that scientists can quickly deploy their workloads on Azure with minimal configuration time. Our goal is to include these combinations in the standard EESSI distribution, making GPU-accelerated scientific computing in the cloud as accessible as possible.</p>
+<p>In the course of our testing, we encountered an issue where <code>nvidia-smi</code> was not available on certain A10 Graphics cards, which led us to use T4 GPUs instead for some of the testing. This is an important consideration when selecting Azure VM types for GPU computing with EESSI.</p>
+<h2 id="reflection-on-performance-metrics-mean-time-to-science">Reflection on Performance Metrics - Mean-Time-to-Science<a class="headerlink" href="#reflection-on-performance-metrics-mean-time-to-science" title="Permanent link">&para;</a></h2>
+<p>We tracked the time from VM provisioning to running the first GPU-enabled package to establish our "mean-time-to-science" metric. This measurement shows how quickly researchers can begin productive work using EESSI on various hardware configurations.</p>
+<p>Here's a breakdown of our findings across different hardware platforms:</p>
+<table>
+<thead>
+<tr>
+<th>Hardware Configuration</th>
+<th>Scenario</th>
+<th>Mean-Time-to-Science</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azure NC_A100 (single A100, CC 8.0)</td>
+<td>Scenario 1</td>
+<td>~15 seconds</td>
+</tr>
+<tr>
+<td>Azure ND_A100 (8x A100, CC 8.0)</td>
+<td>Scenario 1</td>
+<td>~30 seconds</td>
+</tr>
+<tr>
+<td>Azure NC_A100 (single A100, CC 8.0)</td>
+<td>Scenario 2</td>
+<td>~10 minutes</td>
+</tr>
+<tr>
+<td>Azure NC_A100 (single A100, CC 8.0)</td>
+<td>Scenario 3</td>
+<td>~35 minutes</td>
+</tr>
+<tr>
+<td>Desktop PC with RTX 3060 (CC 8.6)</td>
+<td>Scenario 3</td>
+<td>~35 minutes</td>
+</tr>
+<tr>
+<td>Desktop PC with RTX 2060 (CC 7.5)</td>
+<td>Scenario 3</td>
+<td>~40 minutes</td>
+</tr>
+</tbody>
+</table>
+<p>Key observations from our data:</p>
+<ol>
+<li>
+<p><strong>Optimal Scenario</strong>: When the correct combination of CPU/GPU packages is pre-built on EESSI (Scenario 1), the mean-time-to-science can be as fast as 15 seconds from SSH connection to running GPU-enabled software on Azure.</p>
+</li>
+<li>
+<p><strong>Software Installation Overheads</strong>: CUDA installation adds approximately 10 minutes, while building a complex scientific application like GROMACS adds about 25 minutes.</p>
+</li>
+<li>
+<p><strong>Performance Gains</strong>: The GPU-accelerated versions consistently deliver 5-13x speedups compared to CPU-only versions. Being able to run GPU enabled packages on correct hardware allows huge computational boost.</p>
+</li>
+<li>
+<p><strong>Hardware Differences</strong>: Enterprise GPUs like the NVIDIA A100 deliver the best performance, but consumer GPUs like the RTX 3060 and even the RTX 2060 can provide comparable speedups for scientific workloads.</p>
+</li>
+</ol>
+<p>Interesting finding was related to the GPU version of GROMACS, which occasionally crashes with the error: <code>PME tuning was still active</code>. This has been documented in the <a href="https://arxiv.org/pdf/2407.03148">GROMACS paper</a> section <code>4.5 Performance Counter Handling</code>.</p>
+<p>These metrics confirm that the time investment for setting up EESSI with GPU support is minimal compared to the performance benefits gained, especially when pre-built packages are available. Even in scenarios requiring custom builds, the setup time (20-40 minutes) is quickly balanced by the significant runtime speedups for scientific applications.</p>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>The integration of GPU support in EESSI significantly enhances scientific computing capabilities while maintaining the project's core principles of compatibility and ease of use. By providing a structured approach to handling GPU dependencies and offering tools for custom builds, EESSI enables researchers to leverage GPU acceleration across a variety of environments—from desktop workstations to cloud infrastructure.</p>
+<p>Our testing on consumer hardware and Azure VMs demonstrates the flexibility of this approach, while our automation scripts reduce the mean-time-to-science to just minutes. The performance improvements are substantial, with GPU-accelerated software running 5-13 times faster than CPU-only versions in our benchmarks.</p>
+<p>As the EESSI project continues to evolve, we plan to expand our pre-built offerings for common CPU/GPU combinations and improve the tooling for custom builds. This will further reduce barriers to entry for GPU-accelerated scientific computing and enable researchers to focus on their science rather than software configuration.</p>
+<p>References:</p>
+<ul>
+<li><a href="https://developer.nvidia.com/cuda-gpus">NVIDIA CUDA-Enabled GPUs</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview#gpu-accelerated">Azure VM Sizes Overview</a></li>
+<li><a href="https://www.eessi.io/docs/">EESSI Documentation</a></li>
+<li><a href="https://docs.nvidia.com/cuda/eula/index.html">NVIDIA CUDA EULA</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 26, 2025 21:26:55">March 26, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["instant", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+      
+        <script src="../../../../../available_software/javascripts/populate_overview.js"></script>
+      
+        <script src="https://cdn.datatables.net/plug-ins/2.2.2/pagination/bootstrap_input.js"></script>
+      
+    
+  </body>
+</html>
