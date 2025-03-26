@@ -54,7 +54,7 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 
 ### MareNostrum 5 (Spain)
 
-MareNostrum5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC](https://www.bsc.es/).
+MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC](https://www.bsc.es/).
 
 * [General documentation](https://www.bsc.es/supportkc/)
 ---
