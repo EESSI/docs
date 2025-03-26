@@ -39,19 +39,24 @@ Karolina is the EuroHPC JU supercomputer hosted by [IT4Innovations](https://www.
 
 ### Vega (Slovenia)
 
-Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Science (IZUM)](https://izum.si/en/home).
+Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Science (IZUM)](https://izum.si/en/home).
 
 * [General documentation](https://doc.vega.izum.si)
 * [EESSI @ Vega](https://doc.vega.izum.si/eessi)
 
 ### Deucalion (Portugal)
 
-Deucalion is the EuroHPC JU supercomputer hosted by [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
+Deucalion is the EuroHPC JU supercomputer hosted by the [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
 EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with plans to expand to the non-accelerated x86 partition soon.
 
 * [General documentation](https://docs.deucalion.macc.fccn.pt/)
 * [EESSI @ Deucalion](https://docs.deucalion.macc.fccn.pt/jobs/eessi/)
 
+### MareNostrum 5 (Spain)
+
+MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC](https://www.bsc.es/).
+
+* [General documentation](https://www.bsc.es/supportkc/)
 ---
 
 ## Other European systems
