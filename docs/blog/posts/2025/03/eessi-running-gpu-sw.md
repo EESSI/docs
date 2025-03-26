@@ -12,7 +12,7 @@ It's the question every computational scientist asks when setting up a new envir
 
 In the high-stakes world of scientific computing, every minute spent configuring software is a minute not spent on discovery. That's why we've developed a metric we call **Mean-Time-To-Science** – the total time from system access to running your first scientific computation. By optimizing this crucial metric, EESSI's GPU support transforms the traditional hours-long setup process into a seamless experience that keeps researchers focused on their science.
 
-Although EESSI aims to provide pre-built software for all common HPC architectures, GPU support introduces multiplicative requirements for software builds. Each GPU compute capability (e.g., CC7.5, CC8.0, CC8.6) needs to be combined with each CPU architecture (zen2, zen3, generic x86_64), creating a large matrix of possible configurations. It's not viable to pre-build all software for all possible CPU/GPU combinations.
+Although EESSI aims to provide pre-built software for all common HPC architectures, GPU support introduces multiplicative requirements for software builds. Each GPU compute capability (e.g., CC7.5, CC8.0, CC8.6) needs to be combined with each CPU architecture (zen2, zen3, generic x86_64), creating a large matrix of possible configurations. While it's possible to pre-build all software for all possible CPU/GPU combinations, testing all the configuration is not possible - the combination might not exist in the real-world.
 
 To address this challenge, we're developing additional documentation highlighting which CPU/GPU combinations are already built into EESSI. Additionally, we provide the tools and process for users to build any EasyBuild-enabled software on EESSI, allowing them to create architecture-specific builds for their particular needs when a specific combination isn't available in the standard distribution.
 
@@ -48,17 +48,20 @@ We'll use `GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0` as our example:
 # Load EESSI
 source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 
+# Link the NVIDIA host libraries to host_injections
+./scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
+
 # Load GROMACS module
 module load GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0
 
 # Run GROMACS
 gmx mdrun -s ion_channel.tpr -maxh 0.50 -resethway -noconfout -nsteps 10000 -g logfile
 ```
-**Mean-Time-To-Science** ~= ***15s***
+**Mean-Time-To-Science** ~= ***20s***
 
 ### Scenario No.2 {: #scenario_2 }
 CUDA module is provided by EESSI, 
-but you need to build and run software which is not in EESSI CVFS.
+but you need to build and run software which is not in EESSI CVMFS.
 
 In this case, you'll need to install CUDA libraries locally ([NVIDIA's licensing requirements](https://docs.nvidia.com/cuda/eula/index.html)) into the `host_injections` directory where the current CUDA module lib stubs point to.
 
@@ -85,6 +88,9 @@ We'll use `GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0` again as our exam
 # Load EESSI and EESSI-extend
 source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 module load EESSI-extend
+
+# Link the NVIDIA host libraries to host_injections
+./scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
 
 # Install CUDA to host_injections
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
@@ -136,6 +142,9 @@ We'll use `GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0` again as our exam
 source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 module load EESSI-extend
 
+# Link the NVIDIA host libraries to host_injections
+./scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
+
 # Install CUDA to host_injections
 # /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh
 # We are using modified version of this script, which doesn't use `--installpath-modules=${tmpdir}`
@@ -152,9 +161,9 @@ module load GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0
 gmx mdrun -s ion_channel.tpr -maxh 0.50 -resethway -noconfout -nsteps 10000 -g logfile
 ```
 
-**Mean-Time-To-Science** ~= 10 minutes (CUDA Download + Installation)
+**Mean-Time-To-Science** ~= ***10 minutes*** (CUDA Download + Installation)
 
-**Mean-Time-To-Science (GROMACS)** ~= 25 minutes (GROMACS Build without Tests) 
+**Mean-Time-To-Science (GROMACS)** ~= ***25 minutes*** (GROMACS Build without Tests) 
 
 
 ## Bringing HPC to the Scientist's Desktop {: #desktop_ }
