@@ -77,7 +77,7 @@ We'll use `GROMACS/2023.3-foss-2023a-CUDA-12.1.1-PLUMED-2.9.0` again as our exam
      - Newer: `install_cuda_and_libraries.sh` which uses Easystacks and will be the preferred method for installing CUDA to `host_injections`
 
 !!! note "This blogpost example:"
-    Since it is curently faster to run: `install_cuda_host_injections.sh`, 
+    Since it is currently faster to run: `install_cuda_host_injections.sh`,
     we are currently using it in our examples.
 ```
 # Scenario 2
@@ -108,7 +108,7 @@ gmx mdrun -s ion_channel.tpr -maxh 0.50 -resethway -noconfout -nsteps 10000 -g l
 
 **Mean-Time-To-Science** ~= ***10 minutes*** (CUDA Download + Installation)
 
-**Mean-Time-To-Science (GROMACS)** ~= ***25 minutes*** (GROMACS Build wtihout Tests) 
+**Mean-Time-To-Science (GROMACS)** ~= ***25 minutes*** (GROMACS Build without Tests)
 
 
 ### Scenario No.3 {: #scenario_3 }
