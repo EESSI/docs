@@ -21,7 +21,7 @@ Christian and Arturo presented this implementation highlighting three potential 
 2. Deploying EESSI applications
 3. Sharing software
 
-For **training**, the proposed solution using the tryad of Magic Castle for setting up the environment in the cloud, Ansible for deploying OOD and EESSI for software, was well accepted by the attendants. The **deployment** of new applications can be done in two different manners: by just adding a single application (see image below) of by offering all the software stack allowing the users to select all the modules they need. Last, they presented how EESSI is fitted to **share software** among different HPC centers.
+For **training**, the proposed solution using the triad of Magic Castle for setting up the environment in the cloud, Ansible for deploying OOD, and EESSI for software, was well accepted by the attendees. The **deployment** of new applications can be done in two different manners: by just adding a single application (see image below) or by offering the entire software stack allowing the users to select all the modules they need. Last, they presented how EESSI is fitted to **share software** among different HPC centers.
 
 ## The takeaways
 
