@@ -27,4 +27,4 @@ For **training**, the proposed solution using the triad of Magic Castle for sett
 
 The audience received EESSI as a valuable tool to have to take into account. Should we think in the replacement of the first "E" on its name?
 
-The videorecording of the presentation will be available soon.
+The video recording of the presentation will be available soon.
