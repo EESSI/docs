@@ -6,7 +6,7 @@ slug: eessi-at-good-conf
 
 # Open OnDemand meets EESSI at Global Open OnDemand Conference (Boston)
 
-Past March 18th, Christian Bustelo and Arturo Gimeno, from Do IT Now, showed to the attendants to the GOOD conference what's EESSI about and their preliminary work in integrating it in OOD. 
+On March 18th, Christian Bustelo and Arturo Gimeno from Do IT Now, showed to the attendees of the GOOD conference what EESSI is about and their preliminary work in integrating it in OOD. 
 
 <figure markdown="span">
 ![Do IT Now presentation at GOOD](din-eessi.webp){width=100%}
