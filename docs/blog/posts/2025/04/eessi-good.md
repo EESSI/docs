@@ -6,10 +6,10 @@ slug: eessi-at-good-conf
 
 # Open OnDemand meets EESSI at Global Open OnDemand Conference (Boston)
 
-On March 18th, Christian Bustelo and Arturo Gimeno from Do IT Now, showed to the attendees of the GOOD conference what EESSI is about and their preliminary work in integrating it in OOD. 
+On 18 March 2025 Christian Bustelo and Arturo Gimeno from Do IT Now showed to the attendees of the [GOOD conference](https://openondemand.org/good) what EESSI is about and their preliminary work in integrating it in Open OnDemand.
 
 <figure markdown="span">
-![Do IT Now presentation at GOOD](din-eessi.webp){width=100%}
+![Do IT Now presentation on EESSI at GOOD](EESSI-GOOD-DoITNow-20250318.webp){width=100%}
 </figure>
 
 <!-- more -->
@@ -17,11 +17,16 @@ On March 18th, Christian Bustelo and Arturo Gimeno from Do IT Now, showed to the
 ## Their solution
 
 Christian and Arturo presented this implementation highlighting three potential use cases:
+
 1. Training in using Open OnDemand
 2. Deploying EESSI applications
 3. Sharing software
 
-For **training**, the proposed solution using the triad of Magic Castle for setting up the environment in the cloud, Ansible for deploying OOD, and EESSI for software, was well accepted by the attendees. The **deployment** of new applications can be done in two different manners: by just adding a single application (see image below) or by offering the entire software stack allowing the users to select all the modules they need. Last, they presented how EESSI is fitted to **share software** among different HPC centers.
+For **training**, the proposed solution using the triad of Magic Castle for setting up the environment in the cloud, Ansible for deploying OOD, and EESSI for software, was well accepted by the attendees.
+
+The **deployment** of new applications can be done in two different manners: by just adding a single application (see image below) or by offering the entire software stack allowing the users to select all the modules they need.
+
+Last, they presented how EESSI is fitted to **share software** among different HPC centers.
 
 <figure markdown="span">
 ![Deploying Jupyter Notebook from EESSI](jupyter-eessi.webp){width=100%}
@@ -32,4 +37,6 @@ For **training**, the proposed solution using the triad of Magic Castle for sett
 
 The audience received EESSI as a valuable tool to have to take into account. Should we think about the replacement of the first "E" in its name?
 
-The video recording of the presentation will be available soon, but you can find the slides [here](OODEESSIGOOD.pdf).
+The video recording of the presentation should be available soon.
+
+You can find the slides already [here](EESSI-GOOD-20250318.pdf).
