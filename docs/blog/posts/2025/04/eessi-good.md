@@ -23,8 +23,13 @@ Christian and Arturo presented this implementation highlighting three potential 
 
 For **training**, the proposed solution using the triad of Magic Castle for setting up the environment in the cloud, Ansible for deploying OOD, and EESSI for software, was well accepted by the attendees. The **deployment** of new applications can be done in two different manners: by just adding a single application (see image below) or by offering the entire software stack allowing the users to select all the modules they need. Last, they presented how EESSI is fitted to **share software** among different HPC centers.
 
+<figure markdown="span">
+![Deploying Jupyter Notebook from EESSI](jupyter-eessi.webp){width=100%}
+</figure>
+
+
 ## The takeaways
 
 The audience received EESSI as a valuable tool to have to take into account. Should we think about the replacement of the first "E" in its name?
 
-The video recording of the presentation will be available soon, but you can find the slides [here](OODEESSIGOOD.pdf)
+The video recording of the presentation will be available soon, but you can find the slides [here](OODEESSIGOOD.pdf).
