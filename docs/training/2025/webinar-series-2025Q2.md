@@ -52,15 +52,12 @@ Attendance is free of cost, but registration is required.
 
 - Monday 5 May 2025 (13:30-15:30 CEST)
 - speakers:
-   - Richard Topuchain (University of Bergen)
-   - Helena Vela (Do IT Now)
-   - Thomas Röblitz (University of Bergen)
-   - Kenneth Hoste (HPC - UGent)
+    - Richard Topuchain (University of Bergen)
+    - Helena Vela (Do IT Now)
+    - Thomas Röblitz (University of Bergen)
+    - Kenneth Hoste (HPC - UGent)
 - outline
-   - Discover how EESSI (European Environment for Scientific Software Installation) is transforming the way scientific software is deployed and shared across HPC systems, cloud platforms, and even laptops.
-In this session, we’ll introduce the motivation behind EESSI, its architecture, and how you can start using a fully pre-built, modular software environment—no matter where you compute.
-
- - Whether you're an HPC user, sysadmin, or developer, this webinar will show how EESSI can help you save time, improve reproducibility, and simplify your scientific workflows.
+    - Discover how EESSI (European Environment for Scientific Software Installation) is transforming the way scientific software is deployed and shared across HPC systems, cloud platforms, and even laptops. In this session, we’ll introduce the motivation behind EESSI, its architecture, and how you can start using a fully pre-built, modular software environment—no matter where you compute. Whether you're an HPC user, sysadmin, or developer, this webinar will show how EESSI can help you save time, improve reproducibility, and simplify your scientific workflows.
 
 ---
 
