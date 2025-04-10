@@ -54,7 +54,7 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 
 ### MareNostrum 5 (Spain)
 
-MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC](https://www.bsc.es/).
+MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/).
 
 * [General documentation](https://www.bsc.es/supportkc/)
 
@@ -87,7 +87,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 #### University of Stuttgart
 
-* Ant: [General documentation](https://www2.icp.uni-stuttgart.de/~jgrad/hpc/_pages/_hpc_facilities/ant.html)
+* Ant: [General documentation](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_hpc_facilities/ant.html) | [EESSI @ Ant](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_user_guide/loading_modules.html#loading-eessi-software)
 
 ### Greece
 
@@ -128,10 +128,10 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 #### Barcelona Supercomputing Center
 
 * thunder
-* arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
-This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
-* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
-This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+* arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
 
 #### Galicia Supercomputing Center (CESGA)
 
@@ -153,4 +153,4 @@ This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/re
 
 ### AWS
 
-* AWS ParallelCluster [General documentation](https://docs.aws.amazon.com/parallelcluster/) | [EESSI @ AWS ParallelCluster](https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/env/eessi)
+* AWS ParallelCluster: [General documentation](https://docs.aws.amazon.com/parallelcluster/) | [EESSI @ AWS ParallelCluster](https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/env/eessi)
