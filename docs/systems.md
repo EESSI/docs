@@ -137,6 +137,12 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 
 * FinisTerrae III: [General documentation](https://cesga-docs.gitlab.io/ft3-user-guide/overview.html) | [EESSI @ FinisTerrae III](https://cesga-docs.gitlab.io/ft3-user-guide/compilers_and_dev_tools.html#eessi)
 
+### Czech Republic
+
+#### Czech Technical University in Prague
+
+* Sunrise: [General documentation](https://nms.fjfi.cvut.cz/wiki/Sunrise.fjfi.cvut.cz)
+
 ---
 
 ## Systems outside of Europe
@@ -154,3 +160,7 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 ### AWS
 
 * AWS ParallelCluster: [General documentation](https://docs.aws.amazon.com/parallelcluster/) | [EESSI @ AWS ParallelCluster](https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/env/eessi)
+
+### LEXIS
+
+* LEXIS Platform: [General documentation](https://docs.lexis.tech/architecture/architecture.html) | [EESSI @ LEXIS](https://docs.lexis.tech/user_interfaces/howto.html#custom-hpc-jobs)
