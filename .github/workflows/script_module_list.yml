@@ -23,7 +23,7 @@ jobs:
       - name: Set up Python environment
         uses: actions/setup-python@13ae5bb136fac2878aff31522b9efb785519f984 # v4.3.0
         with:
-          python-version: "3.6"
+          python-version: "3.7"
       - name: Run flake8
         uses: py-actions/flake8@84ec6726560b6d5bd68f2a5bed83d62b52bb50ba # v2.3.0
         with:
@@ -39,7 +39,7 @@ jobs:
       - name: Set up Python
         uses: eessi/github-action-eessi@v3
         with:
-          python-version: '3.6'
+          python-version: '3.7'
       - name: Install dependencies
         run: |
           python -m venv venv
