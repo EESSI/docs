@@ -28,7 +28,7 @@ from natsort import natsorted
 EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
 
 # some CPU targets are excluded for now, because software layer is too incomplete currently
-EXCLUDE_CPU_TARGETS = ['aarch64/a64fx', 'aarch64/nvidia', 'intel/cascadelake', 'intel/icelake']
+EXCLUDE_CPU_TARGETS = ['aarch64/a64fx', 'aarch64/nvidia', 'x86_64/intel/cascadelake', 'x86_64/intel/icelake']
 
 
 # --------------------------------------------------------------------------------------------------------
