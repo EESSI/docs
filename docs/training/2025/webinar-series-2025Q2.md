@@ -92,7 +92,7 @@ in an efficient way.
 In this webinar, we will introduce you to CernVM-FS, show how to access existing CernVM-FS repositories (like [EESSI](https://eessi.io),
 cover some aspects specific to using CernVM-FS on HPC systems.
 
-It is intended for people with a background in HPC (system administrators, support team members, end users, etc.) who are new to CernVM-FS:
+It is intended for people who are interested in CernVM-FS (system administrators, support team members, researchers, etc.),
 no specific prior knowledge or experience with it is required.
 
 ---
