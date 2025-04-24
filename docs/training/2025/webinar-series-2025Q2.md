@@ -131,6 +131,7 @@ hands-on demos. We will also cover some new capabilities that are supported by t
 - Monday 2 June 2025, 13:30-15:30 CEST
 - speakers:
     - Bob Dröge (University of Groningen)
+    - Pedro Santos Neves (University of Groningen)
 
 #### Outline
 
