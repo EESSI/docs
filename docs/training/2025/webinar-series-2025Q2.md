@@ -105,12 +105,12 @@ no specific prior knowledge or experience with it is required.
 
 #### Outline
 
-EasyBuild (https://easybuild.io) is a open-source software installation tool written in Python that aims to support
+EasyBuild (https://easybuild.io) is an open-source software installation tool written in Python that aims to support
 the various installation procedures used by the vast collection of software packages that are typically installed from source code
 in an HPC environment.
 
-In this webinar, we will introduce you to EasyBuild, show to install and configure it, and present basic usage through
-hands-on demos. We will also cover some new capabilities that are supported by the recently released EasyBuild v5.0.0.
+In this webinar, we will introduce you to EasyBuild, show how to install and configure it, and present basic usage through
+hands-on demos. We will also cover some new capabilities that are supported by the recently released [EasyBuild v5.0.0](https://docs.easybuild.io/easybuild-v5/).
 
 ---
 
