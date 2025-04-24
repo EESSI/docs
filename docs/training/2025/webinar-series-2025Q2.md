@@ -135,7 +135,16 @@ hands-on demos. We will also cover some new capabilities that are supported by t
 
 #### Outline
 
-*(more info soon)*
+Despite being very open to community contributions, EESSI is unlikely to provide all the software you want to offer
+on your system as an HPC site. For instance, it will never be able to provide proprietary software due to license constraints.
+
+This session focuses on how you can use EESSI as the base for a system software stack, and easily build additional software on top
+and add it to your local software share. A recommended setup using CernVM-FS will be shown, but pointers for using any other (shared)
+filesystem will also be given. Finally, we will show how the EESSI build workflow (using a build bot and pull requests) can be adopted
+for your local software installations.
+
+This webinar is particularly intended for system administrators or support team members that maintain the central software stack
+for the users of their HPC infrastructure, but it can also be useful for end users who want to install additional software.
 
 ---
 
