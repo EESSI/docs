@@ -11,7 +11,8 @@ This table gives an overview of all the available software in EESSI per specific
             <th colspan="7">x86_64</th>
         </tr>
         </tr>
-            <th colspan="4"></th>
+            <th colspan="3"></th>
+            <th colspan="1">nvidia</th>
             <th colspan="1"></th>
             <th colspan="3">amd</th>
             <th colspan="3">intel</th>
@@ -20,7 +21,7 @@ This table gives an overview of all the available software in EESSI per specific
             <th colspan="1">generic</th>
             <th colspan="1">neoverse_n1</th>
             <th colspan="1">neoverse_v1</th>
-            <th colspan="1">nvidia/grace</th>
+            <th colspan="1">grace</th>
             <th colspan="1">generic</th>
             <th colspan="1">zen2</th>
             <th colspan="1">zen3</th>
