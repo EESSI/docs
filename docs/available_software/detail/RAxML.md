@@ -49,7 +49,7 @@ module load RAxML/8.2.13-gompi-2023a-standard
 
 *(This data was automatically generated on {{ generated_time }})*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RAxML/8.2.13-gompi-2023a-standard|x|x|x|-|-|-|-|-|-|-|
-|RAxML/8.2.13-gompi-2023a-avx2|-|-|-|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|RAxML/8.2.13-gompi-2023a-standard|x|x|x|-|-|-|-|-|-|-|-|
+|RAxML/8.2.13-gompi-2023a-avx2|-|-|-|-|x|x|x|x|x|x|x|
