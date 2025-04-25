@@ -210,7 +210,7 @@ def targets_eessi() -> np.ndarray:
     commands = [
         f"find {EESSI_TOPDIR}/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
         "-name 'amd' \\) -type d",
-        f'find {EESSI_TOPDIR}/software/linux/*/{{amd,intel}}/* -maxdepth 0  -type d'
+        f'find {EESSI_TOPDIR}/software/linux/*/{{amd,intel,nvidia}}/* -maxdepth 0  -type d'
     ]
     targets = np.array([])
 
