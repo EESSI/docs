@@ -51,12 +51,12 @@ module load EasyBuild/5.0.0
 
 *(This data was automatically generated on {{ generated_time }})*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EasyBuild/5.0.0|x|x|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.4|x|x|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.3|x|x|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.2|x|x|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.1|x|x|x|x|x|x|x|x|x|x|
-|EasyBuild/4.9.0|x|x|x|x|x|x|x|x|x|x|
-|EasyBuild/4.8.2|x|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|aarch64/nvidia/grace|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|EasyBuild/5.0.0|x|x|x|x|x|x|x|x|x|x|x|
+|EasyBuild/4.9.4|x|x|x|x|x|x|x|x|x|x|x|
+|EasyBuild/4.9.3|x|x|x|x|x|x|x|x|x|x|x|
+|EasyBuild/4.9.2|x|x|x|x|x|x|x|x|x|x|x|
+|EasyBuild/4.9.1|x|x|x|x|x|x|x|x|x|x|x|
+|EasyBuild/4.9.0|x|x|x|x|x|x|x|x|x|x|x|
+|EasyBuild/4.8.2|x|x|x|x|x|x|x|x|x|x|x|
