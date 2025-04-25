@@ -207,15 +207,31 @@ def targets_eessi() -> np.ndarray:
         sys.stderr.write(f"ERROR: {EESSI_TOPDIR} does not exist!\n")
         sys.exit(1)
 
-    commands = [
-        f"find {EESSI_TOPDIR}/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
-        "-name 'amd' -a ! -name 'nvidia' \\) -type d",
-        f'find {EESSI_TOPDIR}/software/linux/*/{{amd,intel,nvidia}}/* -maxdepth 0  -type d'
-    ]
-    targets = np.array([])
+    #commands = [
+    #    f"find {EESSI_TOPDIR}/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
+    #    "-name 'amd' -a ! -name 'nvidia' \\) -type d",
+    #    f'find {EESSI_TOPDIR}/software/linux/*/{{amd,intel,nvidia}}/* -maxdepth 0  -type d'
+    #]
+    #targets = np.array([])
 
-    for command in commands:
-        targets = np.concatenate([targets, bash_command(command)])
+    #for command in commands:
+    #    targets = np.concatenate([targets, bash_command(command)])
+
+    # Temporary workaround for sorting the targets in the way we want to show them on the page.
+    # Ideally, the javascript would do this based on the header of the table.
+    targets = np.array([
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/neoverse_n1",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/neoverse_v1",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/nvidia/grace",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/generic",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen4",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512",
+        "/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/sapphirerapids",
+    ])
 
     return targets
 
