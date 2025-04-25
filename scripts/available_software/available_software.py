@@ -217,8 +217,10 @@ def targets_eessi() -> np.ndarray:
     #for command in commands:
     #    targets = np.concatenate([targets, bash_command(command)])
 
+    # FIXME
     # Temporary workaround for sorting the targets in the way we want to show them on the page.
     # Ideally, the javascript would do this based on the header of the table.
+    # Also see https://github.com/EESSI/docs/issues/402.
     targets = np.array([
         "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/generic",
         "/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/neoverse_n1",
