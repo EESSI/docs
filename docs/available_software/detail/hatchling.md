@@ -59,7 +59,7 @@ module load hatchling/1.18.0-GCCcore-13.2.0
 
 This is a list of extensions included in the module:
 
-editables-0.5, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0, pathspec-0.11.2, pluggy-1.3.0, trove_classifiers-2023.10.18
+editables-0.5, hatch-requirements-txt-0.4.1, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0, pathspec-0.11.2, pluggy-1.3.0, trove_classifiers-2023.10.18
 
 ### hatchling/1.18.0-GCCcore-12.3.0
 
