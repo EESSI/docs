@@ -29,7 +29,6 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: eessi/test-suite
-        path: src
         
     - name: install mkdocs + plugins
       run: |

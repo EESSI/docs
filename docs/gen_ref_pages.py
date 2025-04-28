@@ -10,7 +10,7 @@ import mkdocs_gen_files
 # need to adjust to the test suite hook
 #root = Path(__file__).parent.parent
 
-TEST_SUITE = "src/test-suite"
+TEST_SUITE = "test-suite"
 #src = TEST_SUITE / "eessi"
 MKDOCS_SEARCH_PRIORITY = """---
 search:
