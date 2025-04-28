@@ -1,0 +1,52 @@
+name: Update overview of available software in EESSI
+on:
+  workflow_dispatch:
+  schedule:
+    # We manually trigger this right before/after a release of the EESSI test suite
+    # As this is the moment we want to update our API docs
+    # Automation into a Github CI makes sure we don't have to locally build the docs and create a PR every time
+    - workflow_dispatch:
+jobs:
+  update_available_software:
+    if: github.repository_owner == 'EESSI'   # Prevent running on forks
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+
+      - name: set up Python
+        uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
+        with:
+          python-version: '3.10'
+          architecture: x64
+
+      - name: checkout test suite
+        uses: actions/checkout@v4
+        with:
+          repository: eessi/test-suite
+
+      - name: install mkdocs + plugins
+        run: |
+            pip install -r requirements.txt
+            pip list | grep mkdocs
+            mkdocs --version
+
+      - name: build EESSI testsuite api docs
+        id: build_eessi_testsuite_api_docs
+        run: |
+          mkdocs build
+          ./scripts/update_generated_time.sh --section testsuite_api --file mkdocs.yml
+
+      - name: create pull request
+        uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
+        if: steps.update_available_software.outputs.json_data_changed == 'yes'
+        with:
+          add-paths: |
+            docs/testsuite_api
+            mkdocs.yml
+          branch: update-testsuite-api-docs
+          branch-suffix: timestamp
+          commit-message: Update of automatically generated API documentation for EESSI test suite
+          title: Update of API documentation for EESSI test suite
+          body: ''
+          token: ${{ secrets.EESSIBOT_GITHUB_TOKEN }}
+          push-to-fork: EESSIbot/docs
