@@ -111,7 +111,7 @@ plugins:
       default_handler: python
       handlers:
         python:
-          paths: [test-suite] 
+          paths: [test-suite/test-suite] 
           options:
             docstring_style: sphinx
             docstring_section_style: spacy

@@ -7,7 +7,7 @@ from pathlib import Path
 
 import mkdocs_gen_files
 
-TEST_SUITE = "test-suite"
+TEST_SUITE = "test-suite/test-suite"
 
 # build a navigation for the menu and a dictionary of navigations for each section
 nav = mkdocs_gen_files.Nav()

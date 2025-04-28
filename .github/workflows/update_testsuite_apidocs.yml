@@ -1,11 +1,11 @@
-name: Update overview of available software in EESSI
+name: Update API docs for EESSI testsuite
 on:
   # We manually trigger this right before/after a release of the EESSI test suite
   # As this is the moment we want to update our API docs
   # Automation into a Github CI makes sure we don't have to locally build the docs and create a PR every time
   workflow_dispatch:
 jobs:
-  update_available_software:
+  update_testsuite_apidocs:
     if: github.repository_owner == 'EESSI'   # Prevent running on forks
     runs-on: ubuntu-22.04
     steps:
@@ -21,6 +21,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: eessi/test-suite
+          # Needs to be checked out into a path, otherwise it will overwrite the checkout of the docs repo
+          path: test-suite
 
       - name: install mkdocs + plugins
         run: |
