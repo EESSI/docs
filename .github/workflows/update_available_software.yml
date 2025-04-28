@@ -36,7 +36,7 @@ jobs:
 
           export TIME_GENERATED_TEMPLATE="{{ generated_time }}"
           python scripts/available_software/available_software.py
-          ./scripts/update_generated_time.sh mkdocs.yml
+          ./scripts/update_generated_time.sh --section available_software --file mkdocs.yml
           
           git status
 

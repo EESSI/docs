@@ -156,7 +156,9 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Sat, 26 Apr 2025 at 01:46:16 UTC"
+  generated_time (available software): "Mon, 28 Apr 2025 at 16:32:36 CEST"
+  # this gets auto-updated via update_generated_time.sh script run in update_testsuite_apidocs.yml action
+  generated_time (testsuite API): "Mon, 28 Apr 2025 at 16:33:41 CEST"
 extra_javascript:
   # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
