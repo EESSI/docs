@@ -111,14 +111,14 @@ plugins:
       default_handler: python
       handlers:
         python:
-          paths: [src/test-suite] 
+          paths: [test-suite] 
           options:
             docstring_style: sphinx
             docstring_section_style: spacy
             show_source: false
   - gen-files:
       scripts:
-          - docs/gen_ref_pages.py
+          - docs/generatie_eessi_testsuite_api_docs.py
   - literate-nav:
       nav_file: summary.md
   - section-index
