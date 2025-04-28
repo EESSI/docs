@@ -44,6 +44,7 @@ nav:
     - Set up environment: using_eessi/setting_up_environment.md
     - Basic commands: using_eessi/basic_commands.md
     - Demos: using_eessi/eessi_demos.md
+    - EESSI in CI: using_eessi/eessi_in_ci.md
   - Advanced usage:
     - Setting up your Stratum: filesystem_layer/stratum1.md
     - Building software with EESSI: using_eessi/building_on_eessi.md
