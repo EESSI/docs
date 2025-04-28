@@ -17,7 +17,7 @@ for path in sorted(Path(f"{TEST_SUITE}/eessi/").rglob("*.py")):
     # Get the relative filename, without .py suffix
     module_path = path.relative_to(TEST_SUITE).with_suffix("")
 
-    # define the correspnding (relative) markdown filename
+    # define the corresponding (relative) markdown filename
     doc_path = path.relative_to(TEST_SUITE).with_suffix(".md")
 
     # Specify the full corresponding markdown filename, including a testsuite_api subdir

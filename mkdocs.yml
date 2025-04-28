@@ -118,7 +118,7 @@ plugins:
             show_source: false
   - gen-files:
       scripts:
-          - docs/generatie_eessi_testsuite_api_docs.py
+          - docs/generate_eessi_testsuite_api_docs.py
   - literate-nav:
       nav_file: summary.md
   - section-index
