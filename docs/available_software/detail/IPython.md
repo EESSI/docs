@@ -1,6 +1,36 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'IPython provides a rich architecture for interactive computing with:
+    Powerful interactive shells (terminal and Qt-based). A browser-based notebook
+    with support for code, text, mathematical expressions, inline plots and other
+    rich media. Support for interactive data visualization and use of GUI toolkits.
+    Flexible, embeddable interpreters to load into your own projects. Easy to use,
+    high performance tools for parallel computing.'
+  license: Not confirmed
+  name: IPython
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''IPython/8.14.0-GCCcore-12.3.0'', ''IPython/8.17.2-GCCcore-13.2.0'']'
+  url: https://ipython.org/index.html
 ---
 
 IPython
@@ -23,10 +53,10 @@ module load IPython/8.17.2-GCCcore-13.2.0
 
 *(This data was automatically generated on {{ generated_time }})*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IPython/8.17.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|
-|IPython/8.14.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|IPython/8.17.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|
+|IPython/8.14.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|
 
 
 ### IPython/8.17.2-GCCcore-13.2.0

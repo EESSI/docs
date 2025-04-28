@@ -12,7 +12,6 @@ it if you use continuous integration within those ecosystems.
 ## The EESSI GitHub Action
 
 The EESSI GitHub Action can be found on the [GitHub Marketplace](https://github.com/marketplace),
-at [https://github.com/marketplace/actions/eessi](https://github.com/marketplace/actions/eessi) .
 at [https://github.com/marketplace/actions/eessi](https://github.com/marketplace/actions/eessi).
 Below is a minimal example of how to leverage the action, for detailed usage please refer to the official action
 documentation.

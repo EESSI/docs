@@ -39,10 +39,24 @@ Karolina is the EuroHPC JU supercomputer hosted by [IT4Innovations](https://www.
 
 ### Vega (Slovenia)
 
-Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Science (IZUM)](https://izum.si/en/home).
+Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Science (IZUM)](https://izum.si/en/home).
 
 * [General documentation](https://doc.vega.izum.si)
 * [EESSI @ Vega](https://doc.vega.izum.si/eessi)
+
+### Deucalion (Portugal)
+
+Deucalion is the EuroHPC JU supercomputer hosted by the [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
+EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with plans to expand to the non-accelerated x86 partition soon.
+
+* [General documentation](https://docs.deucalion.macc.fccn.pt/)
+* [EESSI @ Deucalion](https://docs.deucalion.macc.fccn.pt/jobs/eessi/)
+
+### MareNostrum 5 (Spain)
+
+MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/).
+
+* [General documentation](https://www.bsc.es/supportkc/)
 
 ---
 
@@ -58,7 +72,7 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 #### Vrije Universiteit Brussel
 
-* Hydra: [General documentation](https://hpc.vub.be)
+* Hydra: [General documentation](https://hpc.vub.be/docs/) | [EESSI @ Hydra](https://hpc.vub.be/docs/software/modules/#european-environment-for-scientific-software-installations)
 
 
 ### Germany
@@ -67,6 +81,25 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 
 * HPC cluster: [General documentation](https://www.embl.org/about/info/it-services/it-infrastructure)
 
+#### Jülich Supercomputing Centre
+
+* JUSUF: [General documentation](https://apps.fz-juelich.de/jsc/hps/jusuf/index.html)
+
+#### University of Stuttgart
+
+* Ant: [General documentation](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_hpc_facilities/ant.html) | [EESSI @ Ant](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_user_guide/loading_modules.html#loading-eessi-software)
+
+### Greece
+
+#### Aristotle University of Thessaloniki
+
+* Aristotle: [General documentation](https://hpc.it.auth.gr/nodes-summary_en/) | [EESSI @ Aristotle](https://hpc.it.auth.gr/software/eessi/)
+
+### Luxembourg
+
+#### University of Luxembourg
+
+* ULHPC platform: [General documentation](https://hpc-docs.uni.lu/) | [EESSI @ ULHPC](https://hpc-docs.uni.lu/software/eessi/)
 
 ### Netherlands
 
@@ -79,7 +112,7 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 #### University of Groningen
 
 * Hábrók: [General documentation](https://wiki.hpc.rug.nl/habrok/introduction/cluster_description)
-
+* Managed Linux workspace (LWP): [General documentation](https://lwpwiki.webhosting.rug.nl/) | [EESSI @ LWP](https://lwpwiki.webhosting.rug.nl/index.php/EESSI)
 
 ### Norway
 
@@ -88,3 +121,46 @@ Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Sc
 * Betzy: [General documentation](https://documentation.sigma2.no/hpc_machines/betzy.html#betzy) | [EESSI @ Betzy](https://documentation.sigma2.no/software/eessi.html)
 * Fram: [General documentation](https://documentation.sigma2.no/hpc_machines/fram.html#fram) | [EESSI @ Fram](https://documentation.sigma2.no/software/eessi.html)
 * Saga: [General documentation](https://documentation.sigma2.no/hpc_machines/saga.html#saga) | [EESSI @ Saga](https://documentation.sigma2.no/software/eessi.html)
+* [Norwegian AI Cloud](https://www.naic.no/) - Offers a provisioning system for virtual machines (VM) with preconfigured access to EESSI. Users can launch VMs on a local OpenStack-based cloud and on the commercial clouds Google and Azure.
+
+### Spain
+
+#### Barcelona Supercomputing Center
+
+* thunder
+* arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+
+#### Galicia Supercomputing Center (CESGA)
+
+* FinisTerrae III: [General documentation](https://cesga-docs.gitlab.io/ft3-user-guide/overview.html) | [EESSI @ FinisTerrae III](https://cesga-docs.gitlab.io/ft3-user-guide/compilers_and_dev_tools.html#eessi)
+
+### Czech Republic
+
+#### Czech Technical University in Prague
+
+* Sunrise: [General documentation](https://nms.fjfi.cvut.cz/wiki/Sunrise.fjfi.cvut.cz)
+
+---
+
+## Systems outside of Europe
+
+### United States of America
+
+#### Michigan State University
+
+* Institute for Cyber-Enabled Research (ICER): [General documentation](https://icer.msu.edu/)
+
+---
+
+## Other infrastructures
+
+### AWS
+
+* AWS ParallelCluster: [General documentation](https://docs.aws.amazon.com/parallelcluster/) | [EESSI @ AWS ParallelCluster](https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/env/eessi)
+
+### LEXIS
+
+* LEXIS Platform: [General documentation](https://docs.lexis.tech/architecture/architecture.html) | [EESSI @ LEXIS](https://docs.lexis.tech/user_interfaces/howto.html#custom-hpc-jobs)

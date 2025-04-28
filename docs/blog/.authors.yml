@@ -29,3 +29,38 @@ authors:
     description: BSC
     avatar: https://avatars.githubusercontent.com/u/11518551?v=4
     slug: https://github.com/julianmorillo
+  Neves-P:
+    name: Pedro Santos Neves
+    description: CIT - University of Groningen
+    avatar: https://avatars.githubusercontent.com/u/10762799?v=4
+    slug: https://github.com/Neves-P
+  trz42:
+    name: Thomas Röblitz
+    description: University of Bergen
+    avatar: https://avatars.githubusercontent.com/u/12829274?v=4
+    slug: https://github.com/trz42
+  bedroge:
+    name: Bob Dröge
+    description: University of Groningen
+    avatar: https://avatars.githubusercontent.com/u/11991359?v=4
+    slug: https://github.com/bedroge
+  TopRichard:
+    name: Richard Topouchian
+    description: University of Bergen
+    avatar: https://avatars.githubusercontent.com/u/121792457?v=4
+    slug: https://github.com/TopRichard
+  darkless:
+    name: Pavel Grochal
+    description: Inuits
+    avatar: https://avatars.githubusercontent.com/u/1187034?v=4
+    slug: https://github.com/Darkless012
+  toine:
+    name: Anthony Beerens
+    description: Inuits
+    avatar: https://avatars.githubusercontent.com/u/9018134?v=4
+    slug: https://github.com/Zeldhoron
+  draentropia:
+    name: Elisabeth Ortega
+    description: Do IT Now
+    avatar: https://avatars.githubusercontent.com/u/16071227?v=4
+    slug: https://github.com/draentropia

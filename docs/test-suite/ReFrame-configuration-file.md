@@ -55,7 +55,7 @@ site_configuration = {
                         }
                     ],
                     'features': [
-                        FEATURES[CPU]
+                        FEATURES.CPU
                     ] + list(SCALES.keys()),
                 }
             ]
@@ -215,7 +215,7 @@ site_configuration = {
                     'environs': ['default'],
                     'max_jobs': 4,
                     'features': [
-                        FEATURES[CPU]
+                        FEATURES.CPU
                     ] + list(SCALES.keys()),
                 },
                 {
@@ -235,16 +235,16 @@ site_configuration = {
                     ],
                     'devices': [
                         {
-                            'type': DEVICE_TYPES[GPU],
+                            'type': DEVICE_TYPES.GPU,
                             'num_devices': 4,
                         }
                     ],
                     'features': [
-                        FEATURES[CPU],
-                        FEATURES[GPU],
+                        FEATURES.CPU,
+                        FEATURES.GPU,
                     ],
                     'extras': {
-                        GPU_VENDOR: GPU_VENDORS[NVIDIA],
+                        EXTRAS.GPU_VENDOR: GPU_VENDORS.NVIDIA,
                     },
                 },
             ]
@@ -316,8 +316,8 @@ The most common configuration items defined at this level are:
   _feature_ (for example if GPUs are available). Feature names are standardized in the EESSI test suite in
   [`eessi.testsuite.constants.FEATURES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py)
   dictionary.
-  Typically, you want to define `features: [FEATURES[CPU]] + list(SCALES.keys())` for CPU based partitions, and
-  `features: [FEATURES[GPU]] + list(SCALES.keys())` for GPU based partitions. The first tells the EESSI test suite
+  Typically, you want to define `features: [FEATURES.CPU] + list(SCALES.keys())` for CPU based partitions, and
+  `features: [FEATURES.GPU] + list(SCALES.keys())` for GPU based partitions. The first tells the EESSI test suite
   that this partition can only run CPU-based tests, whereas second indicates that this partition can only run GPU-based
   tests. You _can_ define a single partition to have _both_ the CPU and GPU features (since `features` is a Python list).
   However, since the CPU-based tests will not ask your batch scheduler for GPU resources, this _may_ fail on batch
@@ -330,7 +330,7 @@ The most common configuration items defined at this level are:
   can be used to exclude running at certain scales on systems that would not support it. E.g. some systems might not
   support requesting multiple partial nodes, which is what the `1cpn_2nodes` (1 core per node, on two nodes) and
   `1cpn_4nodes` scales do. One could exclude these by setting e.g.
-  `features: [FEATURES[CPU]] + [s for s in SCALES if s not in ['1cpn_2nodes', '1cpn_4nodes']]`. With this
+  `features: [FEATURES.CPU] + [s for s in SCALES if s not in ['1cpn_2nodes', '1cpn_4nodes']]`. With this
   configuration setting, ReFrame will run all the scales listed in `eessi.testsuite.constants.SCALES _except_
   those two. In a similar way, one could exclude all multinode tests if one just has a single node available.
 - [`devices`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.devices): This field specifies information on devices (for example) present in the partition. Device types are standardized in the EESSI test suite in the [`eessi.testsuite.constants.DEVICE_TYPES`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) dictionary. This is used by the EESSI test suite to determine how many of these devices it can/should use per node.
@@ -338,16 +338,16 @@ The most common configuration items defined at this level are:
   For GPU partitions, you want to define something like:
   ```python
   'devices': {
-      'type': DEVICE_TYPES[GPU],
+      'type': DEVICE_TYPES.GPU,
       'num_devices': 4,  # or however many GPUs you have per node
   }
   ```
-- [`extras`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.extras): This field specifies extra information on the partition, such as the GPU vendor. Valid fields for `extras` are standardized as constants in [`eessi.testsuite.constants`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) (for example `GPU_VENDOR`). This is used by the EESSI test suite to decide if a partition can run a test that _specifically_ requires a certain brand of GPU.
+- [`extras`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.extras): This field specifies extra information on the partition, such as the GPU vendor. Valid fields for `extras` are standardized as constants in [`eessi.testsuite.constants`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) (for example `EXTRAS.GPU_VENDOR`). This is used by the EESSI test suite to decide if a partition can run a test that _specifically_ requires a certain brand of GPU.
   Typically, there is no need to define `extras` for CPU partitions.
   For GPU partitions, you typically want to specify the GPU vendor, for example:
   ```python
   'extras': {
-      GPU_VENDOR: GPU_VENDORS[NVIDIA]
+      EXTRAS.GPU_VENDOR: GPU_VENDORS.NVIDIA
   }
   ```
 
