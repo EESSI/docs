@@ -27,7 +27,7 @@ nav = mkdocs_gen_files.Nav()
 for path in sorted(Path(f"{TEST_SUITE}/eessi/").rglob("*.py")):
     module_path = path.relative_to(TEST_SUITE).with_suffix("")
     doc_path = path.relative_to(TEST_SUITE).with_suffix(".md")
-    full_doc_path = Path("api", doc_path)
+    full_doc_path = Path("testsuite_api/", doc_path)
 
     #parts = tuple(module_path.parts)
     parts = list(module_path.parts)

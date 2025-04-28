@@ -54,9 +54,9 @@ nav:
       - Available tests: test-suite/available-tests.md
       - Writing tests: test-suite/writing-portable-tests.md
       - Release notes: test-suite/release-notes.md
+      - API documentation: testsuite_api/
     - Known issues and workarounds:
       - v2023.06: known_issues/eessi-2023.06.md
-  - API documentation: api/
   - Adding software to EESSI: 
     - Overview: adding_software/overview.md
     - For contributors:
