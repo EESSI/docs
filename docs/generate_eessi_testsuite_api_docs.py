@@ -46,5 +46,5 @@ for path in sorted(Path(f"{TEST_SUITE}/eessi/").rglob("*.py")):
     mkdocs_gen_files.set_edit_path(full_doc_path, path)
 
     # Create the api/summary.md file and write the full navigation tree into it so it can be used as a site sidebar
-with mkdocs_gen_files.open("api/summary.md", "w") as nav_file:
+with mkdocs_gen_files.open("testsuite_api/summary.md", "w") as nav_file:
     nav_file.writelines(nav.build_literate_nav())
