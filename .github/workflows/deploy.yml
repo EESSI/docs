@@ -3,6 +3,8 @@ name: deploy documentation (only on push to main branch)
 on:
   push:
     branches: main
+  # Add option to deploy manually, e.g. because there is a new EESSI test suite release and we want updated API docs
+  workflow_dispatch:
 # Declare default permissions as read only.
 permissions: read-all
 jobs:
@@ -27,6 +29,24 @@ jobs:
           pip install -r requirements.txt
           pip list | grep mkdocs
           mkdocs --version
+
+    # Make sure to also deploy auto-generated API docs for test suite
+    # For that, we need the repo to be available under eessi/test-suite
+    - name: checkout test suite
+      uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+      with:
+        repository: eessi/test-suite
+        # Path is needed, otherwise this will overwrite the checkout action that cloned the docs repo
+        path: test-suite
+        # Make sure to fetch tags, so we can checkout a particular release
+        fetch-tags: True
+      # Generate docs for latest release
+      run: |
+        cd eessi/tests-suite
+        # This assumes we stick to a version-tagging scheme vX.Y.Z
+        LATEST_VERSION=$(git tag | grep '^v[0-9]\+\.[0-9]\+\.[0-9]\+$' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)
+        # Use the latest release by default
+        git checkout $LATEST_VERSION
 
     - name: build tutorial
       run: make test && make deploy
