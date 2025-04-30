@@ -1,0 +1,2748 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/tutorial/access/stratum1/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Stratum1 - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    
+      <link rel="stylesheet" href="../../../available_software/css/style_table.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#private-stratum-1-replica-server" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stratum1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../filesystem_layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filesystem layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../compatibility_layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Compatibility layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software_layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software_layer/cpu_targets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Supported CPU targets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Available software and repositories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Available software and repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../available_software/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Repositories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repositories/software.eessi.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repositories/riscv.eessi.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RISC-V
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repositories/pilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repositories/dev.eessi.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Installation and configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_access/is_eessi_accessible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is EESSI already installed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_access/native_installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Native
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_access/eessi_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Windows and macOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Windows and macOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_access/eessi_wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows with WSL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting_access/eessi_limactl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    macOS with Lima
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configuring EESSI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../site_specific_config/host_injections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to configure EESSI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../site_specific_config/gpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GPU support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../site_specific_config/lmod_hooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom LMOD hooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basic usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Basic usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/setting_up_environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/basic_commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/eessi_demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/eessi_in_ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EESSI in CI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../filesystem_layer/stratum1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up your Stratum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../using_eessi/building_on_eessi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building software with EESSI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Test suite
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test suite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/installation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation & configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/ReFrame-configuration-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReFrame configuration file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/available-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Available tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/writing-portable-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Writing tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-suite/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Known issues and workarounds
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Known issues and workarounds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../known_issues/eessi-2023.06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    v2023.06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Adding software to EESSI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Adding software to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    For contributors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            For contributors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/contribution_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribution policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/opening_pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open PR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/debugging_failed_builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Debugging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/adding_development_software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    For maintainers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            For maintainers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BTD bot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/building_software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../adding_software/deploying_software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploying software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software_layer/build_nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community and support
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Community and support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../meetings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meetings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../talks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Talks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systems where EESSI is available
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Governance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cernvm-fs-as-cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CernVM-FS as CDN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motivation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommendations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup procedure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup procedure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-cernvm-fs-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing CernVM-FS server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-repository-public-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding repository public key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-repository-replica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating repository replica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating repository replica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synchronisation-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synchronisation server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disabling-the-geoapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disabling the GeoAPI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-replica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating replica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-synchronisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial synchronisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periodic-synchronisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Periodic synchronisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Periodic synchronisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#log-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log rotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cron-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cron job
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#more-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      More information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-private-stratum-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the private Stratum 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the private Stratum 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#only-private-stratum-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Only private Stratum 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Only private Stratum 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#client-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-private-stratum-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proxy + private Stratum 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proxy + private Stratum 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reconfigure-squid-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reconfigure Squid proxy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-configuration_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<div class="admonition danger">
+<p class="admonition-title">Work in progress</p>
+<p><em>(30 April 2025)</em></p>
+<p>The contents of this tutorial are currently being reworked to be up-to-date with recent developments in CernVM-FS,
+and to be well integrated in the EESSI documentation.</p>
+<p>It is based on the <em>"Best Practices for CernVM-FS in HPC"</em> tutorial that was held on
+4 Dec 2023, see also https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices.</p>
+</div>
+<h1 id="private-stratum-1-replica-server">Private Stratum 1 replica server<a class="headerlink" href="#private-stratum-1-replica-server" title="Permanent link">&para;</a></h1>
+<p>In this section of the tutorial, we will set up a <a href="../../appendix/terminology/#stratum1">Stratum 1 replica server</a>, which is the next step towards
+a production-ready CernVM-FS setup.</p>
+<h2 id="cernvm-fs-as-cdn">CernVM-FS as CDN<a class="headerlink" href="#cernvm-fs-as-cdn" title="Permanent link">&para;</a></h2>
+<p>The content of CernVM-FS repositories is served by a set of
+Stratum 1 replica servers (sometimes also called <em>mirror servers</em>),
+which together with the central <a href="../../appendix/terminology/#stratum0">Stratum 0 server</a>
+and the <a href="../../appendix/terminology/#proxy">proxy servers</a> can be seen as
+a <a href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery network (CDN)</a>.</p>
+<p>A Stratum 1 replica server is a <strong>standard web server</strong> that uses the CernVM-FS server
+tools to provide a full mirror of one or more CernVM-FS repositories,
+which are served and managed through a central Stratum 0 server.</p>
+<p>The figure below shows the CernVM-FS network for repositories in the <code>cern.ch</code> domain,
+including the Stratum 1 replica servers which are spread all across the world,
+and a distributed hierarchy of proxy servers which fetch content from the closest Stratum 1.</p>
+<p align="center">
+<img src="../../img/cvmfs-stratum1.png" alt="CernVM-FS content distribution network for the cern.ch domain" width="80%"/></br>
+</p>
+
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
+<p>Next to the <em>public</em> Stratum 1 servers that are operated by the maintainers
+of a CernVM-FS repository, you can also set up your own "private" Stratum 1
+replica server in your local network.</p>
+<p>In the context of using CernVM-FS on HPC infrastructure this brings the following benefits:</p>
+<ul>
+<li>To improve the overall reliability of the setup, for example in case of (temporary) loss of connectivity to the public Stratum 1 replica servers;</li>
+<li>To reduce the load on the public Stratum 1 servers;</li>
+<li>To mitigate the impact of poor network bandwidth to the closest public Stratum 1 server;</li>
+<li>To improve the latency and hence start-up time of software in situations where the cache of the proxy servers has insufficient capacity;</li>
+</ul>
+<h2 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h2>
+<p>When setting up a Stratum 1 replica server, you should take the following
+recommendations into account:</p>
+<ul>
+<li>A RAID-protected <strong>low latency storage</strong> setup (like <a href="https://en.wikipedia.org/wiki/Solid-state_drive">SSD</a>
+  or <a href="https://en.wikipedia.org/wiki/NVM_Express">NVMe</a>) should be used,
+  because the CernVM-FS server component will run lots of <code>stat</code> system calls against it.</li>
+<li>An <a href="https://en.wikipedia.org/wiki/Ext3"><code>ext3</code></a> or <a href="https://en.wikipedia.org/wiki/Ext4"><code>ext4</code></a> file system
+  is preferred (rather than <a href="https://en.wikipedia.org/wiki/XFS">XFS</a>).</li>
+<li>A standard Apache web server should be installed, which should be close to the
+  low latency storage. Directory listing is not required.</li>
+<li>HTTP connections to port <code>80</code> must be possible.</li>
+</ul>
+<details class="note">
+<summary>Recommendations on monitoring <em>(click to expand)</em></summary>
+<p>It is strongly recommended to actively monitor a Stratum 1 replica server,
+in particular:</p>
+<ul>
+<li>CPU usage;</li>
+<li>disk usage;</li>
+<li>I/O load;</li>
+<li>network bandwidth and latency;</li>
+<li>log messages produced in <a href="https://en.wikipedia.org/wiki/Syslog">syslog</a>;</li>
+</ul>
+<p>The <a href="https://github.com/cvmfs-contrib/cvmfs-servermon"><code>cvmfs-servermon</code></a> package can be used to watch for problems
+in every repository’s <code>.cvmfs_status.json</code> status file.</p>
+<p><a href="https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#monitoring">See also the CernVM-FS documentation</a>.</p>
+</details>
+<details class="note">
+<summary>Recommendations for a high-availability setup <em>(click to expand)</em></summary>
+<p>To create a high-availability setup, it is <em>not</em> recommended to use two or more
+separate Stratum 1 replica servers in a single round-robin service.</p>
+<p>Since they will be updated at different rates, that would cause errors when a client
+sees an updated <a href="../../appendix/terminology/#catalog">catalog</a> from one Stratum 1, but then tries to read corresponding data files from another that does not yet have the files.</p>
+<p>Instead, different Stratum 1 replica servers
+should either be separately configured on the clients, or a pair can be configured 
+as a high availability active/standby pair using the
+<a href="https://github.com/cvmfs-contrib/cvmfs-hastratum1"><code>cvmfs-hastratum1</code></a> package. </p>
+<p>An active/standby pair can also be managed by switching a DNS name between two different servers.</p>
+</details>
+<details class="note">
+<summary>Recommendations for a public Stratum 1 replica server <em>(click to expand)</em></summary>
+<p>For a public Stratum 1 replica server, it is recommended to install a <a href="http://www.squid-cache.org/">Squid frontend</a>
+in front of the Stratum 1, which should be configured as a
+<a href="https://en.wikipedia.org/wiki/Reverse_proxy"><em>reverse proxy</em></a>, and installed
+on the same system as the web server, to reduce the number of points of failure.
+The optimized <a href="https://osg-htc.org/docs/data/frontier-squid/"><code>frontier-squid</code></a>
+distribution is recommended.
+For more information, <a href="https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#squid-configuration">see the CernVM-FS
+configuration</a>.</p>
+<p>Alternatively, separate Squid proxy server machines can be configured in a round-robin DNS configuration
+and each forward to the Apache server.
+Note however that if any of them are down the entire service will be considered down by CernVM-FS clients.
+The impact of this can be mitigated through front end hardware load balancer that quickly takes a system that is down out of service.</p>
+</details>
+<details class="note">
+<summary>Recommendations on garbage collection <em>(click to expand)</em></summary>
+<p>If any CernVM-FS repositories being replicated have
+<a href="https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)">garbage collection</a> enabled,
+the Stratum 1 also needs to run garbage collection in order to prevent the disk space usage from growing rapidly.</p>
+<p><a href="https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#maintenance-processes">See the CernVM-FS
+documentation</a> for more details.</p>
+</details>
+<details class="note">
+<summary>Using S3-compatible storage (Amazon S3, Azure Blob, Ceph)</summary>
+<p>CernVM-FS can store data directly to S3-compatible storage systems, such as <a href="https://aws.amazon.com/s3">Amazon S3</a>,
+<a href="https://learn.microsoft.com/en-us/azure/storage/blobs">Azure Blob</a>, or <a href="https://ceph.io">Ceph</a>.</p>
+<p>For more information, <a href="https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#sct-s3storagesetup">see the CernVM-FS documentation</a>.</p>
+</details>
+<h2 id="setup-procedure">Setup procedure<a class="headerlink" href="#setup-procedure" title="Permanent link">&para;</a></h2>
+<p>To set up a Stratum 1 replica server and configure it to replicate
+a particular CernVM-FS repository, you should:</p>
+<ul>
+<li>Install the <code>cvmfs-server</code> package;</li>
+<li>Add the public key of the CernVM-FS repository you want to replicate to <code>/etc/cvmfs/keys/</code>;</li>
+<li>Create the repository replica;</li>
+<li>Run the initial synchronisation;</li>
+<li>Configure <code>cron</code> to perform periodic synchronisation;</li>
+</ul>
+<p>In the sections below, we will set up a Stratum 1 replica server for the <a href="../../eessi/high-level-design/#filesystem_layer">EESSI CernVM-FS repository <code>software.eessi.io</code></a>.</p>
+<h3 id="installing-cernvm-fs-server">Installing CernVM-FS server<a class="headerlink" href="#installing-cernvm-fs-server" title="Permanent link">&para;</a></h3>
+<p>Start with installing the <code>cvmfs-server</code> package which provides the CernVM-FS server tools.</p>
+<p>Although we won't actually use the functionality that requires it,
+we also need to install a package that provides the <code>mod_wsgi</code> Apache adapter module.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">For RHEL-based Linux distros (incl. CentOS, Rocky, Fedora, ...)</label><label for="__tabbed_1_2">For Debian-based Linux distros (incl. Ubuntu)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># install cvmfs-release package to add yum repository</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># install CernVM-FS server package</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>cvmfs-server
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># install mod_wsgi Apache adapter module</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># (on versions older than equivalent to RHEL8, install mod_wsgi instead)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3-mod_wsgi
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># install cvmfs-release package to add apt repository</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>lsb-release
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>curl<span class="w"> </span>-OL<span class="w"> </span>https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>cvmfs-release-latest_all.deb
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># install CernVM-FS server package + the required mod-wsgi</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>cvmfs-server
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># install mod_wsgi Apache adapter module</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># (on Ubuntu versions older than 22.04, install libapache2-mod-wsgi instead)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libapache2-mod-wsgi-py3
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="adding-repository-public-key">Adding repository public key<a class="headerlink" href="#adding-repository-public-key" title="Permanent link">&para;</a></h3>
+<p>Add the public key for the repositories in the <code>eessi.io</code> domain to <code>/etc/cvmfs/keys</code>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/cvmfs/keys/eessi.io/
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>cp<span class="w"> </span>eessi.io.pub<span class="w"> </span>/etc/cvmfs/keys/eessi.io/
+</code></pre></div>
+<p>You can get the contents for <code>eessi.io.pub</code> from the default CernVM-FS config repository on a CernVM-FS client system
+at:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/cvmfs/cvmfs-config.cern.ch/etc/cvmfs/keys/eessi.io/eessi.io.pub
+</code></pre></div>
+<h3 id="creating-repository-replica">Creating repository replica<a class="headerlink" href="#creating-repository-replica" title="Permanent link">&para;</a></h3>
+<p>To create the repository replica, we need to use run the <code>cvmfs_server add-replica</code> command.</p>
+<h4 id="synchronisation-server">Synchronisation server<a class="headerlink" href="#synchronisation-server" title="Permanent link">&para;</a></h4>
+<p>We will need to specify the server that should be used for synchronising
+the repository contents.
+This can either be the <a href="../../appendix/terminology/#stratum0">Stratum 0 server</a>, or a public Stratum 1 replica server
+that was set up to be used for repository synchronisation
+(by having a <code>.cvmfs_master_replica</code> file in the HTTP root directory).</p>
+<p>For EESSI we should use <code>aws-eu-west-s1-sync.eessi.science</code> as synchronisation server.</p>
+<h4 id="disabling-the-geoapi">Disabling the GeoAPI<a class="headerlink" href="#disabling-the-geoapi" title="Permanent link">&para;</a></h4>
+<p>Before creating the replica, we first need to <em>disable</em> the
+<a href="https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#geo-api-setup">Geo API service</a>
+in the CernVM-FS server configuration, to avoid getting this error when creating the replica:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Installing GeoIP Database... CVMFS_GEO_LICENSE_KEY not set
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>fail
+</code></pre></div>
+<p>The Geo API service enables client systems to automatically sort Stratum 1 replica servers geographically,
+so the CernVM-FS client component can prioritize connecting to the closest one.</p>
+<p>This is really only relevant for <em>public</em> Stratum 1 replica servers, not a private Stratum 1 replica server
+that is only accessible from within the local network, like the one we are setting up here.</p>
+<p>To disable the Geo API service, set <code>CVMFS_GEO_DB_FILE</code> to <code>NONE</code> in <code>/etc/cvmfs/server.local</code>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;CVMFS_GEO_DB_FILE=NONE&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/cvmfs/server.local
+</code></pre></div>
+<h4 id="creating-replica">Creating replica<a class="headerlink" href="#creating-replica" title="Permanent link">&para;</a></h4>
+<p>To actually create the replica, run the <code>cvmfs_server add-replica</code> command as follows,
+specifying that the current user account should be the repository owner via <code>-o $USER</code>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">sync_server</span><span class="o">=</span><span class="s1">&#39;aws-eu-west-s1-sync.eessi.science&#39;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nv">repo</span><span class="o">=</span><span class="s1">&#39;software.eessi.io&#39;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nv">key_dir</span><span class="o">=</span><span class="s1">&#39;/etc/cvmfs/keys/eessi.io&#39;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>sudo<span class="w"> </span>cvmfs_server<span class="w"> </span>add-replica<span class="w"> </span>-o<span class="w"> </span><span class="nv">$USER</span><span class="w"> </span>http://<span class="si">${</span><span class="nv">sync_server</span><span class="si">}</span>/cvmfs/<span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">key_dir</span><span class="si">}</span>
+</code></pre></div>
+<details class="note">
+<summary>Starting Apache <em>(click to expand)</em></summary>
+<p>If creating the replica fails with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Apache must be installed and running
+</code></pre></div>
+<p>try starting the <code>httpd</code> service first:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>httpd.service
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>httpd.service
+</code></pre></div>
+</details>
+<h3 id="initial-synchronisation">Initial synchronisation<a class="headerlink" href="#initial-synchronisation" title="Permanent link">&para;</a></h3>
+<p>After creating the replica, we should trigger the initial synchronisation of the repository replica,
+using the <code>cvmfs_server snapshot</code> command:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>cvmfs_server<span class="w"> </span>snapshot<span class="w"> </span>software.eessi.io
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Time for a coffee...</p>
+<p>Since this will download the <em>full</em> repository contents from the synchronisation
+server that was specified when creating the repository replica, the initial synchronisation may take a while.</p>
+<p>The time required for the initial synchronisation is heavily dependent on the size of the repository,
+and the available network latency to the synchronisation server.</p>
+</div>
+<h3 id="periodic-synchronisation">Periodic synchronisation<a class="headerlink" href="#periodic-synchronisation" title="Permanent link">&para;</a></h3>
+<p>To ensure that updates to the contents of the CernVM-FS repository are synchronised
+automatically to the Stratum-1 replica server, we should set up a cron job to do periodic synchronisation by running <code>cvmfs_server snapshot -a</code>.</p>
+<h4 id="log-rotation">Log rotation<a class="headerlink" href="#log-rotation" title="Permanent link">&para;</a></h4>
+<p>Before setting up a cron job, we first need to configure log rotation, or running <code>snapshot -a</code> will fail with:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>/etc/logrotate.d/cvmfs does not exist!
+</code></pre></div></p>
+<p>Create <code>/etc/logrotate.d/cvmfs</code> with the following contents:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>/var/log/cvmfs/*.log<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>weekly
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>missingok
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span>notifempty
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="o">}</span>
+</code></pre></div>
+<h4 id="cron-job">Cron job<a class="headerlink" href="#cron-job" title="Permanent link">&para;</a></h4>
+<p>To synchronize all active replica repositories every 5 minutes, we can create a cron job <code>/etc/cron.d/cvmfs_stratum1_snapshot</code> that runs <code>cvmfs_server snapshot -a -i</code>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>*/5<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>OWNER<span class="w"> </span><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>/usr/bin/cvmfs_server<span class="w"> </span>snapshot<span class="w"> </span>-a<span class="w"> </span>-i<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="k">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$output</span><span class="s2">&quot;</span>
+</code></pre></div>
+<p>In here, you must replace "<code>OWNER</code>" with the account name of the repository owner (cfr. the <code>-o $USER</code> option
+used in the <code>add-replica</code> command above).</p>
+<p>The <code>-a</code> option enables synchronisation of <em>all active</em> replica repositories,
+while <code>-i</code> indicates that that repositories for which an initial snapshot has not been run should be skipped.</p>
+<p>To verify that periodic synchronisation is working correctly,
+check the contents of the log file:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>/var/log/cvmfs/snapshots.log
+</code></pre></div>
+<h3 id="more-information">More information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h3>
+<p>For more information on the setup and configuration of a Stratum 1 replica server,
+see the CernVM-FS documentation, in particular the following sections:</p>
+<ul>
+<li><a href="https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#sct-serveranatomy">Notable CernVM-FS Server Locations and Files</a></li>
+<li><a href="https://cvmfs.readthedocs.io/en/stable/apx-serverinfra.html">CernVM-FS Server Infrastructure</a></li>
+</ul>
+<h2 id="using-the-private-stratum-1">Using the private Stratum 1<a class="headerlink" href="#using-the-private-stratum-1" title="Permanent link">&para;</a></h2>
+<p>To actually use the "private" Stratum 1 replica server that has been set up
+we need to change the configuration on each CernVM-FS client system.</p>
+<p>Initially, we will use <em>only</em> the private Stratum 1 replica server,
+without a proxy server.</p>
+<div class="admonition warning">
+<p class="admonition-title">Remove <code>CVMFS_HTTP_PROXY</code> from client configuration</p>
+<p>Do make sure that the <strong><code>CVMFS_HTTP_PROXY</code> line is removed</strong> from the CernVM-FS configuration file
+<code>/etc/cvmfs/default.local</code> on the client system, and that the CernVM-FS configuration
+was reloaded (with <code>sudo cvmfs_config reload</code>), as was instructed <a href="../proxy/#cleanup_proxy">here</a>.</p>
+</div>
+<p>After we have verified that the Stratum 1 is used by the client system,
+we will bring the proxy server back in the game,
+and demonstrate how to use both the proxy server and the Stratum 1 replica server.</p>
+<h3 id="only-private-stratum-1">Only private Stratum 1<a class="headerlink" href="#only-private-stratum-1" title="Permanent link">&para;</a></h3>
+<h4 id="client-configuration">Client configuration<a class="headerlink" href="#client-configuration" title="Permanent link">&para;</a></h4>
+<p>The <code>CVMFS_SERVER_URL</code> configuration setting on a client system:</p>
+<ul>
+<li>Is a string value with a semicolon-separated (<code>;</code>) list of known Stratum 1 servers;</li>
+<li>Should be enclosed in quotes;</li>
+<li>Specifies each Stratum 1 as a URL that starts with <code>http://</code>, and ends with <code>/cvmfs/@fqrn@</code></li>
+</ul>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>CVMFS_SERVER_URL=&quot;http://s1.test.eu/cvmfs/@fqrn@;http://s1.test.us/cvmfs/@fqrn@&quot;
+</code></pre></div>
+<p>The <code>@fqrn@</code> substring is replaced by CernVM-FS with the <em>fully qualified repository name</em>, like <code>software.eessi.io</code>.</p>
+<p><code>CVMFS_SERVER_URL</code> should be specified in the <em>domain-specific configuration file</em> in <code>/etc/cvmfs</code> that is
+relevant for the CernVM-FS repository we have replicated on our Stratum 1.</p>
+<p>For <code>software.eessi.io</code>, we should add the following to <code>/etc/cvmfs/domain.d/eessi.io.local</code>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="na">CVMFS_SERVER_URL</span><span class="o">=</span><span class="s">&quot;http://STRATUM1_IP/cvmfs/@fqrn@&quot;</span>
+</code></pre></div>
+<p>in which "<code>STRATUM1_IP</code>" must be replaced with (you guessed it)
+the IP address or hostname of the private Stratum 1 replica server.</p>
+<p>To apply the configuration change, run <code>cvmfs_config reload</code>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload
+</code></pre></div>
+<h4 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h4>
+<p>To verify that the client configuration was changed correctly, use <code>cvmfs_config stat</code>
+(which requires that the repository is mounted):</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ls<span class="w"> </span>/cvmfs/software.eessi.io
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>cvmfs_config<span class="w"> </span>stat<span class="w"> </span>-v<span class="w"> </span>software.eessi.io
+</code></pre></div>
+<p>The output line that starts with <code>Connection</code> should mention <code>online</code>, like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Connection: http://.../cvmfs/software.eessi.io through proxy DIRECT (online)
+</code></pre></div>
+<p>The <code>proxy DIRECT</code> indicates that we are not using a proxy server yet in this setup.</p>
+<p>You can also use <code>curl</code> to check the connection to the Stratum 1, by letting it print the HTTP header
+for the <code>.cvmfspublished</code> file in the root of the repository:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>curl<span class="w"> </span>--head<span class="w"> </span>http://STRATUM1_IP/cvmfs/software.eessi.io/.cvmfspublished
+</code></pre></div>
+<p>the first line of the output should be something like:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>HTTP/1.1 200 OK
+</code></pre></div></p>
+<p>If instead you see <code>403 Forbidden</code> then the proxy server is blocking the connection:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>HTTP/1.1 403 Forbidden
+</code></pre></div></p>
+<h3 id="proxy-private-stratum-1">Proxy + private Stratum 1<a class="headerlink" href="#proxy-private-stratum-1" title="Permanent link">&para;</a></h3>
+<p>To have a more complete view, let's now also bring the proxy server back in the game.</p>
+<h4 id="reconfigure-squid-proxy">Reconfigure Squid proxy<a class="headerlink" href="#reconfigure-squid-proxy" title="Permanent link">&para;</a></h4>
+<p>First we need to make a small but important change to the configuration of the Squid proxy,
+to ensure that the proxy server is allowed to connect to the private Stratum 1 replica server.</p>
+<p>Update the ACL for the Stratum 1 servers in <code>/etc/squid/squid.conf</code> on the proxy server
+by adding the IP address of the private Stratum 1:
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c"># replace STRATUM1_IP with the IP address of the private Stratum 1</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nb">acl</span><span class="w"> </span>stratum_ones<span class="w"> </span>dstdomain<span class="w"> </span>.eessi.science<span class="w"> </span>STRATUM1_IP
+</code></pre></div></p>
+<p>And then reload for configuration for the Squid proxy service:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>squid
+</code></pre></div>
+<h4 id="client-configuration_1">Client configuration<a class="headerlink" href="#client-configuration_1" title="Permanent link">&para;</a></h4>
+<p>We also need to update the client configuration to restore the <code>CVMFS_HTTP_PROXY</code> line
+in <code>/etc/cvmfs/default.local</code>, <a href="../proxy/#client-system-configuration">like we did when using the proxy server</a>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># replace PROXY_IP with the IP address of the proxy server</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="na">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="s">&quot;http://PROXY_IP:3128&quot;</span>
+</code></pre></div>
+<p>Don't forget to reload the CernVM-FS client configuration:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload
+</code></pre></div>
+<h4 id="testing_1">Testing<a class="headerlink" href="#testing_1" title="Permanent link">&para;</a></h4>
+<p>To test whether the setup using both the proxy server and the Stratum 1 replica server works,
+we can try accessing the EESSI repository,
+for example by <a href="../../eessi/using-eessi/#init">sourcing the initialisation script</a>:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/bash
+</code></pre></div>
+<p>The output of <code>sudo cvmfs_config stat -v software.eessi.io</code> should include a <code>Connection</code> line that ends with
+<code>(online)</code>, like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Connection: http://STRATUM1_IP/cvmfs/software.eessi.io through proxy http://PROXY_IP:3128 (online)
+</code></pre></div>
+<p>You can also use <code>curl</code> to check whether the Stratum 1 can be reached via the proxy server:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nv">http_proxy</span><span class="o">=</span>http://PROXY_IP:3128<span class="w"> </span>curl<span class="w"> </span>--head<span class="w"> </span>http://STRATUM1_IP/cvmfs/software.eessi.io/.cvmfspublished
+</code></pre></div>
+<h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
+<p>With a private Stratum 1 replica server, we have a more production-ready setup in place for using CernVM-FS.</p>
+<p>Using both a proxy server and a Stratum 1 replica server is another step in that direction,
+since it further improves the resilience, maintainability, scalability, and performance of the setup
+(since the proxy server can serve request from its memory cache).</p>
+<p>For the sake of demonstration we have used two separate systems for the Stratum 1 replica server and the
+proxy server, but both services can also be installed and configuration on the same server, and
+also installing <em>multiple</em> proxy servers is sensible to improve load balancing, for example to serve
+different HPC clusters that have significantly different workload mixes.</p>
+<hr />
+<p><em>(next: <a href="../alternatives/">Alternative ways to access CernVM-FS repositories</a>)</em></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 15:42:10">April 30, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+      
+        <script src="../../../available_software/javascripts/populate_overview.js"></script>
+      
+        <script src="https://cdn.datatables.net/plug-ins/2.2.2/pagination/bootstrap_input.js"></script>
+      
+    
+  </body>
+</html>
