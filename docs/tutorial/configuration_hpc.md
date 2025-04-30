@@ -137,7 +137,7 @@ The last scenario that we cover here is for HPC systems that do not have the Cer
 installed on the worker nodes, for example because the system administrators are not willing to install,
 configure, and maintain a CernVM-FS installation.
 
-Though less ideal than a native installaton of CernVM-FS, solutions to make CernVM-FS repositories accessible
+Though less ideal than a native installation of CernVM-FS, solutions to make CernVM-FS repositories accessible
 even in this case exist:
 
 * [Syncing a to another filesystem](#sync-other-filesystem)
