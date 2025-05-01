@@ -14,7 +14,13 @@ The EESSI test suite requires
 
 ??? note "(If your system Python version is <= 3.6, click here for some tips)
 
-    * You can upgrade the python version in a virtual environment. [Link](https://docs.python.org/3/library/venv.html)
+    * You can upgrade and manage python versions using `pyenv`. [Link](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+        * For installation follow the documentation in the repository using the link above.
+        * Then follow the steps to install a new Python version and further change local paths to the new Python:
+
+                pyenv install <python version number>
+                pyenv local <python version number>
+
     * You can also install a more recent version of Python on top of the GCC/GCCcore compiler.
 
 #### Installing Reframe
