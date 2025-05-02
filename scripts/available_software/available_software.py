@@ -233,7 +233,33 @@ def modules_eessi() -> dict:
     if modulepath:
         module_unuse(modulepath)
 
-    targets = [t for t in targets_eessi() if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
+    targets = targets_eessi()
+
+    # Order targets
+    generic_target_x86_64 = []
+    generic_target_aarch64 = []
+    targets_x86_64 = []
+    targets_aarch64 = []
+    for target in targets:
+        t = target.split('/')
+        if t[7] == 'aarch64':
+            if t[-1] == "generic":
+                generic_target_aarch64.append(target)
+            else:
+                targets_aarch64.append(target)
+        elif t[7] == 'x86_64':
+            if t[-1] == "generic":
+                generic_target_x86_64.append(target)
+            else:
+                targets_x86_64.append(target)
+    ordered_targets = []
+    ordered_targets.extend(generic_target_x86_64)
+    ordered_targets.extend(np.sort(targets_x86_64))
+    ordered_targets.extend(generic_target_aarch64)
+    ordered_targets.extend(np.sort(targets_aarch64))
+ 
+    targets = [t for t in ordered_targets if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
+
     for target in targets:
         print(f"\t Collecting available modules for {target}... ", end="", flush=True)
         module_use(target + "/modules/all/")
