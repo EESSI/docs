@@ -12,7 +12,7 @@ The EESSI test suite requires
 * [ReFrame](https://reframe-hpc.readthedocs.io) v4.3.3 (or newer)
 * [ReFrame test library (`hpctestlib`)](https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html)
 
-??? note "(If your system Python version is <= 3.6, click here for some tips)
+??? note "(If your system Python version is lower than the minimum required version, click here for some tips)
 
     * You can upgrade and manage python versions using `pyenv`. [Link](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
         * For installation follow the documentation in the repository using the link above.
@@ -21,7 +21,8 @@ The EESSI test suite requires
                 pyenv install <python version number>
                 pyenv local <python version number>
 
-    * You can also install a more recent version of Python on top of the GCC/GCCcore compiler.
+    * You can install a more recent version of Python on top of the GCC/GCCcore compiler.
+    * You can install a ReFrame module with EasyBuild and a [ReFrame easyconfig](https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/r/ReFrame) containing a more recent Python version.
 
 #### Installing Reframe
 
