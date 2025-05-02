@@ -1,9 +1,6 @@
 name: Test overview of available software in EESSI
 on:
-  push:
-    paths:
-      - ".github/**"
-      - "docs/available_software/data/**"
+  push
 jobs:
   check targets in overview.md and json_data.json:
     runs-on: ubuntu-22.04
