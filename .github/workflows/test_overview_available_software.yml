@@ -6,7 +6,6 @@ on:
         - "docs/available_software/data/**"
 jobs:
   check targets in overview.md and json_data.json:
-    if: github.repository_owner == 'EESSI'   # Prevent running on forks
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
