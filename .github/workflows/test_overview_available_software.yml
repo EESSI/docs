@@ -1,4 +1,4 @@
-name: Update overview of available software in EESSI
+name: Test overview of available software in EESSI
 on:
   push:
     paths:
