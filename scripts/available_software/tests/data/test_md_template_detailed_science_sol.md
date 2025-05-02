@@ -44,7 +44,7 @@ module load science/7.2.0
 
 *(This data was automatically generated on {{ generated_date }})*  
 
-| |aarch64/generic|x86_64/amd/zen2|
+| |x86_64/amd/zen2|aarch64/generic|
 | :---: | :---: | :---: |
 |science/7.2.0|x|x|
 |science/5.3.0|x|x|
