@@ -1,8 +1,12 @@
 name: Test overview of available software in EESSI
 on:
-  push
+  push:
+    paths:
+        - ".github/**"
+        - "docs/available_software/data/**"
 jobs:
-  check targets in overview.md and json_data.json:
+  check_targets:
+    name: check targets in overview.md and json_data.json
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
