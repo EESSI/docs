@@ -257,7 +257,7 @@ def modules_eessi() -> dict:
     ordered_targets.extend(np.sort(targets_x86_64))
     ordered_targets.extend(generic_target_aarch64)
     ordered_targets.extend(np.sort(targets_aarch64))
- 
+
     targets = [t for t in ordered_targets if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
 
     for target in targets:
