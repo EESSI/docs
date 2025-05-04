@@ -15,5 +15,5 @@ EESSI Policies could be things like
 - Something on contributions _other_ than software for the EESSI repository (i.e. build logic, test suite, build bot). Should a requirement be that we can test it? Or is this too specific and should it be Team Policy?
 - Include our current Contribution Policy? Or should that be separate? (it's maybe more a Team Policy?) https://www.eessi.io/docs/adding_software/contribution_policy/
 - For security-critical roles (we should define which roles are security critical!), we only adopt new people that we (i.e. at least one person in that Team) knows _personally_.
-- ...
+- Whenever technical choices need to be made between (optimizing for) HPC, Cloud, or a PC, we prioritize HPC usage (?). I.e. if we can choose between two implementations, and one would break usage on HPC, and another would break Cloud usage, and there is no implementation that works on both, we prioritize HPC? Or do we NOT make this explicit? Or: do we only make it explicit for _optimization_ related stuff (but not for 'it works' vs 'it does not work')?
 
