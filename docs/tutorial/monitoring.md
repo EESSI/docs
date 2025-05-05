@@ -18,7 +18,7 @@ There are multiple options available to automatize the monitoring of CVMFS clien
 - HTTP Tracing Header
 
 ## Nagios
-!!! TODO
+CVMFS supports the Nagios monitoring system. A checker plugin is available on the [CVMFS download page](https://cernvm.cern.ch/fs/#download).
 
 ## Telemetry Aggregator
 
