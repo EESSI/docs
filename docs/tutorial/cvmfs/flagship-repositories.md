@@ -29,25 +29,26 @@ Examples include *(click to browse repository contents)*:
 
 ## LCG Releases
 
-The LCG Software Stack which is distributed via the CernVM-FS repository `/cvmfs/sft.cern.ch`
-contains over 450 external packages as well as HEP specific tools and generators.
-
-There are usually two releases per year as well as development builds every night.
+The [LCG Software Stacks](https://lcginfo.cern.ch/) which is distributed via the CernVM-FS repository
+`/cvmfs/sft.cern.ch` contains in total over 800 external packages as well as HEP-specific tools and generators.
 
 Software installations included often come with a script that updates your shell environment
 for using them by sourcing it. In addition, through so-called *views* a complete software stack
 can be made available in your shell environment.
 
-For more information, see <https://ep-dep-sft.web.cern.ch/document/lcg-releases> and
-<https://lcgdocs.web.cern.ch/lcgdocs/lcgreleases/introduction>.
+For example, loading software for the specific view [*LCG_107*](https://lcginfo.cern.ch/release/107/) for RHEL9 can be dona via:
+```
+source /cvmfs/sft.cern.ch/lcg/views/LCG_107/x86_64-el9-gcc14-opt/setup.sh
+```
+
 
 ## The Alliance
 
 The [Digital Research Alliance of Canada](https://alliancecan.ca/en/about/alliance), a.k.a. *The Alliance* and formerly
 known as *Compute Canada*, uses CernVM-FS to distribute the software stack for the Canadian national compute clusters.
 
-Documentation on using their CernVM-FS repository `/cvmfs/soft.computecanada.ca` is available
-[here](https://docs.alliancecan.ca/wiki/Accessing_CVMFS/en), and an overview of available software is available
+Documentation on using their CernVM-FS repository `/cvmfs/soft.computecanada.ca` can be found
+[here](https://docs.alliancecan.ca/wiki/Accessing_CVMFS/en), and an overview of all available software can be found
 [here](https://docs.alliancecan.ca/wiki/Available_software).
 
 ## Unpacked containers
@@ -69,7 +70,7 @@ More information on `unpacked.cern.ch` is available in the CernVM-FS documentati
 
 The [*European Environment for Scientific Software Installations (EESSI)*](https://eessi.io) provides optimized installations
 of scientific software for `x86_64` (Intel + AMD) and `aarch64` (64-bit Arm) systems that work on any Linux
-distribution.
+distribution via the CernVM-FS repository `/cvmfs/software.eessi.io`.
 
 We will use EESSI as an example CernVM-FS repository throughout this tutorial.
 
