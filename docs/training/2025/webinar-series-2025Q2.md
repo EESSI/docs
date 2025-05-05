@@ -83,6 +83,10 @@ a fully pre-built, modular software environment — no matter where you compute.
 sysadmin, or developer, this webinar will show how EESSI can help you save time, improve reproducibility,
 and simplify your scientific workflows.
 
+#### Materials
+
+- [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-EESSI-20250505.pdf)
+
 ---
 
 ### Introduction to CernVM-FS
