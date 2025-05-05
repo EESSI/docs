@@ -86,6 +86,13 @@ and simplify your scientific workflows.
 #### Materials
 
 - [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-EESSI-20250505.pdf)
+- [recording (YouTube)](https://www.youtube.com/watch?v=FvVbzKLn-C8)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FvVbzKLn-C8?si=WSTP8vw51zcpdtRB" title="YouTube video player"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
