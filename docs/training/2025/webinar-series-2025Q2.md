@@ -40,6 +40,15 @@ Attendance is free of cost, but registration is required.
 
 **Register via [https://event.ugent.be/registration/eessi202505](https://event.ugent.be/registration/eessi202505)**
 
+## Q&A via Slack
+
+For posting questions or comments during the webinar, we strongly prefer that you post them
+in the **`#webinar-series-2025q2` channel in the EESSI Slack** ([direct link to that channel](https://eessi-hpc.slack.com/archives/C068DV7GY3V)).
+
+If you haven't joined the EESSI Slack yet, first use the "`Slack channel`" link on the [EESSI website (https://eessi.io)](https://eessi.io).
+
+There will also be an opportunity at the end of the webinar to ask questions directly to the speakers, should you wish to do so.
+
 ## Useful links
 
 - EESSI website: [https://eessi.io](https://eessi.io)
