@@ -8,7 +8,7 @@ A project charter discusses _what it is and why it exists_, a governance discuss
 <!-- Optional section to state high-level principles like openness, meritocracy, consensus, etc. -->
 The value of EESSI grows exponentially with two things: the amount of systems that make the EESSI software stack available, and the amount of software that is available in the EESSI software stack. Thus, the first goal of this governance is to make sure everyone in the community feels sufficiently included so that they are willing to contribute to EESSI (rather than build their own solution).
 
-The second goal of this governance is to make clear how and by whom decisions in EESSI are taken. This is because trust in this process is important, both to infrastructure providers making the EESSI software stack is available on their systems, as well as by end-users of the software. Note that this concerns both large decision, such as which architectures are supported in EESSI, as well as small decisions, such as whether to accept a certain contribution to add software to EESSI.
+The second goal of this governance is to make clear how and by whom decisions in EESSI are taken. This is because trust in this process is important, both to infrastructure providers making the EESSI software stack is available on their systems, as well as by end-users of the software. Note that this concerns both large decisions, such as which architectures are supported in EESSI, as well as small decisions, such as whether to accept a certain contribution to add software to EESSI.
 
 To achieve both goals, our governance is based on the meritocracy governance model.
 
@@ -23,7 +23,7 @@ EESSI Github organization & repository owners are those individuals with `owner`
 EESSI Github organization & repository owners shall be responsible for setting permisssions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing Github Apps for the EESSI build bots.
 
 ### 2.2 EESSI Github organization & repository maintainers
-EESSI Github organization & repository maintainers are individuals with write access (on or more) of the EESSI Github repositories.
+EESSI Github organization & repository maintainers are individuals with write access on (one or more of) the EESSI Github repositories.
 
 EESSI Github organization & repository maintainers shall be responsible for reviewing and merging PRs.
 
@@ -73,7 +73,7 @@ There is no formal voting for Teams, for two reasons:
 1. The Teams may be too big to organize voting in a quick, practical way.
 2. The obligation to take part in votes may discourage people to become part of these Teams, as it may be seen as a burden.
 
-Voting may nonetheless be used as a way to achieve consenses. For example, asking (a relevant subset of) the Team to vote may be one way to determine the majority opinion. Then, it can be discussed if the majority vote is an acceptable outcome to the Team. If so, consensus is achieved.
+Voting may nonetheless be used as a way to achieve consensus. For example, asking (a relevant subset of) the Team to vote may be one way to determine the majority opinion. Then, it can be discussed if the majority vote is an acceptable outcome to the Team. If so, consensus is achieved.
 
 ### 3.3 Conflict Resolution
 <!-- Define how disputes are escalated and resolved. -->
@@ -85,7 +85,7 @@ Also, if multiple Teams claim ownership over an issue, the Steering Committee ca
 <!-- Steering committee overruling a group? -->
 The goal is for Teams to operate autonomously as much as possible. 
 
-However, the Steering Committee _can_ overrule a decision made by any of the Teams. This power should only be used as a last resort, in exceptional cases. Examples of when this may be considered is if the Steering Committee feels that a decision endangours the integrity or sustainability of the project, or goes against the policies the Steering Committee has defined. Even then, the Steering Committee should first engage in a discussion with a Team to see if consensus can be achieved on changing the decision.
+However, the Steering Committee _can_ overrule a decision made by any of the Teams. This power should only be used as a last resort, in exceptional cases. Examples of when this may be considered is if the Steering Committee feels that a decision endangers the integrity or sustainability of the project, or goes against the policies the Steering Committee has defined. Even then, the Steering Committee should first engage in a discussion with a Team to see if consensus can be achieved on changing the decision.
 
 ## 4. Meetings and Communication
 <!-- Define how and where the team communicates, and how meetings (if any) are run. -->
@@ -106,7 +106,7 @@ As with all decisions the decision to add a Team member is subject to article 3.
 <!-- Describe under what conditions someone may be removed (e.g., inactivity, conduct). -->
 Teams decide themselves decide the procedure to remove new Team members.
 
-As with all decisions the decision to remove a Team member is subject to article 3.4.
+As with all decisions, the decision to remove a Team member is subject to article 3.4.
 
 ## 6 Steering committte
 ### 6.1 Responsibilities
@@ -140,11 +140,11 @@ A Chair will be appointed by the Steering Committee to serve for a one-year term
 
 General decisions are taken by majority vote, provided that at least 75% of the Members cast a vote. Votes can be cast either in person, participating electronically, or via electronic vote (such as by e-mail). Members can cast a neutral vote, in which case the vote does count towards the quorum of 75%, but is not including in calculating the majority. Example: in a committee with 7 members, if 3 members vote in favour of a proposal, 2 votes against, and one votes neutral, the quorum is met (6 out of 7 members have voteded, i.e. >75%), and the majority (3 out of 5 non-neutral votes) is in favour, so the proposal is accepted.
 
-In case of a tie, the issue is discussed again, and a second vote is taken. All Members that voted in the first round need to have to opportunity to vote in the second round, which may mean that the vote needs to be postponed to a next meeting (e.g. because someone voted by e-mail, prior to the meeting).
+In case of a tie, the issue is discussed again, and a second vote is taken. All Members that voted in the first round need to have the opportunity to vote in the second round, which may mean that the vote needs to be postponed to a next meeting (e.g. because someone voted by e-mail, prior to the meeting).
 
 In case the quorum of 75% is not reached, the vote is postponed to a subsequent meeting.
 
-Anything may be brought to a vote during the meeting. However, if known up-front, issues that need to be voted on are announched at least one week prior to the meeting, to give Members the opportunity to cast an Electronic vote if they cannot attend.
+Anything may be brought to a vote during the meeting. However, if known up-front, issues that need to be voted on are announced at least one week prior to the meeting, to give Members the opportunity to cast an Electronic vote if they cannot attend.
 
 To amend the Charter or Governance, a two-thirds majority of all Steering Committee Members needs to be in favour of the amendment. This is irrespective of the number of Members who have actually cast a vote, or are present at the meeting. There is no quorum for votes on ammendments to the Charter or Governance.
 
