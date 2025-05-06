@@ -26,10 +26,10 @@ The EESSI project aims to build a common software stack that is:
 EESSI will focus on creating a repository of software installations. This requires:
 - code to build and deploy new software into the repository
 - code to make EESSI work on end-user systems
-- infrastructure to build new software
-- infrastructure to host the repository
+- infrastructure to build new software for software.eessi.io
+- infrastructure to host the repository for software.eessi.io
 
-All of these (both code and infrastructure itself) are considered 'in scope' for the project.
+All of these (both code and infrastructure itself) are considered 'in scope' for the project. <!-- sould mention explicitely here that there are other repos, and that the CODE for those repos is part of EESSI, but the infrastructure itself is NOT -->
 
 <!-- I know we discussed potentially separating infrastructure. For now, I've included it. Infrastructure maintainers is also a role in the current governance.  -->
 
