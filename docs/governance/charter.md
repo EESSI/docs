@@ -29,7 +29,7 @@ EESSI will focus on creating a repository of software installations. This requir
 - infrastructure to build new software for software.eessi.io
 - infrastructure to host the repository for software.eessi.io
 
-All of these (both code and infrastructure itself) are considered 'in scope' for the project. <!-- sould mention explicitely here that there are other repos, and that the CODE for those repos is part of EESSI, but the infrastructure itself is NOT -->
+All of these (both code and infrastructure itself) are considered 'in scope' for the project. <!-- sould mention explicitely here that there are other repos, and that the CODE for those repos is part of EESSI, but the infrastructure itself is NOT, or maybe make subsection on repo's and state what is  in and out of scope -->
 
 <!-- I know we discussed potentially separating infrastructure. For now, I've included it. Infrastructure maintainers is also a role in the current governance.  -->
 
