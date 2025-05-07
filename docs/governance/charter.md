@@ -19,23 +19,24 @@ blog about charters https://opensource.org/blog/what-is-open-governance-drafting
 The EESSI project aims to build a common software stack that is:
 - Cross-platform (laptop, Cloud VM, HPC Cluster)
 - Ready-to-use (served over the internet, just mount-and-go)
-- optimized for a wide range of hardware architectures (CPU, GPU, interconnects)
+- Optimized for a wide range of hardware architectures (CPU, GPU, interconnects)
+- Easily extendable
 
 ## 2. Scope
 <!-- Define what is within the scope of the project and what is explicitly out of scope. -->
-EESSI will focus on creating a repository of software installations. This requires:
+EESSI will focus on creating a repository of software installations (software.eessi.io). This requires:
 - code to build and deploy new software into the repository
 - code to make EESSI work on end-user systems
-- infrastructure to build new software
-- infrastructure to host the repository
+- infrastructure to build new software for software.eessi.io
+- infrastructure to host the repository for software.eessi.io
 
 All of these (both code and infrastructure itself) are considered 'in scope' for the project.
 
-<!-- I know we discussed potentially separating infrastructure. For now, I've included it. Infrastructure maintainers is also a role in the current governance.  -->
+There are additional repositories under the eessi.io namespace, such as dev.eessi.io and riscv.eessi.io. All code related to those repositories is also considered part of the EESSI project. However, the repositories themselves (i.e. their content) and the infrastructure hosting them is not.
 
 ## 3. Membership
 <!-- Who can join or participate? Are there any requirements (e.g., code contributions, voting eligibility)? -->
-There is currently no membership. Any individual or instution may participate by using the EESSI software stack, contributing to the EESSI software stack, making the EESSI software stack available on systems managed by them, etc.
+There is currently no membership. Any individual or institution may participate by using the EESSI software stack, contributing to the EESSI software stack, making the EESSI software stack available on systems managed by them, etc.
 
 ## 4. Review and Amendment
 Changes to the charter require approval by the Steering Committee

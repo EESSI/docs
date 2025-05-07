@@ -1,5 +1,8 @@
 # EESSI Policies
 
+No policies have been defined (yet)
+
+<!--
 Should we have separate policies that Teams themselves can set? I.e. distinguish Project and Team policies, where project policies are set by the Steering Committee and Team policies by the respective Teams? Team policies could be ways to formalize concensus-based decisions. Clearly, if Team policies and Project policies contract, Project policy should come first.
 
 EESSI Policies could be things like
@@ -16,4 +19,4 @@ EESSI Policies could be things like
 - Include our current Contribution Policy? Or should that be separate? (it's maybe more a Team Policy?) https://www.eessi.io/docs/adding_software/contribution_policy/
 - For security-critical roles (we should define which roles are security critical!), we only adopt new people that we (i.e. at least one person in that Team) knows _personally_.
 - Whenever technical choices need to be made between (optimizing for) HPC, Cloud, or a PC, we prioritize HPC usage (?). I.e. if we can choose between two implementations, and one would break usage on HPC, and another would break Cloud usage, and there is no implementation that works on both, we prioritize HPC? Or do we NOT make this explicit? Or: do we only make it explicit for _optimization_ related stuff (but not for 'it works' vs 'it does not work')?
-
+-->
