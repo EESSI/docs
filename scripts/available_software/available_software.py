@@ -220,6 +220,7 @@ def targets_eessi() -> np.ndarray:
 
     return targets
 
+
 def eessi_target_compare(a, b):
     """
     A comparison funtion to compare the EESSI targets and order them
@@ -244,7 +245,8 @@ def eessi_target_compare(a, b):
             return 1 if len(a_split) > len(b_split) else -1
 
     # In all other cases we just do an alphabetical sort of the strings.
-    return 1 if a > b else -1 
+    return 1 if a > b else -1
+
 
 def modules_eessi() -> dict:
     """
@@ -262,7 +264,7 @@ def modules_eessi() -> dict:
     targets = targets_eessi()
 
     # Order targets
-    eessi_target_compare_key = cmp_to_key(eessi_target_compare)  
+    eessi_target_compare_key = cmp_to_key(eessi_target_compare)
     ordered_targets = sorted(targets, key=eessi_target_compare_key)
 
     targets = [t for t in ordered_targets if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
