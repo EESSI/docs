@@ -36,7 +36,7 @@ There are additional repositories under the eessi.io namespace, such as dev.eess
 
 ## 3. Membership
 <!-- Who can join or participate? Are there any requirements (e.g., code contributions, voting eligibility)? -->
-There is currently no membership. Any individual or instution may participate by using the EESSI software stack, contributing to the EESSI software stack, making the EESSI software stack available on systems managed by them, etc.
+There is currently no membership. Any individual or institution may participate by using the EESSI software stack, contributing to the EESSI software stack, making the EESSI software stack available on systems managed by them, etc.
 
 ## 4. Review and Amendment
 Changes to the charter require approval by the Steering Committee
