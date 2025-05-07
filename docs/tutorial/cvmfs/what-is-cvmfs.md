@@ -115,7 +115,7 @@ This can result in a significant reduction in storage capacity that is required 
 especially when identical files are spread out across the repository,
 as often happens with particular files like example data files across multiple versions of the same software.
 
-For the CVMFS client, data de-duplication will also happen across repositories when the local client cached is shared across all repositories (the default).
+For the CernVM-FS client, data de-duplication will also happen across repositories when the local client cached is shared across all repositories (the default).
 
 
 ### Compression of data { #features-compression }
