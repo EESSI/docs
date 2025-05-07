@@ -35,8 +35,6 @@ support this, including:
 * [compression of data](#features-compression);
 * [verification of data integrity](#features-data-integrity);
 
-<span style="color: red;">data vs files? would keep it consistent</span>
-
 CernVM-FS has been proven to scale to *billions* of files and *tens of thousands* of [clients](../appendix/terminology.md#client).
 
 It was originally developed at [CERN](https://home.cern/) to let High Energy Physics (HEP) collaborations
