@@ -2017,6 +2017,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nagios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nagios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telemetry-aggregator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telemetry Aggregator
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-tracing-header" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP Tracing Header
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2043,7 +2078,44 @@ and to be well integrated in the EESSI documentation.</p>
 4 Dec 2023, see also https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices.</p>
 </div>
 <h1 id="monitoring-cernvm-fs">Monitoring CernVM-FS<a class="headerlink" href="#monitoring-cernvm-fs" title="Permanent link">&para;</a></h1>
-<p><em>(coming soon)</em></p>
+<p>There are multiple options available to automate the monitoring of CernVM-FS clients (see <a href="https://cvmfs.readthedocs.io/en/stable/cpt-configure.html#monitoring">CernVM-FS documentation</a> ):</p>
+<ul>
+<li>Nagios</li>
+<li>Telemetry Aggregator</li>
+<li>HTTP Tracing Header</li>
+</ul>
+<h2 id="nagios">Nagios<a class="headerlink" href="#nagios" title="Permanent link">&para;</a></h2>
+<p>CernVM-FS supports the Nagios monitoring system. A checker plugin is available on the <a href="https://cernvm.cern.ch/fs/#download">CernVM-FS download page</a>.</p>
+<h2 id="telemetry-aggregator">Telemetry Aggregator<a class="headerlink" href="#telemetry-aggregator" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://cvmfs.readthedocs.io/en/stable/cpt-telemetry.html#cpt-telemetry">Telemetry Aggregator</a> allows remote monitoring of the internal state of the client. These counters count access to internal data structures and number of errors, and can be accessed locally via <code>cvmfs_talk -i &lt;repo&gt; internal affairs</code>. The Telemetry Aggregator extends this data by also providing the timestamp of the counter collection, the current revision of the repository, and providing these counters in absolute values and delta values relative to the previous measurement. This e.g. allows monitoring if some clients fall behind in updating the repository to the latest revision.</p>
+<p>By default, the data is sent in Influx data format. The Influx Telemetry Aggregator also allows defining custom user-defined, static tags and fields.
+Other formats are possible but must be provided as a source code plugin.</p>
+<p>To activate it the following lines need to be added to the client config (e.g. <code>/etc/cvmfs/default.local</code>):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>CVMFS_TELEMETRY_SEND=ON
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>CVMFS_TELEMETRY_RATE=&lt;rate in seconds&gt; # minimum send rate &gt;= 5 sec
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>CVMFS_INFLUX_HOST=localhost                 # IP address
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>CVMFS_INFLUX_PORT=8092                      # Port
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>CVMFS_INFLUX_METRIC_NAME=&lt;measurement name&gt; # &quot;Table&quot; name
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>CVMFS_INFLUX_EXTRA_TAGS=&quot;some_tag=42,some_tag2=27&quot; # optional // tags are always sent
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>CVMFS_INFLUX_EXTRA_FIELDS=&quot;somefield=3&quot;            # optional // fields are only sent in absolute data
+</code></pre></div></p>
+<h2 id="http-tracing-header">HTTP Tracing Header<a class="headerlink" href="#http-tracing-header" title="Permanent link">&para;</a></h2>
+<p>CernVM-FS offers to add user-defined, static key-value pairs to the HTTP header for any of its client HTTP request. This includes download of uncached files, selection of proxy and servers (S0/S1).</p>
+<p>For this the following lines need to be added to the client config (e.g. <code>/etc/cvmfs/default.local</code>):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CVMFS_HTTP_TRACING=on 
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>CVMFS_HTTP_TRACING_HEADERS=&#39;node:pn214|tag2:some_tag&#39;
+</code></pre></div></p>
+<p>This results to the following header
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>(download) CURL Header for URL: /data/81/7c882d4a2e9dd7f9c5c2bfb4e04ff316e436dfC is:
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Connection: Keep-Alive
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Pragma:
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>User-Agent: cvmfs Fuse 2.12.6
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>X-CVMFS-node: pn214
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>X-CVMFS-tag2: some_tag
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>X-CVMFS-PID: 481270
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>X-CVMFS-GID: 0
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>X-CVMFS-UID: 0
+</code></pre></div></p>
 
 
 
@@ -2064,7 +2136,7 @@ and to be well integrated in the EESSI documentation.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 15:42:10">April 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 7, 2025 07:30:15">May 7, 2025</span>
   </span>
 
     
