@@ -11,14 +11,14 @@
 
 # Monitoring CernVM-FS
 
-There are multiple options available to automatize the monitoring of CVMFS clients (see [CVMFS Documentation](https://cvmfs.readthedocs.io/en/stable/cpt-configure.html#monitoring) ):
+There are multiple options available to automate the monitoring of CernVM-FS clients (see [CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-configure.html#monitoring) ):
 
 - Nagios
 - Telemetry Aggregator
 - HTTP Tracing Header
 
 ## Nagios
-CVMFS supports the Nagios monitoring system. A checker plugin is available on the [CVMFS download page](https://cernvm.cern.ch/fs/#download).
+CernVM-FS supports the Nagios monitoring system. A checker plugin is available on the [CernVM-FS download page](https://cernvm.cern.ch/fs/#download).
 
 ## Telemetry Aggregator
 
@@ -40,7 +40,7 @@ CVMFS_INFLUX_EXTRA_FIELDS="somefield=3"            # optional // fields are only
 
 ## HTTP Tracing Header
 
-CVMFS offers to add user-defined, static key-value pairs to the HTTP header for any of its client HTTP request. This includes download of uncached files, selection of proxy and servers (S0/S1).
+CernVM-FS offers to add user-defined, static key-value pairs to the HTTP header for any of its client HTTP request. This includes download of uncached files, selection of proxy and servers (S0/S1).
 
 For this the following lines need to be added to the client config (e.g. `/etc/cvmfs/default.local`):
 ```
