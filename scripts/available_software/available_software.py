@@ -223,7 +223,7 @@ def targets_eessi() -> np.ndarray:
 
 def eessi_target_compare(a, b):
     """
-    A comparison funtion to compare the EESSI targets and order them
+    A comparison function to compare the EESSI targets and order them
     @return: 0, 1, -1
     """
     if a == b:
