@@ -2110,19 +2110,19 @@ and to be well integrated in the EESSI documentation.</p>
 <li><a href="https://cvmfs-monitor-frontend.web.cern.ch/browse/sft.cern.ch"><code>/cvmfs/sft.cern.ch</code></a>: LCG Software Stacks</li>
 </ul>
 <h2 id="lcg-releases">LCG Releases<a class="headerlink" href="#lcg-releases" title="Permanent link">&para;</a></h2>
-<p>The LCG Software Stack which is distributed via the CernVM-FS repository <code>/cvmfs/sft.cern.ch</code>
-contains over 450 external packages as well as HEP specific tools and generators.</p>
-<p>There are usually two releases per year as well as development builds every night.</p>
+<p>The <a href="https://lcginfo.cern.ch/">LCG Software Stacks</a> which is distributed via the CernVM-FS repository
+<code>/cvmfs/sft.cern.ch</code> contains in total over 800 external packages as well as HEP-specific tools and generators.</p>
 <p>Software installations included often come with a script that updates your shell environment
 for using them by sourcing it. In addition, through so-called <em>views</em> a complete software stack
 can be made available in your shell environment.</p>
-<p>For more information, see <a href="https://ep-dep-sft.web.cern.ch/document/lcg-releases">https://ep-dep-sft.web.cern.ch/document/lcg-releases</a> and
-<a href="https://lcgdocs.web.cern.ch/lcgdocs/lcgreleases/introduction">https://lcgdocs.web.cern.ch/lcgdocs/lcgreleases/introduction</a>.</p>
+<p>For example, loading software for the specific view <a href="https://lcginfo.cern.ch/release/107/"><em>LCG_107</em></a> for RHEL9 can be dona via:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>source /cvmfs/sft.cern.ch/lcg/views/LCG_107/x86_64-el9-gcc14-opt/setup.sh
+</code></pre></div></p>
 <h2 id="the-alliance">The Alliance<a class="headerlink" href="#the-alliance" title="Permanent link">&para;</a></h2>
 <p>The <a href="https://alliancecan.ca/en/about/alliance">Digital Research Alliance of Canada</a>, a.k.a. <em>The Alliance</em> and formerly
 known as <em>Compute Canada</em>, uses CernVM-FS to distribute the software stack for the Canadian national compute clusters.</p>
-<p>Documentation on using their CernVM-FS repository <code>/cvmfs/soft.computecanada.ca</code> is available
-<a href="https://docs.alliancecan.ca/wiki/Accessing_CVMFS/en">here</a>, and an overview of available software is available
+<p>Documentation on using their CernVM-FS repository <code>/cvmfs/soft.computecanada.ca</code> can be found
+<a href="https://docs.alliancecan.ca/wiki/Accessing_CVMFS/en">here</a>, and an overview of all available software can be found
 <a href="https://docs.alliancecan.ca/wiki/Available_software">here</a>.</p>
 <h2 id="unpacked-containers">Unpacked containers<a class="headerlink" href="#unpacked-containers" title="Permanent link">&para;</a></h2>
 <p>CernVM-FS repositories can be used to provide an efficient way to access container images,
@@ -2140,7 +2140,7 @@ by serving unpacked container images that can be consumed by container runtimes 
 <h2 id="eessi">EESSI<a class="headerlink" href="#eessi" title="Permanent link">&para;</a></h2>
 <p>The <a href="https://eessi.io"><em>European Environment for Scientific Software Installations (EESSI)</em></a> provides optimized installations
 of scientific software for <code>x86_64</code> (Intel + AMD) and <code>aarch64</code> (64-bit Arm) systems that work on any Linux
-distribution.</p>
+distribution via the CernVM-FS repository <code>/cvmfs/software.eessi.io</code>.</p>
 <p>We will use EESSI as an example CernVM-FS repository throughout this tutorial.</p>
 <hr />
 <p><em>(next: <a href="../../eessi/what-is-eessi/">What is EESSI?</a>)</em></p>
@@ -2164,7 +2164,7 @@ distribution.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 15:42:10">April 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 5, 2025 12:14:44">May 5, 2025</span>
   </span>
 
     
