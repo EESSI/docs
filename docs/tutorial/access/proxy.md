@@ -67,7 +67,9 @@ You can use the following template for this:
 acl local_nodes src YOUR_CLIENT_IPS
 
 # Destination domains that are allowed
-acl stratum_ones dstdomain .YOURDOMAIN.ORG
+# cern.ch + opensciencegrid.org domains because of cvmfs-config.cern.ch repository,
+# which are provided via Stratum-1 mirror servers hosted by CERN and OSG
+acl stratum_ones dstdomain .cern.ch .opensciencegrid.org .YOURDOMAIN.ORG
 
 # Squid port
 http_port 3128
@@ -103,7 +105,8 @@ In this template, you *must* change two things in the Access Control List (ACL) 
 For example, to allow connecting to the EESSI Stratum 1 replica servers, use:
 
 ```{ .apache .copy }
-acl stratum_ones dstdomain .eessi.science
+# public Stratum-1 mirror servers for EESSI are hosted under eessi.science domain
+acl stratum_ones dstdomain .cern.ch .opensciencegrid.org .eessi.science
 ```
 
 Note that this configuration assumes that port 3128 is accessible on the proxy server.
