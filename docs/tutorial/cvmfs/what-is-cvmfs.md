@@ -57,9 +57,9 @@ In certain cases, the CernVM-FS has also been used to
 The metadata and content of files included in a CernVM-FS repository are **automatically downloaded on-demand**
 as files and directories are being accessed, which is akin to *streaming* services for music, movies, and TV series.
 
-This happens fully transparently, as the contents of a repository are exposed by CernVM-FS as if it were
+This happens fully transparently, all the contents of a repository are exposed by CernVM-FS as if they were
 a local (read-only) file system. Hence, clients that access a CernVM-FS repository typically do not
-actually have a local copy of all files included in that repository, but only have a limited set of files and
+have a local copy of all the files included in that repository, but only have a limited set of files and
 metadata directly available: those which were most recently accessed.
 
 
@@ -114,6 +114,8 @@ in a particular repository at different paths.
 This can result in a significant reduction in storage capacity that is required to host a large software stack,
 especially when identical files are spread out across the repository,
 as often happens with particular files like example data files across multiple versions of the same software.
+
+For the CernVM-FS client, data de-duplication will also happen across repositories when the local client cached is shared across all repositories (the default).
 
 
 ### Compression of data { #features-compression }
