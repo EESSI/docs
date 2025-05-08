@@ -2161,29 +2161,31 @@ of hundred worker nodes</em> (100-500).</p>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">acl</span><span class="w"> </span>local_nodes<span class="w"> </span>src<span class="w"> </span>YOUR_CLIENT_IPS
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c"># Destination domains that are allowed</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">acl</span><span class="w"> </span>stratum_ones<span class="w"> </span>dstdomain<span class="w"> </span>.YOURDOMAIN.ORG
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c"># Squid port</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">http_port</span><span class="w"> </span><span class="m">3128</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c"># Deny access to anything which is not part of our stratum_ones ACL.</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">http_access</span><span class="w"> </span>deny<span class="w"> </span>!stratum_ones
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c"># Only allow access from our local machines</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="nb">http_access</span><span class="w"> </span>allow<span class="w"> </span>local_nodes
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="nb">http_access</span><span class="w"> </span>allow<span class="w"> </span>localhost
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c"># Finally, deny all other access to this proxy</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="nb">http_access</span><span class="w"> </span>deny<span class="w"> </span><span class="k">all</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nb">minimum_expiry_time</span><span class="w"> </span><span class="m">0</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nb">maximum_object_size</span><span class="w"> </span><span class="m">1024</span><span class="w"> </span>MB
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="c"># proxy memory cache of 1GB</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="nb">cache_mem</span><span class="w"> </span><span class="m">1024</span><span class="w"> </span>MB
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="nb">maximum_object_size_in_memory</span><span class="w"> </span><span class="m">128</span><span class="w"> </span>KB
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="c"># 50 GB disk cache</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="nb">cache_dir</span><span class="w"> </span>ufs<span class="w"> </span><span class="sx">/var/spool/squid</span><span class="w"> </span><span class="m">50000</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">256</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c"># cern.ch + opensciencegrid.org domains because of cvmfs-config.cern.ch repository,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c"># which are provided via Stratum-1 mirror servers hosted by CERN and OSG</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">acl</span><span class="w"> </span>stratum_ones<span class="w"> </span>dstdomain<span class="w"> </span>.cern.ch<span class="w"> </span>.opensciencegrid.org<span class="w"> </span>.YOURDOMAIN.ORG
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c"># Squid port</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nb">http_port</span><span class="w"> </span><span class="m">3128</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c"># Deny access to anything which is not part of our stratum_ones ACL.</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="nb">http_access</span><span class="w"> </span>deny<span class="w"> </span>!stratum_ones
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="c"># Only allow access from our local machines</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nb">http_access</span><span class="w"> </span>allow<span class="w"> </span>local_nodes
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="nb">http_access</span><span class="w"> </span>allow<span class="w"> </span>localhost
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c"># Finally, deny all other access to this proxy</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="nb">http_access</span><span class="w"> </span>deny<span class="w"> </span><span class="k">all</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="nb">minimum_expiry_time</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="nb">maximum_object_size</span><span class="w"> </span><span class="m">1024</span><span class="w"> </span>MB
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c"># proxy memory cache of 1GB</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="nb">cache_mem</span><span class="w"> </span><span class="m">1024</span><span class="w"> </span>MB
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="nb">maximum_object_size_in_memory</span><span class="w"> </span><span class="m">128</span><span class="w"> </span>KB
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="c"># 50 GB disk cache</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="nb">cache_dir</span><span class="w"> </span>ufs<span class="w"> </span><span class="sx">/var/spool/squid</span><span class="w"> </span><span class="m">50000</span><span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="m">256</span>
 </code></pre></div>
 <p>In this template, you <em>must</em> change two things in the Access Control List (ACL) settings:</p>
 <p>1) Specify which client systems can access your proxy by replacing "<code>YOUR_CLIENT_IPS</code>" with the corresponding IP range, using <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation">CIDR notation</a>;</p>
@@ -2191,7 +2193,8 @@ of hundred worker nodes</em> (100-500).</p>
    you are using, by replacing "<code>.YOURDOMAIN.ORG</code>" with domain name for the Stratum 1 replica servers
    (see also the <a href="http://www.squid-cache.org/Doc/config/acl/">Squid ACL documentation</a>).</p>
 <p>For example, to allow connecting to the EESSI Stratum 1 replica servers, use:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">acl</span><span class="w"> </span>stratum_ones<span class="w"> </span>dstdomain<span class="w"> </span>.eessi.science
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c"># public Stratum-1 mirror servers for EESSI are hosted under eessi.science domain</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">acl</span><span class="w"> </span>stratum_ones<span class="w"> </span>dstdomain<span class="w"> </span>.cern.ch<span class="w"> </span>.opensciencegrid.org<span class="w"> </span>.eessi.science
 </code></pre></div>
 <p>Note that this configuration assumes that port 3128 is accessible on the proxy server.</p>
 <p>To check your Squid configuration, use:</p>
@@ -2271,7 +2274,7 @@ comment out the <code>CVMFS_HTTP_PROXY</code> line in <code>/etc/cvmfs/default.l
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 15:42:10">April 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 8, 2025 14:39:31">May 8, 2025</span>
   </span>
 
     
