@@ -23,11 +23,13 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 
 ## Sessions
 
-- Monday 5 May 2025 (13:30-15:30 CEST): **Introduction to EESSI**
-- Monday 12 May 2025 (13:30-15:30 CEST): **Introduction to CernVM-FS**
+- Monday 5 May 2025 (13:30-15:30 CEST): **Introduction to EESSI** ([slides](EESSI-webinars-MayJune-2025-001-Introduction-to-EESSI-20250505.pdf), [recording](https://www.youtube.com/watch?v=FvVbzKLn-C8))
+- Monday 12 May 2025 (13:30-15:30 CEST): **Introduction to CernVM-FS** ([slides](EESSI-webinars-MayJune-2025-001-Introduction-to-CernVM-FS-20250512.pdf), [recording](https://www.youtube.com/watch?v=5-IYnxCz_aQ))
 - Monday 19 May 2025 (13:30-15:30 CEST): **Introduction to EasyBuild** (incl. EasyBuild 5.0.0)
 - Monday 26 May 2025 (13:30-15:30 CEST): **EESSI for CI/CD**
 - Monday 2 June 2025 (13:30-15:30 CEST): **Using EESSI as the base for a system stack**
+
+[YouTube playlist with recordings](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbPSfa7Upa0R0_P4NAbqC9a)
 
 ## Format
 
