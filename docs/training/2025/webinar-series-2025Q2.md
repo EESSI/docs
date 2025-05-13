@@ -115,6 +115,15 @@ cover some aspects specific to using CernVM-FS on HPC systems.
 It is intended for people who are interested in CernVM-FS (system administrators, support team members, researchers, etc.),
 no specific prior knowledge or experience with it is required.
 
+#### Materials
+
+- [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-CernVM-FS-20250512.pdf)
+- [recording (YouTube)](https://www.youtube.com/watch?v=5-IYnxCz_aQ)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5-IYnxCz_aQ?si=zqgYBiZCdY5islK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 ### Introduction to EasyBuild
