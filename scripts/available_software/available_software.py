@@ -224,9 +224,8 @@ def targets_eessi() -> np.ndarray:
 def eessi_target_compare(a, b):
     """
     A comparison function to compare the EESSI targets and order them.
-    
     First the main architecture is ordered alphabetically, then within them
-    the CPU targets are again ordered alphabetically, except for the 
+    the CPU targets are again ordered alphabetically, except for the
     generic target, which always comes first. Targets that include an extra
     vendor subdir always after those without a vendor subdir.
     @return: 0, 1, -1
