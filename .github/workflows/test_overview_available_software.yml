@@ -1,0 +1,28 @@
+name: Test overview of available software in EESSI
+on:
+  push:
+    paths:
+        - ".github/**"
+        - "docs/available_software/data/**"
+jobs:
+  check_targets:
+    name: check targets in overview.md and json_data.json
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+
+      - name: set up Python
+        uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5.1.0
+        with:
+          python-version: '3.10'
+          architecture: x64
+
+      - name: test overview available software
+        id: test_overview_available_software
+        run: |
+          # install required Python packages in virtual environment
+          python -m venv venv
+          . venv/bin/activate
+          pip install -r mkdocs-ldjson-plugin/requirements.txt
+
+          python .github/workflows/scripts/test_overview_available_software.py
