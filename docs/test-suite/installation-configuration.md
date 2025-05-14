@@ -23,6 +23,7 @@ The EESSI test suite requires
 
     * You can install a more recent version of Python on top of the GCC/GCCcore compiler.
     * You can install a ReFrame module with EasyBuild and a [ReFrame easyconfig](https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/r/ReFrame) containing a more recent Python version.
+    * Don't forget to set RFM_PURGE_ENVIRONMENT=1 if you use Python from a module. The ReFrame easyconfigs already do that for you.
 
 #### Installing Reframe
 
