@@ -39,11 +39,11 @@ class TestJSON:
         modules = modules_eessi()
         json_data = generate_json_overview_data(modules)
         assert len(json_data.keys()) == 3
-        assert list(json_data["targets"]) == [ZEN2, GENERIC_ARM]
+        assert list(json_data["targets"]) == [GENERIC_ARM, ZEN2]
         assert json_data["modules"] == {
-                "Markov": [0, 1],
+                "Markov": [1, 0],
                 "cfd": [1, 1],
-                "llm": [1, 0],
+                "llm": [0, 1],
                 "science": [1, 1]
             }
 

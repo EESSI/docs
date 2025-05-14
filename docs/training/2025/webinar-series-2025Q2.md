@@ -23,11 +23,13 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 
 ## Sessions
 
-- Monday 5 May 2025 (13:30-15:30 CEST): **Introduction to EESSI**
-- Monday 12 May 2025 (13:30-15:30 CEST): **Introduction to CernVM-FS**
+- Monday 5 May 2025 (13:30-15:30 CEST): **Introduction to EESSI** ([slides](EESSI-webinars-MayJune-2025-001-Introduction-to-EESSI-20250505.pdf), [recording](https://www.youtube.com/watch?v=FvVbzKLn-C8))
+- Monday 12 May 2025 (13:30-15:30 CEST): **Introduction to CernVM-FS** ([slides](EESSI-webinars-MayJune-2025-001-Introduction-to-CernVM-FS-20250512.pdf), [recording](https://www.youtube.com/watch?v=5-IYnxCz_aQ))
 - Monday 19 May 2025 (13:30-15:30 CEST): **Introduction to EasyBuild** (incl. EasyBuild 5.0.0)
 - Monday 26 May 2025 (13:30-15:30 CEST): **EESSI for CI/CD**
 - Monday 2 June 2025 (13:30-15:30 CEST): **Using EESSI as the base for a system stack**
+
+[YouTube playlist with recordings](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbPSfa7Upa0R0_P4NAbqC9a)
 
 ## Format
 
@@ -39,6 +41,15 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 Attendance is free of cost, but registration is required.
 
 **Register via [https://event.ugent.be/registration/eessi202505](https://event.ugent.be/registration/eessi202505)**
+
+## Q&A via Slack
+
+For posting questions or comments during the webinar, we strongly prefer that you post them
+in the **`#webinar-series-2025q2` channel in the EESSI Slack** ([direct link to that channel](https://eessi-hpc.slack.com/archives/C068DV7GY3V)).
+
+If you haven't joined the EESSI Slack yet, first use the "`Slack channel`" link on the [EESSI website (https://eessi.io)](https://eessi.io).
+
+There will also be an opportunity at the end of the webinar to ask questions directly to the speakers, should you wish to do so.
 
 ## Useful links
 
@@ -74,6 +85,17 @@ a fully pre-built, modular software environment — no matter where you compute.
 sysadmin, or developer, this webinar will show how EESSI can help you save time, improve reproducibility,
 and simplify your scientific workflows.
 
+#### Materials
+
+- [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-EESSI-20250505.pdf)
+- [recording (YouTube)](https://www.youtube.com/watch?v=FvVbzKLn-C8)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FvVbzKLn-C8?si=WSTP8vw51zcpdtRB" title="YouTube video player"
+frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ---
 
 ### Introduction to CernVM-FS
@@ -94,6 +116,15 @@ cover some aspects specific to using CernVM-FS on HPC systems.
 
 It is intended for people who are interested in CernVM-FS (system administrators, support team members, researchers, etc.),
 no specific prior knowledge or experience with it is required.
+
+#### Materials
+
+- [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-CernVM-FS-20250512.pdf)
+- [recording (YouTube)](https://www.youtube.com/watch?v=5-IYnxCz_aQ)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5-IYnxCz_aQ?si=zqgYBiZCdY5islK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 

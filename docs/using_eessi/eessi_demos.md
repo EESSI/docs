@@ -49,7 +49,7 @@ Change to the ``TensorFlow`` subdirectory of the ``eessi-demo`` Git repository, 
 [EESSI 2023.06] $ ./run.sh
 ```
 
-Shortly after starting the script you should see output as shown below, which indicates that GROMACS has started
+Shortly after starting the script you should see output as shown below, which indicates that TensorFlow has started
 running:
 
 ``` { .no-copy }
