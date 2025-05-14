@@ -49,8 +49,8 @@ module load GEOS/3.12.1-GCC-13.2.0
 
 *(This data was automatically generated on {{ generated_time }})*  
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GEOS/3.12.1-GCC-13.2.0|x|x|x|x|x|x|x|x|x|x|
-|GEOS/3.12.0-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|
-|GEOS/3.11.1-GCC-12.2.0|x|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GEOS/3.12.1-GCC-13.2.0|x|x|x|x|x|x|x|x|x|x|x|
+|GEOS/3.12.0-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|
+|GEOS/3.11.1-GCC-12.2.0|x|x|x|x|x|x|x|x|x|x|x|
