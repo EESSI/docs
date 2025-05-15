@@ -1,13 +1,7 @@
 # Available tests { #available-tests }
 
-The EESSI test suite currently includes tests for:
-
-* [GROMACS](#gromacs)
-* [TensorFlow](#tensorflow)
-* [OSU Micro-Benchmarks](#osumicrobenchmarks)
-
 For a complete overview of all available tests in the EESSI test suite, see the
-[`eessi/testsuite/tests`](https://github.com/EESSI/test-suite/tree/main/eessi/testsuite/tests) subdirectory in the `EESSI/test-suite` GitHub repository.
+[`eessi/testsuite/tests/apps`](https://github.com/EESSI/test-suite/tree/main/eessi/testsuite/tests/apps) subdirectory in the `EESSI/test-suite` GitHub repository.
 
 ## GROMACS { #gromacs }
 
