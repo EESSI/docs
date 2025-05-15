@@ -5,3 +5,8 @@ mkdocs-git-revision-date-localized-plugin
 mkdocs-toc-sidebar-plugin
 mkdocs-macros-plugin
 ./mkdocs-ldjson-plugin
+mkdocs-autorefs
+mkdocstrings[python]
+mkdocs-gen-files
+mkdocs-literate-nav
+mkdocs-section-index
