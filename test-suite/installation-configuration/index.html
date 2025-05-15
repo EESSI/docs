@@ -2361,10 +2361,22 @@
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <p>The EESSI test suite requires </p>
 <ul>
-<li>Python &gt;= 3.6 </li>
+<li>Python &gt;= 3.7</li>
 <li><a href="https://reframe-hpc.readthedocs.io">ReFrame</a> v4.3.3 (or newer)</li>
 <li><a href="https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html">ReFrame test library (<code>hpctestlib</code>)</a></li>
 </ul>
+<p>??? note "(If your system Python version is lower than the minimum required version, click here for some tips)</p>
+<div class="highlight"><pre><span></span><code>* You can upgrade and manage python versions using `pyenv`. [Link](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+    * For installation follow the documentation in the repository using the link above.
+    * Then follow the steps to install a new Python version and further change local paths to the new Python:
+
+            pyenv install &lt;python version number&gt;
+            pyenv local &lt;python version number&gt;
+
+* You can install a more recent version of Python on top of the GCC/GCCcore compiler.
+* You can install a ReFrame module with EasyBuild and a [ReFrame easyconfig](https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/r/ReFrame) containing a more recent Python version.
+* Set RFM_PURGE_ENVIRONMENT=1 if you use Python from a module. The ReFrame easyconfigs automatically do that for you.
+</code></pre></div>
 <h4 id="installing-reframe">Installing Reframe<a class="headerlink" href="#installing-reframe" title="Permanent link">&para;</a></h4>
 <p>General instructions for installing ReFrame are available in the <a href="https://reframe-hpc.readthedocs.io/en/stable/started.html">ReFrame documentation</a>. To check if ReFrame is available, run the <code>reframe</code> command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reframe<span class="w"> </span>--version
@@ -2472,7 +2484,7 @@ only picks up on the <code>$RFM_PREFIX</code> environment variable to determine 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 6, 2024 12:28:14">June 6, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 14, 2025 15:14:39">May 14, 2025</span>
   </span>
 
     

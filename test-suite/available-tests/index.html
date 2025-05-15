@@ -1382,6 +1382,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyTorch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cp2k" class="md-nav__link">
+    <span class="md-ellipsis">
+      CP2K
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lammps" class="md-nav__link">
+    <span class="md-ellipsis">
+      LAMMPS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metalwalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      MetalWalls
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2163,6 +2199,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      PyTorch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cp2k" class="md-nav__link">
+    <span class="md-ellipsis">
+      CP2K
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lammps" class="md-nav__link">
+    <span class="md-ellipsis">
+      LAMMPS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metalwalls" class="md-nav__link">
+    <span class="md-ellipsis">
+      MetalWalls
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2227,7 +2299,7 @@ which is based on the <a href="https://www.tensorflow.org/tutorials/distribute/m
 <h2 id="osumicrobenchmarks">OSU Micro-Benchmarks<a class="headerlink" href="#osumicrobenchmarks" title="Permanent link">&para;</a></h2>
 <p>A test for <a href="https://mvapich.cse.ohio-state.edu/benchmarks/">OSU Micro-Benchmarks</a>, which provides an MPI benchmark. </p>
 <p>It is implemented in <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/osu.py"><code>tests/apps/osu.py</code></a>.</p>
-<p>To run this Osu Micro-Benchmark, use:</p>
+<p>To run this OSU Micro-Benchmark, use:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span>OSU-Micro-Benchmarks
 </code></pre></div>
 <div class="admonition warning">
@@ -2254,6 +2326,42 @@ which is based on the <a href="https://www.tensorflow.org/tutorials/distribute/m
 <p class="admonition-title">Warning</p>
 <p>This test requires ReFrame v4.6.0 or newer, in older versions the QuantumESPRESSO test is not included in hpctestlib!</p>
 </div>
+<h2 id="pytorch">PyTorch<a class="headerlink" href="#pytorch" title="Permanent link">&para;</a></h2>
+<p>A test for <a href="https://pytorch.org/">PyTorch</a>, a machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, originally developed by Meta AI and now part of the Linux Foundation umbrella.</p>
+<p>This particular benchmark runs a selected torchvision model from the list:
+* VGG16
+* Resnet50
+* Resnet152
+* Densenet121
+* Mobilenet_v3_large
+on synthetic data. The test runs on both CPUs and GPUs (currently only supports CUDA).</p>
+<p>To run this PyTorch test, use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span>PyTorch
+</code></pre></div>
+<h2 id="cp2k">CP2K<a class="headerlink" href="#cp2k" title="Permanent link">&para;</a></h2>
+<p>A test for <a href="https://www.cp2k.org/">CP2K</a>, a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems.</p>
+<p>This particular benchmark runs a system with a selected number of H2O molecules and compares to a final reference energy
+once equillibrium is attained. Three systems are possible based on the number of water molecules:
+* 32
+* 128
+* 512</p>
+<p>To run this CP2K test, use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span>CP2K
+</code></pre></div>
+<h2 id="lammps">LAMMPS<a class="headerlink" href="#lammps" title="Permanent link">&para;</a></h2>
+<p>A test for <a href="https://www.lammps.org/#gsc.tab=0">LAMMPS</a>, a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator.</p>
+<p>This module tests the binary 'lmp' in available modules containing substring 'LAMMPS'.
+The tests come from the lammps github repository and test the LJ and Rhodo tests described
+<a href="https://docs.lammps.org/Speed_bench.html">here</a>.</p>
+<p>To run this LAMMPS test, use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span>LAMMPS
+</code></pre></div>
+<h2 id="metalwalls">MetalWalls<a class="headerlink" href="#metalwalls" title="Permanent link">&para;</a></h2>
+<p>A test for <a href="https://gitlab.com/ampere2/metalwalls">MetalWalls</a>, a molecular dynamics code dedicated to the modelling of electrochemical systems.</p>
+<p>The benchmarks consist of a set of different inputs files that vary in the number of atoms and the type of simulation performed. They can be found in the repository linked above, which is also versioned.</p>
+<p>To run this MetalWalls test, use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>reframe<span class="w"> </span>--run<span class="w"> </span>--name<span class="w"> </span>MetalWalls
+</code></pre></div>
 
 
 
@@ -2274,7 +2382,7 @@ which is based on the <a href="https://www.tensorflow.org/tutorials/distribute/m
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 25, 2024 21:00:44">July 25, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 15:34:06">April 30, 2025</span>
   </span>
 
     
