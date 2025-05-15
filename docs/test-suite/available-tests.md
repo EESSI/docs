@@ -64,7 +64,7 @@ A test for [OSU Micro-Benchmarks](https://mvapich.cse.ohio-state.edu/benchmarks/
 
 It is implemented in [`tests/apps/osu.py`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/tests/apps/osu.py).
 
-To run this Osu Micro-Benchmark, use:
+To run this OSU Micro-Benchmark, use:
 
 ```bash
 reframe --run --name OSU-Micro-Benchmarks
@@ -105,4 +105,67 @@ reframe --run --name QuantumESPRESSO
 
 !!! warning
     This test requires ReFrame v4.6.0 or newer, in older versions the QuantumESPRESSO test is not included in hpctestlib!
+
+## PyTorch { #pytorch }
+
+A test for [PyTorch](https://pytorch.org/), a machine learning library based on the Torch library, used for applications such as computer vision and natural language processing, originally developed by Meta AI and now part of the Linux Foundation umbrella.
+
+This particular benchmark runs a selected torchvision model from the list:
+* VGG16
+* Resnet50
+* Resnet152
+* Densenet121
+* Mobilenet_v3_large
+on synthetic data. The test runs on both CPUs and GPUs (currently only supports CUDA).
+
+To run this PyTorch test, use:
+
+```bash
+reframe --run --name PyTorch
+```
+
+
+## CP2K { #cp2k }
+
+A test for [CP2K](https://www.cp2k.org/), a quantum chemistry and solid state physics software package that can perform atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, and biological systems.
+
+This particular benchmark runs a system with a selected number of H2O molecules and compares to a final reference energy
+once equillibrium is attained. Three systems are possible based on the number of water molecules:
+* 32
+* 128
+* 512
+
+To run this CP2K test, use:
+
+```bash
+reframe --run --name CP2K
+```
+
+
+## LAMMPS { #lammps }
+
+A test for [LAMMPS](https://www.lammps.org/#gsc.tab=0), a classical molecular dynamics code with a focus on materials modeling. It's an acronym for Large-scale Atomic/Molecular Massively Parallel Simulator.
+
+This module tests the binary 'lmp' in available modules containing substring 'LAMMPS'.
+The tests come from the lammps github repository and test the LJ and Rhodo tests described
+[here](https://docs.lammps.org/Speed_bench.html).
+
+To run this LAMMPS test, use:
+
+```bash
+reframe --run --name LAMMPS
+```
+
+
+## MetalWalls { #metalwalls }
+
+A test for [MetalWalls](https://gitlab.com/ampere2/metalwalls), a molecular dynamics code dedicated to the modelling of electrochemical systems.
+
+The benchmarks consist of a set of different inputs files that vary in the number of atoms and the type of simulation performed. They can be found in the repository linked above, which is also versioned.
+
+To run this MetalWalls test, use:
+
+```bash
+reframe --run --name MetalWalls
+```
 
