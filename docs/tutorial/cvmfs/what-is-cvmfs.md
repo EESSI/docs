@@ -49,6 +49,20 @@ triggered when search paths are examined.
 In certain cases, the CernVM-FS has also been used to
 [distribute large *data* repositories](https://cvmfs.readthedocs.io/en/stable/cpt-large-scale.html).
 
+## How do files become available to the user?
+Files in CVMFS are organized in repositories, in the form of content addressable storage.
+A [Stratum 0 server](../appendix/terminology.md#stratum0) is the single authoritative source of a repository, responsible for publishing modifications of its contents.
+Information on how to create a new repository can be found in the [CVMFS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html).
+
+Repository administrators should discourage users from accessing Stratum 0 directly, but via a network of public mirror servers.
+[Stratum 1](../appendix/terminology.md#stratum1) is a public replica server, containing repositories in their entireties, configured to automatically remain consistent with the stratum 0.
+In cases where users do not have access on the public servers, site administrators can [create a private Stratum 1](../access/stratum1.md).
+
+On top of Stratum 1, site administrators are encouraged to [install a reverse proxy](https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#squid-configuration) that works as yet another caching layer.
+
+<div align="center">
+<img src="../img/cvmfs_topo.png" alt="CernVM-FS Topology" width="100%"/></br>
+</div>
 
 ## Features
 
