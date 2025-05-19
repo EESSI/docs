@@ -143,6 +143,11 @@ in an HPC environment.
 In this webinar, we will introduce you to EasyBuild, show how to install and configure it, and present basic usage through
 hands-on demos. We will also cover some new capabilities that are supported by the recently released [EasyBuild v5.0.0](https://docs.easybuild.io/easybuild-v5/).
 
+#### Materials
+
+- [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-EasyBuild-20250519.pdf)
+- recording *(coming soon)*
+
 ---
 
 ### EESSI for CI/CD
