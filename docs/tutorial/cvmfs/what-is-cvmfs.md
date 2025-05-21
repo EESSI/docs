@@ -50,20 +50,23 @@ In certain cases, the CernVM-FS has also been used to
 [distribute large *data* repositories](https://cvmfs.readthedocs.io/en/stable/cpt-large-scale.html).
 
 ## How do files become available to the user?
-Files in CVMFS are organized in repositories, in the form of content addressable storage.
-A [Stratum 0 server](../appendix/terminology.md#stratum0) is the single authoritative source of a repository, responsible for publishing modifications of its contents.
-Information on how to create a new repository can be found in the [CVMFS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html).
+Files in CernVM-FS are organized in repositories, in the form of content addressable storage.
+For every repository, there is a dedicated server [( Stratum 0 )](../appendix/terminology.md#stratum0) that is its single authoritative source, responsible for publishing modifications of its contents.
+Information on how to create a new repository can be found in the [CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html).
 
-Repository administrators should discourage users from accessing Stratum 0 directly, but via a network of public mirror servers.
-[Stratum 1](../appendix/terminology.md#stratum1) is a public replica server, containing repositories in their entireties, configured to automatically remain consistent with the stratum 0.
-In cases where users do not have access on the public servers, site administrators can [create a private Stratum 1](../access/stratum1.md).
+Repository administrators should discourage users from accessing Stratum 0 directly, but use a network of public mirror servers instead.
+[Stratum 1](../appendix/terminology.md#stratum1), is a public replica server containing repositories in their entireties, configured to automatically remain consistent with the stratum 0.
+In cases where users do not have access on the public servers, site administrators can [create private Stratum 1 servers](../access/stratum1.md).
 
-On top of Stratum 1, site administrators are encouraged to [install a reverse proxy](https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#squid-configuration) that works as yet another caching layer.
+On top of Stratum 1, site administrators are encouraged to [install a series of forward proxies](https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#squid-configuration) that works as yet another caching layer.
+This will improve the cold cache performance (especially on sites with clusters of nodes) on the client side (see [performance analysis](../performance.md)), but also reduce the load of the Stratum 1 servers.
 
 <div align="center">
 <img src="../img/cvmfs_topo.png" alt="CernVM-FS Topology" width="100%"/></br>
 </div>
 
+To access a repository, the user (here the CernVM-FS client) specifies the proxy that will forward its requests, and a list of Stratum 1 servers.
+Stratum 1 servers will be sorted automatically based on their geographic proximity (see [relevant documentation](https://cvmfs.readthedocs.io/en/stable/cpt-configure.html#sct-geoapi)).
 ## Features
 
 ### On-demand downloading of files and metadata { #features-ondemand }
