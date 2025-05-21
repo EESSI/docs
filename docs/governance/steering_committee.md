@@ -1,15 +1,4 @@
-# EESSI Governance
-
-EESSI recognises that formal governance is essential given the ambitions of the project, not just for EESSI
-itself but also to those who would adopt EESSI and/or fund its development.
-
-EESSI is, therefore, in the process of adopting a formal governance model. To facilitate this process it has created an
-_Interim Steering Committee_ whose role is to progress this adoption while also providing direction to the project.
-
-## Members of the _Interim Steering Committee_
-
-The members of the _Interim Steering Committee_ are listed below. Each member of the _Interim Steering Committee_ also
-nominate an alternate should they not be able to attend a meeting of the committee.
+The current (Interim) Steering Committee consists of:
 
 * _Interim Steering Committee Lead_: Kenneth Hoste ([Ghent University](https://www.ugent.be/en)), [@boegel](https://github.com/boegel)
     * _Alternate: Lara Peeters ([Ghent University](https://www.ugent.be/en)), :material-github: [@laraPPr](https://github.com/laraPPr)_
