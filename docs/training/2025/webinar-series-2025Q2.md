@@ -160,9 +160,10 @@ hands-on demos. We will also cover some new capabilities that are supported by t
 - speakers:
     - Alan O'Cais (CECAM, University of Barcelona)
 
-#### Outline
+#### Materials
 
-*(more info soon)*
+- [slides (PDF)](EESSI-webinars-MayJune-2025-004-EESSI-for-CI-CD-20250526.pdf)
+- recording (YouTube) (*coming soon*)
 
 ---
 
