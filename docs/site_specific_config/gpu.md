@@ -133,3 +133,31 @@ module load CUDA-Samples
 deviceQuery
 ```
 If both are successful, you should see information about your GPU printed to your terminal.
+
+## Support for using AMD GPUs {: #amd }
+
+ROCm (Radeon Open Compute) support in EESSI is currently under development to enable GPU-accelerated computing on AMD hardware.
+
+### Current Status
+
+ROCm support is not yet available in EESSI.
+We are actively working on integrating AMD's ROCm ecosystem to provide GPU computing capabilities for AMD GPUs alongside our existing CUDA support for NVIDIA hardware.
+
+### ROCm Ecosystem Overview
+
+To prepare for ROCm integration, we have created a comprehensive overview of the entire ROCm ecosystem.
+This document maps out AMD GPU architectures, core ROCm components, programming models, libraries, and the dependencies between them.
+
+For a detailed understanding of the ROCm ecosystem that will inform our implementation, see [ROCm Ecosystem Overview](rocm.md).
+
+### Future Plans
+
+Our ROCm integration will focus on providing:
+* ROCm-enabled scientific computing libraries
+* Support for HIP, OpenMP, and OpenCL programming models
+* GPU-accelerated frameworks and applications
+
+### Community Input
+
+We welcome feedback from the community on ROCm support priorities and use cases.
+If you have specific ROCm software requirements or insights to share, please contact us at support@eessi.io.
