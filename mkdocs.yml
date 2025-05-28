@@ -56,6 +56,7 @@ nav:
       - Available tests: test-suite/available-tests.md
       - Writing tests: test-suite/writing-portable-tests.md
       - Release notes: test-suite/release-notes.md
+      - Dashboard: test-suite/dashboard.md
     - Known issues and workarounds:
       - v2023.06: known_issues/eessi-2023.06.md
   - Adding software to EESSI: 
@@ -77,9 +78,7 @@ nav:
         # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
     - Contact info: contact.md
   - Training: training/index.md
-  - EESSI availability: 
-    - Systems where EESSI is available: eessi_availability/systems.md
-    - Health state of the test suite: eessi_availability/health.md
+  - Systems where EESSI is available: systems.md
   - Governance: governance.md
   - Blog: blog/index.md
 plugins:
