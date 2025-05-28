@@ -1,0 +1,2966 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://eessi.github.io/docs/site_specific_config/rocm/">
+      
+      
+      
+      
+      <link rel="icon" href="../../img/logos/EESSI.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Overview of ROCm Ecosystem (v6.4.1-20250526) - European Environment for Scientific Software Installations (EESSI)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    
+      <link rel="stylesheet" href="../../available_software/css/style_table.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview-of-rocm-ecosystem-v641-20250526" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview of ROCm Ecosystem (v6.4.1-20250526)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+      
+  <img src="../../img/logos/EESSI.png" alt="logo">
+
+    </a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EESSI" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filesystem_layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filesystem layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compatibility_layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Compatibility layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software layer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/cpu_targets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Supported CPU targets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Available software and repositories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Available software and repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../available_software/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Repositories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Repositories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/software.eessi.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Production
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/riscv.eessi.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RISC-V
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/pilot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../repositories/dev.eessi.io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installation and configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Installation and configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/is_eessi_accessible/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is EESSI already installed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/native_installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Native
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/eessi_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Container
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Windows and macOS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Windows and macOS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/eessi_wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Windows with WSL
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_access/eessi_limactl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    macOS with Lima
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configuring EESSI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Configuring EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../host_injections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to configure EESSI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GPU support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lmod_hooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Custom LMOD hooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Basic usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Basic usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/setting_up_environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set up environment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/basic_commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Basic commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/eessi_demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Demos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/eessi_in_ci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EESSI in CI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Advanced usage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced usage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../filesystem_layer/stratum1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up your Stratum
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_eessi/building_on_eessi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building software with EESSI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Test suite
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Test suite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/installation-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation & configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/ReFrame-configuration-file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReFrame configuration file
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/available-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Available tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/writing-portable-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Writing tests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test-suite/release-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Known issues and workarounds
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Known issues and workarounds
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../known_issues/eessi-2023.06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    v2023.06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Adding software to EESSI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Adding software to EESSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding_software/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    For contributors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            For contributors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding_software/contribution_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contribution policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding_software/opening_pr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open PR
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding_software/debugging_failed_builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Debugging
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding_software/adding_development_software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development repository
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    For maintainers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            For maintainers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BTD bot
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding_software/building_software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Building software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adding_software/deploying_software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deploying software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_layer/build_nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Community and support
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Community and support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meetings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Meetings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../talks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Talks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contact info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Training
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Systems where EESSI is available
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Governance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#Table-of-Contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#AMD-GPU-Microarchitectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      AMD GPU Microarchitectures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AMD GPU Microarchitectures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#CDNA-Compute-DNA" class="md-nav__link">
+    <span class="md-ellipsis">
+      CDNA (Compute DNA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#RDNA-Radeon-DNA" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDNA (Radeon DNA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Earlier-Architectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Earlier Architectures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#GFX-Codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      GFX Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Core-Components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-components-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core components dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Programming-Models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Programming Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#HIP-Heterogeneous-Computing-Interface-for-Portability" class="md-nav__link">
+    <span class="md-ellipsis">
+      HIP (Heterogeneous-Computing Interface for Portability)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#OpenMP-Support" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#OpenCL-Support" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenCL Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programming-models-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programming Models Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Compiler-Ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiler Ecosystem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compiler Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cc-compilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      C/C++ Compilers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fortran-compilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fortran Compilers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilers-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilers Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Developer-Tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Developer Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#developer-tools-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Tools Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Libraries-and-Frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libraries and Frameworks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Libraries and Frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-math-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Math Libraries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mldl-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      ML/DL Frameworks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Libraries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Compatibility-Policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compatibility Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compatibility Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rocm-version-and-gpu-driver-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROCm Version and GPU Driver Compatibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocm-version-and-glibc-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      ROCm Version and glibc Compatibility
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#AMD-GPUs-in-Azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      AMD GPUs in Azure
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="overview-of-rocm-ecosystem-v641-20250526">Overview of ROCm Ecosystem (v6.4.1-20250526)<a class="headerlink" href="#overview-of-rocm-ecosystem-v641-20250526" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Work-in-progress</p>
+<p>This document is a work-in-progress.
+It may still contain inaccuracies or mistakes.</p>
+<p>This overview is being created in the context of adding support for ROCm to EESSI, the European Environment for Scientific Software Installations (<a href="https://eessi.io">https://eessi.io</a>).</p>
+<p><em>Last update: 26 May 2025</em></p>
+</div>
+<p><a href="#Introduction">Jump to Overview</a> | <a href="#ABC-of-ROCm">Jump to ABC</a></p>
+<h2 id="Table-of-Contents">Table of Contents<a class="headerlink" href="#Table-of-Contents" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#AMD-GPU-Microarchitectures">AMD GPU Microarchitectures</a></li>
+<li><a href="#Core-Components">Core Components</a></li>
+<li><a href="#Programming-Models">Programming Models</a></li>
+<li><a href="#Compiler-Ecosystem">Compiler Ecosystem</a></li>
+<li><a href="#Developer-Tools">Developer Tools</a></li>
+<li><a href="#Libraries-and-Frameworks">Libraries and Frameworks</a></li>
+<li><a href="#Compatibility-Policies">Compatibility Policies</a></li>
+<li><a href="#AMD-GPUs-in-Azure">AMD GPUs in Azure</a></li>
+</ol>
+<h2 id="Introduction">Introduction<a class="headerlink" href="#Introduction" title="Permanent link">&para;</a></h2>
+<p>The AMD <a href="#ROCm">ROCm</a>™ (Radeon Open Compute) platform is an open-source software stack designed for GPU computing. <a href="#ROCm">ROCm</a> 6.4.x provides a comprehensive set of tools, libraries, and software development kits that enable developers to harness the power of AMD's hardware accelerators.</p>
+<p><a href="#ROCm">ROCm</a> serves as AMD's unified platform for high-performance computing (HPC), artificial intelligence (AI), and machine learning workloads, offering a viable alternative to NVIDIA's CUDA ecosystem. The platform is designed with portability, performance, and open standards in mind.</p>
+<p>The <a href="#ROCm">ROCm</a> software stack consists of six major parts:</p>
+<ol>
+<li>AMD GPU Microarchitectures: the microarchitectures used by AMD GPU hardware</li>
+<li>Core Components: software essential to using AMD GPUs (drivers, runtimes, etc)</li>
+<li>Programming Models: how to create programs that run on AMD GPUs</li>
+<li>Compiler Ecosystem: compilers with support for the programming models</li>
+<li>Developer Tools: debugging, profiling, and tracing tools</li>
+<li>Libraries and Frameworks: for common operations and programming structures</li>
+</ol>
+<h2 id="AMD-GPU-Microarchitectures">AMD GPU Microarchitectures<a class="headerlink" href="#AMD-GPU-Microarchitectures" title="Permanent link">&para;</a></h2>
+<p>AMD's GPU architectures have evolved significantly over the years, with distinct product lines targeting different market segments.</p>
+<h3 id="CDNA-Compute-DNA">CDNA (Compute DNA)<a class="headerlink" href="#CDNA-Compute-DNA" title="Permanent link">&para;</a></h3>
+<p><a href="#CDNA">CDNA</a> is AMD's data center and HPC-focused architecture for GPU compute workloads.</p>
+<ol>
+<li><a href="#CDNA">CDNA</a> 1 (2020)<ul>
+<li>Used in <a href="#AMD-Instinct">AMD Instinct</a> MI100 accelerator</li>
+<li>Matrix Core Technology for AI/ML workloads</li>
+</ul>
+</li>
+<li><a href="#CDNA">CDNA</a> 2 (2021)<ul>
+<li>Powers <a href="#AMD-Instinct">AMD Instinct</a> MI200 series</li>
+<li>MCM (multi-chip module) design with chiplets</li>
+<li>Infinity Fabric connections for multi-GPU scaling</li>
+</ul>
+</li>
+<li><a href="#CDNA">CDNA</a> 3 (2023)<ul>
+<li>Powers <a href="#AMD-Instinct">AMD Instinct</a> MI300 series</li>
+<li>Integrates CPU and GPU in the same package (for example MI300A) (APD - Accelerated Processing Device)</li>
+<li>Enhanced AI and HPC capabilities</li>
+</ul>
+</li>
+</ol>
+<h3 id="RDNA-Radeon-DNA">RDNA (Radeon DNA)<a class="headerlink" href="#RDNA-Radeon-DNA" title="Permanent link">&para;</a></h3>
+<p><a href="#RDNA">RDNA</a> is AMD's consumer-focused graphics architecture, designed for gaming and content creation.</p>
+<ol>
+<li><a href="#RDNA">RDNA</a> 1 (2019)<ul>
+<li>First introduced with the <a href="#Radeon-RX">Radeon RX</a> 5000 series</li>
+</ul>
+</li>
+<li><a href="#RDNA">RDNA</a> 2 (2020)<ul>
+<li>Powers <a href="#Radeon-RX">Radeon RX</a> 6000 series</li>
+<li>Used in PlayStation 5 and Xbox Series X/S consoles</li>
+</ul>
+</li>
+<li><a href="#RDNA">RDNA</a> 3 (2022)<ul>
+<li>Powers <a href="#Radeon-RX">Radeon RX</a> 7000 series</li>
+<li>Chiplet-based design (first for consumer GPUs)</li>
+</ul>
+</li>
+<li><a href="#RDNA">RDNA</a> 4 (2024)<ul>
+<li>Powers latest <a href="#Radeon-RX">Radeon RX</a> 8000 and 9000 series</li>
+</ul>
+</li>
+</ol>
+<h3 id="Earlier-Architectures">Earlier Architectures<a class="headerlink" href="#Earlier-Architectures" title="Permanent link">&para;</a></h3>
+<ol>
+<li><a href="#GCN">GCN</a> (Graphics Core Next) - 2011-2019<ul>
+<li>Five generations (GCN 1-5)</li>
+<li>Transitioned to <a href="#RDNA">RDNA</a> for consumer products</li>
+<li>Powered Radeon HD 7000 through RX Vega and some RX 500 series</li>
+</ul>
+</li>
+<li><a href="#Vega">Vega</a> (2017)<ul>
+<li>Based on <a href="#GCN">GCN</a> 5</li>
+<li>Used in Radeon RX Vega and Radeon VII</li>
+</ul>
+</li>
+</ol>
+<h3 id="GFX-Codes">GFX Codes<a class="headerlink" href="#GFX-Codes" title="Permanent link">&para;</a></h3>
+<p>In LLVM each AMDGPU processor has an architecture (<a href="#GFX">GFX</a>) code that indicates which specific microarchitecture is used. These codes are critical for hardware compatibility and optimization with ROCm. Generally, AMD uses the "gfxAB" format, where A is a major version indicator and B a two-digit minor version indicator. The format "gfxA" is also used to refer to a family of architectures with the same major version indicator.</p>
+<p>An overview of gfx codes:</p>
+<ul>
+<li>GFX6 (GCN): gfx600, gfx601, gfx602</li>
+<li>GFX7 (GCN): gfx700, ..., gfx705</li>
+<li>GFX8 (GCN): gfx801, gfx802, gfx803, gfx805, gfx810</li>
+<li>GFX9 (Vega): gfx900, gfx902, gfx904, gfx906</li>
+<li>GFX9 (CDNA1): gfx908</li>
+<li>GFX9 (CDNA2): gfx90a</li>
+<li>GFX9 (CDNA3): gfx942</li>
+<li>GFX10.1 (RDNA1): gfx1010, ..., gfx1013</li>
+<li>GFX10.3 (RDNA2): gfx1030, ..., gfx1036</li>
+<li>GFX11 (RDNA3): gfx1100, ..., gfx1103</li>
+<li>GFX11 (RDNA3.5): gfx1150, ..., gfx1153</li>
+<li>GFX12 (RDNA4): gfx1200, gfx1201</li>
+</ul>
+<p><a href="https://llvm.org/docs/AMDGPUUsage.html">Source</a></p>
+<h2 id="Core-Components">Core Components<a class="headerlink" href="#Core-Components" title="Permanent link">&para;</a></h2>
+<p><a href="https://rocm.docs.amd.com/en/latest/reference/rocm-tools.html">Source</a>
+<a href="https://github.com/ROCm/ROCm">Github</a></p>
+<ul>
+<li><a href="#AMDGPU-Driver">AMDGPU Driver</a> with KFD<ul>
+<li>The kernel-mode driver for AMD GPUs</li>
+<li><a href="https://github.com/ROCm/ROCK-Kernel-Driver">Github</a></li>
+</ul>
+</li>
+<li><a href="#Platform-Runtime">Platform Runtime</a><ul>
+<li>Runtime that manages GPU resources, scheduling, and memory management</li>
+<li><a href="https://github.com/ROCm/ROCR-Runtime">Github</a></li>
+</ul>
+</li>
+<li><a href="#ROCm-LLVM">ROCm-LLVM</a><ul>
+<li>AMD-maintained fork of the LLVM git repository</li>
+<li><a href="https://github.com/ROCm/llvm-project">Github</a></li>
+</ul>
+</li>
+<li><a href="#AMD-SMI">AMD SMI</a> (System Management Interface)<ul>
+<li>AMD SMI - equivalent to nvidia-smi</li>
+<li>Successor to ROCm SMI</li>
+<li><a href="https://github.com/ROCm/amdsmi">Github</a></li>
+</ul>
+</li>
+<li><a href="#ROCm-SMI">ROCm SMI</a> (System Management Interface) (deprecated)<ul>
+<li>ROCm SMI LIB - equivalent to nvidia-smi</li>
+<li><a href="https://github.com/ROCm/rocm_smi_lib">Github</a></li>
+</ul>
+</li>
+<li>ROCmInfo<ul>
+<li>ROCm Application for Reporting System Info</li>
+<li><a href="https://github.com/ROCm/rocminfo">Github</a></li>
+</ul>
+</li>
+<li>ROCTracer<ul>
+<li>ROCm Tracer Callback/Activity Library for Performance tracing AMD GPUs</li>
+<li><a href="https://github.com/ROCm/roctracer">Github</a></li>
+</ul>
+</li>
+<li>ROCm examples<ul>
+<li>A collection of examples for the ROCm software stack</li>
+<li><a href="https://github.com/ROCm/rocm-examples">Github</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="core-components-dependencies">Core components dependencies<a class="headerlink" href="#core-components-dependencies" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>graph LR;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    subgraph Driver
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        A[AMDGPU Driver with KFD]
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    end
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    subgraph Runtime
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        B[ROCm Platform Runtime]
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    end
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    subgraph Compiler
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        C[ROCm LLVM Compiler]
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    end
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    subgraph ROCm
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        D[ROCm core]
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    end
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    subgraph AMD smi
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        E[AMD smi]
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    end
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    subgraph Programming Model
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        F[HIP]
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    end
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    subgraph Reporting
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        G[ROCminfo]
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    end
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        B --&gt;|Depends on| A
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        B --&gt;|Depends on| C
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        B --&gt;|Depends on| D
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        D --&gt;|Depends on| E
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        D --&gt;|Depends on| F
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        G --&gt;|Depends on| C
+</code></pre></div>
+<h2 id="Programming-Models">Programming Models<a class="headerlink" href="#Programming-Models" title="Permanent link">&para;</a></h2>
+<h3 id="HIP-Heterogeneous-Computing-Interface-for-Portability">HIP (Heterogeneous-Computing Interface for Portability)<a class="headerlink" href="#HIP-Heterogeneous-Computing-Interface-for-Portability" title="Permanent link">&para;</a></h3>
+<p><a href="#HIP">HIP</a> is AMD's C++ runtime API and kernel language that allows developers to write portable code that can run on both AMD and NVIDIA GPUs. It's a key component of <a href="#ROCm">ROCm</a>'s strategy for facilitating code migration from CUDA.</p>
+<ul>
+<li><a href="https://github.com/ROCm/hip">HIP Github</a></li>
+<li><a href="https://github.com/ROCm/clr">CLR Github</a></li>
+<li>Features:<ul>
+<li>CUDA-like programming model with familiar syntax</li>
+<li>Source-level compatibility with CUDA</li>
+<li>Tools to automate conversion of CUDA code (<a href="#HIPIFY">HIPIFY</a>)<ul>
+<li><a href="https://github.com/ROCm/HIPIFY">Github</a></li>
+</ul>
+</li>
+<li>Runtime API and kernel language for GPU computing</li>
+</ul>
+</li>
+</ul>
+<h3 id="OpenMP-Support">OpenMP Support<a class="headerlink" href="#OpenMP-Support" title="Permanent link">&para;</a></h3>
+<p><a href="#ROCm">ROCm</a> supports <a href="#OpenMP">OpenMP</a> offloading, which allows developers to use directive-based programming to offload computations to GPUs.</p>
+<ul>
+<li>Features:<ul>
+<li>Familiar pragma-based approach</li>
+<li>Incremental parallelization of existing CPU code</li>
+<li>Support for target offload constructs</li>
+</ul>
+</li>
+</ul>
+<h3 id="OpenCL-Support">OpenCL Support<a class="headerlink" href="#OpenCL-Support" title="Permanent link">&para;</a></h3>
+<p>While not the primary focus of <a href="#ROCm">ROCm</a>, <a href="#OpenCL">OpenCL</a> support is maintained for compatibility with existing code bases and as an open standard option.</p>
+<ul>
+<li><a href="https://github.com/ROCm/clr">Github</a></li>
+</ul>
+<h3 id="programming-models-dependencies">Programming Models Dependencies<a class="headerlink" href="#programming-models-dependencies" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>graph LR;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    subgraph Key Programming Models
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        A[HIP]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        B[OpenMP]
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        C[OpenCL]
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    end
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    subgraph Compiler
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        D[ROCm-LLVM]
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    end
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    subgraph ROCm Components
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        E[rocm-cmake]
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        F[ROCmInfo]
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        G[ROCm Core]
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    end
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        A --&gt;|Depends on| D
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        A --&gt;|Depends on| E
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        A --&gt;|Depends on| F
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        A --&gt;|Depends on| G
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        B --&gt;|Depends on| G
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        C --&gt;|Depends on| G
+</code></pre></div>
+<h2 id="Compiler-Ecosystem">Compiler Ecosystem<a class="headerlink" href="#Compiler-Ecosystem" title="Permanent link">&para;</a></h2>
+<p><a href="#ROCm">ROCm</a> provides a comprehensive set of compilers to support various programming languages and models. These compilers are essential for translating high-level code into optimized machine code for AMD GPUs.</p>
+<h3 id="cc-compilers">C/C++ Compilers<a class="headerlink" href="#cc-compilers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#ROCm-LLVM">ROCm-LLVM</a> (AMDGPU LLVM):<ul>
+<li>The foundation of <a href="#ROCm">ROCm</a>'s compiler toolchain</li>
+<li>Based on LLVM/Clang infrastructure with AMD GPU-specific additions</li>
+<li>Supports HIP, OpenMP offloading, and other programming models</li>
+<li><a href="https://github.com/ROCm/llvm-project">Github</a></li>
+</ul>
+</li>
+<li><a href="#AOMP">AOMP</a> (AMD OpenMP Compiler) (preview):<ul>
+<li>Specialized for OpenMP target offloading to AMD GPUs</li>
+<li>Based on the LLVM project with specific optimizations for OpenMP</li>
+<li>Supports OpenMP 5.0+ features relevant to GPU offloading</li>
+<li>Currently a development-preview, not yet a full product</li>
+<li><a href="https://github.com/ROCm/aomp">Github</a></li>
+</ul>
+</li>
+<li><a href="#AOCC">AOCC</a> (AMD Optimizing C/C++ Compiler):<ul>
+<li>Primarily focused on AMD CPU optimization</li>
+<li>Can be used in conjunction with <a href="#ROCm">ROCm</a> for heterogeneous computing</li>
+<li>Based on LLVM/Clang with AMD-specific optimizations</li>
+<li>Closed source</li>
+</ul>
+</li>
+<li>hipcc:<ul>
+<li>Compiler wrapper for HIP applications</li>
+<li>Simplifies compilation process by handling complex flag combinations</li>
+<li>Part of the HIP package</li>
+</ul>
+</li>
+</ul>
+<h3 id="fortran-compilers">Fortran Compilers<a class="headerlink" href="#fortran-compilers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="#AOCC">AOCC</a> (AMD Optimizing Fortran Compiler):<ul>
+<li>Based on Flang and LLVM</li>
+<li>Supports GPU offloading via OpenMP directives</li>
+<li>Optimized for AMD architectures</li>
+</ul>
+</li>
+<li>Flang for ROCm (deprecated):<ul>
+<li>Part of the LLVM project's Fortran implementation</li>
+<li>The new Flang implementation (as described in LLVM's blog post) brings improved compatibility and performance</li>
+<li><a href="https://github.com/ROCm/flang">Github</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="compilers-dependencies">Compilers Dependencies<a class="headerlink" href="#compilers-dependencies" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>graph LR;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    subgraph Compilers
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        A[ROCm LLVM]
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        B[AOCC]
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        C[HIPCC]
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    end
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    subgraph ROCm Components
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        D[ROCm Core]
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        E[HIP]
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    end
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    A --&gt;|Depends on| D
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    C --&gt;|Depends on| E
+</code></pre></div>
+<h2 id="Developer-Tools">Developer Tools<a class="headerlink" href="#Developer-Tools" title="Permanent link">&para;</a></h2>
+<p><a href="#ROCm">ROCm</a> offers several tools to aid in development, debugging, and performance optimization:</p>
+<ul>
+<li>ROCgdb: Debugger for HIP and OpenCL applications<ul>
+<li><a href="https://github.com/ROCm/ROCgdb">Github</a></li>
+</ul>
+</li>
+<li>ROCProfiler: Performance profiling tool<ul>
+<li><a href="https://github.com/ROCm/rocprofiler">Github</a></li>
+</ul>
+</li>
+<li>rocm-cmake: CMake modules for ROCm<ul>
+<li><a href="https://github.com/ROCm/rocm-cmake">Github</a></li>
+</ul>
+</li>
+<li>ROCm Compute Profiler: Performance analysis tool for AMD GPUs<ul>
+<li><a href="https://github.com/ROCm/rocprofiler-compute">Github</a></li>
+</ul>
+</li>
+<li>ROCTracer: API tracing library<ul>
+<li><a href="https://github.com/ROCm/roctracer">Github</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="developer-tools-dependencies">Developer Tools Dependencies<a class="headerlink" href="#developer-tools-dependencies" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>graph LR;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    subgraph Developer tools
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        D[ROCProfiler]
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        A[ROCm-cmake]
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        B[ROCTracer]
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        H[ROCm Compute Profiler]
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        C[ROCgdb]
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    end
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    subgraph ROCm Components
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        F[ROCm LLVM]
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        E[ROCm Core]
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        G[ROCminfo]
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    end
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    B --&gt;|Depends on| E
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    B --&gt;|Depends on| F
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    D --&gt;|Depends on| F
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    D --&gt;|Depends on| E
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    D --&gt;|Depends on| G
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    A --&gt;|Depends on| F
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    H --&gt;|Depends on| E
+</code></pre></div>
+<h2 id="Libraries-and-Frameworks">Libraries and Frameworks<a class="headerlink" href="#Libraries-and-Frameworks" title="Permanent link">&para;</a></h2>
+<p><a href="#ROCm">ROCm</a> provides a rich set of libraries to accelerate various computational workloads.</p>
+<h3 id="core-math-libraries">Core Math Libraries<a class="headerlink" href="#core-math-libraries" title="Permanent link">&para;</a></h3>
+<ul>
+<li>rocBLAS: Basic Linear Algebra Subprograms implementation<ul>
+<li><a href="https://github.com/ROCm/rocBLAS">Github</a></li>
+</ul>
+</li>
+<li>rocSOLVER: Linear algebra solver library<ul>
+<li><a href="https://github.com/ROCm/rocSOLVER">Github</a></li>
+</ul>
+</li>
+<li>rocFFT: Fast Fourier Transform implementation<ul>
+<li><a href="https://github.com/ROCm/rocFFT">Github</a></li>
+</ul>
+</li>
+<li>rocRAND: Random number generator library<ul>
+<li><a href="https://github.com/ROCm/rocRAND">Github</a></li>
+</ul>
+</li>
+<li>rocSPARSE: Sparse matrix routines<ul>
+<li><a href="https://github.com/ROCm/rocSPARSE">Github</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="mldl-frameworks">ML/DL Frameworks<a class="headerlink" href="#mldl-frameworks" title="Permanent link">&para;</a></h3>
+<ul>
+<li>MIOpen: Deep learning primitives library<ul>
+<li><a href="https://github.com/ROCm/MIOpen">Github</a></li>
+</ul>
+</li>
+<li>ROCm TensorFlow: TensorFlow support for AMD GPUs<ul>
+<li><a href="https://github.com/ROCm/tensorflow-upstream">Github</a></li>
+</ul>
+</li>
+<li>ROCm PyTorch: PyTorch support for AMD GPUs<ul>
+<li><a href="https://github.com/ROCm/pytorch">Github</a></li>
+</ul>
+</li>
+<li>RCCL: Communication library for multi-GPU/multi-node training<ul>
+<li><a href="https://github.com/ROCm/rccl">Github</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="communication-libraries">Communication Libraries<a class="headerlink" href="#communication-libraries" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ROCm Communication Collectives Library (RCCL): Optimized collective operations<ul>
+<li><a href="https://github.com/ROCm/rccl">Github</a></li>
+</ul>
+</li>
+<li>UCX: Unified Communication X support<ul>
+<li><a href="https://github.com/openucx/ucx">Github</a></li>
+</ul>
+</li>
+<li>ROCm MPI: Message Passing Interface integration<ul>
+<li><a href="https://github.com/ROCm/rocm_smi_lib">Github</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Compatibility-Policies">Compatibility Policies<a class="headerlink" href="#Compatibility-Policies" title="Permanent link">&para;</a></h2>
+<p><a href="https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html">Source</a></p>
+<h3 id="rocm-version-and-gpu-driver-compatibility">ROCm Version and GPU Driver Compatibility<a class="headerlink" href="#rocm-version-and-gpu-driver-compatibility" title="Permanent link">&para;</a></h3>
+<p><a href="#ROCm">ROCm</a> follows a versioning scheme that ensures compatibility between the software stack and GPU drivers.</p>
+<ol>
+<li>Major Version Compatibility:<ul>
+<li>Major ROCm versions (e.g., 6.x) typically maintain driver compatibility within the same major version.</li>
+<li>Major version upgrades may require driver updates.</li>
+</ul>
+</li>
+<li>Minor Version Compatibility:<ul>
+<li>Minor versions (e.g., 6.4.x) are generally compatible with drivers designed for the same major version.</li>
+<li>Backward compatibility is maintained where possible, but newer hardware features may require newer drivers.</li>
+</ul>
+</li>
+</ol>
+<h3 id="rocm-version-and-glibc-compatibility">ROCm Version and glibc Compatibility<a class="headerlink" href="#rocm-version-and-glibc-compatibility" title="Permanent link">&para;</a></h3>
+<p><a href="https://rocm.docs.amd.com/en/latest/compatibility/compatibility-matrix.html#operating-systems-kernel-and-glibc-versions">Source</a></p>
+<p>Versions of glibc supported by ROCm 6.4:</p>
+<ul>
+<li>2.28</li>
+<li>2.31</li>
+<li>2.34</li>
+<li>2.35</li>
+<li>2.36</li>
+<li>2.38</li>
+<li>2.39</li>
+</ul>
+<h2 id="AMD-GPUs-in-Azure">AMD GPUs in Azure<a class="headerlink" href="#AMD-GPUs-in-Azure" title="Permanent link">&para;</a></h2>
+<p>Azure offers several VM series featuring AMD GPUs. The following is an overview of available SKUs.</p>
+<p><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist#gpu-accelerated">Source</a></p>
+<ul>
+<li>NVv4 series<ul>
+<li>cpu: AMD EPYC 7V12 (Rome) [x86-64]</li>
+<li>gpu: AMD Instinct MI25 GPU (16GB)</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nvv4-series?tabs=sizebasic">Azure</a></li>
+</ul>
+</li>
+<li>NGads_V620 series<ul>
+<li>cpu: AMD EPYC 7763 (Milan) [x86-64]</li>
+<li>gpu: AMD Radeon PRO V620 GPU (32GB)</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ngadsv620-series?tabs=sizebasic">Azure</a></li>
+</ul>
+</li>
+<li>NVads_V710_v5 series<ul>
+<li>cpu: AMD EPYC 9V64 F (Genoa) [x86-64]</li>
+<li>gpu: AMD Radeon™ Pro V710</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nvadsv710-v5-series?tabs=sizebasic">Azure</a></li>
+</ul>
+</li>
+<li>ND-MI300X-V5 series<ul>
+<li>cpu: Intel Xeon (Sapphire Rapids) [x86-64]</li>
+<li>gpu: AMD Instinct MI300X GPU (192GB)</li>
+<li><a href="https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/ndmi300xv5-series?tabs=sizebasic">Azure</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="ABC-of-ROCm">ABC of ROCm<a class="headerlink" href="#ABC-of-ROCm" title="Permanent link">&para;</a></h1>
+<p><a href="#AMDGPU-Driver">AMDGPU Driver</a> | <a href="#AMD-Instinct">AMD Instinct</a> | <a href="#AMD-SMI">AMD SMI</a> | <a href="#AOCC">AOCC</a> | <a href="#AOMP">AOMP</a> | <a href="#CDNA">CDNA</a> | <a href="#GCN">GCN</a> | <a href="#GFX">GFX</a> | <a href="#HIP">HIP</a> | <a href="#HIPIFY">HIPIFY</a> | <a href="#OpenCL">OpenCL</a> | <a href="#OpenMP">OpenMP</a> | <a href="#Platform-Runtime">Platform Runtime</a> | <a href="#Radeon-RX">Radeon RX</a> | <a href="#RDNA">RDNA</a> | <a href="#ROCm">ROCm</a> | <a href="#ROCm-LLVM">ROCm-LLVM</a> | <a href="#ROCm-SMI">ROCm SMI</a> | <a href="#Vega">Vega</a></p>
+<h2 id="a">A<a class="headerlink" href="#a" title="Permanent link">&para;</a></h2>
+<h3 id="AMDGPU-Driver"><a href="#Core-Components">AMDGPU Driver</a><a class="headerlink" href="#AMDGPU-Driver" title="Permanent link">&para;</a></h3>
+<p>The kernel-mode driver for AMD GPUs that provides the foundation for ROCm's functionality, including the Kernel Fusion Driver (KFD) that enables compute capabilities.</p>
+<h3 id="AMD-Instinct"><a href="#AMD-GPU-Microarchitectures">AMD Instinct</a><a class="headerlink" href="#AMD-Instinct" title="Permanent link">&para;</a></h3>
+<p>AMD Instinct is AMD's dedicated compute accelerator lineup for data centers and AI/HPC applications, optimized for the ROCm software platform.</p>
+<p><a href="https://instinct.docs.amd.com/latest/">AMD Docs</a></p>
+<h3 id="AMD-SMI"><a href="#Core-Components">AMD SMI</a><a class="headerlink" href="#AMD-SMI" title="Permanent link">&para;</a></h3>
+<p>AMD SMI (System Management Interface) is a command-line tool within the ROCm ecosystem that allows users to query and control various aspects of AMD GPUs. ROCm SMI is an older, more limited interface primarily used for hardware monitoring that has been largely superseded by AMD SMI, which offers a broader range of management capabilities.</p>
+<p><a href="https://rocm.docs.amd.com/projects/amdsmi/en/latest/index.html">AMD Docs</a></p>
+<h3 id="AOCC"><a href="#Compiler-Ecosystem">AOCC</a><a class="headerlink" href="#AOCC" title="Permanent link">&para;</a></h3>
+<p>AMD Optimizing C/C++/Fortran Compiler, AMD's optimizing compiler suite primarily focused on AMD CPU optimization but can work with ROCm for heterogeneous computing.</p>
+<p><a href="https://rocm.docs.amd.com/projects/llvm-project/en/latest/index.html">AMD Docs</a></p>
+<h3 id="AOMP"><a href="#Compiler-Ecosystem">AOMP</a><a class="headerlink" href="#AOMP" title="Permanent link">&para;</a></h3>
+<p>AMD OpenMP Compiler, a specialized compiler (development-preview) for OpenMP target offloading to AMD GPUs, supporting OpenMP 5.0+ features for GPU computing.</p>
+<h2 id="c">C<a class="headerlink" href="#c" title="Permanent link">&para;</a></h2>
+<h3 id="CDNA"><a href="#CDNA-Compute-DNA">CDNA</a><a class="headerlink" href="#CDNA" title="Permanent link">&para;</a></h3>
+<p>CDNA (Compute DNA) is AMD's GPU architecture optimized specifically for data center and high-performance computing workloads within the ROCm ecosystem.</p>
+<p><a href="https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html">AMD Docs</a> and <a href="https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html">AMD Docs</a></p>
+<h2 id="g">G<a class="headerlink" href="#g" title="Permanent link">&para;</a></h2>
+<h3 id="GCN"><a href="#Earlier-Architectures">GCN</a><a class="headerlink" href="#GCN" title="Permanent link">&para;</a></h3>
+<p>GCN (Graphics Core Next) is AMD's older GPU architecture that served as the foundation for their compute-focused platforms in early ROCm releases.</p>
+<p><a href="https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html">AMD Docs</a> and <a href="https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html">AMD Docs</a></p>
+<h3 id="GFX"><a href="#GFX-Codes">GFX</a><a class="headerlink" href="#GFX" title="Permanent link">&para;</a></h3>
+<p>GFX codes in AMD ROCm are architecture identifiers that specify GPU hardware generations, determining compatibility and optimization targets for HPC and machine learning workloads on AMD GPUs.</p>
+<p><a href="https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html">AMD Docs</a> and <a href="https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html">AMD Docs</a></p>
+<h2 id="h">H<a class="headerlink" href="#h" title="Permanent link">&para;</a></h2>
+<h3 id="HIP"><a href="#HIP-Heterogeneous-Computing-Interface-for-Portability">HIP</a><a class="headerlink" href="#HIP" title="Permanent link">&para;</a></h3>
+<p>HIP (Heterogeneous-Compute Interface for Portability) is AMD's C++ runtime API and kernel language that allows developers to write portable code that can run on both AMD GPUs and NVIDIA GPUs, serving as a key component of the ROCm platform for high-performance computing and machine learning workloads.</p>
+<p><a href="https://rocm.docs.amd.com/projects/HIP/en/latest/index.html">AMD Docs</a></p>
+<h3 id="HIPIFY"><a href="#HIP-Heterogeneous-Computing-Interface-for-Portability">HIPIFY</a><a class="headerlink" href="#HIPIFY" title="Permanent link">&para;</a></h3>
+<p>HIPIFY is a tool within AMD's ROCm platform that converts CUDA code into portable HIP (Heterogeneous-computing Interface for Portability) code to enable GPU applications to run on AMD hardware.</p>
+<p><a href="https://rocm.docs.amd.com/projects/HIPIFY/en/latest/index.html">AMD Docs</a></p>
+<h2 id="o">O<a class="headerlink" href="#o" title="Permanent link">&para;</a></h2>
+<h3 id="OpenCL"><a href="#OpenCL-Support">OpenCL</a><a class="headerlink" href="#OpenCL" title="Permanent link">&para;</a></h3>
+<p>OpenCL is a framework that allows developers to write programs that execute across heterogeneous platforms (including AMD GPUs) by using the OpenCL runtime and compiler infrastructure provided within the ROCm ecosystem.</p>
+<h3 id="OpenMP"><a href="#OpenMP-Support">OpenMP</a><a class="headerlink" href="#OpenMP" title="Permanent link">&para;</a></h3>
+<p>OpenMP is a parallel programming model supported through the ROCm toolchain that allows developers to write multi-threaded CPU and GPU code using familiar OpenMP directives, targeting AMD GPUs via the Clang/LLVM compiler infrastructure.</p>
+<h2 id="p">P<a class="headerlink" href="#p" title="Permanent link">&para;</a></h2>
+<h3 id="Platform-Runtime"><a href="#Core-Components">Platform Runtime</a><a class="headerlink" href="#Platform-Runtime" title="Permanent link">&para;</a></h3>
+<p>The Platform Runtime refers to the ROCr (ROCm Runtime) layer that provides low-level APIs for managing GPU resources, memory, and queues, forming the foundation upon which higher-level programming models like HIP operate.</p>
+<p><a href="https://rocm.docs.amd.com/projects/ROCR-Runtime/en/latest/index.html">AMD Docs</a></p>
+<h2 id="r">R<a class="headerlink" href="#r" title="Permanent link">&para;</a></h2>
+<h3 id="Radeon-RX"><a href="#AMD-GPU-Microarchitectures">Radeon RX</a><a class="headerlink" href="#Radeon-RX" title="Permanent link">&para;</a></h3>
+<p>AMD Radeon RX is a consumer-focused GPU series primarily designed for gaming and content creation.</p>
+<h3 id="RDNA"><a href="#RDNA-Radeon-DNA">RDNA</a><a class="headerlink" href="#RDNA" title="Permanent link">&para;</a></h3>
+<p>RDNA (Radeon DNA) is AMD's consumer-focused graphics architecture optimized for gaming and media applications within the ROCm ecosystem.</p>
+<p><a href="https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html">AMD Docs</a> and <a href="https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html">AMD Docs</a></p>
+<h3 id="ROCm"><a href="#Introduction">ROCm</a><a class="headerlink" href="#ROCm" title="Permanent link">&para;</a></h3>
+<p>Radeon Open Compute is an open-source software stack developed by AMD for GPU computing and machine learning applications.</p>
+<p><a href="https://rocm.docs.amd.com/en/latest/">AMD Docs</a></p>
+<h3 id="ROCm-LLVM"><a href="#Compiler-Ecosystem">ROCm-LLVM</a><a class="headerlink" href="#ROCm-LLVM" title="Permanent link">&para;</a></h3>
+<p>AMD ROCm's LLVM implementation is a modified version of the LLVM compiler infrastructure that enables GPU code generation, optimization, and execution for AMD GPUs within the ROCm (Radeon Open Compute) platform, providing essential support for high-performance computing and machine learning workloads.</p>
+<p><a href="https://rocm.docs.amd.com/projects/llvm-project/en/latest/index.html">AMD Docs</a></p>
+<h3 id="ROCm-SMI"><a href="#Core-Components">ROCm SMI</a><a class="headerlink" href="#ROCm-SMI" title="Permanent link">&para;</a></h3>
+<p>ROCm SMI (System Management Interface) is a command-line utility for monitoring and managing AMD GPUs within the ROCm ecosystem, providing functionality to query hardware information, control power states, monitor temperature, configure memory, and manage device performance. ROCm SMI is an older, more limited interface primarily used for hardware monitoring that has been largely superseded by AMD SMI, which offers a broader range of management capabilities.</p>
+<p><a href="https://rocm.docs.amd.com/projects/rocm_smi_lib/en/latest/index.html">AMD Docs</a></p>
+<h2 id="v">V<a class="headerlink" href="#v" title="Permanent link">&para;</a></h2>
+<h3 id="Vega"><a href="#Earlier-Architectures">Vega</a><a class="headerlink" href="#Vega" title="Permanent link">&para;</a></h3>
+<p>Vega refers to AMD's GPU architecture that was one of the first to fully support the ROCm ecosystem for high-performance computing and machine learning workloads.</p>
+<p><a href="https://rocm.docs.amd.com/en/latest/reference/gpu-arch-specs.html">AMD Docs</a> and <a href="https://rocm.docs.amd.com/en/latest/conceptual/gpu-arch.html">AMD Docs</a></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 09:07:17 UTC">May 28, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+      
+        <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+      
+        <script src="../../available_software/javascripts/populate_overview.js"></script>
+      
+        <script src="https://cdn.datatables.net/plug-ins/2.2.2/pagination/bootstrap_input.js"></script>
+      
+    
+  </body>
+</html>

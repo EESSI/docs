@@ -2141,6 +2141,10 @@
          <lastmod>2025-05-28</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/blog/2025/05/26/rocm/</loc>
+         <lastmod>2025-05-28</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/filesystem_layer/stratum1/</loc>
          <lastmod>2025-05-28</lastmod>
     </url>
@@ -2198,6 +2202,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/site_specific_config/lmod_hooks/</loc>
+         <lastmod>2025-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/site_specific_config/rocm/</loc>
          <lastmod>2025-05-28</lastmod>
     </url>
     <url>
@@ -2386,6 +2394,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/blog/archive/2024/</loc>
+         <lastmod>2025-05-28</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/blog/page/2/</loc>
          <lastmod>2025-05-28</lastmod>
     </url>
 </urlset>

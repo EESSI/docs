@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://eessi.github.io/docs/blog/2025/04/03/eessi-at-good-conf/">
+        <link rel="canonical" href="https://eessi.github.io/docs/blog/2025/05/26/rocm/">
       
       
-        <link rel="prev" href="../../../03/24/gpu-support-in-eessi/">
+        <link rel="prev" href="../../../04/03/eessi-at-good-conf/">
       
-      
-        <link rel="next" href="../../../05/26/rocm/">
       
       
       <link rel="icon" href="../../../../../img/logos/EESSI.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Open OnDemand meets EESSI at Global Open OnDemand Conference (Boston) - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>Mapping the AMD ROCm Ecosystem - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#open-ondemand-meets-eessi-at-global-open-ondemand-conference-boston" class="md-skip">
+        <a href="#mapping-the-amd-rocm-ecosystem" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Open OnDemand meets EESSI at Global Open OnDemand Conference (Boston)
+              Mapping the AMD ROCm Ecosystem
             
           </span>
         </div>
@@ -2034,18 +2032,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#their-solution" class="md-nav__link">
+  <a href="#why-we-created-this-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Their solution
+      Why we created this overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-takeaways" class="md-nav__link">
+  <a href="#scope" class="md-nav__link">
     <span class="md-ellipsis">
-      The takeaways
+      Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-living-document-for-and-by-the-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      A living document for and by the community
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-contribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to contribute
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#looking-forward" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looking forward
     </span>
   </a>
   
@@ -2080,16 +2105,31 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/u/16071227?v=4" alt="Elisabeth Ortega">
+                      <img src="https://avatars.githubusercontent.com/u/9018134?v=4" alt="Anthony Beerens">
                     </span>
                     <span class="md-profile__description">
                       <strong>
                         
-                          Elisabeth Ortega
+                          Anthony Beerens
                         
                       </strong>
                       <br>
-                      Do IT Now
+                      Inuits
+                    </span>
+                  </div>
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/78806270?v=4" alt="Tim Vancompernolle">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Tim Vancompernolle
+                        
+                      </strong>
+                      <br>
+                      Inuits
                     </span>
                   </div>
                 
@@ -2107,7 +2147,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2025-04-03 00:00:00+00:00" class="md-ellipsis">April 3, 2025</time>
+                        <time datetime="2025-05-26 00:00:00+00:00" class="md-ellipsis">May 26, 2025</time>
                       </div>
                     </li>
                     
@@ -2119,7 +2159,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -2146,30 +2186,55 @@
   
 
 
-<h1 id="open-ondemand-meets-eessi-at-global-open-ondemand-conference-boston">Open OnDemand meets EESSI at Global Open OnDemand Conference (Boston)<a class="headerlink" href="#open-ondemand-meets-eessi-at-global-open-ondemand-conference-boston" title="Permanent link">&para;</a></h1>
-<p>On 18 March 2025 Christian Bustelo and Arturo Gimeno from Do IT Now showed to the attendees of the <a href="https://openondemand.org/good">GOOD conference</a> what EESSI is about and their preliminary work in integrating it in Open OnDemand.</p>
-<figure>
-<img alt="Do IT Now presentation on EESSI at GOOD" src="../../EESSI-GOOD-DoITNow-20250318.webp" width="100%" />
-</figure>
+<h1 id="mapping-the-amd-rocm-ecosystem">Mapping the AMD ROCm Ecosystem<a class="headerlink" href="#mapping-the-amd-rocm-ecosystem" title="Permanent link">&para;</a></h1>
+<p>Within the EESSI community and Inuits, we're excited to share our latest contribution to the scientific computing community: a high-level overview of AMD's ROCm ecosystem.
+This document is the result of our recent efforts to prepare for adding ROCm support to EESSI, and we believe it will serve as a valuable resource for anyone working with AMD GPUs in scientific computing environments.</p>
+<p>The full overview document can be found at <a href="https://eessi.io/docs/rocm"><strong>Overview of ROCm Ecosystem</strong></a>.</p>
 <!-- more -->
 
-<h2 id="their-solution">Their solution<a class="headerlink" href="#their-solution" title="Permanent link">&para;</a></h2>
-<p>Christian and Arturo presented this implementation highlighting three potential use cases:</p>
-<ol>
-<li>Training in using Open OnDemand</li>
-<li>Deploying EESSI applications</li>
-<li>Sharing software</li>
-</ol>
-<p>For <strong>training</strong>, the proposed solution using the triad of Magic Castle for setting up the environment in the cloud, Ansible for deploying OOD, and EESSI for software, was well accepted by the attendees.</p>
-<p>The <strong>deployment</strong> of new applications can be done in two different manners: by just adding a single application (see image below) or by offering the entire software stack allowing the users to select all the modules they need.</p>
-<p>Last, they presented how EESSI is fitted to <strong>share software</strong> among different HPC centers.</p>
-<figure>
-<img alt="Deploying Jupyter Notebook from EESSI" src="../../jupyter-eessi.webp" width="100%" />
-</figure>
-<h2 id="the-takeaways">The takeaways<a class="headerlink" href="#the-takeaways" title="Permanent link">&para;</a></h2>
-<p>The audience received EESSI as a valuable tool to have to take into account. Should we think about the replacement of the first "E" in its name?</p>
-<p>The video recording of the presentation should be available soon.</p>
-<p>You can find the slides already <a href="../../EESSI-GOOD-20250318.pdf">here</a>.</p>
+<h2 id="why-we-created-this-overview">Why we created this overview<a class="headerlink" href="#why-we-created-this-overview" title="Permanent link">&para;</a></h2>
+<p>When preparing to add ROCm support to EESSI, we needed a high-level overview of the ROCm ecosystem, but couldn't find one online.
+While AMD's official <a href="https://rocm.docs.amd.com/en/latest/">documentation</a> covers individual components thoroughly, we required a holistic view to understand how everything interconnects - from hardware architectures to high-level libraries and the dependencies between them.
+This understanding was crucial for making informed decisions about which components to prioritize and how to handle compatibility across diverse scientific computing environments.</p>
+<p>Rather than keep this knowledge internal, we decided to create the overview we wished had existed when we started.
+We hope this document will save others the research time we invested in piecing together information from scattered sources.
+Depending on community feedback and interest from AMD, we're also excited about the possibility of contributing portions or the entirety of this overview to the official ROCm documentation.</p>
+<p>Once we are ready we will contribute it back to the ROCm documentation as described <a href="https://rocm.docs.amd.com/en/latest/contribute/contributing.html">here</a>.</p>
+<h2 id="scope">Scope<a class="headerlink" href="#scope" title="Permanent link">&para;</a></h2>
+<p>The document we've created offers a structured exploration of the ROCm ecosystem, including:</p>
+<ul>
+<li>AMD GPU microarchitectures (CDNA, RDNA, and earlier architectures)</li>
+<li>Core components of the ROCm stack</li>
+<li>Available programming models (HIP, OpenMP, OpenCL)</li>
+<li>The compiler ecosystem (ROCm-LLVM, AOCC, AOMP, hipcc)</li>
+<li>Developer tools for debugging and performance optimization</li>
+<li>Libraries and frameworks for various computational domains</li>
+<li>Compatibility policies</li>
+<li>AMD GPUs available in Azure cloud environments</li>
+</ul>
+<p>We've also included dependency diagrams to help visualize the relationships between different components, making it easier to understand how everything fits together.</p>
+<h2 id="a-living-document-for-and-by-the-community">A living document for and by the community<a class="headerlink" href="#a-living-document-for-and-by-the-community" title="Permanent link">&para;</a></h2>
+<p>This overview is not meant to be a static document, we view it as a living resource that will evolve along with the ROCm ecosystem itself.
+As AMD continues to develop and enhance ROCm, we hope to update this document with the latest information, dependency relationships, and best practices.</p>
+<p>That's where you come in.
+While we've worked diligently to ensure accuracy and comprehensiveness, we recognize that the collective knowledge of the community far exceeds our own.
+We invite you to review the document, provide feedback, suggest additions, and point out any inaccuracies or omissions.</p>
+<h2 id="how-to-contribute">How to contribute<a class="headerlink" href="#how-to-contribute" title="Permanent link">&para;</a></h2>
+<p>We welcome contributions from the community to help improve and expand this overview.
+You can help by:</p>
+<ul>
+<li>Reviewing the document for accuracy and identifying any outdated or incorrect information</li>
+<li>Suggesting missing components, libraries, or tools that should be included</li>
+<li>Providing insights on important details we may have overlooked</li>
+<li>Sharing your experiences with specific ROCm components or workflows</li>
+<li>Pointing out unclear explanations or areas that need better documentation</li>
+</ul>
+<p>Please submit your feedback, suggestions, and corrections via the <a href="https://eessi.io/docs/support">EESSI support portal</a>.
+We'll review all contributions and update the document accordingly to ensure it remains a valuable resource for the entire community.</p>
+<h2 id="looking-forward">Looking forward<a class="headerlink" href="#looking-forward" title="Permanent link">&para;</a></h2>
+<p>As we prepare to integrate ROCm support into EESSI, this overview serves as our roadmap.
+We hope it will also guide others in the scientific computing community who are exploring AMD GPUs for their computational needs.</p>
+<p>We look forward to your feedback and to continuing this collaborative effort to better understand and utilize the ROCm ecosystem for scientific computing.</p>
 
 
 
@@ -2190,7 +2255,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 8, 2025 14:00:18 UTC">April 8, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 09:25:34 UTC">May 28, 2025</span>
   </span>
 
     

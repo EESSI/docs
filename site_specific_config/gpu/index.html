@@ -1033,6 +1033,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#amd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support for using AMD GPUs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support for using AMD GPUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-rocm-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of ROCm ecosystem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future plans
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2289,6 +2340,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#amd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support for using AMD GPUs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support for using AMD GPUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-rocm-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview of ROCm ecosystem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-plans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future plans
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2404,6 +2506,29 @@ in the container.</p>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>deviceQuery
 </code></pre></div>
 If both are successful, you should see information about your GPU printed to your terminal.</p>
+<h2 id="amd">Support for using AMD GPUs<a class="headerlink" href="#amd" title="Permanent link">&para;</a></h2>
+<p><em>(last update: May 2025)</em></p>
+<p>ROCm (Radeon Open Compute) support in EESSI is currently under development to enable GPU-accelerated computing on AMD hardware.</p>
+<h3 id="current-status">Current status<a class="headerlink" href="#current-status" title="Permanent link">&para;</a></h3>
+<p>ROCm support is not yet available in EESSI.
+We are actively working on integrating AMD's ROCm ecosystem to provide GPU computing capabilities for AMD GPUs alongside our existing CUDA support for NVIDIA hardware.</p>
+<p>For the latest updates join the #amd-rocm channel in the <a href="https://app.slack.com/client/TP0103C4C/C0780BEV9JN">EESSI Slack</a>.</p>
+<h3 id="overview-of-rocm-ecosystem">Overview of ROCm ecosystem<a class="headerlink" href="#overview-of-rocm-ecosystem" title="Permanent link">&para;</a></h3>
+<p>To prepare for ROCm integration, we have created a comprehensive overview of the entire ROCm ecosystem.
+This document maps out AMD GPU architectures, core ROCm components, programming models, libraries, and the dependencies between them.</p>
+<p>For a detailed understanding of the ROCm ecosystem that will inform our implementation, see <a href="../rocm/">Overview of ROCm Ecosystem</a>.</p>
+<p>We also have a blog post about this <a href="http://eessi.io/docs/blog/2025/05/26/rocm/">here</a>.</p>
+<h3 id="future-plans">Future plans<a class="headerlink" href="#future-plans" title="Permanent link">&para;</a></h3>
+<p>Our ROCm integration will focus on providing:</p>
+<ul>
+<li>The ROCm core components</li>
+<li>ROCm-enabled scientific computing libraries</li>
+<li>Support for HIP, OpenMP, and OpenCL programming models</li>
+<li>GPU-accelerated frameworks and applications</li>
+</ul>
+<h3 id="community-input">Community input<a class="headerlink" href="#community-input" title="Permanent link">&para;</a></h3>
+<p>We welcome feedback from the community on ROCm support priorities and use cases.
+If you have specific ROCm software requirements or insights to share, please <a href="../../support/">contact us</a>.</p>
 
 
 
@@ -2424,7 +2549,7 @@ If both are successful, you should see information about your GPU printed to you
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 7, 2024 10:23:32 UTC">October 7, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 09:25:34 UTC">May 28, 2025</span>
   </span>
 
     
