@@ -1,26 +1,26 @@
 # Overview of ROCm Ecosystem (v6.4.1-20250526)
 
-> ⚠️ This document is a work-in-progress.
-> It may still contain inaccuracies or mistakes.
->
-> This overview is being created in the context of adding support for ROCm to EESSI, the European Environment for Scientific Software Installations (https://eessi.io).
->
-> Last update: 26 May 2025
+!!! warning "Work-in-progress"
+    This document is a work-in-progress.
+    It may still contain inaccuracies or mistakes.
+    
+    This overview is being created in the context of adding support for ROCm to EESSI, the European Environment for Scientific Software Installations (<https://eessi.io>).
+    
+    *Last update: 26 May 2025*
 
 [Jump to Overview](#Introduction) | [Jump to ABC](#ABC-of-ROCm)
 
 ## Table of Contents {: #Table-of-Contents }
 
-1. [Table of Contents](#Table-of-Contents)
-2. [Introduction](#Introduction)
-3. [AMD GPU Microarchitectures](#AMD-GPU-Microarchitectures)
-4. [Core Components](#Core-Components)
-5. [Programming Models](#Programming-Models)
-6. [Compiler Ecosystem](#Compiler-Ecosystem)
-7. [Developer Tools](#Developer-Tools)
-8. [Libraries and Frameworks](#Libraries-and-Frameworks)
-9. [Compatibility Policies](#Compatibility-Policies)
-10. [AMD GPUs in Azure](#AMD-GPUs-in-Azure)
+1. [Introduction](#Introduction)
+2. [AMD GPU Microarchitectures](#AMD-GPU-Microarchitectures)
+3. [Core Components](#Core-Components)
+4. [Programming Models](#Programming-Models)
+5. [Compiler Ecosystem](#Compiler-Ecosystem)
+6. [Developer Tools](#Developer-Tools)
+7. [Libraries and Frameworks](#Libraries-and-Frameworks)
+8. [Compatibility Policies](#Compatibility-Policies)
+9. [AMD GPUs in Azure](#AMD-GPUs-in-Azure)
 
 ## Introduction {: #Introduction }
 

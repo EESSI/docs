@@ -101,6 +101,7 @@ plugins:
         software_layer/adding_software.md: adding_software/overview.md
         pilot.md: repositories/pilot.md
         gpu.md: site_specific_config/gpu.md
+        rocm.md: site_specific_config/rocm.md
   # Enable our custom plugin for json-ld metadata
   - inject_ld_json
 markdown_extensions:
