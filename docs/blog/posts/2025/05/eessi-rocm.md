@@ -9,6 +9,8 @@ slug: rocm
 Within the EESSI community and Inuits, we're excited to share our latest contribution to the scientific computing community: a high-level overview of AMD's ROCm ecosystem.
 This document is the result of our recent efforts to prepare for adding ROCm support to EESSI, and we believe it will serve as a valuable resource for anyone working with AMD GPUs in scientific computing environments.
 
+The full overview document can be found at [**Overview of ROCm Ecosystem**](https://eessi.io/docs/rocm).
+
 <!-- more -->
 
 ## Why we created this overview
@@ -66,5 +68,4 @@ We'll review all contributions and update the document accordingly to ensure it 
 As we prepare to integrate ROCm support into EESSI, this overview serves as our roadmap.
 We hope it will also guide others in the scientific computing community who are exploring AMD GPUs for their computational needs.
 
-The full overview document can be found at [Overview of ROCm Ecosystem](https://eessi.io/docs/rocm).
 We look forward to your feedback and to continuing this collaborative effort to better understand and utilize the ROCm ecosystem for scientific computing.

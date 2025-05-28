@@ -145,7 +145,7 @@ ROCm (Radeon Open Compute) support in EESSI is currently under development to en
 ROCm support is not yet available in EESSI.
 We are actively working on integrating AMD's ROCm ecosystem to provide GPU computing capabilities for AMD GPUs alongside our existing CUDA support for NVIDIA hardware.
 
-For the latest updates you can find us in the #amd-rocm channel in the [EESSI Slack](https://app.slack.com/client/TP0103C4C/C0780BEV9JN).
+For the latest updates join the #amd-rocm channel in the [EESSI Slack](https://app.slack.com/client/TP0103C4C/C0780BEV9JN).
 
 ### Overview of ROCm ecosystem
 
@@ -153,6 +153,8 @@ To prepare for ROCm integration, we have created a comprehensive overview of the
 This document maps out AMD GPU architectures, core ROCm components, programming models, libraries, and the dependencies between them.
 
 For a detailed understanding of the ROCm ecosystem that will inform our implementation, see [Overview of ROCm Ecosystem](rocm.md).
+
+We also have a blog post about this [here](http://eessi.io/docs/blog/2025/05/26/rocm/).
 
 ### Future plans
 
