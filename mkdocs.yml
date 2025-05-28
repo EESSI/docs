@@ -77,7 +77,9 @@ nav:
         # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
     - Contact info: contact.md
   - Training: training/index.md
-  - Systems where EESSI is available: systems.md
+  - EESSI availability: 
+    - Systems where EESSI is available: eessi_availability/systems.md
+    - Health state of the test suite: eessi_availability/health.md
   - Governance: governance.md
   - Blog: blog/index.md
 plugins:
