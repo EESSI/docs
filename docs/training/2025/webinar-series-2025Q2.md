@@ -163,7 +163,11 @@ hands-on demos. We will also cover some new capabilities that are supported by t
 #### Materials
 
 - [slides (PDF)](EESSI-webinars-MayJune-2025-004-EESSI-for-CI-CD-20250526.pdf)
-- recording (YouTube) (*coming soon*)
+- [recording (YouTube)](https://www.youtube.com/watch?v=l0fVPkGuqCQ)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l0fVPkGuqCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
