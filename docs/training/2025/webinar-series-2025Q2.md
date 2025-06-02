@@ -24,9 +24,9 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 ## Sessions
 
 - Monday 5 May 2025 (13:30-15:30 CEST): **Introduction to EESSI** ([slides](EESSI-webinars-MayJune-2025-001-Introduction-to-EESSI-20250505.pdf), [recording](https://www.youtube.com/watch?v=FvVbzKLn-C8))
-- Monday 12 May 2025 (13:30-15:30 CEST): **Introduction to CernVM-FS** ([slides](EESSI-webinars-MayJune-2025-001-Introduction-to-CernVM-FS-20250512.pdf), [recording](https://www.youtube.com/watch?v=5-IYnxCz_aQ))
-- Monday 19 May 2025 (13:30-15:30 CEST): **Introduction to EasyBuild** (incl. EasyBuild 5.0.0)
-- Monday 26 May 2025 (13:30-15:30 CEST): **EESSI for CI/CD**
+- Monday 12 May 2025 (13:30-15:30 CEST): **Introduction to CernVM-FS** ([slides](EESSI-webinars-MayJune-2025-002-Introduction-to-CernVM-FS-20250512.pdf), [recording](https://www.youtube.com/watch?v=5-IYnxCz_aQ))
+- Monday 19 May 2025 (13:30-15:30 CEST): **Introduction to EasyBuild** (incl. EasyBuild 5.0.0) ([slides](EESSI-webinars-MayJune-2025-003-Introduction-to-EasyBuild-20250519.pdf), [recording](https://www.youtube.com/watch?v=p0Z-KrBAtuQ))
+- Monday 26 May 2025 (13:30-15:30 CEST): **EESSI for CI/CD** ([slides](EESSI-webinars-MayJune-2025-004-EESSI-for-CI-CD-20250526.pdf), [recording](https://www.youtube.com/watch?v=l0fVPkGuqCQ))
 - Monday 2 June 2025 (13:30-15:30 CEST): **Using EESSI as the base for a system stack**
 
 [YouTube playlist with recordings](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbPSfa7Upa0R0_P4NAbqC9a)
@@ -85,7 +85,7 @@ a fully pre-built, modular software environment — no matter where you compute.
 sysadmin, or developer, this webinar will show how EESSI can help you save time, improve reproducibility,
 and simplify your scientific workflows.
 
-#### Materials
+#### Materials {: #materials-eessi-intro }
 
 - [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-EESSI-20250505.pdf)
 - [recording (YouTube)](https://www.youtube.com/watch?v=FvVbzKLn-C8)
@@ -117,9 +117,9 @@ cover some aspects specific to using CernVM-FS on HPC systems.
 It is intended for people who are interested in CernVM-FS (system administrators, support team members, researchers, etc.),
 no specific prior knowledge or experience with it is required.
 
-#### Materials
+#### Materials {: #materials-cvmfs }
 
-- [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-CernVM-FS-20250512.pdf)
+- [slides (PDF)](EESSI-webinars-MayJune-2025-002-Introduction-to-CernVM-FS-20250512.pdf)
 - [recording (YouTube)](https://www.youtube.com/watch?v=5-IYnxCz_aQ)
 
 <div align="center">
@@ -143,9 +143,9 @@ in an HPC environment.
 In this webinar, we will introduce you to EasyBuild, show how to install and configure it, and present basic usage through
 hands-on demos. We will also cover some new capabilities that are supported by the recently released [EasyBuild v5.0.0](https://docs.easybuild.io/easybuild-v5/).
 
-#### Materials
+#### Materials {: #materials-easybuild }
 
-- [slides (PDF)](EESSI-webinars-MayJune-2025-001-Introduction-to-EasyBuild-20250519.pdf)
+- [slides (PDF)](EESSI-webinars-MayJune-2025-003-Introduction-to-EasyBuild-20250519.pdf)
 - [recording (YouTube)](https://www.youtube.com/watch?v=p0Z-KrBAtuQ)
 
 <div align="center">
@@ -160,7 +160,7 @@ hands-on demos. We will also cover some new capabilities that are supported by t
 - speakers:
     - Alan O'Cais (CECAM, University of Barcelona)
 
-#### Materials
+#### Materials {: #materials-eessi-cicd }
 
 - [slides (PDF)](EESSI-webinars-MayJune-2025-004-EESSI-for-CI-CD-20250526.pdf)
 - [recording (YouTube)](https://www.youtube.com/watch?v=l0fVPkGuqCQ)
@@ -190,6 +190,11 @@ for your local software installations.
 
 This webinar is particularly intended for system administrators or support team members that maintain the central software stack
 for the users of their HPC infrastructure, but it can also be useful for end users who want to install additional software.
+
+#### Materials {: #materials-eessi-base }
+
+- [slides (PDF)](EESSI-webinars-MayJune-2025-005-EESSI-as-base-for-system-stack-20250602.pdf)
+- recording (YouTube) (*coming soon*)
 
 ---
 
