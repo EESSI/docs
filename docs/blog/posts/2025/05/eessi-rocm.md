@@ -1,5 +1,5 @@
 ---
-authors: [toine, timvc]
+authors: [toine, timvc, boegel, ocaisa, darkless]
 date: 2025-05-26
 slug: rocm
 ---
