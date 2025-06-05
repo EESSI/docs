@@ -136,6 +136,10 @@ for example using EasyBuild's `--sanity-check-only` feature.
 
 ## Changelog
 
+### v0.1.1 (5 Jun 2025)
+
+- no longer accept contributions with `--from-pr` or `--include-easyblocks-from-pr` and instead require `--from-commit`
+and `--include-easyblocks-from-commit`
 ### v0.1.0 (9 Nov 2023)
 
 - initial contribution policy
