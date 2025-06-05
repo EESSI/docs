@@ -1,6 +1,6 @@
 # Contribution policy
 
-*(version v0.1.0 - updated 9 Nov 2023)*
+*(version v0.1.1 - updated 5 Jun 2025)*
 
 !!! note
 
