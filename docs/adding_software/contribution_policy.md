@@ -1,6 +1,6 @@
 # Contribution policy
 
-*(version v0.1.0 - updated 9 Nov 2023)*
+*(version v0.1.1 - updated 5 Jun 2025)*
 
 !!! note
 
@@ -58,8 +58,8 @@ We currently require that all software installations in EESSI are
 We strongly prefer that the [*latest release of EasyBuild*](https://pypi.org/project/easybuild/)
 that is available at the time is used to add software to EESSI.
 
-The use of [`--from-pr`](https://docs.easybuild.io/integration-with-github/#github_from_pr) and
-[`--include-easyblocks-from-pr`](https://docs.easybuild.io/integration-with-github/#github_include_easyblocks_from_pr)
+The use of [`--from-commit`](https://docs.easybuild.io/integration-with-github/#github_from_commit) and
+[`--include-easyblocks-from-commit`](https://docs.easybuild.io/integration-with-github/#github_include_easyblocks_from_commit)
 to pull in changes to EasyBuild that are required to make the installation work correctly
 in EESSI is allowed, but only if that is strictly required
 (that is, if those changes are not included yet in the latest EasyBuild release).
@@ -136,6 +136,10 @@ for example using EasyBuild's `--sanity-check-only` feature.
 
 ## Changelog
 
+### v0.1.1 (5 Jun 2025)
+
+- no longer accept contributions with `--from-pr` or `--include-easyblocks-from-pr` and instead require `--from-commit`
+and `--include-easyblocks-from-commit`
 ### v0.1.0 (9 Nov 2023)
 
 - initial contribution policy
