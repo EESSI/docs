@@ -27,7 +27,7 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 - Monday 12 May 2025 (13:30-15:30 CEST): **Introduction to CernVM-FS** ([slides](EESSI-webinars-MayJune-2025-002-Introduction-to-CernVM-FS-20250512.pdf), [recording](https://www.youtube.com/watch?v=5-IYnxCz_aQ))
 - Monday 19 May 2025 (13:30-15:30 CEST): **Introduction to EasyBuild** (incl. EasyBuild 5.0.0) ([slides](EESSI-webinars-MayJune-2025-003-Introduction-to-EasyBuild-20250519.pdf), [recording](https://www.youtube.com/watch?v=p0Z-KrBAtuQ))
 - Monday 26 May 2025 (13:30-15:30 CEST): **EESSI for CI/CD** ([slides](EESSI-webinars-MayJune-2025-004-EESSI-for-CI-CD-20250526.pdf), [recording](https://www.youtube.com/watch?v=l0fVPkGuqCQ))
-- Monday 2 June 2025 (13:30-15:30 CEST): **Using EESSI as the base for a system stack**
+- Monday 2 June 2025 (13:30-15:30 CEST): **Using EESSI as the base for a system stack** ([slides](EESSI-webinars-MayJune-2025-005-EESSI-as-base-for-system-stack-20250602.pdf), [recording](https://www.youtube.com/watch?v=DmNxZfoe5aQ))
 
 [YouTube playlist with recordings](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbPSfa7Upa0R0_P4NAbqC9a)
 
@@ -194,7 +194,11 @@ for the users of their HPC infrastructure, but it can also be useful for end use
 #### Materials {: #materials-eessi-base }
 
 - [slides (PDF)](EESSI-webinars-MayJune-2025-005-EESSI-as-base-for-system-stack-20250602.pdf)
-- recording (YouTube) (*coming soon*)
+- [recording (YouTube)](https://www.youtube.com/watch?v=DmNxZfoe5aQ)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DmNxZfoe5aQ?si=ng7zPWFCg4fOYiO6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 ---
 
