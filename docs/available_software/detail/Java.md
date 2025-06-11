@@ -43,7 +43,7 @@ To start using Java, load one of these modules using a `module load` command lik
 module load Java/21.0.5
 ```
 
-*(This data was automatically generated on {{ generated_time }})*  
+*(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
