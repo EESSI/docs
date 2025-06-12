@@ -1,3 +1,3 @@
-# Health state of the test suite
+# Dashboard for the test suite
 
-Coming soon...
+*(more info soon)*
