@@ -26,8 +26,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''OpenFOAM/10-foss-2023a'', ''OpenFOAM/11-foss-2023a'', ''OpenFOAM/v2312-foss-2023a'',
-    ''OpenFOAM/v2406-foss-2023a'']'
+  softwareVersion: '[''OpenFOAM/10-foss-2023a'', ''OpenFOAM/11-foss-2023a'', ''OpenFOAM/12-foss-2023a'',
+    ''OpenFOAM/v2312-foss-2023a'', ''OpenFOAM/v2406-foss-2023a'']'
   url: https://www.openfoam.org/
 ---
 
@@ -55,5 +55,6 @@ module load OpenFOAM/v2406-foss-2023a
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |OpenFOAM/v2406-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |OpenFOAM/v2312-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|OpenFOAM/12-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |OpenFOAM/11-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |OpenFOAM/10-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
