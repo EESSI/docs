@@ -1,4 +1,4 @@
-# Overview of ROCm Ecosystem (v6.4.1-20250611)
+# Overview of ROCm Ecosystem (v6.4.1-20250616)
 
 !!! warning "Work-in-progress"
     This document is a work-in-progress.
@@ -6,7 +6,7 @@
 
     This overview is being created in the context of adding support for ROCm to EESSI, the European Environment for Scientific Software Installations (<https://eessi.io>).
 
-    *Last update: 11 Jun 2025*
+    *Last update: 16 Jun 2025*
 
 [Jump to Overview](#Introduction) | [Jump to ABC](#ABC-of-ROCm) | [Jump to Changelog](#Changelog)
 
@@ -265,47 +265,69 @@ graph LR;
 * ROC gdb: Debugger for HIP and OpenCL applications ([Github](https://github.com/ROCm/ROCgdb))
 * ROC Tracer: API tracing library ([Github](https://github.com/ROCm/roctracer))
 * ROC Profiler: Performance profiling tool ([Github](https://github.com/ROCm/rocprofiler))
+* ROC Debugger API: Provides support necessary for debugging tools ([Github](https://github.com/ROCm/ROCdbgapi))
 * Profiler SDK: New profiler SDK, combines ROC Tracer and ROC Profiler ([Github](https://github.com/ROCm/rocprofiler-sdk))
 * Compute Profiler: Performance analysis tool for AMD GPUs ([Github](https://github.com/ROCm/rocprofiler-compute))
 * Systems Profiler: Performance analysis tool for applications on the CPU and GPU ([Github](https://github.com/ROCm/rocprofiler-systems))
 
 ### Developer Tools Dependencies
+
 ```mermaid
 graph LR;
-    subgraph Developer tools
-        D[ROCProfiler]
-        A[ROCm-cmake]
-        B[ROCTracer]
-        H[ROCm Compute Profiler]
-        C[ROCgdb]
+    subgraph Core Components
+        rocmstack[ROCm Stack - driver, runtime, llvm, hip]
+        rocmsmi[ROCm SMI]
+        rocmcmake[ROCm CMake]
     end
-    subgraph ROCm Components
-        F[ROCm LLVM]
-        E[ROCm Core]
-        G[ROCminfo]
-    end
-    B -->|Depends on| E
-    B -->|Depends on| F
-    D -->|Depends on| F
-    D -->|Depends on| E
-    D -->|Depends on| G
-    A -->|Depends on| F
-    H -->|Depends on| E
+
+    rocgdb[ROC gdb]
+    roctracer[ROC Tracer]
+    rocprofiler[ROC Profiler]
+    rocdbgapi[ROC Debugger API]
+    profilersdk[Profiler SDK]
+    computeprofiler[Compute Profiler]
+    systemsprofiler[Systems Profiler]
+
+    rocgdb --> rocmstack
+    rocgdb --> rocdbgapi
+
+    roctracer --> rocmstack
+
+    rocdbgapi --> rocmstack
+    rocdbgapi --> rocmcmake
+
+    rocprofiler --> rocmstack
+    rocprofiler --> rocmsmi
+    rocprofiler --> rocdbgapi
+
+    profilersdk --> rocmstack
+
+    computeprofiler --> rocmstack
+    computeprofiler --> rocmsmi
+    computeprofiler --> rocdbgapi
+
+    systemsprofiler --> rocmstack
+    systemsprofiler --> rocmsmi
+    systemsprofiler --> profilersdk
 ```
 
 ## Libraries and Frameworks {: #Libraries-and-Frameworks }
 
 [ROCm](#ROCm) provides a rich set of libraries to accelerate various computational workloads.
 
+[ROCm](#ROCm) also provides a set of marshalling libraries which implement a portable interface for operations across different GPU vendors (AMD and NVIDIA).
+These libraries automatically translate calls to the appropriate backend - either "roc" variants or "cu" variants - depending on the target hardware.
+The "roc" variants like rocFFT are AMD's native implementations optimized specifically for AMD GPUs, while the "hip" variants like hipFFT are the portable wrappers that can target either AMD or NVIDIA hardware through a unified API.
+
 ### Core Math Libraries
 
-* rocFFT: Fast Fourier Transform implementation ([Github](https://github.com/ROCm/rocFFT))
-* rocRAND: Random number generator library ([Github](https://github.com/ROCm/rocRAND))
-* rocBLAS: Basic Linear Algebra Subprograms implementation ([Github](https://github.com/ROCm/rocBLAS))
-* rocSPARSE: Sparse matrix routines ([Github](https://github.com/ROCm/rocSPARSE))
-* rocSOLVER: Linear algebra solver library ([Github](https://github.com/ROCm/rocSOLVER))
 * hipBLASLt: General matrix-matrix operations, extends beyond BLAS ([Github](https://github.com/ROCm/hipBLASLt))
 * hipSPARSELt: Marshalling library and ROCm version of cuSPARSELt ([Github](https://github.com/ROCm/hipSPARSELt))
+* rocBLAS: Basic Linear Algebra Subprograms implementation ([Github](https://github.com/ROCm/rocBLAS))
+* rocFFT: Fast Fourier Transform implementation ([Github](https://github.com/ROCm/rocFFT))
+* rocRAND: Random number generator library ([Github](https://github.com/ROCm/rocRAND))
+* rocSOLVER: Linear algebra solver library ([Github](https://github.com/ROCm/rocSOLVER))
+* rocSPARSE: Sparse matrix routines ([Github](https://github.com/ROCm/rocSPARSE))
 
 ### ML/DL Frameworks
 
@@ -319,66 +341,18 @@ graph LR;
 
 ### Marshalling Libraries
 
+* hipBLAS ([Github](https://github.com/ROCm/hipBLAS))
 * hipFFT ([Github](https://github.com/ROCm/hipFFT))
 * hipRAND ([Github](https://github.com/ROCm/hipRAND))
-* hipBLAS ([Github](https://github.com/ROCm/hipBLAS))
-* hipSPARSE ([Github](https://github.com/ROCm/hipSPARSE))
 * hipSOLVER ([Github](https://github.com/ROCm/hipSOLVER))
+* hipSPARSE ([Github](https://github.com/ROCm/hipSPARSE))
 
-## Dependencies Graph
-
-```mermaid
-graph LR;
-    subgraph Core Components
-        driver[AMDGPU Driver]
-        runtime[ROCm Platform Runtime]
-        llvm[ROCm LLVM Compiler]
-        hip[HIP]
-        amdsmi[AMD SMI]
-        rocmsmi[ROCm SMI]
-        rocmcmake[ROCm CMake]
-        rocminfo[ROCm Info]
-        rocmexamples[ROCm Examples]
-    end
-    subgraph Programming Models
-        openmp[OpenMP Support]
-        opencl[OpenCL Support]
-    end
-    subgraph Developer Tools
-        rocgdb[ROC gdb]
-        roctracer[ROC Tracer]
-        rocprofiler[ROC Profiler]
-        profilersdk[Profiler SDK]
-        computeprofiler[Compute Profiler]
-        systemsprofiler[Systems Profiler]
-    end
-
-    runtime --> driver
-    runtime --> llvm
-
-    hip --> runtime
-    hip --> llvm
-    hip --> rocmcmake
-    hip --> rocminfo
-
-    rocmcmake --> llvm
-    rocminfo --> llvm
-
-    rocmexamples --> hip
-    rocmexamples --> amdsmi
-
-    openmp --> runtime
-    openmp --> llvm
-    opencl --> runtime
-    opencl --> llvm
-
-    %% TODO: debug tools
-```
+### Libraries and Frameworks Dependencies
 
 ```mermaid
 graph LR;
     subgraph Core Components
-        rocmstack[ROCm Stack]
+        rocmstack[ROCm Stack - driver, runtime, llvm, hip]
     end
     subgraph Developer Tools
         roctracer[ROC Tracer]
@@ -598,3 +572,10 @@ Vega refers to AMD's GPU architecture that was one of the first to fully support
 
 * fixed dependency graphs (except for dev tools)
 * added ROCm dependencies of PyTorch
+
+## v6.4.1-20250616
+
+* added ROC Debugger API to dev tools
+* fixed dev tools dependencies graph
+* sorted libraries
+* removed the big dependencies graph in favour of dedicated ones
