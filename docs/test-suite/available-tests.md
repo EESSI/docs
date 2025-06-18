@@ -163,3 +163,14 @@ To run this MetalWalls test, use:
 reframe --run --name MetalWalls
 ```
 
+## OpenFOAM {  #openfoam }
+
+A test for [OpenFOAM](https://www.openfoam.com/), an open source CFD software package.
+
+The test runs a Lid-driven cavity flow.
+
+To run this OpenFOAM test, use:
+
+```bash
+reframe --run --name OpenFOAM
+```
