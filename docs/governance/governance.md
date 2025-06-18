@@ -20,7 +20,7 @@ Below, the roles and responsibilities related to the EESSI project are discussed
 <!-- Define who contributors are and what they can do (e.g., file issues, submit PRs). -->
 EESSI Github organization & repository owners are those individuals with `owner` rights on the EESSI Github organization or one of it's associated repositories.
 
-EESSI Github organization & repository owners shall be responsible for setting permisssions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing Github Apps for the EESSI build bots.
+EESSI Github organization & repository owners shall be responsible for setting permissions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing Github Apps for the EESSI build bots.
 
 ### 2.2 EESSI Github repository maintainers
 EESSI Github repository maintainers are individuals with write access (one or more) of the EESSI Github repositories.
@@ -146,7 +146,7 @@ In case of a tie, the issue is discussed again, and a second vote is taken. All 
 
 In case the quorum of 75% is not reached, the vote is postponed.
 
-A fully electronic vote (i.e. all Members vote electronically) can be organized by the Chair, in order to prevent having to delay a vote to the next meeting. Such a fully electronic vote is only valid once _all_ Members have cast their vote, or have explicitely stated that they abstain from voting.
+A fully electronic vote (i.e. all Members vote electronically) can be organized by the Chair, in order to prevent having to delay a vote to the next meeting. Such a fully electronic vote is only valid once _all_ Members have cast their vote, or have explicitly stated that they abstain from voting.
 
 Anything may be brought to a vote during the meeting. However, if known up-front, issues that need to be voted on are announced at least one week prior to the meeting, to give Members the opportunity to cast an electronic vote if they cannot attend.
 
