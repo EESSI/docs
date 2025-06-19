@@ -99,13 +99,13 @@ This Section applies to the Teams described in Section 2.
 
 ### 5.1 Adding Team Members
 <!-- Describe the process for adding new members. -->
-Teams decide themselves how large their teams should ideally be. They also decide the procedure to add new Team members. The procedure should reflect the sensitivity of the position, i.e. people with certain roles have the ability to (intentionally or unintentionally) compromise the integrity of the repository. For such roles, the procedure should make sure candidates are extensively vetted and trusted by both the Team as well as the EESSI community as a whole.
+Teams themselves decide how large their teams should ideally be. They also decide the procedure to add new Team members. The procedure should reflect the sensitivity of the position, i.e. people with certain roles have the ability to (intentionally or unintentionally) compromise the integrity of the repository. For such roles, the procedure should make sure candidates are extensively vetted and trusted by both the Team as well as the EESSI community as a whole.
 
 As with all decisions the decision to add a Team member is subject to article 3.4.
 
 ### 5.2 Removing Team Members
 <!-- Describe under what conditions someone may be removed (e.g., inactivity, conduct). -->
-Teams decide themselves decide the procedure to remove new Team members. As for the procedure of adding Team Members, the procedure to remove Team Members should reflect the sensitivity of the position.
+Teams themselves decide the procedure to remove Team members. As for the procedure of adding Team Members, the procedure to remove Team Members should reflect the sensitivity of the position.
 
 As with all decisions, the decision to remove a Team member is subject to article 3.4.
 
@@ -150,15 +150,14 @@ A fully electronic vote (i.e. all Members vote electronically) can be organized 
 
 Anything may be brought to a vote during the meeting. However, if known up-front, issues that need to be voted on are announced at least one week prior to the meeting, to give Members the opportunity to cast an electronic vote if they cannot attend.
 
-To amend the Charter or Governance, a two-thirds majority of all Steering Committee Members needs to be in favour of the amendment. This is irrespective of the number of Members who have actually cast a vote, or are present at a meeting. There is no quorum for votes on ammendments to the Charter or Governance.
+To amend the Charter or Governance, a two-thirds majority of all Steering Committee Members needs to be in favour of the amendment. This is irrespective of the number of Members who have actually cast a vote, or are present at a meeting. There is no quorum for votes on amendments to the Charter or Governance.
 
 ### 6.4 Meetings
 
 The Steering Committee will meet as needed, but at least once per quarter. The Chair is responsible for organizing the meeting. Any Member can request the Chair to organize a meeting. Meetings are announced at least 2 weeks in advance, unless _all_ Members have agreed that a meeting on shorter notice is required.
 
 ## 7. Code of Conduct
-<!-- Reference your Code of Conduct or provide a brief summary. -->
-TODO: This project follows the [Contributor Covenant](https://www.contributor-covenant.org/) Code of Conduct.
+The EESSI Code of Conduct can be found [here](code_of_conduct.md).
 
 ## 8. Contribution Agreement
 TODO: Should refer to some Contribution Agreement. Is contributing only possible after signing this agremeent? If so, that should be stated here
