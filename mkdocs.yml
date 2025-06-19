@@ -79,7 +79,12 @@ nav:
     - Contact info: contact.md
   - Training: training/index.md
   - Systems where EESSI is available: systems.md
-  - Governance: governance.md
+  - Governance:
+    - Charter: governance/charter.md
+    - Governance: governance/governance.md
+    - EESSI Policies: governance/policies.md
+    - Code of Conduct: governance/code_of_conduct.md
+    - Current Steering Committee: governance/steering_committee.md
   - Blog: blog/index.md
 plugins:
   - blog:
