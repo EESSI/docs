@@ -117,7 +117,7 @@ This means you'll _always_ need to load the `EESSI-extend` module if you want to
     Even with the help of the `buildenv` module, this documentation is intended for "experts" in the runtime linker and it's behaviour,
     and most cases are untested. Any feedback on this topic is highly appreciated. 
     
-Building and running software on top of EESSI without EasyBuild is now more straightforward thanks to the freshly developed `buildenv`module. 
+Building and running software on top of EESSI without EasyBuild is now more straightforward thanks to the freshly developed `buildenv` module. 
 
 EESSI uses a [compatibility layer](../compatibility_layer.md) to ensure that it takes as few libraries from the host as possible. Starting an EESSI prefix
 shell before building and loading any of the `buildenv` modules (one per `foss` toolchain), this is the safest way to make sure all libraries will point to the required locations in the compatibility layer and do not leak in from the host operating system. A step by step: 
