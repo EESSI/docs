@@ -1,4 +1,4 @@
-# Overview of ROCm Ecosystem (v6.4.1-20250616)
+# Overview of ROCm Ecosystem (v6.4.1-20250620)
 
 !!! warning "Work-in-progress"
     This document is a work-in-progress.
@@ -6,7 +6,7 @@
 
     This overview is being created in the context of adding support for ROCm to EESSI, the European Environment for Scientific Software Installations (<https://eessi.io>).
 
-    *Last update: 16 Jun 2025*
+    *Last update: 20 Jun 2025*
 
 [Jump to Overview](#Introduction) | [Jump to ABC](#ABC-of-ROCm) | [Jump to Changelog](#Changelog)
 
@@ -331,6 +331,7 @@ The "roc" variants like rocFFT are AMD's native implementations optimized specif
 
 ### ML/DL Frameworks
 
+* MIGraphX: Graph optimization engine ([Github](https://github.com/ROCm/AMDMIGraphX))
 * MIOpen: Deep learning primitives library ([Github](https://github.com/ROCm/MIOpen))
 * ROCm PyTorch: PyTorch support for AMD GPUs ([Github](https://github.com/ROCm/pytorch))
 * ROCm TensorFlow: TensorFlow support for AMD GPUs ([Github](https://github.com/ROCm/tensorflow-upstream))
@@ -338,10 +339,12 @@ The "roc" variants like rocFFT are AMD's native implementations optimized specif
 ### Communication Libraries
 
 * RCCL: Communication library for multi-GPU/multi-node training ([Github](https://github.com/ROCm/rccl))
+* rocPRIM: Provides parallel primitives used to develop GPU-accelerated code ([Github](https://github.com/ROCm/rocPRIM))
 
 ### Marshalling Libraries
 
 * hipBLAS ([Github](https://github.com/ROCm/hipBLAS))
+* hipCUB ([Github](https://github.com/ROCm/hipCUB))
 * hipFFT ([Github](https://github.com/ROCm/hipFFT))
 * hipRAND ([Github](https://github.com/ROCm/hipRAND))
 * hipSOLVER ([Github](https://github.com/ROCm/hipSOLVER))
@@ -358,49 +361,106 @@ graph LR;
         roctracer[ROC Tracer]
     end
     subgraph Libraries and Frameworks
-        rocfft[rocFFT]
-        rocrand[rocRAND]
-        rocblas[rocBLAS]
-        rocsparse[rocSPARSE]
-        rocsolver[rocSOLVER]
         hipblaslt[hipBLASLt]
         hipsparselt[hipSPARSELt]
+        rocblas[rocBLAS]
+        rocfft[rocFFT]
+        rocrand[rocRAND]
+        rocsolver[rocSOLVER]
+        rocsparse[rocSPARSE]
+        migraphx[MIGraphX]
         miopen[MIOpen]
         rccl[RCCL]
+        rocprim[rocPRIM]
+        hipblas[hipBLAS]
+        hipcub[hipCUB]
         hipfft[hipFFT]
         hiprand[hipRAND]
-        hipblas[hipBLAS]
-        hipsparse[hipSPARSE]
         hipsolver[hipSOLVER]
+        hipsparse[hipSPARSE]
     end
 
-    rocfft --> rocmstack
-    rocrand --> rocmstack
-    rocblas --> rocmstack
-    rocsparse --> rocmstack
-    rocsolver --> rocmstack
-    rocsolver --> rocblas
     hipblaslt --> rocmstack
     hipblaslt --> roctracer
     hipsparselt --> rocmstack
     hipsparselt --> roctracer
     hipsparselt --> hipsparse
+    rocblas --> rocmstack
+    rocfft --> rocmstack
+    rocrand --> rocmstack
+    rocsolver --> rocmstack
+    rocsolver --> rocblas
+    rocsparse --> rocmstack
 
+    migraphx --> rocmstack
+    migraphx --> miopen
+    migraphx --> rocblas
     miopen --> rocmstack
-    miopen --> rocblas
     miopen --> hipblaslt
+    miopen --> rocblas
     miopen --> hipblas
 
     rccl --> rocmstack
+    rocprim --> rocmstack
 
+    hipblas --> rocblas
+    hipblas --> rocsolver
+    hipblas --> rocsparse
+    hipcub --> rocprim
     hipfft --> rocfft
     hiprand --> rocrand
-    hipblas --> rocblas
-    hipblas --> rocsparse
-    hipblas --> rocsolver
-    hipsparse --> rocsparse
     hipsolver --> rocsolver
+    hipsparse --> rocsparse
 ```
+
+## Case Studies
+
+For some commonly used software we examined the ROCm dependencies to make our overview more comprehensive.
+Specifically, we examined which ROCm libraries and frameworks they depended on.
+Below you can find a list of dependencies for each case study.
+
+### PyTorch ROCm Dependencies
+
+* HIP
+* hipBLAS
+* hipBLASLt
+* hipFFT
+* hipRAND
+* hipSOLVER
+* hipSPARSE
+* hipSPARSELt
+* MIOpen
+* ROCm-LLVM
+* ROCm-SMI
+* rocBLAS
+* rocFFT
+* rocRAND
+* rocSOLVER
+* roc-tracer
+
+### TensorFlow ROCm Dependencies
+
+* HIP
+* hipBLAS
+* hipCUB
+* hipFFT
+* hipRAND
+* hipSOLVER
+* hipSPARSE
+* MIGraphX
+* MIOpen
+* RCCL
+* rocBLAS
+* rocFFT
+* rocPRIM
+* rocRAND
+* rocSOLVER
+
+### GROMACS ROCm Dependencies
+
+* HIP
+* ROCm-LLVM
+* rocFFT
 
 ## Compatibility Policies {: #Compatibility-Policies }
 
@@ -579,3 +639,8 @@ Vega refers to AMD's GPU architecture that was one of the first to fully support
 * fixed dev tools dependencies graph
 * sorted libraries
 * removed the big dependencies graph in favour of dedicated ones
+
+## v.6.4.1-20250620
+
+* added the MIGraphX, rocPRIM, hipCUB libraries
+* added case studies for PyTorch, TensorFlow, GROMACS
