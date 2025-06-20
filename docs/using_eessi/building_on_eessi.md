@@ -128,7 +128,7 @@ source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 ```
 * Load one of the `buildenv` modules, there's one per `foss` toolchain available in EESSI. (`foss` is a good option as it will also
   include MPI with OpenMPI and math libraries via FlexiBLAS/FFTW). 
-* Compile as you would do as usual. The module includes wrappers for gcc, gfortran and linkers.
+* Compile as you would do normally. The module includes wrappers for the compilers (`gcc`, `g++`, `gfortran`)  and linkers (`ld`, `ld.bfd`, `ld.gold`).
 * Make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used
   when checking the binary.
 
