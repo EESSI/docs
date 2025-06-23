@@ -111,7 +111,7 @@ Optimization for performance is strongly encouraged. For compiled software, this
 
 ## 4. Transparency and Traceability
 
-EESSI aims to be transparant regarding how software was build. A combination of the git history, easybuild build logs, as well as the easybuild subdirectory within every installation (which provides the EasyConfig, EasyBlock, and any hooks used at installation time) provide a detailed description of how software was configured and built.
+EESSI aims to be transparent regarding how software was build. A combination of the git history, easybuild build logs, as well as the easybuild subdirectory within every installation (which provides the EasyConfig, EasyBlock, and any hooks used at installation time) provide a detailed description of how software was configured and built.
 
 ---
 
