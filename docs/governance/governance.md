@@ -4,60 +4,80 @@ A project charter discusses _what it is and why it exists_, a governance discuss
 
 # Project Governance
 
+As stated in the [Charter](charter.md), this project governance _only_ covers collaboration on the software.eessi.io CernVM-FS repository, it does not cover other CernVM-FS repositories under the eessi.io namespace. In other words, when the sections below mention the EESSI CernVM-FS repository, this implies the software.eessi.io repository specifically. Thus, this governance only addresses contributing to, building for, deploying to, ingesting in, providing, or using the software.eessi.io respository.
+
+The only exception to this is the Steering Committee, which has authority over all the eessi.io CernFM-FS repositories.
+
 ## 1. Guiding Principles
 <!-- Optional section to state high-level principles like openness, meritocracy, consensus, etc. -->
-The value of EESSI grows exponentially with two things: the amount of systems that make the EESSI software stack available, and the amount of software that is available in the EESSI software stack. Thus, the first goal of this governance is to make sure everyone in the community feels sufficiently included so that they are willing to contribute to EESSI (rather than build their own solution).
+The value of EESSI grows exponentially with two things: the amount of systems that make EESSI available, and the amount of software that is available in EESSI. Thus, the first goal of this governance is to make sure everyone in the community feels sufficiently included so that they are willing to contribute to EESSI (rather than build their own solution).
 
-The second goal of this governance is to make clear how and by whom decisions in EESSI are taken. This is because trust in this process is important, both to infrastructure providers making the EESSI software stack is available on their systems, as well as by end-users of the software. Note that this concerns both large decisions, such as which architectures are supported in EESSI, as well as small decisions, such as whether to accept a certain contribution to add software to EESSI.
+The second goal of this governance is to make clear how and by whom decisions in EESSI are taken. This is because trust in this process is important, both to infrastructure providers making the EESSI software stack is available on their systems, as well as by end-users of the software. Note that this concerns both large decisions, such as which architectures are supported in EESSI, as well as small decisions, such as making a specific software package available in EESSI.
 
-To achieve both goals, our governance is based on the meritocracy governance model.
+To achieve both goals, our governance is based on the [meritocracy](https://en.wikipedia.org/wiki/Meritocracy) governance model.
 
 ## 2. Roles and Responsibilities
 
 Below, the roles and responsibilities related to the EESSI project are discussed. The group of people with a common role will be referred to as a Team in the remainder of this document. Exceptions are Contributors, System administrators of systems providing EESSI and End-users (these are not considered to be Teams). Each individual in a Team will be referred to as a Team Member.
 
-### 2.1 EESSI Github organization & repository owners
+### 2.1 Owners of the [EESSI GitHub organization](https://github.com/EESSI) & repositories
 <!-- Define who contributors are and what they can do (e.g., file issues, submit PRs). -->
-EESSI Github organization & repository owners are those individuals with `owner` rights on the EESSI Github organization or one of it's associated repositories.
+The owners of the [EESSI GitHub organization](https://github.com/EESSI) & repositories are those individuals with `owner` rights on the EESSI GitHub organization or one of it's associated repositories.
 
-EESSI Github organization & repository owners shall be responsible for setting permissions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing Github Apps for the EESSI build bots.
+EESSI Github organization & repository owners are responsible for setting permissions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing Github Apps for the EESSI build bots.
 
 ### 2.2 EESSI Github repository maintainers
 EESSI Github repository maintainers are individuals with write access (one or more) of the EESSI Github repositories.
 
-EESSI Github repository maintainers shall be responsible for reviewing and merging PRs.
+EESSI Github repository maintainers are responsible for reviewing and merging PRs.
 
 ### 2.3 EESSI Infrastructure maintainers
-EESSI Infrastructure maintainers are those individuals that maintain the EESSI CVMFS Stratum 0, one of the _public_ EESSI CVMFS Stratum 1's, build infrastructure (hosting the EESSI build bot) and the SMEE server.
+EESSI Infrastructure maintainers are those individuals that maintain the Central Server for the EESSI CernVM-FS repository (the CernVM-FS Stratum 0), one of the _public_ mirror servers (CernVM-FS Stratum 1's), build infrastructure (e.g. hosting the EESSI build bot, the SMEE server).
 
-Infrastructure maintainers shall be responsible for monitoring and maintaining their respective infrastructure, and provide access to those who needed it according to the Roles and Responsibilities described here. Note that maintainers of build infrastructure have the right to limit access to a _subset_ of the Deployers and Builders as described in 2.4 and 2.5 if they so desire. Furthermore, they are _not_ allowed to give access to others that are not part of the EESSI Infrastructure maintainers, Deployers or Builders teams.
+Infrastructure maintainers are responsible for monitoring and maintaining their respective infrastructure, and provide access to those who needed it according to the Roles and Responsibilities described here. Note that maintainers of build infrastructure have the right to limit access to a _subset_ of the Deployers and Builders as described in 2.4 and 2.5. Furthermore, they are _not_ allowed to give access to others that are not part of the EESSI Infrastructure maintainers, Deployers or Builders teams.
 
 ### 2.4 Builders
-Builders are those individuals that have permissions to build software through one or more of the EESSI build bots.
+Adding software to EESSI requires three steps (see [the contribution workflow](../adding_software/overview.md) documentation):
 
-Builders are responsible for triggering builds for contributors who want to add software to the EESSI software stack. They are also responsible for checking the PR, so as to avoid execution of malicious code on the EESSI build infrastructure.
+1. The software needs to be build
+2. A tarball of the software installation needs to be uploaded to a central location (e.g. S3 bucket) where the Central Server for the EESSI CernVM-FS repository can pick it up
+3. The Central Server for the EESSI CernVM-FS repository needs to ingest the tarball. See the documentation on [the contribution workflow](../adding_software/overview.md).
+
+Builders are those individuals that have permissions to build software through one or more of the EESSI build bots, i.e. step 1 in this process.
+
+Builders are responsible for reviewing contributions. They should, for example, check that contributions adhere to the contribution guidelines, that a contribution will not trigger execution of any untintended or unwanted code, etc. They are also responsible for triggering builds for contributors who want to add software to the EESSI software stack.
 
 ### 2.5 Deployers
-Deployers are those individuals that have permissions to deploy software through one or more of the EESSI build bots. These individuals also have merge permissions on the `EESSI/staging` repository.
+Deployers are those individuals that have permissions to deploy software through one or more of the EESSI build bots to a central location (e.g. S3 bucket), i.e. they are essentially responsible for step 2 as it is described in Section 2.4.
 
-Deployers are responsible for checking the produced tarballs, through the reports generated by the build bot (as part of the build step), as well as through checking the reports uploaded by the Stratum 0 in `EESSI/staging` PRs. They should ensure that the tarballs do not contain anything unexpected / malicious.
+Deployers should check the file list of the produced tarballs (as it is reported by the build bot) for unexpected items. They should also check if all officially supported hardware targets have been built for.
 
-### 2.6 Contributors
+### 2.6 Ingestors
+Ingestors are those individuals that have permissions to ingest a tarball into the EESSI CernVM-FS repository, i.e. they are essentially responsible for step 3 as it is described in Section 2.4.
 
-Contributors are individuals that make a pull request to one of the repositories in the EESSI Github organization.
+Ingestors have merge permissions on the (private) `EESSI/staging` GitHub repository.
 
-Contributors that add software are responsible for checking that the license of the software they want to add allows it's use in EESSI (e.g. allows redistribution). Contributors are also responsible for making sure their PRs don't add any malicious code. Finally, contributors should ensure that they adhere to the [Contribution Policy](../adding_software/contribution_policy.md).
+Ingestors should check the contents of the tarball as it is reported in the pull requests in the `EESSI/staging` repository. This essentially provides a second check (next to that done by Deployers) on the contents of the tarball.
 
-### 2.7 System administrators of systems providing EESSI
+### 2.7 Contributors
+
+Contributors are individuals that make a contribution by opening a pull request to one of the repositories in the EESSI Github organization.
+
+Contributors that propose adding software to EESSI in their contributions are responsible for checking that the license of the software they want to add allows it's use in EESSI (e.g. allows redistribution). Contributors should also make an effort to ensure that their contributions don't add any malicious code. Finally, contributors should ensure that they adhere to the [Contribution Policy](../adding_software/contribution_policy.md).
+
+### 2.8 System administrators of systems providing EESSI
 
 System administrators of systems providing EESSI are administrators of systems (such as, but not limited to cloud and HPC systems) that make the EESSI software stack available to their users.
 
-System administrators of systems providing EESSI are responsible for making sure that their system does not put any disproportional load on the public EESSI CernVM-FS infrastructure. Typically, this means that they are responsible for provisioning proper caching for their system, such as a private CernVM-FS Stratum 1, a proxy, and/or a properly sized local cache.
+System administrators of systems providing EESSI should make sure that their system does not put any disproportional load on the public EESSI CernVM-FS infrastructure. Typically, this means that they should adhere to best practices for CernVM-FS caching in a way that fits the size and nature of their system (e.g. by setting up a private CernVM-FS Stratum 1, a proxy, and/or a properly sized local cache).
 
-### 2.8 End-Users
+System administrators have to agree to the EESSI [Terms of Use](terms_of_use.md).
+
+### 2.9 End-Users
 
 End-Users are individuals that use any of the software provided by the EESSI software stack.
 
+End users have to agree to the EESSI [Terms of Use](terms_of_user.md).
 
 ## 3. Decision-Making
 
@@ -160,4 +180,7 @@ The Steering Committee will meet as needed, but at least once per quarter. The C
 The EESSI Code of Conduct can be found [here](code_of_conduct.md).
 
 ## 8. Contribution Agreement
-TODO: Should refer to some Contribution Agreement. Is contributing only possible after signing this agremeent? If so, that should be stated here
+All commit messages for contributions should be signed by the contributor, i.e. they should contain the statement: "Signed-off-by: firstname lastname <email>". With that signature, the contributor agrees to the [Developer Certificate of Origin](https://developercertificate.org/).
+
+## 9. Review and Amendment
+Changes to the governance require approval by the Steering Committee, as per the rules described the [Voting by the Steering Committee](governance.md#voting-by-the-steering-committee) section.
