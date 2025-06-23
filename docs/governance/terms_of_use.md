@@ -8,7 +8,13 @@ By using the **European Environment for Scientific Software Installations (EESSI
 EESSI provides a shared scientific software stack for academic, research, and educational use. Access and usage are intended for non-commercial scientific computing.
 
 ## 2. Acceptable Use  
-Users must act responsibly and not misuse EESSI infrastructure or software. This includes refraining from unauthorized access, modification, or redistribution of components outside of the permitted licensing terms.
+Users must act responsibly when accessing and using the EESSI infrastructure and software. In particular:
+
+- Do not overload or abuse the public EESSI mirror servers. Avoid excessive or automated requests that may disrupt service availability for other users.  
+- Use caching mechanisms where possible, and coordinate large-scale usage (e.g., automated deployments or CI pipelines) with the EESSI maintainers if in doubt.  
+- Refrain from unauthorized access, modification, or redistribution of software components outside the permitted licensing terms.
+
+Responsible use helps ensure reliable access for the entire scientific community.
 
 ## 3. Licensing  
 All software within EESSI is governed by its respective open-source or institutional license. Users must adhere to these licenses; EESSI does not override or alter them.
