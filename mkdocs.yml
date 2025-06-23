@@ -78,10 +78,12 @@ nav:
     - Contact info: contact.md
   - Systems where EESSI is available: systems.md
   - Governance:
+    - Overview: governance/index.md
     - Charter: governance/charter.md
     - Governance: governance/governance.md
     - EESSI Policies: governance/policies.md
     - Code of Conduct: governance/code_of_conduct.md
+    - Terms of Use: governance/terms_of_use.md
     - Current Steering Committee: governance/steering_committee.md
   - Blog: blog/index.md
 plugins:
@@ -102,6 +104,7 @@ plugins:
         contributing_sw/deploying_software.md: adding_software/deploying_software.md
         contributing_sw/opening_pr.md: adding_software/opening_pr.md
         contributing_sw/overview.md: adding_software/overview.md
+        governance.md: governance/index.md
         software_layer/adding_software.md: adding_software/overview.md
         pilot.md: repositories/pilot.md
         gpu.md: site_specific_config/gpu.md
