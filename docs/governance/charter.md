@@ -22,7 +22,7 @@ The [European Environment for Scientific Software Installations](https://www.ees
 - Ready-to-use (served over the internet, just mount-and-go)
 - Optimized for a wide range of hardware architectures (CPU, GPU, interconnects)
 - Easily extendable with additional local installations
-- Customizeable (e.g. site-spefici LMOD hooks, injecting a local MPI, etc)
+- Customizable (e.g. site-spefici LMOD hooks, injecting a local MPI, etc)
 
 and can be used on any Linux (virtual) machine.
 
