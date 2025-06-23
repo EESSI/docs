@@ -111,11 +111,7 @@ Optimization for performance is strongly encouraged. For compiled software, this
 
 ## 4. Transparency and Traceability
 
-### 4.1 Software Bill of Materials (SBOM)
-
-- EESSI is committed to providing a complete SBOM for all deployed software.
-- The SBOM should include versioning, licensing, and dependency information.
-- Preferred formats include SPDX or CycloneDX.
+EESSI aims to be transparant regarding how software was build. A combination of the git history, easybuild build logs, as well as the easybuild subdirectory within every installation (which provides the EasyConfig, EasyBlock, and any hooks used at installation time) provide a detailed description of how software was configured and built.
 
 ---
 
@@ -131,4 +127,4 @@ Optimization for performance is strongly encouraged. For compiled software, this
 
 There are currently no Team Policies yet.
 
-_Last updated: [Insert Date]_
+_Last updated: 23 June 2025_
