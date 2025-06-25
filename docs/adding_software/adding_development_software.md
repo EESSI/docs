@@ -15,7 +15,7 @@
 
 ## Adding software
 
-Using `dev.eessi.io` is similar to using EESSI's production repository `software.eessi.io`.
+Using `dev.eessi.io` is similar to using EESSI's production repository [`software.eessi.io`](../repositories/software.eessi.io.md).
 Software builds are triggered by a [bot](https://www.eessi.io/docs/bot/) listening to pull 
 requests in [GitHub repositories](https://github.com/search?q=org%3AEESSI+dev.eessi.io&type=repositories). 
 These builds require custom easyconfig and easystack files, which should be in specific directories.
@@ -38,9 +38,9 @@ dev.eessi.io-example
 
 ```
 
-!!! note *the `X.patch` and X.py` files are optional
+!!! note "*the `X.patch` and `X.py` files are optional"
 
-    These files are patch files (ending in `.patch`) or custom easyblocks (ending in`.py`).
+    These files are [patch](https://docs.easybuild.io/patch-files/?h=patch) files (ending in `.patch`) or custom [easyblocks](https://docs.easybuild.io/terminology/#easyblocks) (ending in`.py`).
     They are not strictly necessary if your development build can use already existing 
     easyblocks available through EasyBuild, and / or if nothing needs to be patched
 
@@ -64,9 +64,9 @@ pull request. This will open a staging PR in a repository visible to EESSI maint
 #### easyconfig files and `--software-commit`
 The approach to build and install software is similar to that of `software.eessi.io`. 
 It requires one or more easyconfig files. Easyconfig files used for building for `dev.eessi.io`
-do not need to be a part of an [EasyBuild release](https://github.com/easybuilders/easybuild-easyconfigs), unlike builds for 
-`software.eessi.io`. In this case, the development easyconfigs can be located under `easyconfigs/` in the `dev.eessi.io` 
-repository being used.
+do not need to be a part of an [EasyBuild release](https://github.com/easybuilders/easybuild-easyconfigs), 
+unlike builds for `software.eessi.io`. In this case, the development easyconfigs can be located under 
+`easyconfigs/` in the `dev.eessi.io` repository being used.
 
 To allow for development builds, we leverage the `--software-commit` functionality (requires [EasyBuild](https://easybuild.io/) 
 v4.9.3 or higher). This lets us build a given application from a specific commit in repository. This can also be done from a 
