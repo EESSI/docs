@@ -194,6 +194,12 @@ The current build cluster for `dev.eessi.io` builds for the AMD `zen2`, `zen4`, 
 
 Once a build is complete and the `bot:deploy` label is added, a staging PR can be merged to deploy the
 application to the `dev.eessi.io` cvmfs repository. On a system with `dev.eessi.io` mounted, and for a project named `example`,  all
-that is left is to run `module use /cvmfs/dev.eessi.io/example/versions/2023.06/modules/all` and try out the software!
+that is left is to run:
+
+```bash
+source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+module use /cvmfs/dev.eessi.io/example/versions/$EESSI_VERSION/software/linux/$EESSI_SOFTWARE_SUBDIR/modules/all/
+module load $MODULE_NAME
+```
 
 There is currently no initialisation script or module for `dev.eessi.io`, but this feature is coming soon.
