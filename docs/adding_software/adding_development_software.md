@@ -55,8 +55,10 @@ commit ID to `software-commit` under `options`.
 - Open a PR from the fork or branch to the main branch of the application's `dev.eessi.io` GitHub repository.
 - Instruct the bot to start a build by adding a comment with `bot: build`. See `bot: show_config` for to see all the
  available build nodes and bot instances.
-- Confirm the build worked correctly. If so, you can deploy the software by adding the label `bot:build` to the 
-pull request. This will open a staging PR in a repository visible to EESSI maintainers.
+- Confirm the build worked correctly. If so, the software can be deployed by adding the label `bot:deploy` to the 
+pull request. In most cases, this can only be done by EESSI maintainers, so feel free to signal that a PR is ready
+for deployment through Slack and by adding the `ready-to-deploy` label. 
+Once the `bot:deploy` label is added a staging PR will open in a repository visible to EESSI maintainers.
 - Once the staging PR is approved, the development build will become available on `dev.eessi.io` in a few minutes!
 
 ### Installation details
