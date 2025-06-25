@@ -171,7 +171,7 @@ that are not yet available in `software.eessi.io` or in our development stack. S
 installing our target application (i.e., they listed as the `builddependencies` or `dependencies` in the easyconfig file), 
 we must include them _above_ the software we mean to install. 
 
-As an example, lets take an hypothetic easystack file that installs a untagged version of the GitHub command 
+As an example, let's take a hypothetical easystack file that installs a untagged version of the GitHub command 
 line application `gh` from a particular commit in its history. Because `gh` requires a version of `Go` that 
 is not yet (or will never be) available in `software.eessi.io`, we include the easyconfig needed to 
 install it on the easystack file:
