@@ -30,7 +30,7 @@ dev.eessi.io-example
 │   │   └── gh
 │   │       ├── gh.patch*
 │   │       └── gh.py*
-│   └── gh-2.67.0-software-commit.eb
+│   └── gh-devel-software-commit.eb
 ├── easystacks
 │   └── dev.eessi.io
 │       └── 2023.06
@@ -92,7 +92,9 @@ sources = ['%(software_commit)s.tar.gz']
 !!! warning "`--software-commit` disables `--robot`"
 
     Using `--software-commit` disables the use of `--robot`, so make sure that you explicitly include
-    new dependencies that might need to be installed. Otherwise, the easyconfig files won't be found.
+    new dependencies that might need to be installed in the easystack file. These should be included
+    _above_ the software you mean to install. Otherwise, the easyconfig files won't be found or will
+    be installed out of order.
 
 You can also make additional changes to the easyconfig file, for example, if the new functionality requires new build or
 runtime dependencies, patches, configuration options, etc. It's a good idea to try installing from a specific commit locally first,
@@ -138,7 +140,8 @@ a given installation, and compare them with the values in the easyconfig file. B
 more often, hard coded checksums become a problem, as they'd need to be updated with every new build. For this reason, we 
 recommend not including checksums in your development easyconfig files (unless you need to, for a specific reason).
 
-#### Easystack files 
+#### Easystack files
+
 After an easyconfig file has been created and added to the `easyconfigs` subdirectory, an [easystack file](https://docs.easybuild.io/easystack-files) that picks it up
 needs to be in place so that a build can be triggered.
 
@@ -161,6 +164,25 @@ needs to be in place so that a build can be triggered.
 Note the option passing the `software-commit` for the development version that should be built.
 For the sake of this example, the chosen commit actually corresponds to the 
 [4.2.2 release of ESPResSo](https://github.com/espressomd/espresso/releases/tag/4.2.2).
+
+Because building with `software-commit` disables [`robot`](https://docs.easybuild.io/api/easybuild/tools/robot/?h=robot) 
+(automatic dependency resolution) as we note above, we need to explicitly include easyconfig files of direct dependencies
+that are not yet available in `software.eessi.io` or in our development stack. Since these dependencies are required for
+installing our target application (i.e., they listed as the `builddependencies` or `dependencies` in the easyconfig file), 
+we must include them _above_ the software we mean to install. 
+
+As an example, lets take an hypothetic easystack file that installs a untagged version of the GitHub command 
+line application `gh` from a particular commit in its history. Because `gh` requires a version of `Go` that 
+is not yet (or will never be) available in `software.eessi.io`, we include the easyconfig needed to 
+install it on the easystack file:
+
+```yaml
+easyconfigs:
+  - Go-1.23.6.eb # Necessary dependency not yet available anywhere in EESSI
+  - gh-devel-software-commit.eb:
+      options:
+        software-commit: e516e5ed5db056653dbb1dd141e4c714555a5967 # two commits after  2.67.0
+```
 
 ### Triggering builds
 
