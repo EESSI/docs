@@ -7,7 +7,7 @@ This way, development versions of software can easily be tested on systems where
 
 Unlike in the [software.eessi.io](software.eessi.io.md) production repository, software installations in `dev.eessi.io` are placed in an additional `project` 
 subdirectory. On a system with `dev.eessi.io` mounted, and assuming one intends to use a project named `example` access is possible with 
-<pre>module use /cvmfs/dev.eessi.io/<b>example</b>/versions/2023.06/modules/all</pre>. Then, all that is left is to try out the development software!
+<pre>module use /cvmfs/dev.eessi.io/<b>example</b>/versions/$EESSI_VERSION/software/linux/$EESSI_SOFTWARE_SUBDIR/modules/all</pre>. Then, all that is left is to try out the development software!
 
 For more information on adding software to `dev.eessi.io`, please consult the relevant [documentation](../adding_software/adding_development_software.md) page.
 
