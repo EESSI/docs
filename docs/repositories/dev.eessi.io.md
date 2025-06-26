@@ -2,11 +2,14 @@
 
 ## What is `dev.eessi.io`?
 
-`dev.eessi.io` is the development repository of EESSI. With it, developers can deploy pre-release builds of their software to EESSI. 
-This way, development versions of software can easily be tested on systems where the `dev.eessi.io` CernVM-FS repository is available.
+`dev.eessi.io` is the development repository of EESSI. With it, developers in the [MultiXscale CoE](https://multixscale.eu) can deploy pre-release builds of their software to EESSI.
+This way, development versions of software can easily be tested on systems where the `dev.eessi.io` CernVM-FS repository is available, or even added to CI workflows with little effort. 
 
-On a system with `dev.eessi.io` mounted access is possible with `module use /cvmfs/dev.eessi.io/versions/2023.06/modules/all`. Then, all that is left is
-try out the development software!
+Unlike in the [software.eessi.io](software.eessi.io.md) production repository, software installations in `dev.eessi.io` are placed in an additional `project` 
+subdirectory. On a system with `dev.eessi.io` mounted, and assuming one intends to use a project named `example` access is possible with 
+<pre>module use /cvmfs/dev.eessi.io/<b>example</b>/versions/$EESSI_VERSION/software/linux/$EESSI_SOFTWARE_SUBDIR/modules/all</pre>. Then, all that is left is to try out the development software!
+
+For more information on adding software to `dev.eessi.io`, please consult the relevant [documentation](../adding_software/adding_development_software.md) page.
 
 ## Question or problems
 
