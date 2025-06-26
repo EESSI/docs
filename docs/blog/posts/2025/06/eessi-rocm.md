@@ -9,10 +9,10 @@ slug: rocm
 Following our [overview of the ROCm ecosystem](https://www.eessi.io/docs/rocm), we're excited to share our progress on the next phase of our ROCm initiative: actually building and integrating ROCm support into EESSI.
 This work represents a significant step forward in making AMD GPU computing more accessible to the scientific computing community through our software stack.
 
+<!-- more -->
+
 Our previous blog post focused on understanding the ROCm landscape - mapping out the components, dependencies, and relationships within AMD's GPU computing ecosystem.
 Now we're putting that knowledge into practice by systematically building ROCm support from the ground up.
-
-<!-- more -->
 
 ## Our Goals: The ROCm Integration Roadmap
 
@@ -39,40 +39,42 @@ Rather than starting from scratch, we leveraged existing community efforts as ou
 Specifically, we built upon excellent preliminary work from:
 
 * [Bob Dröge](https://github.com/bedroge)'s ROCm EasyBuild configurations available [here](https://github.com/bedroge/eb-rocm/tree/main)
-* [Jan André Reuter](https://github.com/Thyre)'s custom EasyBuild support for ROCm available [here](https://github.com/Thyre/easybuild-custom/tree/support-passing-amdgcn/easybuild/easyconfigs/r)
+* [Jan André Reuter](https://github.com/Thyre)'s custom EasyBuild support for ROCm available [here](https://github.com/Thyre/easybuild-custom/tree/support-passing-amdgcn/easybuild/)
 
 A crucial contribution came from [Davide Grassano](https://github.com/Crivella) who successfully got ROCm-LLVM to build with EasyBuild.
 This involved significant technical work, including contributions back to the EasyBuild project through pull requests [#3706](https://github.com/easybuilders/easybuild-easyblocks/pull/3706) and [#3781](https://github.com/easybuilders/easybuild-easyblocks/pull/3781).
 Getting ROCm-LLVM working was essential because it serves as the compiler foundation for the entire ROCm stack.
 
-## Current Progress: Building the Core Stack
+## Current Progress: Building and Testing the Core Stack
 
 We've made substantial progress in building ROCm components for version 6.4.0 within the EESSI build environment.
-The following core components now build successfully with EasyBuild in our EESSI build container: ROCm-LLVM, rocminfo, rocm-cmake, HIP, amdsmi, roctracer.
+The following core components now build successfully with EasyBuild in our EESSI build container: ROCm-LLVM, rocminfo, rocm-cmake, HIP, amdsmi, ROCTracer.
 
-Currently, we're conducting our testing and building on a virtual machine environment without physical AMD GPU hardware.
-This approach allows us to validate the build process and catch configuration issues, though it means some sanity checks that require actual GPU hardware are necessarily skipped during the build process.
+Initially, we conducted our building and testing on a virtual machine environment without physical AMD GPU hardware.
+This approach allowed us to validate the build process and catch configuration issues, though it meant some sanity checks that require actual GPU hardware were necessarily skipped during the build process.
 
 From a technical perspective, our work has focused on ensuring all components build reliably within the EESSI build container environment, guaranteeing reproducibility and consistency across different systems.
 We've developed and tested EasyBuild recipes for each component, including some patches, build hooks, and workarounds to fix some issues.
+Our work can be found [here](https://github.com/Timvnc/easyconfig-rocm/tree/master).
 
-However, our current progress does come with some limitations.
-We haven't yet performed runtime validation with actual AMD GPU hardware, which means we can't fully verify that everything works as expected in real-world scenarios.
-Additionally, some sanity checks that require GPU presence are skipped during the build process, so we're building with partial validation.
+Recently we validated our ROCm builds with actual hardware.
+The results were highly encouraging: `hip_device_query` executed successfully, properly detecting and reporting GPU information, and `amd-smi` worked correctly, providing detailed system monitoring capabilities.
+We were also able to run a complete build with all sanity checks enabled and passing.
 
-## Next Steps: Validating the Integration
+The successful hardware validation represents a significant milestone in our ROCm integration effort, demonstrating that our builds don't just compile correctly but actually function as expected with real AMD GPU hardware.
+
+## Next Steps: Expanding the Integration
 
 Looking ahead, we've identified clear priorities for completing our ROCm integration work.
 
 Our high-priority next steps focus on validation and completeness.
-We need to add proper support for AMD GPU drivers and hardware detection, ensuring our built components can actually communicate with AMD GPUs.
-We're also working to finish adding support for remaining core components and AMD's validation suite and examples that demonstrate real-world functionality.
-
-A crucial milestone will be running the validation suite and examples on actual AMD GPU hardware to verify that everything works correctly.
+We're working to finish adding support for remaining core components and extend our testing to cover AMD's [validation suite](https://github.com/ROCm/ROCmValidationSuite) and [examples](https://github.com/ROCm/rocm-examples) that demonstrate real-world functionality.
+We also need to develop a mechanism to detect the host driver version and validate it against our ROCm build requirements, providing clear guidance to users when incompatibilities are detected.
 
 Our lower-priority items, while still important, focus on expanding capabilities and improving documentation.
 We plan to add support for additional libraries and frameworks beyond the core stack, integrate popular scientific applications that leverage ROCm, and update our ROCm overview document with practical insights gained from our building and testing experience.
 We're also exploring the possibility of contributing our overview back to AMD's official documentation, which could benefit the broader community.
+And finally, we will also provide feedback to AMD on our experience building ROCm, which likely will be useful for their new project [TheRock](https://github.com/ROCm/TheRock).
 
 ## Looking Forward
 
