@@ -2344,7 +2344,7 @@ often for the time being. </p>
 <h2 id="what-is-deveessiio">What is <code>dev.eessi.io</code>?<a class="headerlink" href="#what-is-deveessiio" title="Permanent link">&para;</a></h2>
 <p><code>dev.eessi.io</code> is the <a href="../../repositories/dev.eessi.io/">development repository of EESSI</a>.</p>
 <h2 id="adding-software">Adding software<a class="headerlink" href="#adding-software" title="Permanent link">&para;</a></h2>
-<p>Using <code>dev.eessi.io</code> is similar to using EESSI's production repository <code>software.eessi.io</code>.
+<p>Using <code>dev.eessi.io</code> is similar to using EESSI's production repository <a href="../../repositories/software.eessi.io/"><code>software.eessi.io</code></a>.
 Software builds are triggered by a <a href="https://www.eessi.io/docs/bot/">bot</a> listening to pull 
 requests in <a href="https://github.com/search?q=org%3AEESSI+dev.eessi.io&amp;type=repositories">GitHub repositories</a>. 
 These builds require custom easyconfig and easystack files, which should be in specific directories.</p>
@@ -2352,29 +2352,49 @@ These builds require custom easyconfig and easystack files, which should be in s
  In this GitHub repository you will find templates for some software installations with the appropriate directory structure, that is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>dev.eessi.io-example
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── easyconfigs
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>└── easystacks
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   ├── g
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   │   └── gh
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   │       ├── gh.patch*
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│   │       └── gh.py*
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   └── gh-devel-software-commit.eb
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── easystacks
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   └── dev.eessi.io
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│       └── 2023.06
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│           └── gh-eb-5.0.0-dev.yml
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">*the <code>X.patch</code> and <code>X.py</code> files are optional</p>
+<p>These files are <a href="https://docs.easybuild.io/patch-files/?h=patch">patch</a> files (ending in <code>.patch</code>) or custom <a href="https://docs.easybuild.io/terminology/#easyblocks">easyblocks</a> (ending in<code>.py</code>).
+They are not strictly necessary if your development build can use already existing 
+easyblocks available through EasyBuild, and / or if nothing needs to be patched</p>
+</div>
 <h3 id="quick-steps-to-build-for-deveessiio">Quick steps to build for <code>dev.eessi.io</code><a class="headerlink" href="#quick-steps-to-build-for-deveessiio" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Obtain commit ID from GitHub or GitLab repository with source to build.</li>
 <li>Fork the project's <code>dev.eessi.io</code> repository on GitHub, or checkout to a new branch if you can do so.</li>
 <li>If needed, prepare an easyconfig template using <code>--software-commit</code> and add it to <code>easyconfigs/</code></li>
-<li>Add an easystack file in <code>easystacks/</code> that with the easyconfig file above, add the
+<li>Add an easystack file in <code>easystacks/</code> that lists the easyconfig file above, and add the
 commit ID to <code>software-commit</code> under <code>options</code>.</li>
 <li>Open a PR from the fork or branch to the main branch of the application's <code>dev.eessi.io</code> GitHub repository.</li>
-<li>Instruct the bot to start a build by adding a comment with <code>bot: build</code>.</li>
-<li>Confirm the build worked correctly. If so, you can deploy the software by adding the label <code>bot:build</code> to the pull request.</li>
+<li>Instruct the bot to start a build by adding a comment with <code>bot: build</code>. See <code>bot: show_config</code> for to see all the
+ available build nodes and bot instances.</li>
+<li>Confirm the build worked correctly. If so, the software can be deployed by adding the label <code>bot:deploy</code> to the 
+pull request. In most cases, this can only be done by EESSI maintainers, so feel free to signal that a PR is ready
+for deployment through Slack and by adding the <code>ready-to-deploy</code> label. 
+Once the <code>bot:deploy</code> label is added a staging PR will open in a repository visible to EESSI maintainers.</li>
 <li>Once the staging PR is approved, the development build will become available on <code>dev.eessi.io</code> in a few minutes!</li>
 </ul>
 <h3 id="installation-details">Installation details<a class="headerlink" href="#installation-details" title="Permanent link">&para;</a></h3>
 <h4 id="easyconfig-files-and-software-commit">easyconfig files and <code>--software-commit</code><a class="headerlink" href="#easyconfig-files-and-software-commit" title="Permanent link">&para;</a></h4>
 <p>The approach to build and install software is similar to that of <code>software.eessi.io</code>. 
 It requires one or more easyconfig files. Easyconfig files used for building for <code>dev.eessi.io</code>
-do not need to be a part of an <a href="https://github.com/easybuilders/easybuild-easyconfigs">EasyBuild release</a>, unlike builds for 
-<code>software.eessi.io</code>. In this case, the development easyconfigs can be located under <code>easyconfigs/</code> in the <code>dev.eessi.io</code> repository being used.</p>
-<p>To allow for development builds, we leverage the <code>--software-commit</code> functionality (requires <a href="https://easybuild.io/">EasyBuild</a> v4.9.3 or higher). This lets us build a given application from
-a specific commit in repository. This can also be done from a fork, by changing the <code>github_account</code> field in the easyconfig file. 
-We've created a template for <code>ESPResSo</code> based on the standard eaasyconfig of the most recent version. The relevant fields are:</p>
+do not need to be a part of an <a href="https://github.com/easybuilders/easybuild-easyconfigs">EasyBuild release</a>, 
+unlike builds for <code>software.eessi.io</code>. In this case, the development easyconfigs can be located under 
+<code>easyconfigs/</code> in the <code>dev.eessi.io</code> repository being used.</p>
+<p>To allow for development builds, we leverage the <code>--software-commit</code> functionality (requires <a href="https://easybuild.io/">EasyBuild</a> 
+v4.9.3 or higher). This lets us build a given application from a specific commit in repository. This can also be done from a 
+fork, by changing the <code>github_account</code> field in the easyconfig file. We've created a template for <code>ESPResSo</code> based on the 
+standard eaasyconfig of the most recent version. The relevant fields are:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">easyblock</span> <span class="o">=</span> <span class="s1">&#39;CMakeMake&#39;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;ESPResSo&#39;</span>
@@ -2392,7 +2412,9 @@ We've created a template for <code>ESPResSo</code> based on the standard eaasyco
 <div class="admonition warning">
 <p class="admonition-title"><code>--software-commit</code> disables <code>--robot</code></p>
 <p>Using <code>--software-commit</code> disables the use of <code>--robot</code>, so make sure that you explicitly include
-new dependencies that might need to be installed. Otherwise, the easyconfig files won't be found.</p>
+new dependencies that might need to be installed in the easystack file. These should be included
+<em>above</em> the software you mean to install. Otherwise, the easyconfig files won't be found or will
+be installed out of order.</p>
 </div>
 <p>You can also make additional changes to the easyconfig file, for example, if the new functionality requires new build or
 runtime dependencies, patches, configuration options, etc. It's a good idea to try installing from a specific commit locally first,
@@ -2420,11 +2442,11 @@ the commit ID itself. You can then include this in the <code>versionsuffix</code
 EasyBuild release, then this may not be necessary, as these will be directly taken from EasyBuild. If it is a new patch that is not on an EasyBuild
 release, then include it in the <code>easyconfigs/</code> directory.</p>
 <h4 id="checksums">Checksums<a class="headerlink" href="#checksums" title="Permanent link">&para;</a></h4>
-<p>EasyBuild's easyconfig files typically contain <a href="https://docs.easybuild.io/writing-easyconfig-files/?h=checksums#common_easyconfig_param_sources_checksums">checksums</a>
- as their use is highly recommended. By default, EasyBuild will compute the checksums of sources and patch files it needs for
-  a given installation, and compare them with the values in the easyconfig file. Because builds for <code>dev.eessi.io</code> change much
-   more often, hard coded checksums become a problem, as they'd need to be updated with every new build. For this reason, we
-    recommend not including checksums in your development easyconfig files (unless you need to, for a specific reason).</p>
+<p>EasyBuild's easyconfig files typically contain <a href="https://docs.easybuild.io/writing-easyconfig-files/?h=checksums#common_easyconfig_param_sources_checksums">checksums</a> 
+as their use is highly recommended. By default, EasyBuild will compute the checksums of sources and patch files it needs for 
+a given installation, and compare them with the values in the easyconfig file. Because builds for <code>dev.eessi.io</code> change much 
+more often, hard coded checksums become a problem, as they'd need to be updated with every new build. For this reason, we 
+recommend not including checksums in your development easyconfig files (unless you need to, for a specific reason).</p>
 <h4 id="easystack-files">Easystack files<a class="headerlink" href="#easystack-files" title="Permanent link">&para;</a></h4>
 <p>After an easyconfig file has been created and added to the <code>easyconfigs</code> subdirectory, an <a href="https://docs.easybuild.io/easystack-files">easystack file</a> that picks it up
 needs to be in place so that a build can be triggered.</p>
@@ -2433,7 +2455,8 @@ needs to be in place so that a build can be triggered.</p>
 <p>The easystack files must follow a naming convention and be named something
 like: <code>software-eb-X.Y.Z-dev.yml</code>, where X.Y.Z correspond to the EasyBuild
 version used to install the software. Following our example for 
-<code>ESPREsSo</code>, it would look like: </p>
+<code>ESPREsSo</code>, an easystack file that uses EasyBuild v5.1.0 would be named <code>ESPResSo-eb-5.1.0-dev.yml</code> and
+ would look like: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">easyconfigs</span><span class="p">:</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ESPResSo-devel-foss-2023a-software-commit.eb</span><span class="p">:</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="nt">options</span><span class="p">:</span>
@@ -2442,15 +2465,36 @@ version used to install the software. Following our example for
 </div>
 <p><code>ESPResSo-devel-foss-2023a-software-commit.eb</code> would be the name of the easyconfig file added in our example step above. 
 Note the option passing the <code>software-commit</code> for the development version that should be built.
-For the sake of this example, the chosen commit actually corresponds to the <a href="https://github.com/espressomd/espresso/releases/tag/4.2.2">4.2.2 release of ESPResSo</a>.</p>
+For the sake of this example, the chosen commit actually corresponds to the 
+<a href="https://github.com/espressomd/espresso/releases/tag/4.2.2">4.2.2 release of ESPResSo</a>.</p>
+<p>Because building with <code>software-commit</code> disables <a href="https://docs.easybuild.io/api/easybuild/tools/robot/?h=robot"><code>robot</code></a> 
+(automatic dependency resolution) as we note above, we need to explicitly include easyconfig files of direct dependencies
+that are not yet available in <code>software.eessi.io</code> or in our development stack. Since these dependencies are required for
+installing our target application (i.e., they listed as the <code>builddependencies</code> or <code>dependencies</code> in the easyconfig file), 
+we must include them <em>above</em> the software we mean to install. </p>
+<p>As an example, let's take a hypothetical easystack file that installs a untagged version of the GitHub command 
+line application <code>gh</code> from a particular commit in its history. Because <code>gh</code> requires a version of <code>Go</code> that 
+is not yet (or will never be) available in <code>software.eessi.io</code>, we include the easyconfig needed to 
+install it on the easystack file:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">easyconfigs</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Go-1.23.6.eb</span><span class="w"> </span><span class="c1"># Necessary dependency not yet available anywhere in EESSI</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">gh-devel-software-commit.eb</span><span class="p">:</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">      </span><span class="nt">options</span><span class="p">:</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="nt">software-commit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e516e5ed5db056653dbb1dd141e4c714555a5967</span><span class="w"> </span><span class="c1"># two commits after  2.67.0</span>
+</code></pre></div>
 <h3 id="triggering-builds">Triggering builds<a class="headerlink" href="#triggering-builds" title="Permanent link">&para;</a></h3>
 <p>We use the <a href="../../bot/">EESSI build-test-deploy bot</a> to handle software builds.
 All one needs to do is open a PR with the changes adding the easyconfig and easystack 
 files and commenting <code>bot: build</code>. This can only be done by previously authorized users. 
-The current build cluster for <code>dev.eessi.io</code> builds only for the <code>zen2</code> CPU microarchitecture, but this is likely to change.</p>
+The current build cluster for <code>dev.eessi.io</code> builds for the AMD <code>zen2</code>, <code>zen4</code>, and ARM 
+<code>neoverse_n1</code>, and <code>neoverse_v1</code> CPU microarchitectures, but this is likely to change.</p>
 <p>Once a build is complete and the <code>bot:deploy</code> label is added, a staging PR can be merged to deploy the
-application to the <code>dev.eessi.io</code> cvmfs repository. On a system with <code>dev.eessi.io</code> mounted, then all
-that is left is to <code>module use /cvmfs/dev.eessi.io/versions/2023.06/modules/all</code> and try out the software!</p>
+application to the <code>dev.eessi.io</code> cvmfs repository. On a system with <code>dev.eessi.io</code> mounted, and for a project named <code>example</code>,  all
+that is left is to run:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>module<span class="w"> </span>use<span class="w"> </span>/cvmfs/dev.eessi.io/example/versions/<span class="nv">$EESSI_VERSION</span>/software/linux/<span class="nv">$EESSI_SOFTWARE_SUBDIR</span>/modules/all/
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>module<span class="w"> </span>load<span class="w"> </span><span class="nv">$MODULE_NAME</span>
+</code></pre></div>
 <p>There is currently no initialisation script or module for <code>dev.eessi.io</code>, but this feature is coming soon.</p>
 
 
@@ -2472,7 +2516,7 @@ that is left is to <code>module use /cvmfs/dev.eessi.io/versions/2023.06/modules
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 16, 2024 12:25:32 UTC">November 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2025 13:48:53 UTC">June 25, 2025</span>
   </span>
 
     
