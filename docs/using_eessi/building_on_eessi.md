@@ -114,38 +114,22 @@ This means you'll _always_ need to load the `EESSI-extend` module if you want to
 
 !!! warning
 
-    We are working on a module file that should make building on top of EESSI (without using EasyBuild)
-    more straightforward, particularly when using `Autotools` or `CMake`. Right now, it is a little convoluted
-    and requires you to have a decent grasp of
-    * What a runtime dynamic linker (`ld-linux*.so`) is and does
-    * How to influence the behaviour of the runtime linker with `LD_LIBRARY_PATH`
-    * The difference between `LIBRARY_PATH` and `LD_LIBRARY_PATH`
-    
-    As such, this documentation is intended for "experts" in the runtime linker and it's behaviour,
+    Even with the help of the `buildenv` module, this documentation is intended for "experts" in the runtime linker and it's behaviour,
     and most cases are untested. Any feedback on this topic is highly appreciated. 
     
-Building and running software on top of EESSI without EasyBuild is not straightforward and requires some considerations to take care of. 
+Building and running software on top of EESSI without EasyBuild is now more straightforward thanks to the freshly developed `buildenv` module. 
 
-It is expected that you will have loaded all of your required dependencies as modules from the EESSI environment. Since EESSI sets
-`LIBRARY_PATH` for all of the modules and the `GCC` compiler is configured to use the compat layer, there should be no additional configuration
-required to execute a standard build process. On the other hand, EESSI does not set `LD_LIBRARY_PATH` so, _at runtime_, the executable will need help
-finding the libraries that it needs to actually execute. The easiest way to circumvent this requirement is by setting the environment variable `LD_RUN_PATH`
-during compile time as well. With `LD_RUN_PATH` set, the program will be able to tell the dynamic linker to search in those paths when the program is being
-executed. 
-
-EESSI uses a [compatibility layer](../compatibility_layer.md) to ensure that it takes as few libraries from the host as possible. The safest way to make sure
-all libraries will point to the required locations in the compatibility layer (and do not leak in from the host operating system) is starting an EESSI prefix
-shell before building. To do this: 
+EESSI uses a [compatibility layer](../compatibility_layer.md) to ensure that it takes as few libraries from the host as possible. Starting an EESSI prefix
+shell before building and loading any of the `buildenv` modules (one per `foss` toolchain), this is the safest way to make sure all libraries will point to the required locations in the compatibility layer and do not leak in from the host operating system. A step by step: 
 
 * First of all, load the environment by starting an EESSI shell as described [here](https://www.eessi.io/docs/using_eessi/setting_up_environment). 
-* Load all dependencies you need to build your software. You must use at least a toolchain from EESSI to compile it (`foss` is a good option as it will also
+```
+source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+```
+* Load one of the `buildenv` modules, there's one per `foss` toolchain available in EESSI. (`foss` is a good option as it will also
   include MPI with OpenMPI and math libraries via FlexiBLAS/FFTW). 
-* Set manually `LD_RUN_PATH` to resolve libraries at runtime. `LIBRARY_PATH` should contain all the paths we need, and we also need to include the path to
-  `libstdc++` from our GCC installation to avoid picking up the one from the host:
-  ```sh
-      export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCCORE/lib64
-  ```
-* Compile and make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used
+* Compile as you would do normally. The module includes wrappers for the compilers (`gcc`, `g++`, `gfortran`)  and linkers (`ld`, `ld.bfd`, `ld.gold`).
+* Make sure the library resolution points to the EESSI stack. For this, `ldd` from compatibility layer and **not** `/usr/bin/ldd` should be used
   when checking the binary.
 
 * Run! 
@@ -159,7 +143,7 @@ To exemplify this, take the classic MPI Hello World example code:
 
 int main(int argc, char **argv)
 {
-   int node;
+   int rank;
 
    MPI_Init(&argc,&argv);
    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
@@ -171,22 +155,19 @@ int main(int argc, char **argv)
 
 ```
 
-As described in the steps above, prepare the environment and load the required dependencies. For this case, we will use `gompi/2023b` as the toolchain to compile it.
+As described in the steps above, prepare the environment and load the required dependencies. For this case, we will use `buildenv/default-foss-2023b` module.
 
 ```
-# Starting the environment
+# Starting the EESSI shell
 $ source /cvmfs/software.eessi.io/versions/2023.06/init/bash
 
-# Loading the toolchain
-{EESSI 2023.06} $ module load gompi/2023b
+# Loading the environment
+{EESSI 2023.06} $ module load buildenv/default-foss-2023b
 ```
 
-Now, set the `LD_RUN_PATH` environment variable for all the libraries to point to the runtime libraries, then compile the code.
+You're already good to compile!
 
 ```
-# Setting LD_RUN_PATH
-{EESSI 2023.06}$ export LD_RUN_PATH=$LIBRARY_PATH:$EBROOTGCCCORE/lib64
-
 # Compile the code manually
 {EESSI 2023.06} $ mpicc -o HelloWorld mpi.c
 ```
@@ -199,42 +180,25 @@ Look at the difference on the library solving when using the compatibility layer
 
 # ldd from the compatibility layer, notice how all libraries are resolved from the software layer -> "/cvmfs/software.eessi.io/versions/2023.06/software", the libc and the interpreter point to the compatibility layer, so all good to go!
 
-{EESSI 2023.06} $ ldd HelloWorld
-	linux-vdso.so.1 (0x00007ffce03af000)
-	libmpi.so.40 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/OpenMPI/4.1.6-GCC-13.2.0/lib/libmpi.so.40 (0x00007fadd9e84000)
-	libc.so.6 => /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib64/libc.so.6 (0x00007fadd9ca8000)
-[...]
-	libevent_pthreads-2.1.so.7 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/libevent/2.1.12-GCCcore-13.2.0/lib64/libevent_pthreads-2.1.so.7 (0x00007fadd98f0000)
-	libm.so.6 => /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib/../lib64/libm.so.6 (0x00007fadd9810000)
-	/cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib64/ld-linux-x86-64.so.2 (0x00007fadd9fab000)
-
-```
-
-```sh
-
-# ldd from the host, even though the libraries point to the software layer, now the linker ld-linux-x86-64.so.2 from the compat layer directly points to "/lib64/ld-linux-x86-64.so.2" from the host to do the resolving, resulting in the GLIBC mismatch as libc is also resolved in the host and not the compat layer
-
-{EESSI 2023.06} $ /usr/bin/ldd HelloWorld
-./HelloWorld: /lib64/libc.so.6: version `GLIBC_2.36' not found (required by /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/libevent/2.1.12-GCCcore-13.2.0/lib64/libevent_core-2.1.so.7)
-./HelloWorld: /lib64/libc.so.6: version `GLIBC_ABI_DT_RELR' not found (required by /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib/../lib64/libm.so.6)
-	linux-vdso.so.1 (0x00007fffe4fd3000)
-	libmpi.so.40 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/OpenMPI/4.1.6-GCC-13.2.0/lib/libmpi.so.40 (0x00007f1fdf571000)
-	libc.so.6 => /lib64/libc.so.6 (0x00007f1fdf200000)
+{EESSI 2023.06} hvela@ThinkPad-hvela:~/HPCNow/EESSI/develop/buildenv_tests$ ldd HelloWorld 
+	linux-vdso.so.1 (0x00007ffc1d112000)
+	libmpi.so.40 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/OpenMPI/4.1.6-GCC-13.2.0/lib/libmpi.so.40 (0x00007ed09aa64000)
+	libc.so.6 => /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib/../lib64/libc.so.6 (0x00007ed09a893000)
 	[...]
-	libevent_pthreads-2.1.so.7 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/skylake_avx512/software/libevent/2.1.12-GCCcore-13.2.0/lib64/libevent_pthreads-2.1.so.7 (0x00007f1fdf420000)
-	libm.so.6 => /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib/../lib64/libm.so.6 (0x00007f1fdeeb1000)
-	/cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib64/ld-linux-x86-64.so.2 => /lib64/ld-linux-x86-64.so.2 (0x00007f1fdf698000)
+	libevent_pthreads-2.1.so.7 => /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/libevent/2.1.12-GCCcore-13.2.0/lib64/libevent_pthreads-2.1.so.7 (0x00007ed09a4de000)
+	libm.so.6 => /cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib/../lib64/libm.so.6 (0x00007ed09a3fe000)
+	/cvmfs/software.eessi.io/versions/2023.06/compat/linux/x86_64/lib64/ld-linux-x86-64.so.2 (0x00007ed09ab8e000)
 
 ```
+
 Now is the moment of truth, if everything looks right when checking with ldd, you should be fine to run the program:
 
 ```
 {EESSI 2023.06} $ mpirun -n 2 HelloWorld
-Hello World from Node 0
-Hello World from Node 1
+Hello World from rank 0
+Hello World from rank 1
 
 ```
-Even when closing the shell and restarting the environment, the libraries should point to the directories we set in `LD_RUN_PATH`, still, remember to load the required dependencies before running the binary.
 
 !!! warning
 
@@ -242,4 +206,6 @@ Even when closing the shell and restarting the environment, the libraries should
     that is shipped with EESSI, which automatically searches these locations.
 
 The biggest downside of this approach is that your executable becomes bound to the architecture you linked your libraries for, i.e., if you add to your executable RPATH a `libhdf5.so`compiled for `intel_avx512`, you will not be able to run that binary on a machine with a different architecture. If this is an issue for you, you should look into how EESSI itself organises the location of binaries and perhaps leverage the relevant environment variables (e.g., `EESSI_SOFTWARE_SUBDIR`).
+
+
 

@@ -57,6 +57,7 @@ nav:
       - Writing tests: test-suite/writing-portable-tests.md
       - Release notes: test-suite/release-notes.md
       - API documentation: testsuite_api/
+      # - Dashboard: test-suite/dashboard.md
     - Known issues and workarounds:
       - v2023.06: known_issues/eessi-2023.06.md
   - Adding software to EESSI: 
@@ -102,6 +103,7 @@ plugins:
         software_layer/adding_software.md: adding_software/overview.md
         pilot.md: repositories/pilot.md
         gpu.md: site_specific_config/gpu.md
+        rocm.md: site_specific_config/rocm.md
   # Enable our custom plugin for json-ld metadata
   - inject_ld_json
     # link to any Markdown heading
@@ -130,7 +132,11 @@ markdown_extensions:
   # support for using MarkDown in HTML
   - md_in_html
   # code blocks with syntax highlighting, graphs
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   # line numbers
   - pymdownx.highlight:
       anchor_linenums: true
@@ -156,7 +162,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Sat, 26 Apr 2025 at 01:46:16 UTC"
+  generated_time: "Sun, 15 Jun 2025 at 12:49:35 UTC"
 extra_javascript:
   # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs

@@ -47,11 +47,11 @@ To start using python-casacore, load one of these modules using a `module load` 
 module load python-casacore/3.5.2-foss-2023b
 ```
 
-*(This data was automatically generated on {{ generated_time }})*  
+*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|python-casacore/3.5.2-foss-2023b|x|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|python-casacore/3.5.2-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### python-casacore/3.5.2-foss-2023b

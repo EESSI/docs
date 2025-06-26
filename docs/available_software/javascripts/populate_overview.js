@@ -43,7 +43,8 @@ function populate_overview(json_data) {
                         targets: "_all",
                         className: 'dt-body-center'
                     }
-                ]
+                ],
+                scrollX: true,
             });
             console.log(table)
 

@@ -24,11 +24,12 @@ from string import Template
 import numpy as np
 from mdutils.mdutils import MdUtils
 from natsort import natsorted
+from functools import cmp_to_key
 
 EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
 
 # some CPU targets are excluded for now, because software layer is too incomplete currently
-EXCLUDE_CPU_TARGETS = ['aarch64/a64fx', 'aarch64/nvidia/grace', 'x86_64/intel/cascadelake', 'x86_64/intel/icelake']
+EXCLUDE_CPU_TARGETS = ['aarch64/a64fx']
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -220,6 +221,37 @@ def targets_eessi() -> np.ndarray:
     return targets
 
 
+def eessi_target_compare(a, b):
+    """
+    A comparison function to compare the EESSI targets and order them.
+    First the main architecture is ordered alphabetically, then within them
+    the CPU targets are again ordered alphabetically, except for the
+    generic target, which always comes first. Targets that include an extra
+    vendor subdir always after those without a vendor subdir.
+    @return: 0, 1, -1
+    """
+    if a == b:
+        return 0
+
+    a_split = a.rsplit('/')
+    b_split = b.rsplit('/')
+
+    # We first compare the main architecture (aarch64, x86_64, ...), which is the 7th field
+    if a_split[7] == b_split[7]:
+        # Check if one item is for generic builds (last field), These should always be listed first
+        if a_split[-1] == 'generic':
+            return -1
+        if b_split[-1] == 'generic':
+            return 1
+        # If the number of fields are not equal, one has an extra vendor subdirectory (e.g. amd, intel, nvidia).
+        # These should always come after the ones without this extra level.
+        if len(a_split) != len(b_split):
+            return 1 if len(a_split) > len(b_split) else -1
+
+    # In all other cases we just do an alphabetical sort of the strings.
+    return 1 if a > b else -1
+
+
 def modules_eessi() -> dict:
     """
     Returns names of all software module that are installed on EESSI.
@@ -233,7 +265,14 @@ def modules_eessi() -> dict:
     if modulepath:
         module_unuse(modulepath)
 
-    targets = [t for t in targets_eessi() if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
+    targets = targets_eessi()
+
+    # Order targets
+    eessi_target_compare_key = cmp_to_key(eessi_target_compare)
+    ordered_targets = sorted(targets, key=eessi_target_compare_key)
+
+    targets = [t for t in ordered_targets if not any(t.endswith(x) for x in EXCLUDE_CPU_TARGETS)]
+
     for target in targets:
         print(f"\t Collecting available modules for {target}... ", end="", flush=True)
         module_use(target + "/modules/all/")

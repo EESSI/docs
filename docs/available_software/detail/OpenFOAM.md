@@ -26,8 +26,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''OpenFOAM/10-foss-2023a'', ''OpenFOAM/11-foss-2023a'', ''OpenFOAM/v2312-foss-2023a'',
-    ''OpenFOAM/v2406-foss-2023a'']'
+  softwareVersion: '[''OpenFOAM/10-foss-2023a'', ''OpenFOAM/11-foss-2023a'', ''OpenFOAM/12-foss-2023a'',
+    ''OpenFOAM/v2312-foss-2023a'', ''OpenFOAM/v2406-foss-2023a'']'
   url: https://www.openfoam.org/
 ---
 
@@ -49,11 +49,12 @@ To start using OpenFOAM, load one of these modules using a `module load` command
 module load OpenFOAM/v2406-foss-2023a
 ```
 
-*(This data was automatically generated on {{ generated_time }})*  
+*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenFOAM/v2406-foss-2023a|x|x|x|x|x|x|x|x|x|x|
-|OpenFOAM/v2312-foss-2023a|x|x|x|x|x|x|x|x|x|x|
-|OpenFOAM/11-foss-2023a|x|x|x|x|x|x|x|x|x|x|
-|OpenFOAM/10-foss-2023a|x|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|OpenFOAM/v2406-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|OpenFOAM/v2312-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|OpenFOAM/12-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|OpenFOAM/11-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|OpenFOAM/10-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|

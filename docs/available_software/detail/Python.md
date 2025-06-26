@@ -48,15 +48,15 @@ To start using Python, load one of these modules using a `module load` command l
 module load Python/3.11.5-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{ generated_time }})*  
+*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Python/3.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|
-|Python/3.11.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|
-|Python/3.10.8-GCCcore-12.2.0-bare|x|x|x|x|x|x|x|x|x|x|
-|Python/3.10.8-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|
-|Python/2.7.18-GCCcore-12.2.0-bare|x|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Python/3.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Python/3.11.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Python/3.10.8-GCCcore-12.2.0-bare|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Python/3.10.8-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Python/2.7.18-GCCcore-12.2.0-bare|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### Python/3.11.5-GCCcore-13.2.0
