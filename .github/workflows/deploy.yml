@@ -37,12 +37,12 @@ jobs:
       with:
         repository: eessi/test-suite
         # Path is needed, otherwise this will overwrite the checkout action that cloned the docs repo
-        path: test-suite
-        # Make sure to fetch tags, so we can checkout a particular release
-        fetch-tags: True
+        path: test-suite/test-suite
     - name: generate docs for latest release
       run: |
-        cd test-suite
+        cd test-suite/test-suite
+        # Make sure to fetch tags, so we can checkout a particular release
+        git fetch --tags
         # This assumes we stick to a version-tagging scheme vX.Y.Z
         LATEST_VERSION=$(git tag | grep '^v[0-9]\+\.[0-9]\+\.[0-9]\+$' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)
         # Use the latest release by default
