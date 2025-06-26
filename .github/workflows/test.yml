@@ -41,7 +41,7 @@ jobs:
         path: test-suite
         # Make sure to fetch tags, so we can checkout a particular release
         fetch-tags: True
-      # Generate docs for latest release
+    - name: Generate docs for latest release
       run: |
         cd eessi/tests-suite
         # This assumes we stick to a version-tagging scheme vX.Y.Z
