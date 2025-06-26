@@ -33,7 +33,7 @@ jobs:
     # Make sure to also deploy auto-generated API docs for test suite
     # For that, we need the repo to be available under eessi/test-suite
     - name: checkout test suite
-      uses: actions/checkout@actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
       with:
         repository: eessi/test-suite
         # Path is needed, otherwise this will overwrite the checkout action that cloned the docs repo
