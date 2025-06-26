@@ -15,12 +15,12 @@ jobs:
       contents: write
     steps:
     - name: checkout
-      uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
       with:
         fetch-depth: 0  # need to fetch all history to ensure correct Git revision dates in docs
 
     - name: set up Python
-      uses: actions/setup-python@13ae5bb136fac2878aff31522b9efb785519f984 # v4.3.0
+      uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
       with:
         python-version: '3.10'
 
@@ -33,7 +33,7 @@ jobs:
     # Make sure to also deploy auto-generated API docs for test suite
     # For that, we need the repo to be available under eessi/test-suite
     - name: checkout test suite
-      uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+      uses: actions/checkout@actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
       with:
         repository: eessi/test-suite
         # Path is needed, otherwise this will overwrite the checkout action that cloned the docs repo
