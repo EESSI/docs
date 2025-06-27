@@ -47,7 +47,7 @@ for the same reason that multiple hooks cannot be registered, we need to combine
 local function combined_load_hook(t)
     -- Call the EESSI load hook (if it exists)
     -- Note that if you wanted to overwrite the EESSI hooks (not recommended!), you would omit this
-    if eessi_load_hook ~= nil then
+    if isDefined("eessi_load_hook") then
         eessi_load_hook(t)
     end
     -- Call the site-specific load hook
@@ -75,7 +75,7 @@ function set_my_env_var_openmpi(t)
 end
 
 local function combined_load_hook(t)
-    if eessi_load_hook ~= nil then
+    if isDefined("eessi_load_hook") then
         eessi_load_hook(t)
     end
     set_my_env_var_openmpi(t)
@@ -131,11 +131,11 @@ Then, we combine the functions into one
 ```lua
 local function combined_load_hook(t)
     -- Call the EESSI load hook first
-    if eessi_load_hook ~= nil then
+    if isDefined("eessi_load_hook") then
         eessi_load_hook(t)
     end
     -- Then call the architecture-independent load hook
-    if set_my_env_var_openmpi(t) ~= nil then
+    if isDefined("set_my_env_var_openmpi") then
         set_my_env_var_openmpi(t)
     end
     -- And finally the architecture-dependent load hook we just defined
@@ -163,10 +163,10 @@ local function set_my_second_env_var_openmpi(t)
 end
 
 local function combined_load_hook(t)
-    if eessi_load_hook ~= nil then
+    if isDefined("eessi_load_hook") then
         eessi_load_hook(t)
     end
-    if set_my_env_var_openmpi(t) ~= nil then
+    if isDefined("set_my_env_var_openmpi") then
         set_my_env_var_openmpi(t)
     end
     set_my_second_env_var_openmpi(t)
