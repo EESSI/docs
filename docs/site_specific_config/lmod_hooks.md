@@ -135,7 +135,7 @@ local function combined_load_hook(t)
         eessi_load_hook(t)
     end
     -- Then call the architecture-independent load hook
-    if set_my_env_var_openmpi(t) ~= nil then
+    if isDefined("set_my_env_var_openmpi") then
         set_my_env_var_openmpi(t)
     end
     -- And finally the architecture-dependent load hook we just defined
@@ -166,7 +166,7 @@ local function combined_load_hook(t)
     if isDefined("eessi_load_hook") then
         eessi_load_hook(t)
     end
-    if set_my_env_var_openmpi(t) ~= nil then
+    if isDefined("set_my_env_var_openmpi") then
         set_my_env_var_openmpi(t)
     end
     set_my_second_env_var_openmpi(t)
