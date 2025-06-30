@@ -2263,6 +2263,23 @@ store the cache (and other data). You may override this by adding
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo &#39;CVMFS_CACHE_BASE=&lt;some other directory for the cache&gt;&#39; &gt;&gt; /etc/cvmfs/default.local&quot;</span>
 </code></pre></div></p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When using the default setting <code>CVMFS_CLIENT_PROFILE="single"</code>,  <code>CVMFS_HTTP_PROXY</code> is set to <code>auto;DIRECT</code>. Ìn case you have setup with a private Stratum 1 with no proxy, this can lead to unintended requests to Web Proxy Auto Discovery (WPAD) infrastructure before falling back to direct connections. Removing the <code>auto</code> ensures direct connections without unnecessary WPAD requests.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo &#39;CVMFS_HTTP_PROXY=direct&#39; &gt;&gt; /etc/cvmfs/default.local&quot;</span>
+</code></pre></div></p>
+</div>
+<p>Additionally, if you have a local proxy configured with:</p>
+<div class="highlight"><pre><span></span><code>```bash
+  CVMFS_HTTP_PROXY=&lt;local-proxy&gt;;DIRECT
+```
+</code></pre></div>
+<p>and the local proxy becomes unavailable, the client will not directly contact the Stratum 1. Instead, it will failover to CERN/FNAL fallback proxies as its set in CernVM-FS's general configuration:</p>
+<div class="highlight"><pre><span></span><code>  ```bash
+  CVMFS_FALLBACK_PROXY=&quot;http://cvmfsbproxy.cern.ch:3126;http://cvmfsbproxy.fnal.gov:3126 # Taken from /cvmfs/cvmfs- config.cern.ch/etc/cvmfs/common.conf
+  ```
+</code></pre></div>
+<p>Be aware that in such cases, the <code>DIRECT</code> directive is silently ignored.</p>
 <h2 id="installation-for-larger-systems-eg-clusters">Installation for larger systems (e.g. clusters)<a class="headerlink" href="#installation-for-larger-systems-eg-clusters" title="Permanent link">&para;</a></h2>
 <p>When using CernVM-FS on a larger number of local clients, e.g. on a HPC cluster or set of workstations,
 it is very strongly recommended to at least set up some Squid proxies close to your clients.
@@ -2277,18 +2294,18 @@ Instructions for setting up your own EESSI Stratum 1 can be found in <a href="..
 <h3 id="configuring-your-client-to-use-a-squid-proxy">Configuring your client to use a Squid proxy<a class="headerlink" href="#configuring-your-client-to-use-a-squid-proxy" title="Permanent link">&para;</a></h3>
 <p>If you have set up one or more Squid proxies, you will have to add them to your CernVM-FS client configuration.
 This can be done by removing <code>CVMFS_CLIENT_PROFILE="single"</code> from <code>/etc/cvmfs/default.local</code>, and add the following line:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>CVMFS_HTTP_PROXY=&quot;http://ip-of-your-1st-proxy:port|http://ip-of-your-2nd-proxy:port&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>CVMFS_HTTP_PROXY=&quot;http://ip-of-your-1st-proxy:port|http://ip-of-your-2nd-proxy:port&quot;
 </code></pre></div>
 <p>In this case, both proxies are equally preferable.
 More advanced use cases can be found in <a href="https://cvmfs.readthedocs.io/en/stable/cpt-configure.html#proxy-list-examples">the CernVM-FS documentation</a>.</p>
 <h3 id="configuring-your-client-to-use-a-private-stratum-1-mirror-server">Configuring your client to use a private Stratum 1 mirror server<a class="headerlink" href="#configuring-your-client-to-use-a-private-stratum-1-mirror-server" title="Permanent link">&para;</a></h3>
 <p>If you have set up your own Stratum 1 mirror server that replicates the EESSI CernVM-FS repositories,
 you can instruct your CernVM-FS client(s) to use it by prepending your newly created Stratum 1 to the existing list of EESSI Stratum 1 servers by creating a local CVMFS configuration file for the EESSI domain:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;CVMFS_SERVER_URL=&quot;http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/@fqrn@;$CVMFS_SERVER_URL&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/cvmfs/domain.d/eessi.io.local
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;CVMFS_SERVER_URL=&quot;http://&lt;url-or-ip-to-your-stratum1&gt;/cvmfs/@fqrn@;$CVMFS_SERVER_URL&quot;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/cvmfs/domain.d/eessi.io.local
 </code></pre></div>
 <p>It is also strongly recommended to disable the GEO API when using a private Stratum 1, because you want your private Stratum 1 to be picked first anyway.
 In order to do this, add the following to <code>/etc/cvmfs/domain.d/eessi.io.local</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">CVMFS_USE_GEOAPI</span><span class="o">=</span>no
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nv">CVMFS_USE_GEOAPI</span><span class="o">=</span>no
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2298,10 +2315,10 @@ In case of downtime of your private Stratum 1, they will also still be able to m
 <h3 id="applying-changes-in-the-cernvm-fs-client-configuration-files">Applying changes in the CernVM-FS client configuration files<a class="headerlink" href="#applying-changes-in-the-cernvm-fs-client-configuration-files" title="Permanent link">&para;</a></h3>
 <p>After you have made any changes to the CernVM-FS client configuration, you will have to apply them.
 If this is the first time you set up the client, you can simply run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>setup
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>setup
 </code></pre></div>
 <p>If you already had configured the client before, you can reload the configuration for the EESSI repository (or, similarly, for any other repository) using:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload<span class="w"> </span>-c<span class="w"> </span>software.eessi.io
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload<span class="w"> </span>-c<span class="w"> </span>software.eessi.io
 </code></pre></div>
 
 
@@ -2323,7 +2340,7 @@ If this is the first time you set up the client, you can simply run:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 15, 2024 14:56:37 UTC">November 15, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 20, 2025 10:13:00 UTC">February 20, 2025</span>
   </span>
 
     
