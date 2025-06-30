@@ -2520,14 +2520,14 @@ should be executed, based on:</p>
 <p>You can combine multiple filters in a single <code>build</code> instruction.
 Separate filters with a space, order of filters does not matter.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bot: build repo:eessi-hpc.org-2023.06-software arch:x86_64/amd/zen2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen2
 </code></pre></div>
 <h4 id="multiple-build-instructions">Multiple build instructions<a class="headerlink" href="#multiple-build-instructions" title="Permanent link">&para;</a></h4>
 <p>You can issue multiple build instructions in a single comment, even across multiple bot instances,
 repositories, and CPU targets. Specify one build instruction per line.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bot: build repo:eessi-hpc.org-2023.06-software arch:x86_64/amd/zen3 inst:aws
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>bot: build repo:eessi-hpc.org-2023.06-software arch:aarch64/generic inst:azure
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen3 inst:aws
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen4 inst:azure
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2557,14 +2557,9 @@ which contains the software installations and the corresponding environment modu
 <p>The message reported by the job manager provides an overview of the contents of the artefact,
 which was created by the <code>bot/check-result.sh</code> script.</p>
 <h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The test phase is not implemented yet in the bot.</p>
-<p>We intend to use the <a href="https://github.com/EESSI/test-suite">EESSI test suite</a>
-in different OS configurations to verify that the software that was built works as expected.</p>
-</div>
+<p>The bot also runs tests in the <a href="../test-suite/">EESSI test suite</a> if these match the software being installed. These tests are run after the build step by the bot through the <code>bot/test.sh</code> script. The mapping of which tests will run given the built software is defined in <code>tests/eessi_test_mapping/software_to_tests.yml</code>. Lastly, the job manager reports a summary of the test results created by the <code>bot/check-test.sh</code> script.</p>
 <h2 id="deploying">Deploying<a class="headerlink" href="#deploying" title="Permanent link">&para;</a></h2>
-<p>To deploy the artefacts that were obtained in the build phase, you should add the <code>bot: deploy</code> label
+<p>To deploy the artefacts that were obtained in the build phase, you should add the <code>bot:deploy</code> label
 to the pull request.</p>
 <p>This will trigger the event handler to upload the artefacts for ingestion into the EESSI repository.</p>
 <h3 id="behind-the-scenes_1">Behind-the-scenes<a class="headerlink" href="#behind-the-scenes_1" title="Permanent link">&para;</a></h3>
@@ -2598,7 +2593,7 @@ to the pull request.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 9, 2023 13:43:52 UTC">November 9, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 14, 2024 13:22:52 UTC">October 14, 2024</span>
   </span>
 
     
