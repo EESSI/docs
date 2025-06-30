@@ -227,7 +227,7 @@ eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
 After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
 
 ## Building an individual package
-First, prepare the environment by following the [Starting the EESSI software environment][#starting-the-eessi-software-environment] and [Configure EasyBuild](#configure-easybuild) above.
+First, prepare the environment by following the [Starting the EESSI software environment](#starting-the-eessi-software-environment) and [Configure EasyBuild](#configure-easybuild) above.
 
 In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. To mimic the build behaviour, we'll also have to (re)use any options that are listed in the easystack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
 ```
