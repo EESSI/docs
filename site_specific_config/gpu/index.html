@@ -947,7 +947,7 @@
           <li class="md-nav__item">
   <a href="#cuda_sdk" class="md-nav__link">
     <span class="md-ellipsis">
-      Compiling CUDA software
+      Compiling software on top of CUDA, cuDNN and other SDKs provided by NVIDIA
     </span>
   </a>
   
@@ -982,9 +982,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-full-cuda-sdk-optional" class="md-nav__link">
+  <a href="#installing-full-cuda-sdk-and-cudnn-sdk-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing full CUDA SDK (optional)
+      Installing full CUDA SDK and cuDNN SDK (optional)
     </span>
   </a>
   
@@ -2254,7 +2254,7 @@
           <li class="md-nav__item">
   <a href="#cuda_sdk" class="md-nav__link">
     <span class="md-ellipsis">
-      Compiling CUDA software
+      Compiling software on top of CUDA, cuDNN and other SDKs provided by NVIDIA
     </span>
   </a>
   
@@ -2289,9 +2289,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#installing-full-cuda-sdk-optional" class="md-nav__link">
+  <a href="#installing-full-cuda-sdk-and-cudnn-sdk-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      Installing full CUDA SDK (optional)
+      Installing full CUDA SDK and cuDNN SDK (optional)
     </span>
   </a>
   
@@ -2432,22 +2432,33 @@ which is visible in the output produced by <code>module avail</code>.</p>
 <p>For CUDA-enabled software to run, it needs to be able to find the <strong>NVIDIA GPU drivers</strong> of the host system.
 The challenge here is that the NVIDIA GPU drivers are not <em>always</em> in a standard system location, and that we
 can not install the GPU drivers in EESSI (since they are too closely tied to the client OS and GPU hardware).</p>
-<h3 id="cuda_sdk">Compiling CUDA software<a class="headerlink" href="#cuda_sdk" title="Permanent link">&para;</a></h3>
-<p>An additional requirement is necessary if you want to be able to compile CUDA-enabled software using a CUDA installation included in EESSI. This requires a <em>full</em> CUDA SDK, but the <a href="https://docs.nvidia.com/cuda/eula/index.html">CUDA SDK End User License Agreement (EULA)</a> does not allow for full redistribution. In EESSI, we are (currently) only allowed to redistribute the files needed to <em>run</em> CUDA software.</p>
+<h3 id="cuda_sdk">Compiling software on top of CUDA, cuDNN and other SDKs provided by NVIDIA<a class="headerlink" href="#cuda_sdk" title="Permanent link">&para;</a></h3>
+<p>An additional requirement is necessary if you want to be able to compile software
+that makes use of a CUDA installation or cu* SDKs (e.g., cuDNN) included in
+EESSI. This requires a <em>full</em> installation of the CUDA SDK, cuDNN, etc. However,
+the <a href="https://docs.nvidia.com/cuda/eula/index.html">CUDA SDK End User License Agreement (EULA)</a>
+and the <a href="https://docs.nvidia.com/deeplearning/cudnn/latest/reference/eula.html">Software License Agreement (SLA) for NVIDIA cuDNN</a>
+do not allow for full redistribution. In EESSI, we are (currently) only allowed to
+redistribute the files needed to <em>run</em> CUDA and cuDNN software.</p>
 <div class="admonition note">
-<p class="admonition-title">Full CUDA SDK only needed to <em>compile</em> CUDA software</p>
-<p>Without a full CUDA SDK on the host system, you will still be able to <em>run</em> CUDA-enabled software from the EESSI stack,
-you just won't be able to <em>compile</em> additional CUDA software.</p>
+<p class="admonition-title">A full CUDA SDK or cuDNN SDK is only needed to <em>compile</em> CUDA or cuDNN software</p>
+<p>Without a full CUDA SDK or cuDNN SDK on the host system, you will still
+be able to <em>run</em> CUDA-enabled or cuDNN-enabled software from the EESSI stack,
+you just won't be able to <em>compile</em> additional CUDA or cuDNN software.</p>
 </div>
-<p>Below, we describe how to make sure that the EESSI software stack can find your NVIDIA GPU drivers and (optionally) full installations of the CUDA SDK.</p>
+<p>Below, we describe how to make sure that the EESSI software stack can find your
+NVIDIA GPU drivers and (optionally) full installations of the CUDA SDK and the
+cuDNN SDK.</p>
 <h3 id="driver_location">Configuring CUDA driver location<a class="headerlink" href="#driver_location" title="Permanent link">&para;</a></h3>
 <p>All CUDA-enabled software in EESSI expects the CUDA drivers to be available in a specific subdirectory of this <code>host_injections</code> directory.
-In addition, installations of the CUDA SDK included EESSI are stripped down to the files that we are allowed to redistribute;
+In addition, installations of the CUDA SDK and cuDNN SDK included EESSI are stripped down to the files that we are allowed to redistribute;
 all other files are replaced by symbolic links that point to another specific subdirectory of <code>host_injections</code>. For example:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ ls -l /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>lrwxrwxrwx 1 cvmfs cvmfs 109 Dec 21 14:49 /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc -&gt; /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
 </code></pre></div></p>
-<p>If the corresponding full installation of the CUDA SDK is available there, the CUDA installation included in EESSI can be used to build CUDA software.</p>
+<p>If the corresponding full installation of the CUDA SDK is available there, the
+CUDA installation included in EESSI can be used to build CUDA software. The same
+applies to the cuDNN SDK.</p>
 <h3 id="nvidia_eessi_native">Using NVIDIA GPUs via a native EESSI installation<a class="headerlink" href="#nvidia_eessi_native" title="Permanent link">&para;</a></h3>
 <p>Here, we describe the steps to enable GPU support when you have a <a href="../../getting_access/native_installation/">native EESSI installation</a> on your system.</p>
 <div class="admonition warning">
@@ -2464,29 +2475,31 @@ all other files are replaced by symbolic links that point to another specific su
 <p>You should re-run this script every time you update the NVIDIA GPU drivers on the host system.</p>
 <p>Note that it is safe to re-run the script even if no driver updates were done: the script should detect that the current version of the drivers were already symlinked.</p>
 </div>
-<h4 id="installing-full-cuda-sdk-optional">Installing full CUDA SDK (optional)<a class="headerlink" href="#installing-full-cuda-sdk-optional" title="Permanent link">&para;</a></h4>
-<p>To install a full CUDA SDK under <code>host_injections</code>, use the <code>install_cuda_host_injections.sh</code> script that is included in EESSI:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/scripts/gpu_support/nvidia/install_cuda_host_injections.sh
+<h4 id="installing-full-cuda-sdk-and-cudnn-sdk-optional">Installing full CUDA SDK and cuDNN SDK (optional)<a class="headerlink" href="#installing-full-cuda-sdk-and-cudnn-sdk-optional" title="Permanent link">&para;</a></h4>
+<p>To install a full CUDA SDK and cuDNN SDK under <code>host_injections</code>, use the <code>install_cuda_and_libraries.sh</code> script that is included in EESSI:</p>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh
 </code></pre></div>
-<p>For example, to install CUDA 12.1.1 in the directory that the <a href="../host_injections/"><code>host_injections</code> variant symlink</a> points to,
+<p>For example, to install CUDA 12.1.1 and cuDNN 8.9.2.26 in the directory that the <a href="../host_injections/"><code>host_injections</code> variant symlink</a> points to,
 using <code>/tmp/$USER/EESSI</code> as directory to store temporary files:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --cuda-version 12.1.1 --temp-dir /tmp/$USER/EESSI --accept-cuda-eula
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh --temp-dir /tmp/$USER/EESSI --accept-cuda-eula --accept-cudnn-eula
 </code></pre></div>
-You should choose the CUDA version you wish to install according to what CUDA versions are included in EESSI;
-see the output of <code>module avail CUDA/</code> after <a href="../../using_eessi/setting_up_environment/">setting up your environment for using
-EESSI</a>.</p>
-<p>You can run <code>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_host_injections.sh --help</code> to check all of the options.</p>
+The versions 12.1.1 for CUDA and 8.9.2.26 for cuDNN are defined in an easystack
+file that is also included in EESSI:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/easystacks/eessi-2023.06-eb-4.9.4-2023a-CUDA-host-injections.yml
+</code></pre></div>
+By default, the install script processes all files matching <code>eessi-*CUDA*.yml</code> in
+the above <code>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/easystacks</code> directory.</p>
+<p>You can run <code>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh --help</code> to check all of the options.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>This script uses EasyBuild to install the CUDA SDK. For this to work, two requirements need to be satisfied:</p>
+<p>This script uses EasyBuild to install the CUDA SDK and the cuDNN SDK. For this to work, two requirements need to be satisfied:</p>
 <ul>
-<li><code>module load EasyBuild</code> should work (or the <code>eb</code> command is already available in the environment);</li>
-<li>The version of EasyBuild being used should provide the requested version of the CUDA easyconfig file
-  (in the example case above, that's <code>CUDA-12.1.1.eb</code>).</li>
+<li><code>module load EasyBuild/${EB_VERSION}</code> must work (EB_VERSION is extracted
+  from the name of the easystack file (e.g., from <code>eb-4.9.4</code> EB_VERSION is
+  derived as 4.9.4);</li>
+<li><code>module load EESSI-extend/${EESSI_VERSION}-easybuild</code> must work.</li>
 </ul>
-<p>You can rely on the EasyBuild installation that is included in EESSI for this.</p>
-<p>Alternatively, you may load an EasyBuild module manually <em>before</em> running the <code>install_cuda_host_injections.sh</code>
-script to make an <code>eb</code> command available.</p>
+<p>Both modules are included in EESSI.</p>
 </div>
 <h3 id="nvidia_eessi_container">Using NVIDIA GPUs via EESSI in a container<a class="headerlink" href="#nvidia_eessi_container" title="Permanent link">&para;</a></h3>
 <p>We focus here on the <a href="https://apptainer.org/">Apptainer</a>/<a href="https://sylabs.io/singularity">Singularity</a> use case,
@@ -2502,8 +2515,8 @@ in the container.</p>
 <h3 id="gpu_cuda_testing">Testing the GPU support<a class="headerlink" href="#gpu_cuda_testing" title="Permanent link">&para;</a></h3>
 <p>The quickest way to test if software installations included in  EESSI can access and use your GPU is to run the
 <code>deviceQuery</code> executable that is part of the <code>CUDA-Samples</code> module:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>module load CUDA-Samples
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>deviceQuery
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>module load CUDA-Samples
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>deviceQuery
 </code></pre></div>
 If both are successful, you should see information about your GPU printed to your terminal.</p>
 <h2 id="amd">Support for using AMD GPUs<a class="headerlink" href="#amd" title="Permanent link">&para;</a></h2>
@@ -2549,7 +2562,7 @@ If you have specific ROCm software requirements or insights to share, please <a 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 09:25:34 UTC">May 28, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 30, 2025 09:57:02 UTC">June 30, 2025</span>
   </span>
 
     
