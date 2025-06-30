@@ -56,6 +56,7 @@ nav:
       - Available tests: test-suite/available-tests.md
       - Writing tests: test-suite/writing-portable-tests.md
       - Release notes: test-suite/release-notes.md
+      - API documentation: testsuite_api/
       # - Dashboard: test-suite/dashboard.md
     - Known issues and workarounds:
       - v2023.06: known_issues/eessi-2023.06.md
@@ -105,6 +106,24 @@ plugins:
         rocm.md: site_specific_config/rocm.md
   # Enable our custom plugin for json-ld metadata
   - inject_ld_json
+    # link to any Markdown heading
+  - autorefs
+    # api automatics documentation 
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [test-suite/test-suite] 
+          options:
+            docstring_style: sphinx
+            docstring_section_style: spacy
+            show_source: false
+  - gen-files:
+      scripts:
+          - docs/generate_eessi_testsuite_api_docs.py
+  - literate-nav:
+      nav_file: summary.md
+  - section-index
 markdown_extensions:
   # enable adding HTML attributes and CSS classes
   - attr_list
