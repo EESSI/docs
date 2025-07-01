@@ -53,11 +53,12 @@ git checkout main
 !!! info "Changes to [EESSI/software-layer](https://github.com/EESSI/software-layer)"
 
     On 2025-06-11 the [EESSI/software-layer](https://github.com/EESSI/software-layer) repository was split to primarily include 
-    easystack files necessary for builds. Most build scripts have been moved to the new repository 
-    [EESSI/software-layer-scripts](https://github.com/EESSI/software-layer-scripts). In addition, installations to particular
-    EESSI versions are no longer tracked by branches in [EESSI/software-layer](https://github.com/EESSI/software-layer) (e.g.,
-    the old `2023.06-software.eessi.io` branch), but by editing or creating the easystack file in the corresponding directory (e.g.,
-    `easystacks/software.eessi.io/2023.06/` to target version `2023.06`).
+    easystack files necessary for triggering builds. Most scripts needed to build the software have been moved to the new
+    repository [EESSI/software-layer-scripts](https://github.com/EESSI/software-layer-scripts). In addition, 
+    installations to particular EESSI versions are no longer tracked by branches in 
+    [EESSI/software-layer](https://github.com/EESSI/software-layer) (e.g., the old `2023.06-software.eessi.io` branch), but 
+    by editing or creating the easystack file in the corresponding directory (e.g., `easystacks/software.eessi.io/2023.06/` to 
+    target version `2023.06`).
 
 ### Creating a pull request {: #software_layer_pull_request }
 
