@@ -1,6 +1,6 @@
 ---
 authors: [toine, timvc, boegel, ocaisa, darkless]
-date: 2025-06-24
+date: 2025-06-30
 slug: rocm
 ---
 
