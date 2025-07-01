@@ -51,19 +51,6 @@ which is part of the default CernVM-FS configuration since 21 November 2023.
 To gain access to it, no other action is required then installing (and configuring)
 the client component of CernVM-FS.
 
-??? note "Note on the EESSI pilot repository *(click to expand)*"
-
-    There is also a ["pilot" CernVM-FS repository for EESSI (`/cvmfs/pilot.eessi-hpc.org`)](http://www.eessi.io/docs/pilot),
-    which was primarily used to gain experience with CernVM-FS in the early years of the EESSI project.
-
-    ***Although it is still available currently, we do <span style="text-decoration:underline;">not</span> recommend using it***.
-
-    Not only will you need to [install the CernVM-FS configuration for EESSI](
-    https://github.com/EESSI/filesystem-layer/tree/v0.5.0#method-2-packages)
-    to gain access to it, there also are **no guarantees** that the EESSI pilot repository will remain stable
-    or even available, nor that the software installations it provides are actually functional,
-    since it may be used for experimentation purposes by the EESSI maintainers.
-
 ### Compatibility layer {: #compatibility_layer }
 
 The *compatibility layer* of EESSI **levels the ground** across different (versions of) the Linux operating system (OS)

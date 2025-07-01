@@ -130,7 +130,7 @@ mkdir -p /tmp/$USER/{var-lib-cvmfs,var-run-cvmfs}
 export APPTAINER_BIND="/tmp/$USER/var-run-cvmfs:/var/run/cvmfs,/tmp/$USER/var-lib-cvmfs:/var/lib/cvmfs"
 FUSEMOUNT_CVMFS_CONFIG="container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch"
 FUSEMOUNT_EESSI="container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io"
-apptainer shell --fusemount "${FUSEMOUNT_CVMFS_CONFIG}" --fusemount "${FUSEMOUNT_EESSI}" docker://ghcr.io/eessi/client-pilot:centos7
+apptainer shell --fusemount "${FUSEMOUNT_CVMFS_CONFIG}" --fusemount "${FUSEMOUNT_EESSI}" docker://ghcr.io/eessi/client:rocky8
 ```
 
 ## Alien cache

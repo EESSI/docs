@@ -27,7 +27,6 @@ nav:
       - Repositories:
         - Production: repositories/software.eessi.io.md
         - RISC-V: repositories/riscv.eessi.io.md
-        - Pilot: repositories/pilot.md
         - Development repository: repositories/dev.eessi.io.md
   - Installation and configuration:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
@@ -101,7 +100,6 @@ plugins:
         contributing_sw/opening_pr.md: adding_software/opening_pr.md
         contributing_sw/overview.md: adding_software/overview.md
         software_layer/adding_software.md: adding_software/overview.md
-        pilot.md: repositories/pilot.md
         gpu.md: site_specific_config/gpu.md
         rocm.md: site_specific_config/rocm.md
   # Enable our custom plugin for json-ld metadata
