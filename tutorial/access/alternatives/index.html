@@ -549,29 +549,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../repositories/pilot/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Pilot
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../repositories/dev.eessi.io/" class="md-nav__link">
         
   
@@ -4046,7 +4023,7 @@ to start an interactive shell in which EESSI is available, as follows:</p>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">APPTAINER_BIND</span><span class="o">=</span><span class="s2">&quot;/tmp/</span><span class="nv">$USER</span><span class="s2">/var-run-cvmfs:/var/run/cvmfs,/tmp/</span><span class="nv">$USER</span><span class="s2">/var-lib-cvmfs:/var/lib/cvmfs&quot;</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch&quot;</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nv">FUSEMOUNT_EESSI</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io&quot;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>apptainer<span class="w"> </span>shell<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUSEMOUNT_EESSI</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>docker://ghcr.io/eessi/client-pilot:centos7
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>apptainer<span class="w"> </span>shell<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUSEMOUNT_EESSI</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>docker://ghcr.io/eessi/client:rocky8
 </code></pre></div>
 <h2 id="alien-cache">Alien cache<a class="headerlink" href="#alien-cache" title="Permanent link">&para;</a></h2>
 <p>An alien cache can be used, optionally in combination with preloading, as another alternative,
@@ -4075,7 +4052,7 @@ tutorial.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 15:42:10 UTC">April 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 1, 2025 13:37:34 UTC">July 1, 2025</span>
   </span>
 
     
