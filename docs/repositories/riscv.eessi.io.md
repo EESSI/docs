@@ -1,5 +1,12 @@
 # EESSI RISC-V development repository (`riscv.eessi.io`)
 
+!!! note "Is `riscv.eessi.io` a webpage?"
+    If you landed on this page because you typed `riscv.eessi.io` into your browser, then
+    you may not know yet that this is not a URL/webpage but a [CernVM-FS repository](../filesystem_layer.md)
+    that EESSI uses to distribute software.
+ 
+    **See the [EESSI overview page](../overview.md) for a general introduction to EESSI.**
+
 This repository contains development versions of an EESSI RISC-V software stack.
 Note that versions may be added, modified, or deleted at any time.
 

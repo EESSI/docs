@@ -1,5 +1,12 @@
 # Development repository (`dev.eessi.io`)
 
+!!! note "Is `dev.eessi.io` a webpage?"
+    If you landed on this page because you typed `dev.eessi.io` into your browser, then
+    you may not know yet that this is not a URL/webpage but a [CernVM-FS repository](../filesystem_layer.md)
+    that EESSI uses to distribute software.
+ 
+    **See the [EESSI overview page](../overview.md) for a general introduction to EESSI.**
+
 ## What is `dev.eessi.io`?
 
 `dev.eessi.io` is the development repository of EESSI. With it, developers in the [MultiXscale CoE](https://multixscale.eu) can deploy pre-release builds of their software to EESSI.
