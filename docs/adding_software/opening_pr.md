@@ -41,24 +41,33 @@ git remote add koala git@github.com:koala/software-layer.git
 ```
 
 3) Check out the branch that corresponds to the version of EESSI repository you want to add software to,
-   for example `2023.06-software.eessi.io`:
+   for example `main`:
 
 ```
-git checkout 2023.06-software.eessi.io
+git checkout main
 ```
 
 !!! note
     The commands above only need to be run once, to prepare your setup for making pull requests.
 
+!!! info "Changes to [EESSI/software-layer](https://github.com/EESSI/software-layer)"
+
+    On 2025-06-11 the [EESSI/software-layer](https://github.com/EESSI/software-layer) repository was split to primarily include 
+    easystack files necessary for builds. Most build scripts have been moved to the new repository 
+    [EESSI/software-layer-scripts](https://github.com/EESSI/software-layer-scripts). In addition, installations to particular
+    EESSI versions are no longer tracked by branches in [EESSI/software-layer](https://github.com/EESSI/software-layer) (e.g.,
+    the old `2023.06-software.eessi.io` branch), but by editing or creating the easystack file in the corresponding directory (e.g.,
+    `easystacks/software.eessi.io/2023.06/` to target version `2023.06`).
+
 ### Creating a pull request {: #software_layer_pull_request }
 
-1) Make sure that your `2023.06-software.eessi.io` branch in the checkout of the
+1) Make sure that your `main` branch in the checkout of the
   [`EESSI/software-layer`](https://github.com/EESSI/software-layer) repository is up-to-date
 
 ```
 cd EESSI/software-layer
-git checkout 2023.06-software.eessi.io 
-git pull origin 2023.06-software.eessi.io 
+git checkout main
+git pull origin main
 ```
 
 2) Create a new branch (use a sensible name, not `example_branch` as below), and check it out
@@ -91,20 +100,19 @@ git push koala example_branch
 6) Go to the [GitHub web interface](https://github.com/EESSI/software-layer) to open your pull request,
    or use the helpful link that should show up in the output of the `git push` command.
 
-   **Make sure you target the correct branch**: the one that corresponds to the version of EESSI you want to add
-   software to (like `2023.06-software.eessi.io`).
+   **Make sure you target the `main` branch.**
 
    If all goes well, one or more bots :robot: should almost instantly create a comment in your pull request
    with an overview of how it is configured - you will need this information when providing build instructions.
 
 ### Rebuilding software {: #rebuilding_software } 
-We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using the software. However, there are certain situations in which it is difficult or impossible to avoid.
+We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using it. However, there are certain situations in which it is difficult or impossible to avoid.
 
-To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` directory. Use the following naming convention: `YYYYMMDD-eb-<EB_VERSION>-<APPLICATION_NAME>-<APPLICATION_VERSION>-<SHORT_DESCRIPTION>.yml`, where `YYYYMMDD` is the opening date of your PR. E.g. `2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml` was added in a PR on the 6th of May 2024 and used to rebuild CUDA-12.1.1 using EasyBuild 4.9.1 to resolve an issue with some runtime libraries missing from the initial CUDA 12.1.1 installation.
+To do a rebuild, you add the software you want to rebuild to a dedicated easystack file in the `rebuilds` subdirectory inside each version's directory. Use the following naming convention: `YYYYMMDD-eb-<EB_VERSION>-<APPLICATION_NAME>-<APPLICATION_VERSION>-<SHORT_DESCRIPTION>.yml`, where `YYYYMMDD` is the opening date of your PR. E.g. `20240506-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml` was added in a PR on the 6th of May 2024 and used to rebuild CUDA-12.1.1 using EasyBuild 4.9.1 to resolve an issue with some runtime libraries missing from the initial CUDA 12.1.1 installation.
 
 At the top of your easystack file, please use comments to include a short description, and make sure to include any relevant links to related issues (e.g. from the GitHub repositories of EESSI, EasyBuild, or the software you are rebuilding).
 
-As an example, consider the full easystack file (`2024.05.06-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml`) used for the aforementioned CUDA rebuild: 
+As an example, consider the full easystack file (`20240506-eb-4.9.1-CUDA-12.1.1-ship-full-runtime.yml`) used for the aforementioned CUDA rebuild: 
 
 ```yaml
 # 2024.05.06
