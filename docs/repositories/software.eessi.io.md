@@ -1,5 +1,12 @@
 # Production EESSI repository (`software.eessi.io`)
 
+!!! note "Is `software.eessi.io` a webpage?"
+    If you landed on this page because you typed `software.eessi.io` into your browser, then
+    you may not know yet that this is not a URL/webpage but a [CernVM-FS repository](../filesystem_layer.md)
+    that EESSI uses to distribute software.
+ 
+    **See the [EESSI overview page](../overview.md) for a general introduction to EESSI.**
+
 ## Question or problems
 
 If you have any questions regarding EESSI, or if you experience a problem in accessing or using it,
