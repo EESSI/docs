@@ -97,7 +97,7 @@ Separate filters with a space, order of filters does not matter.
 For example:
 
 ```
-bot: build repo:eessi-hpc.org-2023.06-software arch:x86_64/amd/zen2
+bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen2
 ```
 
 #### Multiple build instructions
@@ -108,8 +108,8 @@ repositories, and CPU targets. Specify one build instruction per line.
 For example:
 
 ```
-bot: build repo:eessi-hpc.org-2023.06-software arch:x86_64/amd/zen3 inst:aws
-bot: build repo:eessi-hpc.org-2023.06-software arch:aarch64/generic inst:azure
+bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen3 inst:aws
+bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen4 inst:azure
 ```
 
 !!! note
@@ -154,15 +154,11 @@ which was created by the `bot/check-result.sh` script.
 
 ## Testing { #testing }
 
-!!! warning
-    The test phase is not implemented yet in the bot.
-
-    We intend to use the [EESSI test suite](https://github.com/EESSI/test-suite)
-    in different OS configurations to verify that the software that was built works as expected.
+The bot also runs tests in the [EESSI test suite](test-suite/index.md) if these match the software being installed. These tests are run after the build step by the bot through the `bot/test.sh` script. The mapping of which tests will run given the built software is defined in `tests/eessi_test_mapping/software_to_tests.yml`. Lastly, the job manager reports a summary of the test results created by the `bot/check-test.sh` script.
 
 ## Deploying { #deploying }
 
-To deploy the artefacts that were obtained in the build phase, you should add the `bot: deploy` label
+To deploy the artefacts that were obtained in the build phase, you should add the `bot:deploy` label
 to the pull request.
 
 This will trigger the event handler to upload the artefacts for ingestion into the EESSI repository.
