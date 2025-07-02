@@ -12,8 +12,11 @@ import mkdocs_gen_files
 TEST_SUITE = "test-suite/test-suite"
 CI = os.getenv('CI')
 
-if CI and not os.path.isdir(TEST_SUITE):
-    raise FileNotFoundError(f"Error: {TEST_SUITE} does not exist. Please clone the eessi/test-suite in a test-suite dir.")
+if not os.path.isdir(TEST_SUITE):
+    if CI:
+      raise FileNotFoundError(f"Error: {TEST_SUITE} does not exist. Please clone the eessi/test-suite in a test-suite dir.")
+    else:
+      print(f"Warning: {TEST_SUITE} does not exist. Ignoring this for a non-CI documentation build, but you could clone the eessi/test-suite in a test-suite dir to build the test suite API docs.")
 
 # build a navigation for the menu and a dictionary of navigations for each section
 nav = mkdocs_gen_files.Nav()
