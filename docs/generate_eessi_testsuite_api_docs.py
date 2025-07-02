@@ -10,8 +10,9 @@ from pathlib import Path
 import mkdocs_gen_files
 
 TEST_SUITE = "test-suite/test-suite"
+CI = os.getenv('CI')
 
-if not os.path.isdir(TEST_SUITE):
+if CI and not os.path.isdir(TEST_SUITE):
     raise FileNotFoundError(f"Error: {TEST_SUITE} does not exist. Please clone the eessi/test-suite in a test-suite dir.")
 
 # build a navigation for the menu and a dictionary of navigations for each section
