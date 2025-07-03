@@ -1,6 +1,6 @@
 ## EESSI pilot repository (`pilot.eessi-hpc.org`)
 
-Several pilot versions have been made available in the `pilot.eessi-hpc.org` repository from 2020 until 2023.
+Several pilot versions have been made available in the `/cvmfs/pilot.eessi-hpc.org` repository from 2020 until 2023.
 These versions were used to set up to gain experience with all the different components, set up the entire (automated) build workflow and infrastructure, find bugs and issues,
 and work towards a stable production-ready version of EESSI.
 
