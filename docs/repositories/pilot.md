@@ -4,7 +4,8 @@ Several pilot versions have been made available in the `/cvmfs/pilot.eessi-hpc.o
 These versions were used to set up to gain experience with all the different components, set up the entire (automated) build workflow and infrastructure, find bugs and issues,
 and work towards a stable production-ready version of EESSI.
 
-When the 2023.06 version of EESSI was released in the [production repository `software.eessi.io`](software.eessi.io.md), the pilot versions became unsupported.
+
+When the 2023.06 version of EESSI was released (mid 2023) in the [production repository `/cvmfs/software.eessi.io`](software.eessi.io.md), the pilot versions became unsupported.
 In 2024 the initialization scripts of the pilot versions were modified to print deprecation messages, and they would try to automatically redirect users to the production repository.
 In May 2025, a removal announcement was added to the deprecation message.
 Finally, on 1 July 2025, the repository was removed, and the servers hosting the pilot repository were shut down.
