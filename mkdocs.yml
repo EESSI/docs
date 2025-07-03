@@ -27,7 +27,6 @@ nav:
       - Repositories:
         - Production: repositories/software.eessi.io.md
         - RISC-V: repositories/riscv.eessi.io.md
-        - Pilot: repositories/pilot.md
         - Development repository: repositories/dev.eessi.io.md
   - Installation and configuration:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
