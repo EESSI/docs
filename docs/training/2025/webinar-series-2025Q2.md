@@ -19,7 +19,7 @@ You can register for the sessions listed below (either all of them, or selected 
 
 All sessions will be recorded. Recordings, slides, and materials used will be made publicly available shortly after each session via this page.
 
-**In you have any questions regarding these webinars, please send an email to `support@eessi.io`.**
+**If you have any questions regarding these webinars, please send an email to `support@eessi.io`.**
 
 ## Sessions
 
