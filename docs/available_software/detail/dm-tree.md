@@ -5,9 +5,11 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: ''
+  description: dm-tree provides tree, a library for working with nested data structures.
+    In a way,tree generalizes the builtin map function which only supports flat sequences,
+    andallows to apply a function to each "leaf" preserving the overall structure.
   license: Not confirmed
-  name: Java
+  name: dm-tree
   offers:
     '@type': Offer
     price: 0
@@ -24,36 +26,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''Java/11(@Java/11.0.27)'', ''Java/11.0.20'', ''Java/11.0.27'',
-    ''Java/17(@Java/17.0.15)'', ''Java/17.0.6'', ''Java/17.0.15'', ''Java/21(@Java/21.0.7)'',
-    ''Java/21.0.5'', ''Java/21.0.7'']'
-  url: ''
+  softwareVersion: '[''dm-tree/0.1.8-GCCcore-12.3.0'']'
+  url: https://github.com/deepmind/tree
 ---
 
-Java
-====
+dm-tree
+=======
 
+
+dm-tree provides tree, a library for working with nested data structures. In a way,tree generalizes the builtin map function which only supports flat sequences, andallows to apply a function to each "leaf" preserving the overall structure.
+
+https://github.com/deepmind/tree
 # Available modules
 
 
-The overview below shows which Java installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which dm-tree installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using Java, load one of these modules using a `module load` command like:
+To start using dm-tree, load one of these modules using a `module load` command like:
 
 ```shell
-module load Java/21.0.7
+module load dm-tree/0.1.8-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Java/21.0.7|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Java/21.0.5|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Java/21(@Java/21.0.7)|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Java/17.0.15|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Java/17.0.6|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Java/17(@Java/17.0.15)|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Java/11.0.27|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Java/11.0.20|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Java/11(@Java/11.0.27)|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|dm-tree/0.1.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|
