@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''Bazel/6.3.1-GCCcore-12.3.0'']'
+  softwareVersion: '[''Bazel/6.1.0-GCCcore-12.3.0'', ''Bazel/6.3.1-GCCcore-12.3.0'']'
   url: https://bazel.io/
 ---
 
@@ -52,3 +52,4 @@ module load Bazel/6.3.1-GCCcore-12.3.0
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Bazel/6.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Bazel/6.1.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|
