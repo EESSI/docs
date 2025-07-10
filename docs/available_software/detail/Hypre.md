@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''Hypre/2.29.0-foss-2023a'']'
+  softwareVersion: '[''Hypre/2.29.0-foss-2023a'', ''Hypre/2.31.0-foss-2023b'']'
   url: https://computation.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods
 ---
 
@@ -46,11 +46,12 @@ The overview below shows which Hypre installations are available per target arch
 To start using Hypre, load one of these modules using a `module load` command like:
 
 ```shell
-module load Hypre/2.29.0-foss-2023a
+module load Hypre/2.31.0-foss-2023b
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Hypre/2.31.0-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |Hypre/2.29.0-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
