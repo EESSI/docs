@@ -61,8 +61,8 @@ Once the ingestion has been done, simply re-triggering the CI workflow should be
 
 !!! note
     This assumes that the easystack file being modified is considered by the CI workflow file
-    (`.github/workflows/test_eessi.yml`) that checks for missing installations, in the correct branch (for example
-    `2023.06`) of the [software-layer](https://github.com/EESSI/software-layer).
+    (`.github/workflows/test_eessi.yml`) that checks for missing installations, in the `main` branch of the 
+    [software-layer](https://github.com/EESSI/software-layer).
 
     If that's not the case yet, update this workflow in your pull request as well to add the missing easystack file!
 
