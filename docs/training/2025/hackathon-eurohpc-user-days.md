@@ -78,7 +78,9 @@ There will also be an opportunity to ask questions directly to the speakers, sho
 
 ## Session details
 
-Full sessions details (including timings for breaks) will be added soon, a general outline is:
+The session will take place from 9.30am to 4 pm, 2 October 2025. Full sessions details (including timings for breaks) will be added soon.
+
+A general outline of the program is:
 
 - What is CI/CD
 - What makes CI different in the HPC domain
