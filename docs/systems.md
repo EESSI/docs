@@ -108,6 +108,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 * Snellius: [General documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Snellius) | [EESSI @ Snellius](https://servicedesk.surf.nl/wiki/display/WIKI/EESSI+software+environment)
 * Spider: [General documentation](https://doc.spider.surfsara.nl/en/latest/index.html) | [EESSI @ Spider](https://doc.spider.surfsara.nl/en/latest/Pages/software/eessi.html)
 * Research Cloud: [General documentation](https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Cloud) | [EESSI @ Research Cloud](https://servicedesk.surf.nl/wiki/display/WIKI/RC+component+EESSI+Client)
+* Experimental Technologies Platform: [General documentation](https://servicedesk.surf.nl/wiki/x/6YC1Aw) | [EESSI @ ETP](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/96207409/Available+technologies#Availabletechnologies-EESSIEnvironmentModules)
 
 #### University of Groningen
 
