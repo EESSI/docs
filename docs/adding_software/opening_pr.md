@@ -40,8 +40,7 @@ cd software-layer
 git remote add koala git@github.com:koala/software-layer.git
 ```
 
-3) Check out the branch that corresponds to the version of EESSI repository you want to add software to,
-   for example `main`:
+3) Make sure that you are on the `main` branch:
 
 ```
 git checkout main
@@ -52,8 +51,7 @@ git checkout main
 
 !!! info "Changes to [EESSI/software-layer](https://github.com/EESSI/software-layer)"
 
-    On 2025-06-11 the [EESSI/software-layer](https://github.com/EESSI/software-layer) repository was split to primarily include 
-    easystack files necessary for triggering builds. Most scripts needed to build the software have been moved to the new
+    On 2025-06-11 the [EESSI/software-layer](https://github.com/EESSI/software-layer) repository was split to primarily include    easystack files necessary for triggering builds. Most scripts needed to build the software have been moved to the new
     repository [EESSI/software-layer-scripts](https://github.com/EESSI/software-layer-scripts). In addition, 
     installations to particular EESSI versions are no longer tracked by branches in 
     [EESSI/software-layer](https://github.com/EESSI/software-layer) (e.g., the old `2023.06-software.eessi.io` branch), but 
@@ -78,17 +76,17 @@ git checkout -b example_branch
 ```
 
 3) Determine the correct easystack file to change, and add one or more lines to it that specify which
-   easyconfigs should be installed
+   easyconfigs should be installed. Make sure that the easystack file is in the correct subdirectory. The structure should be `easystacks/software.eessi.io/<eessi_version>/eessi-<eessi_version>/eb-<eb_version>-<toolchain_version>.yml`:
 
 ```shell
-echo '  - example-1.2.3-GCC-12.3.0.eb' >> easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
+echo '  - example-1.2.3-GCC-12.3.0.eb' >> easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-5.1.1-2023a.yml
 ```
 Note that the naming scheme is standardized and should be `eessi-<eessi_version>-eb-<eb_version>-<toolchain_version>.yml`. See the [official EasyBuild documentation on easystack files](https://docs.easybuild.io/easystack-files/) for more information on the syntax.
 
 4) Stage and commit the changes into your your branch with a sensible message
 
 ```shell
-git add easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-4.8.2-2023a.yml
+git add easystacks/software.eessi.io/2023.06/eessi-2023.06-eb-5.1.1-2023a.yml
 git commit -m "{2023.06}[GCC/12.3.0] example 1.2.3"
 ```
 
@@ -102,9 +100,6 @@ git push koala example_branch
    or use the helpful link that should show up in the output of the `git push` command.
 
    **Make sure you target the `main` branch.**
-
-   If all goes well, one or more bots :robot: should almost instantly create a comment in your pull request
-   with an overview of how it is configured - you will need this information when providing build instructions.
 
 ### Rebuilding software {: #rebuilding_software } 
 We typically do not rebuild software, since (strictly speaking) this breaks reproducibility for anyone using it. However, there are certain situations in which it is difficult or impossible to avoid.
