@@ -40,6 +40,9 @@ for path in sorted(Path(f"{TEST_SUITE}/eessi/").rglob("*.py")):
     # Skip the __main__, if there is one. This is not part of the API
     elif parts[-1] == "__main__":
         continue
+    else:
+        print(f"Error: No __init__ or __main__ found in {module_path} this directory, if this should be a "
+              "part of docs please add an __init__.")
 
     # Add an entry for this module to the navigation
     nav[parts] = doc_path.as_posix()
