@@ -143,7 +143,12 @@ The Steering Committee shall be responsible for:
 
 The Steering Committee is made up of community members with sustained and recognized contributions over time. Members take part in the Steering Committee as private individuals (i.e. they do not represent their employer(s)).
 
-Members will be removed from the committee if they resign. Furthermore, if a Member is inactive for 6 Months and does not reply to communication from the rest of the Steering Committee, the Member may be voted out by the other Steering Committee members (regular voting rules, as per section 6.3, apply). Finally, a Member may be voted out. In this case, the vote needs to be unanimous between the other Members.
+Membership of the Steering Committe can terminate in three ways:
+
+- A Member can resign
+- A Member may be voted out. In this case, the vote needs to be unanimous between the other Members.
+- If a Member is inactive for 6 Months and does not reply to communication from the rest of the Steering Committee, the Member may be voted out by the other Steering Committee members. In this case, regular voting rules, as per section 6.3, apply.
+
 
 New Members are recommended by the Steering Committee. The Steering Committee will make the recommendation known to the community, and collect feedback on the recommendation. The Steering Committee then weighs the feedback, and votes on whether to accept the new member. In the selection process, the Steering Committee will consider the following:
 - The Steering Committee ideally consists of an odd number of Members
