@@ -1,6 +1,31 @@
 ---
 hide:
-  - toc
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Python/numpy interface to netCDF.
+  license: Not confirmed
+  name: netcdf4-python
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''netcdf4-python/1.6.3-foss-2022b'', ''netcdf4-python/1.6.4-foss-2023a'']'
+  url: https://unidata.github.io/netcdf4-python/
 ---
 
 netcdf4-python
@@ -21,12 +46,12 @@ To start using netcdf4-python, load one of these modules using a `module load` c
 module load netcdf4-python/1.6.4-foss-2023a
 ```
 
-*(This data was automatically generated on {{ generated_time }})*  
+*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/haswell|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|netcdf4-python/1.6.4-foss-2023a|x|x|x|x|x|x|x|x|x|
-|netcdf4-python/1.6.3-foss-2022b|x|x|x|x|x|x|x|x|x|
+| |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|netcdf4-python/1.6.4-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|netcdf4-python/1.6.3-foss-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### netcdf4-python/1.6.4-foss-2023a

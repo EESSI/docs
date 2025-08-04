@@ -39,18 +39,24 @@ Karolina is the EuroHPC JU supercomputer hosted by [IT4Innovations](https://www.
 
 ### Vega (Slovenia)
 
-Vega is the EuroHPC JU supercomputer hosted by [the Institute for Information Science (IZUM)](https://izum.si/en/home).
+Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Science (IZUM)](https://izum.si/en/home).
 
 * [General documentation](https://doc.vega.izum.si)
 * [EESSI @ Vega](https://doc.vega.izum.si/eessi)
 
 ### Deucalion (Portugal)
 
-Deucalion is the EuroHPC JU supercomputer hosted by [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
+Deucalion is the EuroHPC JU supercomputer hosted by the [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
 EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with plans to expand to the non-accelerated x86 partition soon.
 
 * [General documentation](https://docs.deucalion.macc.fccn.pt/)
 * [EESSI @ Deucalion](https://docs.deucalion.macc.fccn.pt/jobs/eessi/)
+
+### MareNostrum 5 (Spain)
+
+MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/).
+
+* [General documentation](https://www.bsc.es/supportkc/)
 
 ---
 
@@ -81,13 +87,19 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 
 #### University of Stuttgart
 
-* Ant: [General documentation](https://www2.icp.uni-stuttgart.de/~jgrad/hpc/_pages/_hpc_facilities/ant.html)
+* Ant: [General documentation](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_hpc_facilities/ant.html) | [EESSI @ Ant](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_user_guide/loading_modules.html#loading-eessi-software)
 
 ### Greece
 
 #### Aristotle University of Thessaloniki
 
 * Aristotle: [General documentation](https://hpc.it.auth.gr/nodes-summary_en/) | [EESSI @ Aristotle](https://hpc.it.auth.gr/software/eessi/)
+
+### Luxembourg
+
+#### University of Luxembourg
+
+* ULHPC platform: [General documentation](https://hpc-docs.uni.lu/) | [EESSI @ ULHPC](https://hpc-docs.uni.lu/software/eessi/)
 
 ### Netherlands
 
@@ -96,6 +108,7 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 * Snellius: [General documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Snellius) | [EESSI @ Snellius](https://servicedesk.surf.nl/wiki/display/WIKI/EESSI+software+environment)
 * Spider: [General documentation](https://doc.spider.surfsara.nl/en/latest/index.html) | [EESSI @ Spider](https://doc.spider.surfsara.nl/en/latest/Pages/software/eessi.html)
 * Research Cloud: [General documentation](https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Cloud) | [EESSI @ Research Cloud](https://servicedesk.surf.nl/wiki/display/WIKI/RC+component+EESSI+Client)
+* Experimental Technologies Platform: [General documentation](https://servicedesk.surf.nl/wiki/x/6YC1Aw) | [EESSI @ ETP](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/96207409/Available+technologies#Availabletechnologies-EESSIEnvironmentModules)
 
 #### University of Groningen
 
@@ -113,13 +126,23 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 
 ### Spain
 
-### Barcelona Supercomputing Center
+#### Barcelona Supercomputing Center
 
 * thunder
-* arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
-This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
-* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-vector-simulation-environment/-/wikis/HCA-RISC%E2%80%90V-clusters-user-guide)
-This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+* arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+
+#### Galicia Supercomputing Center (CESGA)
+
+* FinisTerrae III: [General documentation](https://cesga-docs.gitlab.io/ft3-user-guide/overview.html) | [EESSI @ FinisTerrae III](https://cesga-docs.gitlab.io/ft3-user-guide/compilers_and_dev_tools.html#eessi)
+
+### Czech Republic
+
+#### Czech Technical University in Prague
+
+* Sunrise: [General documentation](https://nms.fjfi.cvut.cz/wiki/Sunrise.fjfi.cvut.cz)
 
 ---
 
@@ -137,4 +160,8 @@ This is a RISC-V cluster that uses [riscv.eessi.io](https://www.eessi.io/docs/re
 
 ### AWS
 
-* AWS ParallelCluster [General documentation](https://docs.aws.amazon.com/parallelcluster/) | [EESSI @ AWS ParallelCluster](https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/env/eessi)
+* AWS ParallelCluster: [General documentation](https://docs.aws.amazon.com/parallelcluster/) | [EESSI @ AWS ParallelCluster](https://github.com/aws-samples/aws-hpc-recipes/tree/main/recipes/env/eessi)
+
+### LEXIS
+
+* LEXIS Platform: [General documentation](https://docs.lexis.tech/architecture/architecture.html) | [EESSI @ LEXIS](https://docs.lexis.tech/user_interfaces/howto.html#custom-hpc-jobs)

@@ -42,7 +42,7 @@ function fix_ud_qp_init_openmpi(t)
 end
 
 local function combined_load_hook(t)
-    if eessi_load_hook ~= nil then
+    if isDefined("eessi_load_hook") then
         eessi_load_hook(t)
     end
     fix_ud_qp_init_openmpi(t)

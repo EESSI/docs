@@ -22,12 +22,12 @@ nav:
     - Compatibility layer: compatibility_layer.md
     - Software layer: software_layer.md
     - Supported CPU targets: software_layer/cpu_targets.md
+    - Supported GPU targets: software_layer/gpu_targets.md
   - Available software and repositories:
       - Software: available_software/overview.md
       - Repositories:
         - Production: repositories/software.eessi.io.md
         - RISC-V: repositories/riscv.eessi.io.md
-        - Pilot: repositories/pilot.md
         - Development repository: repositories/dev.eessi.io.md
   - Installation and configuration:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
@@ -56,6 +56,8 @@ nav:
       - Available tests: test-suite/available-tests.md
       - Writing tests: test-suite/writing-portable-tests.md
       - Release notes: test-suite/release-notes.md
+      - API documentation: testsuite_api/
+      # - Dashboard: test-suite/dashboard.md
     - Known issues and workarounds:
       - v2023.06: known_issues/eessi-2023.06.md
   - Adding software to EESSI: 
@@ -76,6 +78,7 @@ nav:
     - Talks: talks.md
         # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
     - Contact info: contact.md
+  - Training: training/index.md
   - Systems where EESSI is available: systems.md
   - Governance:
     - Overview: governance/index.md
@@ -106,8 +109,29 @@ plugins:
         contributing_sw/overview.md: adding_software/overview.md
         governance.md: governance/index.md
         software_layer/adding_software.md: adding_software/overview.md
-        pilot.md: repositories/pilot.md
+        pilot.md: repositories/pilot.md # https://www.eessi.io/docs/pilot is mentioned in the EESSI open access paper
         gpu.md: site_specific_config/gpu.md
+        rocm.md: site_specific_config/rocm.md
+  # Enable our custom plugin for json-ld metadata
+  - inject_ld_json
+    # link to any Markdown heading
+  - autorefs
+    # api automatics documentation 
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [test-suite/test-suite] 
+          options:
+            docstring_style: sphinx
+            docstring_section_style: spacy
+            show_source: false
+  - gen-files:
+      scripts:
+          - docs/generate_eessi_testsuite_api_docs.py
+  - literate-nav:
+      nav_file: summary.md
+  - section-index
 markdown_extensions:
   # enable adding HTML attributes and CSS classes
   - attr_list
@@ -116,7 +140,11 @@ markdown_extensions:
   # support for using MarkDown in HTML
   - md_in_html
   # code blocks with syntax highlighting, graphs
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   # line numbers
   - pymdownx.highlight:
       anchor_linenums: true
@@ -142,7 +170,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Tue, 11 Feb 2025 at 12:40:10 UTC"
+  generated_time: "Thu, 31 Jul 2025 at 12:55:01 UTC"
 extra_javascript:
   # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
@@ -150,6 +178,9 @@ extra_javascript:
   - https://code.jquery.com/jquery-3.7.0.min.js
   - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
   - available_software/javascripts/populate_overview.js
+  - https://cdn.datatables.net/plug-ins/2.2.2/pagination/bootstrap_input.js
 extra_css:
   # CSS for popultate_overview
   - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
+  - available_software/css/style_table.css
+  - https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css

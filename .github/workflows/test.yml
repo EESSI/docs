@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - name: checkout
-      uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # v3.1.0
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
 
     - name: set up Python
-      uses: actions/setup-python@13ae5bb136fac2878aff31522b9efb785519f984 # v4.3.0
+      uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
       with:
         python-version: '3.10'
 
@@ -21,7 +21,7 @@ jobs:
         check_filenames: true
         # MarkDown files in docs/available_software/detail are skipped because they are auto-generated
         skip: '*.pdf,.git,*.json,./docs/available_software/detail/*.md'
-        ignore_words_list: Fram,fram
+        ignore_words_list: Fram,fram,ND,nd
 
     # - name: Markdown Linting Action
     #   uses: avto-dev/markdown-lint@v1.2.0
@@ -30,6 +30,25 @@ jobs:
           # config: '/lint/config/changelog.yml'
     #     args: '.'
 
+
+    # Make sure to also test deployment of auto-generated API docs for test suite
+    # For that, we need the repo to be available under eessi/test-suite
+    - name: checkout test suite
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
+      with:
+        repository: eessi/test-suite
+        # Path is needed, otherwise this will overwrite the checkout action that cloned the docs repo
+        path: test-suite/test-suite
+    - name: Generate docs for latest release
+      run: |
+        cd test-suite/test-suite
+        # Make sure to fetch tags, so we can checkout a particular release
+        git fetch --tags
+        # This assumes we stick to a version-tagging scheme vX.Y.Z
+        LATEST_VERSION=$(git tag | grep '^v[0-9]\+\.[0-9]\+\.[0-9]\+$' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)
+        # Use the latest release by default
+        git checkout $LATEST_VERSION
+        git branch
     - name: install mkdocs + plugins
       run: |
           pip install -r requirements.txt
