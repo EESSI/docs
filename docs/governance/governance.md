@@ -4,9 +4,9 @@ A project charter discusses _what it is and why it exists_, a governance discuss
 
 # Project Governance
 
-As stated in the [Charter](charter.md), this project governance _only_ covers collaboration on the software.eessi.io CernVM-FS repository, it does not cover other CernVM-FS repositories under the eessi.io namespace. In other words, when the sections below mention the EESSI CernVM-FS repository, this implies the software.eessi.io repository specifically. Thus, this governance only addresses contributing to, building for, deploying to, ingesting in, providing, or using the software.eessi.io repository.
+As stated in the [Charter](charter.md), this project governance _only_ covers collaboration on the `software.eessi.io` CernVM-FS repository, it does not cover other CernVM-FS repositories under the eessi.io namespace. In other words, when the sections below mention the EESSI CernVM-FS repository, this implies the `software.eessi.io` repository specifically. Thus, this governance only addresses contributing to, building for, deploying to, ingesting in, providing, or using the `software.eessi.io` repository.
 
-The only exception to this is the Steering Committee, which has authority over all the eessi.io CernFM-FS repositories.
+The only exception to this is the Steering Committee, which has authority over all the `eessi.io` CernFM-FS repositories.
 
 ## 1. Guiding Principles
 <!-- Optional section to state high-level principles like openness, meritocracy, consensus, etc. -->
@@ -71,45 +71,47 @@ System administrators of systems providing EESSI are administrators of systems (
 
 System administrators of systems providing EESSI should make sure that their system does not put any disproportional load on the public EESSI CernVM-FS infrastructure. Typically, this means that they should adhere to best practices for CernVM-FS caching in a way that fits the size and nature of their system (e.g. by setting up a private CernVM-FS Stratum 1, a proxy, and/or a properly sized local cache).
 
-System administrators have to agree to the EESSI [Terms of Use](terms_of_use.md).
+System administrators agree to the [Terms of Use](terms_of_use.md) when making EESSI available on the systems they manage.
 
 ### 2.9 End-Users
 
 End-Users are individuals that use any of the software provided by the EESSI software stack.
 
-End users have to agree to the EESSI [Terms of Use](terms_of_user.md).
+End users agree to the [Terms of Use](terms_of_use.md) when using the software installations provided by EESSI.
 
 ## 3. Decision-Making
 
 This section applies to the decision making procedure for the Teams discussed in Section 2. The Steering Committee has its own Decision-Making procedure. 
 
 ### 3.1 Consensus Seeking
-<!-- Describe how decisions are reached: rough consensus, lazy consensus, etc. -->
+
 Decisions are made by seeking consensus. Each Team member is responsible for deciding whether an issue or decision is significant or sensitive enough to warrant discussions within their Team. If so, they should bring it up through the agreed-upon channels (see Section 4).
 
 ### 3.2 Voting
-<!-- Detail when voting is used, who can vote, quorum rules, and thresholds. -->
+
 There is no formal voting for Teams, for two reasons:
+
 1. The Teams may be too big to organize voting in a quick, practical way.
 2. The obligation to take part in votes may discourage people to become part of these Teams, as it may be seen as a burden.
 
 Voting may nonetheless be used as a way to achieve consensus. For example, asking (a relevant subset of) the Team to vote may be one way to determine the majority opinion. Then, it can be discussed if the majority vote is an acceptable outcome to the Team. If so, consensus is achieved.
 
 ### 3.3 Deadlock Resolution
-<!-- Define how disputes are escalated and resolved. -->
+
 If consensus cannot be reached within the Team, the Steering Committee can take the decision for them. This can be requested by the Team, or done at the initiative of the Steering Committee (if they feel the lack of a decision is preventing the project from moving forward).
 
 Also, if multiple Teams claim ownership over an issue, the Steering Committee can decide which Team is allowed to decide over the issue.
 
 ### 3.4 Overturning decisions
-<!-- Steering committee overruling a group? -->
+
 The goal is for Teams to operate autonomously as much as possible. 
 
 However, in exceptional cases, the Steering Committee _can_ overrule a decision made by any of the Teams. This power should only be used as a last resort. Examples of when this may be considered is if the Steering Committee feels that a decision endangers the integrity or sustainability of the project, or goes against the policies the Steering Committee has defined. Even then, the Steering Committee should first engage in a discussion with a Team to see if consensus can be achieved on changing the decision.
 
 ## 4. Meetings and Communication
-<!-- Define how and where the team communicates, and how meetings (if any) are run. -->
+
 While each Team is allowed to use the communication channels that their Team jointly agrees upon, the following channels are suggested
+
 - GitHub / GitLab issues
 - Slack
 - (Periodic or incidental) video calls
@@ -118,62 +120,99 @@ While each Team is allowed to use the communication channels that their Team joi
 This Section applies to the Teams described in Section 2.
 
 ### 5.1 Adding Team Members
-<!-- Describe the process for adding new members. -->
+
 Teams themselves decide how large their teams should ideally be. They also decide the procedure to add new Team members. The procedure should reflect the sensitivity of the position, i.e. people with certain roles have the ability to (intentionally or unintentionally) compromise the integrity of the repository. For such roles, the procedure should make sure candidates are extensively vetted and trusted by both the Team as well as the EESSI community as a whole.
 
 As with all decisions the decision to add a Team member is subject to article 3.4.
 
 ### 5.2 Removing Team Members
-<!-- Describe under what conditions someone may be removed (e.g., inactivity, conduct). -->
+
 Teams themselves decide the procedure to remove Team members. As for the procedure of adding Team Members, the procedure to remove Team Members should reflect the sensitivity of the position.
 
 As with all decisions, the decision to remove a Team member is subject to article 3.4.
 
-## 6 Steering committte
+## 6 Steering committtee
+
 ### 6.1 Responsibilities
 
 The Steering Committee shall be responsible for:
-- Setting the technical direction of the EESSI project and identifying key technical priorities
+
+- Outlining the technical direction of the EESSI project and setting priorities
 - Conflict resolution: if there is a conflict between the people with the aforementioned roles, the steering committee shall mediate the dispute and make a final decision if consensus cannot be reached
-- The EESSI Charter (`charter.md`)
-- The EESSI Governance (`governance.md`)
-- The EESSI Policies (`policies.md`)
+- The [EESSI Charter](charter.md)
+- The [EESSI Governance](governance.md)
+- The [EESSI Policies](policies.md)
 
 ### 6.2 Members and Chairs
 
 The Steering Committee is made up of community members with sustained and recognized contributions over time. Members take part in the Steering Committee as private individuals (i.e. they do not represent their employer(s)).
 
+#### 6.2.1 Termination of membership
+
 Membership of the Steering Committee can terminate in three ways:
 
 - A Member can resign
 - A Member may be voted out. In this case, the vote needs to be unanimous between the other Members.
-- If a Member is inactive for 6 Months and does not reply to communication from the rest of the Steering Committee, the Member may be voted out by the other Steering Committee members. In this case, regular voting rules, as per section 6.3, apply.
+- If a Member is inactive for 6 months and does not reply to communication from the rest of the Steering Committee, the Member may be voted out by the other Steering Committee members. In this case, regular voting rules, as per section 6.3, apply.
 
+#### 6.2.2 New members
 
-New Members are recommended by the Steering Committee. The Steering Committee will make the recommendation known to the community, and collect feedback on the recommendation. The Steering Committee then weighs the feedback, and votes on whether to accept the new member. In the selection process, the Steering Committee will consider the following:
-- The Steering Committee ideally consists of an odd number of Members
-- No more than 30% of the Members should be employed by commercial entities
-- The number of Members working for the same company should be limited to 1
-- The number of Members from the same country should be limited to 2
-- The composition of the Steering Committee should reflect the EESSI community
+New Members must be recommended by one or more Steering Committee members.
+
+The Steering Committee will make the recommendation known to the community, and collect feedback on the recommendation.
+The Steering Committee then weighs the feedback, and votes on whether to accept the new member.
+
+In the selection process, the Steering Committee will consider the following:
+
+- The Steering Committee ideally consists of an odd number of Members;
+- No more than 30% of the Members should be employed by commercial entities;
+- The number of Members working for the same company should be limited to 1;
+- The number of Members from the same country should be limited to 2;
+- The composition of the Steering Committee should reflect the EESSI community;
 
 Note that if Members change jobs, or move to another country, some of the above criteria that were taken into account during selection may no longer be satisfied. It is up to the Steering Committee to decide if this is problematic, and if so, try to restore balance by requesting someone to resign.
 
 All new Members will appoint an alternate that may represent them and vote on their behalf in case they are unavailable. If a Member resigns or is voted out from the Steering Committee, their alternate immediately loses any rights they had as an alternate.
 
+#### 6.2.3 Chair
+
 A Chair will be appointed by the Steering Committee to serve for a one-year term.
 
 ### 6.3 Voting by the Steering Committee
 
-General decisions are taken by majority vote, provided that at least 75% of the Members cast a vote. Votes can be cast either in person, participating electronically, or via electronic vote (such as by e-mail). Members can cast a neutral vote, in which case the vote does count towards the quorum of 75%, but is not including in calculating the majority. Example: in a committee with 7 members, if 3 members vote in favour of a proposal, 2 vote against, and one votes neutral, the quorum is met (6 out of 7 members have voteded, i.e. >75%), and the majority (3 out of 5 non-neutral votes) is in favour, so the proposal is accepted. Members can also abstain from voting, in which case they neither count towards the quorum or calculating the majority. Example: in a committee with 7 members, if 3 members vote in favor, 2 vote against, and one abstains from voting, the quorum of 6 (75% of 7 members, rounded up) is not met.
+#### 6.3.1 Majority vote
+
+General decisions are taken by majority vote, provided that at least 75% of the Members cast a vote.
+
+#### 6.3.2 Ways of voting
+
+Votes can be cast either in person, participating electronically, or via electronic vote (such as by e-mail).
+
+#### 6.3.3 Neutral votes
+
+Members can cast a neutral vote, in which case the vote does count towards the quorum of 75%, but is not including in calculating the majority. Example: in a committee with 7 members, if 3 members vote in favour of a proposal, 2 vote against, and one votes neutral, the quorum is met (6 out of 7 members have voted, i.e. >75%), and the majority (3 out of 5 non-neutral votes) is in favour, so the proposal is accepted.
+
+#### 6.3.4 Abstaining
+
+Members can also abstain from voting, in which case they neither count towards the quorum or calculating the majority. Example: in a committee with 7 members, if 3 members vote in favor, 2 vote against, and one abstains from voting, the quorum of 6 (75% of 7 members, rounded up) is not met.
+
+#### 6.3.5 Ties
 
 In case of a tie, the issue is discussed again, and a second vote is taken. All Members that voted in the first round need to have the opportunity to vote in the second round, which may mean that the vote needs to be postponed to a next meeting (e.g. because one or more Members voted by e-mail, and are not present at the meeting).
 
+#### 6.3.6 Failing to reach quorum
+
 In case the quorum of 75% is not reached, the vote is postponed.
+
+#### 6.3.7 Fully electronic vote
 
 A fully electronic vote (i.e. all Members vote electronically) can be organized by the Chair, in order to prevent having to delay a vote to the next meeting. Such a fully electronic vote is only valid once _all_ Members have cast their vote, or have explicitly stated that they abstain from voting.
 
+#### 6.3.8 Voting topics
+
 Anything may be brought to a vote during the meeting. However, if known up-front, issues that need to be voted on are announced at least one week prior to the meeting, to give Members the opportunity to cast an electronic vote if they cannot attend.
+
+#### 6.3.9 Votes on amending Charter or Governance
 
 To amend the Charter or Governance, a two-thirds majority of all Steering Committee Members needs to be in favour of the amendment. This is irrespective of the number of Members who have actually cast a vote, or are present at a meeting. There is no quorum for votes on amendments to the Charter or Governance.
 
