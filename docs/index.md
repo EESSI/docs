@@ -20,7 +20,7 @@ personal workstations and cloud infrastructure.
 
 * [What is EESSI?](overview.md)
 * [Contact info](contact.md)
-* [Governance](governance.md)
+* [Governance](governance/index.md)
 
 For users:
 
