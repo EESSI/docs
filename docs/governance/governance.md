@@ -16,7 +16,7 @@ The second goal of this governance is to make clear how and by whom decisions in
 
 To achieve both goals, our governance is based on the [meritocracy](https://en.wikipedia.org/wiki/Meritocracy) governance model.
 
-## 2. Roles and Responsibilities
+## 2. Roles and Responsibilities {#roles-and-responsibilities}
 
 Below, the roles and responsibilities related to the EESSI project are discussed. The group of people with a common role will be referred to as a Team in the remainder of this document. Exceptions are Contributors, System administrators of systems providing EESSI and End-users (these are not considered to be Teams). Each individual in a Team will be referred to as a Team Member.
 
@@ -36,7 +36,7 @@ EESSI Infrastructure maintainers are those individuals that maintain the Central
 
 Infrastructure maintainers are responsible for monitoring and maintaining their respective infrastructure, and provide access to those who needed it according to the Roles and Responsibilities described here. Note that maintainers of build infrastructure have the right to limit access to a _subset_ of the Deployers and Builders as described in 2.4 and 2.5. Furthermore, they are _not_ allowed to give access to others that are not part of the EESSI Infrastructure maintainers, Deployers or Builders teams.
 
-### 2.4 Builders
+### 2.4 Builders {#builders}
 Adding software to EESSI requires three steps (see [the contribution workflow](../adding_software/overview.md) documentation):
 
 1. The software needs to be built (compiled);
@@ -48,12 +48,12 @@ Builders are those individuals that have permissions to build software through o
 Builders are responsible for reviewing contributions. They should, for example, check that contributions adhere to the contribution guidelines, that a contribution will not trigger execution of any untintended or unwanted code, etc. They are also responsible for triggering builds for contributors who want to add software to the EESSI software stack.
 
 ### 2.5 Deployers
-Deployers are those individuals that have permissions to deploy software through one or more of the EESSI build bots to a central location (e.g. S3 bucket), i.e. they are essentially responsible for step 2 as it is described in Section 2.4.
+Deployers are those individuals that have permissions to deploy software through one or more of the EESSI build bots to a central location (e.g. S3 bucket), i.e. they are essentially responsible for step 2 as it is described in the [Builders](#builders) Section.
 
 Deployers should check the file list of the produced tarballs (as it is reported by the build bot) for unexpected items. They should also check if all officially supported hardware targets have been built for.
 
 ### 2.6 Ingestors
-Ingestors are those individuals that have permissions to ingest a tarball into the EESSI CernVM-FS repository, i.e. they are essentially responsible for step 3 as it is described in Section 2.4.
+Ingestors are those individuals that have permissions to ingest a tarball into the EESSI CernVM-FS repository, i.e. they are essentially responsible for step 3 as it is described in the [Builders](#builders) Section.
 
 Ingestors have merge permissions on the (private) `EESSI/staging` GitHub repository.
 
@@ -81,11 +81,11 @@ End users agree to the [Terms of Use](terms_of_use.md) when using the software i
 
 ## 3. Decision-Making
 
-This section applies to the decision making procedure for the Teams discussed in Section 2. The Steering Committee has its own Decision-Making procedure. 
+This section applies to the decision making procedure for the Teams discussed in the [Roles and Responsibilities](#roles-and-responsibilities) Section. The Steering Committee has its own Decision-Making procedure (defined in the [Voting by the Steering Communittee](#voting-by-sc) Section).
 
 ### 3.1 Consensus Seeking
 
-Decisions are made by seeking consensus. Each Team member is responsible for deciding whether an issue or decision is significant or sensitive enough to warrant discussions within their Team. If so, they should bring it up through the agreed-upon channels (see Section 4).
+Decisions are made by seeking consensus. Each Team member is responsible for deciding whether an issue or decision is significant or sensitive enough to warrant discussions within their Team. If so, they should bring it up through the agreed-upon channels (see the [Meetings and Communication](#meetings-and-communication) Section).
 
 ### 3.2 Voting
 
@@ -108,7 +108,7 @@ The goal is for Teams to operate autonomously as much as possible.
 
 However, in exceptional cases, the Steering Committee _can_ overrule a decision made by any of the Teams. This power should only be used as a last resort. Examples of when this may be considered is if the Steering Committee feels that a decision endangers the integrity or sustainability of the project, or goes against the policies the Steering Committee has defined. Even then, the Steering Committee should first engage in a discussion with a Team to see if consensus can be achieved on changing the decision.
 
-## 4. Meetings and Communication
+## 4. Meetings and Communication {#meetings-and-communication}
 
 While each Team is allowed to use the communication channels that their Team jointly agrees upon, the following channels are suggested
 
@@ -117,7 +117,7 @@ While each Team is allowed to use the communication channels that their Team joi
 - (Periodic or incidental) video calls
 
 ## 5. Onboarding and Offboarding
-This Section applies to the Teams described in Section 2.
+This Section applies to the Teams described in the [Roles and Responsibilities](#roles-and-responsibilities) Section.
 
 ### 5.1 Adding Team Members
 
@@ -178,7 +178,7 @@ All new Members will appoint an alternate that may represent them and vote on th
 
 A Chair will be appointed by the Steering Committee to serve for a one-year term.
 
-### 6.3 Voting by the Steering Committee
+### 6.3 Voting by the Steering Committee {#voting-by-sc}
 
 #### 6.3.1 Majority vote
 
