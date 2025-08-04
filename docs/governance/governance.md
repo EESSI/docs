@@ -6,7 +6,7 @@ A project charter discusses _what it is and why it exists_, a governance discuss
 
 As stated in the [Charter](charter.md), this project governance _only_ covers collaboration on the `software.eessi.io` CernVM-FS repository, it does not cover other CernVM-FS repositories under the eessi.io namespace. In other words, when the sections below mention the EESSI CernVM-FS repository, this implies the `software.eessi.io` repository specifically. Thus, this governance only addresses contributing to, building for, deploying to, ingesting in, providing, or using the `software.eessi.io` repository.
 
-The only exception to this is the Steering Committee, which has authority over all the `eessi.io` CernFM-FS repositories.
+The only exception to this is the Steering Committee, which has authority over all the `eessi.io` CernVM-FS repositories.
 
 ## 1. Guiding Principles
 <!-- Optional section to state high-level principles like openness, meritocracy, consensus, etc. -->

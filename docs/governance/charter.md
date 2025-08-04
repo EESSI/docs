@@ -39,7 +39,7 @@ This requires:
 
 All of these (both code and infrastructure itself) are considered 'in scope' for the project.
 
-There are additional CernVM-FS repositories under the eessi.io namespace, such as dev.eessi.io and riscv.eessi.io. All code and infrastructure related to those repositories (and any other CernVM-FS repositories under the eessi.io namespace) are also considered part of the EESSI project.
+There are additional CernVM-FS repositories under the `eessi.io` namespace, such as `dev.eessi.io` and `riscv.eessi.io`. All code and infrastructure related to those repositories (and any other CernVM-FS repositories under the `eessi.io` namespace) are also considered part of the EESSI project.
 
 ## 3. Membership
 <!-- Who can join or participate? Are there any requirements (e.g., code contributions, voting eligibility)? -->
