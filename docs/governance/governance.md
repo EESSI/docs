@@ -24,12 +24,12 @@ Below, the roles and responsibilities related to the EESSI project are discussed
 <!-- Define who contributors are and what they can do (e.g., file issues, submit PRs). -->
 The owners of the [EESSI GitHub organization](https://github.com/EESSI) & repositories are those individuals with `owner` rights on the EESSI GitHub organization or one of it's associated repositories.
 
-EESSI Github organization & repository owners are responsible for setting permissions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing Github Apps for the EESSI build bots.
+EESSI GitHub organization & repository owners are responsible for setting permissions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing GitHub Apps for the EESSI build bots.
 
-### 2.2 EESSI Github repository maintainers
-EESSI Github repository maintainers are individuals with write access (one or more) of the EESSI Github repositories.
+### 2.2 EESSI GitHub repository maintainers
+EESSI GitHub repository maintainers are individuals with write access (one or more) of the EESSI GitHub repositories.
 
-EESSI Github repository maintainers are responsible for reviewing and merging PRs.
+EESSI GitHub repository maintainers are responsible for reviewing and merging PRs.
 
 ### 2.3 EESSI Infrastructure maintainers
 EESSI Infrastructure maintainers are those individuals that maintain the Central Server for the EESSI CernVM-FS repository (the CernVM-FS Stratum 0), one of the _public_ mirror servers (CernVM-FS Stratum 1's), build infrastructure (e.g. hosting the EESSI build bot, the SMEE server).
@@ -61,7 +61,7 @@ Ingestors should check the contents of the tarball as it is reported in the pull
 
 ### 2.7 Contributors
 
-Contributors are individuals that make a contribution by opening a pull request to one of the repositories in the EESSI Github organization.
+Contributors are individuals that make a contribution by opening a pull request to one of the repositories in the EESSI GitHub organization.
 
 Contributors that propose adding software to EESSI in their contributions are responsible for checking that the license of the software they want to add allows it's use in EESSI (e.g. allows redistribution). Contributors should also make an effort to ensure that their contributions don't add any malicious code. Finally, contributors should ensure that they adhere to the [Contribution Policy](../adding_software/contribution_policy.md).
 
