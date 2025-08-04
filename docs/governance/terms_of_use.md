@@ -32,4 +32,4 @@ The EESSI maintainers and affiliated institutions are not liable for damages or 
 Contributions are welcome and governed by the project’s contribution guidelines. By contributing, you agree your input may be publicly shared and reused under compatible open-source licenses.
 
 ## 8. Contact  
-For support or inquiries, visit [https://eessi.github.io](https://eessi.github.io) or contact the maintainers via **[Insert Email or GitHub]**.
+For support or inquiries, visit [https://www.eessi.io/docs/support](https://www.eessi.io/docs/support).
