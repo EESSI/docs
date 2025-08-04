@@ -16,7 +16,7 @@ The second goal of this governance is to make clear how and by whom decisions in
 
 To achieve both goals, our governance is based on the [meritocracy](https://en.wikipedia.org/wiki/Meritocracy) governance model.
 
-## 2. Roles and Responsibilities {#roles-and-responsibilities}
+## 2. Roles and Responsibilities { #roles-and-responsibilities }
 
 Below, the roles and responsibilities related to the EESSI project are discussed. The group of people with a common role will be referred to as a Team in the remainder of this document. Exceptions are Contributors, System administrators of systems providing EESSI and End-users (these are not considered to be Teams). Each individual in a Team will be referred to as a Team Member.
 
@@ -36,7 +36,7 @@ EESSI Infrastructure maintainers are those individuals that maintain the Central
 
 Infrastructure maintainers are responsible for monitoring and maintaining their respective infrastructure, and provide access to those who needed it according to the Roles and Responsibilities described here. Note that maintainers of build infrastructure have the right to limit access to a _subset_ of the Deployers and Builders as described in 2.4 and 2.5. Furthermore, they are _not_ allowed to give access to others that are not part of the EESSI Infrastructure maintainers, Deployers or Builders teams.
 
-### 2.4 Builders {#builders}
+### 2.4 Builders { #builders }
 Adding software to EESSI requires three steps (see [the contribution workflow](../adding_software/overview.md) documentation):
 
 1. The software needs to be built (compiled);
@@ -108,7 +108,7 @@ The goal is for Teams to operate autonomously as much as possible.
 
 However, in exceptional cases, the Steering Committee _can_ overrule a decision made by any of the Teams. This power should only be used as a last resort. Examples of when this may be considered is if the Steering Committee feels that a decision endangers the integrity or sustainability of the project, or goes against the policies the Steering Committee has defined. Even then, the Steering Committee should first engage in a discussion with a Team to see if consensus can be achieved on changing the decision.
 
-## 4. Meetings and Communication {#meetings-and-communication}
+## 4. Meetings and Communication { #meetings-and-communication }
 
 While each Team is allowed to use the communication channels that their Team jointly agrees upon, the following channels are suggested
 
@@ -182,7 +182,7 @@ The Chair can appoint another Member to serve as acting Chair for a given meetin
 
 If there is no Chair (e.g. because the Chair's term was completed, or the Chair stepped down from the Steering Committee), any Member can call for and organize a new meeting or electronic vote to appoint a new Chair. Whenever there is no Chair and there is a meeting, the first order of business will be to elect a new Chair.
 
-### 6.3 Voting by the Steering Committee {#voting-by-sc}
+### 6.3 Voting by the Steering Committee { #voting-by-sc }
 
 #### 6.3.1 Majority vote
 
@@ -222,7 +222,7 @@ Anything may be brought to a vote during the meeting. However, if known up-front
 
 #### 6.3.9 Votes on amending Charter or Governance
 
-To amend the Charter, Governance or Project Policies, a two-thirds majority of *all* Steering Committee Members needs to be in favour of the amendment. This is irrespective of the number of Members who have actually cast a vote, or are present at a meeting. Since the majority vote is determined based on the total amount of Members (rather than the total amount of votes), there is no quorum for votes on amendments to the Charter, Governance or Project Policies.
+To amend the Charter, Governance or [Project Policies](policies.md#project-policies), a two-thirds majority of *all* Steering Committee Members needs to be in favour of the amendment. This is irrespective of the number of Members who have actually cast a vote, or are present at a meeting. Since the majority vote is determined based on the total amount of Members (rather than the total amount of votes), there is no quorum for votes on amendments to the Charter, Governance or Project Policies.
 
 ### 6.4 Meetings
 
