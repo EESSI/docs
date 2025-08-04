@@ -27,7 +27,7 @@ The owners of the [EESSI GitHub organization](https://github.com/EESSI) & reposi
 EESSI GitHub organization & repository owners are responsible for setting permissions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing GitHub Apps for the EESSI build bots.
 
 ### 2.2 EESSI GitHub repository maintainers
-EESSI GitHub repository maintainers are individuals with write access (one or more) of the EESSI GitHub repositories.
+EESSI GitHub repository maintainers are individuals with write access to (one or more of) the EESSI GitHub repositories.
 
 EESSI GitHub repository maintainers are responsible for reviewing and merging PRs.
 
