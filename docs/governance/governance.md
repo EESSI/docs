@@ -131,7 +131,7 @@ Teams themselves decide the procedure to remove Team members. As for the procedu
 
 As with all decisions, the decision to remove a Team member is subject to article 3.4.
 
-## 6 Steering committtee
+## 6 Steering committee
 
 ### 6.1 Responsibilities
 
