@@ -81,7 +81,7 @@ Optimization for performance is strongly encouraged. For compiled software, this
 
 ### 3.2 Non-Software Contributions
 
-- Contributions to build logic, test suites, or infrastructure must be testable and documented.
+- Contributions to build logic, test suites, or infrastructure should be testable and documented.
 - Specific requirements may be defined by the relevant Team.
 
 ---
