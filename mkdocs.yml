@@ -107,7 +107,6 @@ plugins:
         contributing_sw/deploying_software.md: adding_software/deploying_software.md
         contributing_sw/opening_pr.md: adding_software/opening_pr.md
         contributing_sw/overview.md: adding_software/overview.md
-        governance.md: governance/index.md
         software_layer/adding_software.md: adding_software/overview.md
         pilot.md: repositories/pilot.md # https://www.eessi.io/docs/pilot is mentioned in the EESSI open access paper
         gpu.md: site_specific_config/gpu.md
