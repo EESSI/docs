@@ -1,3 +1,5 @@
+_Last updated: 08 August 2025_
+
 # Policy Scope and Hierarchy
 
 - **Project Policies** are defined and maintained by the Steering Committee.
@@ -6,7 +8,7 @@
 
 ---
 
-# EESSI Project Policies
+# EESSI Project Policies {#project-policies}
 
 This document outlines project-wide policies that guide the development, deployment, and maintenance of the EESSI software stack. These policies are set by the Steering Committee and apply across all Teams and repositories.
 
@@ -106,4 +108,5 @@ This does not imply exclusion of other platforms, but reflects the project's pri
 
 There are currently no Team Policies yet.
 
-_Last updated: 23 June 2025_
+# Changelog
+- 04 August 2025: First version published
