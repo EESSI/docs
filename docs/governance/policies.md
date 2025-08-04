@@ -8,7 +8,7 @@ _Last updated: 08 August 2025_
 
 ---
 
-# EESSI Project Policies {#project-policies}
+# EESSI Project Policies { #project-policies }
 
 This document outlines project-wide policies that guide the development, deployment, and maintenance of the EESSI software stack. These policies are set by the Steering Committee and apply across all Teams and repositories.
 
