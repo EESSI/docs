@@ -20,7 +20,7 @@ To achieve both goals, our governance is based on the [meritocracy](https://en.w
 
 Below, the roles and responsibilities related to the EESSI project are discussed. The group of people with a common role will be referred to as a Team in the remainder of this document. Exceptions are Contributors, System administrators of systems providing EESSI and End-users (these are not considered to be Teams). Each individual in a Team will be referred to as a Team Member.
 
-### 2.1 Owners of the [EESSI GitHub organization](https://github.com/EESSI) & repositories
+### 2.1 Owners of the `EESSI` GitHub organization & repositories
 <!-- Define who contributors are and what they can do (e.g., file issues, submit PRs). -->
 The owners of the [EESSI GitHub organization](https://github.com/EESSI) & repositories are those individuals with `owner` rights on the EESSI GitHub organization or one of it's associated repositories.
 
