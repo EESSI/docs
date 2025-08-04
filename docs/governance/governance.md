@@ -121,7 +121,7 @@ This Section applies to the Teams described in the [Roles and Responsibilities](
 
 ### 5.1 Adding Team Members
 
-Teams themselves decide how large their teams should ideally be. They also decide the procedure to add new Team members. The procedure should reflect the sensitivity of the position, i.e. people with certain roles have the ability to (intentionally or unintentionally) compromise the integrity of the repository. For such roles, the procedure should make sure candidates are extensively vetted and trusted by both the Team as well as the EESSI community as a whole.
+Teams themselves decide how large their teams should ideally be. They also decide the procedure to add new Team members. The procedure should reflect the sensitivity of the position, i.e. people with certain roles have the ability to (intentionally or unintentionally) compromise the integrity of the EESSI infrastructure. For such roles, the procedure should make sure candidates are extensively vetted and trusted by both the Team as well as the EESSI community as a whole.
 
 As with all decisions the decision to add a Team member is subject to article 3.4.
 
