@@ -1,11 +1,11 @@
 # EESSI – Terms of Use
 
-**Effective Date:** 23 June 2025
+**Effective Date:** 04 August 2025
 
-By using the **European Environment for Scientific Software Installations (EESSI)**, you agree to the following terms:
+By using the [**European Environment for Scientific Software Installations (EESSI)**](https://eessi.io), you agree to the following terms:
 
 ## 1. Purpose  
-EESSI provides a shared scientific software stack for academic, research, and educational use. Access and usage are intended for non-commercial scientific computing.
+EESSI provides a shared scientific software stack for academic, research, and educational use. While access and usage are primarily intended for non-commercial scientific computing, commercial use is permitted.
 
 ## 2. Acceptable Use  
 Users must act responsibly when accessing and using the EESSI infrastructure and software. In particular:
