@@ -176,7 +176,11 @@ All new Members will appoint an alternate that may represent them and vote on th
 
 #### 6.2.3 Chair
 
-A Chair will be appointed by the Steering Committee to serve for a one-year term.
+A Chair will be appointed by the Steering Committee to serve for a one-year term. The Chair is responsible for organizing and leading the Steering Committee meetings (e.g. preparing and sending around an agenda, bringing items to a vote, counting the votes, ensuring meeting notes are kept and made available to the Steering Committee Members, etc).
+
+The Chair can appoint another Member to serve as acting Chair for a given meeting or period.
+
+If there is no Chair (e.g. because the Chair's term was completed, or the Chair stepped down from the Steering Committee), any Member can call for and organize a new meeting or electronic vote to appoint a new Chair. Whenever there is no Chair and there is a meeting, the first order of business will be to elect a new Chair.
 
 ### 6.3 Voting by the Steering Committee {#voting-by-sc}
 
@@ -186,7 +190,11 @@ General decisions are taken by majority vote, provided that at least 75% of the 
 
 #### 6.3.2 Ways of voting
 
-Votes can be cast either in person, participating electronically, or via electronic vote (such as by e-mail).
+Votes can be cast:
+
+- in-person;
+- in a virtual meeting;
+- via electronic vote (such as by e-mail, or through an approving review in GitHub).
 
 #### 6.3.3 Neutral votes
 
@@ -210,11 +218,11 @@ A fully electronic vote (i.e. all Members vote electronically) can be organized 
 
 #### 6.3.8 Voting topics
 
-Anything may be brought to a vote during the meeting. However, if known up-front, issues that need to be voted on are announced at least one week prior to the meeting, to give Members the opportunity to cast an electronic vote if they cannot attend.
+Anything may be brought to a vote during the meeting. However, if known up-front, issues that need to be voted on are announced by the Chair at least one week prior to the meeting, to give Members the opportunity to cast an electronic vote if they cannot attend.
 
 #### 6.3.9 Votes on amending Charter or Governance
 
-To amend the Charter or Governance, a two-thirds majority of all Steering Committee Members needs to be in favour of the amendment. This is irrespective of the number of Members who have actually cast a vote, or are present at a meeting. There is no quorum for votes on amendments to the Charter or Governance.
+To amend the Charter, Governance or Project Policies, a two-thirds majority of *all* Steering Committee Members needs to be in favour of the amendment. This is irrespective of the number of Members who have actually cast a vote, or are present at a meeting. Since the majority vote is determined based on the total amount of Members (rather than the total amount of votes), there is no quorum for votes on amendments to the Charter, Governance or Project Policies.
 
 ### 6.4 Meetings
 
