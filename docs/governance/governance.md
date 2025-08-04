@@ -152,8 +152,8 @@ The Steering Committee is made up of community members with sustained and recogn
 Membership of the Steering Committee can terminate in three ways:
 
 - A Member can resign
-- A Member may be voted out. In this case, the vote needs to be unanimous between the other Members.
-- If a Member is inactive for 6 months and does not reply to communication from the rest of the Steering Committee, the Member may be voted out by the other Steering Committee members. In this case, regular voting rules, as per section 6.3, apply.
+- A Member may be voted out. In this case, the vote needs to be unanimous between the other Members. This procedure is intended to provide a mechanism for addressing extraordinary circumstances where a members behavior or actions are deemed severely detrimental to the committee's function or reputation, and/or to the EESSI project.
+- If a Member is inactive for 6 months and does not reply to communication from the rest of the Steering Committee, the Member may be voted out by the other Steering Committee members. In this case, [regular voting rules](#voting-by-sc) apply.
 
 #### 6.2.2 New members
 
