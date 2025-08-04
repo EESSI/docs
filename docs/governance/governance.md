@@ -32,16 +32,16 @@ EESSI GitHub repository maintainers are individuals with write access to (one or
 EESSI GitHub repository maintainers are responsible for reviewing and merging PRs.
 
 ### 2.3 EESSI Infrastructure maintainers
-EESSI Infrastructure maintainers are those individuals that maintain the Central Server for the EESSI CernVM-FS repository (the CernVM-FS Stratum 0), one of the _public_ mirror servers (CernVM-FS Stratum 1's), build infrastructure (e.g. hosting the EESSI build bot, the SMEE server).
+EESSI Infrastructure maintainers are those individuals that maintain the Central Server for the EESSI CernVM-FS repository (the CernVM-FS Stratum 0), the _public_ mirror servers (CernVM-FS Stratum 1's), and EESSI build infrastructure (e.g. hosting the EESSI build bot).
 
 Infrastructure maintainers are responsible for monitoring and maintaining their respective infrastructure, and provide access to those who needed it according to the Roles and Responsibilities described here. Note that maintainers of build infrastructure have the right to limit access to a _subset_ of the Deployers and Builders as described in 2.4 and 2.5. Furthermore, they are _not_ allowed to give access to others that are not part of the EESSI Infrastructure maintainers, Deployers or Builders teams.
 
 ### 2.4 Builders
 Adding software to EESSI requires three steps (see [the contribution workflow](../adding_software/overview.md) documentation):
 
-1. The software needs to be build
-2. A tarball of the software installation needs to be uploaded to a central location (e.g. S3 bucket) where the Central Server for the EESSI CernVM-FS repository can pick it up
-3. The Central Server for the EESSI CernVM-FS repository needs to ingest the tarball. See the documentation on [the contribution workflow](../adding_software/overview.md).
+1. The software needs to be built (compiled);
+2. A tarball of the software installation needs to be uploaded to a central location (e.g. S3 bucket) where the Central Server for the EESSI CernVM-FS repository can pick it up;
+3. The Central Server for the EESSI CernVM-FS repository needs to ingest the tarball.
 
 Builders are those individuals that have permissions to build software through one or more of the EESSI build bots, i.e. step 1 in this process.
 
