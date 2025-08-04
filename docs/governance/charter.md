@@ -22,18 +22,20 @@ The [European Environment for Scientific Software Installations](https://www.ees
 - Ready-to-use (served over the internet, just mount-and-go)
 - Optimized for a wide range of hardware architectures (CPU, GPU, interconnects)
 - Easily extendable with additional local installations
-- Customizable (e.g. site-spefici LMOD hooks, injecting a local MPI, etc)
+- Customizable (e.g. site-specific Lmod hooks, injecting a local MPI library, etc.)
 
 and can be used on any Linux (virtual) machine.
 
 ## 2. Scope
 <!-- Define what is within the scope of the project and what is explicitly out of scope. -->
-EESSI focusses on creating a [CernVM-FS repository](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html) of software installations (software.eessi.io). This requires:
+EESSI focusses on creating a [CernVM-FS repository](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html) of software installations (`software.eessi.io`).
+
+This requires:
 
 - Source code to automate the process of building and deploying additional software installations in `software.eessi.io`
 - Source code to provide a user-friendy interface on end-user systems
-- infrastructure to build new software for software.eessi.io
-- infrastructure to host the CernVM-FS repository for software.eessi.io
+- Infrastructure to build new software for `software.eessi.io`
+- Infrastructure to host the CernVM-FS repository for `software.eessi.io`
 
 All of these (both code and infrastructure itself) are considered 'in scope' for the project.
 
