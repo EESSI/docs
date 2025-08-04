@@ -27,7 +27,7 @@ Reproducibility is important in scientific computing. Thus, we exercise restrain
 - The software installation contained security vulnerabilities;
 - There were updates to the (list of) dependencies, e.g. some optional dependency was missing which restricted functionality of the original installation;
 - There were (unintended) differences between the software installations for different (micro)architectures;
-- The original installation (or a substantial part thereof) was found to be broken. Not that this does _not_ apply to small bugs;
+- The original installation (or a substantial part thereof) was found to be broken. Note that this does _not_ apply to small bugs;
 - Mistakes in the original installation prevent it from being used as a dependency for other software.
 
 Additionally, software may be rebuilt for other reasons if there is sufficient consensus within the EESSI Community that this is beneficial.
