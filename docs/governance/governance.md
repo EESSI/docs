@@ -4,7 +4,7 @@ A project charter discusses _what it is and why it exists_, a governance discuss
 
 # Project Governance
 
-As stated in the [Charter](charter.md), this project governance _only_ covers collaboration on the software.eessi.io CernVM-FS repository, it does not cover other CernVM-FS repositories under the eessi.io namespace. In other words, when the sections below mention the EESSI CernVM-FS repository, this implies the software.eessi.io repository specifically. Thus, this governance only addresses contributing to, building for, deploying to, ingesting in, providing, or using the software.eessi.io respository.
+As stated in the [Charter](charter.md), this project governance _only_ covers collaboration on the software.eessi.io CernVM-FS repository, it does not cover other CernVM-FS repositories under the eessi.io namespace. In other words, when the sections below mention the EESSI CernVM-FS repository, this implies the software.eessi.io repository specifically. Thus, this governance only addresses contributing to, building for, deploying to, ingesting in, providing, or using the software.eessi.io repository.
 
 The only exception to this is the Steering Committee, which has authority over all the eessi.io CernFM-FS repositories.
 
@@ -143,7 +143,7 @@ The Steering Committee shall be responsible for:
 
 The Steering Committee is made up of community members with sustained and recognized contributions over time. Members take part in the Steering Committee as private individuals (i.e. they do not represent their employer(s)).
 
-Membership of the Steering Committe can terminate in three ways:
+Membership of the Steering Committee can terminate in three ways:
 
 - A Member can resign
 - A Member may be voted out. In this case, the vote needs to be unanimous between the other Members.
