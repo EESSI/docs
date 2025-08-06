@@ -144,6 +144,11 @@ The bot applies the filters with partial matching, but _not_ for the `for:` argu
 The reason is that for the `on:` argument, the bot can compare against the configured node types to find a match
 (while for the `for:` argument, there is no such reference to match against).
 
+#### Accelerator filter matching
+If the bot config declares that a node type has a certain accelerator, that node type will _only_ be allocated
+if a corresponding `accel=<on_accel>` argument is passed. This is to avoid that `on:arch=x86_64/amd/zen4` would 
+cause builds to be triggered on a `zen4`+GPU node, while the same system also has a CPU-only `zen4` node type.
+
 ### Behind-the-scenes
 
 #### Processing build instructions
