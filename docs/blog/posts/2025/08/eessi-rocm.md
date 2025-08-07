@@ -50,7 +50,7 @@ We encountered compilation issues with `hipBLASLt` (documented in [ROCm issue #3
 We're currently exploring potential workarounds for the `hipBLASLt` compilation issue.
 If successful, we may be able to add support for installing the ROCm validation suite in EasyBuild soon.
 
-## Outstanding Work: Driver Compatibility Checking
+## Remaining Work: Driver Compatibility Checking
 
 One important piece of functionality we still need to implement is automatic compatibility checking between the host AMDGPU driver version and our ROCm installation.
 While our current installations work correctly with compatible drivers, we want to provide clear guidance to users when incompatibilities are detected, similar to what's available in the CUDA ecosystem.
