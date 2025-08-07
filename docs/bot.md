@@ -117,7 +117,7 @@ bot: build repo:eessi.io-2023.06-software for:arch=x86_64/amd/zen4 inst:azure
 
 #### Native builds
 
-If you want to allocate the same node type that you want to build for, you can ommit the `on:` argument.
+If you want to allocate the same node type that you want to build for, you can omit the `on:` argument.
 For example: `bot:build for:arch=x86_64/amd/zen4` is fully equivalent to `bot:build on:arch=x86_64/amd/zen4 for:arch=x86_64/amd/zen4`.
 
 #### Cross-compiling
