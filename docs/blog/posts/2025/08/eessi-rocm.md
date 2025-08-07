@@ -6,7 +6,7 @@ slug: rocm
 
 # ROCm Integration Progress: Core Components Ready for EasyBuild Release
 
-Following our previous posts on [mapping the ROCm ecosystem](https://www.eessi.io/docs/blog/2025/05/26/rocm) and [building ROCm support in EESSI](https://www.eessi.io/docs/blog/2025/06/30/rocm), we're excited to share a significant milestone in our ROCm integration journey.
+Following our previous posts on [mapping the ROCm ecosystem](../05/eessi-rocm.md) and [building ROCm support in EESSI](../06/eessi-rocm.md), we're excited to share a significant milestone in our ROCm integration journey.
 Our core ROCm components are now hardware-validated and nearly ready for inclusion in EasyBuild, marking substantial progress toward making AMD GPU computing more accessible through EESSI.
 
 <!-- more -->
@@ -45,7 +45,7 @@ Special thanks to [Jan André Reuter](https://github.com/Thyre), [Davide Grassan
 ## Current Challenge: ROCm Validation Suite
 
 While celebrating our core component success, we must acknowledge the challenge that has prevented us from completing our original goal of full ROCm Validation Suite support.
-We encountered compilation issues with `hipBLASLt` (documented in [ROCm issue #316](https://github.com/ROCm/rocm-libraries/issues/316)), which is a dependency for the complete validation suite.
+We encountered compilation issues with `hipBLASLt` (documented in [`ROCm/rocm-libraries` issue #316](https://github.com/ROCm/rocm-libraries/issues/316)), which is a dependency for the complete validation suite.
 
 We're currently exploring potential workarounds for the `hipBLASLt` compilation issue.
 If successful, we may be able to add support for installing the ROCm validation suite in EasyBuild soon.
