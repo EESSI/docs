@@ -72,6 +72,9 @@ bot: build for:arch=<for_arch>
 Where the `for_arch` could be e.g. `x64_64/amd/zen4`. This will trigger the bot to allocate a node of that type _and_
 build in the `/cvmfs/software.eessi.io/versions/<eessi-version>/software/linux/x86_64/amd/zen4` prefix.
 
+!!! note
+    The `for:` (and `on:`, see below) argument to the bot where introduced in bot version 0.9.0. They replace the `architecture=... accelerator=...` syntax used in bot versions <= v0.8.0.
+
 !!! warning
     Most likely, you want to supply one or more filters to avoid that all bots are triggered to build for all
     configurations that match the above command.
