@@ -73,7 +73,7 @@ Where the `for_arch` could be e.g. `x64_64/amd/zen4`. This will trigger the bot 
 build in the `/cvmfs/software.eessi.io/versions/<eessi-version>/software/linux/x86_64/amd/zen4` prefix.
 
 !!! note
-    The `for:` (and `on:`, see below) argument to the bot where introduced in bot version 0.9.0. They replace the `architecture=... accelerator=...` syntax used in bot versions <= v0.8.0.
+    The `for:` (and `on:`, see below) argument to the bot were introduced in bot version 0.9.0. They replace the `architecture=... accelerator=...` syntax used in bot versions <= v0.8.0.
 
 !!! warning
     Most likely, you want to supply one or more filters to avoid that all bots are triggered to build for all
@@ -86,8 +86,8 @@ should be executed, based on:
 
 - `instance`: the `name` of the bot instance, for example `instance:aws` for the bot instance running in AWS;
 - `repository`: the target repository, for example `eessi-2023.06-software` which corresponds to the 2023.06 version of the EESSI software layer;
-- `on:architecture=<on_arch>,accelerator=<on_accelerator>`: the name of the [CPU microarchitecture](software_layer/cpu_targets.md) and GPU accelerator you want to build _on_, for example `for:architecture=x86_64/amd/zen4,accelerator=nvidia/cc90`;
-- `for:architecture=<for_arch>,accelerator=<for_accelerator>`: the name of the [CPU microarchitecture](software_layer/cpu_targets.md) and GPU accelerator you want to build _for_, for example `on:architecture=x86_64/amd/zen4,accelerator=nvidia/cc90`;
+- `on:architecture=<on_arch>,accelerator=<on_accelerator>`: the name of the [CPU microarchitecture](software_layer/cpu_targets.md) and GPU accelerator you want to build _on_, for example `on:architecture=x86_64/amd/zen4,accelerator=nvidia/cc90`;
+- `for:architecture=<for_arch>,accelerator=<for_accelerator>`: the name of the [CPU microarchitecture](software_layer/cpu_targets.md) and GPU accelerator you want to build _for_, for example `for:architecture=x86_64/amd/zen4,accelerator=nvidia/cc90`;
 
 !!! note
     Use `:` as separator to specify a value for a particular argument, do not add spaces after the `:`.
