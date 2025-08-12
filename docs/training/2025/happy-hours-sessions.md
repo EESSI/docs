@@ -32,9 +32,9 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-# Sessions
+## Sessions
 
-## Topic Series: How to Access EESSI
+### Topic Series: How to Access EESSI
 
 #### Monday 18 August 2025, 14:00-15:00 CEST
 
