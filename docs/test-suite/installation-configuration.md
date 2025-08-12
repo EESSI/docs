@@ -12,7 +12,7 @@ The EESSI test suite requires
 * [ReFrame](https://reframe-hpc.readthedocs.io) v4.3.3 (or newer)
 * [ReFrame test library (`hpctestlib`)](https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html)
 
-??? note "(If your system Python version is lower than the minimum required version, click here for some tips)
+??? note "(If your system Python version is lower than the minimum required version, click here for some tips)"
 
     * You can upgrade and manage python versions using `pyenv`. [Link](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
         * For installation follow the documentation in the repository using the link above.
@@ -33,7 +33,7 @@ General instructions for installing ReFrame are available in the [ReFrame docume
 reframe --version
 ```
 
-??? note "(for more details on the ReFrame version requirement, click here)"
+??? note "(For more details on the ReFrame version requirement, click here)"
 
     Two important bugs were resolved in ReFrame's CPU autodetect functionality [in version 4.3.3](https://github.com/reframe-hpc/reframe/pull/2978).
 
