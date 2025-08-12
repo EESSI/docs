@@ -13,7 +13,7 @@ Join us for EESSI Happy Hour, an informal, weekly online session to explore and 
 
 Each series will focus on a specific main topic over several sessions, giving participants the opportunity to ask questions, get hands-on guidance, and share experiences.
 
-🧭 Where? [Zoom link](https://uib.zoom.us/j/61528767539?pwd=03hjbZwXvXFkhG6BtSvJZrQvzKwTac.1)
+🧭 Where? [Online, via Zoom **(click here to join!)**](https://uib.zoom.us/j/61528767539?pwd=03hjbZwXvXFkhG6BtSvJZrQvzKwTac.1)
 
 💬 Who should join? Everyone interested in EESSI.
 
