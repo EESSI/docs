@@ -4,7 +4,7 @@
 
 * [*EESSI CI/CD Hackathon*](2025/hackathon-eurohpc-user-days.md) (hybrid event, 2 October 2025)
 
-* [*EESSI happy hour sessions*](2025/happy-hours-sessions.md) (online sessions **every** Monday,  starting mid August)
+* [*EESSI happy hour sessions*](2025/happy-hours-sessions.md) (online sessions **every** Monday,  starting 18 August 2025)
 
 ### Past events
 
