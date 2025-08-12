@@ -3696,6 +3696,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#native-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Native builds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-compiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-compiling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partial-filter-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partial filter matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accelerator-filter-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accelerator filter matching
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4222,6 +4258,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#native-builds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Native builds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-compiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-compiling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partial-filter-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partial filter matching
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accelerator-filter-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accelerator filter matching
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -4369,12 +4441,18 @@ to trigger building of software, and to deploy software installations in to the 
 <p>To instruct the bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /> to build software, one or more <code>build</code> instructions
 should be issued by posting a comment in the pull request (see also <a href="../adding_software/building_software/#bot_build">here</a>).</p>
 <p>The most basic build instruction that can be sent to the bot is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bot: build
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bot: build for:arch=&lt;for_arch&gt;
 </code></pre></div>
+<p>Where the <code>for_arch</code> could be e.g. <code>x64_64/amd/zen4</code>. This will trigger the bot to allocate a node of that type <em>and</em>
+build in the <code>/cvmfs/software.eessi.io/versions/&lt;eessi-version&gt;/software/linux/x86_64/amd/zen4</code> prefix.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>for:</code> (and <code>on:</code>, see below) argument to the bot were introduced in bot version 0.9.0. They replace the <code>architecture=... accelerator=...</code> syntax used in bot versions &lt;= v0.8.0.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Only use <code>bot: build</code> if you are confident that it is OK to do so.</p>
-<p>Most likely, you want to supply one or more filters to avoid that the bot builds for all its configurations.</p>
+<p>Most likely, you want to supply one or more filters to avoid that all bots are triggered to build for all
+configurations that match the above command.</p>
 </div>
 <h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
 <p>Build instructions can include <em>filters</em> that are applied by each bot instance to determine which builds
@@ -4382,34 +4460,56 @@ should be executed, based on:</p>
 <ul>
 <li><code>instance</code>: the <code>name</code> of the bot instance, for example <code>instance:aws</code> for the bot instance running in AWS;</li>
 <li><code>repository</code>: the target repository, for example <code>eessi-2023.06-software</code> which corresponds to the 2023.06 version of the EESSI software layer;</li>
-<li><code>architecture</code>: the name of the <a href="../software_layer/cpu_targets/">CPU microarchitecture</a>, for example <code>x86_64/amd/zen2</code>;</li>
+<li><code>on:architecture=&lt;on_arch&gt;,accelerator=&lt;on_accelerator&gt;</code>: the name of the <a href="../software_layer/cpu_targets/">CPU microarchitecture</a> and GPU accelerator you want to build <em>on</em>, for example <code>on:architecture=x86_64/amd/zen4,accelerator=nvidia/cc90</code>;</li>
+<li><code>for:architecture=&lt;for_arch&gt;,accelerator=&lt;for_accelerator&gt;</code>: the name of the <a href="../software_layer/cpu_targets/">CPU microarchitecture</a> and GPU accelerator you want to build <em>for</em>, for example <code>for:architecture=x86_64/amd/zen4,accelerator=nvidia/cc90</code>;</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Use <code>:</code> as separator to specify a value for a particular filter, do not add spaces after the <code>:</code>.</p>
+<p>Use <code>:</code> as separator to specify a value for a particular argument, do not add spaces after the <code>:</code>.</p>
 <p>The bot recognizes shorthands for the supported filters, so you can use <code>inst:...</code> instead of <code>instance:...</code>,
-<code>repo:...</code> instead of <code>repository:...</code>, and <code>arch:...</code> instead of <code>architecture:...</code>.</p>
+<code>repo:...</code> instead of <code>repository:...</code>, and <code>arch=...</code> instead of <code>architecture=...</code>, and <code>accel=</code> instead of <code>accelerator</code>.</p>
 </div>
 <h4 id="combining-filters">Combining filters<a class="headerlink" href="#combining-filters" title="Permanent link">&para;</a></h4>
 <p>You can combine multiple filters in a single <code>build</code> instruction.
 Separate filters with a space, order of filters does not matter.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>bot: build repo:eessi.io-2023.06-software for:arch=x86_64/amd/zen2
 </code></pre></div>
 <h4 id="multiple-build-instructions">Multiple build instructions<a class="headerlink" href="#multiple-build-instructions" title="Permanent link">&para;</a></h4>
 <p>You can issue multiple build instructions in a single comment, even across multiple bot instances,
 repositories, and CPU targets. Specify one build instruction per line.</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen3 inst:aws
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>bot: build repo:eessi.io-2023.06-software arch:x86_64/amd/zen4 inst:azure
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bot: build repo:eessi.io-2023.06-software for:arch=x86_64/amd/zen3 inst:aws
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>bot: build repo:eessi.io-2023.06-software for:arch=x86_64/amd/zen4 inst:azure
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The bot applies the filters with partial matching, which you can use to combine multiple build
-instructions into a single one.</p>
-<p>For example, if you only want to build for all <code>aarch64</code> CPU targets, you can use <code>arch:aarch64</code> as filter.</p>
-<p>The same applies to the <code>instance</code> and <code>repository</code> filters.</p>
+<h4 id="native-builds">Native builds<a class="headerlink" href="#native-builds" title="Permanent link">&para;</a></h4>
+<p>If you want to allocate the same node type that you want to build for, you can omit the <code>on:</code> argument.
+For example: <code>bot:build for:arch=x86_64/amd/zen4</code> is fully equivalent to <code>bot:build on:arch=x86_64/amd/zen4 for:arch=x86_64/amd/zen4</code>.</p>
+<h4 id="cross-compiling">Cross-compiling<a class="headerlink" href="#cross-compiling" title="Permanent link">&para;</a></h4>
+<p>The reason for the separate <code>on:</code> and <code>for:</code> arguments to exist is to allow cross-compilation, and to be specific about
+which architecture to allocate when doing so. The typical use case is to build GPU software on a CPU-only node.</p>
+<p>For example: <code>bot:build on:arch=x86_64/amd/zen2 for:arch=x86_64/amd/zen2,accel=nvidia/cc80</code> will instruct the bot to
+build on a <code>zen2</code> CPU-only node, for a combination of a <code>zen2</code> CPU with a GPU with CUDA Compute Capability 8.0.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Cross-compilation for different CPU targets can <em>not</em> be done with the current setup. This is not a limitation of
+the bot, but of the build scripts in the <code>software-layer-scripts</code> repository. The only thing the bot does is
+prepare a job directory in which the configuration passed through <code>for:</code> is stored in a <code>job.cfg</code> file. What is
+<em>done</em> with that information is up to the build scripts from <code>software-layer-scripts</code>. While these currently
+set the CUDA Compute Capability configuration item for EasyBuild based on the accelerator target defined in the
+<code>job.cfg</code>, the architecture target is <em>only</em> used to determine the installation path. It is <em>not</em> used to set
+EasyBuild's <code>optarch</code> configuration, which will still default to native optimization (i.e. for the host).</p>
 </div>
+<h4 id="partial-filter-matching">Partial filter matching<a class="headerlink" href="#partial-filter-matching" title="Permanent link">&para;</a></h4>
+<p>The bot applies the filters with partial matching, but <em>not</em> for the <code>for:</code> argument. I.e. you can do
+<code>bot:build on:arch=zen4 for:arch=x84_64/amd/zen4,accel=nvidia/cc80</code>, but not
+<code>bot:build on:arch=zen4 for:arch=zen4,accel=nvidia/cc80</code>
+The reason is that for the <code>on:</code> argument, the bot can compare against the configured node types to find a match
+(while for the <code>for:</code> argument, there is no such reference to match against).</p>
+<h4 id="accelerator-filter-matching">Accelerator filter matching<a class="headerlink" href="#accelerator-filter-matching" title="Permanent link">&para;</a></h4>
+<p>If the bot config declares that a node type has a certain accelerator, that node type will <em>only</em> be allocated
+if a corresponding <code>accel=&lt;on_accel&gt;</code> argument is passed. This is to avoid that <code>on:arch=x86_64/amd/zen4</code> would 
+cause builds to be triggered on a <code>zen4</code>+GPU node, while the same system also has a CPU-only <code>zen4</code> node type.</p>
 <h3 id="behind-the-scenes">Behind-the-scenes<a class="headerlink" href="#behind-the-scenes" title="Permanent link">&para;</a></h3>
 <h4 id="processing-build-instructions">Processing build instructions<a class="headerlink" href="#processing-build-instructions" title="Permanent link">&para;</a></h4>
 <p>When the bot receives build instructions through a comment in a pull request,
@@ -4467,7 +4567,7 @@ to the pull request.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 14, 2024 13:22:52 UTC">October 14, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 11, 2025 09:31:48 UTC">August 11, 2025</span>
   </span>
 
     
