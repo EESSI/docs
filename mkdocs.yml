@@ -78,7 +78,7 @@ nav:
     - Talks: talks.md
         # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
     - Contact info: contact.md
-  - Training: training/index.md
+  - Training & events: training-events/index.md
   - Systems where EESSI is available: systems.md
   - Governance: governance.md
   - Blog: blog/index.md
@@ -104,6 +104,10 @@ plugins:
         pilot.md: repositories/pilot.md # https://www.eessi.io/docs/pilot is mentioned in the EESSI open access paper
         gpu.md: site_specific_config/gpu.md
         rocm.md: site_specific_config/rocm.md
+        training/index.md: training-events/index.md
+        training/2025/happy-hours-sessions.md: training-events/2025/happy-hours-sessions.md
+        training/2025/hackathon-eurohpc-user-days.md: training-events/2025/hackathon-eurohpc-user-days.md
+        training/2025/webinar-series-2025Q2.md: training-events/2025/webinar-series-2025Q2.md
   # Enable our custom plugin for json-ld metadata
   - inject_ld_json
     # link to any Markdown heading
