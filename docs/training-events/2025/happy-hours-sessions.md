@@ -1,4 +1,4 @@
-# EESSI Happy Hour sessions (Mondays, 14:00–15:00 CEST)
+# EESSI Happy Hour sessions
 
 _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
@@ -13,9 +13,11 @@ Join us for EESSI Happy Hour, an informal, weekly online session to explore and 
 
 Each series will focus on a specific main topic over several sessions, giving participants the opportunity to ask questions, get hands-on guidance, and share experiences.
 
-🧭 Where? [Online, via Zoom **(click here to join!)**](https://uib.zoom.us/j/61528767539?pwd=03hjbZwXvXFkhG6BtSvJZrQvzKwTac.1)
+🧭 *Where?* [Online, via Zoom **(click here to join!)**](https://uib.zoom.us/j/61528767539?pwd=03hjbZwXvXFkhG6BtSvJZrQvzKwTac.1)
 
-💬 Who should join? Everyone interested in EESSI.
+⏰ *When?* **Mondays, 14:00-15:00 CE(S)T**
+
+💬 *Who should join?* Everyone interested in EESSI.
 
 Let’s make Mondays productive and collaborative — see you at Happy Hour!
 
