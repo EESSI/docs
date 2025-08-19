@@ -33,6 +33,7 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 If you haven't joined the EESSI Slack yet, [click here to join](https://join.slack.com/t/eessi-hpc/shared_invite/zt-1wqy0t8g6-PZJTg3Hjjm5Fm3XEOkzECg) 
 
 ---
+[**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
 ## Sessions
 
@@ -59,5 +60,3 @@ Explore other ways to access EESSI.
 
 ###### Outline
 Practical considerations and recommendations for accessing EESSI.
-
-[**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
