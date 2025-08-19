@@ -33,6 +33,7 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 If you haven't joined the EESSI Slack yet, [click here to join](https://join.slack.com/t/eessi-hpc/shared_invite/zt-1wqy0t8g6-PZJTg3Hjjm5Fm3XEOkzECg) 
 
 ---
+[**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
 ## Sessions
 
@@ -41,7 +42,9 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 #### Monday 18 August 2025, 14:00-15:00 CEST
 
 ###### Outline
-Access EESSI repository through [installing and configuring CernVM-FS](../../getting_access/native_installation.md).
+Access EESSI repository through [installing and configuring CernVM-FS](../../getting_access/native_installation.md) ([slides (PDF)](EESSI-happyhour-2025-001-Installing-and-configuring-CernVM-FS.pdf), [recording (YouTube)](https://youtu.be/MLeSbMOnbs8))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MLeSbMOnbs8?si=hImZbjO59uCgBGet" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 #### Monday 25 August 2025, 14:00-15:00 CEST
 
