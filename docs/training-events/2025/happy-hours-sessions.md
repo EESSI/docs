@@ -41,7 +41,7 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 #### Monday 18 August 2025, 14:00-15:00 CEST
 
 ###### Outline
-Access EESSI repository through [installing and configuring CernVM-FS](../../getting_access/native_installation.md).
+Access EESSI repository through [installing and configuring CernVM-FS](../../getting_access/native_installation.md) ([slides](EESSI-happyhour-2025-001-Installing-and-configuring-CernVM-FS.pdf), [recording](https://youtu.be/MLeSbMOnbs8))
 
 #### Monday 25 August 2025, 14:00-15:00 CEST
 
