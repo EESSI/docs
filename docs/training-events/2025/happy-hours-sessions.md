@@ -60,6 +60,4 @@ Explore other ways to access EESSI.
 ###### Outline
 Practical considerations and recommendations for accessing EESSI.
 
-
-
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
