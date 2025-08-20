@@ -9,6 +9,14 @@ _Provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu) in collaborat
 
     See also [Registration](#registration).
 
+!!! danger "Raspberry Pi Starter Kit prize!"
+    For the on-site participants of the hackathon, a **Raspberry Pi 5 Starter Kit prize** will be awarded to the most impressive project!
+
+    <p align="center">
+        <img width="40%" src="../../../img/raspi.png" alt="Prize">
+    </p>
+
+
 On Thursday 2 October 2025, a continuous integration and continuous deployment (commonly referred to as CI/CD) hackathon will be organised in the wake of the
 [EuroHPC User Days](https://eurohpc-ju.europa.eu/media-events/events/eurohpc-user-days-2025-2025-09-30_en)
 which takes place 30 Sept + 1 Oct 2025 in Copenhagen. 
@@ -29,7 +37,9 @@ The session will be recorded. Recordings, slides, and materials used will be mad
 
 The event will take place at the Royal Danish Library's Cultural Centre, in the [Black Diamond](https://www.kb.dk/en/visit-us/black-diamond-copenhagen) building.
 
-Online participation is available via Zoom.
+## Online
+
+Online participation is available via Zoom *(practical information to join will be shared with registered participants)*.
 
 ## Format
 
@@ -78,7 +88,9 @@ There will also be an opportunity to ask questions directly to the speakers, sho
 
 ## Session details
 
-The session will take place from 9.30am to 4pm, 2 October 2025. Full sessions details (including timings for breaks) will be added soon.
+The session will take place from 09:30 CEST to 16:00 CEST on Thursday 2 October 2025.
+
+*Full sessions details (including timings for breaks) will be added soon.*
 
 A general outline of the program is:
 
