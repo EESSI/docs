@@ -9,6 +9,14 @@ _Provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu) in collaborat
 
     See also [Registration](#registration).
 
+!!! info
+    For the on-site participants, there's a Raspberry Pi 5 Starter Kit prize to the most impressive project!
+
+    <p align="center">
+        <img width="40%" src="../../../img/raspi.png" alt="Prize">
+    </p>
+
+
 On Thursday 2 October 2025, a continuous integration and continuous deployment (commonly referred to as CI/CD) hackathon will be organised in the wake of the
 [EuroHPC User Days](https://eurohpc-ju.europa.eu/media-events/events/eurohpc-user-days-2025-2025-09-30_en)
 which takes place 30 Sept + 1 Oct 2025 in Copenhagen. 
