@@ -17,17 +17,17 @@ illustrating the use of the script.
 
 ### Preparation
 
-Clone the [`EESSI/software-layer`](https://github.com/EESSI/software-layer.git)
-repository and change into the `software-layer` directory by running these commands:
+Clone the [`EESSI/software-layer-scripts`](https://github.com/EESSI/software-layer-scripts.git)
+repository and change into the `software-layer-scripts` directory by running these commands:
 
 ``` { .bash .copy }
-git clone https://github.com/EESSI/software-layer.git
-cd software-layer
+git clone https://github.com/EESSI/software-layer-scripts.git
+cd software-layer-scripts
 ```
 
 ### Quickstart
 
-Run the `eessi_container` script (from the ``software-layer`` directory) to start a shell session in the EESSI container:
+Run the `eessi_container` script (from the ``software-layer-scripts`` directory) to start a shell session in the EESSI container:
 
 ``` { .bash .copy }
 ./eessi_container.sh
