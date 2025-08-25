@@ -82,7 +82,7 @@ End users agree to the [Terms of Use](terms_of_use.md) when using the software i
 
 ## 3. Decision-Making
 
-This section applies to the decision making procedure for the Teams discussed in the [Roles and Responsibilities](#roles-and-responsibilities) Section. The Steering Committee has its own Decision-Making procedure (defined in the [Voting by the Steering Communittee](#voting-by-sc) Section).
+This section applies to the decision making procedure for the Teams discussed in the [Roles and Responsibilities](#roles-and-responsibilities) Section. The Steering Committee has its own Decision-Making procedure (defined in the [Voting by the Steering Committee](#voting-by-sc) Section).
 
 ### 3.1 Consensus Seeking
 
@@ -174,7 +174,7 @@ In the selection process, the Steering Committee will consider the following:
 
 Note that if Members change jobs, or move to another country, some of the above criteria that were taken into account during selection may no longer be satisfied. It is up to the Steering Committee to decide if this is problematic, and if so, try to restore balance by requesting someone's resignation.
 
-Members may appoint an alternate that may represent them and vote on their behalf in case they are unavailable. To alternate is appointed by a Member simply by informing the Chair. An alternate may be appointed for a single meeting, or until further notice. If a Member resigns or is voted out from the Steering Committee, their alternate immediately loses any rights they had as an alternate.
+Members may appoint an alternate that may represent them and vote on their behalf in case they are unavailable. An alternate is appointed by a Member simply by informing the Chair. The alternate may be appointed for a single meeting, or until further notice. If a Member resigns or is voted out from the Steering Committee, their alternate immediately loses any rights they had as an alternate.
 
 #### 6.2.3 Chair
 
