@@ -33,7 +33,7 @@ EESSI GitHub repository maintainers are individuals with write access to (one or
 EESSI GitHub repository maintainers are responsible for reviewing and merging PRs.
 
 ### 2.3 EESSI Infrastructure maintainers
-EESSI Infrastructure maintainers are those individuals that maintain the Central Server for the EESSI CernVM-FS repository (the CernVM-FS Stratum 0), the _public_ mirror servers (CernVM-FS Stratum 1's), and EESSI build infrastructure (e.g. hosting the EESSI build bot).
+EESSI Infrastructure maintainers are those individuals that maintain the Central Server for the EESSI CernVM-FS repository (the CernVM-FS Stratum 0), the _public_ mirror servers (CernVM-FS Stratum 1's), the EESSI build infrastructure (e.g. hosting the EESSI build bot), and/or manage the domain registration(s) connected to EESSI.
 
 Infrastructure maintainers are responsible for monitoring and maintaining their respective infrastructure, and provide access to those who need it according to the Roles and Responsibilities described here. Note that maintainers of build infrastructure have the right to limit access to a _subset_ of the Deployers and Builders as described in 2.4 and 2.5. Furthermore, they are _not_ allowed to give access to others that are not part of the EESSI Infrastructure maintainers, Deployers or Builders teams.
 
