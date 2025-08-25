@@ -1,5 +1,5 @@
 <!-- 
-A project charter discusses _what it is and why it exists_, a governance discusses _how it operates_.
+A project charter discusses _what the open source project is and why it exists_. Governance discusses _how the open source project operates_.
 
 Examples
 
