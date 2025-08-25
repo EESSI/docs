@@ -43,7 +43,7 @@ There are additional CernVM-FS repositories under the `eessi.io` namespace, such
 
 ## 3. Membership
 <!-- Who can join or participate? Are there any requirements (e.g., code contributions, voting eligibility)? -->
-There is currently no membership. Any individual or institution may participate by using EESSI, contributing to EESSI, making EESSI available on systems managed by them, etc.
+There is currently no registered membership. Any individual or institution may participate by using EESSI, contributing to EESSI, making EESSI available on systems managed by them, etc.
 
 ## 4. Review and Amendment
 Changes to the charter require approval by the Steering Committee. See the [relevant section of the Governance](governance.md#voting-by-the-steering-committee).
