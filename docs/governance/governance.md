@@ -56,9 +56,9 @@ Deployers should check the file list of the produced tarballs (as it is reported
 ### 2.6 Ingesters
 Ingesters are those individuals that have permissions to ingest a tarball into the EESSI CernVM-FS repository, i.e. they are essentially responsible for step 3 as it is described in the [Builders](#builders) Section.
 
-Ingesters have merge permissions on the (private) `EESSI/staging` GitHub repository.
+Ingesters have merge permissions on the (private) EESSI GitHub repository used for staging.
 
-Ingesters should check the contents of the tarball as it is reported in the pull requests in the `EESSI/staging` repository. This essentially provides a second check (next to that done by Deployers) on the contents of the tarball.
+Ingesters should check the contents of the tarball as it is reported in the pull requests in the staging repository. This essentially provides a second check (next to that done by Deployers) on the contents of the tarball.
 
 ### 2.7 Contributors
 
