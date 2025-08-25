@@ -143,6 +143,7 @@ The Steering Committee shall be responsible for:
 - The [EESSI Charter](charter.md)
 - The [EESSI Governance](governance.md)
 - The [EESSI Policies](policies.md)
+- The [EESSI Terms of Use](terms_of_use.md)
 
 ### 6.2 Members and Chairs
 
