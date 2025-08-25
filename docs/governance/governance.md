@@ -165,11 +165,11 @@ The Steering Committee then weighs the feedback, and votes on whether to accept 
 
 In the selection process, the Steering Committee will consider the following:
 
-- The Steering Committee ideally consists of an odd number of Members;
-- No more than 30% of the Members should be employed by commercial entities;
-- The number of Members working for the same company should be limited to 1;
-- The number of Members from the same country should be limited to 2;
-- The composition of the Steering Committee should reflect the EESSI community;
+- The Steering Committee ideally consists of an odd number of Members (to reduce chances of a tie when voting);
+- No more than 30% of the Members should be employed by commercial entities (to avoid that the project becomes dominated by commercial interests);
+- The number of Members working for the same company should be limited to 1 (to avoid that the project becomes dominated by a single company, or a small group of companies);
+- The number of Members with the same country of residence should be limited to 2 (to reflect the international nature of the project);
+- The composition of the Steering Committee should reflect the EESSI community (to ensure that the community's interests are represented);
 
 Note that if Members change jobs, or move to another country, some of the above criteria that were taken into account during selection may no longer be satisfied. It is up to the Steering Committee to decide if this is problematic, and if so, try to restore balance by requesting someone's resignation.
 
