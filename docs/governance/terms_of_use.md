@@ -23,7 +23,7 @@ All software within EESSI is governed by its respective open-source or instituti
 Basic telemetry or usage data may be collected for monitoring and improvement of the project. This is handled in accordance with the **GDPR** and relevant EU data protection standards.
 
 ## 5. No Guarantees  
-EESSI is provided “as-is.” Availability, performance, or correctness of the software stack is not guaranteed. Use is at your own risk.
+EESSI is provided "as-is". Availability, performance, or correctness of the software stack is not guaranteed. Use is at your own risk.
 
 ## 6. Liability  
 The EESSI maintainers and affiliated institutions are not liable for damages or losses arising from use of the software stack.
