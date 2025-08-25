@@ -97,7 +97,7 @@ EESSI aims to be transparent regarding how software was built. A combination of 
 ## 5. Platform Prioritization
 
 **HPC compatibility and performance are prioritized**,
-in cases where technical choices must be made between HPC, Cloud, or PC environments,
+in cases where technical choices must be made between HPC, Cloud, or laptops & workstations,
 especially for optimization-related decisions.
 
 This does not imply exclusion of other platforms, but reflects the project's primary use case.
