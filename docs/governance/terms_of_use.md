@@ -1,6 +1,6 @@
 # EESSI – Terms of Use
 
-**Effective Date:** 04 August 2025
+**Effective Date:** 25 August 2025
 
 By using the [**European Environment for Scientific Software Installations (EESSI)**](https://eessi.io), you agree to the following terms:
 
