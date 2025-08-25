@@ -90,7 +90,7 @@ Optimization for performance is strongly encouraged. For compiled software, this
 
 ## 4. Transparency and Traceability
 
-EESSI aims to be transparent regarding how software was build. A combination of the git history, EasyBuild logs, as well as the `easybuild` subdirectory within every installation (which provides the easyconfig and patch files, easyblock, and any hooks used at installation time) provide a detailed description of how software was configured and built.
+EESSI aims to be transparent regarding how software was built. A combination of the git history, EasyBuild logs, as well as the `easybuild` subdirectory within every installation (which provides the easyconfig and patch files, easyblock, and any hooks used at installation time) provide a detailed description of how software was configured and built.
 
 ---
 
@@ -106,7 +106,7 @@ This does not imply exclusion of other platforms, but reflects the project's pri
 
 # EESSI Team Policies
 
-There are currently no Team Policies yet.
+There are no Team Policies yet.
 
 # Changelog
 - 04 August 2025: First version published

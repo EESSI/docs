@@ -12,7 +12,7 @@ The only exception to this is the Steering Committee, which has authority over a
 <!-- Optional section to state high-level principles like openness, meritocracy, consensus, etc. -->
 The value of EESSI grows exponentially with two things: the amount of systems that make EESSI available, and the amount of software that is available in EESSI. Thus, the first goal of this governance is to make sure everyone in the community feels sufficiently included so that they are willing to contribute to EESSI (rather than build their own solution).
 
-The second goal of this governance is to make clear how and by whom decisions in EESSI are taken. This is because trust in this process is important, both to infrastructure providers making the EESSI software stack is available on their systems, as well as by end-users of the software. Note that this concerns both large decisions, such as which architectures are supported in EESSI, as well as small decisions, such as making a specific software package available in EESSI.
+The second goal of this governance is to make clear how and by whom decisions in EESSI are taken. This is because trust in this process is important, both to infrastructure providers making the EESSI software stack available on their systems, as well as for end-users of the software. Note that this concerns both large decisions, such as which architectures are supported in EESSI, as well as small decisions, such as making a specific software package available in EESSI.
 
 To achieve both goals, our governance is based on the [meritocracy](https://en.wikipedia.org/wiki/Meritocracy) governance model.
 
@@ -22,7 +22,7 @@ Below, the roles and responsibilities related to the EESSI project are discussed
 
 ### 2.1 Owners of the `EESSI` GitHub organization & repositories
 <!-- Define who contributors are and what they can do (e.g., file issues, submit PRs). -->
-The owners of the [EESSI GitHub organization](https://github.com/EESSI) & repositories are those individuals with `owner` rights on the EESSI GitHub organization or one of it's associated repositories.
+The owners of the [EESSI GitHub organization](https://github.com/EESSI) & repositories are those individuals with `owner` rights on the EESSI GitHub organization or one of its associated repositories.
 
 EESSI GitHub organization & repository owners are responsible for setting permissions on the code repositories, compliant to the defined roles and responsibilities. They are also responsible for managing GitHub Apps for the EESSI build bots.
 
@@ -34,7 +34,7 @@ EESSI GitHub repository maintainers are responsible for reviewing and merging PR
 ### 2.3 EESSI Infrastructure maintainers
 EESSI Infrastructure maintainers are those individuals that maintain the Central Server for the EESSI CernVM-FS repository (the CernVM-FS Stratum 0), the _public_ mirror servers (CernVM-FS Stratum 1's), and EESSI build infrastructure (e.g. hosting the EESSI build bot).
 
-Infrastructure maintainers are responsible for monitoring and maintaining their respective infrastructure, and provide access to those who needed it according to the Roles and Responsibilities described here. Note that maintainers of build infrastructure have the right to limit access to a _subset_ of the Deployers and Builders as described in 2.4 and 2.5. Furthermore, they are _not_ allowed to give access to others that are not part of the EESSI Infrastructure maintainers, Deployers or Builders teams.
+Infrastructure maintainers are responsible for monitoring and maintaining their respective infrastructure, and provide access to those who need it according to the Roles and Responsibilities described here. Note that maintainers of build infrastructure have the right to limit access to a _subset_ of the Deployers and Builders as described in 2.4 and 2.5. Furthermore, they are _not_ allowed to give access to others that are not part of the EESSI Infrastructure maintainers, Deployers or Builders teams.
 
 ### 2.4 Builders { #builders }
 Adding software to EESSI requires three steps (see [the contribution workflow](../adding_software/overview.md) documentation):
@@ -45,31 +45,31 @@ Adding software to EESSI requires three steps (see [the contribution workflow](.
 
 Builders are those individuals that have permissions to build software through one or more of the EESSI build bots, i.e. step 1 in this process.
 
-Builders are responsible for reviewing contributions. They should, for example, check that contributions adhere to the contribution guidelines, that a contribution will not trigger execution of any untintended or unwanted code, etc. They are also responsible for triggering builds for contributors who want to add software to the EESSI software stack.
+Builders are responsible for reviewing contributions. They should, for example, check that contributions adhere to the contribution guidelines, that a contribution will not trigger execution of any unintended or unwanted code, etc. They are also responsible for triggering builds for contributors who want to add software to the EESSI software stack.
 
 ### 2.5 Deployers
 Deployers are those individuals that have permissions to deploy software through one or more of the EESSI build bots to a central location (e.g. S3 bucket), i.e. they are essentially responsible for step 2 as it is described in the [Builders](#builders) Section.
 
 Deployers should check the file list of the produced tarballs (as it is reported by the build bot) for unexpected items. They should also check if all officially supported hardware targets have been built for.
 
-### 2.6 Ingestors
-Ingestors are those individuals that have permissions to ingest a tarball into the EESSI CernVM-FS repository, i.e. they are essentially responsible for step 3 as it is described in the [Builders](#builders) Section.
+### 2.6 Ingesters
+Ingesters are those individuals that have permissions to ingest a tarball into the EESSI CernVM-FS repository, i.e. they are essentially responsible for step 3 as it is described in the [Builders](#builders) Section.
 
-Ingestors have merge permissions on the (private) `EESSI/staging` GitHub repository.
+Ingesters have merge permissions on the (private) `EESSI/staging` GitHub repository.
 
-Ingestors should check the contents of the tarball as it is reported in the pull requests in the `EESSI/staging` repository. This essentially provides a second check (next to that done by Deployers) on the contents of the tarball.
+Ingesters should check the contents of the tarball as it is reported in the pull requests in the `EESSI/staging` repository. This essentially provides a second check (next to that done by Deployers) on the contents of the tarball.
 
 ### 2.7 Contributors
 
 Contributors are individuals that make a contribution by opening a pull request to one of the repositories in the EESSI GitHub organization.
 
-Contributors that propose adding software to EESSI in their contributions are responsible for checking that the license of the software they want to add allows it's use in EESSI (e.g. allows redistribution). Contributors should also make an effort to ensure that their contributions don't add any malicious code. Finally, contributors should ensure that they adhere to the [Contribution Policy](../adding_software/contribution_policy.md).
+Contributors that propose adding software to EESSI in their contributions are responsible for checking that the license of the software they want to add allows its use in EESSI (e.g. allows redistribution). Contributors should also make an effort to ensure that their contributions don't add any malicious code. Finally, contributors should ensure that they adhere to the [Contribution Policy](../adding_software/contribution_policy.md).
 
 ### 2.8 System administrators of systems providing EESSI
 
 System administrators of systems providing EESSI are administrators of systems (such as, but not limited to cloud and HPC systems) that make the EESSI software stack available to their users.
 
-System administrators of systems providing EESSI should make sure that their system does not put any disproportional load on the public EESSI CernVM-FS infrastructure. Typically, this means that they should adhere to best practices for CernVM-FS caching in a way that fits the size and nature of their system (e.g. by setting up a private CernVM-FS Stratum 1, a proxy, and/or a properly sized local cache).
+System administrators of systems providing EESSI should make sure that their system does not put any disproportionate load on the public EESSI CernVM-FS infrastructure. Typically, this means that they should adhere to best practices for CernVM-FS caching in a way that fits the size and nature of their system (e.g. by setting up a private CernVM-FS Stratum 1, a proxy, and/or a properly sized local cache).
 
 System administrators agree to the [Terms of Use](terms_of_use.md) when making EESSI available on the systems they manage.
 
@@ -106,7 +106,7 @@ Also, if multiple Teams claim ownership over an issue, the Steering Committee ca
 
 The goal is for Teams to operate autonomously as much as possible. 
 
-However, in exceptional cases, the Steering Committee _can_ overrule a decision made by any of the Teams. This power should only be used as a last resort. Examples of when this may be considered is if the Steering Committee feels that a decision endangers the integrity or sustainability of the project, or goes against the policies the Steering Committee has defined. Even then, the Steering Committee should first engage in a discussion with a Team to see if consensus can be achieved on changing the decision.
+However, in exceptional cases, the Steering Committee _can_ overrule a decision made by any of the Teams. This power should only be used as a last resort. Examples of when this may be considered include if the Steering Committee feels that a decision endangers the integrity or sustainability of the project, or goes against the policies the Steering Committee has defined. Even then, the Steering Committee should first engage in a discussion with a Team to see if consensus can be achieved on changing the decision.
 
 ## 4. Meetings and Communication { #meetings-and-communication }
 
@@ -152,7 +152,7 @@ The Steering Committee is made up of community members with sustained and recogn
 Membership of the Steering Committee can terminate in three ways:
 
 - A Member can resign
-- A Member may be voted out. In this case, the vote needs to be unanimous between the other Members. This procedure is intended to provide a mechanism for addressing extraordinary circumstances where a members behavior or actions are deemed severely detrimental to the committee's function or reputation, and/or to the EESSI project.
+- A Member may be voted out. In this case, the vote needs to be unanimous between the other Members. This procedure is intended to provide a mechanism for addressing extraordinary circumstances where a member's behavior or actions are deemed severely detrimental to the committee's function or reputation, and/or to the EESSI project.
 - If a Member is inactive for 6 months and does not reply to communication from the rest of the Steering Committee, the Member may be voted out by the other Steering Committee members. In this case, [regular voting rules](#voting-by-sc) apply.
 
 #### 6.2.2 New members
@@ -170,7 +170,7 @@ In the selection process, the Steering Committee will consider the following:
 - The number of Members from the same country should be limited to 2;
 - The composition of the Steering Committee should reflect the EESSI community;
 
-Note that if Members change jobs, or move to another country, some of the above criteria that were taken into account during selection may no longer be satisfied. It is up to the Steering Committee to decide if this is problematic, and if so, try to restore balance by requesting someone to resign.
+Note that if Members change jobs, or move to another country, some of the above criteria that were taken into account during selection may no longer be satisfied. It is up to the Steering Committee to decide if this is problematic, and if so, try to restore balance by requesting someone's resignation.
 
 All new Members will appoint an alternate that may represent them and vote on their behalf in case they are unavailable. If a Member resigns or is voted out from the Steering Committee, their alternate immediately loses any rights they had as an alternate.
 
