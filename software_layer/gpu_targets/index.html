@@ -4186,11 +4186,119 @@
 
 <h1 id="gpu-targets">GPU targets<a class="headerlink" href="#gpu-targets" title="Permanent link">&para;</a></h1>
 <h2 id="nvidia">NVIDIA<a class="headerlink" href="#nvidia" title="Permanent link">&para;</a></h2>
-<p>The 2023.06 software stack has optimized code for the major GPU CUDA Compute Capabilities 7.0, 8.0 and 9.0, for all CPU targets listed in <a href="../cpu_targets/">CPU targets</a>. NVIDIA guarantees forwards compatibility within a major CUDA Compute Capability (i.e. a GPU with CUDA Compute Capability 8.6 can run code built for CUDA Compute Capability 8.0); this means that all cards with Compute Capability 7.X, 8.X and 9.X are supported. The decision to only ship code optimized for the major architectures was made to keep the amount of software builds that need to be done at a reasonable level - even just building the major CUDA Compute Capabilities for all CPU targets requires (at the time of writing) around 40 builds.</p>
-<p>Not all builds are done natively, i.e. on a system actually containing a CPU and GPU of the type that is being built for. The table below shows an overview of the supported CPU/GPU architectures (in green). The combinations marked with an 'N' are built natively.</p>
-<p><img alt="Overview of supported CPU/GPU architectures in EESSI 2023.06" src="../img/GPU_support_202306.png" /></p>
+<p>EESSI includes optimized software installations for major NVIDIA GPU CUDA Compute Capabilities 7.0, 8.0 and 9.0, for all CPU targets listed in <a href="../cpu_targets/">CPU targets</a>.</p>
+<p>NVIDIA guarantees forwards compatibility within a major CUDA Compute Capability (i.e. a GPU with CUDA Compute Capability 8.6 can run code built for CUDA Compute Capability 8.0).
+This means that all NVIDIA GPUs with Compute Capability 7.x, 8.x and 9.x are supported (see also <a href="https://developer.nvidia.com/cuda-gpus">here</a>).</p>
+<p>The decision to only ship code optimized for the major GPU architectures was made to keep the amount of software builds that need to be done at a reasonable level.
+Even just building for the major CUDA Compute Capabilities for all CPU targets currently requires 39 builds (13 CPU targets times 3 GPU targets).</p>
+<p>Not all builds are done natively, i.e. on a system actually containing a CPU and GPU of the type that is being built for.</p>
+<p>The table below shows an overview of the supported CPU/GPU architectures (marked with <code>x</code>).
+The combinations marked with an '<code>N</code>' are built natively; others are built on a CPU-only system.</p>
+<table>
+    <thead>
+        <tr>
+            <th colspan=3></th>
+            <th colspan=3><div align="center">CUDA compute capability</div></th>
+        </tr>
+        <tr>
+            <th colspan=3><div align="center">CPU microarchitecture</div></th>
+            <th>7.0</th>
+            <th>8.0</th>
+            <th>9.0</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4>aarch64</td>
+            <td colspan=2>generic</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td colspan=2>neoverse_n1</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td colspan=2>neoverse_v1</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>nvidia</td>
+            <td>grace</td>
+            <td>x</td>
+            <td>x</td>
+            <td>N</td>
+        </tr>
+        <tr>
+            <td colspan=6></td>
+        </tr>
+        <tr>
+            <td rowspan=9>x86_64</td>
+            <td colspan=2>generic</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td rowspan=5>intel</td>
+            <td>haswell</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>skylake_avx512</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>cascadelake</td>
+            <td>N</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>icelake</td>
+            <td>x</td>
+            <td>N</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>sapphirerapids</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td rowspan=3>amd</td>
+            <td>zen2</td>
+            <td>x</td>
+            <td>N</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>zen3</td>
+            <td>x</td>
+            <td>N</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>zen4</td>
+            <td>x</td>
+            <td>x</td>
+            <td>N</td>
+        </tr>
+    </tbody>
+</table>
+
 <h2 id="amd">AMD<a class="headerlink" href="#amd" title="Permanent link">&para;</a></h2>
-<p>Support for AMD GPUs is a work in progress.</p>
+<p>Support for AMD GPUs is a work in progress (<a href="../../blog/2025/08/07/rocm/">see recent blog post</a>).</p>
 
 
 
@@ -4211,7 +4319,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 7, 2025 12:44:06 UTC">July 7, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 27, 2025 08:39:53 UTC">August 27, 2025</span>
   </span>
 
     
