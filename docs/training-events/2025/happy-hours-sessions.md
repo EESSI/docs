@@ -49,7 +49,9 @@ Access EESSI repository through [installing and configuring CernVM-FS](../../get
 #### Monday 25 August 2025, 14:00-15:00 CEST
 
 ###### Outline
-A walkthrough of accessing EESSI via the [EESSI container script](../../getting_access/eessi_container.md).
+A walkthrough of accessing EESSI via the [EESSI container script](../../getting_access/eessi_container.md) ([slides (PDF)](EESSI-happyhour-2025-002-Accessing-EESSI-using-container-script.pdf), [recording (YouTube)](https://www.youtube.com/watch?v=MAgWwj27i9U))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MAgWwj27i9U?si=SOD3hMOVIF3N6hdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 #### Monday 01 September 2025, 14:00-15:00 CEST
 
