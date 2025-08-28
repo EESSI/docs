@@ -138,7 +138,7 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 
 * FinisTerrae III: [General documentation](https://cesga-docs.gitlab.io/ft3-user-guide/overview.html) | [EESSI @ FinisTerrae III](https://cesga-docs.gitlab.io/ft3-user-guide/compilers_and_dev_tools.html#eessi)
 
-#### Universitat Pompeu Fabra (UPF)
+#### Universitat Pompeu Fabra Barcelona (UPF)
 
 * MARVIN II: [General documentation](https://www.upf.edu/web/sct-sit/tutorials) | [EESSI @ MARVIN II]https://www.upf.edu/web/sct-sit/software)
 
