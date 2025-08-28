@@ -134,13 +134,13 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 * arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
 This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
 
-#### Universitat Pompeu Fabra (UPF)
-
-* MARVIN II: [General documentation](https://www.upf.edu/web/sct-sit/tutorials) | [EESSI @ MARVIN II]https://www.upf.edu/web/sct-sit/software)
-
 #### Galicia Supercomputing Center (CESGA)
 
 * FinisTerrae III: [General documentation](https://cesga-docs.gitlab.io/ft3-user-guide/overview.html) | [EESSI @ FinisTerrae III](https://cesga-docs.gitlab.io/ft3-user-guide/compilers_and_dev_tools.html#eessi)
+
+#### Universitat Pompeu Fabra (UPF)
+
+* MARVIN II: [General documentation](https://www.upf.edu/web/sct-sit/tutorials) | [EESSI @ MARVIN II]https://www.upf.edu/web/sct-sit/software)
 
 ### Czech Republic
 
