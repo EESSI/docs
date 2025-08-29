@@ -32,12 +32,9 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 ---
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
-## **Next Session**
-
-### Monday 01 September 2025, 14:00-15:00 CEST
-
-**Outline:**
-Explore other ways to access EESSI.
+### **Next Session**: Explore other ways to access EESSI
+### Topic Series: How to Access EESSI
+### Monday 01 September 2025, 14:00-15:00 CE(S)T
 
 ---
 
@@ -52,6 +49,3 @@ See the full Recordings, slides, and materials here: [Past Sessions & Videos](./
 - **25 August 2025 – Accessing EESSI using container script**  
   A walkthrough of accessing EESSI via the [EESSI container script](../../getting_access/eessi_container.md).  
   [Slides (PDF)](EESSI-happyhour-2025-002-Accessing-EESSI-using-container-script.pdf) | [Recording (YouTube)](https://www.youtube.com/watch?v=MAgWwj27i9U)
-
-- **08 September 2025 – Practical considerations and recommendations**  
-  Practical considerations and recommendations for accessing EESSI.
