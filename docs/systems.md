@@ -112,7 +112,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 #### University of Groningen
 
-* Hábrók: [General documentation](https://wiki.hpc.rug.nl/habrok/introduction/cluster_description)
+* Hábrók: [General documentation](https://wiki.hpc.rug.nl/habrok/introduction/cluster_description) | [EESSI @ Hábrók](https://wiki.hpc.rug.nl/habrok/software_environment/eessi)
 * Managed Linux workspace (LWP): [General documentation](https://lwpwiki.webhosting.rug.nl/) | [EESSI @ LWP](https://lwpwiki.webhosting.rug.nl/index.php/EESSI)
 
 ### Norway
