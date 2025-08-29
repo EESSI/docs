@@ -22,6 +22,3 @@ Find detailed outlines, slides, and video recordings of earlier sessions below.
 
 ---
 
-## 08 September 2025 – Practical considerations and recommendations
-
-**Outline:** Practical considerations and recommendations for accessing EESSI.
