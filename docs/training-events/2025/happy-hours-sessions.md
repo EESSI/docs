@@ -2,12 +2,9 @@
 
 _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
-**What if you no longer have to install a broad range of scientific software from
-scratch on every laptop, HPC cluster, or cloud instance you use or maintain,
-without compromising on performance?**
+**What if you no longer have to install a broad range of scientific software from scratch on every laptop, HPC cluster, or cloud instance you use or maintain, without compromising on performance?**
 
 The European Environment for Scientific Software Installations [EESSI](https://eessi.io) comes to the rescue!
-
 
 Join us for EESSI Happy Hour, an informal, weekly online session to explore and discuss key EESSI topics and updates with the community.
 
@@ -35,30 +32,26 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 ---
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
-## Sessions
+## **Next Session**
 
-### Topic Series: How to Access EESSI
+### Monday 01 September 2025, 14:00-15:00 CEST
 
-#### Monday 18 August 2025, 14:00-15:00 CEST
-
-###### Outline
-Access EESSI repository through [installing and configuring CernVM-FS](../../getting_access/native_installation.md) ([slides (PDF)](EESSI-happyhour-2025-001-Installing-and-configuring-CernVM-FS.pdf), [recording (YouTube)](https://youtu.be/MLeSbMOnbs8))
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MLeSbMOnbs8?si=hImZbjO59uCgBGet" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-#### Monday 25 August 2025, 14:00-15:00 CEST
-
-###### Outline
-A walkthrough of accessing EESSI via the [EESSI container script](../../getting_access/eessi_container.md) ([slides (PDF)](EESSI-happyhour-2025-002-Accessing-EESSI-using-container-script.pdf), [recording (YouTube)](https://www.youtube.com/watch?v=MAgWwj27i9U))
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MAgWwj27i9U?si=SOD3hMOVIF3N6hdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-#### Monday 01 September 2025, 14:00-15:00 CEST
-
-###### Outline
+**Outline:**
 Explore other ways to access EESSI.
 
-#### Monday 08 September 2025, 14:00-15:00 CEST
+---
 
-###### Outline
-Practical considerations and recommendations for accessing EESSI.
+## Past Events
+
+See the full Recordings, slides, and materials here: [Past Sessions & Videos](./happy-hours-past-sessions.md)
+
+- **18 August 2025 – Installing and configuring CernVM-FS**  
+  Access EESSI repository through [installing and configuring CernVM-FS](../../getting_access/native_installation.md).  
+  [Slides (PDF)](EESSI-happyhour-2025-001-Installing-and-configuring-CernVM-FS.pdf) | [Recording (YouTube)](https://youtu.be/MLeSbMOnbs8)
+
+- **25 August 2025 – Accessing EESSI using container script**  
+  A walkthrough of accessing EESSI via the [EESSI container script](../../getting_access/eessi_container.md).  
+  [Slides (PDF)](EESSI-happyhour-2025-002-Accessing-EESSI-using-container-script.pdf) | [Recording (YouTube)](https://www.youtube.com/watch?v=MAgWwj27i9U)
+
+- **08 September 2025 – Practical considerations and recommendations**  
+  Practical considerations and recommendations for accessing EESSI.
