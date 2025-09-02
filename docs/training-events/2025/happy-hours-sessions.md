@@ -56,7 +56,9 @@ A walkthrough of accessing EESSI via the [EESSI container script](../../getting_
 #### Monday 01 September 2025, 14:00-15:00 CEST
 
 ###### Outline
-Explore other ways to access EESSI.
+Explore other ways to access EESSI ([slides (PDF)](EESSI-happyhour-2025-003-Other-ways-accessing-EESSI.pdf), [recording (YouTube)](https://www.youtube.com/watch?v=_UrXbZI1lE4))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_UrXbZI1lE4?si=4PoYoAevRjCen59k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 #### Monday 08 September 2025, 14:00-15:00 CEST
 
