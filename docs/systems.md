@@ -83,7 +83,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 #### Jülich Supercomputing Centre
 
-* JUSUF: [General documentation](https://apps.fz-juelich.de/jsc/hps/jusuf/index.html)
+* JUSUF: [General documentation](https://apps.fz-juelich.de/jsc/hps/jusuf/index.html) | [EESSI @ JUSUF](https://hps.pages.jsc.fz-juelich.de/documentation/user-documentation/jusuf/software-modules.html#european-environment-for-scientific-software-installations-eessi)
 
 #### University of Stuttgart
 
