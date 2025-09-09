@@ -30,22 +30,33 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 If you haven't joined the EESSI Slack yet, [click here to join](https://join.slack.com/t/eessi-hpc/shared_invite/zt-1wqy0t8g6-PZJTg3Hjjm5Fm3XEOkzECg) 
 
 ---
-[**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
-### **Next Session**: Explore other ways to access EESSI
-### Topic Series: How to Access EESSI
-### Monday 01 September 2025, 14:00-15:00 CE(S)T
+### 💡 **Next Session**: 
+### Topic Series: A peek inside EESSI layers
+🗓️ Schedule
+#### Monday 15 September 2025, 14:00-15:00 CE(S)T
+#### EESSI design overview
 
 ---
 
-## Past Events
+### Upcoming sessions in the topic series: A peek inside EESSI layers
+###### Outline
+- 15 September 2025 -  EESSI design overview
+- 22 September 2025 -  Deeper look into EESSI compat and software layers
+- 29 September 2025 -  Navigating the EESSI GitHub Repositories
+ 
+---
 
-See the full Recordings, slides, and materials here: [Past Sessions & Videos](./happy-hours-past-sessions.md)
+### Previous EESSI Happy Hour sessions
 
-- **18 August 2025 – Installing and configuring CernVM-FS**  
-  Access EESSI repository through [installing and configuring CernVM-FS](../../getting_access/native_installation.md).  
-  [Slides (PDF)](EESSI-happyhour-2025-001-Installing-and-configuring-CernVM-FS.pdf) | [Recording (YouTube)](https://youtu.be/MLeSbMOnbs8)
+[**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
-- **25 August 2025 – Accessing EESSI using container script**  
-  A walkthrough of accessing EESSI via the [EESSI container script](../../getting_access/eessi_container.md).  
-  [Slides (PDF)](EESSI-happyhour-2025-002-Accessing-EESSI-using-container-script.pdf) | [Recording (YouTube)](https://www.youtube.com/watch?v=MAgWwj27i9U)
+See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
+
+- 18 August 2025 – Installing and configuring CernVM-FS  
+
+- 25 August 2025 – Accessing EESSI using container script  
+
+- 01 September 2025 – Explore other ways to access EESSI
+
+- 08 September 2025 – Practical considerations and recommendations for accessing EESSI

@@ -83,7 +83,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 #### Jülich Supercomputing Centre
 
-* JUSUF: [General documentation](https://apps.fz-juelich.de/jsc/hps/jusuf/index.html)
+* JUSUF: [General documentation](https://apps.fz-juelich.de/jsc/hps/jusuf/index.html) | [EESSI @ JUSUF](https://hps.pages.jsc.fz-juelich.de/documentation/user-documentation/jusuf/software-modules.html#european-environment-for-scientific-software-installations-eessi)
 
 #### University of Stuttgart
 
@@ -94,6 +94,12 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 #### Aristotle University of Thessaloniki
 
 * Aristotle: [General documentation](https://hpc.it.auth.gr/nodes-summary_en/) | [EESSI @ Aristotle](https://hpc.it.auth.gr/software/eessi/)
+
+### Hungary
+
+#### Digital Government Development and Project Management Ltd. (DKF Kft)
+
+* Komondor: [General documentation](https://docs.hpc.dkf.hu/)
 
 ### Luxembourg
 
@@ -126,7 +132,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 ### Spain
 
-#### Barcelona Supercomputing Center
+#### Barcelona Supercomputing Center (BSC)
 
 * thunder
 * arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
@@ -137,6 +143,10 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 #### Galicia Supercomputing Center (CESGA)
 
 * FinisTerrae III: [General documentation](https://cesga-docs.gitlab.io/ft3-user-guide/overview.html) | [EESSI @ FinisTerrae III](https://cesga-docs.gitlab.io/ft3-user-guide/compilers_and_dev_tools.html#eessi)
+
+#### Universitat Pompeu Fabra Barcelona (UPF)
+
+* MARVIN II: [General documentation](https://www.upf.edu/web/sct-sit/tutorials) | [EESSI @ MARVIN II](https://www.upf.edu/web/sct-sit/software)
 
 ### Czech Republic
 
