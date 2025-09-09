@@ -148,6 +148,12 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 
 * MARVIN II: [General documentation](https://www.upf.edu/web/sct-sit/tutorials) | [EESSI @ MARVIN II](https://www.upf.edu/web/sct-sit/software)
 
+### Switzerland
+
+#### University of Basel
+
+* sciCORE: [General documentation](https://docs.scicore.unibas.ch/)
+
 ### Czech Republic
 
 #### Czech Technical University in Prague
