@@ -60,7 +60,7 @@ To build OpenMPI 5.x with CXI support, we needed the following missing dependenc
 
 EESSI's [host_injections](../../../../site_specific_config/host_injections.md) mechanism allows us to override EESSI's MPI library with an ABI compatible host MPI while maintaining compatibility with the rest of the software stack.
 
-*Validating `libmpi.so.40` in  `host_injections` on the ARM nodes*:
+**Validating `libmpi.so.40` in  `host_injections` on ARM nodes**:
 ```
 ldd /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/aarch64/nvidia/grace/rpath_overrides/OpenMPI/system/lib/libmpi.so.40
 
