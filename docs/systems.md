@@ -74,6 +74,12 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 * Hydra: [General documentation](https://hpc.vub.be/docs/) | [EESSI @ Hydra](https://hpc.vub.be/docs/software/modules/#european-environment-for-scientific-software-installations)
 
+### Czech Republic
+
+#### Czech Technical University in Prague
+
+* Sunrise: [General documentation](https://nms.fjfi.cvut.cz/wiki/Sunrise.fjfi.cvut.cz)
+
 
 ### Germany
 
@@ -148,11 +154,11 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 
 * MARVIN II: [General documentation](https://www.upf.edu/web/sct-sit/tutorials) | [EESSI @ MARVIN II](https://www.upf.edu/web/sct-sit/software)
 
-### Czech Republic
+### Switzerland
 
-#### Czech Technical University in Prague
+#### University of Basel
 
-* Sunrise: [General documentation](https://nms.fjfi.cvut.cz/wiki/Sunrise.fjfi.cvut.cz)
+* sciCORE: [General documentation](https://docs.scicore.unibas.ch/)
 
 ---
 
