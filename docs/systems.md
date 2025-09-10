@@ -105,7 +105,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 #### Digital Government Development and Project Management Ltd. (DKF Kft)
 
-* Komondor: [General documentation](https://docs.hpc.dkf.hu/)
+* Komondor: [General documentation](https://docs.hpc.dkf.hu/) | [EESSI @ Komondor](https://docs.hpc.dkf.hu/software/eessi.html)
 
 ### Luxembourg
 
