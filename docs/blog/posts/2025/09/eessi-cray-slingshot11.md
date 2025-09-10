@@ -8,7 +8,7 @@ slug: EESSI-on-Cray-Slingshot
 
 High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximizing application performance. HPE Cray Slingshot 11 with CXI (Cassini eXascale Interconnect) represents a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads.
 
-In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot 11 CXI support on Cray systems and its integration with EESSI using host injections. This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version. The post concludes with test results validating this setup.
+In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot 11 CXI support on Cray systems and its integration with EESSI using `host_injections`. This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version. The post concludes with test results validating this setup.
 
 <!-- more -->
 
