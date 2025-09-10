@@ -25,7 +25,8 @@ The main technical challenge is building the complete dependency chain on top of
 
 ## System Architecture
 
-Our target system consists of two distinct partitions:
+Our target system [Olivia](https://documentation.sigma2.no/olivia_pilot_period_docs/olivia_pilot_main.html) is based on HPE Cray EX platforms for compute and accelerator nodes, and HPE ClusterStor for global storage, all connected via HPE Slingshot high-speed interconnect.
+It consists of two main distinct partitions:
 
 - **Partition 1**: x86_64 AMD CPUs without accelerators
 - **Partition 2**: NVIDIA Grace CPUs with Hopper accelerators
@@ -60,7 +61,10 @@ To build OpenMPI 5.x with CXI support, we needed the following missing dependenc
 
 EESSI's [host_injections](../../../../site_specific_config/host_injections.md) mechanism allows us to override EESSI's MPI library with an ABI compatible host MPI while maintaining compatibility with the rest of the software stack.
 
-**Validating `libmpi.so.40` in  `host_injections` on ARM nodes**:
+**Validating the `libmpi.so.40` in `host_injections` from OpenMPI/5.0.7 on ARM nodes built with:** 
+```
+./configure --prefix=/cluster/installations/eessi/default/aarch64/software/OpenMPI/5.0.7-GCC-12.3.0 --with-cuda=${EBROOTCUDA} --with-cuda-libdir=${EBROOTCUDA}/lib64 --with-slurm --enable-mpi-ext=cuda --with-libfabric=${EBROOTLIBFABRIC} --with-ucx=${EBROOTUCX} --enable-mpirun-prefix-by-default  --enable-shared --with-hwloc=/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/nvidia/grace/software/hwloc/2.9.1-GCCcore-12.3.0  --with-libevent=/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/nvidia/grace/software/libevent/2.1.12-GCCcore-12.3.0  --with-pmix=/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/nvidia/grace/software/PMIx/4.2.4-GCCcore-12.3.0  --with-ucc=/cvmfs/software.eessi.io/versions/2023.06/software/linux/aarch64/nvidia/grace/software/UCC/1.2.0-GCCcore-12.3.0  --with-prrte=internal
+```
 ```
 ldd /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/aarch64/nvidia/grace/rpath_overrides/OpenMPI/system/lib/libmpi.so.40
 
