@@ -31,11 +31,10 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: 
+### 💡 **Next Session**: **EESSI design overview** 
 ### Topic Series: A peek inside EESSI layers
 🗓️ Schedule
 #### Monday 15 September 2025, 14:00-15:00 CE(S)T
-#### EESSI design overview
 
 ---
 
