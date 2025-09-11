@@ -5,11 +5,11 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: The aim of the wrapt module is to provide a transparent objectproxy
-    for Python, which can be used as the basis for the construction offunction wrappers
-    and decorator functions.
+  description: This is a Python implementation of John Gruber's Markdown.It is almost
+    completely compliant with the reference implementation, though there are a few
+    known issues.Additional features are supported by the Available Extensions.
   license: Not confirmed
-  name: wrapt
+  name: Markdown
   offers:
     '@type': Offer
     price: 0
@@ -26,38 +26,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''wrapt/1.15.0-gfbf-2023a'', ''wrapt/1.16.0-GCCcore-13.2.0'']'
-  url: https://pypi.org/project/wrapt/
+  softwareVersion: '[''Markdown/3.6-GCCcore-13.2.0'']'
+  url: https://python-markdown.github.io/
 ---
 
-wrapt
-=====
+Markdown
+========
 
 
-The aim of the wrapt module is to provide a transparent objectproxy for Python, which can be used as the basis for the construction offunction wrappers and decorator functions.
+This is a Python implementation of John Gruber's Markdown.It is almost completely compliant with the reference implementation, though there are a few known issues.Additional features are supported by the Available Extensions.
 
-https://pypi.org/project/wrapt/
+https://python-markdown.github.io/
 # Available modules
 
 
-The overview below shows which wrapt installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which Markdown installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using wrapt, load one of these modules using a `module load` command like:
+To start using Markdown, load one of these modules using a `module load` command like:
 
 ```shell
-module load wrapt/1.16.0-GCCcore-13.2.0
+module load Markdown/3.6-GCCcore-13.2.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|wrapt/1.16.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|wrapt/1.15.0-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|
-
-
-### wrapt/1.15.0-gfbf-2023a
-
-This is a list of extensions included in the module:
-
-wrapt-1.15.0
+|Markdown/3.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|
