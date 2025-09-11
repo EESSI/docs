@@ -6,17 +6,17 @@ slug: EESSI-on-Cray-Slingshot
 
 # MPI at Warp Speed: EESSI Meets Slingshot-11
 
-High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximizing application performance. HPE/Cray supporting Slingshot 11 via CXI libfabric promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads.
+High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximizing application performance. HPE/Cray supporting Slingshot-11 via CXI libfabric promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads.
 
-In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot 11 support on HPE/Cray systems and its integration with EESSI using `host_injections`. This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version. The post concludes with test results validating this setup.
+In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot-11 support on HPE/Cray systems and its integration with EESSI using [host_injections](../../../../site_specific_config/host_injections.md). This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version. The post concludes with test results validating this setup.
 
 <!-- more -->
 
 ## The Challenge
 
-EESSI provides a comprehensive software stack, but specialized interconnect support like Slingshot 11 requires custom-built libraries that aren't yet available in the standard EESSI distribution. Our goal is to:
+EESSI provides a comprehensive software stack, but specialized interconnect support like Slingshot-11 requires custom-built libraries that aren't yet available in the standard EESSI distribution. Our goal is to:
 
-1. Build OpenMPI 5.x with native Slingshot 11 support
+1. Build OpenMPI 5.x with native Slingshot-11 support
 2. Create ABI-compatible replacements for EESSI's OpenMPI libraries
 3. Support both x86_64 AMD CPU partitions and NVIDIA Grace CPU partitions with Hopper accelerators
 4. Avoid dependency on system packages where possible
@@ -59,7 +59,7 @@ To build OpenMPI 5.x with libfabric and CXI support, we needed the following mis
 
 ## EESSI Integration via `host_injections`
 
-EESSI's [host_injections](../../../../site_specific_config/host_injections.md) mechanism allows us to override EESSI's MPI library with an ABI compatible host MPI while maintaining compatibility with the rest of the software stack.
+EESSI's `host_injections` mechanism allows us to override EESSI's MPI library with an ABI compatible host MPI while maintaining compatibility with the rest of the software stack.
 
 **Validating the `libmpi.so.40` in `host_injections` from OpenMPI/5.0.7 on ARM nodes built with:** 
 ```
