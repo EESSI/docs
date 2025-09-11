@@ -4,7 +4,7 @@ date: 2025-09-10
 slug: EESSI-on-Cray-Slingshot
 ---
 
-# EESSI on Cray system with Slingshot 11
+# MPI at Warp Speed: EESSI Meets Slingshot-11
 
 High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximizing application performance. HPE Cray Slingshot 11 with CXI (Cassini eXascale Interconnect) promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads.
 
