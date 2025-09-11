@@ -56,7 +56,7 @@ jobs:
           rm -f docs/available_software/data/json_data.json.orig  docs/available_software/data/json_data_detail.json.orig
 
       - name: create pull request
-        uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
         if: steps.update_available_software.outputs.json_data_changed == 'yes'
         with:
           add-paths: |
