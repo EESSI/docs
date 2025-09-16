@@ -66,8 +66,8 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 #### Austrian Scientific Computing
 
-* VSC-5: [General documentation](https://docs.vsc.ac.at/systems/vsc5.html) | [EESSI @ VSC-5](https://docs.vsc.ac.at/software/eessi.html)
-* MUSICA: [General documentation](https://docs.vsc.ac.at/systems/musica.html) | [EESSI @ MUSICA](https://docs.vsc.ac.at/software/eessi.html)
+* VSC-5: [General documentation](https://docs.asc.ac.at/systems/vsc5.html) | [EESSI @ VSC-5](https://docs.asc.ac.at/software/eessi.html)
+* MUSICA: [General documentation](https://docs.asc.ac.at/systems/musica.html) | [EESSI @ MUSICA](https://docs.asc.ac.at/software/eessi.html)
 MUSICA is currently in a closed test phase, with open testing to follow. It is expected to be operational by the end of 2025.
 
 ### Belgium
