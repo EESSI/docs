@@ -42,7 +42,7 @@ To start using science, load one of these modules using a `module load` command 
 module load science/7.2.0
 ```
 
-*(This data was automatically generated on {{ generated_date }})*  
+*(This data was automatically generated on {{ generated_date }})*
 
 | |aarch64/generic|x86_64/amd/zen2|
 | :---: | :---: | :---: |
