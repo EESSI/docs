@@ -9,7 +9,7 @@ slug: EESSI-on-Cray-Slingshot
 High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximizing application performance. The available interconnects, and the libraries
 that optimise their usage, is constantly shifting. EESSI can't constantly rebuild old software so how do we take advantage of new technological developments?
 
-Speficially in this blog post we look at HPE/Cray supporting Slingshot-11 via the CXI [libfabric](https://ofiwg.github.io/libfabric/) provider. That's a lot of technical jargon, but it basically comes down to making a
+Specifically in this blog post we look at HPE/Cray supporting Slingshot-11 via the CXI [libfabric](https://ofiwg.github.io/libfabric/) provider. That's a lot of technical jargon, but it basically comes down to making a
 software stack that can fully leverage the
 capabilities of the interconnect hardware. Slingshot-11 promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads...so
 this should be worth the effort!
