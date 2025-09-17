@@ -31,16 +31,15 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: **EESSI design overview** 
+### 💡 **Next Session**: Deeper look into EESSI compat and software layers
 ### Topic Series: A peek inside EESSI layers
 🗓️ Schedule
-#### Monday 15 September 2025, 14:00-15:00 CE(S)T
+#### Monday 22 September 2025, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming sessions in the topic series: A peek inside EESSI layers
 ###### Outline
-- 15 September 2025 -  EESSI design overview
 - 22 September 2025 -  Deeper look into EESSI compat and software layers
 - 29 September 2025 -  Navigating the EESSI GitHub Repositories
  
@@ -52,10 +51,23 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
-- 18 August 2025 – Installing and configuring CernVM-FS  
+---
 
-- 25 August 2025 – Accessing EESSI using container script  
+*Topic series: A peek inside EESSI layers*
 
-- 01 September 2025 – Explore other ways to access EESSI
+- 15 September 2025 - [EESSI design overview](https://youtu.be/esYU6atzfek)
 
-- 08 September 2025 – Practical considerations and recommendations for accessing EESSI
+---
+
+*Topic series: How to Access EESSI*
+
+- 08 September 2025 – [Practical considerations and recommendations for accessing EESSI](https://youtu.be/4HlcXJPOlBE)
+
+- 01 September 2025 – [Explore other ways to access EESSI](https://www.youtube.com/watch?v=_UrXbZI1lE4)
+
+- 25 August 2025 – [Accessing EESSI using container script](https://www.youtube.com/watch?v=MAgWwj27i9U)  
+
+- 18 August 2025 – [Installing and configuring CernVM-FS](https://youtu.be/MLeSbMOnbs8)  
+
+
+
