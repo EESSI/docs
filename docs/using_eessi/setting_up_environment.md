@@ -206,12 +206,20 @@ $ module av
 # ...
 ```
 
+??? tip "The accelerator modules are visible but I can't load them"
 
-!!! note "Choosing a different CPU architecture for the accelerator software"
+    Do note that just because the accelerator modules are now visible doesn't mean you will be able to load them. EESSI
+    has an additional check to ensure that the accelerator **drivers** are available since without access to the
+    drivers any software typically cannot execute anyway. If you need to allow loading of the modules (for example
+    because you wish to prepare the job execution environment from a login node where the accelerator is not
+    available) you can set yet another environment variable `EESSI_OVERRIDE_GPU_CHECK=1`.
+
+??? tip "I want to choose a different CPU architecture for the accelerator software"
 
     It is even possible to use a different CPU architecture for the accelerator software stack by setting the
     environment variable `EESSI_ACCEL_SOFTWARE_SUBDIR_OVERRIDE`. This environment variable is not listened to
     by the detection script, but does affect how EESSI is initialised.
 
     The use case for this scenario is expected to be extremely rare and is only tested for the relatively trivial
-    context of making available and loading the architecture modules.
+    context of making available and loading the software application modules for the specific architecture
+    combination.
