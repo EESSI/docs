@@ -6,38 +6,45 @@ slug: EESSI-on-Cray-Slingshot
 
 # MPI at Warp Speed: EESSI Meets Slingshot-11
 
-High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximizing application performance. HPE/Cray supporting Slingshot-11 via CXI libfabric promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads.
+High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximizing application performance. The available interconnects, and the libraries
+that optimise their usage, is constantly shifting. EESSI can't constantly rebuild old software so how do we take advantage of new technological developments?
 
-In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot-11 support on HPE/Cray systems and its integration with EESSI using [host_injections](../../../../site_specific_config/host_injections.md). This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version. The post concludes with test results validating this setup.
+Specifically in this blog post we look at HPE/Cray supporting Slingshot-11 via the CXI [libfabric](https://ofiwg.github.io/libfabric/) provider. That's a lot of technical jargon, but it basically comes down to making a
+software stack that can fully leverage the
+capabilities of the interconnect hardware. Slingshot-11 promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads...so
+this should be worth the effort!
 
+In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot-11 support on HPE/Cray systems and its integration with EESSI using the [host_injections](../../../../site_specific_config/host_injections.md)
+mechanism of EESSI to inject the custom-built OpenMPI libraries. This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version which should give us optimal performance.
 <!-- more -->
 
 ## The Challenge
 
-EESSI provides a comprehensive software stack, but specialized interconnect support like Slingshot-11 requires custom-built libraries that aren't yet available in the standard EESSI distribution. Our goal is to:
+EESSI provides a comprehensive software stack, but specialized interconnect support like Slingshot-11 can sometimes require custom-built libraries that aren't yet available in the standard EESSI distribution. Our goal is to:
 
 1. Build OpenMPI 5.x with native Slingshot-11 support
 2. Create ABI-compatible replacements for EESSI's OpenMPI libraries
-3. Support both x86_64 AMD CPU partitions and NVIDIA Grace CPU partitions with Hopper accelerators
-4. Avoid dependency on system packages where possible
+3. Place the libraries somewhere where EESSI automatically picks them up
+4. Support both x86_64 AMD CPU partitions and NVIDIA Grace CPU partitions with Hopper accelerators
 
 The main task is to build the required dependencies on top of EESSI, since many of the libraries needed for libfabric with CXI support are not yet available in the current EESSI stack.
 
-## System Architecture
+### System Architecture
 
-Our target system [Olivia](https://documentation.sigma2.no/olivia_pilot_period_docs/olivia_pilot_main.html) is based on HPE Cray EX platforms for compute and accelerator nodes, and HPE ClusterStor for global storage, all connected via HPE Slingshot high-speed interconnect.
+Our target system is [Olivia](https://documentation.sigma2.no/olivia_pilot_period_docs/olivia_pilot_main.html) which is based on HPE Cray EX platforms for compute and accelerator nodes, and HPE Cray ClusterStor for global storage, all
+connected via HPE Slingshot high-speed interconnect.
 It consists of two main distinct partitions:
 
 - **Partition 1**: x86_64 AMD CPUs without accelerators
 - **Partition 2**: NVIDIA Grace CPUs with Hopper accelerators
 
-For the Grace/Hopper partition we needed to enable CUDA support in libfabric.
+For the Grace/Hopper partition we also need to enable CUDA support in libfabric.
 
 ## Building the Dependency Chain
 
 ### Building Strategy
 
-Rather than relying on Cray-provided system packages, we opted to build all dependencies from source on top of EESSI. This approach provides several advantages:
+Rather than relying on Cray-provided system packages, we opted to build all dependencies from source [on top of EESSI](../../../../using_eessi/building_on_eessi.md). This approach provides several advantages:
 
 - **Consistency**: All libraries built with the same compiler toolchain
 - **Compatibility**: Ensures ABI compatibility with EESSI libraries
@@ -59,7 +66,11 @@ To build OpenMPI 5.x with libfabric and CXI support, we needed the following mis
 
 ## EESSI Integration via `host_injections`
 
-EESSI's `host_injections` mechanism allows us to override EESSI's MPI library with an ABI compatible host MPI while maintaining compatibility with the rest of the software stack.
+EESSI's `host_injections` mechanism allows us to override EESSI's MPI library with an ABI compatible host MPI while maintaining compatibility with the rest of the software stack. We just need to make sure that the libraries are in the right
+location to be automatically picked up by the software shipped with EESSI. This location is EESSI-version specific, for `2023.06`, with the NVIDIA Grace architecture, that location is:
+```
+/cvmfs/software.eessi.io/host_injections/2023.06/software/linux/aarch64/nvidia/grace/rpath_overrides/OpenMPI/system/lib
+```
 
 **Validating the `libmpi.so.40` in `host_injections` from OpenMPI/5.0.7 on ARM nodes built with:** 
 ```
@@ -108,6 +119,9 @@ ldd /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/aarch64/nvid
 ```
 
 ### Testing
+
+We plan to provide more comprehensive test results in the future. In this blog post we want to report that the approach works in principle, and that the EESSI stack can pick up and use the custom OpenMPI build and extract
+performance from the host interconnect **without the need to rebuild any software packages**.
 
 **1- Test using OSU-Micro-Benchmarks on 2-nodes (x86_64 AMD-CPUs)**:
 ```
@@ -285,6 +299,4 @@ Currently Loaded Modules:
 ```
 ## Conclusion
 
-The approach demonstrates EESSI's flexibility in accommodating specialized hardware requirements while preserving the benefits of a standardized software stack!
-
-
+The approach demonstrates EESSI's flexibility in accommodating specialized hardware requirements while preserving the benefits of a standardized software stack! There is plenty of more testing to do, but the signs at this stage are very good!
