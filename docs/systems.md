@@ -74,12 +74,20 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 * Hydra: [General documentation](https://hpc.vub.be/docs/) | [EESSI @ Hydra](https://hpc.vub.be/docs/software/modules/#european-environment-for-scientific-software-installations)
 
+### Cyprus
+
+#### The Cyprus Institute
+
+* Cyclone: [General documentation](https://hpcf.cyi.ac.cy/documentation/index.html) | [EESSI @ Cyclone](https://hpcf.cyi.ac.cy/documentation/avail_modules.html)
+* SimEA: [General documentation](https://hpcf.cyi.ac.cy/documentation/index.html) | [EESSI @ SimEA](https://hpcf.cyi.ac.cy/documentation/avail_modules.html)
+* Nepheli: [General documentation](https://hpcf.cyi.ac.cy/documentation/index.html) | [EESSI @ Nepheli](https://hpcf.cyi.ac.cy/documentation/avail_modules.html)
+* Cyclamen: [General documentation](https://hpcf.cyi.ac.cy/documentation/index.html) | [EESSI @ Cyclamen](https://hpcf.cyi.ac.cy/documentation/avail_modules.html)
+
 ### Czech Republic
 
 #### Czech Technical University in Prague
 
 * Sunrise: [General documentation](https://nms.fjfi.cvut.cz/wiki/Sunrise.fjfi.cvut.cz)
-
 
 ### Germany
 
