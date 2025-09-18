@@ -54,4 +54,4 @@ module load SCOTCH/7.0.4-gompi-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SCOTCH/7.0.4-gompi-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |SCOTCH/7.0.3-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|SCOTCH/7.0.3-gompi-2022b|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|SCOTCH/7.0.3-gompi-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
