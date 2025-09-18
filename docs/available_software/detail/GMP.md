@@ -53,4 +53,4 @@ module load GMP/6.3.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GMP/6.3.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |GMP/6.2.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|GMP/6.2.1-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|GMP/6.2.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
