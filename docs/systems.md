@@ -100,6 +100,9 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 * Ant: [General documentation](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_hpc_facilities/ant.html) | [EESSI @ Ant](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_user_guide/loading_modules.html#loading-eessi-software)
 
+#### University of Wuppertal
+* PLEIADES: [General documentation](https://pleiadesbuw.github.io/PleiadesUserDocumentation/) | [EESSI @ PLEIADES](https://pleiadesbuw.github.io/PleiadesUserDocumentation/software/modules.html#preparing-the-eessi-environment)
+
 ### Greece
 
 #### Aristotle University of Thessaloniki
