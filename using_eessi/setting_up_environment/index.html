@@ -1042,6 +1042,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#overriding-the-cpu-or-accelerator-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the CPU or accelerator architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overriding the CPU or accelerator architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-cpu-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the CPU architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-accelerator-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the accelerator architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4165,6 +4198,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#overriding-the-cpu-or-accelerator-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the CPU or accelerator architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overriding the CPU or accelerator architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-cpu-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the CPU architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-accelerator-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the accelerator architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4285,6 +4351,87 @@ EESSI do not mix (in particular when someone is building new software!), then th
 <p>What is reported at <code>(1)</code> depends on the CPU architecture of the machine you are running the <code>source</code> command.</p>
 <p>At <code>(2)</code> is the prompt indicating that you have access to the EESSI software stack.</p>
 <p><img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f44f.svg" title=":clap:" /> Your environment is now set up, you are ready to start running software provided by EESSI!</p>
+<h2 id="overriding-the-cpu-or-accelerator-architecture">Overriding the CPU or accelerator architecture<a class="headerlink" href="#overriding-the-cpu-or-accelerator-architecture" title="Permanent link">&para;</a></h2>
+<p>EESSI uses the custom bash script
+<a href="https://github.com/EESSI/software-layer-scripts/blob/main/init/eessi_archdetect.sh"><code>eessi_archdetect.sh</code></a> to detect
+the CPU and accelerator architectures of the host system.</p>
+<p>This script listens to some environment variables that allow you to override the results it returns. If you set these
+environment variables <em>before an EESSI version has been initialised</em>, you can thereby change the architecture target
+of the software stack. </p>
+<h3 id="overriding-the-cpu-architecture">Overriding the CPU architecture<a class="headerlink" href="#overriding-the-cpu-architecture" title="Permanent link">&para;</a></h3>
+<p>By default, <a href="https://github.com/EESSI/software-layer-scripts/blob/main/init/eessi_archdetect.sh"><code>eessi_archdetect.sh</code></a>
+will return a best match between your system and the architectures it is aware of:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Executed on an icelake system</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>$<span class="w"> </span>./eessi_archdetect.sh<span class="w"> </span>cpupath
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>x86_64/intel/icelake
+</code></pre></div>
+(you can add a <code>-d</code> option to see debug output from the script).</p>
+<p>It is also possible to list all the architectures that are compatible with your system:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Executed on an icelake system</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>$<span class="w"> </span>./eessi_archdetect.sh<span class="w"> </span>-a<span class="w"> </span>cpupath
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>x86_64/intel/icelake:x86_64/intel/cascadelake:x86_64/intel/skylake_avx512:x86_64/intel/haswell:x86_64/generic
+</code></pre></div></p>
+<p>To override the returned CPU architecture, you can set the environment variable <code>EESSI_SOFTWARE_SUBDIR_OVERRIDE</code> to a
+specific (expected) value:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_SOFTWARE_SUBDIR_OVERRIDE</span><span class="o">=</span><span class="s2">&quot;x86_64/intel/haswell&quot;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1"># Executed on an icelake system</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>$<span class="w"> </span>./eessi_archdetect.sh<span class="w"> </span>cpupath
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>x86_64/intel/haswell
+</code></pre></div>
+Note that the override value is not sanity checked, the end user is responsible for providing a valid value.</p>
+<h3 id="overriding-the-accelerator-architecture">Overriding the accelerator architecture<a class="headerlink" href="#overriding-the-accelerator-architecture" title="Permanent link">&para;</a></h3>
+<p>In a similar manner as for the CPU, you can override the accelerator detection of
+<a href="https://github.com/EESSI/software-layer-scripts/blob/main/init/eessi_archdetect.sh"><code>eessi_archdetect.sh</code></a> with
+<code>EESSI_ACCELERATOR_TARGET_OVERRIDE</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_ACCELERATOR_TARGET_OVERRIDE</span><span class="o">=</span>accel/nvidia/cc70
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1"># Executed on an icelake system with no GPU</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>$<span class="w"> </span>./eessi_archdetect.sh<span class="w"> </span>accelpath
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>accel/nvidia/cc70
+</code></pre></div></p>
+<p>To show the impact of this:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>module<span class="w"> </span>av
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>---------------------------------------------------<span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/modules<span class="w"> </span>---------------------------------------------------
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">   </span>EESSI/2023.06
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="c1"># ...</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_ACCELERATOR_TARGET_OVERRIDE</span><span class="o">=</span>accel/nvidia/cc70
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>EESSI/2023.06
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>Module<span class="w"> </span><span class="k">for</span><span class="w"> </span>EESSI/2023.06<span class="w"> </span>loaded<span class="w"> </span>successfully
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>$<span class="w"> </span>module<span class="w"> </span>av
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>------------------------<span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/icelake/accel/nvidia/cc70/modules/all<span class="w"> </span>-------------------------
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="w">   </span>CUDA-Samples/12.1-GCC-12.3.0-CUDA-12.1.1<span class="w"> </span><span class="o">(</span>g<span class="o">)</span><span class="w">      </span>OSU-Micro-Benchmarks/7.2-gompi-2023a-CUDA-12.1.1<span class="w"> </span><span class="o">(</span>g<span class="o">)</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">   </span>CUDA/12.1.1<span class="w">                                       </span>OSU-Micro-Benchmarks/7.5-gompi-2023b-CUDA-12.4.0<span class="w"> </span><span class="o">(</span>g,D<span class="o">)</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="w">   </span>CUDA/12.4.0<span class="w">                              </span><span class="o">(</span>D<span class="o">)</span><span class="w">      </span>UCC-CUDA/1.2.0-GCCcore-12.3.0-CUDA-12.1.1<span class="w">        </span><span class="o">(</span>g<span class="o">)</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="w">   </span>cuDNN/8.9.2.26-CUDA-12.1.1<span class="w">               </span><span class="o">(</span>g<span class="o">)</span><span class="w">      </span>UCC-CUDA/1.2.0-GCCcore-13.2.0-CUDA-12.4.0<span class="w">        </span><span class="o">(</span>g,D<span class="o">)</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="w">   </span>NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1<span class="w">   </span><span class="o">(</span>g<span class="o">)</span><span class="w">      </span>UCX-CUDA/1.14.1-GCCcore-12.3.0-CUDA-12.1.1<span class="w">       </span><span class="o">(</span>g<span class="o">)</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="w">   </span>NCCL/2.20.5-GCCcore-13.2.0-CUDA-12.4.0<span class="w">   </span><span class="o">(</span>g,D<span class="o">)</span><span class="w">    </span>UCX-CUDA/1.15.0-GCCcore-13.2.0-CUDA-12.4.0<span class="w">       </span><span class="o">(</span>g,D<span class="o">)</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>---------------------------------<span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/icelake/modules/all<span class="w"> </span>----------------------------------
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="w">   </span>Abseil/20230125.2-GCCcore-12.2.0<span class="w">                   </span>HDF/4.2.15-GCCcore-12.2.0<span class="w">                           </span>OpenMPI/4.1.5-GCC-12.3.0
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="c1"># ...</span>
+</code></pre></div></p>
+<details class="tip">
+<summary>The accelerator modules are visible but I can't load them</summary>
+<p>Do note that just because the accelerator modules are now visible doesn't mean you will be able to load them. EESSI
+has an additional check to ensure that the accelerator <strong>drivers</strong> are available since without access to the
+drivers any software typically cannot execute anyway. If you need to allow loading of the modules (for example
+because you wish to prepare the job execution environment from a login node where the accelerator is not
+available) you can set yet another environment variable <code>EESSI_OVERRIDE_GPU_CHECK=1</code>.</p>
+</details>
+<details class="tip">
+<summary>I want to choose a different CPU architecture for the accelerator software</summary>
+<p>It is even possible to use a different CPU architecture for the accelerator software stack by setting the
+environment variable <code>EESSI_ACCEL_SOFTWARE_SUBDIR_OVERRIDE</code>. This environment variable is not listened to
+by the detection script, but does affect how EESSI is initialised.</p>
+<p>The use case for this scenario is expected to be extremely rare and is only tested for the relatively trivial
+context of making available and loading the software application modules for the specific architecture
+combination.</p>
+</details>
 
 
 
@@ -4305,7 +4452,7 @@ EESSI do not mix (in particular when someone is building new software!), then th
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 31, 2024 10:56:32 UTC">October 31, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 17, 2025 11:50:56 UTC">September 17, 2025</span>
   </span>
 
     
