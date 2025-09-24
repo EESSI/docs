@@ -54,4 +54,4 @@ module load PCRE2/10.42-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |PCRE2/10.42-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |PCRE2/10.42-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|PCRE2/10.40-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|PCRE2/10.40-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

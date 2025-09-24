@@ -55,4 +55,4 @@ module load Meson/1.3.1-GCCcore-12.3.0
 |Meson/1.3.1-GCCcore-12.3.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
 |Meson/1.2.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |Meson/1.1.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Meson/0.64.0-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|Meson/0.64.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
