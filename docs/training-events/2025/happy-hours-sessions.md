@@ -34,13 +34,12 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 ### 💡 **Next Session**: Deeper look into EESSI compat and software layers
 ### Topic Series: A peek inside EESSI layers
 🗓️ Schedule
-#### Monday 22 September 2025, 14:00-15:00 CE(S)T
+#### Monday 29 September 2025, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming sessions in the topic series: A peek inside EESSI layers
 ###### Outline
-- 22 September 2025 -  Deeper look into EESSI compat and software layers
 - 29 September 2025 -  Navigating the EESSI GitHub Repositories
  
 ---
@@ -54,6 +53,8 @@ See the full Recordings, slides, and materials here: [Previous Sessions & Videos
 ---
 
 *Topic series: A peek inside EESSI layers*
+
+- 22 September 2025 - [Deeper look into EESSI compat and software layers](https://youtu.be/_oaFYeYt9H4)
 
 - 15 September 2025 - [EESSI design overview](https://youtu.be/esYU6atzfek)
 
