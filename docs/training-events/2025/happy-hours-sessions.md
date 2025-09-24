@@ -31,7 +31,7 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: Deeper look into EESSI compat and software layers
+### 💡 **Next Session**: Navigating the EESSI GitHub Repositories
 ### Topic Series: A peek inside EESSI layers
 🗓️ Schedule
 #### Monday 29 September 2025, 14:00-15:00 CE(S)T
