@@ -53,4 +53,4 @@ module load GLib/2.78.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GLib/2.78.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |GLib/2.77.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|GLib/2.75.0-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|GLib/2.75.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
