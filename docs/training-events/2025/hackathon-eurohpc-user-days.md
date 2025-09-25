@@ -62,14 +62,15 @@ Both in person and online attendance is free of charge, but registration is requ
 
 ## Agenda
 
-* `[09:00-09:30]` Informal welcome
-* `[09:30-10:00]` Round table: introduce yourself
-* `[10:00-11:00]` EESSI for Continuous Integration (CI)
+* `[09:00-09:15]` Informal welcome + practical info
+* `[09:15-09:45]` Round table: introduce yourself
+* `[09:45-10:15]` Quick refresher on EESSI & EasyBuild *[Lara + Helena]*
+* `[10:00-11:00]` EESSI for Continuous Integration (CI) *[Alan]*
 * `[11:00-11:15]` *(short break)*
-* `[11:15-12:00]` EESSI for Continuous Deployment (CD)
+* `[11:15-12:00]` EESSI for Continuous Deployment (CD) *[Alan]*
 * `[12:00-12:30]` *(short lunch break)*
 * `[12:30-15:45]` Hands-on session (with support from EESSI team members)
-    * `[12:30-12:45]` Quick presentation, different scenarios
+    * `[12:30-12:45]` Quick presentation, different scenarios *[Kenneth]*
     * `[12:45]` Start with guided exercise (at your own pace)
     * Follow-up with pick your own adventure (medium/advanced)
     * Online participants: ask for help in [`#cicd` channel in EESSI Slack](https://eessi-hpc.slack.com/archives/C096B9JSD0C)
@@ -77,6 +78,8 @@ Both in person and online attendance is free of charge, but registration is requ
         * Ask to jump in Zoom breakout room to have 1-on-1 with EESSI team member
 * `[15:45-16:00]` *(short break)*
 * `[16:00-17:00]` Show & tell *(optional)*
+    * Both for in-person and online participants
+* `[16:55-17:00]` Raspberry Pi start kit prize for most impressive project *(in-person only!)*
 
 ## Preparatory Material
 
@@ -104,3 +107,14 @@ There will also be an opportunity to ask questions directly to the speakers, sho
 - EasyBuild website: [https://easybuild.io](https://easybuild.io)
 - EasyBuild documentation: [https://docs.easybuild.io](https://docs.easybuild.io)
 - MultiXscale website: [https://www.multixscale.eu](https://www.multixscale.eu)
+
+## Organisers
+
+- Bob Dröge (Univ. of Groningen) *[remote]*
+- Kenneth Hoste (Ghent University)
+- Alan O'Cais (freelancer EuroHPC projects for Ghent University)
+- Lara Peeters (Ghent University)
+- Thomas Röblitz (Univ. of Bergen)
+- Pedro Santos Neves (Univ. of Groningen) *[remote]*
+- Richard Topouchian (Univ. of Bergen) *[remote]*
+- Helena Vela Belrtran (Do IT Now)
