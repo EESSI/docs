@@ -82,7 +82,7 @@ which should contain something like:
 
 ``` { .ini .copy }
 CVMFS_CLIENT_PROFILE="single" # a single node setup, not a cluster
-CVMFS_QUOTA_LIMIT=10000
+CVMFS_QUOTA_LIMIT=10000       # 10 GB of local client cache, shared
 ```
 
 More information on the structure of `/etc/cvmfs` and supported configuration settings is available
@@ -124,10 +124,15 @@ More information on the structure of `/etc/cvmfs` and supported configuration se
     can be considered if enough memory is available in the client system, which would
     help reduce latency and start-up performance of software.
 
+    **IMPORTANT**: CernVM-FS is only aware about its own space-usage of the cache. It does not reserve it on the partition.
+    If another program uses more space on the partition, the CernVM-FS Cache Manager will eventually run out of space and crash.
+    As such, it is the system administrator responsibility of making sure that CernVM-FS will always have enough caching space available (if in doubt: put it on its own partition).
+
     For more information on cache-related configuration settings,
     [see the CernVM-FS documentation](https://cvmfs.readthedocs.io/en/stable/cpt-configure.html#cache-settings).
 
 ### Hierarchy of configuration files {: #configuration_hierarchy }
+!!! danger "never heard anyone call them parameter files? maybe not needed?"
 
 CernVM-FS can be configured through a *hierarchy* of configuration files (sometimes also referred to as
 parameter files), which can be located under either `/etc/cvmfs`, or the [CernVM-FS configuration repository](
@@ -146,7 +151,7 @@ it specifies, in the order outlined below:
 
 * By level: first general, then domain-specific, finally repository-specific;
 * Within each level:
-    * `.conf` before `.local`;
+    * `.local` has priority over `.conf`;
     * CernVM-FS configuration repository before `/etc/cvmfs` (except for general level);
 
 As a result, a configuration file that is picked up later can override configuration settings
@@ -225,6 +230,8 @@ like `nouser` to not create the `cvmfs` user and group, or `noautofs` to not
 update the `autofs` configuration.
 
 ### Recommendations for `autofs` {: #autofs }
+
+!!! danger "is this still recommended?"
 
 It is recommended to configure `autofs` to *never unmount* repositories due to inactivity,
 since that [can cause problems in specific situations](https://github.com/cvmfs/cvmfs/issues/3402).
@@ -337,10 +344,10 @@ Seems like CernVM-FS is not running in /var/lib/cvmfs/shared (not found: /var/li
 
 ## Accessing a repository
 
-To access the contents of the repository, just use the corresponding subdirectory as if it were a local filesystem.
+To access the contents of the repository, just use the corresponding subdirectory as if it were a local file system.
 
 While the contents of the files you are accessing are not actually available on the client system the first time
-they are being accessed, CernVM-FS will automatically downloaded them in the background, providing the illusion
+they are being accessed, CernVM-FS will automatically download them in the background, providing the illusion
 that the whole repository is already there.
 
 We like to refer to this as "streaming" of software installations, much like streaming music or video services.
@@ -350,6 +357,8 @@ To start using EESSI just [source the initialisation script](../eessi/using-eess
 ```{ .bash .copy }
 source /cvmfs/software.eessi.io/versions/2023.06/init/bash
 ```
+
+!!! danger "update link to latest version? maybe add to eessi a symlink /cvmfs/software.eessi.io/versions/latest/init/bash" 
 
 
 You may notice some "lag" when files are being accessed, or not, depending on the network latency.
