@@ -5,11 +5,11 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: "Ccache (or \u201Cccache\u201D) is a compiler cache. It speeds up recompilation\
-    \ bycaching previous compilations and detecting when the same compilation is being\
-    \ done again"
+  description: libsoup is an HTTP client/server library for GNOME. Ituses GObjects
+    and the glib main loop, to integrate well with GNOMEapplications, and also has
+    a synchronous API, for use in threadedapplications.
   license: Not confirmed
-  name: ccache
+  name: LibSoup
   offers:
     '@type': Offer
     price: 0
@@ -26,30 +26,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ccache/4.9-GCCcore-12.3.0'']'
-  url: https://ccache.dev/
+  softwareVersion: '[''LibSoup/3.6.1-GCC-12.3.0'']'
+  url: https://wiki.gnome.org/Projects/libsoup
 ---
 
-ccache
-======
+LibSoup
+=======
 
 
-Ccache (or “ccache”) is a compiler cache. It speeds up recompilation bycaching previous compilations and detecting when the same compilation is being done again
+libsoup is an HTTP client/server library for GNOME. Ituses GObjects and the glib main loop, to integrate well with GNOMEapplications, and also has a synchronous API, for use in threadedapplications.
 
-https://ccache.dev/
+https://wiki.gnome.org/Projects/libsoup
 # Available modules
 
 
-The overview below shows which ccache installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which LibSoup installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using ccache, load one of these modules using a `module load` command like:
+To start using LibSoup, load one of these modules using a `module load` command like:
 
 ```shell
-module load ccache/4.9-GCCcore-12.3.0
+module load LibSoup/3.6.1-GCC-12.3.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ccache/4.9-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|LibSoup/3.6.1-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
