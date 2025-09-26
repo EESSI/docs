@@ -5,11 +5,10 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: "Ccache (or \u201Cccache\u201D) is a compiler cache. It speeds up recompilation\
-    \ bycaching previous compilations and detecting when the same compilation is being\
-    \ done again"
+  description: The Boehm-Demers-Weiser conservative garbage collector can be used
+    as agarbage collecting replacement for C malloc or C++ new.
   license: Not confirmed
-  name: ccache
+  name: gc
   offers:
     '@type': Offer
     price: 0
@@ -26,30 +25,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ccache/4.9-GCCcore-12.3.0'']'
-  url: https://ccache.dev/
+  softwareVersion: '[''gc/8.2.4-GCCcore-12.3.0'']'
+  url: https://hboehm.info/gc/
 ---
 
-ccache
-======
+gc
+==
 
 
-Ccache (or “ccache”) is a compiler cache. It speeds up recompilation bycaching previous compilations and detecting when the same compilation is being done again
+The Boehm-Demers-Weiser conservative garbage collector can be used as agarbage collecting replacement for C malloc or C++ new.
 
-https://ccache.dev/
+https://hboehm.info/gc/
 # Available modules
 
 
-The overview below shows which ccache installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which gc installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using ccache, load one of these modules using a `module load` command like:
+To start using gc, load one of these modules using a `module load` command like:
 
 ```shell
-module load ccache/4.9-GCCcore-12.3.0
+module load gc/8.2.4-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ccache/4.9-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|gc/8.2.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

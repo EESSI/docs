@@ -5,11 +5,10 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: "Ccache (or \u201Cccache\u201D) is a compiler cache. It speeds up recompilation\
-    \ bycaching previous compilations and detecting when the same compilation is being\
-    \ done again"
+  description: 'This library aims to be a friendly, portable C implementation of the
+    AV1 Image File Format,as described here: https://aomediacodec.github.io/av1-avif/'
   license: Not confirmed
-  name: ccache
+  name: libavif
   offers:
     '@type': Offer
     price: 0
@@ -26,30 +25,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ccache/4.9-GCCcore-12.3.0'']'
-  url: https://ccache.dev/
+  softwareVersion: '[''libavif/1.0.4-GCCcore-12.3.0'']'
+  url: https://github.com/AOMediaCodec/libavif
 ---
 
-ccache
-======
+libavif
+=======
 
 
-Ccache (or “ccache”) is a compiler cache. It speeds up recompilation bycaching previous compilations and detecting when the same compilation is being done again
+This library aims to be a friendly, portable C implementation of the AV1 Image File Format,as described here: https://aomediacodec.github.io/av1-avif/
 
-https://ccache.dev/
+https://github.com/AOMediaCodec/libavif
 # Available modules
 
 
-The overview below shows which ccache installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which libavif installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using ccache, load one of these modules using a `module load` command like:
+To start using libavif, load one of these modules using a `module load` command like:
 
 ```shell
-module load ccache/4.9-GCCcore-12.3.0
+module load libavif/1.0.4-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ccache/4.9-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|libavif/1.0.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
