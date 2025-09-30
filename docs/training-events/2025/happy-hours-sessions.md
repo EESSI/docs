@@ -31,16 +31,16 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: Navigating the EESSI GitHub Repositories
-### Topic Series: A peek inside EESSI layers
+### 💡 **Next Session**: Controlling EESSI Startup Behavior
+### Topic Series: Environment variables to tweak EESSI Initialization 
 🗓️ Schedule
-#### Monday 29 September 2025, 14:00-15:00 CE(S)T
+#### Monday 06 October 2025, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming sessions in the topic series: A peek inside EESSI layers
+### Upcoming sessions in the topic series: Environment variables to tweak EESSI Initialization 
 ###### Outline
-- 29 September 2025 -  Navigating the EESSI GitHub Repositories
+- 06 October 2025 - Controlling EESSI Startup Behavior
  
 ---
 
@@ -53,6 +53,8 @@ See the full Recordings, slides, and materials here: [Previous Sessions & Videos
 ---
 
 *Topic series: A peek inside EESSI layers*
+
+- 29 September 2025 - [Navigating the EESSI GitHub Repositories](https://youtu.be/e2r7yjVr_pM)
 
 - 22 September 2025 - [Deeper look into EESSI compat and software layers](https://youtu.be/_oaFYeYt9H4)
 
