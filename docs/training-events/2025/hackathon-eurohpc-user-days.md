@@ -65,9 +65,10 @@ Both in person and online attendance is free of charge, but registration is requ
 * `[09:00-09:15]` Informal welcome + practical info
 * `[09:15-09:45]` Round table: introduce yourself
 * `[09:45-10:15]` Quick refresher on EESSI & EasyBuild *[Lara + Helena]*
-* `[10:00-11:00]` EESSI for Continuous Integration (CI) *[Alan]*
-* `[11:00-11:15]` *(short break)*
-* `[11:15-12:00]` EESSI for Continuous Deployment (CD) *[Alan]*
+* `[10:15-10:45]` EESSI for Continuous Integration (CI) *[Alan]*
+* `[10:45-11:00]` *(short break)*
+* `[11:00-11:30]` EESSI for Continuous Integration (CI), continued *[Alan]*
+* `[11:30-12:00]` EESSI for Continuous Deployment (CD) *[Alan]*
 * `[12:00-12:30]` *(short lunch break)*
 * `[12:30-15:45]` Hands-on session (with support from EESSI team members)
     * `[12:30-12:45]` Quick presentation, different scenarios *[Kenneth]*
@@ -77,8 +78,9 @@ Both in person and online attendance is free of charge, but registration is requ
         * Join EESSI Slack via [`Slack channel` link on EESSI website](https://www.eessi.io)
         * Ask to jump in Zoom breakout room to have 1-on-1 with EESSI team member
 * `[15:45-16:00]` *(short break)*
-* `[16:00-17:00]` Show & tell *(optional)*
+* `[16:00-16:30]` Show & tell *(optional)*
     * Both for in-person and online participants
+* `[16:30-16:55]` Q&A
 * `[16:55-17:00]` Raspberry Pi start kit prize for most impressive project *(in-person only!)*
 
 ## Preparatory Material
