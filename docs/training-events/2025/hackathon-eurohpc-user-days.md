@@ -36,6 +36,10 @@ The session will be recorded. Recordings, slides, and materials used will be mad
         <img width="40%" src="../../../img/raspi.png" alt="Prize">
     </p>
 
+## Presentation materials
+
+[Slides (PDF)](EESSI-CI-CD-hackathon-20251002.pdf)
+
 ## Venue
 
 The event will take place at the Royal Danish Library's Cultural Centre, in the [Black Diamond](https://www.kb.dk/en/visit-us/black-diamond-copenhagen) building.
