@@ -54,4 +54,4 @@ module load lz4/1.9.4-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |lz4/1.9.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |lz4/1.9.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|lz4/1.9.4-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|lz4/1.9.4-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

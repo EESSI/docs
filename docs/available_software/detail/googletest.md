@@ -53,4 +53,4 @@ module load googletest/1.14.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |googletest/1.14.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |googletest/1.13.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|googletest/1.12.1-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|googletest/1.12.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
