@@ -54,4 +54,4 @@ module load Mesa/23.1.9-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Mesa/23.1.9-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |Mesa/23.1.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Mesa/22.2.4-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|Mesa/22.2.4-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
