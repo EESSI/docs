@@ -9,9 +9,9 @@ Find slides, and video recordings of earlier sessions below.
 ### Monday 06 October 2025 - Controlling EESSI Startup Behavior
 
 **Outline:** Controlling EESSI Startup Behavior
-([Slides (PDF)](EESSI-happyhour-2025-008-Controlling-EESSI-Startup-Behavior.pdf), [Recording (YouTube)]())
+([Slides (PDF)](EESSI-happyhour-2025-008-Controlling-EESSI-Startup-Behavior.pdf), [Recording (YouTube)](https://youtu.be/XYpgX0QCczg))
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XYpgX0QCczg?si=ostX_wXq9M-6fB_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Topic series: A peek inside EESSI layers
 
