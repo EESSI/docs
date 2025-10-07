@@ -173,7 +173,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Tue, 07 Oct 2025 at 01:48:23 UTC"
+  generated_time: "Tue, 07 Oct 2025 at 12:54:40 UTC"
 extra_javascript:
   # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
