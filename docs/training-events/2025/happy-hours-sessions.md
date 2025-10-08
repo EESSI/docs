@@ -16,7 +16,7 @@ Each series will focus on a specific main topic over several sessions, giving pa
 
 💬 *Who should join?* Everyone interested in EESSI.
 
-Let’s make Mondays productive and collaborative — see you at Happy Hour!
+Let's make Mondays productive and collaborative - see you at Happy Hour!
 
 All sessions will be recorded. Recordings, slides, and materials used will be made publicly available shortly after each session.
 
@@ -27,21 +27,24 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 - Online sessions (via Zoom)
 - Mix of presentation & hands-on demos: ~15min of content, ~30min for Q&A
 
-If you haven't joined the EESSI Slack yet, [click here to join](https://join.slack.com/t/eessi-hpc/shared_invite/zt-1wqy0t8g6-PZJTg3Hjjm5Fm3XEOkzECg) 
+If you haven't joined the EESSI Slack yet, [click here to join](https://join.slack.com/t/eessi-hpc/shared_invite/zt-1wqy0t8g6-PZJTg3Hjjm5Fm3XEOkzECg)
 
 ---
 
-### 💡 **Next Session**: Controlling EESSI Startup Behavior
-### Topic Series: Environment variables to tweak EESSI Initialization 
+### 💡 **Next Session**: Using EasyBuild and controlling settings via `EESSI-extend`
+### Topic Series: Building on top of EESSI
 🗓️ Schedule
-#### Monday 06 October 2025, 14:00-15:00 CE(S)T
+#### Monday 13 October 2025, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming sessions in the topic series: Environment variables to tweak EESSI Initialization 
+### Upcoming sessions in the topic series: Building on top of EESSI
 ###### Outline
-- 06 October 2025 - Controlling EESSI Startup Behavior
- 
+- 13 October 2025 - Using EasyBuild and controlling settings via `EESSI-extend`
+- 20 October 2025 - How we build software in EESSI
+- 27 October 2025 - Building on top of EESSI using `buildenv` modules
+- 03 November 2025 - Contributing software packages to EESSI
+
 ---
 
 ### Previous EESSI Happy Hour sessions
@@ -51,6 +54,10 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
 ---
+
+*Topic series: Environment variables to tweak EESSI Initialization*
+
+- 06 October 2025 [Controlling EESSI Startup Behavior]()
 
 *Topic series: A peek inside EESSI layers*
 
@@ -64,13 +71,11 @@ See the full Recordings, slides, and materials here: [Previous Sessions & Videos
 
 *Topic series: How to Access EESSI*
 
-- 08 September 2025 – [Practical considerations and recommendations for accessing EESSI](https://youtu.be/4HlcXJPOlBE)
+- 08 September 2025 - [Practical considerations and recommendations for accessing EESSI](https://youtu.be/4HlcXJPOlBE)
 
-- 01 September 2025 – [Explore other ways to access EESSI](https://www.youtube.com/watch?v=_UrXbZI1lE4)
+- 01 September 2025 - [Explore other ways to access EESSI](https://www.youtube.com/watch?v=_UrXbZI1lE4)
 
-- 25 August 2025 – [Accessing EESSI using container script](https://www.youtube.com/watch?v=MAgWwj27i9U)  
+- 25 August 2025 - [Accessing EESSI using container script](https://www.youtube.com/watch?v=MAgWwj27i9U)
 
-- 18 August 2025 – [Installing and configuring CernVM-FS](https://youtu.be/MLeSbMOnbs8)  
-
-
+- 18 August 2025 - [Installing and configuring CernVM-FS](https://youtu.be/MLeSbMOnbs8)
 

@@ -1,8 +1,17 @@
-# EESSI Happy Hour – Previous Sessions
+# EESSI Happy Hour - Previous Sessions
 
 Find slides, and video recordings of earlier sessions below.
 
 ---
+
+# Topic series: Environment variables to tweak EESSI Initialization
+
+### Monday 06 October 2025 - Controlling EESSI Startup Behavior
+
+**Outline:** Controlling EESSI Startup Behavior
+([Slides (PDF)](EESSI-happyhour-2025-008-Controlling-EESSI-Startup-Behavior.pdf), [Recording (YouTube)](https://youtu.be/XYpgX0QCczg))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XYpgX0QCczg?si=ostX_wXq9M-6fB_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Topic series: A peek inside EESSI layers
 
@@ -43,14 +52,14 @@ Find slides, and video recordings of earlier sessions below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_UrXbZI1lE4?si=4PoYoAevRjCen59k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Monday 25 August 2025 – Accessing EESSI using container script
+### Monday 25 August 2025 - Accessing EESSI using container script
 
 **Outline:** A walkthrough of accessing EESSI via the [EESSI container script](../../getting_access/eessi_container.md)
 ([Slides (PDF)](EESSI-happyhour-2025-002-Accessing-EESSI-using-container-script.pdf), [Recording (YouTube)](https://www.youtube.com/watch?v=MAgWwj27i9U))
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MAgWwj27i9U?si=SOD3hMOVIF3N6hdo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Monday 18 August 2025 – Installing and configuring CernVM-FS
+### Monday 18 August 2025 - Installing and configuring CernVM-FS
 
 **Outline:** Access EESSI repository through [installing and configuring CernVM-FS](../../getting_access/native_installation.md)
 ([Slides (PDF)](EESSI-happyhour-2025-001-Installing-and-configuring-CernVM-FS.pdf), [Recording (YouTube)](https://youtu.be/MLeSbMOnbs8))
