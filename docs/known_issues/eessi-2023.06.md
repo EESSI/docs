@@ -3,7 +3,6 @@
 ## EESSI Production Repository (v2023.06)
 
 ### `Failed to modify UD QP to INIT on mlx5_0: Operation not permitted`
-<div style="padding-left: 30px;">
 
 <p>This is an error that occurs with OpenMPI after updating to OFED 23.10.</p>
 
@@ -51,8 +50,6 @@ end
 hook.register("load", combined_load_hook)
 ```
 For more information about how to write and implement site-specific Lmod hooks, please check [EESSI Site Specific Configuration LMOD Hooks](../site_specific_config/lmod_hooks.md).
-
-</div>
 
 ### GCC-12.2.0 and foss-2022b based modules cannot be loaded on `zen4` architecture
 
