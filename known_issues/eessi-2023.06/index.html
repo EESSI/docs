@@ -4219,28 +4219,18 @@
 <h1 id="known-issues">Known issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h1>
 <h2 id="eessi-production-repository-v202306">EESSI Production Repository (v2023.06)<a class="headerlink" href="#eessi-production-repository-v202306" title="Permanent link">&para;</a></h2>
 <h3 id="failed-to-modify-ud-qp-to-init-on-mlx5_0-operation-not-permitted"><code>Failed to modify UD QP to INIT on mlx5_0: Operation not permitted</code><a class="headerlink" href="#failed-to-modify-ud-qp-to-init-on-mlx5_0-operation-not-permitted" title="Permanent link">&para;</a></h3>
-<div style="padding-left: 30px;">
-
 <p>This is an error that occurs with OpenMPI after updating to OFED 23.10.</p>
-
-<p>There is an upstream issue on this problem opened with EasyBuild.
-See: https://github.com/easybuilders/easybuild-easyconfigs/issues/20233</p>
-
-<b>Workarounds</b>
-
-<p>You can instruct OpenMPI to not use libfabric and turn off `uct`(see https://openucx.readthedocs.io/en/master/running.html#running-mpi) by passing the following options to `mpirun`:</p>
-
+<p>There is <a href="https://github.com/easybuilders/easybuild-easyconfigs/issues/20233">an upstream issue</a> on this problem opened with EasyBuild.</p>
+<p><em>Workarounds</em></p>
+<p>You can instruct OpenMPI to not use libfabric and turn off <code>uct</code>(see the <a href="https://openucx.readthedocs.io/en/master/running.html#running-mpi">UCX documentation</a>) by passing the following options to <code>mpirun</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mpirun -mca pml ucx -mca btl &#39;^uct,ofi&#39; -mca mtl &#39;^ofi&#39;
 </code></pre></div>
-
-Or equivalently, you can set the following environment variables:
-
+<p>Or equivalently, you can set the following environment variables:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>export OMPI_MCA_btl=&#39;^uct,ofi&#39;
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>export OMPI_MCA_pml=&#39;ucx&#39;
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>export OMPI_MCA_mtl=&#39;^ofi&#39;
 </code></pre></div>
-
-You may also set these additional environment variables via site-specific Lmod hooks:
+<p>You may also set these additional environment variables via site-specific Lmod hooks:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>require(&quot;strict&quot;)
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>local hook=require(&quot;Hook&quot;)
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
@@ -4263,9 +4253,7 @@ You may also set these additional environment variables via site-specific Lmod h
 <a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
 <a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>hook.register(&quot;load&quot;, combined_load_hook)
 </code></pre></div>
- For more information about how to write and implement site-specific Lmod hooks, please check  [EESSI Site Specific Configuration LMOD Hooks](site_specific_config/lmod_hooks.md)
-</div>
-
+For more information about how to write and implement site-specific Lmod hooks, please check <a href="../../site_specific_config/lmod_hooks/">EESSI Site Specific Configuration LMOD Hooks</a>.</p>
 <h3 id="gcc-1220-and-foss-2022b-based-modules-cannot-be-loaded-on-zen4-architecture">GCC-12.2.0 and foss-2022b based modules cannot be loaded on <code>zen4</code> architecture<a class="headerlink" href="#gcc-1220-and-foss-2022b-based-modules-cannot-be-loaded-on-zen4-architecture" title="Permanent link">&para;</a></h3>
 <p>The <code>zen4</code> architecture was released late 2022. As a result, the compilers and BLAS libraries that are part of the 2022b toolchain generation did not yet (fully) support this architecture. Concretely, it was found <a href="https://github.com/EESSI/software-layer/pull/567">in this pr</a> that unit tests in the OpenBLAS version that is part of the foss-2022b toolchain were failing. As a result, it was decided that we would not support this toolchain-generation at all on the <code>zen4</code> architecture.</p>
 
@@ -4288,7 +4276,7 @@ You may also set these additional environment variables via site-specific Lmod h
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 27, 2025 13:33:03 UTC">June 27, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 9, 2025 09:23:06 UTC">October 9, 2025</span>
   </span>
 
     
