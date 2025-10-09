@@ -78,7 +78,7 @@ use and fill it simultaneously. These processes can pull in the required files t
 or you can even manually [*preload* the cache](https://cvmfs.readthedocs.io/en/stable/cpt-hpc.html#preloading-the-cernvm-fs-cache).
 
 Using the alien cache still requires a very small local cache on the worker nodes for storing some control files.
-Given its size, you can store this local cache on a shared filesystem, or [in memory](#in-memory-client-cache).
+Given its size, you can store this local cache on a shared filesystem, or [in memory](#in-memory-cache).
 
 Compared to using a loopback filesystem described in the previous subsection, the drawback of storing the alien cache
 on your shared filesystem is that all metadata operations are now performed on the shared filesystem.
