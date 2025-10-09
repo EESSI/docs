@@ -81,7 +81,7 @@ Here are a couple of examples:
 ### Lag and/or hangs
 
 When you notice lag of even (perceived) hanging when accessing a CernVM-FS repository,
-you should consider revising the [connectivity](#connectivity)- and [cache](#cache)-related configuration settings.
+you should consider revising the [connectivity](#connectivity)- and [cache](#caching)-related configuration settings.
 
 
 ## General approach
