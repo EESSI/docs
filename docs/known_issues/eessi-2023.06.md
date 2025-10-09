@@ -4,14 +4,13 @@
 
 ### `Failed to modify UD QP to INIT on mlx5_0: Operation not permitted`
 
-<p>This is an error that occurs with OpenMPI after updating to OFED 23.10.</p>
+This is an error that occurs with OpenMPI after updating to OFED 23.10.
 
-<p>There is an upstream issue on this problem opened with EasyBuild.
-See: https://github.com/easybuilders/easybuild-easyconfigs/issues/20233</p>
+There is [an upstream issue](https://github.com/easybuilders/easybuild-easyconfigs/issues/20233) on this problem opened with EasyBuild.
 
-<b>Workarounds</b>
+*Workarounds*
 
-<p>You can instruct OpenMPI to not use libfabric and turn off `uct`(see https://openucx.readthedocs.io/en/master/running.html#running-mpi) by passing the following options to `mpirun`:</p>
+You can instruct OpenMPI to not use libfabric and turn off `uct`(see the [UCX documentation](https://openucx.readthedocs.io/en/master/running.html#running-mpi)) by passing the following options to `mpirun`:
 
 ```
 mpirun -mca pml ucx -mca btl '^uct,ofi' -mca mtl '^ofi'
