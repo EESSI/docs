@@ -100,7 +100,7 @@ In a production setup of an HPC cluster, where typically multiple thousands of j
 the **actual situation will usually be a mix of these 3 idealistic scenarios**,
 since some files may have been accessed
 very recently (for example common libraries from the
-[EESSI compatibility layer](eessi/high-level-design.md#compat_layer), or common dependencies from
+[EESSI compatibility layer](eessi/high-level-design.md#compatibility_layer), or common dependencies from
 the [EESSI software layer](eessi/high-level-design.md#software_layer)),
 while others may only be in the CernVM-FS client cache, or not cached yet at all (or may have been evicted from
 the cache due to space constraints).
