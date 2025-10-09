@@ -50,7 +50,7 @@ end
 
 hook.register("load", combined_load_hook)
 ```
- For more information about how to write and implement site-specific Lmod hooks, please check  [EESSI Site Specific Configuration LMOD Hooks](../site_specific_config/lmod_hooks.md)
+ For more information about how to write and implement site-specific Lmod hooks, please check [EESSI Site Specific Configuration LMOD Hooks](../site_specific_config/lmod_hooks.md)
 </div>
 
 ### GCC-12.2.0 and foss-2022b based modules cannot be loaded on `zen4` architecture
