@@ -24,7 +24,7 @@ A couple of workarounds are possible in this case:
 * [Loopback filesystem on a shared filesystem](#loopback-filesystem)
 * [Alien cache](#alien-cache-diskless)
 
-### In-memory client cache {: in-memory-cache }
+### In-memory client cache {: #in-memory-cache }
 
 An easy way to set up a client cache on diskless systems is to use a RAM disk like `/dev/shm`.
 
