@@ -397,7 +397,7 @@ starting from a cold CernVM-FS client cache, we know that importing the `tensorf
     - ~2,200 files from the TensorFlow installation itself (~94% `*.pyc` files);
     - ~950 files from Python packages outside of the TensorFlow installation directory,
        of which are ~82% `*.pyc` files and ~12% shared libraries (`.so`);
-    - 17 files from the [EESSI compatibility layer](eessi/high-level-design.md#compat_layer);
+    - 17 files from the [EESSI compatibility layer](eessi/high-level-design.md#compatibility_layer);
 * pulls in about ~1.1GB of data in total;
 
 As such, this is a challenge for parallel filesystems like GPFS and Lustre, as the performance results clearly show.
