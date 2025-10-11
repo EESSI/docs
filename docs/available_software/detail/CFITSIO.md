@@ -54,4 +54,4 @@ module load CFITSIO/4.3.1-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |CFITSIO/4.3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |CFITSIO/4.3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|CFITSIO/4.2.0-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|CFITSIO/4.2.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

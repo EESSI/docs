@@ -5,11 +5,10 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: ATK provides the set of accessibility interfaces that are implemented
-    by other toolkits and applications. Using the ATK interfaces, accessibility tools
-    have full access to view and control running applications.
+  description: The dftd4 project provides an implementation of the generally applicable,
+    charge dependentLondon-dispersion correction, termed DFT-D4.
   license: Not confirmed
-  name: ATK
+  name: dftd4
   offers:
     '@type': Offer
     price: 0
@@ -26,33 +25,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ATK/2.38.0-GCCcore-12.2.0'', ''ATK/2.38.0-GCCcore-12.3.0'',
-    ''ATK/2.38.0-GCCcore-13.2.0'']'
-  url: https://developer.gnome.org/atk/
+  softwareVersion: '[''dftd4/3.7.0-gfbf-2023b'']'
+  url: https://dftd4.readthedocs.io
 ---
 
-ATK
-===
+dftd4
+=====
 
 
-ATK provides the set of accessibility interfaces that are implemented by other toolkits and applications. Using the ATK interfaces, accessibility tools have full access to view and control running applications.
+The dftd4 project provides an implementation of the generally applicable, charge dependentLondon-dispersion correction, termed DFT-D4.
 
-https://developer.gnome.org/atk/
+https://dftd4.readthedocs.io
 # Available modules
 
 
-The overview below shows which ATK installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which dftd4 installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using ATK, load one of these modules using a `module load` command like:
+To start using dftd4, load one of these modules using a `module load` command like:
 
 ```shell
-module load ATK/2.38.0-GCCcore-13.2.0
+module load dftd4/3.7.0-gfbf-2023b
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ATK/2.38.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|ATK/2.38.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|ATK/2.38.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|dftd4/3.7.0-gfbf-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

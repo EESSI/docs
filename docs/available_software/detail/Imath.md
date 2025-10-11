@@ -54,4 +54,4 @@ module load Imath/3.1.9-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Imath/3.1.9-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |Imath/3.1.7-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Imath/3.1.6-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|Imath/3.1.6-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

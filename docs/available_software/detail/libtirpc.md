@@ -53,4 +53,4 @@ module load libtirpc/1.3.4-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |libtirpc/1.3.4-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |libtirpc/1.3.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|libtirpc/1.3.3-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|libtirpc/1.3.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

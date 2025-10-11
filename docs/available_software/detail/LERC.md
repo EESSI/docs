@@ -56,4 +56,4 @@ module load LERC/4.0.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |LERC/4.0.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |LERC/4.0.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|LERC/4.0.0-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|LERC/4.0.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
