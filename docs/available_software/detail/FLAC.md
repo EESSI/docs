@@ -55,4 +55,4 @@ module load FLAC/1.4.3-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |FLAC/1.4.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |FLAC/1.4.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|FLAC/1.4.2-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|FLAC/1.4.2-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
