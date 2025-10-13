@@ -148,6 +148,7 @@ MUSICA is currently in a closed test phase, with open testing to follow. It is e
 
 * Betzy: [General documentation](https://documentation.sigma2.no/hpc_machines/betzy.html#betzy) | [EESSI @ Betzy](https://documentation.sigma2.no/software/eessi.html)
 * Fram: [General documentation](https://documentation.sigma2.no/hpc_machines/fram.html#fram) | [EESSI @ Fram](https://documentation.sigma2.no/software/eessi.html)
+* Olivia: [General documentation](https://documentation.sigma2.no/hpc_machines/olivia.html#olivia) | [EESSI @ Olivia](https://documentation.sigma2.no/software/eessi.html)
 * Saga: [General documentation](https://documentation.sigma2.no/hpc_machines/saga.html#saga) | [EESSI @ Saga](https://documentation.sigma2.no/software/eessi.html)
 * [Norwegian AI Cloud](https://www.naic.no/) - Offers a provisioning system for virtual machines (VM) with preconfigured access to EESSI. Users can launch VMs on a local OpenStack-based cloud and on the commercial clouds Google and Azure.
 
