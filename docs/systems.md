@@ -62,6 +62,13 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 ## Other European systems
 
+### Austria
+
+#### Austrian Scientific Computing
+
+* VSC-5: [General documentation](https://docs.asc.ac.at/systems/vsc5.html) | [EESSI @ VSC-5](https://docs.asc.ac.at/software/eessi.html)
+* MUSICA: [General documentation](https://docs.asc.ac.at/systems/musica.html) | [EESSI @ MUSICA](https://docs.asc.ac.at/software/eessi.html)
+MUSICA is currently in a closed test phase, with open testing to follow. It is expected to be operational by the end of 2025.
 
 ### Belgium
 
@@ -74,12 +81,17 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 * Hydra: [General documentation](https://hpc.vub.be/docs/) | [EESSI @ Hydra](https://hpc.vub.be/docs/software/modules/#european-environment-for-scientific-software-installations)
 
+### Cyprus
+
+#### The Cyprus Institute
+
+* Cyclone: [General documentation](https://hpcf.cyi.ac.cy/documentation/index.html) | [EESSI @ Cyclone](https://hpcf.cyi.ac.cy/documentation/eessi.html)
+
 ### Czech Republic
 
 #### Czech Technical University in Prague
 
 * Sunrise: [General documentation](https://nms.fjfi.cvut.cz/wiki/Sunrise.fjfi.cvut.cz)
-
 
 ### Germany
 
@@ -94,6 +106,9 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 #### University of Stuttgart
 
 * Ant: [General documentation](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_hpc_facilities/ant.html) | [EESSI @ Ant](https://pages.icp.uni-stuttgart.de/pages/hpc/_pages/_user_guide/loading_modules.html#loading-eessi-software)
+
+#### University of Wuppertal
+* PLEIADES: [General documentation](https://pleiadesbuw.github.io/PleiadesUserDocumentation/) | [EESSI @ PLEIADES](https://pleiadesbuw.github.io/PleiadesUserDocumentation/software/modules.html#preparing-the-eessi-environment)
 
 ### Greece
 
@@ -133,6 +148,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 * Betzy: [General documentation](https://documentation.sigma2.no/hpc_machines/betzy.html#betzy) | [EESSI @ Betzy](https://documentation.sigma2.no/software/eessi.html)
 * Fram: [General documentation](https://documentation.sigma2.no/hpc_machines/fram.html#fram) | [EESSI @ Fram](https://documentation.sigma2.no/software/eessi.html)
+* Olivia: [General documentation](https://documentation.sigma2.no/hpc_machines/olivia.html#olivia) | [EESSI @ Olivia](https://documentation.sigma2.no/software/eessi.html)
 * Saga: [General documentation](https://documentation.sigma2.no/hpc_machines/saga.html#saga) | [EESSI @ Saga](https://documentation.sigma2.no/software/eessi.html)
 * [Norwegian AI Cloud](https://www.naic.no/) - Offers a provisioning system for virtual machines (VM) with preconfigured access to EESSI. Users can launch VMs on a local OpenStack-based cloud and on the commercial clouds Google and Azure.
 

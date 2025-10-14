@@ -195,7 +195,7 @@ comment out the `CVMFS_HTTP_PROXY` line in `/etc/cvmfs/default.local` by prefixi
 ```
 
 The full contents of `/etc/cvmfs/default.local` on the client system should again be as shown below, like it was initially created when
-[configuring the client](client.md##minimal_configuration):
+[configuring the client](client.md#minimal_configuration):
 
 ``` { .ini .copy }
 CVMFS_CLIENT_PROFILE="single"

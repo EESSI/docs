@@ -126,3 +126,100 @@ What is reported at `(1)` depends on the CPU architecture of the machine you are
 At `(2)` is the prompt indicating that you have access to the EESSI software stack.
 
 :clap: Your environment is now set up, you are ready to start running software provided by EESSI!
+
+## Overriding the CPU or accelerator architecture
+
+EESSI uses the custom bash script
+[`eessi_archdetect.sh`](https://github.com/EESSI/software-layer-scripts/blob/main/init/eessi_archdetect.sh) to detect
+the CPU and accelerator architectures of the host system.
+
+This script listens to some environment variables that allow you to override the results it returns. If you set these
+environment variables _before an EESSI version has been initialised_, you can thereby change the architecture target
+of the software stack. 
+
+### Overriding the CPU architecture
+
+By default, [`eessi_archdetect.sh`](https://github.com/EESSI/software-layer-scripts/blob/main/init/eessi_archdetect.sh)
+will return a best match between your system and the architectures it is aware of:
+```bash
+# Executed on an icelake system
+$ ./eessi_archdetect.sh cpupath
+x86_64/intel/icelake
+```
+(you can add a `-d` option to see debug output from the script).
+
+It is also possible to list all the architectures that are compatible with your system:
+```bash
+# Executed on an icelake system
+$ ./eessi_archdetect.sh -a cpupath
+x86_64/intel/icelake:x86_64/intel/cascadelake:x86_64/intel/skylake_avx512:x86_64/intel/haswell:x86_64/generic
+```
+
+To override the returned CPU architecture, you can set the environment variable `EESSI_SOFTWARE_SUBDIR_OVERRIDE` to a
+specific (expected) value:
+```bash
+export EESSI_SOFTWARE_SUBDIR_OVERRIDE="x86_64/intel/haswell"
+# Executed on an icelake system
+$ ./eessi_archdetect.sh cpupath
+x86_64/intel/haswell
+```
+Note that the override value is not sanity checked, the end user is responsible for providing a valid value.
+
+### Overriding the accelerator architecture
+
+In a similar manner as for the CPU, you can override the accelerator detection of
+[`eessi_archdetect.sh`](https://github.com/EESSI/software-layer-scripts/blob/main/init/eessi_archdetect.sh) with
+`EESSI_ACCELERATOR_TARGET_OVERRIDE`:
+```bash
+$ export EESSI_ACCELERATOR_TARGET_OVERRIDE=accel/nvidia/cc70
+# Executed on an icelake system with no GPU
+$ ./eessi_archdetect.sh accelpath
+accel/nvidia/cc70
+```
+
+To show the impact of this:
+```bash
+$ module av
+
+--------------------------------------------------- /cvmfs/software.eessi.io/versions/2023.06/init/modules ---------------------------------------------------
+   EESSI/2023.06
+
+# ...
+
+$ export EESSI_ACCELERATOR_TARGET_OVERRIDE=accel/nvidia/cc70
+$ module load EESSI/2023.06
+Module for EESSI/2023.06 loaded successfully
+
+$ module av
+
+------------------------ /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/icelake/accel/nvidia/cc70/modules/all -------------------------
+   CUDA-Samples/12.1-GCC-12.3.0-CUDA-12.1.1 (g)      OSU-Micro-Benchmarks/7.2-gompi-2023a-CUDA-12.1.1 (g)
+   CUDA/12.1.1                                       OSU-Micro-Benchmarks/7.5-gompi-2023b-CUDA-12.4.0 (g,D)
+   CUDA/12.4.0                              (D)      UCC-CUDA/1.2.0-GCCcore-12.3.0-CUDA-12.1.1        (g)
+   cuDNN/8.9.2.26-CUDA-12.1.1               (g)      UCC-CUDA/1.2.0-GCCcore-13.2.0-CUDA-12.4.0        (g,D)
+   NCCL/2.18.3-GCCcore-12.3.0-CUDA-12.1.1   (g)      UCX-CUDA/1.14.1-GCCcore-12.3.0-CUDA-12.1.1       (g)
+   NCCL/2.20.5-GCCcore-13.2.0-CUDA-12.4.0   (g,D)    UCX-CUDA/1.15.0-GCCcore-13.2.0-CUDA-12.4.0       (g,D)
+
+--------------------------------- /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/icelake/modules/all ----------------------------------
+   Abseil/20230125.2-GCCcore-12.2.0                   HDF/4.2.15-GCCcore-12.2.0                           OpenMPI/4.1.5-GCC-12.3.0
+
+# ...
+```
+
+??? tip "The accelerator modules are visible but I can't load them"
+
+    Do note that just because the accelerator modules are now visible doesn't mean you will be able to load them. EESSI
+    has an additional check to ensure that the accelerator **drivers** are available since without access to the
+    drivers any software typically cannot execute anyway. If you need to allow loading of the modules (for example
+    because you wish to prepare the job execution environment from a login node where the accelerator is not
+    available) you can set yet another environment variable `EESSI_OVERRIDE_GPU_CHECK=1`.
+
+??? tip "I want to choose a different CPU architecture for the accelerator software"
+
+    It is even possible to use a different CPU architecture for the accelerator software stack by setting the
+    environment variable `EESSI_ACCEL_SOFTWARE_SUBDIR_OVERRIDE`. This environment variable is not listened to
+    by the detection script, but does affect how EESSI is initialised.
+
+    The use case for this scenario is expected to be extremely rare and is only tested for the relatively trivial
+    context of making available and loading the software application modules for the specific architecture
+    combination.

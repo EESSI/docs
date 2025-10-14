@@ -53,4 +53,4 @@ module load HarfBuzz/8.2.2-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HarfBuzz/8.2.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |HarfBuzz/5.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|HarfBuzz/5.3.1-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|HarfBuzz/5.3.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

@@ -54,4 +54,4 @@ module load graphite2/1.3.14-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |graphite2/1.3.14-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |graphite2/1.3.14-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|graphite2/1.3.14-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|graphite2/1.3.14-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

@@ -53,4 +53,4 @@ module load MUMPS/5.6.1-foss-2023b-metis
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |MUMPS/5.6.1-foss-2023b-metis|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |MUMPS/5.6.1-foss-2023a-metis|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|MUMPS/5.6.1-foss-2022b-metis|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|MUMPS/5.6.1-foss-2022b-metis|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

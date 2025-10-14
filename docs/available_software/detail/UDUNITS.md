@@ -55,4 +55,4 @@ module load UDUNITS/2.2.28-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |UDUNITS/2.2.28-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |UDUNITS/2.2.28-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|UDUNITS/2.2.28-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|UDUNITS/2.2.28-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

@@ -57,4 +57,4 @@ module load freetype/2.13.2-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |freetype/2.13.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |freetype/2.13.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|freetype/2.12.1-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|freetype/2.12.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

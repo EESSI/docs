@@ -54,4 +54,4 @@ module load Catch2/2.13.9-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Catch2/2.13.9-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |Catch2/2.13.9-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Catch2/2.13.9-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|Catch2/2.13.9-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

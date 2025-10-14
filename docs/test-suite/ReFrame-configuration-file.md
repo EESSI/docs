@@ -398,7 +398,7 @@ site_configuration = {
     'logging':  common_logging_config(),
 }
 ```
-When combined by setting the [`$RFM_PREFIX` environment variable](#RFM_PREFIX), the output, performance log, and
+When combined by setting the [`$RFM_PREFIX` environment variable](installation-configuration.md#RFM_PREFIX), the output, performance log, and
 regular ReFrame logs will all end up in the directory specified by `$RFM_PREFIX`, which we recommend doing.
 
 Alternatively, a prefix can be passed as an argument like `common_logging_config(prefix)`, which will control where

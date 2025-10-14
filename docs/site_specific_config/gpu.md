@@ -85,7 +85,7 @@ This script uses `ldconfig` on your host system to locate your GPU drivers, and 
 
     Note that it is safe to re-run the script even if no driver updates were done: the script should detect that the current version of the drivers were already symlinked.
 
-#### Installing full CUDA SDK and cuDNN SDK (optional)
+#### Installing full CUDA SDK and cuDNN SDK (optional) {: #installing-full-cuda-sdk-optional }
 
 To install a full CUDA SDK and cuDNN SDK under `host_injections`, use the `install_cuda_and_libraries.sh` script that is included in EESSI:
 

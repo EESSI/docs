@@ -239,4 +239,4 @@ TODO: insert something like a contribution agreement later, once we have agreed,
 All commit messages for contributions should be signed by the contributor, i.e. they should contain the statement: "Signed-off-by: firstname lastname <email>". With that signature, the contributor agrees to the [Developer Certificate of Origin](https://developercertificate.org/).
 -->
 ## 8. Review and Amendment
-Changes to the governance require approval by the Steering Committee, as per the rules described the [Voting by the Steering Committee](governance.md#voting-by-the-steering-committee) section.
+Changes to the governance require approval by the Steering Committee, as per the rules described the [Voting by the Steering Committee](governance.md#voting-by-sc) section.

@@ -55,4 +55,4 @@ module load Doxygen/1.9.8-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Doxygen/1.9.8-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |Doxygen/1.9.7-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Doxygen/1.9.5-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|Doxygen/1.9.5-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
