@@ -31,16 +31,15 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: Using EasyBuild and controlling settings via `EESSI-extend`
+### 💡 **Next Session**: How we build software in EESSI
 ### Topic Series: Building on top of EESSI
 🗓️ Schedule
-#### Monday 13 October 2025, 14:00-15:00 CE(S)T
+#### Monday 20 October 2025, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming sessions in the topic series: Building on top of EESSI
 ###### Outline
-- 13 October 2025 - Using EasyBuild and controlling settings via `EESSI-extend`
 - 20 October 2025 - How we build software in EESSI
 - 27 October 2025 - Building on top of EESSI using `buildenv` modules
 - 03 November 2025 - Contributing software packages to EESSI
@@ -53,11 +52,17 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
+*Topic series: Building on top of EESSI*
+
+- 13 October 2025 [Using EasyBuild and controlling settings via `EESSI-extend`](https://www.youtube.com/watch?v=X54J-kbjwDQ)
+
 ---
 
 *Topic series: Environment variables to tweak EESSI Initialization*
 
-- 06 October 2025 [Controlling EESSI Startup Behavior]()
+- 06 October 2025 [Controlling EESSI Startup Behavior](https://www.youtube.com/watch?v=XYpgX0QCczg)
+
+---
 
 *Topic series: A peek inside EESSI layers*
 

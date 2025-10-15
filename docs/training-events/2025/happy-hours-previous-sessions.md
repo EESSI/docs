@@ -4,6 +4,17 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: Building on top of EESSI
+
+### Monday 13 October 2025 - Using EasyBuild and controlling settings via `EESSI-extend`
+
+**Outline:** Using EasyBuild and controlling settings via `EESSI-extend`
+([Slides (PDF)](EESSI-happyhour-2025-009-Using-EasyBuild-via-EESSI-extend.pdf), [Recording (YouTube)](https://youtu.be/XYpgX0QCczg))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X54J-kbjwDQ?si=JFQb210vwxcr43BO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: Environment variables to tweak EESSI Initialization
 
 ### Monday 06 October 2025 - Controlling EESSI Startup Behavior
@@ -12,6 +23,8 @@ Find slides, and video recordings of earlier sessions below.
 ([Slides (PDF)](EESSI-happyhour-2025-008-Controlling-EESSI-Startup-Behavior.pdf), [Recording (YouTube)](https://youtu.be/XYpgX0QCczg))
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XYpgX0QCczg?si=ostX_wXq9M-6fB_s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 
 # Topic series: A peek inside EESSI layers
 
