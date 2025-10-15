@@ -29,7 +29,7 @@ The main task is to build the required dependencies on top of EESSI, since many 
 
 ### System Architecture
 
-Our target system is [Olivia](https://https://documentation.sigma2.no/hpc_machines/olivia.html#olivia) which is based on HPE Cray EX platforms for compute and accelerator nodes, and HPE Cray ClusterStor for global storage, all
+Our target system is [Olivia](https://documentation.sigma2.no/hpc_machines/olivia.html#olivia) which is based on HPE Cray EX platforms for compute and accelerator nodes, and HPE Cray ClusterStor for global storage, all
 connected via HPE Slingshot high-speed interconnect.
 It consists of two main distinct partitions:
 
