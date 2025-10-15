@@ -14,7 +14,7 @@ capabilities of the interconnect hardware. Slingshot-11 promises to offer a sign
 this should be worth the effort!
 
 In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot-11 support on HPE/Cray systems and its integration with EESSI using the [host_injections](../../../../site_specific_config/host_injections.md)
-mechanism of EESSI to inject the custom-built OpenMPI libraries. This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version which should give us optimal performance.
+mechanism of EESSI to inject custom-built OpenMPI libraries. This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version which should give us optimal performance.
 <!-- more -->
 
 ## The Challenge
