@@ -9,8 +9,7 @@ slug: EESSI-on-Cray-Slingshot
 High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximising application performance. However, we cannot rebuild all the software in EESSI that depends on improvements to communication libraries. So how do we take advantage of new technological developments?
 
 Specifically we look at taking benefit of the HPE/Cray Slingshot-11.
-software stack that can fully leverage the
-capabilities of the interconnect hardware. Slingshot-11 promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads...so
+Slingshot-11 promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads ... so
 this should be worth the effort!
 
 In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot-11 support on HPE/Cray systems and its integration with EESSI using the [host_injections](../../../../site_specific_config/host_injections.md)
