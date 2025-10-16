@@ -329,5 +329,7 @@ Currently Loaded Modules:
 4194304               180.44
 ```
 
+![OSU CUDA Bandwidth](osu_cuda_bandwidth.png)  ![OSU CUDA Latency](osu_cuda_latency.png) 
+
 ## Conclusion
 The approach demonstrates EESSI's flexibility in accommodating specialized hardware requirements while preserving the benefits of a standardized software stack! There is plenty of more testing to do, but the signs at this stage are very good!
