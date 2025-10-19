@@ -55,7 +55,7 @@ module load Flask/3.0.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Flask/3.0.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |Flask/2.3.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Flask/2.2.3-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|Flask/2.2.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### Flask/3.0.0-GCCcore-13.2.0
