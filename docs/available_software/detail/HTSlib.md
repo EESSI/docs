@@ -53,4 +53,4 @@ module load HTSlib/1.19.1-GCC-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |HTSlib/1.19.1-GCC-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |HTSlib/1.18-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|HTSlib/1.17-GCC-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|HTSlib/1.17-GCC-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
