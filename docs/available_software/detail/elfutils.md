@@ -54,4 +54,4 @@ module load elfutils/0.190-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |elfutils/0.190-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |elfutils/0.189-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|elfutils/0.189-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|elfutils/0.189-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

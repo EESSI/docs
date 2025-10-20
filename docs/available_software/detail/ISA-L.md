@@ -53,4 +53,4 @@ module load ISA-L/2.31.0-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |ISA-L/2.31.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |ISA-L/2.30.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|ISA-L/2.30.0-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|ISA-L/2.30.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
