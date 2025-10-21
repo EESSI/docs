@@ -27,6 +27,7 @@ from natsort import natsorted
 from functools import cmp_to_key
 
 EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
+EESSI_TOPDIR_RISCV = "/cvmfs/riscv.eessi.io/versions/20240402"
 
 # some CPU targets are excluded for now, because software layer is too incomplete currently
 EXCLUDE_CPU_TARGETS = []
@@ -208,8 +209,14 @@ def targets_eessi() -> np.ndarray:
         sys.stderr.write(f"ERROR: {EESSI_TOPDIR} does not exist!\n")
         sys.exit(1)
 
+    if not os.path.exists(EESSI_TOPDIR_RISCV):
+        sys.stderr.write(f"ERROR: {EESSI_TOPDIR_RISCV} does not exist!\n")
+        sys.exit(1)
+
     commands = [
         f"find {EESSI_TOPDIR}/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
+        "-name 'amd' -a ! -name 'nvidia' \\) -type d",
+        f"find {EESSI_TOPDIR_RISCV}/software/linux/*/* -maxdepth 0 \\( ! -name 'intel' -a ! "
         "-name 'amd' -a ! -name 'nvidia' \\) -type d",
         f'find {EESSI_TOPDIR}/software/linux/*/{{amd,intel,nvidia}}/* -maxdepth 0  -type d'
     ]
