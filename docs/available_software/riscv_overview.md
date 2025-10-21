@@ -1,4 +1,4 @@
-# Available software (via modules)
+# Available RISC-V software (via modules)
 
 This table gives an overview of all the available software in RISC-V EESSI.
 
