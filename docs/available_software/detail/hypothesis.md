@@ -27,7 +27,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''hypothesis/6.90.0-GCCcore-13.2.0'']'
+  softwareVersion: '[''hypothesis/6.68.2-GCCcore-12.2.0'', ''hypothesis/6.82.0-GCCcore-12.3.0'',
+    ''hypothesis/6.90.0-GCCcore-13.2.0'']'
   url: https://github.com/HypothesisWorks/hypothesis
 ---
 
@@ -49,8 +50,10 @@ To start using hypothesis, load one of these modules using a `module load` comma
 module load hypothesis/6.90.0-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|hypothesis/6.90.0-GCCcore-13.2.0|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|hypothesis/6.90.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|hypothesis/6.82.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|hypothesis/6.68.2-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

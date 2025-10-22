@@ -25,7 +25,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''libxml2/2.11.5-GCCcore-13.2.0'', ''libxml2/2.12.7-GCCcore-13.2.0'']'
+  softwareVersion: '[''libxml2/2.10.3-GCCcore-12.2.0'', ''libxml2/2.11.4-GCCcore-12.3.0'',
+    ''libxml2/2.11.5-GCCcore-13.2.0'']'
   url: http://xmlsoft.org/
 ---
 
@@ -44,12 +45,13 @@ The overview below shows which libxml2 installations are available per target ar
 To start using libxml2, load one of these modules using a `module load` command like:
 
 ```shell
-module load libxml2/2.12.7-GCCcore-13.2.0
+module load libxml2/2.11.5-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|libxml2/2.12.7-GCCcore-13.2.0|x|
-|libxml2/2.11.5-GCCcore-13.2.0|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libxml2/2.11.5-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|libxml2/2.11.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|libxml2/2.10.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

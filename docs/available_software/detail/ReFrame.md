@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ReFrame/4.3.3'']'
+  softwareVersion: '[''ReFrame/4.3.3'', ''ReFrame/4.6.2'']'
   url: https://github.com/reframe-hpc/reframe
 ---
 
@@ -43,15 +43,22 @@ The overview below shows which ReFrame installations are available per target ar
 To start using ReFrame, load one of these modules using a `module load` command like:
 
 ```shell
-module load ReFrame/4.3.3
+module load ReFrame/4.6.2
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|ReFrame/4.3.3|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ReFrame/4.6.2|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|ReFrame/4.3.3|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
+
+### ReFrame/4.6.2
+
+This is a list of extensions included in the module:
+
+pip-24.0, reframe-4.6.2, setuptools-68.0.0, wheel-0.42.0
 
 ### ReFrame/4.3.3
 

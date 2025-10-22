@@ -30,7 +30,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ParMETIS/4.0.3-gompi-2023b'']'
+  softwareVersion: '[''ParMETIS/4.0.3-gompi-2023a'']'
   url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
 ---
 
@@ -49,11 +49,11 @@ The overview below shows which ParMETIS installations are available per target a
 To start using ParMETIS, load one of these modules using a `module load` command like:
 
 ```shell
-module load ParMETIS/4.0.3-gompi-2023b
+module load ParMETIS/4.0.3-gompi-2023a
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|ParMETIS/4.0.3-gompi-2023b|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ParMETIS/4.0.3-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
