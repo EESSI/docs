@@ -1,0 +1,61 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: A super-fast templating language that borrows the best ideas from the
+    existing templating languages
+  license: Not confirmed
+  name: Mako
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''Mako/1.2.4-GCCcore-13.2.0'']'
+  url: https://www.makotemplates.org
+---
+
+Mako
+====
+
+
+A super-fast templating language that borrows the best ideas from the existing templating languages
+
+https://www.makotemplates.org
+# Available modules
+
+
+The overview below shows which Mako installations are available per target architecture in EESSI, ordered based on software version (new to old).
+
+To start using Mako, load one of these modules using a `module load` command like:
+
+```shell
+module load Mako/1.2.4-GCCcore-13.2.0
+```
+
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:19:02 CEST)*
+
+| |scv64/generic|
+| :---: | :---: |
+|Mako/1.2.4-GCCcore-13.2.0|x|
+
+
+### Mako/1.2.4-GCCcore-13.2.0
+
+This is a list of extensions included in the module:
+
+Mako-1.2.4, MarkupSafe-2.1.3

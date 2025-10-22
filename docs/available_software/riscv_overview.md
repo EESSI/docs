@@ -6,7 +6,7 @@ This table gives an overview of all the available software in RISC-V EESSI.
 <table id="riscv_overview_table" class="ui celled table" style="width:100%">
     <thead>
         <tr>
-            <th rowspan="3">Name</th>
+            <th rowspan="2">Name</th>
             <th colspan="5">riscv64</th>
         </tr>
         <tr>
