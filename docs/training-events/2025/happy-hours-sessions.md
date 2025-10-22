@@ -31,7 +31,7 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: How we build software in EESSI
+### 💡 **Next Session**: Building on top of EESSI using `buildenv` modules
 ### Topic Series: Building on top of EESSI
 🗓️ Schedule
 #### Monday 20 October 2025, 14:00-15:00 CE(S)T
@@ -40,7 +40,6 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ### Upcoming sessions in the topic series: Building on top of EESSI
 ###### Outline
-- 20 October 2025 - How we build software in EESSI
 - 27 October 2025 - Building on top of EESSI using `buildenv` modules
 - 03 November 2025 - Contributing software packages to EESSI
 
@@ -53,6 +52,8 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
 *Topic series: Building on top of EESSI*
+
+- 20 October 2025 [How we build software in EESSI](https://www.youtube.com/watch?v=KkD6vtPqqMs)
 
 - 13 October 2025 [Using EasyBuild and controlling settings via `EESSI-extend`](https://www.youtube.com/watch?v=X54J-kbjwDQ)
 
