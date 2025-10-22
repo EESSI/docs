@@ -40,7 +40,7 @@ https://github.com/pyo3/maturin
 # Available modules
 
 
-The overview below shows which maturin installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which maturin installations are available for RISC-V architecture in EESSI, ordered based on software version (new to old).
 
 To start using maturin, load one of these modules using a `module load` command like:
 
@@ -48,9 +48,9 @@ To start using maturin, load one of these modules using a `module load` command 
 module load maturin/1.5.0-GCCcore-13.2.0-Rust-1.76.0
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:19:02 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:46:43 CEST)*
 
-| |scv64/generic|
+| |riscv64/generic|
 | :---: | :---: |
 |maturin/1.5.0-GCCcore-13.2.0-Rust-1.76.0|x|
 |maturin/1.3.1-GCCcore-13.2.0|x|
