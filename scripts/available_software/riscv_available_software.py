@@ -369,7 +369,7 @@ def generate_software_table_data(software_data: dict, targets: list) -> list:
     @param targets: List with all the target names
     @return: 1D list with all the data for the table
     """
-    table_data = [" "] + [target[57:] for target in targets]
+    table_data = [" "] + [target[55:] for target in targets]
 
     for module_name, available in list(software_data.items())[::-1]:
         row = [module_name]
@@ -451,8 +451,8 @@ def generate_software_detail_page(
 
     md_file.new_header(level=1, title="Available modules")
 
-    md_file.new_paragraph(f"The overview below shows which {software_name} installations are available per "
-                          f"target architecture in EESSI, ordered based on software version (new to old).")
+    md_file.new_paragraph(f"The overview below shows which {software_name} installations are available for RISC-V "
+                          f"architecture in EESSI, ordered based on software version (new to old).")
     md_file.new_paragraph(f"To start using {software_name}, load one of these modules using a `module load` command "
                           f"like:")
     md_file.insert_code(f"module load {newest_version}", language="shell")
