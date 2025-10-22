@@ -48,7 +48,7 @@ To start using hunspell, load one of these modules using a `module load` command
 module load hunspell/1.7.2-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
