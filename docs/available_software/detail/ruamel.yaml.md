@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ruamel.yaml/0.17.32-GCCcore-12.3.0'']'
+  softwareVersion: '[''ruamel.yaml/0.17.32-GCCcore-12.3.0'', ''ruamel.yaml/0.18.6-GCCcore-13.2.0'']'
   url: https://sourceforge.net/projects/ruamel-yaml
 ---
 
@@ -43,15 +43,22 @@ The overview below shows which ruamel.yaml installations are available per targe
 To start using ruamel.yaml, load one of these modules using a `module load` command like:
 
 ```shell
-module load ruamel.yaml/0.17.32-GCCcore-12.3.0
+module load ruamel.yaml/0.18.6-GCCcore-13.2.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ruamel.yaml/0.18.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |ruamel.yaml/0.17.32-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
+
+### ruamel.yaml/0.18.6-GCCcore-13.2.0
+
+This is a list of extensions included in the module:
+
+configobj-5.0.8, lz4-4.3.3, ruamel.yaml-0.18.6, ruamel.yaml.base-0.3.2, ruamel.yaml.clib-0.2.8, ruamel.yaml.cmd-0.6.5, ruamel.yaml.convert-0.3.2, ruamel.yaml.jinja2-0.2.7
 
 ### ruamel.yaml/0.17.32-GCCcore-12.3.0
 
