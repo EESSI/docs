@@ -34,7 +34,7 @@ Java
 # Available modules
 
 
-The overview below shows which Java installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which Java installations are available for RISC-V architecture in EESSI, ordered based on software version (new to old).
 
 To start using Java, load one of these modules using a `module load` command like:
 
@@ -42,9 +42,9 @@ To start using Java, load one of these modules using a `module load` command lik
 module load Java/21.0.2
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:19:02 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:46:43 CEST)*
 
-| |scv64/generic|
+| |riscv64/generic|
 | :---: | :---: |
 |Java/21.0.2|x|
 |Java/21(@Java/21.0.2)|x|

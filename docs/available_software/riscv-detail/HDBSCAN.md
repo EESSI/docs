@@ -42,7 +42,7 @@ http://hdbscan.readthedocs.io/en/latest/
 # Available modules
 
 
-The overview below shows which HDBSCAN installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which HDBSCAN installations are available for RISC-V architecture in EESSI, ordered based on software version (new to old).
 
 To start using HDBSCAN, load one of these modules using a `module load` command like:
 
@@ -50,8 +50,8 @@ To start using HDBSCAN, load one of these modules using a `module load` command 
 module load HDBSCAN/0.8.40-foss-2023b
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:19:02 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:46:43 CEST)*
 
-| |scv64/generic|
+| |riscv64/generic|
 | :---: | :---: |
 |HDBSCAN/0.8.40-foss-2023b|x|

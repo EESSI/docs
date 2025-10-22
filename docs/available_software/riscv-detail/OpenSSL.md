@@ -41,7 +41,7 @@ https://www.openssl.org/
 # Available modules
 
 
-The overview below shows which OpenSSL installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which OpenSSL installations are available for RISC-V architecture in EESSI, ordered based on software version (new to old).
 
 To start using OpenSSL, load one of these modules using a `module load` command like:
 
@@ -49,9 +49,9 @@ To start using OpenSSL, load one of these modules using a `module load` command 
 module load OpenSSL/3
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:19:02 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:46:43 CEST)*
 
-| |scv64/generic|
+| |riscv64/generic|
 | :---: | :---: |
 |OpenSSL/3|x|
 |OpenSSL/1.1|x|

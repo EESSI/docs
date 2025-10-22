@@ -40,7 +40,7 @@ https://github.com/evaleev/libint
 # Available modules
 
 
-The overview below shows which Libint installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which Libint installations are available for RISC-V architecture in EESSI, ordered based on software version (new to old).
 
 To start using Libint, load one of these modules using a `module load` command like:
 
@@ -48,8 +48,8 @@ To start using Libint, load one of these modules using a `module load` command l
 module load Libint/2.7.2-GCC-13.2.0-lmax-6-cp2k
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:19:02 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:46:43 CEST)*
 
-| |scv64/generic|
+| |riscv64/generic|
 | :---: | :---: |
 |Libint/2.7.2-GCC-13.2.0-lmax-6-cp2k|x|
