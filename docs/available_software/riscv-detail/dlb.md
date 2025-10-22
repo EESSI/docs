@@ -1,0 +1,56 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: DLB is a dynamic library designed to speed up HPC hybrid applications
+    (i.e.,two levels of parallelism) by improving the load balance of the outer level
+    ofparallelism (e.g., MPI) by dynamically redistributing the computationalresources
+    at the inner level of parallelism (e.g., OpenMP). at run time.
+  license: Not confirmed
+  name: dlb
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''dlb/3.4-gompi-2023b'']'
+  url: https://pm.bsc.es/dlb/
+---
+
+dlb
+===
+
+
+DLB is a dynamic library designed to speed up HPC hybrid applications (i.e.,two levels of parallelism) by improving the load balance of the outer level ofparallelism (e.g., MPI) by dynamically redistributing the computationalresources at the inner level of parallelism (e.g., OpenMP). at run time.
+
+https://pm.bsc.es/dlb/
+# Available modules
+
+
+The overview below shows which dlb installations are available per target architecture in EESSI, ordered based on software version (new to old).
+
+To start using dlb, load one of these modules using a `module load` command like:
+
+```shell
+module load dlb/3.4-gompi-2023b
+```
+
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:19:02 CEST)*
+
+| |scv64/generic|
+| :---: | :---: |
+|dlb/3.4-gompi-2023b|x|
