@@ -57,7 +57,7 @@ def main():
 
     # Generate detail markdown pages
     print("Generate detailed pages... ", end="", flush=True)
-    generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/detail"))
+    generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/riscv-detail"))
     print("Done!")
 
 

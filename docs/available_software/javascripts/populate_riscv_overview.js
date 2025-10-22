@@ -35,7 +35,7 @@ function populate_riscv_overview(riscv_json_data) {
                 })
 	    console.log(all_targets)
             console.log([...[{"title": "name"}], ...all_targets])
-            const table = new DataTable('#overview_table', {
+            const table = new DataTable('#riscv_overview_table', {
 		        columns: [...[{"title": "name"}], ...all_targets],
                 paging: true,
                 columnDefs: [
@@ -67,6 +67,6 @@ function populate_riscv_overview(riscv_json_data) {
 // Only start populating the table if the correct page has been loaded.
 document$.subscribe(function() {
     if (document.getElementById("riscv_overview_table")) {
-        populate_overview("../data/riscv_json_data.json")
+        populate_riscv_overview("../data/riscv_json_data.json")
     }
 })
