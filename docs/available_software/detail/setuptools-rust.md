@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''setuptools-rust/1.6.0-GCCcore-12.3.0'', ''setuptools-rust/1.8.0-GCCcore-13.2.0'']'
+  softwareVersion: '[''setuptools-rust/1.6.0-gfbf-2023b'', ''setuptools-rust/1.8.0-GCCcore-13.2.0'']'
   url: https://github.com/PyO3/setuptools-rust
 ---
 
@@ -47,12 +47,12 @@ To start using setuptools-rust, load one of these modules using a `module load` 
 module load setuptools-rust/1.8.0-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|setuptools-rust/1.8.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|setuptools-rust/1.6.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|setuptools-rust/1.8.0-GCCcore-13.2.0|x|
+|setuptools-rust/1.6.0-gfbf-2023b|x|
 
 
 ### setuptools-rust/1.8.0-GCCcore-13.2.0
@@ -61,7 +61,7 @@ This is a list of extensions included in the module:
 
 semantic_version-2.10.0, setuptools-rust-1.8.0, typing_extensions-4.8.0
 
-### setuptools-rust/1.6.0-GCCcore-12.3.0
+### setuptools-rust/1.6.0-gfbf-2023b
 
 This is a list of extensions included in the module:
 

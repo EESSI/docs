@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''JupyterLab/4.0.5-GCCcore-12.3.0'']'
+  softwareVersion: '[''JupyterLab/4.2.0-GCCcore-13.2.0'']'
   url: https://jupyter.org/
 ---
 
@@ -46,18 +46,18 @@ The overview below shows which JupyterLab installations are available per target
 To start using JupyterLab, load one of these modules using a `module load` command like:
 
 ```shell
-module load JupyterLab/4.0.5-GCCcore-12.3.0
+module load JupyterLab/4.2.0-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JupyterLab/4.0.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|JupyterLab/4.2.0-GCCcore-13.2.0|x|
 
 
-### JupyterLab/4.0.5-GCCcore-12.3.0
+### JupyterLab/4.2.0-GCCcore-13.2.0
 
 This is a list of extensions included in the module:
 
-async-lru-2.0.4, json5-0.9.14, jupyter-lsp-2.2.0, jupyterlab-4.0.5, jupyterlab_server-2.24.0
+async-lru-2.0.4, h11-0.14.0, httpcore-1.0.5, httpx-0.27.0, json5-0.9.25, jupyter-lsp-2.2.5, jupyterlab-4.2.0, jupyterlab_server-2.27.1

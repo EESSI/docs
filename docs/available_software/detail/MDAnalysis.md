@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''MDAnalysis/2.4.2-foss-2022b'']'
+  softwareVersion: '[''MDAnalysis/2.7.0-foss-2023b'']'
   url: https://www.mdanalysis.org/
 ---
 
@@ -44,18 +44,18 @@ The overview below shows which MDAnalysis installations are available per target
 To start using MDAnalysis, load one of these modules using a `module load` command like:
 
 ```shell
-module load MDAnalysis/2.4.2-foss-2022b
+module load MDAnalysis/2.7.0-foss-2023b
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MDAnalysis/2.4.2-foss-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|MDAnalysis/2.7.0-foss-2023b|x|
 
 
-### MDAnalysis/2.4.2-foss-2022b
+### MDAnalysis/2.7.0-foss-2023b
 
 This is a list of extensions included in the module:
 
-fasteners-0.18, funcsigs-1.0.2, GridDataFormats-1.0.1, gsd-2.8.0, MDAnalysis-2.4.2, mmtf-python-1.1.3, mrcfile-1.4.3, msgpack-1.0.5
+fasteners-0.19, GridDataFormats-1.0.2, mda_xdrlib-0.2.0, MDAnalysis-2.7.0, mmtf-python-1.1.3
