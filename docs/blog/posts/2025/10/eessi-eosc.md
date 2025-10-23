@@ -28,9 +28,9 @@ The [EOSC EU Node Tools Hub](https://open-science-cloud.ec.europa.eu/dashboard/t
 
 ## Adding EESSI to the Tools Hub
 
-Most of the effort involved in creating the EESSI tool was in understanding a little about the TOSCA (Topology and Orchestration Specification for Cloud Applications) standard, since that is the underlying language used to describe a topology of cloud based web services, their components, relationships, and the processes that manage them.
+Most of the effort involved in creating the EESSI tool was in understanding a little about the TOSCA (Topology and Orchestration Specification for Cloud Applications) standard, since that is the underlying language used to describe a topology of cloud based web services, their components, relationships, and the processes that manage them. To make a tool you need to use TOSCA.
 
-I didn't really do that myself though, I employed the services of an AI friend to help me navigate how to create/modify the template.
+I didn't really do that myself though, I employed the services of an AI friend to help me navigate how to create/modify a template I got from the Tools Hub.
 
 One good thing about the Tools Hub is that it is _very_ easy to start by cloning an existing tool and then customising it for your use case. For me, that meant starting from [Simple Compute Node](https://open-science-cloud.ec.europa.eu/dashboard/tools-hub/tool-view?eo=MjEuMTExNjcvNDVGeWEy) and then adding an initialisation step that installs EESSI on the node. You can the critical difference in the `diff` below.
 
@@ -72,23 +72,33 @@ Basically this change means that when a node is started up a set of defined acti
         EOF
         chmod +x /etc/profile.d/eessi.sh
 ```
-Most of the script is just to force a default `bash` shell for the users and remove some `lesspipe` output at login. The actual installation of EESSI (and CVMFS) is already handled via an external script that is (reasonably) OS-agnostic.
+Most of the script is just to force a default `bash` shell for the users and remove some `lesspipe` output at login. The actual installation of EESSI (and CVMFS) is already handled via [an external script](https://github.com/EESSI/eessi-demo/blob/main/scripts/install_cvmfs_eessi.sh) that is (reasonably) OS-agnostic.
 
 ## Deploying EESSI via the Tools Hub
 
-The first thing you need to do is convert some of your credits into quota you can use to deploy a virtual machine. This is done at https://open-science-cloud.ec.europa.eu/dashboard/vms. For my testing I used a _Small_ instance with only 2 vCPUs.
+The first thing you need to do is convert some of your credits into quota you can use to deploy a virtual machine. This is done at [https://open-science-cloud.ec.europa.eu/dashboard/vms](https://open-science-cloud.ec.europa.eu/dashboard/vms). For my testing I used a _Small_ instance with only 2 vCPUs.
 
 Once that is done, you will then be able to _deploy_ the EESSI Compute Node, for this step a picture is worth a thousand words
 
+---
+
 ![Deploying EESSI on the EOSC EU Node Tools Hub](EOSC_deploy.webp)
+
+---
 
 Once that is done, go have a cup of coffee :coffee: .
 
 When you come back you should have a notification, and then you can go to the _Deployments_ tab under the Tools Hub. It is a little tricky to figure out how you access the deployed VM. Again here, two pictures are a thousand words
 
+---
+
 ![Finding metadata related to your deployed VM](EOSC_vm_metadata.webp)
 
+---
+
 ![Accessing your deployed VM with EESSI](EOSC_vm_access.webp)
+
+---
 
 With the username `user`, IP `node_ip`, and RSA access key `token` from the deployment, you can then log in to the node. The first login will take quite a few seconds as the CVMFS cache gets populated, but after that things should be pretty fluid.
 
