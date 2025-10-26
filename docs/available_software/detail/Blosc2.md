@@ -5,9 +5,9 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: Portable lossless data compression library
+  description: Blosc, an extremely fast, multi-threaded, meta-compressor library
   license: Not confirmed
-  name: LZO
+  name: Blosc2
   offers:
     '@type': Offer
     price: 0
@@ -24,31 +24,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''LZO/2.10-GCCcore-12.3.0'', ''LZO/2.10-GCCcore-13.2.0'']'
-  url: https://www.oberhumer.com/opensource/lzo/
+  softwareVersion: '[''Blosc2/2.13.2-GCCcore-13.2.0'']'
+  url: https://www.blosc.org/
 ---
 
-LZO
-===
+Blosc2
+======
 
 
-Portable lossless data compression library
+Blosc, an extremely fast, multi-threaded, meta-compressor library
 
-https://www.oberhumer.com/opensource/lzo/
+https://www.blosc.org/
 # Available modules
 
 
-The overview below shows which LZO installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which Blosc2 installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using LZO, load one of these modules using a `module load` command like:
+To start using Blosc2, load one of these modules using a `module load` command like:
 
 ```shell
-module load LZO/2.10-GCCcore-13.2.0
+module load Blosc2/2.13.2-GCCcore-13.2.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LZO/2.10-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|LZO/2.10-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Blosc2/2.13.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
