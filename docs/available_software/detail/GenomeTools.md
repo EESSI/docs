@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''GenomeTools/1.6.2-GCC-13.2.0'', ''GenomeTools/1.6.5-GCC-13.2.0'']'
+  softwareVersion: '[''GenomeTools/1.6.2-GCC-12.2.0'']'
   url: http://genometools.org
 ---
 
@@ -44,12 +44,11 @@ The overview below shows which GenomeTools installations are available per targe
 To start using GenomeTools, load one of these modules using a `module load` command like:
 
 ```shell
-module load GenomeTools/1.6.5-GCC-13.2.0
+module load GenomeTools/1.6.2-GCC-12.2.0
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|GenomeTools/1.6.5-GCC-13.2.0|x|
-|GenomeTools/1.6.2-GCC-13.2.0|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|GenomeTools/1.6.2-GCC-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

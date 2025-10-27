@@ -24,7 +24,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''meson-python/0.15.0-GCCcore-13.2.0'']'
+  softwareVersion: '[''meson-python/0.11.0-GCCcore-12.2.0'', ''meson-python/0.13.2-GCCcore-12.3.0'',
+    ''meson-python/0.15.0-GCCcore-12.3.0'', ''meson-python/0.15.0-GCCcore-13.2.0'']'
   url: https://github.com/mesonbuild/meson-python
 ---
 
@@ -46,11 +47,14 @@ To start using meson-python, load one of these modules using a `module load` com
 module load meson-python/0.15.0-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|meson-python/0.15.0-GCCcore-13.2.0|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|meson-python/0.15.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|meson-python/0.15.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|meson-python/0.13.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|meson-python/0.11.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### meson-python/0.15.0-GCCcore-13.2.0
@@ -58,3 +62,21 @@ module load meson-python/0.15.0-GCCcore-13.2.0
 This is a list of extensions included in the module:
 
 meson-python-0.15.0, pyproject-metadata-0.7.1
+
+### meson-python/0.15.0-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+meson-python-0.15.0, pyproject-metadata-0.7.1
+
+### meson-python/0.13.2-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+meson-python-0.13.2, pyproject-metadata-0.7.1
+
+### meson-python/0.11.0-GCCcore-12.2.0
+
+This is a list of extensions included in the module:
+
+meson-python-0.11.0, pyproject-metadata-0.6.1

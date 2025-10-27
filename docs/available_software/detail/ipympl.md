@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ipympl/0.9.4-gfbf-2023b'']'
+  softwareVersion: '[''ipympl/0.9.3-gfbf-2023a'']'
   url: https://matplotlib.org/ipympl
 ---
 
@@ -46,18 +46,18 @@ The overview below shows which ipympl installations are available per target arc
 To start using ipympl, load one of these modules using a `module load` command like:
 
 ```shell
-module load ipympl/0.9.4-gfbf-2023b
+module load ipympl/0.9.3-gfbf-2023a
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|ipympl/0.9.4-gfbf-2023b|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ipympl/0.9.3-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
-### ipympl/0.9.4-gfbf-2023b
+### ipympl/0.9.3-gfbf-2023a
 
 This is a list of extensions included in the module:
 
-ipympl-0.9.4
+ipympl-0.9.3

@@ -11,7 +11,7 @@
  * A function that populates the table on the module overview page with information about all the available modules.
  */
 function populate_riscv_overview(riscv_json_data) {
-    fetch(json_data)
+    fetch(riscv_json_data)
         .then((response) => response.json())
         .then((json) => {
             // Set generated time
@@ -55,7 +55,7 @@ function populate_riscv_overview(riscv_json_data) {
             // list_avaible contains a list with booleans.
             // These booleans indicates if the software is available on the corresponding cluster.
             for (const [software, list_available] of Object.entries(json.modules)) {
-                let new_row = [`<a href="../detail/${software}">${software}</a>`];
+                let new_row = [`<a href="../riscv-detail/${software}">${software}</a>`];
                 list_available.forEach(bool => new_row.push(bool ? "x" : "-"));
                 new_rows.push(new_row);
             }

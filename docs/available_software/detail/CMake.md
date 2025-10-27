@@ -25,8 +25,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''CMake/3.27.6-GCCcore-13.2.0'', ''CMake/3.29.3-GCCcore-13.2.0'',
-    ''CMake/3.29.3-gfbf-2023b'']'
+  softwareVersion: '[''CMake/3.18.4'', ''CMake/3.24.3-GCCcore-12.2.0'', ''CMake/3.26.3-GCCcore-12.3.0'',
+    ''CMake/3.27.6-GCCcore-13.2.0'']'
   url: https://www.cmake.org
 ---
 
@@ -45,13 +45,14 @@ The overview below shows which CMake installations are available per target arch
 To start using CMake, load one of these modules using a `module load` command like:
 
 ```shell
-module load CMake/3.29.3-gfbf-2023b
+module load CMake/3.27.6-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|CMake/3.29.3-gfbf-2023b|x|
-|CMake/3.29.3-GCCcore-13.2.0|x|
-|CMake/3.27.6-GCCcore-13.2.0|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|CMake/3.27.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|CMake/3.26.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|CMake/3.24.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|CMake/3.18.4|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

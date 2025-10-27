@@ -26,7 +26,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''jupyter-server/2.14.0-GCCcore-13.2.0'']'
+  softwareVersion: '[''jupyter-server/2.7.2-GCCcore-12.3.0'']'
   url: https://jupyter.org/
 ---
 
@@ -45,18 +45,18 @@ The overview below shows which jupyter-server installations are available per ta
 To start using jupyter-server, load one of these modules using a `module load` command like:
 
 ```shell
-module load jupyter-server/2.14.0-GCCcore-13.2.0
+module load jupyter-server/2.7.2-GCCcore-12.3.0
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|jupyter-server/2.14.0-GCCcore-13.2.0|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|jupyter-server/2.7.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
-### jupyter-server/2.14.0-GCCcore-13.2.0
+### jupyter-server/2.7.2-GCCcore-12.3.0
 
 This is a list of extensions included in the module:
 
-anyio-4.3.0, argon2-cffi-bindings-21.2.0, argon2_cffi-23.1.0, bleach-6.1.0, comm-0.2.2, debugpy-1.8.1, defusedxml-0.7.1, deprecation-2.1.0, fastjsonschema-2.19.1, ipykernel-6.29.4, ipython_genutils-0.2.0, ipywidgets-8.1.2, jsonschema-4.22.0, jsonschema_specifications-2023.12.1, jupyter_client-8.6.1, jupyter_core-5.7.2, jupyter_events-0.10.0, jupyter_packaging-0.12.3, jupyter_server-2.14.0, jupyter_server_terminals-0.5.3, jupyterlab_pygments-0.3.0, jupyterlab_widgets-3.0.10, mistune-3.0.2, nbclient-0.10.0, nbconvert-7.16.4, nbformat-5.10.4, nest_asyncio-1.6.0, notebook_shim-0.2.4, overrides-7.7.0, pandocfilters-1.5.1, prometheus_client-0.20.0, python-json-logger-2.0.7, referencing-0.35.1, rfc3339_validator-0.1.4, rfc3986_validator-0.1.1, rpds_py-0.18.1, Send2Trash-1.8.3, sniffio-1.3.1, terminado-0.18.1, tinycss2-1.3.0, websocket_client-1.8.0, widgetsnbextension-4.0.10
+anyio-3.7.1, argon2-cffi-bindings-21.2.0, argon2_cffi-23.1.0, arrow-1.2.3, bleach-6.0.0, comm-0.1.4, debugpy-1.6.7.post1, defusedxml-0.7.1, deprecation-2.1.0, fastjsonschema-2.18.0, hatch_jupyter_builder-0.8.3, hatch_nodejs_version-0.3.1, ipykernel-6.25.1, ipython_genutils-0.2.0, ipywidgets-8.1.0, jsonschema-4.18.0, jsonschema_specifications-2023.7.1, jupyter_client-8.3.0, jupyter_core-5.3.1, jupyter_events-0.7.0, jupyter_packaging-0.12.3, jupyter_server-2.7.2, jupyter_server_terminals-0.4.4, jupyterlab_pygments-0.2.2, jupyterlab_widgets-3.0.8, mistune-3.0.1, nbclient-0.8.0, nbconvert-7.7.4, nbformat-5.9.2, nest_asyncio-1.5.7, notebook_shim-0.2.3, overrides-7.4.0, pandocfilters-1.5.0, prometheus_client-0.17.1, python-json-logger-2.0.7, referencing-0.30.2, rfc3339_validator-0.1.4, rfc3986_validator-0.1.1, rpds_py-0.9.2, Send2Trash-1.8.2, sniffio-1.3.0, terminado-0.17.1, tinycss2-1.2.1, websocket-client-1.6.1, widgetsnbextension-4.0.8

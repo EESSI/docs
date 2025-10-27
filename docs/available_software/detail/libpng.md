@@ -24,7 +24,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''libpng/1.6.40-GCCcore-13.2.0'', ''libpng/1.6.43-GCCcore-13.2.0'']'
+  softwareVersion: '[''libpng/1.6.38-GCCcore-12.2.0'', ''libpng/1.6.39-GCCcore-12.3.0'',
+    ''libpng/1.6.40-GCCcore-13.2.0'']'
   url: http://www.libpng.org/pub/png/libpng.html
 ---
 
@@ -43,12 +44,13 @@ The overview below shows which libpng installations are available per target arc
 To start using libpng, load one of these modules using a `module load` command like:
 
 ```shell
-module load libpng/1.6.43-GCCcore-13.2.0
+module load libpng/1.6.40-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|libpng/1.6.43-GCCcore-13.2.0|x|
-|libpng/1.6.40-GCCcore-13.2.0|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|libpng/1.6.40-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|libpng/1.6.39-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|libpng/1.6.38-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

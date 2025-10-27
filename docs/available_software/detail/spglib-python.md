@@ -5,7 +5,7 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: Spglib for Python.Spglib is a library for finding and handling crystal
+  description: Spglib for Python. Spglib is a library for finding and handling crystal
     symmetries written in C.
   license: Not confirmed
   name: spglib-python
@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''spglib-python/2.5.0-gfbf-2023b'']'
+  softwareVersion: '[''spglib-python/2.0.2-gfbf-2022b'']'
   url: https://pypi.python.org/pypi/spglib
 ---
 
@@ -33,7 +33,7 @@ spglib-python
 =============
 
 
-Spglib for Python.Spglib is a library for finding and handling crystal symmetries written in C.
+Spglib for Python. Spglib is a library for finding and handling crystal symmetries written in C.
 
 https://pypi.python.org/pypi/spglib
 # Available modules
@@ -44,18 +44,11 @@ The overview below shows which spglib-python installations are available per tar
 To start using spglib-python, load one of these modules using a `module load` command like:
 
 ```shell
-module load spglib-python/2.5.0-gfbf-2023b
+module load spglib-python/2.0.2-gfbf-2022b
 ```
 
-*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 
-| |scv64/generic|
-| :---: | :---: |
-|spglib-python/2.5.0-gfbf-2023b|x|
-
-
-### spglib-python/2.5.0-gfbf-2023b
-
-This is a list of extensions included in the module:
-
-pyproject_metadata-0.8.0, spglib-2.5.0
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|spglib-python/2.0.2-gfbf-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
