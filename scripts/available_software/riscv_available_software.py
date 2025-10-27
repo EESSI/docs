@@ -57,7 +57,11 @@ def main():
 
     # Generate detail markdown pages
     print("Generate detailed pages... ", end="", flush=True)
+<<<<<<< HEAD
     generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/riscv-detail"))
+=======
+    generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/detail"))
+>>>>>>> 22e40ab0 (Generate RISC-V available software and modify left menu)
     print("Done!")
 
 
@@ -369,7 +373,11 @@ def generate_software_table_data(software_data: dict, targets: list) -> list:
     @param targets: List with all the target names
     @return: 1D list with all the data for the table
     """
+<<<<<<< HEAD
     table_data = [" "] + [target[55:] for target in targets]
+=======
+    table_data = [" "] + [target[57:] for target in targets]
+>>>>>>> 22e40ab0 (Generate RISC-V available software and modify left menu)
 
     for module_name, available in list(software_data.items())[::-1]:
         row = [module_name]
