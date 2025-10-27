@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ffnvcodec/11.1.5.2'', ''ffnvcodec/12.0.16.0'', ''ffnvcodec/12.1.14.0'']'
+  softwareVersion: '[''ffnvcodec/12.1.14.0'']'
   url: https://git.videolan.org/?p=ffmpeg/nv-codec-headers.git
 ---
 
@@ -47,10 +47,12 @@ To start using ffnvcodec, load one of these modules using a `module load` comman
 module load ffnvcodec/12.1.14.0
 ```
 
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ffnvcodec/12.1.14.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|ffnvcodec/12.0.16.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|ffnvcodec/11.1.5.2|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|ffnvcodec/12.1.14.0|x|

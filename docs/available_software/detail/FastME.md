@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''FastME/2.1.6.3-GCC-12.3.0'']'
+  softwareVersion: '[''FastME/2.1.6.3-GCC-13.2.0'']'
   url: http://www.atgc-montpellier.fr/fastme/
 ---
 
@@ -44,11 +44,15 @@ The overview below shows which FastME installations are available per target arc
 To start using FastME, load one of these modules using a `module load` command like:
 
 ```shell
-module load FastME/2.1.6.3-GCC-12.3.0
+module load FastME/2.1.6.3-GCC-13.2.0
 ```
 
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FastME/2.1.6.3-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|FastME/2.1.6.3-GCC-13.2.0|x|

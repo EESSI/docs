@@ -24,8 +24,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''libarchive/3.6.1-GCCcore-12.2.0'', ''libarchive/3.6.2-GCCcore-12.3.0'',
-    ''libarchive/3.7.2-GCCcore-13.2.0'']'
+  softwareVersion: '[''libarchive/3.7.2-GCCcore-13.2.0'', ''libarchive/3.7.4-GCCcore-13.2.0'',
+    ''libarchive/3.7.4-gfbf-2023b'']'
   url: https://www.libarchive.org/
 ---
 
@@ -44,13 +44,17 @@ The overview below shows which libarchive installations are available per target
 To start using libarchive, load one of these modules using a `module load` command like:
 
 ```shell
-module load libarchive/3.7.2-GCCcore-13.2.0
+module load libarchive/3.7.4-gfbf-2023b
 ```
 
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libarchive/3.7.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|libarchive/3.6.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|libarchive/3.6.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|libarchive/3.7.4-gfbf-2023b|x|
+|libarchive/3.7.4-GCCcore-13.2.0|x|
+|libarchive/3.7.2-GCCcore-13.2.0|x|

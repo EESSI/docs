@@ -40,10 +40,14 @@ function populate_riscv_overview(riscv_json_data) {
 	    console.log(all_targets)
             console.log([...[{"title": "name"}], ...all_targets])
 <<<<<<< HEAD
+<<<<<<< HEAD
             const table = new DataTable('#riscv_overview_table', {
 =======
             const table = new DataTable('#overview_table', {
 >>>>>>> d653bb3f (Add populate_riscv_overview.js)
+=======
+            const table = new DataTable('#riscv_overview_table', {
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 		        columns: [...[{"title": "name"}], ...all_targets],
                 paging: true,
                 columnDefs: [
@@ -80,9 +84,13 @@ function populate_riscv_overview(riscv_json_data) {
 document$.subscribe(function() {
     if (document.getElementById("riscv_overview_table")) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         populate_riscv_overview("../data/riscv_json_data.json")
 =======
         populate_overview("../data/riscv_json_data.json")
 >>>>>>> d653bb3f (Add populate_riscv_overview.js)
+=======
+        populate_riscv_overview("../data/riscv_json_data.json")
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
     }
 })

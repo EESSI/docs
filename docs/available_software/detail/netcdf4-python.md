@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''netcdf4-python/1.6.3-foss-2022b'', ''netcdf4-python/1.6.4-foss-2023a'']'
+  softwareVersion: '[''netcdf4-python/1.6.5-foss-2023b'']'
   url: https://unidata.github.io/netcdf4-python/
 ---
 
@@ -43,25 +43,22 @@ The overview below shows which netcdf4-python installations are available per ta
 To start using netcdf4-python, load one of these modules using a `module load` command like:
 
 ```shell
-module load netcdf4-python/1.6.4-foss-2023a
+module load netcdf4-python/1.6.5-foss-2023b
 ```
 
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|netcdf4-python/1.6.4-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|netcdf4-python/1.6.3-foss-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|netcdf4-python/1.6.5-foss-2023b|x|
 
 
-### netcdf4-python/1.6.4-foss-2023a
-
-This is a list of extensions included in the module:
-
-cftime-1.6.2, netcdf4-python-1.6.4
-
-### netcdf4-python/1.6.3-foss-2022b
+### netcdf4-python/1.6.5-foss-2023b
 
 This is a list of extensions included in the module:
 
-cftime-1.6.2, netcdf4-python-1.6.3
+cftime-1.6.2, netcdf4-python-1.6.5

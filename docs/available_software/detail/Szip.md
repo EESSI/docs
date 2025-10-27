@@ -25,8 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''Szip/2.1.1-GCCcore-12.2.0'', ''Szip/2.1.1-GCCcore-12.3.0'',
-    ''Szip/2.1.1-GCCcore-13.2.0'']'
+  softwareVersion: '[''Szip/2.1.1-GCCcore-13.2.0'']'
   url: https://www.hdfgroup.org/doc_resource/SZIP/
 ---
 
@@ -48,10 +47,12 @@ To start using Szip, load one of these modules using a `module load` command lik
 module load Szip/2.1.1-GCCcore-13.2.0
 ```
 
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Szip/2.1.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Szip/2.1.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Szip/2.1.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|Szip/2.1.1-GCCcore-13.2.0|x|

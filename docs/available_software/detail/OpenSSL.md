@@ -7,8 +7,8 @@ json_ld:
   applicationCategory: DeveloperApplication
   description: The OpenSSL Project is a collaborative effort to develop a robust,
     commercial-grade, full-featured, and Open Source toolchain implementing the Secure
-    Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well
-    as a full-strength general purpose cryptography library.
+    Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1)  protocols as
+    well as a full-strength general purpose cryptography library.
   license: Not confirmed
   name: OpenSSL
   offers:
@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''OpenSSL/1.1'']'
+  softwareVersion: '[''OpenSSL/1.1'', ''OpenSSL/3'']'
   url: https://www.openssl.org/
 ---
 
@@ -35,7 +35,7 @@ OpenSSL
 =======
 
 
-The OpenSSL Project is a collaborative effort to develop a robust, commercial-grade, full-featured, and Open Source toolchain implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well as a full-strength general purpose cryptography library.
+The OpenSSL Project is a collaborative effort to develop a robust, commercial-grade, full-featured, and Open Source toolchain implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1)  protocols as well as a full-strength general purpose cryptography library.
 
 https://www.openssl.org/
 # Available modules
@@ -46,11 +46,16 @@ The overview below shows which OpenSSL installations are available per target ar
 To start using OpenSSL, load one of these modules using a `module load` command like:
 
 ```shell
-module load OpenSSL/1.1
+module load OpenSSL/3
 ```
 
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenSSL/1.1|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|OpenSSL/3|x|
+|OpenSSL/1.1|x|

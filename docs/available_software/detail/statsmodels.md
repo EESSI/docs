@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''statsmodels/0.14.1-gfbf-2023a'', ''statsmodels/0.14.1-gfbf-2023b'']'
+  softwareVersion: '[''statsmodels/0.14.1-gfbf-2023b'']'
   url: https://www.statsmodels.org/
 ---
 
@@ -47,21 +47,18 @@ To start using statsmodels, load one of these modules using a `module load` comm
 module load statsmodels/0.14.1-gfbf-2023b
 ```
 
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|statsmodels/0.14.1-gfbf-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|statsmodels/0.14.1-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|statsmodels/0.14.1-gfbf-2023b|x|
 
 
 ### statsmodels/0.14.1-gfbf-2023b
-
-This is a list of extensions included in the module:
-
-patsy-0.5.6, statsmodels-0.14.1
-
-### statsmodels/0.14.1-gfbf-2023a
 
 This is a list of extensions included in the module:
 

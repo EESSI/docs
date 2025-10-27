@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''Biopython/1.81-foss-2022b'', ''Biopython/1.83-foss-2023a'']'
+  softwareVersion: '[''Biopython/1.84-foss-2023b'']'
   url: https://www.biopython.org
 ---
 
@@ -46,12 +46,15 @@ The overview below shows which Biopython installations are available per target 
 To start using Biopython, load one of these modules using a `module load` command like:
 
 ```shell
-module load Biopython/1.83-foss-2023a
+module load Biopython/1.84-foss-2023b
 ```
 
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
+>>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Biopython/1.83-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Biopython/1.81-foss-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|Biopython/1.84-foss-2023b|x|
