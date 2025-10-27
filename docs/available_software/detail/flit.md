@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''flit/3.9.0-GCCcore-13.2.0'']'
+  softwareVersion: '[''flit/3.9.0-GCCcore-12.3.0'', ''flit/3.9.0-GCCcore-13.2.0'']'
   url: https://github.com/pypa/flit
 ---
 
@@ -47,14 +47,19 @@ module load flit/3.9.0-GCCcore-13.2.0
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 =======
 *(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 >>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+>>>>>>> 8f5ee064 (Point to the right riscv-detail folder in the javascript)
 
-| |scv64/generic|
-| :---: | :---: |
-|flit/3.9.0-GCCcore-13.2.0|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|flit/3.9.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|flit/3.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### flit/3.9.0-GCCcore-13.2.0
@@ -62,3 +67,9 @@ module load flit/3.9.0-GCCcore-13.2.0
 This is a list of extensions included in the module:
 
 certifi-2023.7.22, charset-normalizer-3.3.1, docutils-0.20.1, flit-3.9.0, flit_scm-1.7.0, idna-3.4, packaging-23.2, requests-2.31.0, setuptools-scm-8.0.4, tomli_w-1.0.0, typing_extensions-4.8.0, urllib3-2.0.7
+
+### flit/3.9.0-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+certifi-2023.5.7, charset-normalizer-3.1.0, docutils-0.20.1, flit-3.9.0, flit_scm-1.7.0, idna-3.4, packaging-23.1, requests-2.31.0, setuptools_scm-7.1.0, tomli_w-1.0.0, typing_extensions-4.6.3, urllib3-1.26.16

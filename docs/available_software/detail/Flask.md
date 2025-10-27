@@ -26,7 +26,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''Flask/2.3.3-gfbf-2023b'']'
+  softwareVersion: '[''Flask/2.2.3-GCCcore-12.2.0'', ''Flask/2.3.3-GCCcore-12.3.0'',
+    ''Flask/3.0.0-GCCcore-13.2.0'']'
   url: https://www.palletsprojects.com/p/flask/
 ---
 
@@ -45,22 +46,40 @@ The overview below shows which Flask installations are available per target arch
 To start using Flask, load one of these modules using a `module load` command like:
 
 ```shell
-module load Flask/2.3.3-gfbf-2023b
+module load Flask/3.0.0-GCCcore-13.2.0
 ```
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 =======
 *(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 >>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+>>>>>>> 8f5ee064 (Point to the right riscv-detail folder in the javascript)
 
-| |scv64/generic|
-| :---: | :---: |
-|Flask/2.3.3-gfbf-2023b|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|Flask/3.0.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Flask/2.3.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Flask/2.2.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
-### Flask/2.3.3-gfbf-2023b
+### Flask/3.0.0-GCCcore-13.2.0
+
+This is a list of extensions included in the module:
+
+asgiref-3.7.2, blinker-1.7.0, cachelib-0.10.2, flask-3.0.0, Flask-Cors-4.0.0, Flask-Session-0.5.0, itsdangerous-2.1.2, werkzeug-3.0.1
+
+### Flask/2.3.3-GCCcore-12.3.0
 
 This is a list of extensions included in the module:
 
 asgiref-3.7.2, blinker-1.6.2, cachelib-0.10.2, flask-2.3.3, Flask-Cors-4.0.0, Flask-Session-0.5.0, itsdangerous-2.1.2, werkzeug-2.3.7
+
+### Flask/2.2.3-GCCcore-12.2.0
+
+This is a list of extensions included in the module:
+
+asgiref-3.6.0, cachelib-0.10.2, Flask-2.2.3, Flask-Cors-3.0.10, Flask-Session-0.4.0, itsdangerous-2.1.2, Werkzeug-2.2.3

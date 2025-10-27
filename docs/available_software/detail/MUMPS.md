@@ -24,8 +24,9 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''MUMPS/5.6.1-foss-2023b-metis'']'
-  url: https://graal.ens-lyon.fr/MUMPS/
+  softwareVersion: '[''MUMPS/5.6.1-foss-2022b-metis'', ''MUMPS/5.6.1-foss-2023a-metis'',
+    ''MUMPS/5.6.1-foss-2023b-metis'']'
+  url: https://mumps-solver.org
 ---
 
 MUMPS
@@ -34,7 +35,7 @@ MUMPS
 
 A parallel sparse direct solver
 
-https://graal.ens-lyon.fr/MUMPS/
+https://mumps-solver.org
 # Available modules
 
 
@@ -47,11 +48,17 @@ module load MUMPS/5.6.1-foss-2023b-metis
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 *(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
 =======
 *(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 >>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:10:37 CEST)*
+>>>>>>> 8f5ee064 (Point to the right riscv-detail folder in the javascript)
 
-| |scv64/generic|
-| :---: | :---: |
-|MUMPS/5.6.1-foss-2023b-metis|x|
+| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|MUMPS/5.6.1-foss-2023b-metis|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|MUMPS/5.6.1-foss-2023a-metis|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|MUMPS/5.6.1-foss-2022b-metis|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
