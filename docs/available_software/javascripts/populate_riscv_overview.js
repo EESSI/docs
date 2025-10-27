@@ -11,7 +11,11 @@
  * A function that populates the table on the module overview page with information about all the available modules.
  */
 function populate_riscv_overview(riscv_json_data) {
+<<<<<<< HEAD
     fetch(riscv_json_data)
+=======
+    fetch(json_data)
+>>>>>>> d653bb3f (Add populate_riscv_overview.js)
         .then((response) => response.json())
         .then((json) => {
             // Set generated time
@@ -35,7 +39,11 @@ function populate_riscv_overview(riscv_json_data) {
                 })
 	    console.log(all_targets)
             console.log([...[{"title": "name"}], ...all_targets])
+<<<<<<< HEAD
             const table = new DataTable('#riscv_overview_table', {
+=======
+            const table = new DataTable('#overview_table', {
+>>>>>>> d653bb3f (Add populate_riscv_overview.js)
 		        columns: [...[{"title": "name"}], ...all_targets],
                 paging: true,
                 columnDefs: [
@@ -55,7 +63,11 @@ function populate_riscv_overview(riscv_json_data) {
             // list_avaible contains a list with booleans.
             // These booleans indicates if the software is available on the corresponding cluster.
             for (const [software, list_available] of Object.entries(json.modules)) {
+<<<<<<< HEAD
                 let new_row = [`<a href="../riscv-detail/${software}">${software}</a>`];
+=======
+                let new_row = [`<a href="../detail/${software}">${software}</a>`];
+>>>>>>> d653bb3f (Add populate_riscv_overview.js)
                 list_available.forEach(bool => new_row.push(bool ? "x" : "-"));
                 new_rows.push(new_row);
             }
@@ -67,6 +79,10 @@ function populate_riscv_overview(riscv_json_data) {
 // Only start populating the table if the correct page has been loaded.
 document$.subscribe(function() {
     if (document.getElementById("riscv_overview_table")) {
+<<<<<<< HEAD
         populate_riscv_overview("../data/riscv_json_data.json")
+=======
+        populate_overview("../data/riscv_json_data.json")
+>>>>>>> d653bb3f (Add populate_riscv_overview.js)
     }
 })
