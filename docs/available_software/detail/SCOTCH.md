@@ -26,7 +26,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''SCOTCH/7.0.3-gompi-2022b'', ''SCOTCH/7.0.3-gompi-2023a'', ''SCOTCH/7.0.4-gompi-2023b'']'
+  softwareVersion: '[''SCOTCH/7.0.4-gompi-2023b'']'
   url: https://www.labri.fr/perso/pelegrin/scotch/
 ---
 
@@ -48,10 +48,8 @@ To start using SCOTCH, load one of these modules using a `module load` command l
 module load SCOTCH/7.0.4-gompi-2023b
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SCOTCH/7.0.4-gompi-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|SCOTCH/7.0.3-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|SCOTCH/7.0.3-gompi-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|SCOTCH/7.0.4-gompi-2023b|x|

@@ -29,7 +29,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''IPython/8.14.0-GCCcore-12.3.0'', ''IPython/8.17.2-GCCcore-13.2.0'']'
+  softwareVersion: '[''IPython/8.17.2-GCCcore-13.2.0'']'
   url: https://ipython.org/index.html
 ---
 
@@ -51,12 +51,11 @@ To start using IPython, load one of these modules using a `module load` command 
 module load IPython/8.17.2-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|IPython/8.17.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|IPython/8.14.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|IPython/8.17.2-GCCcore-13.2.0|x|
 
 
 ### IPython/8.17.2-GCCcore-13.2.0
@@ -64,9 +63,3 @@ module load IPython/8.17.2-GCCcore-13.2.0
 This is a list of extensions included in the module:
 
 asttokens-2.4.1, backcall-0.2.0, executing-2.0.1, ipython-8.17.2, matplotlib-inline-0.1.6, pickleshare-0.7.5, prompt_toolkit-3.0.41, pure_eval-0.2.2, stack_data-0.6.3, traitlets-5.13.0
-
-### IPython/8.14.0-GCCcore-12.3.0
-
-This is a list of extensions included in the module:
-
-asttokens-2.2.1, backcall-0.2.0, executing-1.2.0, ipython-8.14.0, jedi-0.19.0, matplotlib-inline-0.1.6, parso-0.8.3, pickleshare-0.7.5, prompt_toolkit-3.0.39, pure_eval-0.2.2, stack_data-0.6.2, traitlets-5.9.0

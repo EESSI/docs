@@ -24,8 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''at-spi2-atk/2.38.0-GCCcore-12.2.0'', ''at-spi2-atk/2.38.0-GCCcore-12.3.0'',
-    ''at-spi2-atk/2.38.0-GCCcore-13.2.0'']'
+  softwareVersion: '[''at-spi2-atk/2.38.0-GCCcore-13.2.0'']'
   url: https://wiki.gnome.org/Accessibility
 ---
 
@@ -47,10 +46,8 @@ To start using at-spi2-atk, load one of these modules using a `module load` comm
 module load at-spi2-atk/2.38.0-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|at-spi2-atk/2.38.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|at-spi2-atk/2.38.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|at-spi2-atk/2.38.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|at-spi2-atk/2.38.0-GCCcore-13.2.0|x|

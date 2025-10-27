@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''lit/18.1.2-GCCcore-12.3.0'', ''lit/18.1.7-GCCcore-13.2.0'']'
+  softwareVersion: '[''lit/18.1.7-GCCcore-13.2.0'']'
   url: https://llvm.org/docs/CommandGuide/lit.html
 ---
 
@@ -47,12 +47,11 @@ To start using lit, load one of these modules using a `module load` command like
 module load lit/18.1.7-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lit/18.1.7-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|lit/18.1.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|lit/18.1.7-GCCcore-13.2.0|x|
 
 
 ### lit/18.1.7-GCCcore-13.2.0
@@ -60,9 +59,3 @@ module load lit/18.1.7-GCCcore-13.2.0
 This is a list of extensions included in the module:
 
 lit-18.1.7, pexpect-4.9.0, ptyprocess-0.7.0
-
-### lit/18.1.2-GCCcore-12.3.0
-
-This is a list of extensions included in the module:
-
-lit-18.1.2

@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''PLY/3.11-GCCcore-12.3.0'']'
+  softwareVersion: '[''PLY/3.11-GCCcore-13.2.0'']'
   url: https://www.dabeaz.com/ply/
 ---
 
@@ -43,11 +43,11 @@ The overview below shows which PLY installations are available per target archit
 To start using PLY, load one of these modules using a `module load` command like:
 
 ```shell
-module load PLY/3.11-GCCcore-12.3.0
+module load PLY/3.11-GCCcore-13.2.0
 ```
 
-*(This data was automatically generated on {{ generated_time }})*
+*(This data was automatically generated on Wed, 22 Oct 2025 at 12:11:37 CEST)*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PLY/3.11-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+| |scv64/generic|
+| :---: | :---: |
+|PLY/3.11-GCCcore-13.2.0|x|
