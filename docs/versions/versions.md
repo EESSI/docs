@@ -17,4 +17,4 @@ The current default EESSI version is `2023.06`. Version `2025.06` is already ful
 
 ## Switching between EESSI versions
 
-* The simplest way to load a specific EESSI version or to switch between them, is to load the appropriate environment module. To access version `2023.06` one can simply do `module load EESSI/2023.06` module. To switch to the 2025.06 version, `module load EESSI/2025.06`. This will automatically set up the environment and avoid conflicts between versions.
+* The simplest way to load a specific EESSI version or to switch between them, is to load the appropriate environment module. To access version `2023.06` one can simply do `module load EESSI/2023.06` and switching to the `2025.06` version is just as easy with: `module load EESSI/2025.06`. This will automatically set up the environment and avoid conflicts between versions.
