@@ -10,8 +10,8 @@ Going forward, EESSI will have yearly version releases, which will target a more
 
 | EESSI Version       | Included toolchains                    | Software list                                                                        |
 | ------------------- | -------------------------------------- | ------------------------------------------------------------------------------------ |
-| 2023.06 (default)   | `foss/2022b` `foss/2023a` `foss/2023b` | [2023.06](https://www.eessi.io/docs/available_software/overview/) (software count?)  |
-| 2025.06             | `foss/2024a` `foss/2025a`              | PLACEHOLDER LINK                                                  (software count?)  |
+| 2023.06 (default)   | `foss/2022b` `foss/2023a` `foss/2023b` | [2023.06](https://www.eessi.io/docs/available_software/overview/) |
+| 2025.06             | `foss/2024a` `foss/2025a`              | Coming Soon                                                       |
 
 The current default EESSI version is `2023.06`. Version `2025.06` is already fully available and will be made the default soon, once it contains more software. 
 
