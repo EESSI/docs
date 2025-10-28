@@ -28,7 +28,7 @@ nav:
       - Repositories:
         - Production:
           - Software: repositories/software.eessi.io.md
-          - Versions: versions/versions.md
+          - Versions: repositories/versions.md
         - RISC-V: repositories/riscv.eessi.io.md
         - Development repository: repositories/dev.eessi.io.md
   - Installation and configuration:
