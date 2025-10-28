@@ -4,7 +4,7 @@ EESSI is organized in different dated versions. Each EESSI version contains a ve
 
 The vast majority of changes are fully transparent to users. Apart from selecting a newer version when starting up EESSI, and accessing an update collection of software, the functionality remains the same, with little to no extra effort needed to use a new version compared to and older one.
 
-Going forward, EESSI will have yearly version releases, which will target a more recent set of toolchains and an updated set of compatibility layer components.
+Going forward, EESSI aims to have yearly version releases, which will target a more recent set of toolchains and an updated set of compatibility layer components.
 
 ## Current EESSI versions
 
