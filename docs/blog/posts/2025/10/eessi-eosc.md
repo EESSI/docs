@@ -32,7 +32,7 @@ Most of the effort involved in creating the EESSI tool was in understanding a li
 
 I didn't really do that myself though, I employed the services of an AI friend to help me navigate how to create/modify a template I got from the Tools Hub.
 
-One good thing about the Tools Hub is that it is _very_ easy to start by cloning an existing tool and then customising it for your use case. For me, that meant starting from [Simple Compute Node](https://open-science-cloud.ec.europa.eu/dashboard/tools-hub/tool-view?eo=MjEuMTExNjcvNDVGeWEy) and then adding an initialisation step that installs EESSI on the node. You can the critical difference in the `diff` below.
+One good thing about the Tools Hub is that it is _very_ easy to start by cloning an existing tool and then customising it for your use case. For me, that meant starting from [Simple Compute Node](https://open-science-cloud.ec.europa.eu/dashboard/tools-hub/tool-view?eo=MjEuMTExNjcvNDVGeWEy) and then adding an initialisation step that installs EESSI on the node. You can see the most critical difference in the `diff` below.
 
 ```diff
 <     simple_node:
