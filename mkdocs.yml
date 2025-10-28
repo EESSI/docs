@@ -143,6 +143,8 @@ markdown_extensions:
   - admonition
   # support for using MarkDown in HTML
   - md_in_html
+  # support for footnotes
+  - footnotes
   # code blocks with syntax highlighting, graphs
   - pymdownx.superfences:
       custom_fences:
