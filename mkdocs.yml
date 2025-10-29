@@ -26,7 +26,9 @@ nav:
   - Available software and repositories:
       - Software: available_software/overview.md
       - Repositories:
-        - Production: repositories/software.eessi.io.md
+        - Production:
+          - Software: repositories/software.eessi.io.md
+          - Versions: repositories/versions.md
         - RISC-V: repositories/riscv.eessi.io.md
         - Development repository: repositories/dev.eessi.io.md
   - Installation and configuration:
@@ -142,6 +144,8 @@ markdown_extensions:
   - admonition
   # support for using MarkDown in HTML
   - md_in_html
+  # support for footnotes
+  - footnotes
   # code blocks with syntax highlighting, graphs
   - pymdownx.superfences:
       custom_fences:
