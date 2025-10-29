@@ -208,35 +208,30 @@ $ module av
 
 ??? tip "Environment variables to consider while initializing EESSI"
 
-    ### Source-based Initialization
+    ### OVERRIDING variables
 
-    | Environment variable | Description |
+    | Environment variables | Description |
     |-----------------------|------------------------|
-    | `EESSI_SILENT` | When set to 1, suppresses non-error output during source-based init; errors still print. |
-    | `EESSI_USE_ARCHDETECT` | When set to 0, disables automatic architecture detection using archdetect; otherwise detection is performed. |
-    | `EESSI_BASIC_ENV` | When set to 1, performs a minimal init only exporting essential  variables. |
     | `EESSI_CVMFS_REPO_OVERRIDE` | Overrides the default CVMFS repository path (e.g. /cvmfs/software.eessi.io) used by init. |
     | `EESSI_VERSION_OVERRIDE` | Overrides the default EESSI version subdirectory (e.g. 2023.06) selected by init. |
     | `EESSI_SOFTWARE_SUBDIR_OVERRIDE` | Overrides detected CPU software subdir (e.g. linux/x86_64/intel/icelake) for the main stack. |
     | `EESSI_ACCELERATOR_TARGET_OVERRIDE` | Overrides detected accelerator target (e.g. accel/nvidia/cc70) regardless of local hardware. |
-    | `EESSI_ACCEL_SOFTWARE_SUBDIR_OVERRIDE` | Overrides CPU software subdir used specifically for accelerator stack modules. |
-    | `EESSI_MODULE_SUBDIR` | Overrides the module tree subdir to expose (e.g. modules/all or architecture-specific path). |
-    | `EESSI_CUSTOM_MODULEPATH` | Additional colon-separated module paths to prepend to MODULEPATH during module-based init. |
+    | `EESSI_ARCHDETECT_OPTIONS_OVERRIDE` | Replaces any built-in archdetect options with the provided value. |
+
+    ### Source-based Initialization
+
+    | Environment variable | Description |
+    |-----------------------|------------------------|
+    | `EESSI_BASIC_ENV` | When set to 1, performs a minimal init only exporting essential  variables. |
+    | `EESSI_SILENT` | When set to 1, suppresses non-error output during source-based init; errors still print. |
+    | `EESSI_USE_ARCHDETECT` | When set to 0, disables automatic architecture detection using archdetect; otherwise detection is performed. |
 
     ### Module-based Initialization
 
     | Environment variable | Description |
     |-----------------------|------------------------|
     | `EESSI_DEBUG_INIT` | When set to 1, enables verbose debug output from init scripts to trace decisions and paths. |
-    | `EESSI_CVMFS_REPO_OVERRIDE` | Overrides the default CVMFS repository path (e.g. /cvmfs/software.eessi.io) used by init. |
-    | `EESSI_VERSION_OVERRIDE` | Overrides the default EESSI version subdirectory (e.g. 2023.06) selected by init. |
-    | `EESSI_SOFTWARE_SUBDIR_OVERRIDE` | Overrides detected CPU software subdir (e.g. linux/x86_64/intel/icelake) for the main stack. |
-    | `EESSI_ACCELERATOR_TARGET_OVERRIDE` | Overrides detected accelerator target (e.g. accel/nvidia/cc70) regardless of local hardware. |
-    | `EESSI_ACCEL_SOFTWARE_SUBDIR_OVERRIDE` | Overrides CPU software subdir used specifically for accelerator stack modules. |
     | `LMOD_SYSTEM_DEFAULT_MODULES` | List of modules Lmod auto-loads on shell start; can include EESSI/2023.06 to auto-enable. |
-    | `EESSI_ARCHDETECT_OPTIONS` | Extra options passed to eessi_archdetect.sh (e.g. -d for debug, -a to list compatibles). |
-    | `EESSI_ARCHDETECT_OPTIONS_OVERRIDE` | Replaces any built-in archdetect options with the provided value. |
-    | `EESSI_ACCEL_SUBDIR` | Overrides accelerator module subdir (e.g. accel/nvidia/cc70) when using module-based init. |
     | `EESSI_MODULE_FAMILY_NAME` | Name of the family applied to the EESSI module (default EESSI); affects family conflicts. |
     | `EESSI_MODULE_STICKY` | When set to 1, enables sticky behavior of the EESSI module. |
 
