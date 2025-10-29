@@ -6,13 +6,19 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: Building on top of EESSI
 
+### Monday 27 October 2025
+
+**Outline:** Building on top of EESSI using `buildenv` modules
+([Slides (PDF)](EESSI-happyhour-2025-011-Using-buildenv-modules.pdf), [Recording (YouTube)](https://youtu.be/0uwUlM1xqNk))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0uwUlM1xqNk?si=Ip7SqiUizhZxPfG_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 20 October 2025
 
 **Outline:** How we build software in EESSI
 ([Slides (PDF)](EESSI-happyhour-2025-010-How-we-build-software.pdf), [Recording (YouTube)](https://youtu.be/KkD6vtPqqMs))
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KkD6vtPqqMs?si=b-JeESSfzwgZLvUb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
 ### Monday 13 October 2025
 
