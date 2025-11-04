@@ -6,6 +6,10 @@ slug: eosc
 
 # EESSI available on EOSC EU Node
 
+<figure markdown="span">
+![EOSC logo](eosc-logo.png){width=75%}
+</figure>
+
 EESSI has recently been working together with the [European Open Science Cloud (EOSC)](https://research-and-innovation.ec.europa.eu/strategy/strategy-2020-2024/our-digital-future/open-science/european-open-science-cloud-eosc_en) to provide easy access to EESSI for those using EOSC compute resources.
 
 A first implementation of EESSI support is now available as the [_EESSI Compute Node_ tool in the EOSC EU Node Tools Hub](https://open-science-cloud.ec.europa.eu/dashboard/tools-hub/tool-view?eo=MjEuMTExNjcvTnp2azVM).
