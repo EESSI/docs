@@ -38,7 +38,7 @@ https://github.com/giampaolo/psutil
 # Available modules
 
 
-The overview below shows which psutil installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which psutil installations are available for RISC-V architecture in EESSI, ordered based on software version (new to old).
 
 To start using psutil, load one of these modules using a `module load` command like:
 
@@ -46,11 +46,19 @@ To start using psutil, load one of these modules using a `module load` command l
 module load psutil/6.1.0-GCCcore-13.2.0
 ```
 
+<<<<<<< HEAD:docs/available_software/detail/psutil.md
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |psutil/6.1.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+=======
+*(This data was automatically generated on Wed, 22 Oct 2025 at 15:46:43 CEST)*
+
+| |riscv64/generic|
+| :---: | :---: |
+|psutil/6.1.0-GCCcore-13.2.0|x|
+>>>>>>> 281b8cf3 (Last commit with everything working properly):docs/available_software/riscv-detail/psutil.md
 
 
 ### psutil/6.1.0-GCCcore-13.2.0
