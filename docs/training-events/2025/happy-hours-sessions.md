@@ -31,16 +31,16 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: Contributing software packages to EESSI
-### Topic Series: Building on top of EESSI
+### 💡 **Next Session**: Debugging EESSI software builds
+### Topic Series: Troubleshooting and Debugging EESSI software builds
 🗓️ Schedule
-#### Monday 03 November 2025, 14:00-15:00 CE(S)T
+#### Monday 10 November 2025, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming sessions in the topic series: Building on top of EESSI
+### Upcoming sessions in the topic series: Troubleshooting and Debugging EESSI software builds
 ###### Outline
-- 03 November 2025 - Contributing software packages to EESSI
+- 10 November 2025 - Debugging EESSI software builds
 
 ---
 
@@ -51,6 +51,9 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
 *Topic series: Building on top of EESSI*
+
+
+- 03 November 2025 [Contributing software packages to EESSI](https://)
 
 - 27 October 2025 [Building on top of EESSI using `buildenv` modules](https://youtu.be/0uwUlM1xqNk)
 

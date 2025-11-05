@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: Building on top of EESSI
 
+### Monday 03 November 2025
+
+**Outline:** Contributing software packages to EESSI
+([Slides (PDF)](EESSI-happyhour-2025-012-Contributing-software-to-EESSI.pdf), [Recording (YouTube)](https://))
+
+<iframe width="560" height="315" src="https://" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 27 October 2025
 
 **Outline:** Building on top of EESSI using `buildenv` modules
