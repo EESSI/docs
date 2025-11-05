@@ -53,7 +53,7 @@ See the full Recordings, slides, and materials here: [Previous Sessions & Videos
 *Topic series: Building on top of EESSI*
 
 
-- 03 November 2025 [Contributing software packages to EESSI](https://)
+- 03 November 2025 [Contributing software packages to EESSI](https://www.youtube.com/watch?v=BYgQlI5mmzs)
 
 - 27 October 2025 [Building on top of EESSI using `buildenv` modules](https://youtu.be/0uwUlM1xqNk)
 
