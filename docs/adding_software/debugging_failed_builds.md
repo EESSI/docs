@@ -41,7 +41,12 @@ git checkout LAMMPS_23Jun2022
 ```
 
 ### Starting a shell in the EESSI container
-Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer` repository. Use `-r` to specify which EESSI repository (e.g. `software.eessi.io`, `dev.eessi.io`, ...) should be mounted in the container
+Clone the EESSI/software-layer-scripts repository and change into the software-layer-scripts directory by running these commands:
+```
+git clone https://github.com/EESSI/software-layer-scripts.git
+cd software-layer-scripts
+```
+Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer-scripts` repository. Use `-r` to specify which EESSI repository (e.g. `software.eessi.io`, `dev.eessi.io`, ...) should be mounted in the container
 ```
 ./eessi_container.sh --access rw -r software.eessi.io
 ```
