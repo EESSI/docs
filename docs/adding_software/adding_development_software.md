@@ -46,7 +46,7 @@ dev.eessi.io-example
     They are not strictly necessary if your development build can use already existing 
     easyblocks available through EasyBuild, and / or if nothing needs to be patched
 
-!!! The `software.eessi.io` subdirectory is temporary
+!!! note "The `software.eessi.io` subdirectory is temporary"
 
     The name of this subdirectory should be `dev.eessi.io`, yet renaming it will cause builds to fail. This is a known bug and the situation should change once the relevant [issue](https://github.com/EESSI/dev.eessi.io-example/issues/29) is fixed.
 
