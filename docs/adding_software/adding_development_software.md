@@ -32,9 +32,11 @@ dev.eessi.io-example
 │   │       └── gh.py*
 │   └── gh-devel-software-commit.eb
 ├── easystacks
-│   └── dev.eessi.io
-│       └── 2023.06
-│           └── gh-eb-5.0.0-dev.yml
+│   └── software.eessi.io
+│       ├── 2023.06
+│       │   └── gh-eb-5.1.0-dev.yml
+│       └── 2025.06
+│           └── gh-eb-5.1.0-dev.yml
 
 ```
 
@@ -43,6 +45,10 @@ dev.eessi.io-example
     These files are [patch](https://docs.easybuild.io/patch-files/?h=patch) files (ending in `.patch`) or custom [easyblocks](https://docs.easybuild.io/terminology/#easyblocks) (ending in`.py`).
     They are not strictly necessary if your development build can use already existing 
     easyblocks available through EasyBuild, and / or if nothing needs to be patched
+
+!!! The `software.eessi.io` subdirectory is temporary
+
+    The name of this subdirectory should be `dev.eessi.io`, yet renaming it will cause builds to fail. This is a known bug and the situation should change once the relevant [issue](https://github.com/EESSI/dev.eessi.io-example/issues/29) is fixed.
 
 
 ### Quick steps to build for `dev.eessi.io`
