@@ -4,12 +4,23 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: Troubleshooting and Debugging EESSI software builds
+
+### Monday 10 November 2025
+
+**Outline:** Debugging EESSI software builds
+([Slides (PDF)](EESSI-happyhour-2025-013-Debugging-EESSI-builds.pdf), [Recording (YouTube)](https://youtu.be/QbsXFNuuU3Y))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QbsXFNuuU3Y?si=Vdj3SELYzyDuK820" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: Building on top of EESSI
 
 ### Monday 03 November 2025
 
 **Outline:** Contributing software packages to EESSI
-([Slides (PDF)](EESSI-happyhour-2025-012-Contributing-software-to-EESSI.pdf), [Recording (YouTube)](https://))
+([Slides (PDF)](EESSI-happyhour-2025-012-Contributing-software-to-EESSI.pdf), [Recording (YouTube)](https://www.youtube.com/watch?v=BYgQlI5mmzs))
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BYgQlI5mmzs?si=HrQMZa0ckcR_EkQF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
