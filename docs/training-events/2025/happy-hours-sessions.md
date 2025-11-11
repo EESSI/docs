@@ -43,7 +43,7 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 - 17 November 2025 - EESSI dashboard
 
-- 24 November 2025 - ReFrame test
+- 24 November 2025 - ReFrame tests
 
 ---
 
