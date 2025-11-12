@@ -31,16 +31,19 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: Debugging EESSI software builds
-### Topic Series: Troubleshooting and Debugging EESSI software builds
+### 💡 **Next Session**: EESSI dashboard
+### Topic Series: EESSI dashboard and ReFrame tests
 🗓️ Schedule
-#### Monday 10 November 2025, 14:00-15:00 CE(S)T
+#### Monday 17 November 2025, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming sessions in the topic series: Troubleshooting and Debugging EESSI software builds
+### Upcoming sessions in the topic series: EESSI dashboard and ReFrame tests
 ###### Outline
-- 10 November 2025 - Debugging EESSI software builds
+
+- 17 November 2025 - EESSI dashboard
+
+- 24 November 2025 - ReFrame tests
 
 ---
 
@@ -50,8 +53,14 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
-*Topic series: Building on top of EESSI*
 
+*Topic series: Troubleshooting and Debugging EESSI software builds*
+
+- 10 November 2025 [Debugging EESSI software builds](https://youtu.be/QbsXFNuuU3Y)
+
+---
+
+*Topic series: Building on top of EESSI*
 
 - 03 November 2025 [Contributing software packages to EESSI](https://www.youtube.com/watch?v=BYgQlI5mmzs)
 
