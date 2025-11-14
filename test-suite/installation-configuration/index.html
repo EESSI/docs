@@ -1722,6 +1722,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enabling-gpu-tests-when-submitting-from-a-cpu-only-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling GPU tests when submitting from a CPU-only node
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5651,6 +5662,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enabling-gpu-tests-when-submitting-from-a-cpu-only-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling GPU tests when submitting from a CPU-only node
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -5689,6 +5711,7 @@
 <li>Python &gt;= 3.7</li>
 <li><a href="https://reframe-hpc.readthedocs.io">ReFrame</a> v4.3.3 (or newer)</li>
 <li><a href="https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html">ReFrame test library (<code>hpctestlib</code>)</a></li>
+<li>(optionally) <a href="https://easybuild.io/">EasyBuild</a></li>
 </ul>
 <details class="note">
 <summary>(If your system Python version is lower than the minimum required version, click here for some tips)</summary>
@@ -5712,6 +5735,7 @@ pyenv local &lt;python version number&gt;
 <li>Set RFM_PURGE_ENVIRONMENT=1 if you use Python from a module. The ReFrame easyconfigs automatically do that for you.</li>
 </ul>
 </details>
+<p>??? note EasyBuild is needed for certain tests (e.g. BLAS) that need to load multiple modules together. EasyBuilds functionality is used in these cases to finding matching-pairs of modules. If EasyBuild is not available, a warning will be printed and the tests requiring this functionality will be skipped.</p>
 <h4 id="installing-reframe">Installing Reframe<a class="headerlink" href="#installing-reframe" title="Permanent link">&para;</a></h4>
 <p>General instructions for installing ReFrame are available in the <a href="https://reframe-hpc.readthedocs.io/en/stable/started.html">ReFrame documentation</a>. To check if ReFrame is available, run the <code>reframe</code> command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reframe<span class="w"> </span>--version
@@ -5799,6 +5823,29 @@ also end up in the location specified by <code>$RFM_PREFIX</code>.</p>
 since our <a href="https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/common_config.py">common logging configuration</a>
 only picks up on the <code>$RFM_PREFIX</code> environment variable to determine the location for the ReFrame log file.</p>
 </div>
+<h4 id="enabling-gpu-tests-when-submitting-from-a-cpu-only-node">Enabling GPU tests when submitting from a CPU-only node<a class="headerlink" href="#enabling-gpu-tests-when-submitting-from-a-cpu-only-node" title="Permanent link">&para;</a></h4>
+<p>By default, the test suite checks the currently available modules to determine which tests to run. This means that if you run the <code>reframe</code> command on a CPU node, but want it to submit GPU tests since you have GPU batch nodes, you'll need to make sure the test suite can 'see' (and load) those modules.</p>
+<p>By default, EESSI makes modules available based on the host architecture. So, if the host on which the ReFrame command runs does not have NVIDIA GPUs, the CUDA-based modules will not be available, and the test suite will not run tests for them:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI/2023.06
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>reframe<span class="w"> </span>-n<span class="w"> </span>LAMMPS_lj.*gpu<span class="w"> </span>-t<span class="w"> </span>1_node<span class="w"> </span>--list
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>...
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="o">[</span>List<span class="w"> </span>of<span class="w"> </span>matched<span class="w"> </span>checks<span class="o">]</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Found<span class="w"> </span><span class="m">0</span><span class="w"> </span>check<span class="o">(</span>s<span class="o">)</span>
+</code></pre></div>
+<p>To make sure the EESSI test suite can see (and load) the GPU modules on the CPU host, we have to set two additional variables before loading the EESSI module: <code>EESSI_ACCELERATOR_TARGET_OVERRIDE</code> and <code>EESSI_OVERRIDE_GPU_CHECK</code>. For example, if you want to run tests on a node with a <code>zen4</code> CPU and <code>H100</code> GPU</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_OVERRIDE_GPU_CHECK</span><span class="o">=</span>True
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_ACCELERATOR_TARGET_OVERRIDE</span><span class="o">=</span>accel/nvidia/cc90
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI/2023.06
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>reframe<span class="w"> </span>-n<span class="w"> </span>LAMMPS_lj.*gpu<span class="w"> </span>-t<span class="w"> </span>1_node<span class="w"> </span>--list
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>...
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="o">[</span>List<span class="w"> </span>of<span class="w"> </span>matched<span class="w"> </span>checks<span class="o">]</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>-<span class="w"> </span>EESSI_LAMMPS_lj<span class="w"> </span>%device_type<span class="o">=</span>gpu<span class="w"> </span>%module_name<span class="o">=</span>LAMMPS/2Aug2023_update2-foss-2023a-kokkos-CUDA-12.1.1<span class="w"> </span>%scale<span class="o">=</span>1_node<span class="w"> </span>/1f2ca7c1
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>Found<span class="w"> </span><span class="m">1</span><span class="w"> </span>check<span class="o">(</span>s<span class="o">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since EESSI in principle exposes exactly the same modules for all supported Nvidia compute capabilities, it should not typically matter which <em>exact</em> compute capability you provide here.</p>
+</div>
 
 
 
@@ -5819,7 +5866,7 @@ only picks up on the <code>$RFM_PREFIX</code> environment variable to determine 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 12, 2025 15:34:14 UTC">August 12, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2025 15:09:13 UTC">November 13, 2025</span>
   </span>
 
     
