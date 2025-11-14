@@ -1,6 +1,6 @@
 ---
 author: [Richard]
-date: 2025-09-10 
+date: 2025-11-14 
 slug: EESSI-on-Cray-Slingshot
 ---
 
@@ -79,7 +79,7 @@ location to be automatically picked up by the software shipped with EESSI. This 
 We plan to provide more comprehensive test results in the future. In this blog post we want to report that the approach works in principle, and that the EESSI stack can pick up and use the custom OpenMPI build and extract
 performance from the host interconnect **without the need to rebuild any software packages**.
 
-The following tests were conducted on Olivia accel parition (Grace nodes with Hopper GPUs), using two-node, two-GPU configuration with one MPI task per node. 
+The following tests were conducted on Olivia accel partition (Grace nodes with Hopper GPUs), using two-node, two-GPU configuration with one MPI task per node. 
 
 We evaluated two OSU Micro-Benchmark builds:
 
