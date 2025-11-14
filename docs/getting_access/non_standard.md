@@ -197,7 +197,7 @@ entriesSrc|1|Number of file system entries processed in the source
 
 ....
 
-# This takes a long time and space depending on how much you want to export
+# This takes a long time, memory and storage space depending on how much you want to export
 ```
 
 Once completed, the contents will be available in /tmp/cvmfs. You can create an squashfs image from it:
