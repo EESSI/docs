@@ -127,7 +127,7 @@ mpirun -np 4 python test.py
 EOF
 
 ```
-You can see the original blog post on how they used this solution in Deucalion [here](https://www.eessi.io/docs/blog/2024/06/28/espresso-portable-test-run-eurohpc/#running-espresso-on-deucalion-via-eessi-cvmfsexec). 
+You can see the original blog post on how this solution was used on the Deucalion EuroHPC system [here](https://www.eessi.io/docs/blog/2024/06/28/espresso-portable-test-run-eurohpc/#running-espresso-on-deucalion-via-eessi-cvmfsexec). 
 
 ## Via `squashfs` +  cvmfs's `shrinkwrap` utility
 
