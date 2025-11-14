@@ -11,6 +11,7 @@ The EESSI test suite requires
 * Python >= 3.7
 * [ReFrame](https://reframe-hpc.readthedocs.io) v4.3.3 (or newer)
 * [ReFrame test library (`hpctestlib`)](https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html)
+* (optionally) [EasyBuild](https://easybuild.io/)
 
 ??? note "(If your system Python version is lower than the minimum required version, click here for some tips)"
 
@@ -24,6 +25,8 @@ The EESSI test suite requires
     * You can install a more recent version of Python on top of the GCC/GCCcore compiler.
     * You can install a ReFrame module with EasyBuild and a [ReFrame easyconfig](https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/r/ReFrame) containing a more recent Python version.
     * Set RFM_PURGE_ENVIRONMENT=1 if you use Python from a module. The ReFrame easyconfigs automatically do that for you.
+
+??? note EasyBuild is needed for certain tests (e.g. BLAS) that need to load multiple modules together. EasyBuilds functionality is used in these cases to finding matching-pairs of modules. If EasyBuild is not available, a warning will be printed and the tests requiring this functionality will be skipped.
 
 #### Installing Reframe
 
@@ -167,3 +170,32 @@ also end up in the location specified by `$RFM_PREFIX`.
     since our [common logging configuration](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/common_config.py)
     only picks up on the `$RFM_PREFIX` environment variable to determine the location for the ReFrame log file.
 
+#### Enabling GPU tests when submitting from a CPU-only node
+
+By default, the test suite checks the currently available modules to determine which tests to run. This means that if you run the `reframe` command on a CPU node, but want it to submit GPU tests since you have GPU batch nodes, you'll need to make sure the test suite can 'see' (and load) those modules.
+
+By default, EESSI makes modules available based on the host architecture. So, if the host on which the ReFrame command runs does not have NVIDIA GPUs, the CUDA-based modules will not be available, and the test suite will not run tests for them:
+
+```bash
+module load EESSI/2023.06
+reframe -n LAMMPS_lj.*gpu -t 1_node --list
+...
+[List of matched checks]
+Found 0 check(s)
+```
+
+To make sure the EESSI test suite can see (and load) the GPU modules on the CPU host, we have to set two additional variables before loading the EESSI module: `EESSI_ACCELERATOR_TARGET_OVERRIDE` and `EESSI_OVERRIDE_GPU_CHECK`. For example, if you want to run tests on a node with a `zen4` CPU and `H100` GPU
+
+```bash
+export EESSI_OVERRIDE_GPU_CHECK=True
+export EESSI_ACCELERATOR_TARGET_OVERRIDE=accel/nvidia/cc90
+module load EESSI/2023.06
+reframe -n LAMMPS_lj.*gpu -t 1_node --list
+...
+[List of matched checks]
+- EESSI_LAMMPS_lj %device_type=gpu %module_name=LAMMPS/2Aug2023_update2-foss-2023a-kokkos-CUDA-12.1.1 %scale=1_node /1f2ca7c1
+Found 1 check(s)
+```
+
+!!! note
+    Since EESSI in principle exposes exactly the same modules for all supported Nvidia compute capabilities, it should not typically matter which _exact_ compute capability you provide here.
