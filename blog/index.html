@@ -5312,6 +5312,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mpi-at-warp-speed-eessi-meets-slingshot-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MPI at Warp Speed: EESSI Meets Slingshot-11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-available-on-eosc-eu-node" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5404,17 +5415,6 @@
     <span class="md-ellipsis">
       
         EuroHPC User Day (22-23 Oct 2024, Amsterdam)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#an-example-ci-workflow-that-leverages-eessi-ci-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        An example CI workflow that leverages EESSI CI tools
       
     </span>
   </a>
@@ -5456,6 +5456,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mpi-at-warp-speed-eessi-meets-slingshot-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MPI at Warp Speed: EESSI Meets Slingshot-11
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-available-on-eosc-eu-node" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5554,17 +5565,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#an-example-ci-workflow-that-leverages-eessi-ci-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        An example CI workflow that leverages EESSI CI tools
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5579,6 +5579,47 @@
       <header class="md-typeset">
         <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-11-14 00:00:00+00:00">November 14, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              7 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="mpi-at-warp-speed-eessi-meets-slingshot-11"><a class="toclink" href="2025/11/14/EESSI-on-Cray-Slingshot/">MPI at Warp Speed: EESSI Meets Slingshot-11</a></h2>
+<p>High-performance computing environments are constantly evolving, and keeping pace with the latest interconnect technologies is crucial for maximising application performance. However, we cannot rebuild all the software in EESSI that depends on improvements to communication libraries. So how do we take advantage of new technological developments?</p>
+<p>Specifically we look at taking benefit of the HPE/Cray Slingshot-11.
+Slingshot-11 promises to offer a significant advancement in HPC networking, offering improved bandwidth, lower latency, and better scalability for exascale computing workloads ... so
+this should be worth the effort!</p>
+<p>In this blog post, we present the requirements for building OpenMPI 5.x with Slingshot-11 support on HPE/Cray systems and its integration with EESSI using the <a href="../site_specific_config/host_injections/">host_injections</a>
+mechanism of EESSI to inject custom-built OpenMPI libraries. This approach enables overriding EESSI’s default MPI library with an ABI-compatible, Slingshot-optimized version which should give us optimal performance.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2025/11/14/EESSI-on-Cray-Slingshot/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -6001,50 +6042,6 @@ and the work we have been doing was clearly being appreciated.</p>
     
       <nav class="md-post__action">
         <a href="2024/10/25/eurohpc_user_day_2024/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/10762799?v=4" alt="Pedro Santos Neves">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-10-11 00:00:00+00:00">October 11, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="an-example-ci-workflow-that-leverages-eessi-ci-tools"><a class="toclink" href="2024/10/11/ci-workflow-for-EESSI/">An example CI workflow that leverages EESSI CI tools</a></h2>
-<p><a href="https://www.eessi.io/docs/using_eessi/eessi_in_ci/">EESSI's CI workflows</a> are available on <a href="https://github.com/marketplace/actions/eessi">GitHub Actions</a> and as a <a href="https://gitlab.com/explore/catalog/eessi/gitlab-eessi">GitLab CI/CD component</a>. Enabling this is as simple as adding EESSI's CI to your workflow of choice, giving you access to the entire EESSI software stack optimized for the relevant CPU architecture(s) in your runner's environment. If you are developing an application on top of the EESSI software stack, for example, this means you don't need to invest heavily in configuring and maintaining a CI setup: EESSI does that for you so you can focus on your code. With the EESSI CI workflows you don't have to worry about figuring out how to optimize build and runtime dependencies as these will be streamed seamlessly to your runner's environment.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2024/10/11/ci-workflow-for-EESSI/">
           Continue reading
         </a>
       </nav>
