@@ -57,4 +57,4 @@ module load Lua/5.4.6-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |Lua/5.4.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |Lua/5.4.6-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Lua/5.4.4-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|Lua/5.4.4-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

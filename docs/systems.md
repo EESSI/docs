@@ -57,6 +57,7 @@ EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with p
 MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/).
 
 * [General documentation](https://www.bsc.es/supportkc/)
+* [EESSI @ MareNostrum 5](https://www.bsc.es/supportkc/docs/MareNostrum5/Package%20Managers/EESSI)
 
 ---
 
@@ -68,6 +69,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 * VSC-5: [General documentation](https://docs.asc.ac.at/systems/vsc5.html) | [EESSI @ VSC-5](https://docs.asc.ac.at/software/eessi.html)
 * MUSICA: [General documentation](https://docs.asc.ac.at/systems/musica.html) | [EESSI @ MUSICA](https://docs.asc.ac.at/software/eessi.html)
+
 MUSICA is currently in a closed test phase, with open testing to follow. It is expected to be operational by the end of 2025.
 
 ### Belgium
@@ -156,10 +158,9 @@ MUSICA is currently in a closed test phase, with open testing to follow. It is e
 
 #### Barcelona Supercomputing Center (BSC)
 
-* thunder
-* arriesgado-fedora37: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes).
 This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
-* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+* bananaf3: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes).
 This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
 
 #### Galicia Supercomputing Center (CESGA)

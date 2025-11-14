@@ -31,19 +31,19 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: Using EasyBuild and controlling settings via `EESSI-extend`
-### Topic Series: Building on top of EESSI
+### 💡 **Next Session**: EESSI dashboard
+### Topic Series: EESSI dashboard and ReFrame tests
 🗓️ Schedule
-#### Monday 13 October 2025, 14:00-15:00 CE(S)T
+#### Monday 17 November 2025, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming sessions in the topic series: Building on top of EESSI
+### Upcoming sessions in the topic series: EESSI dashboard and ReFrame tests
 ###### Outline
-- 13 October 2025 - Using EasyBuild and controlling settings via `EESSI-extend`
-- 20 October 2025 - How we build software in EESSI
-- 27 October 2025 - Building on top of EESSI using `buildenv` modules
-- 03 November 2025 - Contributing software packages to EESSI
+
+- 17 November 2025 - EESSI dashboard
+
+- 24 November 2025 - ReFrame tests
 
 ---
 
@@ -53,11 +53,30 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
+
+*Topic series: Troubleshooting and Debugging EESSI software builds*
+
+- 10 November 2025 [Debugging EESSI software builds](https://youtu.be/QbsXFNuuU3Y)
+
+---
+
+*Topic series: Building on top of EESSI*
+
+- 03 November 2025 [Contributing software packages to EESSI](https://www.youtube.com/watch?v=BYgQlI5mmzs)
+
+- 27 October 2025 [Building on top of EESSI using `buildenv` modules](https://youtu.be/0uwUlM1xqNk)
+
+- 20 October 2025 [How we build software in EESSI](https://www.youtube.com/watch?v=KkD6vtPqqMs)
+
+- 13 October 2025 [Using EasyBuild and controlling settings via `EESSI-extend`](https://www.youtube.com/watch?v=X54J-kbjwDQ)
+
 ---
 
 *Topic series: Environment variables to tweak EESSI Initialization*
 
-- 06 October 2025 [Controlling EESSI Startup Behavior]()
+- 06 October 2025 [Controlling EESSI Startup Behavior](https://www.youtube.com/watch?v=XYpgX0QCczg)
+
+---
 
 *Topic series: A peek inside EESSI layers*
 
