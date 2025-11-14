@@ -79,93 +79,26 @@ location to be automatically picked up by the software shipped with EESSI. This 
 We plan to provide more comprehensive test results in the future. In this blog post we want to report that the approach works in principle, and that the EESSI stack can pick up and use the custom OpenMPI build and extract
 performance from the host interconnect **without the need to rebuild any software packages**.
 
-**1- Test using OSU-Micro-Benchmarks from EESSI on 2-nodes (x86_64 AMD-CPUs)**:
-```
-Environment set up to use EESSI (2023.06), have fun!
+The following tests were conducted on Olivia accel parition (Grace nodes with Hopper GPUs), using two-node, two-GPU configuration with one MPI task per node. 
 
-hostname:
-x1001c6s2b0n1
-x1001c6s3b0n0
+We evaluated two OSU Micro-Benchmark builds:
 
-CPU info:
-Vendor ID:                            AuthenticAMD
-Model name:                           AMD EPYC 9745 128-Core Processor
-Virtualization:                       AMD-V
+1- OSU-Micro-Benchmarks/7.5-gompi-2023b-CUDA-12.4.0 from EESSI
 
-Currently Loaded Modules:
-  1) GCCcore/12.3.0
-  2) GCC/12.3.0
-  3) numactl/2.0.16-GCCcore-12.3.0
-  4) libxml2/2.11.4-GCCcore-12.3.0
-  5) libpciaccess/0.17-GCCcore-12.3.0
-  6) hwloc/2.9.1-GCCcore-12.3.0
-  7) OpenSSL/1.1
-  8) libevent/2.1.12-GCCcore-12.3.0
-  9) UCX/1.14.1-GCCcore-12.3.0
- 10) libfabric/1.18.0-GCCcore-12.3.0
- 11) PMIx/4.2.4-GCCcore-12.3.0
- 12) UCC/1.2.0-GCCcore-12.3.0
- 13) OpenMPI/4.1.5-GCC-12.3.0
- 14) gompi/2023a
- 15) OSU-Micro-Benchmarks/7.1-1-gompi-2023a
+2- OSU-Micro-Benchmarks/7.5 compiled with PrgEnv-cray.
 
-# OSU MPI Bi-Directional Bandwidth Test v7.1
-# Size      Bandwidth (MB/s)
-# Datatype: MPI_CHAR.
-1                       2.87
-2                       5.77
-4                      11.55
-8                      23.18
-16                     46.27
-32                     92.64
-64                    185.21
-128                   369.03
-256                   743.08
-512                  1487.21
-1024                 2975.75
-2048                 5928.14
-4096                11809.66
-8192                23097.44
-16384               31009.54
-32768               36493.20
-65536               40164.63
-131072              43150.62
-262144              45075.57
-524288              45918.07
-1048576             46313.37
-2097152             46507.25
-4194304             46609.10
+The following commands were used to run the benchmarks:
 
+`mpirun -np 2 osu_bibw D D`
 
-# OSU MPI Latency Test v7.1
-# Size          Latency (us)
-# Datatype: MPI_CHAR.
-1                       1.66
-2                       1.65
-4                       1.65
-8                       1.65
-16                      1.65
-32                      1.65
-64                      1.65
-128                     2.13
-256                     2.20
-512                     2.23
-1024                    2.31
-2048                    2.46
-4096                    2.61
-8192                    2.87
-16384                   3.24
-32768                   5.24
-65536                   6.60
-131072                  9.29
-262144                 14.69
-524288                 26.21
-1048576                47.32
-2097152                90.79
-4194304               182.30
-```
+`mpirun -np 2 osu_latency D D`
 
-**2- Test using OSU-Micro-Benchmarks/7.5-gompi-2023b-CUDA-12.4.0 from EESSI on 2-nodes/2-GPUs (Grace/Hopper GPUs)**:
+![OSU CUDA Bandwidth](osu_cuda_bibandwidth.png)  ![OSU CUDA Latency](osu_cuda_latency.png) 
+
+<details>
+<summary>See details</summary>
+
+<b>Test using OSU-Micro-Benchmarks/7.5-gompi-2023b-CUDA-12.4.0 from EESSI</b>:
 ```
 Environment set up to use EESSI (2023.06), have fun!
 
@@ -221,12 +154,11 @@ Currently Loaded Modules:
 32768               30728.30
 65536               37637.46
 131072              41808.92
-262144              44316.19
-524288              43693.89
-1048576             43759.66
-2097152             43593.38
-4194304             43436.60
-
+262144              44832.61
+524288              45602.20
+1048576             45873.58
+2097152             45995.32
+4194304             46061.86
 
 # OSU MPI-CUDA Latency Test v7.5
 # Datatype: MPI_CHAR.
@@ -256,7 +188,7 @@ Currently Loaded Modules:
 4194304               180.14
 ```
 
-**3- Test using OSU-Micro-Benchmarks/7.5 with PrgEnv-cray on 2-nodes/2-GPUs (Grace/Hopper GPUs)**:
+<b>Test using OSU-Micro-Benchmarks/7.5 with PrgEnv-cray</b>:
 ```
 
 hostname:
@@ -328,8 +260,7 @@ Currently Loaded Modules:
 2097152                94.06
 4194304               180.44
 ```
-
-![OSU CUDA Bandwidth](osu_cuda_bandwidth.png)  ![OSU CUDA Latency](osu_cuda_latency.png) 
+</details>
 
 ## Conclusion
 The approach demonstrates EESSI's flexibility in accommodating specialized hardware requirements while preserving the benefits of a standardized software stack! There is plenty of more testing to do, but the signs at this stage are very good!
