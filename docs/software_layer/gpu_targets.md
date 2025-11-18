@@ -37,6 +37,12 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td>x</td>
         </tr>
         <tr>
+            <td colspan=2>a64fx</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
             <td colspan=2>neoverse_n1</td>
             <td>x</td>
             <td>x</td>
@@ -117,6 +123,9 @@ The combinations marked with an '`N`' are built natively; others are built on a 
         </tr>
     </tbody>
 </table>
+
+!!! info "No NIVIDIA GPU support for A64FX"
+    Note that there is no NVIDIA GPU support for A64FX at the moment, as we are not aware of any systems with A64FX CPUs and NVIDIA GPUs.
 
 ## AMD
 
