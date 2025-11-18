@@ -57,7 +57,7 @@ module load GROMACS/2024.4-foss-2023b
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GROMACS/2024.4-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |GROMACS/2024.3-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|GROMACS/2024.1-foss-2023b|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|GROMACS/2024.1-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### GROMACS/2024.4-foss-2023b
