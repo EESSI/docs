@@ -34,14 +34,12 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 ### 💡 **Next Session**: EESSI dashboard
 ### Topic Series: EESSI dashboard and ReFrame tests
 🗓️ Schedule
-#### Monday 17 November 2025, 14:00-15:00 CE(S)T
+#### Monday 24 November 2025, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming sessions in the topic series: EESSI dashboard and ReFrame tests
 ###### Outline
-
-- 17 November 2025 - EESSI dashboard
 
 - 24 November 2025 - ReFrame tests
 
@@ -53,6 +51,11 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
+*Topic series: EESSI dashboard and ReFrame tests*
+
+- 17 November 2025 [EESSI dashboard](https://youtu.be/f87ylio6k_0)
+
+---
 
 *Topic series: Troubleshooting and Debugging EESSI software builds*
 
