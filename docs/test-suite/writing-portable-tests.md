@@ -331,7 +331,7 @@ As mentioned in the [Test requirements](#test-requirements), there should be at 
 is_ci_test = True
 ```
 
-Suppose that our test has 2 variants, of which only `'variant1'` should be marked `CI`. In that case, we can define `test_variant` as a parameter:
+Suppose that our test has 2 variants, of which only `'variant1'` should be marked `CI`. In that case, we can define a ReFrame parameter, e.g. `test_variant`:
 ```python
     test_variant = parameter(['variant1', 'variant2'])
 ```
