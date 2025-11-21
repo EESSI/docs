@@ -230,6 +230,19 @@ To amend the Charter, Governance or [Project Policies](policies.md#project-polic
 
 The Steering Committee will meet as needed, but at least once per quarter. The Chair is responsible for organizing the meeting. Any Member can request the Chair to organize a meeting. Meetings are announced at least 2 weeks in advance, unless _all_ Members have agreed that a meeting on shorter notice is required.
 
+#### 6.4.1 Meeting minutes
+
+For every meeting of the Steering Committee, the Chair ensures that meeting minutes are taken and stored in a private location.
+The minutes will be made publicly available no later than four weeks after each meeting, and will provide a clear overview of discussed items, decisions made, and action points.
+Prior to publication, information that is considered to be confidential, sensitive, or for another reason not appropriate for public disclosure will be removed or redacted.
+
+#### 6.4.2 Advisors
+
+The Steering Committee may appoint advisors who are invited to the Steering Committee meeting or specific parts of the meeting.
+Advisors bring in specific expertise that supports the discussions and the decision-making done by the Steering Committee.
+Advisors are not considered to be members of the Steering Committee and do therefore not hold any voting rights.
+When requested by the Chair, advisors shall leave the Steering Committee meeting.
+
 ## 7. Code of Conduct
 The EESSI Code of Conduct can be found [here](code_of_conduct.md).
 
