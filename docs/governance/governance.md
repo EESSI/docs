@@ -239,6 +239,10 @@ Prior to publication, information that is considered to be confidential, sensiti
 #### 6.4.2 Advisors
 
 The Steering Committee may appoint advisors who are invited to the Steering Committee meeting or specific parts of the meeting.
+Any Steering Committee member can propose an advisor to the Chair, and if the Chair agrees the advisor is invited to join the meeting.
+If the Chair wants to invite an advisor, they need to get confirmation from at least one Steering Committee member that this makes sense.
+Any Steering Committee member can raise an objection to someone joining as advisor as soon as it is known who will be joining as advisor(s).
+
 Advisors bring in specific expertise that supports the discussions and the decision-making done by the Steering Committee.
 Advisors are not considered to be members of the Steering Committee and do therefore not hold any voting rights.
 When requested by the Chair, advisors shall leave the Steering Committee meeting.
