@@ -1,1 +1,5 @@
 site/
+venv*
+scripts/available_software/__pycache__
+scripts/available_software/tests/__pycache__
+test-suite

@@ -41,7 +41,12 @@ git checkout LAMMPS_23Jun2022
 ```
 
 ### Starting a shell in the EESSI container
-Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer` repository. Use `-r` to specify which EESSI repository (e.g. `software.eessi.io`, `dev.eessi.io`, ...) should be mounted in the container
+Clone the EESSI/software-layer-scripts repository and change into the software-layer-scripts directory by running these commands:
+```
+git clone https://github.com/EESSI/software-layer-scripts.git
+cd software-layer-scripts
+```
+Simply run the EESSI container (`eessi_container.sh`), which should be in the root of the `software-layer-scripts` repository. Use `-r` to specify which EESSI repository (e.g. `software.eessi.io`, `dev.eessi.io`, ...) should be mounted in the container
 ```
 ./eessi_container.sh --access rw -r software.eessi.io
 ```
@@ -227,7 +232,7 @@ eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
 After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
 
 ## Building an individual package
-First, prepare the environment by following the [Starting the EESSI software environment][#starting-the-eessi-software-environment] and [Configure EasyBuild](#configure-easybuild) above.
+First, prepare the environment by following the [Starting the EESSI software environment](#starting-the-eessi-software-environment) and [Configure EasyBuild](#configure-easybuild) above.
 
 In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. To mimic the build behaviour, we'll also have to (re)use any options that are listed in the easystack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
 ```

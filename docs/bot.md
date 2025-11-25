@@ -66,13 +66,18 @@ should be issued by posting a comment in the pull request (see also [here](addin
 The most basic build instruction that can be sent to the bot is:
 
 ```
-bot: build
+bot: build for:arch=<for_arch>
 ```
 
-!!! warning
-    Only use `bot: build` if you are confident that it is OK to do so.
+Where the `for_arch` could be e.g. `x64_64/amd/zen4`. This will trigger the bot to allocate a node of that type _and_
+build in the `/cvmfs/software.eessi.io/versions/<eessi-version>/software/linux/x86_64/amd/zen4` prefix.
 
-    Most likely, you want to supply one or more filters to avoid that the bot builds for all its configurations.
+!!! note
+    The `for:` (and `on:`, see below) argument to the bot were introduced in bot version 0.9.0. They replace the `architecture=... accelerator=...` syntax used in bot versions <= v0.8.0.
+
+!!! warning
+    Most likely, you want to supply one or more filters to avoid that all bots are triggered to build for all
+    configurations that match the above command.
 
 ### Filters
 
@@ -81,13 +86,14 @@ should be executed, based on:
 
 - `instance`: the `name` of the bot instance, for example `instance:aws` for the bot instance running in AWS;
 - `repository`: the target repository, for example `eessi-2023.06-software` which corresponds to the 2023.06 version of the EESSI software layer;
-- `architecture`: the name of the [CPU microarchitecture](software_layer/cpu_targets.md), for example `x86_64/amd/zen2`;
+- `on:architecture=<on_arch>,accelerator=<on_accelerator>`: the name of the [CPU microarchitecture](software_layer/cpu_targets.md) and GPU accelerator you want to build _on_, for example `on:architecture=x86_64/amd/zen4,accelerator=nvidia/cc90`;
+- `for:architecture=<for_arch>,accelerator=<for_accelerator>`: the name of the [CPU microarchitecture](software_layer/cpu_targets.md) and GPU accelerator you want to build _for_, for example `for:architecture=x86_64/amd/zen4,accelerator=nvidia/cc90`;
 
 !!! note
-    Use `:` as separator to specify a value for a particular filter, do not add spaces after the `:`.
+    Use `:` as separator to specify a value for a particular argument, do not add spaces after the `:`.
 
     The bot recognizes shorthands for the supported filters, so you can use `inst:...` instead of `instance:...`,
-    `repo:...` instead of `repository:...`, and `arch:...` instead of `architecture:...`.
+    `repo:...` instead of `repository:...`, and `arch=...` instead of `architecture=...`, and `accel=` instead of `accelerator`.
 
 #### Combining filters
 
@@ -97,7 +103,7 @@ Separate filters with a space, order of filters does not matter.
 For example:
 
 ```
-bot: build repo:eessi-hpc.org-2023.06-software arch:x86_64/amd/zen2
+bot: build repo:eessi.io-2023.06-software for:arch=x86_64/amd/zen2
 ```
 
 #### Multiple build instructions
@@ -108,17 +114,43 @@ repositories, and CPU targets. Specify one build instruction per line.
 For example:
 
 ```
-bot: build repo:eessi-hpc.org-2023.06-software arch:x86_64/amd/zen3 inst:aws
-bot: build repo:eessi-hpc.org-2023.06-software arch:aarch64/generic inst:azure
+bot: build repo:eessi.io-2023.06-software for:arch=x86_64/amd/zen3 inst:aws
+bot: build repo:eessi.io-2023.06-software for:arch=x86_64/amd/zen4 inst:azure
 ```
 
-!!! note
-    The bot applies the filters with partial matching, which you can use to combine multiple build
-    instructions into a single one.
+#### Native builds
 
-    For example, if you only want to build for all `aarch64` CPU targets, you can use `arch:aarch64` as filter.
+If you want to allocate the same node type that you want to build for, you can omit the `on:` argument.
+For example: `bot:build for:arch=x86_64/amd/zen4` is fully equivalent to `bot:build on:arch=x86_64/amd/zen4 for:arch=x86_64/amd/zen4`.
 
-    The same applies to the `instance` and `repository` filters.
+#### Cross-compiling
+
+The reason for the separate `on:` and `for:` arguments to exist is to allow cross-compilation, and to be specific about
+which architecture to allocate when doing so. The typical use case is to build GPU software on a CPU-only node.
+
+For example: `bot:build on:arch=x86_64/amd/zen2 for:arch=x86_64/amd/zen2,accel=nvidia/cc80` will instruct the bot to
+build on a `zen2` CPU-only node, for a combination of a `zen2` CPU with a GPU with CUDA Compute Capability 8.0.
+
+!!! warning
+    Cross-compilation for different CPU targets can _not_ be done with the current setup. This is not a limitation of
+    the bot, but of the build scripts in the `software-layer-scripts` repository. The only thing the bot does is
+    prepare a job directory in which the configuration passed through `for:` is stored in a `job.cfg` file. What is
+    _done_ with that information is up to the build scripts from `software-layer-scripts`. While these currently
+    set the CUDA Compute Capability configuration item for EasyBuild based on the accelerator target defined in the
+    `job.cfg`, the architecture target is _only_ used to determine the installation path. It is _not_ used to set
+    EasyBuild's `optarch` configuration, which will still default to native optimization (i.e. for the host).
+
+#### Partial filter matching
+The bot applies the filters with partial matching, but _not_ for the `for:` argument. I.e. you can do
+`bot:build on:arch=zen4 for:arch=x84_64/amd/zen4,accel=nvidia/cc80`, but not
+`bot:build on:arch=zen4 for:arch=zen4,accel=nvidia/cc80`
+The reason is that for the `on:` argument, the bot can compare against the configured node types to find a match
+(while for the `for:` argument, there is no such reference to match against).
+
+#### Accelerator filter matching
+If the bot config declares that a node type has a certain accelerator, that node type will _only_ be allocated
+if a corresponding `accel=<on_accel>` argument is passed. This is to avoid that `on:arch=x86_64/amd/zen4` would 
+cause builds to be triggered on a `zen4`+GPU node, while the same system also has a CPU-only `zen4` node type.
 
 ### Behind-the-scenes
 
@@ -154,15 +186,11 @@ which was created by the `bot/check-result.sh` script.
 
 ## Testing { #testing }
 
-!!! warning
-    The test phase is not implemented yet in the bot.
-
-    We intend to use the [EESSI test suite](https://github.com/EESSI/test-suite)
-    in different OS configurations to verify that the software that was built works as expected.
+The bot also runs tests in the [EESSI test suite](test-suite/index.md) if these match the software being installed. These tests are run after the build step by the bot through the `bot/test.sh` script. The mapping of which tests will run given the built software is defined in `tests/eessi_test_mapping/software_to_tests.yml`. Lastly, the job manager reports a summary of the test results created by the `bot/check-test.sh` script.
 
 ## Deploying { #deploying }
 
-To deploy the artefacts that were obtained in the build phase, you should add the `bot: deploy` label
+To deploy the artefacts that were obtained in the build phase, you should add the `bot:deploy` label
 to the pull request.
 
 This will trigger the event handler to upload the artefacts for ingestion into the EESSI repository.
@@ -174,7 +202,10 @@ The current setup for the [software-layer repository](https://github.com/EESSI/s
 * The bot deploys the artefacts (tarballs) to an S3 bucket in AWS, along with a metadata file, using the
   [`eessi-upload-to-staging`](https://github.com/EESSI/eessi-bot-software-layer/blob/main/scripts/eessi-upload-to-staging) script;
 * A cron job that runs every couple of minutes on the CernVM-FS Stratum-0 server opens a pull request to
-  the (private) [EESSI/staging](https://github.com/EESSI/staging) repository, to move the metadata file for
-  each uploaded tarball from the `staged` to the `approved` directory;
-* Once that pull request gets merged, the target is automatically ingested into the EESSI repository by a cron job
-  on the Stratum-0 server, and the metadata file is moved from `approved` to `ingested` in the `EESSI/staging` repository;
+  the (private) [EESSI/staging_bundles](https://github.com/EESSI/staging_bundles) repository, to approve the uploaded tarballs
+  of the corresponding software layer PR for ingestion;
+* Once that pull request gets merged, the tarballs are automatically ingested into the EESSI repository by a cron job
+  on the Stratum-0 server.
+
+If the staging PR contains a tarball that should not be ingested, e.g. in case of duplicate tarballs for a single CPU target,
+one can edit the `TaskState` file for the tarball that should be skipped, and change `APPROVED` to `REJECTED`.
