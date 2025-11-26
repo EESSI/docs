@@ -160,7 +160,7 @@ You will need to create the files `uid.map` and `gid.map` with the respective va
     $ cat gid.map
     * 1001
 ```
-In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. Contents are:
+In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. For example:
 
 ```bash
 /versions/2023.06/compat/linux/x86_64/*
