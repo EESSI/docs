@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: EESSI dashboard and ReFrame tests
 
+### Monday 24 November 2025
+
+**Outline:** EESSI ReFrame tests
+([Slides (PDF)](EESSI-happyhour-2025-015-EESSI-ReFrame-tests.pdf), [Recording (YouTube)](https://youtu.be/g9_In2AmhhY))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9_In2AmhhY?si=GEmQP47MGCcBGdr3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 17 November 2025
 
 **Outline:** EESSI dashboard
