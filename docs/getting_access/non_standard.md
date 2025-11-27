@@ -133,6 +133,8 @@ You can see the original blog post on how this solution was used on the Deucalio
 
 CernVM-FS provides the [Shrinkwrap utility](https://cvmfs.readthedocs.io/en/stable/cpt-shrinkwrap.html), allowing users to create a portable snapshot of a CVMFS repository. This can be exported and distributed without the need of a CVMFS client or network access. A big advantage of `Shrinkwrap` over e.g. simply `rsync`-ing the repository to a local directory `/cvmfs/software.eessi.io` is that `Shrinkwrap` preserves the deduplication that CernVM-FS offers.
 
+Please note that this utility requires a system that already does have access EESSI, and once exported, you can use that export elsewhere you might need it. If you have access to a system with EESSI installed but no sudo rights, it's perfectly fine as the export can be done in user space. If you don't have access to a system with EESSI, you could do it on your own PC where you can install it by yourself or do it inside the container, but be careful because it requires a huge amount of memory and a long time to create the export. 
+
 To create an export of EESSI in user space, you will first need to create the config file `software.eessi.io.config`:
 
 ```bash
