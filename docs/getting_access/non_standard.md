@@ -261,7 +261,7 @@ entriesSrc|1|Number of file system entries processed in the source
 # This takes a long time, memory and storage space depending on how much you want to export
 ```
 
-If you have done the compat layer and software specs separetly, you will also need to make the export of the compat layer apart: 
+If you have done the compat layer and software specs separately, you will also need to make the export of the compat layer apart: 
 
 ```bash
 cvmfs_shrinkwrap -r software.eessi.io -f software.eessi.io.config -t software.eessi.io_compat.spec --dest-base /tmp/compat -j 4
@@ -271,7 +271,7 @@ Once completed, the contents will be available in /tmp/cvmfs. You can create an 
 
 ```bash
 mksquashfs /tmp/cvmfs software.eessi.io.sqsh
-# And if you squashed the compat layer separetly: 
+# And if you squashed the compat layer separately: 
 mksquashfs /tmp/compat software.eessi.io_compat.sqsh
 
 ```
