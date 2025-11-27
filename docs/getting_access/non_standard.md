@@ -160,7 +160,19 @@ You will need to create the files `uid.map` and `gid.map` with the respective va
     $ cat gid.map
     * 1001
 ```
-In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. A basic setup would be:
+In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. Please note that specifying the compatibility layer is a must to ensure a proper functioning of the export as it initializes the environment. The most basic setup would be:
+
+```bash
+/versions/2023.06/compat/linux/x86_64/*
+/versions/2023.06/init/*
+/versions/2023.06/scripts/*
+# Exclude the Gentoo ebuild repo and cache files
+!/versions/2023.06/compat/linux/x86_64/var/db/repos/gentoo
+!/versions/2023.06/compat/linux/x86_64/var/cache
+
+``` 
+From here, you can tune this file to your needs, you can change the release version, the architecture and/or micro-architectures, or even if you just need one particular software. For example, if you wanted to have all the software for Intel's AVX512, you would need to export:  
+
 
 ```bash
 /versions/2023.06/compat/linux/x86_64/*
@@ -174,7 +186,55 @@ In addition, you need to create a spec file `software.eessi.io.spec` with the fi
 !/versions/2023.06/compat/linux/x86_64/var/cache
 
 ```
-[WIP] Please note that specifying the compatibility layer is a must to ensure a proper functioning ? of the export, as it initializes the environment. 
+
+If instead you wanted the whole tree for a handful of another micro-architecture: 
+
+```bash
+/versions/2023.06/compat/linux/x86_64/*
+/versions/2023.06/init/*
+/versions/2023.06/scripts/*
+/versions/2023.06/software/linux/aarch64/neoverse_n1/*
+/versions/2023.06/software/linux/aarch64/a64fx/*
+/versions/2023.06/software/linux/aarch64/nvidia/*
+# Exclude the Gentoo ebuild repo and cache files
+!/versions/2023.06/compat/linux/x86_64/var/db/repos/gentoo
+!/versions/2023.06/compat/linux/x86_64/var/cache
+
+```
+But be careful as exporting the whole tree takes huge amounts of memory. 
+
+If you want a cleaner approach, you can store the compat layer in a separate file called `software.eessi.io_compat.spec` with the minimal contents stated before. And in the  `software.eessi.io.spec ` only the software files you are interested in. Per example, if you were only interested in GROMACS, you could use the environment inside an existing EESSI installation to generate the spec file from the loaded modules: 
+
+``` bash
+# Init EESSI and load the target software
+source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
+module load GROMACS
+
+# Create the spec file for software
+ls /cvmfs/software.eessi.io/versions/$EESSI_VERSION/software/linux/$EESSI_SOFTWARE_SUBDIR/modules -d | sed s#/cvmfs/software.eessi.io##g > software.eessi.io.spec
+ls /cvmfs/software.eessi.io/versions/$EESSI_VERSION/software/linux/$EESSI_SOFTWARE_SUBDIR/.lmod -d | sed s#/cvmfs/software.eessi.io##g >> software.eessi.io.spec
+env | grep EBROOT | sed s/=/\ /g | awk '{print $2}' | sed s#/cvmfs/software.eessi.io##g | xargs -i echo "{}/*" >> software.eessi.io.spec
+``
+
+The `software.eessi.io.spec` file will look this way: 
+
+```bash 
+/versions/2023.06/software/linux/x86_64/intel/haswell/modules
+/versions/2023.06/software/linux/x86_64/intel/haswell/.lmod
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/Python-bundle-PyPI/2023.10-GCCcore-13.2.0/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/pybind11/2.11.1-GCCcore-13.2.0/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/gfbf/2023b/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/PMIx/4.2.6-GCCcore-13.2.0/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/OpenSSL/1.1/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/foss/2023b/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/OpenMPI/4.1.6-GCC-13.2.0/*
+[...]
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/GROMACS/2024.4-foss-2023b/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/gompi/2023b/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/GCCcore/13.2.0/*
+/versions/2023.06/software/linux/x86_64/intel/haswell/software/SQLite/3.43.1-GCCcore-13.2.0/*
+
+```
 
 Then, execute `cvmfs_shrinkwrap`to create the export:
 
@@ -201,10 +261,18 @@ entriesSrc|1|Number of file system entries processed in the source
 # This takes a long time, memory and storage space depending on how much you want to export
 ```
 
+If you have done the compat layer and software specs separetly, you will also need to make the export of the compat layer apart: 
+
+```bash
+cvmfs_shrinkwrap -r software.eessi.io -f software.eessi.io.config -t software.eessi.io_compat.spec --dest-base /tmp/compat -j 4
+```
+
 Once completed, the contents will be available in /tmp/cvmfs. You can create an squashfs image from it:
 
 ```bash
-    mksquashfs /tmp/cvmfs software.eessi.io.sqsh
+mksquashfs /tmp/cvmfs software.eessi.io.sqsh
+# And if you squashed the compat layer separetly: 
+mksquashfs /tmp/compat software.eessi.io_compat.sqsh
 
 ```
 Note how `mksquashfs` compresses by default all generated images using `gzip`. If you want a faster approach at compression, you can use the `-comp` option and specify your preferred option among the available ones (you can check them with the `--help` argument). We recommend `zstd` because it's multithreaded and typically achieves better compression:
@@ -216,7 +284,7 @@ mksquashfs /tmp/cvmfs software.eessi.io.sqsh -comp zstd
 This squashfs image can be mounted in any container:
 
 ```bash
-    apptainer shell -B software.eessi.io.sqsh:/cvmfs:image-src=/ docker://ubuntu
+apptainer shell -B software.eessi.io.sqsh:/cvmfs:image-src=/ docker://ubuntu
 
 ```
 
