@@ -214,7 +214,7 @@ module load GROMACS
 ls /cvmfs/software.eessi.io/versions/$EESSI_VERSION/software/linux/$EESSI_SOFTWARE_SUBDIR/modules -d | sed s#/cvmfs/software.eessi.io##g > software.eessi.io.spec
 ls /cvmfs/software.eessi.io/versions/$EESSI_VERSION/software/linux/$EESSI_SOFTWARE_SUBDIR/.lmod -d | sed s#/cvmfs/software.eessi.io##g >> software.eessi.io.spec
 env | grep EBROOT | sed s/=/\ /g | awk '{print $2}' | sed s#/cvmfs/software.eessi.io##g | xargs -i echo "{}/*" >> software.eessi.io.spec
-``
+``` 
 
 The `software.eessi.io.spec` file will look this way: 
 
