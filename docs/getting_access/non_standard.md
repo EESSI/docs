@@ -160,7 +160,7 @@ You will need to create the files `uid.map` and `gid.map` with the respective va
     $ cat gid.map
     * 1001
 ```
-In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. For example:
+In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. A basic setup would be:
 
 ```bash
 /versions/2023.06/compat/linux/x86_64/*
@@ -174,6 +174,7 @@ In addition, you need to create a spec file `software.eessi.io.spec` with the fi
 !/versions/2023.06/compat/linux/x86_64/var/cache
 
 ```
+[WIP] Please note that specifying the compatibility layer is a must to ensure a proper functioning ? of the export, as it initializes the environment. 
 
 Then, execute `cvmfs_shrinkwrap`to create the export:
 
@@ -205,6 +206,11 @@ Once completed, the contents will be available in /tmp/cvmfs. You can create an 
 ```bash
     mksquashfs /tmp/cvmfs software.eessi.io.sqsh
 
+```
+Note how `mksquashfs` compresses by default all generated images using `gzip`. If you want a faster approach at compression, you can use the `-comp` option and specify your preferred option among the available ones (you can check them with the `--help` argument). We recommend `zstd` because it's multithreaded and typically achieves better compression:
+
+```
+mksquashfs /tmp/cvmfs software.eessi.io.sqsh -comp zstd  
 ```
 
 This squashfs image can be mounted in any container:
