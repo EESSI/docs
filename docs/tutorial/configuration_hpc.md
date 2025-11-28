@@ -100,7 +100,10 @@ mount -o loop "$CACHE_FILE" "$CACHE_MOUNT"
 chown -R cvmfs:cvmfs "$CACHE_MOUNT"
 ```
 
-For production, make sure that the filesystem is mounted automatically. This might require the following dependencies: 1. Mount shared filesystem, 2. mount loop device, 3. Start CVMFS.
+For production, make sure that the filesystem is mounted automatically. This might require the following sequence:
+  1. Mount shared filesystem,
+  2. Mount loop device,
+  3. Start CVMFS.
 
 The CVMFS configuration could for example contain:
 
