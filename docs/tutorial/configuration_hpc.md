@@ -66,8 +66,58 @@ within the loopback filesystems, and hence not overloading the shared filesystem
 The loopback filesystem files can be created using `dd` or `mkfs`. They should be formatted as an `ext3`, `ext4`,
 or `xfs` file system, and should be 15% larger than the cache size configured on the nodes (with `CVMFS_QUOTA_LIMIT`).
 
+For example if the shared filesystem is mounted on `/shared` and the desired cache size is 20GB the loopback filesystem file for each worker node could be created as follows. This creates a sparse file of 23 GB. Actual disk usage grows as the cache fills.
+
+```{ .bash .copy }
+NODE_NAME=$(hostname)  # e.g., node01
+SHARED_DIR="/shared/cvmfs_cache"
+CACHE_FILE="$SHARED_DIR/cvmfs_cache_${NODE_NAME}.img"
+mkdir -p "$SHARED_DIR"
+
+# Create a 23G sparse file (20 GB × 1.15)
+dd if=/dev/zero of="$CACHE_FILE" bs=1M count=0 seek=23000
+
+# Format as ext4
+mkfs.ext4 "$CACHE_FILE"
+
+# Disable reserved blocks
+tune2fs -m 0 "$CACHE_FILE"
+```
+
 On the worker nodes the loopback filesystem can be mounted from the shared file system, and they should be made
 available at the location specified in the `CVMFS_CACHE_BASE` configuration setting (or `/var/lib/cvmfs`, by default).
+
+If you want to mount the loopback filesystem manually, this could be done for example with:
+```{ .bash .copy }
+CACHE_FILE="/shared/cvmfs_cache/cvmfs_cache_$(hostname).img"
+CACHE_MOUNT="/var/lib/cvmfs"
+
+# Create mount point if not exists
+mkdir -p "$CACHE_MOUNT"
+
+# Mount the loop device
+mount -o loop "$CACHE_FILE" "$CACHE_MOUNT"
+chown -R cvmfs:cvmfs "$CACHE_MOUNT"
+```
+
+For production, make sure that the filesystem is mounted automatically. This might require the following sequence:
+  1. Mount shared filesystem,
+  2. Mount loop device,
+  3. Start CVMFS.
+
+The CVMFS configuration could for example contain:
+
+```{ .ini .copy }
+# use max. 20GB for CernVM-FS client cache
+CVMFS_CACHE_BASE=/var/lib/cvmfs
+CVMFS_QUOTA_LIMIT=20000
+```
+
+Do not forget to apply the changes made by running:
+
+```{ .bash .copy }
+sudo cvmfs_config reload
+```
 
 ### Alien cache {: #alien-cache-diskless }
 
