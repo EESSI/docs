@@ -230,6 +230,25 @@ To amend the Charter, Governance or [Project Policies](policies.md#project-polic
 
 The Steering Committee will meet as needed, but at least once per quarter. The Chair is responsible for organizing the meeting. Any Member can request the Chair to organize a meeting. Meetings are announced at least 2 weeks in advance, unless _all_ Members have agreed that a meeting on shorter notice is required.
 
+#### 6.4.1 Meeting notes
+
+For every meeting of the Steering Committee, the Chair ensures that meeting notes are taken and stored in a location that only Steering Committee members can access.
+The notes will be made publicly available at https://eessi.io/docs/governance/steering-committee/meeting-notes,
+and will provide a clear overview of discussed items, decisions made, and action points.
+Prior to publication, information that is considered to be confidential, sensitive, or for another reason not appropriate for public disclosure will be removed or redacted.
+The Steering Committee aims to make the meeting notes available within four weeks after the meeting has taken place.
+
+#### 6.4.2 Advisors
+
+The Steering Committee may appoint advisors who are invited to the Steering Committee meeting or specific parts of the meeting.
+Any Steering Committee member can propose an advisor to the Chair, and if the Chair agrees the advisor is invited to join the meeting.
+If the Chair wants to invite an advisor, they need to get confirmation from at least one Steering Committee member that this makes sense.
+Any Steering Committee member can raise an objection to someone joining as advisor as soon as it is known who will be joining as advisor(s).
+
+Advisors bring in specific expertise that supports the discussions and the decision-making done by the Steering Committee.
+Advisors are not considered to be members of the Steering Committee and do therefore not hold any voting rights.
+When requested by the Chair, advisors shall leave the Steering Committee meeting.
+
 ## 7. Code of Conduct
 The EESSI Code of Conduct can be found [here](code_of_conduct.md).
 
