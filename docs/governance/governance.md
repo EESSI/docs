@@ -232,7 +232,7 @@ The Steering Committee will meet as needed, but at least once per quarter. The C
 
 #### 6.4.1 Meeting notes
 
-For every meeting of the Steering Committee, the Chair ensures that meeting nottes are taken and stored in a location that only Steering Committee members can access.
+For every meeting of the Steering Committee, the Chair ensures that meeting notes are taken and stored in a location that only Steering Committee members can access.
 The notes will be made publicly available at https://eessi.io/docs/governance/steering-committee/meeting-notes no later than four weeks after each meeting,
 and will provide a clear overview of discussed items, decisions made, and action points.
 Prior to publication, information that is considered to be confidential, sensitive, or for another reason not appropriate for public disclosure will be removed or redacted.
