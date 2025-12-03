@@ -4,6 +4,17 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: Scaling Software Builds Across Architectures with Automation
+
+### Monday 01 December 2025
+
+**Outline:** Goals and Design Decisions Behind a Multi-Architecture Build Bot
+([Slides (PDF)](EESSI-happyhour-2025-016-EESSI-Bot-Goals-Design.pdf), [Recording (YouTube)](https://youtu.be/4zYMlZXUGKI))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4zYMlZXUGKI?si=uBHw5I7RG-sv3fmD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: EESSI dashboard and ReFrame tests
 
 ### Monday 24 November 2025
