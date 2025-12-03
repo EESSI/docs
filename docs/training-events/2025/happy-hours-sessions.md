@@ -27,7 +27,7 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 - Online sessions (via Zoom)
 - Mix of presentation & hands-on demos: ~15min of content, ~30min for Q&A
 
-If you haven't joined the EESSI Slack yet, [click here to join](https://join.slack.com/t/eessi-hpc/shared_invite/zt-1wqy0t8g6-PZJTg3Hjjm5Fm3XEOkzECg)
+If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.slack_invite_url }})
 
 ---
 
@@ -104,4 +104,3 @@ See the full Recordings, slides, and materials here: [Previous Sessions & Videos
 - 25 August 2025 - [Accessing EESSI using container script](https://www.youtube.com/watch?v=MAgWwj27i9U)
 
 - 18 August 2025 - [Installing and configuring CernVM-FS](https://youtu.be/MLeSbMOnbs8)
-
