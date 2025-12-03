@@ -31,17 +31,15 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 ---
 
-### 💡 **Next Session**: Goals and Design Decisions Behind a Multi-Architecture Build Bot
+### 💡 **Next Session**: How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale
 ### Topic Series: Scaling Software Builds Across Architectures with Automation
 🗓️ Schedule
-#### Monday 01 December 2025, 14:00-15:00 CE(S)T
+#### Monday 08 December 2025, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming sessions in the topic series: Scaling Software Builds Across Architectures with Automation
 ###### Outline
-
-- 01 December 2025 - Goals and Design Decisions Behind a Multi-Architecture Build Bot
 
 - 08 December 2025 - How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale
 
@@ -52,6 +50,12 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
+
+*Topic series: Scaling Software Builds Across Architectures with Automation*
+
+- 01 December 2025 [Goals and Design Decisions Behind a Multi-Architecture Build Bot](https://youtu.be/4zYMlZXUGKI)
+
+---
 
 *Topic series: EESSI dashboard and ReFrame tests*
 
