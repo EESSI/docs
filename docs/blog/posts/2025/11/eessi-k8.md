@@ -12,7 +12,9 @@ Furthermore, the software should be optimized depending on the target hardware a
 Implementing an integration of EESSI with Kubernetes will allow the many sites and enterprises that already use K8s to more easily get access to a wide variety of optimized software installations.
 
 In this blog post, we present a proof of concept (PoC) for deploying EESSI on a Kubernetes cluster.
-A basic knowledge on running containerized applications is assumed.
+
+!!! note
+    A basic knowledge on running containerized applications is assumed.
 
 ## Kubernetes Cluster: an overview
 
