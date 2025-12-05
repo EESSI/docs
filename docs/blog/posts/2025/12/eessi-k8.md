@@ -13,6 +13,8 @@ Implementing an integration of EESSI with Kubernetes will allow the many sites a
 
 In this blog post, we present a proof of concept (PoC) for deploying EESSI on a Kubernetes cluster.
 
+<!-- more -->
+
 !!! note
     A basic knowledge on running containerized applications is assumed.
 
