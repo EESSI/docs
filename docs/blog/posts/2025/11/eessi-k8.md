@@ -8,7 +8,7 @@ slug: EESSI-on-K8s-PoC
 
 [Kubernetes](https://kubernetes.io/), also known as K8s, is an open-source container orchestration platform widely used for automating the deployment, scaling, and management of containerized applications.
 Normally, deploying a specific application on Kubernetes requires preparing a container image including the target software and all its dependencies.
-Furthermore, the software should be optimized depending on the target hardware architecture to achieve the best performance, which could prove particularly challenging especially on etherogeneous systems.
+Furthermore, the software should be optimized depending on the target hardware architecture to achieve the best performance, which could prove particularly challenging especially on heterogeneous systems.
 Implementing an integration of EESSI with Kubernetes will allow the many sites and enterprises that already use K8s to more easily get access to a wide variety of optimized software installations
 
 In this blog post, we present a proof of concept (PoC) for deploying EESSI on a Kubernetes cluster.
@@ -26,7 +26,7 @@ While a deeper understanding of Kubernetes is beyond the scope of this post, und
 In a minimal setup, a Kubernetes cluster can consist of a single machine acting as both the control plane and a worker node.
 
 An important concept in Kubernetes needed for this post is that of [Pods](https://kubernetes.io/docs/concepts/workloads/pods/).
-Pods are the smallest deployable units in Kubernetes and represent a single instance of a running process in the cluster, which can contain one or more containers with shared storage and networ resources.
+Pods are the smallest deployable units in Kubernetes and represent a single instance of a running process in the cluster, which can contain one or more containers with shared storage and network resources.
 If you are familiar with `Docker` and in particular with `Docker Compose`, you can think of a Pod as a group of containers as defined in a single `compose.yml` file.
 
 There are several other higher-level abstractions in Kubernetes, for managing the lifecycle of Pods and for networking, storage, and configuration management, but, for the purpose of this post, knowledge of pods is sufficient.
@@ -34,7 +34,7 @@ There are several other higher-level abstractions in Kubernetes, for managing th
 ## Minimum requirements for usage of EESSI
 
 EESSI relies on [CernVM-FS (CVMFS)](https://cernvm.cern.ch/portal/filesystem) to provide access to the software repositories.
-The main suggested way to use EESSI is to install CVMFS on the host system, and then mount the EESSI repositories, typically through [autofs](https://www.kernel.org/doc/html/latest/filesystems/autofs.html) funcitonalities.
+The main suggested way to use EESSI is to install CVMFS on the host system, and then mount the EESSI repositories, typically through [autofs](https://www.kernel.org/doc/html/latest/filesystems/autofs.html) functionalities.
 Several other ways to use CVMFS are possible, and can be found by looking at how [cvmfsexec](https://github.com/cvmfs/cvmfsexec) can be used to gain access to CVMFS repositories.
 The main crux behind them all is that `/dev/fuse` must be available to the process accessing CVMFS repositories, since CVMFS relies on FUSE (Filesystem in Userspace) to mount the repositories.
 
