@@ -9,10 +9,10 @@ slug: EESSI-on-K8s-PoC
 [Kubernetes](https://kubernetes.io/), also known as K8s, is an open-source container orchestration platform widely used for automating the deployment, scaling, and management of containerized applications.
 Normally, deploying a specific application on Kubernetes requires preparing a container image including the target software and all its dependencies.
 Furthermore, the software should be optimized depending on the target hardware architecture to achieve the best performance, which could prove particularly challenging especially on heterogeneous systems.
-Implementing an integration of EESSI with Kubernetes will allow the many sites and enterprises that already use K8s to more easily get access to a wide variety of optimized software installations
+Implementing an integration of EESSI with Kubernetes will allow the many sites and enterprises that already use K8s to more easily get access to a wide variety of optimized software installations.
 
 In this blog post, we present a proof of concept (PoC) for deploying EESSI on a Kubernetes cluster.
-A basic knowledge on running containerized applications is suggested.
+A basic knowledge on running containerized applications is assumed.
 
 ## Kubernetes Cluster: an overview
 
@@ -46,7 +46,7 @@ Now that you have a basic understanding of Pods and the way a CVMFS filesystem (
 
 The first option is to install CVMFS directly on the worker nodes of the Kubernetes cluster.
 This can be achieved by following the [official EESSI installation instructions](https://www.eessi.io/docs/getting_access/native_installation/).
-Once EESSI can be accessed from the host nodes, [hostPath volumes](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) can be used to mount EESSI (eg `/cvmfs/software.eessi.io`) directly into the Pods that require it.
+Once EESSI can be accessed from the host nodes, [hostPath volumes](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) can be used to mount EESSI (e.g., `/cvmfs/software.eessi.io`) directly into the Pods that require it.
 
 While this approach is relatively straightforward, it has several drawbacks:
 
@@ -76,7 +76,7 @@ This means that if the Pod has access to `/dev/fuse`, it can mount CVMFS filesys
 While this approach is very flexible it also has several drawbacks:
 
 - Natively, in order to access `/dev/fuse`, the Pod must run in privileged mode, which may not be feasible or desirable in all environments due to security concerns.
-- Even though there are ways that could be used to make FUSE work without privileged mode (e.g. [smart-device-manager](https://gitlab.com/arm-research/smarter/smarter-device-manager), [fuse-device-plugin](https://github.com/kuberenetes-learning-group/fuse-device-plugin/blob/master/README_EN.md)), giving a container access to `/dev/fuse` can still be considered a security risk
+- Even though there are ways that could be used to make FUSE work without privileged mode (e.g., [smart-device-manager](https://gitlab.com/arm-research/smarter/smarter-device-manager) or [fuse-device-plugin](https://github.com/kuberenetes-learning-group/fuse-device-plugin/blob/master/README_EN.md)), giving a container access to `/dev/fuse` can still be considered a security risk.
 - Could require re-building container images in a currently running production environment to include CVMFS.
 
 ### Option 4: Using the CVMFS-CSI plugin
@@ -91,7 +91,13 @@ This option combines the best of the previous approaches as:
 
 - Provisioning of CVMFS filesystems is centralized and managed by Kubernetes itself.
   - Can be backed up by the cluster management features (e.g., self-healing, scaling).
-  - Can be updated easily by editing thee [configuration maps](https://kubernetes.io/docs/concepts/storage/volumes/#configmap) used by the DaemonSet.
+  - Can be updated easily by editing the [configuration maps](https://kubernetes.io/docs/concepts/storage/volumes/#configmap) used by the DaemonSet.
 - EESSI is mounted individually by every worker node, removing single points of failure and performance bottlenecks.
 
-A demo on how to install the `cvmfs-csi` plugin already configured to mount EESSI and run examples from [eessi-demo](https://github.com/EESSI/eessi-demo) repository can be found in the [eessi-k8s](https://github.com/Crivella/eessi-k8s) github repository
+## From theory to practice
+
+Having analysed the various options, we explored the implementation of the "best" option in real life.
+
+A demo on how to install the `cvmfs-csi` plugin already configured to mount EESSI and run examples from the [EESSI demos repository](https://github.com/EESSI/eessi-demo) repository can be found in the [eessi-k8s](https://github.com/Crivella/eessi-k8s) GitHub repository.
+
+Of course there are many optimisations and further feature explorations that could be done, something that we will look deeper into in the future.
