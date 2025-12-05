@@ -96,8 +96,8 @@ This option combines the best of the previous approaches as:
 
 ## From theory to practice
 
-Having analysed the various options, we explored the implementation of the "best" option in real life.
+Having analysed the various options, we explored the implementation of the "best" option in real life. That effort eventually resulted in an "it works!" moment and we've now gathered that experience into a demonstration repository for others to explore.
 
-A demo on how to install the `cvmfs-csi` plugin already configured to mount EESSI and run examples from the [EESSI demos repository](https://github.com/EESSI/eessi-demo) repository can be found in the [eessi-k8s](https://github.com/Crivella/eessi-k8s) GitHub repository.
+The demo on how to install the `cvmfs-csi` plugin already configured to mount EESSI and run examples from the [EESSI demos repository](https://github.com/EESSI/eessi-demo) repository can be found in the [eessi-k8s](https://github.com/Crivella/eessi-k8s) GitHub repository.
 
 Of course there are many optimisations and further feature explorations that could be done, something that we will look deeper into in the future.
