@@ -1,5 +1,5 @@
 ---
-authors: [Crivella]
+authors: [Crivella, ocaisa]
 date: 2025-12-05
 slug: EESSI-on-K8s-PoC
 ---
