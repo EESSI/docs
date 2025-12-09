@@ -147,6 +147,11 @@ Note that you could also combine approaches: first build everything using the `E
 To build software using the `EESSI-install-software.sh` script, you'll first need to get the diff file for the PR. This is used by the `EESSI-install-software.sh` script to see what is changed in this PR - and thus what needs to be build for this PR. To download the diff for PR 360, we would e.g. do
 ```
 wget https://github.com/EESSI/software-layer/pull/360.diff
+git clone https://github.com/EESSI/software-layer.git
+cd software-layer
+git pull origin pull/360/head
+cd ..
+cp -r software-layer/easystacks .
 ```
 
 Now, we run the `EESSI-install-software.sh` script:
