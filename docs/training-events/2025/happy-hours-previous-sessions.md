@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: Scaling Software Builds Across Architectures with Automation
 
+### Monday 08 December 2025
+
+**Outline:** How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale
+([Slides (PDF)](EESSI-happyhour-2025-017-EESSI-Bot-How-It-Works.pdf), [Recording (YouTube)](https://youtu.be/IkKdVm2JmAU))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IkKdVm2JmAU?si=nUs0XVVuhrRfbkud" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 01 December 2025
 
 **Outline:** Goals and Design Decisions Behind a Multi-Architecture Build Bot
