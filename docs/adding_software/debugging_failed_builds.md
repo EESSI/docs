@@ -144,7 +144,7 @@ The Automatic build and deploy [bot](../bot.md) installs software by executing t
 
 Note that you could also combine approaches: first build everything using the `EESSI-install-software.sh` script, until you reproduce the failure. Then, start making modifications (e.g. changes to the EasyConfig, patches, etc) and trying to rebuild that package individually to test your changes.
 
-To build software using the EESSI-install-software.sh script, you first need to download the diff file for the relevant pull request. The script uses this diff to determine which changes are included in the PR and therefore which software needs to be built.
+To build software using the `EESSI-install-software.sh` script, you first need to download the diff file for the relevant pull request. The script uses this diff to determine which changes are included in the PR and therefore which software needs to be built.
 
 We now define the PR number through a ${PR} variable and use it throughout the commands. For example:
 ```
