@@ -34,14 +34,14 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ### 💡 **Next Session**: How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale
 ### Topic Series: Scaling Software Builds Across Architectures with Automation
 🗓️ Schedule
-#### Monday 08 December 2025, 14:00-15:00 CE(S)T
+#### Monday 15 December 2025, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming sessions in the topic series: Scaling Software Builds Across Architectures with Automation
+### Upcoming sessions in the topic series: Expanding the reach of EESSI: K8s and Android
 ###### Outline
 
-- 08 December 2025 - How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale
+- 15 December 2025 - EESSI in Kubernetes: the CVMFS-CSI plugin
 
 ---
 
@@ -52,6 +52,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
 *Topic series: Scaling Software Builds Across Architectures with Automation*
+
+- 08 December 2025 [How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale](https://youtu.be/IkKdVm2JmAU)
 
 - 01 December 2025 [Goals and Design Decisions Behind a Multi-Architecture Build Bot](https://youtu.be/4zYMlZXUGKI)
 
