@@ -5883,7 +5883,7 @@
 
 <h1 id="build-test-deploy-bot">Build-test-deploy bot<a class="headerlink" href="#build-test-deploy-bot" title="Permanent link">&para;</a></h1>
 <p>Building, testing, and deploying software is done by one or more <em>bot instances</em>.</p>
-<p>The EESSI build-test-deploy bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /> is implemented as a <a href="https://docs.github.com/en/apps/overview">GitHub App</a>
+<p>The EESSI build-test-deploy bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f916.svg" title=":robot:" /> is implemented as a <a href="https://docs.github.com/en/apps/overview">GitHub App</a>
 in the <a href="https://github.com/EESSI/eessi-bot-software-layer"><code>eessi-bot-software-layer</code> repository</a>.</p>
 <p>It operates in the context of <a href="../adding_software/opening_pr/#software_layer_pull_request">pull requests</a> to
 the <a href="https://github.com/EESSI/compatibility-layer"><code>compatibility-layer</code> repository</a> or the
@@ -5894,7 +5894,7 @@ so the procedure of adding software to EESSI is <em>semi-automatic</em>.</p>
 (see for example <a href="https://github.com/EESSI/software-layer/tree/2023.06/bot">here</a>), like <code>bot/build.sh</code>
 to build software, and <code>bot/check-result.sh</code> to check whether the software was built correctly.</p>
 <h2 id="high-level-design">High-level design<a class="headerlink" href="#high-level-design" title="Permanent link">&para;</a></h2>
-<p>The bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /> consists of two components: the <em>event handler</em>, and the <em>job manager</em>.</p>
+<p>The bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f916.svg" title=":robot:" /> consists of two components: the <em>event handler</em>, and the <em>job manager</em>.</p>
 <h3 id="event-handler">Event handler<a class="headerlink" href="#event-handler" title="Permanent link">&para;</a></h3>
 <p>The bot event handler is responsible for handling
 <a href="https://docs.github.com/en/webhooks-and-events/events/github-event-types">GitHub events</a>
@@ -5909,11 +5909,11 @@ or adding a <code>bot:deploy</code> label (see <a href="#deploying">deploying</a
 when jobs completed.</p>
 <p>It runs every couple of minutes as a <a href="https://en.wikipedia.org/wiki/Cron">cron job</a>.</p>
 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
-<p>Instructions for the bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /> should always start with <code>bot:</code>.</p>
+<p>Instructions for the bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f916.svg" title=":robot:" /> should always start with <code>bot:</code>.</p>
 <p>To get help from the bot, post a comment with <code>bot: help</code>.</p>
 <p>To make the bot report how it is configured, post a comment with <code>bot: show_config</code>.</p>
 <h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
-<p>The bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /> is configured to only act on instructions issued by specific GitHub accounts.</p>
+<p>The bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f916.svg" title=":robot:" /> is configured to only act on instructions issued by specific GitHub accounts.</p>
 <p>There are separate configuration options for allowing to send instructions to the bot,
 to trigger building of software, and to deploy software installations in to the EESSI repository.</p>
 <div class="admonition note">
@@ -5921,7 +5921,7 @@ to trigger building of software, and to deploy software installations in to the 
 <p>Ask for help in the <code>#software-layer-bot</code> channel of the EESSI Slack if needed!</p>
 </div>
 <h2 id="building">Building<a class="headerlink" href="#building" title="Permanent link">&para;</a></h2>
-<p>To instruct the bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f916.svg" title=":robot:" /> to build software, one or more <code>build</code> instructions
+<p>To instruct the bot <img alt="🤖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f916.svg" title=":robot:" /> to build software, one or more <code>build</code> instructions
 should be issued by posting a comment in the pull request (see also <a href="../adding_software/building_software/#bot_build">here</a>).</p>
 <p>The most basic build instruction that can be sent to the bot is:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bot: build for:arch=&lt;for_arch&gt;
@@ -6006,7 +6006,7 @@ they are processed by the event handler component. It will:</p>
 <h4 id="managing-build-jobs">Managing build jobs<a class="headerlink" href="#managing-build-jobs" title="Permanent link">&para;</a></h4>
 <p>During the next iteration of the job manager, the submitted jobs are released and queued for execution.</p>
 <p>The job manager also monitors the running jobs at regular intervals, and reports back in the pull request
-when a job has completed. It also reports the result (<code>SUCCESS</code> <img alt="😁" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f601.svg" title=":grin:" /> or <code>FAILURE</code> <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f622.svg" title=":cry:" />), based on the result
+when a job has completed. It also reports the result (<code>SUCCESS</code> <img alt="😁" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f601.svg" title=":grin:" /> or <code>FAILURE</code> <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f622.svg" title=":cry:" />), based on the result
 of the <code>bot/check-result.sh</code> script.</p>
 <h4 id="artefacts">Artefacts<a class="headerlink" href="#artefacts" title="Permanent link">&para;</a></h4>
 <p>If all goes well, each job should produce a tarball as an <em>artefact</em>,
