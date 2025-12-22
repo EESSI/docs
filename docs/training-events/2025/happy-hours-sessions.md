@@ -31,17 +31,17 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next Session**: How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale
-### Topic Series: Scaling Software Builds Across Architectures with Automation
+### 💡 **Next Session**: EESSI-Christmas: Your wishes for 2026
+### Topic Series: EESSI Roadmap 2026
 🗓️ Schedule
-#### Monday 15 December 2025, 14:00-15:00 CE(S)T
+#### Monday 22 December 2025, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming sessions in the topic series: Expanding the reach of EESSI: K8s and Android
+### Upcoming sessions in the topic series: EESSI Roadmap 2026
 ###### Outline
 
-- 15 December 2025 - EESSI in Kubernetes: the CVMFS-CSI plugin
+- 12 January 2026 - EESSI: What's next in 2026?
 
 ---
 
@@ -50,6 +50,12 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
+
+*Topic series: Expanding the reach of EESSI: K8s and Android*
+
+- 15 December 2025 [EESSI in Kubernetes: The CVMFS-CSI plugin](https://youtu.be/onUI4dgg3n8)
+
+---
 
 *Topic series: Scaling Software Builds Across Architectures with Automation*
 
