@@ -4,6 +4,17 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: Expanding the reach of EESSI: K8s and Android
+
+### Monday 15 December 2025
+
+**Outline:** EESSI in Kubernetes: The CVMFS-CSI plugin
+([Slides (PDF)](EESSI-happyhour-2025-018-EESSI-K8s-poc-demo.pdf), [Recording (YouTube)](https://youtu.be/onUI4dgg3n8))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/onUI4dgg3n8?si=mFL0AfHTS5j8EQpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: Scaling Software Builds Across Architectures with Automation
 
 ### Monday 08 December 2025
