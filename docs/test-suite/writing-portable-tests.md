@@ -331,18 +331,18 @@ As mentioned in the [Test requirements](#test-requirements), there should be at 
 is_ci_test = True
 ```
 
-Suppose that our test has 2 variants, of which only `'variant1'` should be marked `CI`. In that case, we can define a ReFrame parameter, e.g. `test_variant`:
+Suppose that our test has 2 variants, of which only `'variant1'` should be marked `CI`. In that case, we can define `bench_name` as a ReFrame parameter:
 ```python
-    test_variant = parameter(['variant1', 'variant2'])
+    bench_name = parameter(['variant1', 'variant2'])
 ```
 Next, we can define a hook that does different things depending on the variant, and set `is_ci_test` for `'variant1'`, for example: 
 ```python
 @run_after('init')
 def do_something(self):
-    if self.test_variant == 'variant1':
+    if self.bench_name == 'variant1':
         do_this()
         is_ci_test = True
-    elif self.test_variant == 'variant2':
+    elif self.bench_name == 'variant2':
         do_that()
 ```
 
