@@ -25,7 +25,7 @@ The good news is that all of this only requires a handful commands :astonished: 
     # Installation commands for RHEL-based distros like CentOS, Rocky Linux, Almalinux, Fedora, ...
 
     # install CernVM-FS
-    sudo yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
+    sudo yum install -y https://cvmrepo.s3.cern.ch/cvmrepo/yum/cvmfs-release-latest.noarch.rpm
     sudo yum install -y cvmfs
 
     # install EESSI configuration for CernVM-FS
