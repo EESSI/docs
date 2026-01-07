@@ -46,7 +46,7 @@ The good news is that all of this only requires a handful commands :astonished: 
 
     # install CernVM-FS
     sudo apt-get install lsb-release
-    wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
+    wget https://cvmrepo.s3.cern.ch/cvmrepo/apt/cvmfs-release-latest_all.deb
     sudo dpkg -i cvmfs-release-latest_all.deb
     rm -f cvmfs-release-latest_all.deb
     sudo apt-get update
