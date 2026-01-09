@@ -5852,6 +5852,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-spack-on-top-of-eessi-a-proof-of-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Spack on top of EESSI: A Proof of Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-on-kubernetes-a-proof-of-concept" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5944,17 +5955,6 @@
     <span class="md-ellipsis">
       
         Integration in the EuroHPC Federation Platform
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eessi-won-an-hpcwire-readers-choice-award" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EESSI won an HPCWire Reader's Choice Award!
       
     </span>
   </a>
@@ -5996,6 +5996,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-spack-on-top-of-eessi-a-proof-of-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Spack on top of EESSI: A Proof of Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-on-kubernetes-a-proof-of-concept" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6094,17 +6105,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#eessi-won-an-hpcwire-readers-choice-award" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EESSI won an HPCWire Reader's Choice Award!
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6119,6 +6119,61 @@
       <header class="md-typeset">
         <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/30901257?v=4" alt="Loris Ercole">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-01-09 00:00:00+00:00">January 9, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="using-spack-on-top-of-eessi-a-proof-of-concept"><a class="toclink" href="2026/01/09/Spack-on-top-of-EESSI-PoC/">Using Spack on top of EESSI: A Proof of Concept</a></h2>
+<figure>
+<img alt="Spack + EESSI" src="2026/01/spack-plus-eessi.webp" width="75%" />
+</figure>
+<p>EESSI provides a rich set of software installations, which were built and installed using
+<a href="https://easybuild.io">EasyBuild</a>.</p>
+<p>Can we convince <a href="https://spack.io">Spack</a> to reuse software installed in EESSI,
+and by doing so make EESSI more attractive to those of you who prefer using Spack over EasyBuild?</p>
+<p>Several people have expressed interest in exposing the software installations provided by EESSI
+to Spack, so they can be used as dependencies when building and installing software with Spack.</p>
+<p>Recently, we have explored how this could be achieved through a proof-of-concept with <a href="https://www.quantum-espresso.org/">QuantumESPRESSO</a>.</p>
+<p>The goal here is to build and install only QuantumESPRESSO with Spack,
+and leveraging software installations from EESSI for all required dependencies, including the compiler and libraries for MPI, BLAS/LAPACK, FFTW, etc.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/01/09/Spack-on-top-of-EESSI-PoC/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -6534,53 +6589,6 @@ last weekend in the 10th <em>HPC, Big Data, and Data Science</em> devroom at FOS
     
       <nav class="md-post__action">
         <a href="2025/02/10/integration-efp/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/620876?v=4" alt="Kenneth Hoste">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-18 00:00:00+00:00">November 18, 2024</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="eessi-won-an-hpcwire-readers-choice-award"><a class="toclink" href="2024/11/18/hpcwire-readers-choice-awards-2024-for-eessi/">EESSI won an HPCWire Reader's Choice Award!</a></h2>
-<p>We are thrilled to announce that <strong>EESSI has won an HPCWire Reader's Choice Award</strong>!</p>
-<figure>
-<img alt="EuroHPC User Day 2024" src="2024/11/eessi-hpcwire-award-2024.webp" width="50%" />
-</figure>
-
-    
-      <nav class="md-post__action">
-        <a href="2024/11/18/hpcwire-readers-choice-awards-2024-for-eessi/">
           Continue reading
         </a>
       </nav>
