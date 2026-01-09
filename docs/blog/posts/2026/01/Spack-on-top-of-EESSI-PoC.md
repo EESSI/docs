@@ -87,7 +87,7 @@ but this is a nice first step...
 
 ### More information & updates
 
-This work is being done in collaboration with member of the Spack development team,
+This work is being done in collaboration with members of the Spack development team,
 including Todd Gamblin and Massimiliano Culpo.
 
 For updates, check the [dedicated support issue](https://gitlab.com/eessi/support/-/issues/170)
