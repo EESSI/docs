@@ -1,6 +1,6 @@
 # Notes for EESSI Happy Hour #19 (22 December 2025)
 
-*Topic: EESSI-Christmas: Whishlist for 2026*
+*Topic: EESSI-Christmas: Wishlist for 2026*
 
 - new EESSI version, scheduled before summer
     - yearly cycle for EESSI versions
