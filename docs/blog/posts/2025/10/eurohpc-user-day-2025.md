@@ -121,7 +121,7 @@ for their participation in the hackathon.
 
 The hackathon featured a Raspberry Pi starter kit prize,
 sponsored by [Do IT Now](https://www.doitnowgroup.com),
-which was granted to the participant who made on the most impressive progress during the hackathon.
+which was granted to the participant who made the most impressive progress during the hackathon.
 
 <figure markdown="span">
 ![EuroHPC User Days 2025](eurohpc-user-days-2025-ci-cd-hackathon-prize-winner.webp){width=75%}
