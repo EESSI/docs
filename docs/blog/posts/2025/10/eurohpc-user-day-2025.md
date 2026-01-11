@@ -25,7 +25,7 @@ on Thu 2 Oct 2025.
 
 The plenary sessions of the EuroHPC User Days 2025 featured representatives of both the
 [EuroHPC Joint Undertaking (JU)](https://www.eurohpc-ju.europa.eu)
-and the EuroHPC comunity talking about current and upcoming activities.
+and the EuroHPC community talking about current and upcoming activities.
 
 Recordings of the plenary sessions are available: [day 1](https://youtu.be/w8DNYR4tO3M?si=J_50JbR-DNmoCV-r), [day 2](https://youtu.be/HFhb3woFxGw).
 
