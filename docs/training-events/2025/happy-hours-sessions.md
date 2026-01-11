@@ -1,4 +1,4 @@
-# EESSI Happy Hour sessions
+# EESSI Happy Hour sessions (2025)
 
 _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
@@ -16,7 +16,7 @@ Each series will focus on a specific main topic over several sessions, giving pa
 
 💬 *Who should join?* Everyone interested in EESSI.
 
-Let's make Mondays productive and collaborative - see you at Happy Hour!
+Let's make Mondays productive and collaborative - see you at the EESSI Happy Hour!
 
 All sessions will be recorded. Recordings, slides, and materials used will be made publicly available shortly after each session.
 
@@ -31,17 +31,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next Session**: EESSI-Christmas: Your wishes for 2026
-### Topic Series: EESSI Roadmap 2026
-🗓️ Schedule
-#### Monday 22 December 2025, 14:00-15:00 CE(S)T
-
----
-
-### Upcoming sessions in the topic series: EESSI Roadmap 2026
-###### Outline
-
-- 12 January 2026 - EESSI: What's next in 2026?
+### 💡 **No further sessions in 2025**: For 2026 see [EESSI Happy Hours in 2026](../2026/happy-hours-sessions.md)
 
 ---
 
@@ -50,6 +40,12 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
+
+*Topic series: EESSI Roadmap 2026*
+
+- 22 December 2025 [EESSI-Christmas: Wishlist for 2026](EESSI-Happy-Hour-019-EESSI-Wishlist-2026.md) (notes, no recording)
+
+---
 
 *Topic series: Expanding the reach of EESSI: K8s and Android*
 

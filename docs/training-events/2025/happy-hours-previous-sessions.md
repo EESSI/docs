@@ -1,4 +1,4 @@
-# EESSI Happy Hour - Previous Sessions
+# EESSI Happy Hour - Previous Sessions (2025)
 
 Find slides, and video recordings of earlier sessions below.
 
