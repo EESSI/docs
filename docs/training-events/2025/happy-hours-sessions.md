@@ -27,22 +27,21 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 - Online sessions (via Zoom)
 - Mix of presentation & hands-on demos: ~15min of content, ~30min for Q&A
 
-If you haven't joined the EESSI Slack yet, [click here to join](https://join.slack.com/t/eessi-hpc/shared_invite/zt-1wqy0t8g6-PZJTg3Hjjm5Fm3XEOkzECg)
+If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.slack_invite_url }})
 
 ---
 
-### 💡 **Next Session**: How we build software in EESSI
-### Topic Series: Building on top of EESSI
+### 💡 **Next Session**: EESSI-Christmas: Your wishes for 2026
+### Topic Series: EESSI Roadmap 2026
 🗓️ Schedule
-#### Monday 20 October 2025, 14:00-15:00 CE(S)T
+#### Monday 22 December 2025, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming sessions in the topic series: Building on top of EESSI
+### Upcoming sessions in the topic series: EESSI Roadmap 2026
 ###### Outline
-- 20 October 2025 - How we build software in EESSI
-- 27 October 2025 - Building on top of EESSI using `buildenv` modules
-- 03 November 2025 - Contributing software packages to EESSI
+
+- 12 January 2026 - EESSI: What's next in 2026?
 
 ---
 
@@ -52,7 +51,41 @@ If you haven't joined the EESSI Slack yet, [click here to join](https://join.sla
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](./happy-hours-previous-sessions.md)
 
+*Topic series: Expanding the reach of EESSI: K8s and Android*
+
+- 15 December 2025 [EESSI in Kubernetes: The CVMFS-CSI plugin](https://youtu.be/onUI4dgg3n8)
+
+---
+
+*Topic series: Scaling Software Builds Across Architectures with Automation*
+
+- 08 December 2025 [How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale](https://youtu.be/IkKdVm2JmAU)
+
+- 01 December 2025 [Goals and Design Decisions Behind a Multi-Architecture Build Bot](https://youtu.be/4zYMlZXUGKI)
+
+---
+
+*Topic series: EESSI dashboard and ReFrame tests*
+
+- 24 November 2025 [EESSI ReFrame tests](https://youtu.be/g9_In2AmhhY)
+
+- 17 November 2025 [EESSI dashboard](https://youtu.be/f87ylio6k_0)
+
+---
+
+*Topic series: Troubleshooting and Debugging EESSI software builds*
+
+- 10 November 2025 [Debugging EESSI software builds](https://youtu.be/QbsXFNuuU3Y)
+
+---
+
 *Topic series: Building on top of EESSI*
+
+- 03 November 2025 [Contributing software packages to EESSI](https://www.youtube.com/watch?v=BYgQlI5mmzs)
+
+- 27 October 2025 [Building on top of EESSI using `buildenv` modules](https://youtu.be/0uwUlM1xqNk)
+
+- 20 October 2025 [How we build software in EESSI](https://www.youtube.com/watch?v=KkD6vtPqqMs)
 
 - 13 October 2025 [Using EasyBuild and controlling settings via `EESSI-extend`](https://www.youtube.com/watch?v=X54J-kbjwDQ)
 
@@ -83,4 +116,3 @@ See the full Recordings, slides, and materials here: [Previous Sessions & Videos
 - 25 August 2025 - [Accessing EESSI using container script](https://www.youtube.com/watch?v=MAgWwj27i9U)
 
 - 18 August 2025 - [Installing and configuring CernVM-FS](https://youtu.be/MLeSbMOnbs8)
-

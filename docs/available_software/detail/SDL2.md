@@ -53,4 +53,4 @@ module load SDL2/2.28.5-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |SDL2/2.28.5-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |SDL2/2.28.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|SDL2/2.26.3-GCCcore-12.2.0|x|-|x|x|x|x|x|x|x|x|x|x|x|x|
+|SDL2/2.26.3-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|

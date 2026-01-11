@@ -202,7 +202,10 @@ The current setup for the [software-layer repository](https://github.com/EESSI/s
 * The bot deploys the artefacts (tarballs) to an S3 bucket in AWS, along with a metadata file, using the
   [`eessi-upload-to-staging`](https://github.com/EESSI/eessi-bot-software-layer/blob/main/scripts/eessi-upload-to-staging) script;
 * A cron job that runs every couple of minutes on the CernVM-FS Stratum-0 server opens a pull request to
-  the (private) [EESSI/staging](https://github.com/EESSI/staging) repository, to move the metadata file for
-  each uploaded tarball from the `staged` to the `approved` directory;
-* Once that pull request gets merged, the target is automatically ingested into the EESSI repository by a cron job
-  on the Stratum-0 server, and the metadata file is moved from `approved` to `ingested` in the `EESSI/staging` repository;
+  the (private) [EESSI/staging_bundles](https://github.com/EESSI/staging_bundles) repository, to approve the uploaded tarballs
+  of the corresponding software layer PR for ingestion;
+* Once that pull request gets merged, the tarballs are automatically ingested into the EESSI repository by a cron job
+  on the Stratum-0 server.
+
+If the staging PR contains a tarball that should not be ingested, e.g. in case of duplicate tarballs for a single CPU target,
+one can edit the `TaskState` file for the tarball that should be skipped, and change `APPROVED` to `REJECTED`.

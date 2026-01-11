@@ -102,7 +102,7 @@ Registration for online tutorial on Mon 4 Dec 2023 is **closed** *(since Sun 3 D
 
 Dedicated channel in EESSI Slack: [`#cvmfs-best-practices-hpc`](https://eessi-hpc.slack.com/archives/C068DV7GY3V)
 
-[Click here to join the EESSI Slack](https://join.slack.com/t/eessi-hpc/shared_invite/zt-1wqy0t8g6-PZJTg3Hjjm5Fm3XEOkzECg)
+[Click here to join the EESSI Slack]({{ config.extra.slack_invite_url }})
 
 ## MultiXscale
 

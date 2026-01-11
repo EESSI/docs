@@ -2,10 +2,11 @@
 
 ## Why configuration is necessary
 
-Just [installing EESSI](../getting_access/native_installation.md) is enough to get started with the EESSI software stack on a CPU-based system. However, additional configuration is necessary in many other cases, such as
-- enabling GPU support on GPU-based systems
-- site-specific configuration / tuning of the MPI libraries provided by EESSI
-- overriding EESSI's MPI library with an ABI compatible host MPI
+Just [installing EESSI](../getting_access/native_installation.md) is enough to get started with the EESSI software stack on a CPU-based system. However, additional configuration is necessary in other cases such as:
+
+- enabling GPU support on GPU-based systems,
+- site-specific configuration / tuning of the MPI libraries provided by EESSI,
+- overriding EESSI's MPI library with an ABI compatible host MPI.
 
 ## The `host_injections` variant symlink
 

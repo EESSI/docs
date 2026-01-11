@@ -25,7 +25,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''RAxML/8.2.13-gompi-2023a-avx2'', ''RAxML/8.2.13-gompi-2023a-standard'']'
+  softwareVersion: '[''RAxML/8.2.13-gompi-2023a-avx2'', ''RAxML/8.2.13-gompi-2023a-standard'',
+    ''RAxML/8.2.13-gompi-2023b'']'
   url: https://github.com/stamatak/standard-RAxML
 ---
 
@@ -44,12 +45,13 @@ The overview below shows which RAxML installations are available per target arch
 To start using RAxML, load one of these modules using a `module load` command like:
 
 ```shell
-module load RAxML/8.2.13-gompi-2023a-standard
+module load RAxML/8.2.13-gompi-2023b
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|RAxML/8.2.13-gompi-2023a-standard|x|-|x|x|x|-|-|-|-|-|-|-|-|-|
+|RAxML/8.2.13-gompi-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|RAxML/8.2.13-gompi-2023a-standard|x|x|x|x|x|-|-|-|-|-|-|-|-|-|
 |RAxML/8.2.13-gompi-2023a-avx2|-|-|-|-|-|x|x|x|x|x|x|x|x|x|
