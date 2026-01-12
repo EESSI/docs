@@ -114,6 +114,7 @@ plugins:
         gpu.md: site_specific_config/gpu.md
         rocm.md: site_specific_config/rocm.md
         training/index.md: training-events/index.md
+        training/2026/happy-hours-sessions.md: training-events/2026/happy-hours-sessions.md
         training/2025/happy-hours-sessions.md: training-events/2025/happy-hours-sessions.md
         training/2025/hackathon-eurohpc-user-days.md: training-events/2025/hackathon-eurohpc-user-days.md
         training/2025/webinar-series-2025Q2.md: training-events/2025/webinar-series-2025Q2.md
