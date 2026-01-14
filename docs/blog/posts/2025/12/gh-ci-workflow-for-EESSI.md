@@ -140,7 +140,7 @@ runs:
 ```
 
 A workflow that calls this action will load software from an EESSI stack (argument `modules`)
-and install Python packages from Pypi (argument `extra-python-packages`).
+and install Python packages from PyPI (argument `extra-python-packages`).
 Packages are managed by a Lmod [module collection](https://lmod.readthedocs.io/en/latest/010_user.html#rules-for-loading-modules-from-a-collection)
 and by a Python [virtual environment](https://docs.python.org/3/library/venv.html).
 
@@ -150,7 +150,7 @@ The steps can be broken down as follows:
     * line 14 can be removed when only the `software.eessi.io` repository is needed
     * microarchitecture `x86_64/amd/zen2` is selected, which is forward-compatible with the Zen3 microarchitecture
       available on [standard GitHub-hosted runners](https://docs.github.com/en/actions/reference/runners/github-hosted-runners#standard-github-hosted-runners-for-public-repositories)
-    * Ubuntu ARM64 runners have microarchitecture `aarch64/nvidia/grace`
+    * Ubuntu ARM64 runners have microarchitecture compatible with  the `aarch64/nvidia/grace` software stack that EESSI ships
 * load the list of EESSI modules provided by the workflow and stash them to a collection called `espresso`
 * create a Python virtual environment that gives priority to Python packages available in EESSI
   (`venv` option `--system-site-packages`, other package managers have a different syntax)
@@ -159,7 +159,7 @@ The steps can be broken down as follows:
   `requirements.txt`, pip install them, and restore `requirements.txt`
 * clean up the session
 
-This action allows us to “hide” the logic for package installation,
+This action allows us to "hide" the logic for package installation,
 and should only be edited by project maintainers.
 Project developers can ignore this file and focus on the workflow, described in the next section.
 
