@@ -1,4 +1,4 @@
-# EESSI Happy Hour sessions (2026)
+# EESSI Happy Hour sessions
 
 _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
