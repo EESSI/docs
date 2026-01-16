@@ -8,7 +8,10 @@ Find slides, and video recordings of earlier sessions below.
 
 ### Monday 22 December 2025
 
+
 **Outline:** EESSI-Christmas: Wishlist for 2026
+
+*This session was deliberately not recorded, to facilitate information discussion & feedback)*
 
 ---
 
