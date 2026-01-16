@@ -2,6 +2,12 @@
 
 _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
+---
+
+### 💡 **For the 2026 schedule,** refer to [EESSI Happy Hours session 2026](../2026/happy-hours-sessions.md)
+
+---
+
 **What if you no longer have to install a broad range of scientific software from scratch on every laptop, HPC cluster, or cloud instance you use or maintain, without compromising on performance?**
 
 The European Environment for Scientific Software Installations [EESSI](https://eessi.io) comes to the rescue!
@@ -28,12 +34,6 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 - Mix of presentation & hands-on demos: ~15min of content, ~30min for Q&A
 
 If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.slack_invite_url }})
-
----
-
-### 💡 **No further sessions in 2025**: For 2026 see [EESSI Happy Hours in 2026](../2026/happy-hours-sessions.md)
-
----
 
 ### Previous EESSI Happy Hour sessions
 
