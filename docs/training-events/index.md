@@ -2,7 +2,7 @@
 
 ## Upcoming events (2026)
 
-* [*EESSI happy hour sessions 2026*](2026/happy-hours-sessions.md) (online sessions **every** Monday, starting 12 January 2026)
+* [*EESSI happy hour sessions 2026*](happy-hours-sessions.md) (online sessions **every** Monday, starting 12 January 2026)
 
 ### Past events (2025)
 
