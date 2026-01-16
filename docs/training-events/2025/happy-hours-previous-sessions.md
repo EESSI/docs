@@ -4,6 +4,14 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: EESSI-Christmas: Wishlist for 2026
+
+### Monday 22 December 2025
+
+**Outline:** EESSI-Christmas: Wishlist for 2026
+
+---
+
 # Topic series: Expanding the reach of EESSI: K8s and Android
 
 ### Monday 15 December 2025

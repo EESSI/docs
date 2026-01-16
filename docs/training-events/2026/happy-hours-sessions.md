@@ -57,4 +57,4 @@ See the full Recordings, slides, and materials here: [Previous Sessions & Videos
 - 12 January 2026 - [EESSI Roadmap 2026](https://youtu.be/M0g7VU5hPvg)
 
 ---
-### 🧐 [EESSI Happy Hour sessions in 2025](../2025/happy-hours-sessions.md#previous-eessi-happy-hour-sessions)
+### 🧐 [EESSI Happy Hour sessions in 2025](../2025/happy-hours-previous-sessions.md)

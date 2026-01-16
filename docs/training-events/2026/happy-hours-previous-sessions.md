@@ -6,7 +6,7 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: EESSI Roadmap 2026
 
-### Monday 12 January 2025
+### Monday 12 January 2026
 
 **Outline:** EESSI Roadmap 2026
 ([Slides (PDF)](EESSI-happyhour-2026-001-EESSI-Roadmap-2026.pdf), [Recording (YouTube)](https://youtu.be/M0g7VU5hPvg))
