@@ -1,14 +1,3 @@
-!!! danger "Work in progress"
-
-    *(30 April 2025)*
-
-    The contents of this tutorial are currently being reworked to be up-to-date with recent developments in CernVM-FS,
-    and to be well integrated in the EESSI documentation.
-
-    It is based on the *"Best Practices for CernVM-FS in HPC"* tutorial that was held on
-    4 Dec 2023, see also https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices.
-
-
 # Best Practices for CernVM-FS in HPC
 
 <p align="center">
@@ -26,6 +15,26 @@ on HPC infrastructure.
 <div markdown="1" style="text-align:center;">
 **[Ready to go? Click here to start the tutorial!](cvmfs/what-is-cvmfs.md)**
 </div>
+
+
+## Recording
+
+A first long-form (~3h15min) virtual edition of this tutorial was held on 4 December 2023,
+see [here](https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices/) (recording available)
+
+A slightly shorter (~2h) updated version of this tutorial was presented as a part of the
+[EESSI webinar series in May 2025](../webinar-series-2025Q2.md).
+
+The recording of this session is embedded below:
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5-IYnxCz_aQ?si=zqgYBiZCdY5islK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+## Slides
+
+[Available for download here](../EESSI-webinars-MayJune-2025-002-Introduction-to-CernVM-FS-20250512.pdf)
 
 
 ## Contents
@@ -55,23 +64,6 @@ on HPC infrastructure.
 - [Creating a CernVM-FS repository](creating-repo.md)
 - [Appendix: Terminology](appendix/terminology.md)
 
-
-## Recording
-
-A first virtual edition of this tutorial was held on 4 December 2023,
-the recording is available here:
-
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L0Mmy7NBXDU?si=Ob0DtYN2FH3K169V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<br/><a href="https://raw.githubusercontent.com/multixscale/cvmfs-tutorial-hpc-best-practices/main/files/Best-Practices-for-CernVM-FS-in-HPC-20231204.pdf">
-<em>slides (PDF) available for download here</em></a>
-</p>
-
-### Slides
-
-[Available for download here](https://raw.githubusercontent.com/multixscale/cvmfs-tutorial-hpc-best-practices/main/files/Best-Practices-for-CernVM-FS-in-HPC-20231204.pdf)
-
 ## Intended audience
 
 This tutorial is intended for people with a background in HPC (system administrators, support team members,
@@ -91,12 +83,6 @@ CernVM-FS repositories on HPC infrastructure.
 
 
 ## Practical information
-
-### Registration
-
-Attendance is free, but **registration is required**: <https://event.ugent.be/registration/cvmfshpc202312>.
-
-Registration for online tutorial on Mon 4 Dec 2023 is **closed** *(since Sun 3 Dec 2023)*
 
 ### Slack channel
 

@@ -1,14 +1,3 @@
-!!! danger "Work in progress"
-
-    *(30 April 2025)*
-
-    The contents of this tutorial are currently being reworked to be up-to-date with recent developments in CernVM-FS,
-    and to be well integrated in the EESSI documentation.
-
-    It is based on the *"Best Practices for CernVM-FS in HPC"* tutorial that was held on
-    4 Dec 2023, see also https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices.
-
-
 # Containers and CernVM-FS
 
 CernVM-FS can also be used to distribute container images, providing many of the same benefits that come with any CernVM-FS installation. Especially the on-demand download of accessed files means that containers start nearly instantly, and are more efficient for large images when only a fraction of the files are read, which is typically the case.
