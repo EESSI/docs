@@ -122,6 +122,30 @@ plugins:
         training/2025/webinar-series-2025Q2.md: training-events/2025/webinar-series-2025Q2.md
         training-events/2025/happy-hours-sessions.md: training-events/happy-hours-sessions.md
         training-events/2026/happy-hours-sessions.md: training-events/happy-hours-sessions.md
+        # tutorial site for EESSI webinar on CernVM-FS (May 2025)
+        tutorial/index.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/index.md
+        tutorial/eessi/using-eessi.md: docs/training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/using-eessi.md
+        tutorial/eessi/high-level-design.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/high-level-design.md
+        tutorial/eessi/what-is-eessi.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/what-is-eessi.md
+        tutorial/eessi/support.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/support.md
+        tutorial/eessi/inspiration.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/inspiration.md
+        tutorial/eessi/index.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/index.md
+        tutorial/eessi/motivation-goals.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/motivation-goals.md
+        tutorial/appendix/terminology.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/appendix/terminology.md
+        tutorial/access/alternatives.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/access/alternatives.md
+        tutorial/access/stratum1.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/access/stratum1.md
+        tutorial/access/index.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/access/index.md
+        tutorial/access/proxy.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/access/proxy.md
+        tutorial/access/client.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/access/client.md
+        tutorial/troubleshooting.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/troubleshooting.md
+        tutorial/performance.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/performance.md
+        tutorial/cvmfs/technical-details.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/cvmfs/technical-details.md
+        tutorial/cvmfs/what-is-cvmfs.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/cvmfs/what-is-cvmfs.md
+        tutorial/cvmfs/flagship-repositories.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/cvmfs/flagship-repositories.md
+        tutorial/containers.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/containers.md
+        tutorial/monitoring.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/monitoring.md
+        tutorial/configuration_hpc.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/configuration_hpc.md
+        tutorial/creating-repo.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/creating-repo.md
   # Enable our custom plugin for json-ld metadata
   - inject_ld_json
     # link to any Markdown heading
