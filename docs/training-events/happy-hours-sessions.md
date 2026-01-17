@@ -1,4 +1,4 @@
-# EESSI Happy Hour sessions (2026)
+# EESSI Happy Hour sessions
 
 _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
@@ -31,20 +31,30 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **First session in 2026**: EESSI Roadmap 2026
-### Topic Series: EESSI Roadmap 2026
+### 💡 **Next session**: Meet EESSI: Build Once. Run Everywhere.
+### Topic Series: EESSI Fundamentals Refresher
 🗓️ Schedule
-#### Monday 12 January 2026, 14:00-15:00 CE(S)T
+#### Monday 19 January 2026, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming topic series: TBA shortly
+### Upcoming topic series: EESSI Fundamentals Refresher
 ###### Outline
 
-- 19 January 2026 - TBA shortly
+- 19 January 2026 - Meet EESSI: Build Once. Run Everywhere.
+- 27 January 2026 - EESSI in Motion
 
 ---
 
 ### Previous EESSI Happy Hour sessions
 
-* See [EESSI Happy Hour sessions in 2025](../2025/happy-hours-sessions.md#previous-eessi-happy-hour-sessions)
+[**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
+
+See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
+
+*Topic series: EESSI Roadmap 2026*
+
+- 12 January 2026 - [EESSI Roadmap 2026](https://youtu.be/M0g7VU5hPvg)
+
+---
+### 🧐 [EESSI Happy Hour sessions in 2025](2025/happy-hours-previous-sessions.md)
