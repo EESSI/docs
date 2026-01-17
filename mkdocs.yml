@@ -124,7 +124,7 @@ plugins:
         training-events/2026/happy-hours-sessions.md: training-events/happy-hours-sessions.md
         # tutorial site for EESSI webinar on CernVM-FS (May 2025)
         tutorial/index.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/index.md
-        tutorial/eessi/using-eessi.md: docs/training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/using-eessi.md
+        tutorial/eessi/using-eessi.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/using-eessi.md
         tutorial/eessi/high-level-design.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/high-level-design.md
         tutorial/eessi/what-is-eessi.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/what-is-eessi.md
         tutorial/eessi/support.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/eessi/support.md
