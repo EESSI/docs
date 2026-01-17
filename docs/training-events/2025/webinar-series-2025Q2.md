@@ -121,7 +121,7 @@ no specific prior knowledge or experience with it is required.
 
 - [slides (PDF)](EESSI-webinars-MayJune-2025-002-Introduction-to-CernVM-FS-20250512.pdf)
 - [recording (YouTube)](https://www.youtube.com/watch?v=5-IYnxCz_aQ)
-- [tutorial website](../tutorial-best-practices-cvmfs-hpc/index.md)
+- [tutorial website](tutorial-best-practices-cvmfs-hpc/index.md)
 
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5-IYnxCz_aQ?si=zqgYBiZCdY5islK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
