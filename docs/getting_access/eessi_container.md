@@ -170,7 +170,7 @@ Launching container with command (next line):
 singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
-host_injections  latest  versions
+README.eessi  host_injections  init  versions
 ```
 
 Note that this time no interactive shell session is started in the container:
@@ -229,8 +229,10 @@ Here are the contents for the `eessi_architectures.sh` script:
 #
 
 # determine list of available OS types
-BASE=${EESSI_CVMFS_REPO:-/cvmfs/software.eessi.io}/latest/software
-cd ${BASE}
+VERSIONS="${EESSI_CVMFS_REPO:-/cvmfs/software.eessi.io}/versions"
+LATEST="$(ls "${VERSIONS}" | sort -n | tail -n 1)"
+BASE="${VERSIONS}/${LATEST}/software"
+cd "${BASE}"
 for os_type in $(ls -d *)
 do
     # determine architecture families
@@ -265,23 +267,27 @@ Run the script as follows
 The output should be similar to
 ``` { .yaml linenums="1" }
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).$
-Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
 Launching container with command (next line):
-singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
+linux/aarch64/a64fx
 linux/aarch64/generic
-linux/aarch64/graviton2
-linux/aarch64/graviton3
-linux/ppc64le/generic
-linux/ppc64le/power9le
+linux/aarch64/neoverse_n1
+linux/aarch64/neoverse_v1
+linux/aarch64/nvidia
 linux/x86_64/amd/zen2
 linux/x86_64/amd/zen3
+linux/x86_64/amd/zen4
 linux/x86_64/generic
+linux/x86_64/intel/cascadelake
 linux/x86_64/intel/haswell
+linux/x86_64/intel/icelake
+linux/x86_64/intel/sapphirerapids
 linux/x86_64/intel/skylake_avx512
 ```
-Lines 6 to 15 show the output of the script `eessi_architectures.sh`.
+Lines 7 to 20 show the output of the script `eessi_architectures.sh`.
 
 If you want to use the mode `run`, you have to make the script's location
 available inside the container.
@@ -315,17 +321,16 @@ We can resolve this in two ways:
   which should result in the output similar to
   ``` { .yaml .no-copy }
   Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
-  Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+  Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
   Launching container with command (next line):
-  singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+  singularity -q shell --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
   CernVM-FS: pre-mounted on file descriptor 3
   CernVM-FS: loading Fuse module... done
-  fuse: failed to clone device fd: Inappropriate ioctl for device
-  fuse: trying to continue without -o clone_fd.
-  total 10
-  lrwxrwxrwx 1 user user   10 Jun 30  2021 host_injections -> /opt/eessi
-  lrwxrwxrwx 1 user user   16 May  4  2022 latest -> versions/2021.12
-  drwxr-xr-x 3 user user 4096 Dec 10  2021 versions
+  total 3
+  -rw-r--r-- 1 eessi users 565 Dec  2  2023 README.eessi
+  lrwxrwxrwx 1 eessi users  10 Oct  3  2023 host_injections -> /opt/eessi
+  drwxr-xr-x 3 eessi users  21 Sep  5  2024 init
+  drwxr-xr-x 4 eessi users  21 Jul 22  2024 versions
   ```
 2. Using the flag terminator `--` which tells `eessi_container.sh` to stop
 parsing command line arguments. For example,
@@ -335,17 +340,17 @@ parsing command line arguments. For example,
   which should result in the output similar to
   ``` { .yaml .no-copy }
   Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
-  Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+  Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+  Mounting 'software.eessi.io' 'read-only' without fuse-overlayfs.
   Launching container with command (next line):
-  singularity -q run --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif ls -lH /cvmfs/software.eessi.io
+  singularity -q shell --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
   CernVM-FS: pre-mounted on file descriptor 3
   CernVM-FS: loading Fuse module... done
-  fuse: failed to clone device fd: Inappropriate ioctl for device
-  fuse: trying to continue without -o clone_fd.
-  total 10
-  lrwxrwxrwx 1 user user   10 Jun 30  2021 host_injections -> /opt/eessi
-  lrwxrwxrwx 1 user user   16 May  4  2022 latest -> versions/2021.12
-  drwxr-xr-x 3 user user 4096 Dec 10  2021 versions
+  total 3
+  -rw-r--r-- 1 eessi users 565 Dec  2  2023 README.eessi
+  lrwxrwxrwx 1 eessi users  10 Oct  3  2023 host_injections -> /opt/eessi
+  drwxr-xr-x 3 eessi users  21 Sep  5  2024 init
+  drwxr-xr-x 4 eessi users  21 Jul 22  2024 versions
   ```
 
 ## Running EESSI demos
@@ -364,24 +369,24 @@ The `eessi_container.sh` script may (re)-use a cache directory provided via
 not have to be downloaded again even when starting a new session. The example
 below illustrates this.
 ``` { .bash .copy }
-export SINGULARITY_CACHEDIR=${PWD}/container_cache_dir
+export SINGULARITY_CACHEDIR=${PWD}/singularity_cache
 time ./eessi_container.sh <<< "ls /cvmfs/software.eessi.io"
 ```
 which should produce output similar to
 ``` { .yaml .no-copy }
 Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
-Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+Mounting 'software.eessi.io' 'read-only' without fuse-overlayfs.
 Launching container with command (next line):
-singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
-fuse: failed to clone device fd: Inappropriate ioctl for device
-fuse: trying to continue without -o clone_fd.
-host_injections  latest  versions
-
-real    m40.445s
-user    3m2.621s
-sys     0m7.402s
+CernVM-FS: loading Fuse module... done
+README.eessi  host_injections  init  versions
+real    5m47.88s
+user    1m31.24s
+sys     0m8.91s
 ```
 The next run using the same cache directory, e.g., by simply executing
 ``` { .bash .copy }
@@ -390,18 +395,18 @@ time ./eessi_container.sh <<< "ls /cvmfs/software.eessi.io"
 is much faster
 ``` { .yaml .no-copy }
 Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
-Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+Mounting 'software.eessi.io' 'read-only' without fuse-overlayfs.
 Launching container with command (next line):
-singularity -q shell --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
-fuse: failed to clone device fd: Inappropriate ioctl for device
-fuse: trying to continue without -o clone_fd.
-host_injections  latest  versions
-
-real    0m2.781s
-user    0m0.172s
-sys     0m0.436s
+CernVM-FS: loading Fuse module... done
+README.eessi  host_injections  init  versions
+real    0m2.23s
+user    0m0.17s
+sys     0m0.19s
 ```
 
 !!! Note
@@ -426,10 +431,10 @@ du -sch /tmp/eessi.*
 ```
 which could result in output similar to
 ``` { .yaml .no-copy }
-333M    /tmp/eessi.session123
-333M    /tmp/eessi.session456
-333M    /tmp/eessi.session789
-997M    total
+1.3G	/tmp/eessi.o8iQEaAG5M
+1.3G	/tmp/eessi.obfMHealb4
+1.3G	/tmp/eessi.qZrmm5hEtY
+3.7G	total
 ```
 Clean up disk usage by simply removing directories you do not need any longer.
 
