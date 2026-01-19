@@ -11,7 +11,7 @@ Find slides, and video recordings of earlier sessions below.
 
 **Outline:** EESSI-Christmas: Wishlist for 2026
 
-*This session was deliberately not recorded, to facilitate information discussion & feedback)*
+*(This session was deliberately not recorded, to facilitate information discussion & feedback)*
 
 ---
 
