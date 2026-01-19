@@ -42,7 +42,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ###### Outline
 
 - 19 January 2026 - Meet EESSI: Build Once. Run Everywhere.
-- 27 January 2026 - EESSI in Motion
+- 26 January 2026 - EESSI in Motion
 
 ---
 
