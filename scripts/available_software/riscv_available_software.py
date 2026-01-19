@@ -57,15 +57,7 @@ def main():
 
     # Generate detail markdown pages
     print("Generate detailed pages... ", end="", flush=True)
-<<<<<<< HEAD
-<<<<<<< HEAD
     generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/riscv-detail"))
-=======
-    generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/detail"))
->>>>>>> 22e40ab0 (Generate RISC-V available software and modify left menu)
-=======
-    generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/riscv-detail"))
->>>>>>> 332090fd (Fix a bug in the javascript filing riscv table)
     print("Done!")
 
 
