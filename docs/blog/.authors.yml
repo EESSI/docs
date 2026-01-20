@@ -74,3 +74,23 @@ authors:
     description: University of Barcelona
     avatar: https://avatars.githubusercontent.com/u/3840437?v=4
     slug: https://github.com/ocaisa
+  Crivella:
+    name: Davide Grassano
+    description: CECAM-HQ (EPFL)
+    avatar: https://avatars.githubusercontent.com/u/34096612?v=4
+    slug: https://github.com/Crivella
+  lorisercole:
+    name: Loris Ercole
+    description: CECAM-HQ (EPFL)
+    avatar: https://avatars.githubusercontent.com/u/30901257?v=4
+    slug: https://github.com/lorisercole
+  hvelab:
+    name: Helena Vela Beltran
+    description: Do IT Now
+    avatar: https://avatars.githubusercontent.com/u/47674829?v=4
+    slug: https://github.com/hvelab
+  PPapez:
+    name: Petra Papež
+    description: National Institute of Chemistry, Slovenia
+    avatar: https://avatars.githubusercontent.com/u/134068856?v=4
+    slug: https://github.com/PPapez

@@ -1,10 +1,93 @@
-# EESSI Happy Hour - Previous Sessions
+# EESSI Happy Hour - Previous Sessions (2025)
 
 Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: EESSI-Christmas: Wishlist for 2026
+
+### Monday 22 December 2025
+
+
+**Outline:** EESSI-Christmas: Wishlist for 2026
+
+*(This session was deliberately not recorded, to facilitate information discussion & feedback)*
+
+---
+
+# Topic series: Expanding the reach of EESSI: K8s and Android
+
+### Monday 15 December 2025
+
+**Outline:** EESSI in Kubernetes: The CVMFS-CSI plugin
+([Slides (PDF)](EESSI-happyhour-2025-018-EESSI-K8s-poc-demo.pdf), [Recording (YouTube)](https://youtu.be/onUI4dgg3n8))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/onUI4dgg3n8?si=mFL0AfHTS5j8EQpo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Topic series: Scaling Software Builds Across Architectures with Automation
+
+### Monday 08 December 2025
+
+**Outline:** How It Works: Event Triggers, Build Clusters, and Automated Packaging at Scale
+([Slides (PDF)](EESSI-happyhour-2025-017-EESSI-Bot-How-It-Works.pdf), [Recording (YouTube)](https://youtu.be/IkKdVm2JmAU))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IkKdVm2JmAU?si=nUs0XVVuhrRfbkud" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Monday 01 December 2025
+
+**Outline:** Goals and Design Decisions Behind a Multi-Architecture Build Bot
+([Slides (PDF)](EESSI-happyhour-2025-016-EESSI-Bot-Goals-Design.pdf), [Recording (YouTube)](https://youtu.be/4zYMlZXUGKI))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4zYMlZXUGKI?si=uBHw5I7RG-sv3fmD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Topic series: EESSI dashboard and ReFrame tests
+
+### Monday 24 November 2025
+
+**Outline:** EESSI ReFrame tests
+([Slides (PDF)](EESSI-happyhour-2025-015-EESSI-ReFrame-tests.pdf), [Recording (YouTube)](https://youtu.be/g9_In2AmhhY))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9_In2AmhhY?si=GEmQP47MGCcBGdr3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Monday 17 November 2025
+
+**Outline:** EESSI dashboard
+([Slides (PDF)](EESSI-happyhour-2025-014-EESSI-dashboard.pdf), [Recording (YouTube)](https://youtu.be/f87ylio6k_0))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/f87ylio6k_0?si=NBR5ytZc2U6yJ4lU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Topic series: Troubleshooting and Debugging EESSI software builds
+
+### Monday 10 November 2025
+
+**Outline:** Debugging EESSI software builds
+([Slides (PDF)](EESSI-happyhour-2025-013-Debugging-EESSI-builds.pdf), [Recording (YouTube)](https://youtu.be/QbsXFNuuU3Y))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QbsXFNuuU3Y?si=Vdj3SELYzyDuK820" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: Building on top of EESSI
+
+### Monday 03 November 2025
+
+**Outline:** Contributing software packages to EESSI
+([Slides (PDF)](EESSI-happyhour-2025-012-Contributing-software-to-EESSI.pdf), [Recording (YouTube)](https://www.youtube.com/watch?v=BYgQlI5mmzs))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BYgQlI5mmzs?si=HrQMZa0ckcR_EkQF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Monday 27 October 2025
+
+**Outline:** Building on top of EESSI using `buildenv` modules
+([Slides (PDF)](EESSI-happyhour-2025-011-Using-buildenv-modules.pdf), [Recording (YouTube)](https://youtu.be/0uwUlM1xqNk))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0uwUlM1xqNk?si=Ip7SqiUizhZxPfG_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Monday 20 October 2025
 
@@ -12,7 +95,6 @@ Find slides, and video recordings of earlier sessions below.
 ([Slides (PDF)](EESSI-happyhour-2025-010-How-we-build-software.pdf), [Recording (YouTube)](https://youtu.be/KkD6vtPqqMs))
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KkD6vtPqqMs?si=b-JeESSfzwgZLvUb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
 ### Monday 13 October 2025
 

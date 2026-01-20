@@ -17,7 +17,7 @@ ls /cvmfs/software.eessi.io
 
 If you see output like shown below, **you already have access to EESSI on your system**. :tada:
 ```
-host_injections  latest  versions
+README.eessi  host_injections  init  versions
 ```
 
 For starting to use EESSI, continue reading about

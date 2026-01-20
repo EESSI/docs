@@ -356,9 +356,17 @@ test, so it can be safely symlinked:
 ```
 readonly_files = ['mpi4py_reduce.py']
 ```
-We’ve made the `readonly_files` attribute mandatory for all tests to ensure it’s
-not overlooked. If you are sure no files should be symlinked in your test, set
-it to `['']`:
+
+If _all_ files in the source directory are read-only, instead of specifying the full list in `readonly_files`
+you can simply define
+
+```
+all_readonly_files = True
+```
+and omit `readonly_files` from your class definition.
+
+It's mandatory to define either the `readonly_files` or `all_readonly_files` attribute for all tests to ensure it’s
+not overlooked. If you are sure no files should be symlinked in your test, you can set:
 ```
 readonly_files = ['']
 ```
