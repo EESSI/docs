@@ -34,8 +34,8 @@ EESSI is available on several of the [EuroHPC JU supercomputers](https://eurohpc
 
 Karolina is the EuroHPC JU supercomputer hosted by [IT4Innovations](https://www.it4i.cz/en).
 
-* [General documentation](https://docs.it4i.cz/karolina/introduction)
-* [EESSI @ Karolina](https://docs.it4i.cz/software/eessi)
+* [General documentation](https://docs.it4i.cz/en/docs/clusters/karolina/introduction)
+* [EESSI @ Karolina](https://docs.it4i.cz/en/docs/software/eessi)
 
 ### Vega (Slovenia)
 
@@ -70,7 +70,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 * VSC-5: [General documentation](https://docs.asc.ac.at/systems/vsc5.html) | [EESSI @ VSC-5](https://docs.asc.ac.at/software/eessi.html)
 * MUSICA: [General documentation](https://docs.asc.ac.at/systems/musica.html) | [EESSI @ MUSICA](https://docs.asc.ac.at/software/eessi.html)
 
-MUSICA is currently in a closed test phase, with open testing to follow. It is expected to be operational by the end of 2025.
+MUSICA is currently (Jan’26) in an open test phase.
 
 ### Belgium
 
@@ -128,7 +128,7 @@ MUSICA is currently in a closed test phase, with open testing to follow. It is e
 
 #### University of Luxembourg
 
-* ULHPC platform: [General documentation](https://hpc-docs.uni.lu/) | [EESSI @ ULHPC](https://hpc-docs.uni.lu/software/eessi/)
+* ULHPC platform: [General documentation](https://hpc-docs.uni.lu/) | [EESSI @ ULHPC](https://hpc-docs.uni.lu/environment/eessi/)
 
 ### Netherlands
 
