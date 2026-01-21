@@ -24,7 +24,9 @@ nav:
     - Supported CPU targets: software_layer/cpu_targets.md
     - Supported GPU targets: software_layer/gpu_targets.md
   - Available software and repositories:
-      - Software: available_software/overview.md
+      - Software: 
+        - Production: available_software/overview.md
+        - RISC-V: available_software/riscv_overview.md  
       - Repositories:
         - Production:
           - Software: repositories/software.eessi.io.md
@@ -215,9 +217,10 @@ extra_javascript:
   - https://code.jquery.com/jquery-3.7.0.min.js
   - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
   - available_software/javascripts/populate_overview.js
+  - available_software/javascripts/populate_riscv_overview.js
   - https://cdn.datatables.net/plug-ins/2.2.2/pagination/bootstrap_input.js
 extra_css:
-  # CSS for popultate_overview
+  # CSS for populate_overview
   - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
   - available_software/css/style_table.css
   - https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css
