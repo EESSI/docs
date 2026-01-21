@@ -31,7 +31,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: Meet EESSI: Build Once. Run Everywhere.
+### 💡 **Next session**: EESSI in Motion
 ### Topic Series: EESSI Fundamentals Refresher
 🗓️ Schedule
 #### Monday 19 January 2026, 14:00-15:00 CE(S)T
@@ -41,7 +41,6 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ### Upcoming topic series: EESSI Fundamentals Refresher
 ###### Outline
 
-- 19 January 2026 - Meet EESSI: Build Once. Run Everywhere.
 - 26 January 2026 - EESSI in Motion
 
 ---
@@ -51,6 +50,10 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
+
+*Topic series: EESSI Fundamentals Refresher*
+
+- 19 January 2026 - [Meet EESSI: Build Once. Run Everywhere.](https://youtu.be/gFSMSOziw4c)
 
 *Topic series: EESSI Roadmap 2026*
 

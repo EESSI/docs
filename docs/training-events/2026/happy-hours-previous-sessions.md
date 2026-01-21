@@ -4,6 +4,17 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: EESSI Fundamentals Refresher
+
+### Monday 19 January 2026
+
+**Outline:** Meet EESSI: Build Once. Run Everywhere.
+([Slides (PDF)](EESSI-happyhour-2026-002-Meet-EESSI.pdf), [Recording (YouTube)](https://youtu.be/gFSMSOziw4c))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gFSMSOziw4c?si=KTzekgJPjtY0_oOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: EESSI Roadmap 2026
 
 ### Monday 12 January 2026
