@@ -8,7 +8,7 @@ In EESSI, all software packages are built by a bot. This is great for builds tha
 
 This page describes how you can interactively reproduce failed builds, so that you can more easily debug the issue.
 
-Throughout this page, we will use [this PR](https://github.com/EESSI/software-layer/pull/360) as an example. It intends to add LAMMPS to EESSI. Among other issues, it failed on a [building Plumed](https://github.com/EESSI/software-layer/pull/360#issuecomment-1765913105).
+Throughout this page, we will use [this PR](https://github.com/EESSI/software-layer/pull/472) as an example. It intends to add LAMMPS to EESSI. Among other issues, it failed on [building ScaFaCos](https://github.com/EESSI/software-layer/pull/472#issuecomment-1939116084).
 
 ## Prerequisites
 You will need to have:
@@ -26,18 +26,18 @@ A number of steps are needed to create the same environment in which the bot bui
 - Configure EasyBuild.
 
 ### Fetching the feature branch
-Looking at [the example PR](https://github.com/EESSI/software-layer/pull/360), we see the PR is created from [this fork](https://github.com/laraPPr/software-layer/). First, we clone the fork, then checkout the feature branch (`LAMMPS_23Jun2022`)
+Looking at [the example PR](https://github.com/EESSI/software-layer/pull/472), we see the PR is created from [this fork](https://github.com/laraPPr/software-layer/). First, we clone the fork, then checkout the feature branch (`LAMMPS`)
 ```
 git clone https://github.com/laraPPr/software-layer/
 cd software-layer
-git checkout LAMMPS_23Jun2022
+git checkout add_lammps_2023a
 ```
 Alternatively, if you already have a clone of the `software-layer` you can add it as a new remote
 ```
 cd software-layer
 git remote add laraPPr https://github.com/laraPPr/software-layer/
 git fetch laraPPr
-git checkout LAMMPS_23Jun2022
+git checkout add_lammps_2023a
 ```
 
 ### Starting a shell in the EESSI container
@@ -197,10 +197,10 @@ Among other things, the `configure_easybuild` script sets the install path for E
 !!! Note
     If you want to replicate a build with `generic` optimization (i.e. in `$EESSI_CVMFS_REPO/versions/${EESSI_VERSION}/software/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/generic`) you will need to set `export EASYBUILD_OPTARCH=GENERIC` after sourcing `configure_easybuild`.
 
-
-Next, we need to determine the correct version of EasyBuild to load. Since [the example PR](https://github.com/EESSI/software-layer/pull/360) changes the file `eessi-2023.06-eb-4.8.1-2021b.yml`, this tells us the bot was using version `4.8.1` of EasyBuild to build this. Thus, we load that version of the EasyBuild module and check if everything was configured correctly:
+Next, we should load the EESSI-extend module and determine the correct version of EasyBuild to load. Since [the example PR](https://github.com/EESSI/software-layer/pull/472) changes the file `eessi-2023.06-eb-4.9.0-2023a.yml`, this tells us the bot was using version `4.9.0` of EasyBuild to build this. Thus, we load that version of the EasyBuild module and check if everything was configured correctly:
 ```
-module load EasyBuild/4.8.1
+module load EESSI-extend
+module load EasyBuild/4.9.0
 eb --show-config
 ```
 You should get something similar to
@@ -233,20 +233,24 @@ zip-logs             (E) = bzip2
 ```
 
 ### Building everything in the easystack file
-In our [example PR](https://github.com/EESSI/software-layer/pull/360), the easystack file that was changed was `eessi-2023.06-eb-4.8.1-2021b.yml`. To build this, we run (in the directory that contains the checkout of this feature branch):
+In our [example PR](https://github.com/EESSI/software-layer/pull/472), the easystack file that was changed was `eessi-2023.06-eb-4.9.0-2023a.yml`. To build this, we run (in the directory that contains the checkout of this feature branch):
 ```
-eb --easystack eessi-2023.06-eb-4.8.1-2021b.yml --robot
+eb --easystack eessi-2023.06-eb-4.9.0-2023a.yml --robot
 ```
 After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
 
 ## Building an individual package
 First, prepare the environment by following the [Starting the EESSI software environment](#starting-the-eessi-software-environment) and [Configure EasyBuild](#configure-easybuild) above.
 
-In our [example PR](https://github.com/EESSI/software-layer/pull/360), the individual package that was added to `eessi-2023.06-eb-4.8.1-2021b.yml` was `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`. To mimic the build behaviour, we'll also have to (re)use any options that are listed in the easystack file for `LAMMPS-23Jun2022-foss-2021b-kokkos.eb`, in this case the option `--from-pr 19000`. Thus, to build, we run:
+In our [example PR](https://github.com/EESSI/software-layer/pull/472), the individual package that was added to `eessi-2023.06-eb-4.9.0-2023a.yml` was `LAMMPS-2Aug2023_update2-foss-2023a-kokkos.eb`. To mimic the build behaviour, we'll also have to (re)use any options that are listed in the easystack file for `LAMMPS-2Aug2023_update2-foss-2023a-kokkos.eb`, in this case the option `--from-pr 19471`. Thus, to build, we run:
 ```
-eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19000
+eb LAMMPS-23Jun2022-foss-2021b-kokkos.eb --robot --from-pr 19471
 ```
-After some time, this build fails while trying to build `Plumed`, and we can access the build log to look for clues on why it failed.
+
+!!! Note
+    should use `--from-commit` instead of `--from-pr` from EasyBuild 4.9.2.
+
+After some time, this build fails while trying to build `ScaFaCos`, and we can access the build log to look for clues on why it failed.
 
 !!! Note
     While this might be faster than the easystack-based approach, this is _not_ how the bot builds. So why it _may_ reproduce the failure the bot encounters, it may not reproduce the bug _at all_ (no failure) or run into _different_ bugs. If you want to be sure, use the easystack-based approach.
