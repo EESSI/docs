@@ -31,17 +31,21 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: EESSI in Motion
+### 💡 **Next session**: Revisit `eessi_container.sh` 
 ### Topic Series: EESSI Fundamentals Refresher
 🗓️ Schedule
-#### Monday 19 January 2026, 14:00-15:00 CE(S)T
+#### Monday 2 February 2026, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming topic series: EESSI Fundamentals Refresher
 ###### Outline
 
-- 26 January 2026 - EESSI in Motion
+- 02 February 2026 - Revisit `eessi_container.sh`
+
+- 09 February 2026 - EESSI Without Native CVMFS? Meet `cvmfsexec`!
+
+- 16 February 2026 - EESSI Offline: Portable CVMFS Repositories
 
 ---
 
@@ -52,6 +56,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
 *Topic series: EESSI Fundamentals Refresher*
+
+- 26 January 2026 - [EESSI in Motion](https://youtu.be/6Xx7s1ZlGqs)
 
 - 19 January 2026 - [Meet EESSI: Build Once. Run Everywhere.](https://youtu.be/gFSMSOziw4c)
 
