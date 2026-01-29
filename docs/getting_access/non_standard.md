@@ -162,7 +162,12 @@ You will need to create the files `uid.map` and `gid.map` with the respective va
     $ cat gid.map
     * 1001
 ```
-In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. Please note that specifying the compatibility layer is a must to ensure a proper functioning of the export as it initializes the environment. The most basic setup would be:
+In addition, you need to create a spec file `software.eessi.io.spec` with the files you want to include and/or exclude in the shrinkwrap. Please note that the spec file should at least include
+
+- the compatibility layer for the architecture on which you intend to run the exported stack (in this example, `/versions/2023.06/compat/linux/x86_64/*`)
+- the initialization scripts and EESSI module (`/versions/2023.06/init/*` and `/init/*`)
+
+to ensure a proper functioning of the export as it initializes the environment. The most basic setup would be:
 
 ```bash
 /versions/2023.06/compat/linux/x86_64/*
@@ -192,18 +197,18 @@ From here, you can tune this file to your needs, you can change the release vers
 If instead you wanted the whole tree for a handful of another micro-architecture: 
 
 ```bash
-/versions/2023.06/compat/linux/x86_64/*
+/versions/2023.06/compat/linux/aarch64/*
 /versions/2023.06/init/*
 /versions/2023.06/scripts/*
 /versions/2023.06/software/linux/aarch64/neoverse_n1/*
 /versions/2023.06/software/linux/aarch64/a64fx/*
-/versions/2023.06/software/linux/aarch64/nvidia/*
+/versions/2023.06/software/linux/aarch64/nvidia/grace/*
 # Exclude the Gentoo ebuild repo and cache files
-!/versions/2023.06/compat/linux/x86_64/var/db/repos/gentoo
-!/versions/2023.06/compat/linux/x86_64/var/cache
+!/versions/2023.06/compat/linux/aarch64/var/db/repos/gentoo
+!/versions/2023.06/compat/linux/aarch64/var/cache
 
 ```
-But be careful as exporting the whole tree takes huge amounts of memory. 
+But be careful as exporting the whole tree may require a large amount of memory.
 
 If you want a cleaner approach, you can store the compat layer in a separate file called `software.eessi.io_compat.spec` with the minimal contents stated before. And in the  `software.eessi.io.spec ` only the software files you are interested in. Per example, if you were only interested in GROMACS, you could use the environment inside an existing EESSI installation to generate the spec file from the loaded modules: 
 
