@@ -296,8 +296,3 @@ apptainer shell -B software.eessi.io.sqsh:/cvmfs:image-src=/ docker://ubuntu
 ```
 
 Right now, this may seem like quite a manual process, but there is work in progress towards creating a script to automate this process.
-
-
-
-
-
