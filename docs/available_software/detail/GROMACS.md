@@ -29,7 +29,7 @@ json_ld:
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
   softwareVersion: '[''GROMACS/2024.1-foss-2023b'', ''GROMACS/2024.3-foss-2023b'',
-    ''GROMACS/2024.4-foss-2023b'']'
+    ''GROMACS/2024.3-foss-2023b-PLUMED-2.9.2'', ''GROMACS/2024.4-foss-2023b'']'
   url: https://www.gromacs.org
 ---
 
@@ -56,11 +56,18 @@ module load GROMACS/2024.4-foss-2023b
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |GROMACS/2024.4-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|GROMACS/2024.3-foss-2023b-PLUMED-2.9.2|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |GROMACS/2024.3-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |GROMACS/2024.1-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### GROMACS/2024.4-foss-2023b
+
+This is a list of extensions included in the module:
+
+gmxapi-0.4.2
+
+### GROMACS/2024.3-foss-2023b-PLUMED-2.9.2
 
 This is a list of extensions included in the module:
 
