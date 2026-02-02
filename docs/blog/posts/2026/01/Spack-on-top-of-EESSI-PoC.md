@@ -28,7 +28,7 @@ and leveraging software installations from EESSI for all required dependencies, 
 
 ### Step 1: A Spack database for EESSI
 
-To get started, we created an external *Spack database* using the [`spack.database.Database` class](https://spack.readthedocs.io/en/latest/spack.html#module-spack.database)
+To get started, we created an external ("upstream") *Spack database* using (a modded version of) the [`spack.database.Database` class](https://spack.readthedocs.io/en/latest/spack.html#module-spack.database)
 that Spack provides, which exposes software installed in EESSI to Spack.
 
 This was done through a Python script, and only for a small set of hand-picked software
@@ -38,7 +38,7 @@ Using `spack find`, we can check whether Spack is aware of these installations:
 
 ![Spack database for software installations included in EESSI](spack-eessi-20251106-001.webp)
 
-Looks good so far...
+The `[^]` symbol indicates a package that is provided by our custom "upstream" database. Looks good so far...
 
 
 ### Step 2: Checking required dependencies for QuantumESPRESSO
@@ -53,7 +53,7 @@ When done correctly, we can see that all required dependencies are indeed resolv
 ![Checking required dependencies with `spack spec`](spack-eessi-20251106-002.webp)
 
 Here, we use `@7.4.1` to specify the QuantumESPRESSO version we want to install,
-and `~mpi` to ensure that the QuantumESPRESSO installation will have MPI support.
+and `~mpi` to disable MPI support, for the sake of this simple exercise.
 
 
 ### Step 3: Installing QuantumESPRESSO with Spack
