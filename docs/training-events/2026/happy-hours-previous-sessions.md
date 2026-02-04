@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: EESSI Fundamentals Refresher
 
+### Monday 02 February 2026
+
+**Outline:** Revisit `eessi_container.sh`
+([Slides (PDF)](EESSI-happyhour-2026-004-Revisit-eessi_container.sh.pdf), [Recording (YouTube)](https://youtu.be/On27r07aQug))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/On27r07aQug?si=LybNITgOkH0rwP-9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 26 January 2026
 
 **Outline:** EESSI in Motion
