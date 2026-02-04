@@ -122,7 +122,7 @@ The recommended approach is to change ownership of the `host_injections` directo
 that user. Alternatively (but not recommended), you can override EasyBuild's behaviour and install as root by setting 
 `export EASYBUILD_ALLOW_USE_AS_ROOT_AND_ACCEPT_CONSEQUENCES=1` before running `install_cuda_and_libraries.sh`.
 
-The script seachers `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/easystacks` for any file
+The script searches `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/easystacks` for any file
 named `eessi-*CUDA*.yml`, and installs all CUDA and cuDNN versions defined in those files.
 ```
 Thus, you may want to periodically run this script to pick up on new CUDA and cuDNN versions that get added to EESSI over time.
