@@ -11,6 +11,8 @@ In a previous blog post, [“An example CI workflow that leverages EESSI CI tool
 Pedro Santos Neves explained how to set up a GitLab CI workflow.
 This post will focus on GitHub CI workflows and show how to access the development repository of EESSI.
 
+<!-- more -->
+
 ## Using the CI component in GitHub
 
 We will use the [pyMBE](https://github.com/pyMBE-dev/pyMBE)[^Beyer2024] and
