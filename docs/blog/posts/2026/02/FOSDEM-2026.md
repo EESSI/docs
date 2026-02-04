@@ -21,7 +21,7 @@ Members of the EasyBuild + EESSI community gathered the Thursday and Friday righ
 
 ### EESSI CLI tool
 
-One of the main outcomes of this meet is the brainstorming and consecuently the first releases of the [EESSI CLI tool](https://pypi.org/project/eessi/), a command-line tool to make the interaction with EESSI even easier!
+One of the main outcomes of this meet is the brainstorming and consequently the first releases of the [EESSI CLI tool](https://pypi.org/project/eessi/), a command-line tool to make the interaction with EESSI even easier!
 
 It is still a work-in-progress, but it already features options like `eessi shell` to start an EESSI shell with your version of choice,
 and `eessi check` to verify your [CernVM-FS](https://cernvm.cern.ch/fs/) setup for accessing EESSI.
