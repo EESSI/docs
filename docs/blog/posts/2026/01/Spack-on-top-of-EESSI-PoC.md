@@ -90,5 +90,7 @@ but this is a nice first step...
 This work is being done in collaboration with members of the Spack development team,
 including Todd Gamblin and Massimiliano Culpo.
 
+The code and scripts developed for this proof-of-concept are available in the [EasySpack repository](https://github.com/lorisercole/easyspack). See "Approach #2 [legacy]" in the README for implementation details.
+
 For updates, check the [dedicated support issue](https://gitlab.com/eessi/support/-/issues/170)
 that was opened on using Spack on top of EESSI, or stay tuned for future blog posts!
