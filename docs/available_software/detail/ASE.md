@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ASE/3.22.1-gfbf-2022b'']'
+  softwareVersion: '[''ASE/3.22.1-gfbf-2022b'', ''ASE/3.22.1-gfbf-2023a'']'
   url: https://wiki.fysik.dtu.dk/ase
 ---
 
@@ -46,15 +46,22 @@ The overview below shows which ASE installations are available per target archit
 To start using ASE, load one of these modules using a `module load` command like:
 
 ```shell
-module load ASE/3.22.1-gfbf-2022b
+module load ASE/3.22.1-gfbf-2023a
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|ASE/3.22.1-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |ASE/3.22.1-gfbf-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
+
+### ASE/3.22.1-gfbf-2023a
+
+This is a list of extensions included in the module:
+
+ase-3.22.1, ase-ext-20.9.0, pytest-mock-3.11.1
 
 ### ASE/3.22.1-gfbf-2022b
 
