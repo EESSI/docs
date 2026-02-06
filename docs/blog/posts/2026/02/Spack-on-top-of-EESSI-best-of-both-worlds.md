@@ -12,57 +12,138 @@ slug: Spack-on-top-of-EESSI-best-of-both-worlds
 
 The HPC software landscape offers powerful tools for managing scientific software, such as [EasyBuild](https://easybuild.io) and [Spack](https://spack.io).
 
-[EESSI](https://www.eessi.io) provides a ready-to-use software stack with thousands of optimized packages built with EasyBuild. 
+[EESSI](https://www.eessi.io) provides a ready-to-use software stack with thousands of optimized software installations that were built with EasyBuild.
 
-Imagine you are working on an HPC system with EESSI already available. You have access to a wealth of optimized scientific software packages, libraries, tools, as well as compilers. But you need to install a new tool or a specific version of a package that's not in EESSI yet.
+Imagine you are working on an HPC system with EESSI already available. You have access to a wealth of optimized installations for scientific software packages, libraries, tools, as well as compilers. But you need to install a new tool or a specific version of a package that's not in EESSI yet.
 
-You can already extend EESSI with new software through the [EESSI-extend](https://www.eessi.io/docs/using_eessi/building_on_eessi/#building-software-on-top-of-eessi-with-easybuild) module.
-This utility provides you with a pre-configured EasyBuild installation that you can use to build packages from [EasyConfig files](https://docs.easybuild.io/terminology/#easyconfig_files).
+You can already extend EESSI with new software through the [EESSI-extend](../../../../using_eessi/building_on_eessi.md) module.
+This utility provides you with a pre-configured EasyBuild installation that you can use to build packages from [easyconfig files](https://docs.easybuild.io/terminology/#easyconfig_files).
 
 Like EasyBuild, [Spack](https://spack.io) is a flexible build tool that also offers a vast repository of build recipes maintained by a large and active community, making it a familiar tool for many HPC users.
-By enabling Spack to leverage packages already available in EESSI as dependencies, we can offer users the best of both worlds: the convenience of a pre-built, optimized software stack combined with the flexibility to quickly build new packages using tools they already know.
+By enabling Spack to leverage software installations already available in EESSI as dependencies, we can offer users the best of both worlds: the convenience of a pre-built, optimized software stack combined with the flexibility to quickly build new packages using tools they already know.
 
 <!-- more -->
 
 
-In a previous [blog post](https://www.eessi.io/docs/blog/2026/01/09/Spack-on-top-of-EESSI-PoC/), we presented a first proof-of-concept implementation of this vision. 
+In a previous [blog post](../01/Spack-on-top-of-EESSI-PoC.md), we presented a first proof-of-concept implementation of this vision. 
 We used a custom-built upstream database to make Spack aware of EESSI's software stack and managed to build a new Quantum ESPRESSO installation that reused dependencies from EESSI.
 
-Thanks to recent updates to Spack (in particular, treating externals as concrete specs and allowing the definition of dependencies – see [this PR](https://github.com/spack/spack/pull/51118)) and an active collaboration with its developers, it is now possible to connect Spack and EESSI in a *seamless* and *Spack-native* way.
+Thanks to recent updates to Spack (in particular, treating externals as concrete specs and allowing the definition of dependencies – see [this pull request in Spack](https://github.com/spack/spack/pull/51118)) and an active collaboration with its developers, it is now possible to connect Spack and EESSI in a *seamless* and *Spack-native* way.
 
 ## How it works
 
-Spack 1.1+ introduces external packages treated as concrete specs (i.e. like any other spec), with dependency support, allowing us to expose EESSI packages as externals along with their dependencies.
+Spack 1.1+ introduces external packages treated as concrete specs (i.e. like any other spec), with dependency support, allowing us to expose software installed in EESSI as externals along with their dependencies.
 This is the proper, *Spack-onic* way to achieve our goal, and it does not require any modification of Spack's source code, nor the creation of a custom database.
 
 !!! note
 
     Currently we need to add a small patch to Spack to make sure its compiler wrapper works correctly
     with the unusual sysroot configuration of EESSI. This is a known
-    [issue](https://github.com/spack/spack/issues/51582) that will be addressed in future Spack releases.)
+    [issue](https://github.com/spack/spack/issues/51582) that will be addressed in future Spack releases.
 
 We implement the following workflow to connect Spack to EESSI, and build a new Quantum ESPRESSO with Spack reusing EESSI packages as dependencies.
 
 
-### Step 1 – EESSI software-layer builds
+### Step 1 – External packages for EESSI software layer
 
-Declare EESSI software-layer builds as [external packages](https://spack.readthedocs.io/en/latest/packages_yaml.html#external-packages) in a `packages.yaml` configuration file with [external dependencies](https://spack.readthedocs.io/en/latest/packages_yaml.html#specifying-dependencies-among-external-packages).
+Declare software installations in EESSI software layer as [external packages](https://spack.readthedocs.io/en/latest/packages_yaml.html#external-packages) in a `packages.yaml` configuration file with [external dependencies](https://spack.readthedocs.io/en/latest/packages_yaml.html#specifying-dependencies-among-external-packages).
 
-![Example packages.yaml of software installations included in EESSI](spack-eessi-20260205-001.webp)
+```yaml
+# Example of packages.yaml file for EESSI software stack without compat-layer packages (to be added by detection tool)
+# EESSI detected microarchitecture: haswell
+packages:
+  gcc:
+    externals:
+    - spec: gcc@13.2.0 languages:='c,c++,fortran' target=haswell
+      prefix: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/GCCcore/13.2.0
+      dependencies: []
+      extra_attributes:
+        compilers:
+          c: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/GCCcore/13.2.0/bin/gcc
+          cxx: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/GCCcore/13.2.0/bin/g++
+          fortran: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/GCCcore/13.2.0/bin/gfortran
+  gmake:
+    externals:
+    - spec: gmake@4.4.1 target=haswell
+      prefix: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/make/4.4.1-GCCcore-13.2.0
+      dependencies:
+      - spec: gcc@13.2.0 target=haswell
+  openblas:
+    externals:
+    - spec: openblas@0.3.24~ilp64 threads=openmp target=haswell
+      prefix: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/OpenBLAS/0.3.24-GCC-13.2.0
+      dependencies:
+      - spec: gcc@13.2.0 target=haswell
+  fftw:
+    externals:
+    - spec: fftw@3.3.10~mpi+openmp+shared precision=float,double,long_double,quad target=haswell
+      prefix: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/FFTW/3.3.10-GCC-13.2.0
+      dependencies:
+      - spec: gcc@13.2.0 target=haswell
+  curl:
+    externals:
+    - spec: curl@8.3.0+nghttp2 target=haswell
+      prefix: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/cURL/8.3.0-GCCcore-13.2.0
+      dependencies:
+      - spec: gcc@13.2.0 target=haswell
+      - spec: zlib@1.2.13  # compat
+        deptypes:
+        - link
+      - spec: openssl@1.1.1w  # compat
+        deptypes:
+        - build
+        - link
+  libarchive:
+    externals:
+    - spec: libarchive@3.7.2 target=haswell
+      prefix: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/libarchive/3.7.2-GCCcore-13.2.0
+      dependencies:
+      - spec: gcc@13.2.0 target=haswell
+  cmake:
+    externals:
+    - spec: cmake@3.31.8 target=haswell
+      prefix: /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/intel/haswell/software/CMake/3.27.6-GCCcore-13.2.0
+      dependencies:
+      - spec: gcc@13.2.0 target=haswell
+      - spec: curl@8.3.0 target=haswell
+        deptypes:
+        - build
+        - link
+      - spec: ncurses@6.4.20230401  # compat
+        deptypes:
+        - build
+        - link
+      - spec: zlib@1.2.13  # compat
+        deptypes:
+        - build
+        - link
+      - spec: libarchive@3.7.2 target=haswell
+        deptypes:
+        - build
+        - link
+      - spec: bzip2@1.0.8  # compat
+        deptypes:
+        - link
+      - spec: openssl@1.1.1w  # compat
+        deptypes:
+        - build
+        - link
+
+```
 
 *Variants* (e.g. `~mpi+openmp`) should be specified to the best of our knowledge. By default, Spack will fill in the gaps with the package's default variants.
 
-*Link* and *runtime dependencies* should be specified whenever possible. Pure build dependencies are not needed (the only exception being the *compiler*, Spack can reuse this information). A dependency spec should unambiguously point to another declared external package. If an ambiguity exists, Spack will throw an error.
+*Link* and *runtime dependencies* should be specified whenever possible. Pure build dependencies are not needed (the only exception being the *compiler*, since Spack can reuse this information). A dependency spec should unambiguously point to another declared external package. If an ambiguity exists, Spack will throw an error.
 
 Many packages in EESSI depends on packages of the compatibility layer (e.g. `zlib`), that were filtered out during the build process. To detect these packages, see the [next step](#step-2-optional-suggested-eessi-compat-layer).
 
-Anyway, software packages in EESSI are always RPATH-ed to their dependencies, so in most real-case scenarios linking will likely work even if you forget to declare some dependencies. 
+Since software installations in EESSI are always RPATH'ed to their dependencies, linking will likely work in most real-case scenarios even if you forget to declare some dependencies. 
 
 
-### Step 2 – (optional, suggested) EESSI compat-layer
+### Step 2 – (optional, suggested) EESSI compatibility layer
 
-It is possible to detect OS packages available under the EESSI compat-layer and configure Spack to use them as externals.
-In EESSI, these packages are often dependencies of software-layer packages (see previous example), so it is suggested to include them.
+It is possible to detect software installations available in the EESSI compatibility layer and configure Spack to use them as externals.
+In EESSI, these are often dependencies of software installations in the software layer (see previous example), so it is suggested to include them.
 
 This can be done automatically via `spack external find`:
 
@@ -145,8 +226,8 @@ The future of HPC software management is not about choosing between distribution
 
 ### Learn more and get involved
 
-We encourage you to join the discussion on the `#spack` channel of [EESSI Slack](https://join.slack.com/t/eessi-hpc/shared_invite/zt-2wg10p26d-m_CnRB89xQq3zk9qxf1k3g) and share your experiences and suggestions!
+We encourage you to join the discussion on the `#spack` channel of [EESSI Slack]({{ config.extra.slack_invite_url }}), as well as our weekly [EESSI Happy Hour sessions](https://www.eessi.io/docs/training-events/happy-hours-sessions/), and share your experiences and suggestions!
 
 ### Acknowledgements
 
-This work was made possible thanks to the collaboration with the Spack development team, in particular Todd Gamblin and Massimiliano Culpo, as well as EESSI team members Kenneth Hoste and Alan O'Cais.
+This work was made possible thanks to the collaboration with the Spack development team, in particular [Todd Gamblin](https://github.com/tgamblin) and [Massimiliano Culpo](https://github.com/alalazo), as well as EESSI team members [Kenneth Hoste](https://github.com/boegel) and [Alan O'Cais](https://github.com/ocaisa).
