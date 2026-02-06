@@ -26,7 +26,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''scikit-build-core/0.9.3-GCCcore-12.3.0'', ''scikit-build-core/0.9.3-GCCcore-13.2.0'']'
+  softwareVersion: '[''scikit-build-core/0.5.0-GCCcore-12.3.0'', ''scikit-build-core/0.9.3-GCCcore-12.3.0'',
+    ''scikit-build-core/0.9.3-GCCcore-13.2.0'']'
   url: https://scikit-build.readthedocs.io/en/latest/
 ---
 
@@ -54,6 +55,7 @@ module load scikit-build-core/0.9.3-GCCcore-13.2.0
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |scikit-build-core/0.9.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |scikit-build-core/0.9.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|scikit-build-core/0.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
 
 ### scikit-build-core/0.9.3-GCCcore-13.2.0
@@ -67,3 +69,9 @@ pyproject-metadata-0.8.0, scikit_build_core-0.9.3
 This is a list of extensions included in the module:
 
 pyproject-metadata-0.8.0, scikit_build_core-0.9.3
+
+### scikit-build-core/0.5.0-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+pyproject-metadata-0.8.0, scikit_build_core-0.5.0
