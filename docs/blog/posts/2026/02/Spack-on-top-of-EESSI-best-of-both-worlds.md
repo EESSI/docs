@@ -147,7 +147,7 @@ In EESSI, these are often dependencies of software installations in the software
 
 This can be done automatically via `spack external find`:
 
-![Detect compat-layer packages with spack external find](spack-eessi-20260205-002.webp)
+<script src="https://asciinema.org/a/ZPTl79rWWYdmMqIf.js" id="asciicast-ZPTl79rWWYdmMqIf" async="true"></script>
 
 
 ### Step 3 – Show configured externals
@@ -155,7 +155,7 @@ This can be done automatically via `spack external find`:
 Externals can then be listed via `spack find --show-configured-externals`.
 These packages will get reused during Spack solves by default.
 
-![Show configured externals](spack-eessi-20260205-003.webp)
+![Show configured externals](spack-eessi-20260205-001.webp)
 
 
 ### Step 4 – Build a new Quantum ESPRESSO with Spack
@@ -163,52 +163,39 @@ These packages will get reused during Spack solves by default.
 We can now build new packages with Spack, reusing EESSI installations as dependencies!
 Let's try this out by building a new Quantum ESPRESSO with Spack.
 
-We first check what the concretizer comes up with, using `spack spec`:
+We first check what the concretizer comes up with, using `spack spec -I quantum-espresso~mpi`:
 
-![Spack spec for quantum-espresso](spack-eessi-20260205-004.webp)
+![Spack spec for quantum-espresso](spack-eessi-20260205-002.webp)
 
 Looks good! Spack is reusing EESSI packages as external dependencies. 
 It only needs to build the new `quantum-espresso` itself and a few Spack-specific packages: `compiler-wrapper` that is Spack's compiler wrapper, and `gcc-runtime` that is a local copy of the GCC runtime libraries that are provided by EESSI's `gcc@13.2.0`.
 
 Finally, we can proceed with the installation with `spack install quantum-espresso~mpi`:
 
-![Installing Quantum ESPRESSO with Spack on top of EESSI](spack-eessi-20260205-006.webp)
+<script src="https://asciinema.org/a/1FQKm1E31JpKxY8O.js" id="asciicast-1FQKm1E31JpKxY8O" async="true"></script>
 
 
 ### Step 5 – Verify and run Quantum ESPRESSO
 
 Finally, we can verify that the new Quantum ESPRESSO installation works correctly by running it:
 
-![Running Quantum ESPRESSO installed with Spack](spack-eessi-20260205-005.webp)
+![Running Quantum ESPRESSO installed with Spack](spack-eessi-20260205-003.webp)
 
 When we inspect the `pw.x` binary, we can see that it links to libraries provided by EESSI:
 
-![Inspecting the list of libraries that `pw.x` binary links to](spack-eessi-20260205-007.webp)
+![Inspecting the list of libraries that `pw.x` binary links to](spack-eessi-20260205-004.webp)
 
 (the only exception being `libgomp`, `libgfortran`, `libgcc_s` which come from the `gcc-runtime` package that Spack installs).
 
 
 ## Demo code
 
-A demonstrated implementation of the presented approach is now available in the [EasySpack repository](https://github.com/lorisercole/easyspack).
+A demonstrated implementation of the presented approach is now available in the [Spood repository](https://github.com/lorisercole/spood).
 
-A simple [example script](https://github.com/lorisercole/easyspack/blob/develop/quick_start.sh) showcases the workflow.
-It only requires a running EESSI environment and a patched Spack installation (see instructions in the [README](https://github.com/lorisercole/easyspack/blob/develop/README.md)).
+A simple [example script](https://github.com/lorisercole/spood/blob/develop/quick_start.sh) showcases the workflow.
+It only requires a running EESSI environment and a patched Spack installation (see instructions in the [README](https://github.com/lorisercole/spood/blob/develop/README.md)):
 
-<details>
-<summary>Example output of `quick_start.sh`</summary>
-
-<figure>
-	<img src="../../easyspack-demo-1.webp" alt="Output of quick_start.sh" />
-</figure>
-<figure>
-	<img src="../../easyspack-demo-2.webp" alt="Output of quick_start.sh" />
-</figure>
-<figure>
-	<img src="../../easyspack-demo-3.webp" alt="Output of quick_start.sh" />
-</figure>
-
-</details>
+<script src="https://asciinema.org/a/9ev5dA1e4sHvNigz.js" id="asciicast-9ev5dA1e4sHvNigz" async="true"></script>
 
 
 ## Conclusions and outlook
