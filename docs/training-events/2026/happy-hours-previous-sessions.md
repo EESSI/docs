@@ -1,10 +1,16 @@
 # EESSI Happy Hour - Previous Sessions (2026)
 
 Find slides, and video recordings of earlier sessions below.
-
 ---
 
 # Topic series: EESSI Fundamentals Refresher
+
+### Monday 09 February 2026
+
+**Outline:** EESSI Without Native CVMFS? Meet `cvmfsexec`!
+([Slides (PDF)](EESSI-happyhour-2026-005-Meet-cvmfsexec.pdf), [Recording (YouTube)](https://youtu.be/KJ3UhKFo5fs))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KJ3UhKFo5fs?si=DwW1ZAyxpGDdHweW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Monday 02 February 2026
 

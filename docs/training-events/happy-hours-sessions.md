@@ -31,19 +31,19 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: EESSI Without Native CVMFS? Meet `cvmfsexec`! 
+### 💡 **Next session**: EESSI Offline: Portable CVMFS Repositories
 ### Topic Series: EESSI Fundamentals Refresher
 🗓️ Schedule
-#### Monday 9 February 2026, 14:00-15:00 CE(S)T
+#### Monday 16 February 2026, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming topic series: EESSI Fundamentals Refresher
 ###### Outline
 
-- 09 February 2026 - EESSI Without Native CVMFS? Meet `cvmfsexec`!
-
 - 16 February 2026 - EESSI Offline: Portable CVMFS Repositories
+
+- 23 February 2026 - Have You Met the EESSI Command-Line Interface (CLI)?
 
 ---
 
@@ -54,6 +54,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
 *Topic series: EESSI Fundamentals Refresher*
+
+- 09 February 2026 - [EESSI Without Native CVMFS? Meet `cvmfsexec`!](https://youtu.be/KJ3UhKFo5fs)
 
 - 02 February 2026 - [Revisit `eessi_container.sh`](https://youtu.be/On27r07aQug)
 
