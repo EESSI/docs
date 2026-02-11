@@ -26,7 +26,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''poetry/1.5.1-GCCcore-12.3.0'', ''poetry/1.6.1-GCCcore-13.2.0'']'
+  softwareVersion: '[''poetry/1.5.1-GCCcore-12.3.0'', ''poetry/1.6.1-GCCcore-13.2.0'',
+    ''poetry/1.7.1-GCCcore-12.3.0'']'
   url: https://python-poetry.org
 ---
 
@@ -45,16 +46,23 @@ The overview below shows which poetry installations are available per target arc
 To start using poetry, load one of these modules using a `module load` command like:
 
 ```shell
-module load poetry/1.6.1-GCCcore-13.2.0
+module load poetry/1.7.1-GCCcore-12.3.0
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|poetry/1.7.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |poetry/1.6.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 |poetry/1.5.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
 
+
+### poetry/1.7.1-GCCcore-12.3.0
+
+This is a list of extensions included in the module:
+
+attrs-23.2.0, CacheControl-0.13.1, certifi-2023.11.17, charset-normalizer-3.3.2, cleo-2.1.0, crashtest-0.4.1, dulwich-0.21.7, fastjsonschema-2.19.1, html5lib-1.1, idna-3.6, importlib_metadata-7.0.1, installer-0.7.0, jaraco.classes-3.3.0, jeepney-0.8.0, jsonschema-4.21.0, jsonschema_specifications-2023.12.1, keyring-24.3.0, lockfile-0.12.2, more-itertools-10.2.0, msgpack-1.0.7, pexpect-4.9.0, pkginfo-1.9.6, platformdirs-3.11.0, poetry-1.7.1, poetry_core-1.8.1, poetry_plugin_export-1.6.0, ptyprocess-0.7.0, pyrsistent-0.20.0, rapidfuzz-3.6.1, referencing-0.32.1, requests-2.31.0, requests-toolbelt-1.0.0, rpds_py-0.17.1, SecretStorage-3.3.3, shellingham-1.5.4, six-1.16.0, tomlkit-0.12.3, urllib3-2.1.0, webencodings-0.5.1, zipp-3.17.0
 
 ### poetry/1.6.1-GCCcore-13.2.0
 

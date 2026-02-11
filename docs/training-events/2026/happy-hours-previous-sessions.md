@@ -1,6 +1,7 @@
 # EESSI Happy Hour - Previous Sessions (2026)
 
 Find slides, and video recordings of earlier sessions below.
+
 ---
 
 # Topic series: EESSI Fundamentals Refresher
