@@ -381,6 +381,34 @@
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/FEniCS-Basix-Python/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/FEniCS-Basix/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/FEniCS-DOLFINx-Python/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/FEniCS-DOLFINx/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/FEniCS-FFCx/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/FEniCS-UFL/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/FEniCS-ufcx/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/FFTW.MPI/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
@@ -2197,6 +2225,10 @@
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/nanobind/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/ncbi-vdb/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
@@ -2286,6 +2318,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/patchelf/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/petsc4py/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
@@ -2425,6 +2461,10 @@
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/robin-map/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/rpy2/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
@@ -2469,11 +2509,19 @@
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/slepc4py/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/snakemake/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/snappy/</loc>
+         <lastmod>2026-02-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/spdlog/</loc>
          <lastmod>2026-02-18</lastmod>
     </url>
     <url>
