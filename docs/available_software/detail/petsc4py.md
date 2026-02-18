@@ -5,9 +5,10 @@ json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: pugixml is a light-weight C++ XML processing library
+  description: petsc4py are Python bindings for PETSc, the Portable, Extensible Toolchain
+    for Scientific Computation.
   license: Not confirmed
-  name: pugixml
+  name: petsc4py
   offers:
     '@type': Offer
     price: 0
@@ -24,31 +25,30 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''pugixml/1.14-GCCcore-12.3.0'', ''pugixml/1.14-GCCcore-13.2.0'']'
-  url: https://pugixml.org/
+  softwareVersion: '[''petsc4py/3.22.5-foss-2023b'']'
+  url: https://gitlab.com/petsc/petsc
 ---
 
-pugixml
-=======
+petsc4py
+========
 
 
-pugixml is a light-weight C++ XML processing library
+petsc4py are Python bindings for PETSc, the Portable, Extensible Toolchain for Scientific Computation.
 
-https://pugixml.org/
+https://gitlab.com/petsc/petsc
 # Available modules
 
 
-The overview below shows which pugixml installations are available per target architecture in EESSI, ordered based on software version (new to old).
+The overview below shows which petsc4py installations are available per target architecture in EESSI, ordered based on software version (new to old).
 
-To start using pugixml, load one of these modules using a `module load` command like:
+To start using petsc4py, load one of these modules using a `module load` command like:
 
 ```shell
-module load pugixml/1.14-GCCcore-13.2.0
+module load petsc4py/3.22.5-foss-2023b
 ```
 
 *(This data was automatically generated on {{ generated_time }})*
 
 | |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pugixml/1.14-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|pugixml/1.14-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|petsc4py/3.22.5-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
