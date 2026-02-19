@@ -29,20 +29,25 @@ For CUDA-enabled software to run, it needs to be able to find the **NVIDIA GPU d
 The challenge here is that the NVIDIA GPU drivers are not _always_ in a standard system location, and that we
 can not install the GPU drivers in EESSI (since they are too closely tied to the client OS and GPU hardware).
 
-#### Runtime support for a native EESSI installation (EESSI 2025.06 and newer) {: #nvidia_eessi_native }
+#### Enabling runtime support for a native EESSI installation (using the helper script) {: #nvidia_eessi_native }
 
 To get runtime support, we need to ensure that the EESSI runtime linker can find the drivers. To do this, we symlink the drivers
 in a predictable location that is searched by the EESSI runtime linker.
 
-First, [initialize a version of EESSI](../using_eessi/setting_up_environment.md).
+*Step 1:* [initialize a version of EESSI](../using_eessi/setting_up_environment.md).
 
-Second, define the `EESSI_NVIDIA_OVERRIDE_DEFAULT` variable in your local CernFM-FS configuration to point to a directory where you want
+*Step 2 (EESSI 2025.06 and newer, mandatory):* define the `EESSI_NVIDIA_OVERRIDE_DEFAULT` variable in your local CernFM-FS configuration to point to a directory where you want
 to store the symlinks to the drivers. For example, to store these under `/opt/eessi/nvidia`, one would run:
 
 ```{ .bash .copy }
 sudo bash -c "echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' >> /etc/cvmfs/default.local"
 ```
-(only needed for EESSI 2025.06 and later - the location was not yet configurable for 2023.06).
+
+*Step 2 (EESSI 2023.06, optional):* Change the location in which the symlinks will end up by configuring `EESSI_HOST_INJECTIONS` explicitely (default: `/opt/eessi`):
+
+```{ .bash copy }
+sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' >> /etc/cvmfs/default.local"
+```
 
 Third, you run the helper script
 
@@ -50,20 +55,12 @@ Third, you run the helper script
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
 ```
 
-You should re-run this script every time you update the NVIDIA GPU drivers on the host system, as it may expose libraries that are new to your driver version.
-Note that it is safe to re-run the script even if no driver updates were done: the script should detect that the current version of the drivers were already symlinked.
-
-!!! tip "Manually symlinking the drivers"
-    If, for some reason, the helper script is unable to locate the drivers on your system you _can_ link them manually.
-    To do so, grab the list of libraries that need to be symlinked from [here](https://raw.githubusercontent.com/apptainer/apptainer/main/etc/nvliblist.conf).
-    Then, change to the correct directory:
-    - For EESSI 2025.06 and later: `/cvmfs/software.eessi.io/versions/$EESSI_VERSION>/compat/$EESSI_OS/${EESSI_CPU_FAMILY}/lib/nvidia`,
-    - For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/linux/${EESSI_CPU_FAMILY}/lib`
-    Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
-    ```
+!!! tip "Rerun script after each driver update"
+    You should re-run this script every time you update the NVIDIA GPU drivers on the host system, as it may expose libraries that are new to your driver version.
+    Note that it is safe to re-run the script even if no driver updates were done: the script should detect that the current version of the drivers were already symlinked.
 
 !!! tip "Maintaining different driver versions for each EESSI version"
-    The standard approach means that the drivers may be found by any EESSI version (>= 2025.06). If you prefer to create one set of symlinks per EESSI
+    The standard approach for EESSI >= 2025.06 means that the drivers may be found by any EESSI version. If you prefer to create one set of symlinks per EESSI
     version, instead of defining a single location through EESSI_NVIDIA_OVERRIDE_DEFAULT, you can define one per EESSI version, by setting EESSI_<VERSION>_NVIDIA_OVERRIDE.
     For example:
     ```{ .bash .copy}
@@ -77,6 +74,14 @@ Note that it is safe to re-run the script even if no driver updates were done: t
     For `EESSI/2025.06` and later, that is: `/cvmfs/software.eessi.io/versions/<EESSI_VERSION>/compat/<OS>/<ARCH>/lib/nvidia`).
     This directory is special, since it is a CernVM-FS [Variant Symlink](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks).
     The target of this symlink is what you configure in your local CernVM-FS configuration.
+
+#### Enabling runtime support for a native EESSI installation (using manual symlinking)
+If, for some reason, the helper script is unable to locate the drivers on your system you _can_ link them manually.
+To do so, grab the list of libraries that need to be symlinked from [here](https://raw.githubusercontent.com/apptainer/apptainer/main/etc/nvliblist.conf).
+Then, change to the correct directory:
+- For EESSI 2025.06 and later: `/cvmfs/software.eessi.io/versions/$EESSI_VERSION>/compat/$EESSI_OS/${EESSI_CPU_FAMILY}/lib/nvidia`,
+- For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/linux/${EESSI_CPU_FAMILY}/lib`
+Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
 
 #### Runtime support when using EESSI in a container: {: #nvidia_eessi_container } 
 
@@ -124,7 +129,7 @@ that user. Alternatively (but not recommended), you can override EasyBuild's beh
 
 The script seachers `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/easystacks` for any file
 named `eessi-*CUDA*.yml`, and installs all CUDA and cuDNN versions defined in those files.
-```
+
 Thus, you may want to periodically run this script to pick up on new CUDA and cuDNN versions that get added to EESSI over time.
 
 !!! note "How does EESSI find the local installation of CUDA/cuDNN?"
@@ -145,7 +150,7 @@ Thus, you may want to periodically run this script to pick up on new CUDA and cu
 
 ### Testing the GPU support {: #gpu_cuda_testing }
 
-The quickest way to test if software installations included in  EESSI can access and use your GPU is to run the
+The quickest way to test if software installations included in EESSI can access and use your GPU is to run the
 `deviceQuery` executable that is part of the `CUDA-Samples` module:
 ```
 module load CUDA-Samples
