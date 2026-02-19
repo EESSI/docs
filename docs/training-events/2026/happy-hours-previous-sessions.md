@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: EESSI Fundamentals Refresher
 
+### Monday 16 February 2026
+
+**Outline:** EESSI Offline: Portable CVMFS Repositories
+([Slides (PDF)](EESSI-happyhour-2026-006-Portable-CVMFS-Repositories.pdf), [Recording (YouTube)](https://youtu.be/vhTdU3MyIAw))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vhTdU3MyIAw?si=CPSrMdG9jifLxxSv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 09 February 2026
 
 **Outline:** EESSI Without Native CVMFS? Meet `cvmfsexec`!

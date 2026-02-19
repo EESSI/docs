@@ -31,19 +31,19 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: EESSI Offline: Portable CVMFS Repositories
+### 💡 **Next session**: Have You Met the EESSI Command-Line Interface (CLI)?
 ### Topic Series: EESSI Fundamentals Refresher
 🗓️ Schedule
-#### Monday 16 February 2026, 14:00-15:00 CE(S)T
+#### Monday 23 February 2026, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming topic series: EESSI Fundamentals Refresher
 ###### Outline
 
-- 16 February 2026 - EESSI Offline: Portable CVMFS Repositories
-
 - 23 February 2026 - Have You Met the EESSI Command-Line Interface (CLI)?
+
+- 02 March 2026 - EESSI on macOS: Bringing HPC Software to Your Mac
 
 ---
 
@@ -54,6 +54,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
 *Topic series: EESSI Fundamentals Refresher*
+
+- 16 February 2026 - [EESSI Offline: Portable CVMFS Repositories](https://youtu.be/vhTdU3MyIAw)
 
 - 09 February 2026 - [EESSI Without Native CVMFS? Meet `cvmfsexec`!](https://youtu.be/KJ3UhKFo5fs)
 
