@@ -23,123 +23,134 @@ can use the GPU in your system is available below.
 EESSI supports running CUDA-enabled software. All CUDA-enabled modules are marked with the `(gpu)` feature,
 which is visible in the output produced by `module avail`.
 
-### NVIDIA GPU drivers {: #nvidia_drivers }
+### Configuring runtime support {: #nvidia_drivers}
 
 For CUDA-enabled software to run, it needs to be able to find the **NVIDIA GPU drivers** of the host system.
 The challenge here is that the NVIDIA GPU drivers are not _always_ in a standard system location, and that we
 can not install the GPU drivers in EESSI (since they are too closely tied to the client OS and GPU hardware).
 
-### Compiling software on top of CUDA, cuDNN and other SDKs provided by NVIDIA {: #cuda_sdk }
+#### Enabling runtime support for a native EESSI installation (using the helper script) {: #nvidia_eessi_native }
 
-An additional requirement is necessary if you want to be able to compile software
-that makes use of a CUDA installation or cu\* SDKs (e.g., cuDNN) included in
-EESSI. This requires a *full* installation of the CUDA SDK, cuDNN, etc. However,
-the [CUDA SDK End User License Agreement (EULA)](https://docs.nvidia.com/cuda/eula/index.html)
-and the [Software License Agreement (SLA) for NVIDIA cuDNN](https://docs.nvidia.com/deeplearning/cudnn/latest/reference/eula.html)
-do not allow for full redistribution. In EESSI, we are (currently) only allowed to
-redistribute the files needed to *run* CUDA and cuDNN software.
+To get runtime support, we need to ensure that the EESSI runtime linker can find the drivers. To do this, we symlink the drivers
+in a predictable location that is searched by the EESSI runtime linker.
 
-!!! note "A full CUDA SDK or cuDNN SDK is only needed to *compile* CUDA or cuDNN software"
-    Without a full CUDA SDK or cuDNN SDK on the host system, you will still
-    be able to *run* CUDA-enabled or cuDNN-enabled software from the EESSI stack,
-    you just won't be able to *compile* additional CUDA or cuDNN software.
+*Step 1:* [initialize a version of EESSI](../using_eessi/setting_up_environment.md).
 
-Below, we describe how to make sure that the EESSI software stack can find your
-NVIDIA GPU drivers and (optionally) full installations of the CUDA SDK and the
-cuDNN SDK.
+*Step 2 (EESSI 2025.06 and newer, mandatory):* define the `EESSI_NVIDIA_OVERRIDE_DEFAULT` variable in your local CernVM-FS configuration to point to a directory where you want
+to store the symlinks to the drivers. For example, to store these under `/opt/eessi/nvidia`, one would run:
 
-### Configuring CUDA driver location {: #driver_location }
-
-All CUDA-enabled software in EESSI expects the CUDA drivers to be available in a specific subdirectory of this `host_injections` directory.
-In addition, installations of the CUDA SDK and cuDNN SDK included EESSI are stripped down to the files that we are allowed to redistribute;
-all other files are replaced by symbolic links that point to another specific subdirectory of `host_injections`. For example:
-```
-$ ls -l /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
-lrwxrwxrwx 1 cvmfs cvmfs 109 Dec 21 14:49 /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc -> /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
+```{ .bash .copy }
+sudo bash -c "echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' >> /etc/cvmfs/default.local"
 ```
 
-If the corresponding full installation of the CUDA SDK is available there, the
-CUDA installation included in EESSI can be used to build CUDA software. The same
-applies to the cuDNN SDK.
+*Step 2 (EESSI 2023.06, optional):* Change the location in which the symlinks will end up by configuring `EESSI_HOST_INJECTIONS` explicitly (default: `/opt/eessi`):
 
+```{ .bash copy }
+sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' >> /etc/cvmfs/default.local"
+```
 
-### Using NVIDIA GPUs via a native EESSI installation {: #nvidia_eessi_native }
-
-Here, we describe the steps to enable GPU support when you have a [native EESSI installation](../getting_access/native_installation.md) on your system.
-
-!!! warning "Required permissions"
-    To enable GPU support for EESSI on your system, you will typically need to have system administration rights, since you need write permissions on the folder to the target directory of the `host_injections` symlink.
-
-#### Exposing NVIDIA GPU drivers
-
-To install the symlinks to your GPU drivers in `host_injections`, run the `link_nvidia_host_libraries.sh` script that is included in EESSI:
+Third, you run the helper script
 
 ```{ .bash .copy }
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
 ```
 
-This script uses `ldconfig` on your host system to locate your GPU drivers, and creates symbolic links to them in the correct location under `host_injections` directory. It also stores the CUDA version supported by the driver that the symlinks were created for.
-
-!!! tip "Re-run `link_nvidia_host_libraries.sh` after NVIDIA GPU driver update"
-    You should re-run this script every time you update the NVIDIA GPU drivers on the host system.
-
+!!! tip "Rerun script after each driver update"
+    You should re-run this script every time you update the NVIDIA GPU drivers on the host system, as it may expose libraries that are new to your driver version.
     Note that it is safe to re-run the script even if no driver updates were done: the script should detect that the current version of the drivers were already symlinked.
 
-#### Installing full CUDA SDK and cuDNN SDK (optional) {: #installing-full-cuda-sdk-optional }
+!!! tip "Maintaining different driver versions for each EESSI version"
+    The standard approach for EESSI >= 2025.06 means that the drivers may be found by any EESSI version. If you prefer to create one set of symlinks per EESSI
+    version, instead of defining a single location through EESSI_NVIDIA_OVERRIDE_DEFAULT, you can define one per EESSI version, by setting EESSI_<VERSION>_NVIDIA_OVERRIDE.
+    For example:
+    ```{ .bash .copy}
+    sudo bash -c "echo 'EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia' >> /etc/cvmfs/default.local"
+    ```
 
-To install a full CUDA SDK and cuDNN SDK under `host_injections`, use the `install_cuda_and_libraries.sh` script that is included in EESSI:
+!!! note "How does EESSI find the linked drivers?"
+
+    The runtime linker provided by the EESSI [compatibility layer](../compatibility_layer.md) is configured to search an
+    additional directory (run `ld.so --help | grep -A 10 "Shared library search path"` after initializing EESSI).
+    For `EESSI/2025.06` and later, that is: `/cvmfs/software.eessi.io/versions/<EESSI_VERSION>/compat/<OS>/<ARCH>/lib/nvidia`).
+    This directory is special, since it is a CernVM-FS [Variant Symlink](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks).
+    The target of this symlink is what you configure in your local CernVM-FS configuration.
+
+#### Enabling runtime support for a native EESSI installation (using manual symlinking)
+If, for some reason, the helper script is unable to locate the drivers on your system you _can_ link them manually.
+To do so, grab the list of libraries that need to be symlinked from [here](https://raw.githubusercontent.com/apptainer/apptainer/main/etc/nvliblist.conf).
+Then, change to the correct directory:
+- For EESSI 2025.06 and later: `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}>/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib/nvidia`,
+- For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib`
+Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
+
+#### Runtime support when using EESSI in a container: {: #nvidia_eessi_container } 
+
+If you are running your own [Apptainer](https://apptainer.org/)/[Singularity](https://sylabs.io/singularity) container,
+it is sufficient to use the [`--nv` option](https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard)
+to enable access to GPUs from within the container. This will ensure the container runtime exposes the drivers through
+the `$LD_LIBRARY_PATH`.
+
+If you are using the [EESSI container](../getting_access/eessi_container.md) to access the EESSI software,
+simply pass `--nvidia run` or `--nvidia all` to enable nvidia GPU runtime support.
+
+### Configuring compile time support {: #cuda_sdk }
+
+To compile new CUDA software using dependencies from EESSI, additional configuration is needed.
+
+The [CUDA license](https://docs.nvidia.com/cuda/eula/index.html) and [cuDNN license](https://docs.nvidia.com/deeplearning/cudnn/latest/reference/eula.html)
+only allow redistribution of their _runtime_ libraries. Thus, the installations of CUDA and cuDNN that come with EESSI have been stripped down to contain
+only the runtime libraries. A local installation of CUDA and cuDNN is required to compile new software.
+
+!!! note "A full CUDA SDK or cuDNN SDK is only needed to *compile* CUDA or cuDNN software"
+    Without a full CUDA SDK or cuDNN SDK on the host system, you will still
+    be able to *run* CUDA-enabled or cuDNN-enabled software from the EESSI stack
+    (provided the required configuration for runtime support was done - see above),
+    you just won't be able to *compile* additional CUDA or cuDNN software.
+
+First, [initialize a version of EESSI](../using_eessi/setting_up_environment.md).
+
+Second, (optionally) define the `EESSI_HOST_INJECTIONS` variable in your local CernVM-FS configuration to point to a directory where you want to
+store the local installations of CUDA and cuDNN (the default location is `/opt/eessi`):
+
+```{ .bash .copy }
+sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/my/custom/prefix' >> /etc/cvmfs/default.local"
+```
+
+Third, run the helper script to install the CUDA and cuDNN versions that are used _in that version of EESSI_.
 
 ```{ .bash .copy }
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh
 ```
 
-For example, to install CUDA 12.1.1 and cuDNN 8.9.2.26 in the directory that the [`host_injections` variant symlink](host_injections.md) points to,
-using `/tmp/$USER/EESSI` as directory to store temporary files:
-```
-/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh --temp-dir /tmp/$USER/EESSI --accept-cuda-eula --accept-cudnn-eula
-```
-The versions 12.1.1 for CUDA and 8.9.2.26 for cuDNN are defined in an easystack
-file that is also included in EESSI:
-```
-/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/easystacks/eessi-2023.06-eb-4.9.4-2023a-CUDA-host-injections.yml
-```
-By default, the install script processes all files matching `eessi-*CUDA*.yml` in
-the above `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/easystacks` directory.
+Note that this script uses EasyBuild in order to install CUDA and cuDNN - and EasyBuild does not allow running as root by default. 
+The recommended approach is to change ownership of the `host_injections` directory to a non-root user, and perform the installation with
+that user. Alternatively (but not recommended), you can override EasyBuild's behaviour and install as root by setting 
+`export EASYBUILD_ALLOW_USE_AS_ROOT_AND_ACCEPT_CONSEQUENCES=1` before running `install_cuda_and_libraries.sh`.
 
-You can run `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh --help` to check all of the options.
+The script searches `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/easystacks` for any file
+named `eessi-*CUDA*.yml`, and installs all CUDA and cuDNN versions defined in those files.
 
-!!! tip
+Thus, you may want to periodically run this script to pick up on new CUDA and cuDNN versions that get added to EESSI over time.
 
-    This script uses EasyBuild to install the CUDA SDK and the cuDNN SDK. For this to work, two requirements need to be satisfied:
+!!! note "How does EESSI find the local installation of CUDA/cuDNN?"
+    The non-redistributable components of CUDA/cuDNN in EESSI have been replaced by symlinks that point to a specific directory
+    in the `/cvmfs/software.eessi.io/host_injections` prefix. For example, the `nvcc` compiler can not be redistributed, so it
+    is replaced in EESSI with a symlink:
+    ```
+    $ ls -l /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
+    lrwxrwxrwx 1 cvmfs cvmfs 109 Dec 21 14:49 /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc -> /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
+    ```
+    the `/cvmfs/software.eessi.io/host_injections` directory is special, since it is not part of the actual EESSI repository:
+    it is a CernVM-FS [Variant Symlink](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks) that points to
+    a directory on the local system (`/opt/eessi` by default).
+    The `install_cuda_and_libraries.sh` script installs CUDA and cuDNN in this local directory, thus un-breaking the symlinks.
+    This means that from an end-user point of view, the EESSI CUDA module now 'just works', all while adhering to the EULA
+    (e.g. not redistributing the compiler through EESSI itself).
 
-    * `module load EasyBuild/${EB_VERSION}` must work (EB_VERSION is extracted
-      from the name of the easystack file (e.g., from `eb-4.9.4` EB_VERSION is
-      derived as 4.9.4);
-    * `module load EESSI-extend/${EESSI_VERSION}-easybuild` must work.
-
-    Both modules are included in EESSI.
-
-
-### Using NVIDIA GPUs via EESSI in a container {: #nvidia_eessi_container }
-
-We focus here on the [Apptainer](https://apptainer.org/)/[Singularity](https://sylabs.io/singularity) use case,
-and have only tested the [`--nv` option](https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard)
-to enable access to GPUs from within the container.
-
-If you are using the [EESSI container](../getting_access/eessi_container.md) to access the EESSI software,
-the procedure for enabling GPU support is slightly different and will be documented here eventually.
-
-#### Exposing NVIDIA GPU drivers
-
-When running a container with `apptainer` or `singularity` it is _not_ necessary to run the `install_cuda_host_injections.sh`
-script since both these tools use `$LD_LIBRARY_PATH` internally in order to make the host GPU drivers available
-in the container.
-
-The only scenario where this would be required is if `$LD_LIBRARY_PATH` is modified or undefined.
 
 ### Testing the GPU support {: #gpu_cuda_testing }
 
-The quickest way to test if software installations included in  EESSI can access and use your GPU is to run the
+The quickest way to test if software installations included in EESSI can access and use your GPU is to run the
 `deviceQuery` executable that is part of the `CUDA-Samples` module:
 ```
 module load CUDA-Samples
