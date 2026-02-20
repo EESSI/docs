@@ -36,7 +36,7 @@ in a predictable location that is searched by the EESSI runtime linker.
 
 *Step 1:* [initialize a version of EESSI](../using_eessi/setting_up_environment.md).
 
-*Step 2 (EESSI 2025.06 and newer, mandatory):* define the `EESSI_NVIDIA_OVERRIDE_DEFAULT` variable in your local CernFM-FS configuration to point to a directory where you want
+*Step 2 (EESSI 2025.06 and newer, mandatory):* define the `EESSI_NVIDIA_OVERRIDE_DEFAULT` variable in your local CernVM-FS configuration to point to a directory where you want
 to store the symlinks to the drivers. For example, to store these under `/opt/eessi/nvidia`, one would run:
 
 ```{ .bash .copy }
