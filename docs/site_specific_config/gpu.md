@@ -154,7 +154,7 @@ Thus, you may want to periodically run this script to pick up on new CUDA and cu
     $ ls -l /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
     lrwxrwxrwx 1 cvmfs cvmfs 109 Dec 21 14:49 /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc -> /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
     ```
-    the `/cvmfs/software.eessi.io/host_injections` directory is special, since it is not part of the actual EESSI repository:
+    The `/cvmfs/software.eessi.io/host_injections` directory is special, since it is not part of the actual EESSI repository:
     it is a CernVM-FS [Variant Symlink](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks) that points to
     a directory on the local system (`/opt/eessi` by default).
     The `install_cuda_and_libraries.sh` script installs CUDA and cuDNN in this local directory, thus un-breaking the symlinks.
