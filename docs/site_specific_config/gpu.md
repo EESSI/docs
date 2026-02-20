@@ -49,7 +49,12 @@ sudo bash -c "echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' >> /etc/cvm
 sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' >> /etc/cvmfs/default.local"
 ```
 
-Third, you run the helper script
+*Step 3:* To actually reconfigure the variant symlinks, reload the updated CernVM-FS configuration using:
+```{ .bash copy }
+sudo cvmfs_config reload software.eessi.io
+```
+
+*Step 4:* Run the helper script:
 
 ```{ .bash .copy }
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
@@ -67,6 +72,13 @@ Third, you run the helper script
     sudo bash -c "echo 'EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia' >> /etc/cvmfs/default.local"
     ```
 
+!!! tip "Use a EESSI-specific CernVM-FS configuration file to configure the variant symlinks"
+    Instead of using `/etc/cvmfs/default.local` you can also put the symlink configuration in a local configuration file that is specific to the `software.eessi.io` repository
+    or to the `eessi.io` domain.
+    For the first you can use `/etc/cvmfs/config.d/software.eessi.io.local`, while for the latter you can use `/etc/cvmfs/domain.d/eessi.io.local`.
+    For more details about the different configuration files, 
+    see [the configuration hierarchy section of our CernVM-FS tutorial](https://www.eessi.io/docs/training-events/2025/tutorial-best-practices-cvmfs-hpc/access/client/#configuration_hierarchy).
+
 !!! note "How does EESSI find the linked drivers?"
 
     The runtime linker provided by the EESSI [compatibility layer](../compatibility_layer.md) is configured to search an
@@ -79,11 +91,13 @@ Third, you run the helper script
 If, for some reason, the helper script is unable to locate the drivers on your system you _can_ link them manually.
 To do so, grab the list of libraries that need to be symlinked from [here](https://raw.githubusercontent.com/apptainer/apptainer/main/etc/nvliblist.conf).
 Then, change to the correct directory:
+
 - For EESSI 2025.06 and later: `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}>/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib/nvidia`,
 - For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib`
+
 Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
 
-#### Runtime support when using EESSI in a container: {: #nvidia_eessi_container } 
+#### Runtime support when using EESSI in a container {: #nvidia_eessi_container } 
 
 If you are running your own [Apptainer](https://apptainer.org/)/[Singularity](https://sylabs.io/singularity) container,
 it is sufficient to use the [`--nv` option](https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard)
@@ -140,7 +154,7 @@ Thus, you may want to periodically run this script to pick up on new CUDA and cu
     $ ls -l /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
     lrwxrwxrwx 1 cvmfs cvmfs 109 Dec 21 14:49 /cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc -> /cvmfs/software.eessi.io/host_injections/2023.06/software/linux/x86_64/amd/zen3/software/CUDA/12.1.1/bin/nvcc
     ```
-    the `/cvmfs/software.eessi.io/host_injections` directory is special, since it is not part of the actual EESSI repository:
+    The `/cvmfs/software.eessi.io/host_injections` directory is special, since it is not part of the actual EESSI repository:
     it is a CernVM-FS [Variant Symlink](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#variant-symlinks) that points to
     a directory on the local system (`/opt/eessi` by default).
     The `install_cuda_and_libraries.sh` script installs CUDA and cuDNN in this local directory, thus un-breaking the symlinks.
