@@ -95,7 +95,7 @@ Then, change to the correct directory:
 - For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib`
 Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
 
-#### Runtime support when using EESSI in a container: {: #nvidia_eessi_container } 
+#### Runtime support when using EESSI in a container {: #nvidia_eessi_container } 
 
 If you are running your own [Apptainer](https://apptainer.org/)/[Singularity](https://sylabs.io/singularity) container,
 it is sufficient to use the [`--nv` option](https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard)
