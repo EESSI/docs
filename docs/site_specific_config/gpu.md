@@ -91,8 +91,10 @@ sudo cvmfs_config reload software.eessi.io
 If, for some reason, the helper script is unable to locate the drivers on your system you _can_ link them manually.
 To do so, grab the list of libraries that need to be symlinked from [here](https://raw.githubusercontent.com/apptainer/apptainer/main/etc/nvliblist.conf).
 Then, change to the correct directory:
+
 - For EESSI 2025.06 and later: `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}>/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib/nvidia`,
 - For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib`
+
 Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
 
 #### Runtime support when using EESSI in a container {: #nvidia_eessi_container } 
