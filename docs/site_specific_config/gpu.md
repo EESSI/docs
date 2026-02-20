@@ -43,7 +43,7 @@ to store the symlinks to the drivers. For example, to store these under `/opt/ee
 sudo bash -c "echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' >> /etc/cvmfs/default.local"
 ```
 
-*Step 2 (EESSI 2023.06, optional):* Change the location in which the symlinks will end up by configuring `EESSI_HOST_INJECTIONS` explicitely (default: `/opt/eessi`):
+*Step 2 (EESSI 2023.06, optional):* Change the location in which the symlinks will end up by configuring `EESSI_HOST_INJECTIONS` explicitly (default: `/opt/eessi`):
 
 ```{ .bash copy }
 sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' >> /etc/cvmfs/default.local"
@@ -79,8 +79,8 @@ Third, you run the helper script
 If, for some reason, the helper script is unable to locate the drivers on your system you _can_ link them manually.
 To do so, grab the list of libraries that need to be symlinked from [here](https://raw.githubusercontent.com/apptainer/apptainer/main/etc/nvliblist.conf).
 Then, change to the correct directory:
-- For EESSI 2025.06 and later: `/cvmfs/software.eessi.io/versions/$EESSI_VERSION>/compat/$EESSI_OS/${EESSI_CPU_FAMILY}/lib/nvidia`,
-- For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/linux/${EESSI_CPU_FAMILY}/lib`
+- For EESSI 2025.06 and later: `/cvmfs/software.eessi.io/versions/${EESSI_VERSION}>/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib/nvidia`,
+- For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib`
 Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
 
 #### Runtime support when using EESSI in a container: {: #nvidia_eessi_container } 
