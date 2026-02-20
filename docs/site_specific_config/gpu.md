@@ -49,7 +49,12 @@ sudo bash -c "echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' >> /etc/cvm
 sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' >> /etc/cvmfs/default.local"
 ```
 
-Third, you run the helper script
+*Step 3:* To actually reconfigure the variant symlinks, reload the updated CernVM-FS configuration using:
+```{ .bash copy }
+sudo cvmfs_config reload software.eessi.io
+```
+
+*Step 4:* Run the helper script:
 
 ```{ .bash .copy }
 /cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
@@ -66,6 +71,11 @@ Third, you run the helper script
     ```{ .bash .copy}
     sudo bash -c "echo 'EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia' >> /etc/cvmfs/default.local"
     ```
+
+!!! tip "Use a EESSI-specific CernVM-FS configuration file to configure the variant symlinks"
+    Instead of using `/etc/cvmfs/default.local` you can also put the symlink configuration in a local configuration file that is specific to the `software.eessi.io` repository
+    or to the `eessi.io` domain.
+    For the first you can use `/etc/cvmfs/config.d/software.eessi.io.local`, while for the latter you can use `/etc/cvmfs/domain.d/eessi.io.local`.
 
 !!! note "How does EESSI find the linked drivers?"
 
