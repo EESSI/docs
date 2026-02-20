@@ -76,6 +76,8 @@ sudo cvmfs_config reload software.eessi.io
     Instead of using `/etc/cvmfs/default.local` you can also put the symlink configuration in a local configuration file that is specific to the `software.eessi.io` repository
     or to the `eessi.io` domain.
     For the first you can use `/etc/cvmfs/config.d/software.eessi.io.local`, while for the latter you can use `/etc/cvmfs/domain.d/eessi.io.local`.
+    For more details about the different configuration files, 
+    see [the configuration hierarchy page of our CernVM-FS tutorial](https://www.eessi.io/docs/training-events/2025/tutorial-best-practices-cvmfs-hpc/access/client/#configuration_hierarchy).
 
 !!! note "How does EESSI find the linked drivers?"
 
