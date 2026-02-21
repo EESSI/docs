@@ -1,6 +1,14 @@
+# Macros implemented in Python that can be used in MarkDown files,
+# see also https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/
+#
+# author: Kenneth Hoste (Ghent University)
+# license (SPDX): GPL-2.0-only
+#
 import json
 import urllib.request
 from pathlib import Path
+
+EESSI_API_SOFTWARE_JSON_URL = 'https://www.eessi.io/api_data/data/eessi_api_metadata_software.json'
 
 CPU_ARCHS = {
     'x86_64': ['AMD', 'Intel'],
@@ -10,27 +18,18 @@ CPU_ARCHS = {
 
 
 def define_env(env):
-    @env.macro
-    def load_json(path):
-        full_path = Path(path)
-        with full_path.open() as f:
-            return json.load(f)
-
-    @env.macro
-    def load_json_url(url):
-        with urllib.request.urlopen(url) as response:
-            return json.loads(response.read().decode("utf-8"))
 
     @env.macro
     def load_json_eessi_software():
-        url = 'https://www.eessi.io/api_data/data/eessi_api_metadata_software.json'
-        with urllib.request.urlopen(url) as response:
+        """
+        Load JSON with metadata for software.eessi.io repository,
+        and return Python dictionary with relevant info to generate software overview in EESSI documentation.
+        """
+        with urllib.request.urlopen(EESSI_API_SOFTWARE_JSON_URL) as response:
             data = json.loads(response.read().decode('utf-8'))
-        
+
         data_software = data['software']
         names = data['software'].keys()
-
-        print(f"{names=}")
 
         res = {
             'timestamp': data['timestamp'],
@@ -83,7 +82,7 @@ def define_env(env):
                             'type': ext['type'],
                             'parents': set([name]),
                         }
-            
+
             software['eessi_versions'] = ', '.join(sorted(eessi_versions))
 
             res['software'].append(software)
