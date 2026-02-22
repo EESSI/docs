@@ -97,8 +97,10 @@ plugins:
   - git-revision-date-localized
   # necessary for search to work
   - search
-  # Enable macros so we can use global variables
-  - macros
+  # Enable macros so we can use global variables, and use Jinja2 templates
+  # see also https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/
+  - macros:
+      module_name: docs/available_software/macros
   - redirects:
       redirect_maps:
         # useful easy-to-remember short URLs, don't remove these!

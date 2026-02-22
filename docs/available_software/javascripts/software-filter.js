@@ -1,3 +1,6 @@
+/*
+ * Javascript for search box in software overview page (see docs/available_software/index.md)
+ */
 document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("software-search");
   const cards = document.querySelectorAll(".software-card");

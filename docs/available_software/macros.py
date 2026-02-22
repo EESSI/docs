@@ -29,16 +29,17 @@ def define_env(env):
             data = json.loads(response.read().decode('utf-8'))
 
         data_software = data['software']
-        names = data['software'].keys()
+        names = data_software.keys()
+
+        ext_parents = {}
 
         res = {
             'timestamp': data['timestamp'],
             'n_software': len(names),
             'software': [],
-            'extensions': {},
         }
-        for name in sorted(names):
-            name_data = data['software'][name]
+        for name in names:
+            name_data = data_software[name]
             versions = name_data['versions']
 
             # use description is last version
@@ -64,29 +65,48 @@ def define_env(env):
                 'n_versions': len(versions),
                 'licenses': licenses,
                 'cpu_families': ', '.join(x for x in sorted(cpu_families)),
+                'gpu_families': '',
+                'is_extension': False,
             }
 
             for version in versions:
 
+                # determine EESSI version in which this software version is installed
                 req_mods = version['required_modules']
                 if req_mods and req_mods[0].get('module_name') == 'EESSI':
                     eessi_versions.add(req_mods[0]['module_version'])
 
+                # pick up on extensions included in this software installation (if any)
                 for ext in version['extensions']:
                     ext_key = ext['type'] + ':' + ext['name']
-                    if ext_key in res['extensions']:
-                        res['extensions'][ext_key]['parents'].add(name)
+
+                    # keep track of "parents" for this extension name (per extension version)
+                    if ext_key in ext_parents:
+                        parents = ext_parents[ext_key]
                     else:
-                        res['extensions'][ext_key] = {
+                        parents = {}
+                        ext_parents[ext_key] = parents
+                        # new extension, so also add it to list of software
+                        res['software'].append({
+                            'is_extension': True,
                             'name': ext['name'],
                             'type': ext['type'],
-                            'parents': set([name]),
-                        }
+                            'parents': parents,
+                        })
+                    parent = {'name': name, 'full_module_name': version['module']['full_module_name']}
+                    parents.setdefault(ext['version'], []).append(parent)
 
             software['eessi_versions'] = ', '.join(sorted(eessi_versions))
-
             res['software'].append(software)
 
-        res['n_extensions'] = len(res['extensions'])
+        res['software'] = sorted(res['software'], key=lambda x: x['name'].lower())
+
+        # collect names of all parents per extension
+        for ext in (x for x in res['software'] if x['is_extension']):
+            ext['all_parent_names'] = set([y['name'] for x in ext['parents'].values() for y in x])
+
+        res['n_extensions'] = len([x for x in res['software'] if x['is_extension']])
+
+        print(f"[software overview] {res['n_software']=}, {res['n_extensions']=}")
 
         return res
