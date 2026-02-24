@@ -27,7 +27,7 @@ Overview of extensions included in scikit-build installations
 
 |`distro` version|scikit-build modules that include it|
 | --- | --- |
-|1.8.0|`scikit-build/0.17.6-GCCcore-13.2.0`<br/>`scikit-build/0.17.6-GCCcore-12.3.0`<br/>`scikit-build/0.17.6-GCCcore-13.3.0`|
+|1.8.0|`scikit-build/0.17.6-GCCcore-13.3.0`<br/>`scikit-build/0.17.6-GCCcore-12.3.0`<br/>`scikit-build/0.17.6-GCCcore-13.2.0`|
 |1.9.0|`scikit-build/0.18.1-GCCcore-14.2.0`<br/>`scikit-build/0.18.1-GCCcore-14.3.0`|
 
 ### packaging
@@ -35,7 +35,7 @@ Overview of extensions included in scikit-build installations
 
 |`packaging` version|scikit-build modules that include it|
 | --- | --- |
-|23.1|`scikit-build/0.17.6-GCCcore-13.2.0`<br/>`scikit-build/0.17.6-GCCcore-12.3.0`|
+|23.1|`scikit-build/0.17.6-GCCcore-12.3.0`<br/>`scikit-build/0.17.6-GCCcore-13.2.0`|
 
 ### pyproject-metadata
 
@@ -57,4 +57,4 @@ Overview of extensions included in scikit-build installations
 
 |`scikit_build` version|scikit-build modules that include it|
 | --- | --- |
-|0.17.6|`scikit-build/0.17.6-GCCcore-13.2.0`<br/>`scikit-build/0.17.6-GCCcore-12.3.0`|
+|0.17.6|`scikit-build/0.17.6-GCCcore-12.3.0`<br/>`scikit-build/0.17.6-GCCcore-13.2.0`|

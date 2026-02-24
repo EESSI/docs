@@ -24,7 +24,7 @@ Overview of extensions included in GitPython installations
 
 |`gitdb` version|GitPython modules that include it|
 | --- | --- |
-|4.0.11|`GitPython/3.1.43-GCCcore-13.3.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`<br/>`GitPython/3.1.42-GCCcore-13.2.0`|
+|4.0.11|`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`|
 
 ### GitPython
 
@@ -40,4 +40,4 @@ Overview of extensions included in GitPython installations
 
 |`smmap` version|GitPython modules that include it|
 | --- | --- |
-|5.0.1|`GitPython/3.1.43-GCCcore-13.3.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`<br/>`GitPython/3.1.42-GCCcore-13.2.0`|
+|5.0.1|`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`|

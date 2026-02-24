@@ -37,7 +37,7 @@ Overview of extensions included in scikit-build-core installations
 
 |`pyproject-metadata` version|scikit-build-core modules that include it|
 | --- | --- |
-|0.8.0|`scikit-build-core/0.9.3-GCCcore-13.2.0`<br/>`scikit-build-core/0.10.7-GCCcore-13.2.0`<br/>`scikit-build-core/0.5.0-GCCcore-12.3.0`<br/>`scikit-build-core/0.9.3-GCCcore-12.3.0`|
+|0.8.0|`scikit-build-core/0.5.0-GCCcore-12.3.0`<br/>`scikit-build-core/0.10.7-GCCcore-13.2.0`<br/>`scikit-build-core/0.9.3-GCCcore-13.2.0`<br/>`scikit-build-core/0.9.3-GCCcore-12.3.0`|
 |0.9.1|`scikit-build-core/0.11.5-GCCcore-14.3.0`<br/>`scikit-build-core/0.11.1-GCCcore-14.2.0`|
 
 ### scikit_build_core

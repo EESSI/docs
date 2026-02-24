@@ -23,7 +23,7 @@ Overview of extensions included in redis-py installations
 
 |`async-timeout` version|redis-py modules that include it|
 | --- | --- |
-|4.0.3|`redis-py/5.1.1-GCCcore-13.3.0`<br/>`redis-py/5.0.1-GCCcore-12.3.0`|
+|4.0.3|`redis-py/5.0.1-GCCcore-12.3.0`<br/>`redis-py/5.1.1-GCCcore-13.3.0`|
 
 ### redis-py
 

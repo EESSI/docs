@@ -40,7 +40,7 @@ Overview of extensions included in matplotlib installations
 |`Cycler` version|matplotlib modules that include it|
 | --- | --- |
 |0.11.0|`matplotlib/3.7.2-gfbf-2023a`<br/>`matplotlib/3.7.0-gfbf-2022b`|
-|0.12.1|`matplotlib/3.8.2-gfbf-2023b`<br/>`matplotlib/3.9.2-gfbf-2024a`|
+|0.12.1|`matplotlib/3.9.2-gfbf-2024a`<br/>`matplotlib/3.8.2-gfbf-2023b`|
 
 ### cycler
 
@@ -65,7 +65,7 @@ Overview of extensions included in matplotlib installations
 |`kiwisolver` version|matplotlib modules that include it|
 | --- | --- |
 |1.4.4|`matplotlib/3.7.2-gfbf-2023a`<br/>`matplotlib/3.7.0-gfbf-2022b`|
-|1.4.5|`matplotlib/3.10.3-gfbf-2025a`<br/>`matplotlib/3.8.2-gfbf-2023b`<br/>`matplotlib/3.9.2-gfbf-2024a`|
+|1.4.5|`matplotlib/3.10.3-gfbf-2025a`<br/>`matplotlib/3.9.2-gfbf-2024a`<br/>`matplotlib/3.8.2-gfbf-2023b`|
 
 ### matplotlib
 

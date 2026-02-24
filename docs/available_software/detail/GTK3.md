@@ -53,5 +53,5 @@ Overview of extensions included in GTK3 installations
 
 |`hicolor-icon-theme` version|GTK3 modules that include it|
 | --- | --- |
-|0.17|`GTK3/3.24.37-GCCcore-12.3.0`<br/>`GTK3/3.24.35-GCCcore-12.2.0`<br/>`GTK3/3.24.39-GCCcore-13.2.0`|
+|0.17|`GTK3/3.24.35-GCCcore-12.2.0`<br/>`GTK3/3.24.39-GCCcore-13.2.0`<br/>`GTK3/3.24.37-GCCcore-12.3.0`|
 |0.18|`GTK3/3.24.42-GCCcore-13.3.0`<br/>`GTK3/3.24.43-GCCcore-14.3.0`|

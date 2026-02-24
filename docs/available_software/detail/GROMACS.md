@@ -35,5 +35,5 @@ Overview of extensions included in GROMACS installations
 
 |`gmxapi` version|GROMACS modules that include it|
 | --- | --- |
-|0.4.2|`GROMACS/2025.2-foss-2025a`<br/>`GROMACS/2024.4-foss-2023b-CUDA-12.4.0`<br/>`GROMACS/2024.4-foss-2023b`<br/>`GROMACS/2024.3-foss-2023b`<br/>`GROMACS/2024.3-foss-2023b-PLUMED-2.9.2`|
+|0.4.2|`GROMACS/2025.2-foss-2025a`<br/>`GROMACS/2024.3-foss-2023b-PLUMED-2.9.2`<br/>`GROMACS/2024.3-foss-2023b`<br/>`GROMACS/2024.4-foss-2023b-CUDA-12.4.0`<br/>`GROMACS/2024.4-foss-2023b`|
 |0.5.0|`GROMACS/2024.1-foss-2023b`|

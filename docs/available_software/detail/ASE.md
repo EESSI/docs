@@ -28,7 +28,7 @@ Overview of extensions included in ASE installations
 
 |`ase` version|ASE modules that include it|
 | --- | --- |
-|3.22.1|`ASE/3.22.1-gfbf-2022b`<br/>`ASE/3.22.1-gfbf-2023a`|
+|3.22.1|`ASE/3.22.1-gfbf-2023a`<br/>`ASE/3.22.1-gfbf-2022b`|
 |3.25.0|`ASE/3.25.0-gfbf-2025a`|
 
 ### ase-ext
@@ -36,7 +36,7 @@ Overview of extensions included in ASE installations
 
 |`ase-ext` version|ASE modules that include it|
 | --- | --- |
-|20.9.0|`ASE/3.25.0-gfbf-2025a`<br/>`ASE/3.22.1-gfbf-2022b`<br/>`ASE/3.22.1-gfbf-2023a`|
+|20.9.0|`ASE/3.25.0-gfbf-2025a`<br/>`ASE/3.22.1-gfbf-2023a`<br/>`ASE/3.22.1-gfbf-2022b`|
 
 ### pytest-mock
 

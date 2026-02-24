@@ -25,7 +25,7 @@ Overview of extensions included in ReFrame installations
 |`pip` version|ReFrame modules that include it|
 | --- | --- |
 |21.3.1|`ReFrame/4.3.3`|
-|24.0|`ReFrame/4.6.2`<br/>`ReFrame/4.7.4`|
+|24.0|`ReFrame/4.7.4`<br/>`ReFrame/4.6.2`|
 
 ### reframe
 
@@ -41,7 +41,7 @@ Overview of extensions included in ReFrame installations
 
 |`setuptools` version|ReFrame modules that include it|
 | --- | --- |
-|68.0.0|`ReFrame/4.6.2`<br/>`ReFrame/4.7.4`|
+|68.0.0|`ReFrame/4.7.4`<br/>`ReFrame/4.6.2`|
 
 ### wheel
 
@@ -49,4 +49,4 @@ Overview of extensions included in ReFrame installations
 |`wheel` version|ReFrame modules that include it|
 | --- | --- |
 |0.37.1|`ReFrame/4.3.3`|
-|0.42.0|`ReFrame/4.6.2`<br/>`ReFrame/4.7.4`|
+|0.42.0|`ReFrame/4.7.4`<br/>`ReFrame/4.6.2`|

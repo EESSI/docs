@@ -15,7 +15,3 @@ MUSCLE is one of the best-performing multiple alignment programs
 |Version|Supported CPU targets|Supported GPU targets|Module|
 | --- | --- | --- | --- |
 |5.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`MUSCLE/5.1.0-GCCcore-12.3.0`|
-
-## Extensions
-
-Overview of extensions included in MUSCLE installations

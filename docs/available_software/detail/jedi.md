@@ -37,5 +37,5 @@ Overview of extensions included in jedi installations
 
 |`parso` version|jedi modules that include it|
 | --- | --- |
-|0.8.3|`jedi/0.19.1-GCCcore-13.3.0`<br/>`jedi/0.19.0-GCCcore-12.3.0`<br/>`jedi/0.19.1-GCCcore-13.2.0`|
+|0.8.3|`jedi/0.19.0-GCCcore-12.3.0`<br/>`jedi/0.19.1-GCCcore-13.3.0`<br/>`jedi/0.19.1-GCCcore-13.2.0`|
 |0.8.4|`jedi/0.19.1-GCCcore-14.2.0`|

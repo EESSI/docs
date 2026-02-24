@@ -23,7 +23,7 @@ Overview of extensions included in netcdf4-python installations
 
 |`cftime` version|netcdf4-python modules that include it|
 | --- | --- |
-|1.6.2|`netcdf4-python/1.6.3-foss-2022b`<br/>`netcdf4-python/1.6.4-foss-2023a`|
+|1.6.2|`netcdf4-python/1.6.4-foss-2023a`<br/>`netcdf4-python/1.6.3-foss-2022b`|
 
 ### netcdf4-python
 

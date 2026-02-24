@@ -23,11 +23,11 @@ Overview of extensions included in websockify installations
 
 |`jwcrypto` version|websockify modules that include it|
 | --- | --- |
-|1.5.6|`websockify/0.13.0-gfbf-2024a`<br/>`websockify/0.13.0-gfbf-2023a`|
+|1.5.6|`websockify/0.13.0-gfbf-2023a`<br/>`websockify/0.13.0-gfbf-2024a`|
 
 ### websockify
 
 
 |`websockify` version|websockify modules that include it|
 | --- | --- |
-|0.13.0|`websockify/0.13.0-gfbf-2024a`<br/>`websockify/0.13.0-gfbf-2023a`|
+|0.13.0|`websockify/0.13.0-gfbf-2023a`<br/>`websockify/0.13.0-gfbf-2024a`|

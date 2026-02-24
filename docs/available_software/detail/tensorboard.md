@@ -96,7 +96,7 @@ Overview of extensions included in tensorboard installations
 
 |`rsa` version|tensorboard modules that include it|
 | --- | --- |
-|4.9|`tensorboard/2.18.0-gfbf-2024a`<br/>`tensorboard/2.15.1-gfbf-2023a`|
+|4.9|`tensorboard/2.15.1-gfbf-2023a`<br/>`tensorboard/2.18.0-gfbf-2024a`|
 
 ### tensorboard
 
@@ -118,7 +118,7 @@ Overview of extensions included in tensorboard installations
 
 |`tensorboard_data_server` version|tensorboard modules that include it|
 | --- | --- |
-|0.7.2|`tensorboard/2.18.0-gfbf-2024a`<br/>`tensorboard/2.15.1-gfbf-2023a`|
+|0.7.2|`tensorboard/2.15.1-gfbf-2023a`<br/>`tensorboard/2.18.0-gfbf-2024a`|
 
 ### Werkzeug
 

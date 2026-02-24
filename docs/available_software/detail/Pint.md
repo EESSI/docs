@@ -34,7 +34,7 @@ Overview of extensions included in Pint installations
 
 |`flexcache` version|Pint modules that include it|
 | --- | --- |
-|0.3|`Pint/0.24-GCCcore-13.2.0`<br/>`Pint/0.24.4-GCCcore-14.2.0`|
+|0.3|`Pint/0.24.4-GCCcore-14.2.0`<br/>`Pint/0.24-GCCcore-13.2.0`|
 
 ### flexparser
 

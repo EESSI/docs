@@ -27,7 +27,7 @@ Overview of extensions included in Xvfb installations
 
 |`bdftopcf` version|Xvfb modules that include it|
 | --- | --- |
-|1.1|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.1|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
 
 ### font-misc-misc
 
@@ -35,7 +35,7 @@ Overview of extensions included in Xvfb installations
 |`font-misc-misc` version|Xvfb modules that include it|
 | --- | --- |
 |1.1.2|`Xvfb/21.1.6-GCCcore-12.2.0`|
-|1.1.3|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
+|1.1.3|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 
 ### font-util
 
@@ -51,7 +51,7 @@ Overview of extensions included in Xvfb installations
 
 |`libxcvt` version|Xvfb modules that include it|
 | --- | --- |
-|0.1.2|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|0.1.2|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |0.1.3|`Xvfb/21.1.18-GCCcore-14.3.0`|
 
 ### mkfontdir
@@ -59,14 +59,14 @@ Overview of extensions included in Xvfb installations
 
 |`mkfontdir` version|Xvfb modules that include it|
 | --- | --- |
-|1.0.7|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.0.7|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
 
 ### mkfontscale
 
 
 |`mkfontscale` version|Xvfb modules that include it|
 | --- | --- |
-|1.2.2|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.2.2|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |1.2.3|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`|
 
 ### xauth
@@ -74,7 +74,7 @@ Overview of extensions included in Xvfb installations
 
 |`xauth` version|Xvfb modules that include it|
 | --- | --- |
-|1.1.2|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.1.2|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |1.1.3|`Xvfb/21.1.14-GCCcore-13.3.0`|
 |1.1.4|`Xvfb/21.1.18-GCCcore-14.3.0`|
 
@@ -83,7 +83,7 @@ Overview of extensions included in Xvfb installations
 
 |`xkbcomp` version|Xvfb modules that include it|
 | --- | --- |
-|1.4.6|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.4.6|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |1.4.7|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`|
 
 ### xkeyboard-config

@@ -608,14 +608,6 @@ def generate_software_page(
     table = Table().create_table(columns=n_cols, rows=n_rows, text=table_data)
     md_lines.extend(table.splitlines())
 
-    md_lines.extend([
-        '',
-        f'## Extensions',
-        '',
-        f"Overview of extensions included in {software_name} installations",
-        '',
-    ])
-
     exts = {}
     for version in software_data['versions']:
         for ext_data in version['extensions']:
@@ -623,30 +615,39 @@ def generate_software_page(
             ext_version = ext_details.setdefault(ext_data['version'], set())
             ext_version.add(version['module']['full_module_name'])
 
-    table_header = ['`%s` version', f'{software_name} modules that include it']
-    n_cols = len(table_header)
-
-    for ext_name, ext_details in sorted(exts.items(), key=lambda x: x[0].lower()):
-
+    if exts:
         md_lines.extend([
             '',
-            f'### {ext_name}',
+            f'## Extensions',
+            '',
+            f"Overview of extensions included in {software_name} installations",
             '',
         ])
 
-        table_data = table_header[:]
-        table_data[0] = table_data[0] % ext_name
+        table_header = ['`%s` version', f'{software_name} modules that include it']
+        n_cols = len(table_header)
 
-        n_rows = 1
-        for ext_version, ext_version_mods in sorted(ext_details.items(), key=lambda x: x[0]):
-            n_rows += 1
-            table_data.extend([
-                ext_version,
-                '<br/>'.join('`' + m + '`' for m in ext_version_mods),
+        for ext_name, ext_details in sorted(exts.items(), key=lambda x: x[0].lower()):
+
+            md_lines.extend([
+                '',
+                f'### {ext_name}',
+                '',
             ])
 
-        table = Table().create_table(columns=n_cols, rows=n_rows, text=table_data)
-        md_lines.extend(table.splitlines())
+            table_data = table_header[:]
+            table_data[0] = table_data[0] % ext_name
+
+            n_rows = 1
+            for ext_version, ext_version_mods in sorted(ext_details.items(), key=lambda x: x[0]):
+                n_rows += 1
+                table_data.extend([
+                    ext_version,
+                    '<br/>'.join('`' + m + '`' for m in ext_version_mods),
+                ])
+
+            table = Table().create_table(columns=n_cols, rows=n_rows, text=table_data)
+            md_lines.extend(table.splitlines())
 
     md_txt = '\n'.join(md_lines)
 

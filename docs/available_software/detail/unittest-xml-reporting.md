@@ -12,7 +12,3 @@ The files can be consumed by a wide range of tools, such as build systems, IDEs 
 |Version|Supported CPU targets|Supported GPU targets|Module|
 | --- | --- | --- | --- |
 |3.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`unittest-xml-reporting/3.1.0-GCCcore-13.3.0`|
-
-## Extensions
-
-Overview of extensions included in unittest-xml-reporting installations

@@ -49,7 +49,7 @@ Overview of extensions included in flit installations
 |`docutils` version|flit modules that include it|
 | --- | --- |
 |0.20.1|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
-|0.21.2|`flit/3.9.0-GCCcore-13.3.0`<br/>`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+|0.21.2|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 
 ### flit
 
@@ -65,7 +65,7 @@ Overview of extensions included in flit installations
 
 |`flit-scm` version|flit modules that include it|
 | --- | --- |
-|1.7.0|`flit/3.9.0-GCCcore-13.3.0`<br/>`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+|1.7.0|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 
 ### flit_scm
 
@@ -98,7 +98,7 @@ Overview of extensions included in flit installations
 |`requests` version|flit modules that include it|
 | --- | --- |
 |2.31.0|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
-|2.32.3|`flit/3.9.0-GCCcore-13.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+|2.32.3|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 |2.32.4|`flit/3.12.0-GCCcore-14.3.0`|
 
 ### setuptools-scm
