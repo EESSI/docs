@@ -5,6 +5,7 @@
 # license (SPDX): GPL-2.0-only
 #
 import json
+import os
 import urllib.request
 from pathlib import Path
 
@@ -31,8 +32,15 @@ def define_env(env):
         Load JSON with metadata for software.eessi.io repository,
         and return Python dictionary with relevant info to generate software overview in EESSI documentation.
         """
-        with urllib.request.urlopen(EESSI_API_SOFTWARE_JSON_URL) as response:
-            data = json.loads(response.read().decode('utf-8'))
+        # https://eessi.io/api_data/data/eessi_api_metadata_software.json is expected to be downloaded to docs/available_software/data/
+        root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        json_path = os.path.join(root_dir, 'docs', 'available_software', 'data', 'eessi_api_metadata_software.json')
+        if os.path.exists(json_path):
+            with open(json_path) as fp:
+                data = json.loads(fp.read())
+        else:
+            with urllib.request.urlopen(EESSI_API_SOFTWARE_JSON_URL) as response:
+                data = json.loads(response.read().decode('utf-8'))
 
         data_software = data['software']
         names = data_software.keys()
