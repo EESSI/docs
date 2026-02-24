@@ -7,12 +7,6 @@ Overview of software available in [EESSI's production repository `software.eessi
 
 <em>{{ data.n_software }} unique software projects (+ {{ data.n_extensions }} unique extensions)</em>
 
-!!! warning "Details on GPU installations not included yet"
-
-    The overview currently doesn't expose information about GPU installations of software yet.
-
-    This will be resolved soon.
-
 <!-- see also docs/available_software/javascripts/software-filter.js -->
 <input type="search" id="software-search" class="md-input"
        placeholder="Filter software..."

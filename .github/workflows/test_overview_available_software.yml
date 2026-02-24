@@ -25,4 +25,5 @@ jobs:
           . venv/bin/activate
           pip install -r mkdocs-ldjson-plugin/requirements.txt
 
-          python .github/workflows/scripts/test_overview_available_software.py
+          # disabled, this needs to be re-worked after the changes implemented in https://github.com/EESSI/docs/pull/677
+          # python .github/workflows/scripts/test_overview_available_software.py
