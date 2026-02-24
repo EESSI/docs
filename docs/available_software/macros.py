@@ -63,7 +63,7 @@ def define_env(env):
             for version in versions:
                 for cpu_arch in version['cpu_arch']:
                     cpu_family = cpu_arch.split('/')[0]
-                    cpu_families.union(CPU_ARCHS.get(cpu_family, cpu_family))
+                    cpu_families.update(CPU_ARCHS.get(cpu_family, [cpu_family]))
 
             # determine set of supported GPU families
             gpu_families = set()
