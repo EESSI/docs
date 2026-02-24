@@ -1,0 +1,133 @@
+/*
+ * CSS stylesheet for software overview, see docs/available_software/
+ */
+
+.software-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+}
+
+.software-versions {
+  font-size: 0.6rem;
+  font-style: italic;
+  margin-left: 0.2rem;
+}
+
+.software-link a {
+  font-size: 0.6rem;
+  color: var(--md-typeset-a-color);
+}
+
+.software-more-info a {
+  float: right;
+  font-size: 0.6rem;
+  font-style: italic;
+}
+
+.software-description {
+  font-size: 0.7rem;
+}
+
+.software-cpus {
+  font-size: 0.65rem;
+  font-style: italic;
+}
+
+.software-gpus {
+  font-size: 0.65rem;
+  font-style: italic;
+}
+
+.software-cpu-amd {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: rgb(0,0,0); /* https://www.brandcolorcode.com/advanced-micro-devices-amd */
+  color: var(--md-primary-bg-color);
+  margin-right: 0.3em;
+}
+
+.software-cpu-arm {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: rgb(0,145,189); /* https://www.brandcolorcode.com/arm-company */
+  color: var(--md-primary-bg-color);
+  margin-right: 0.3em;
+}
+
+.software-cpu-intel {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: rgb(0,199,253); /* https://www.brandcolorcode.com/intel */
+  color: rgb(0,0,0);
+  margin-right: 0.3em;
+}
+
+.software-cpu-riscv {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: rgb(253,181,21); /* https://riscv.org/about/brand-guidelines */
+  color: rgb(0,50,98);
+  margin-right: 0.3em;
+}
+
+.software-gpu-amd {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: rgb(0,0,0); /* https://www.brandcolorcode.com/advanced-micro-devices-amd */
+  color: var(--md-primary-bg-color);
+  margin-right: 0.3em;
+}
+
+.software-gpu-nvidia {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: rgb(118,185,0); /* https://www.brandcolorcode.com/nvidia */
+  color: rgb(0,0,0);
+  margin-right: 0.3em;
+}
+
+.software-eessi-versions {
+  font-size: 0.65rem;
+  font-style: italic;
+}
+
+.software-eessi-version-202306 {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: darkslateblue; /* https://www.w3schools.com/cssref/css_colors.php */
+  color: var(--md-primary-bg-color);
+  margin-right: 0.3em;
+}
+
+.software-eessi-version-202506 {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: darkslategrey; /* https://www.w3schools.com/cssref/css_colors.php */
+  color: var(--md-primary-bg-color);
+  margin-right: 0.3em;
+}
