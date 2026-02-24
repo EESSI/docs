@@ -612,7 +612,7 @@ def generate_software_page(
         '',
         f'## Extensions',
         '',
-        f"Overview of extensions included in {software_data} installations",
+        f"Overview of extensions included in {software_name} installations",
         '',
     ])
 
