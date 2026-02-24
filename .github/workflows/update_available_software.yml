@@ -34,6 +34,12 @@ jobs:
           cp docs/available_software/data/json_data.json docs/available_software/data/json_data.json.orig
           cp docs/available_software/data/json_data_detail.json docs/available_software/data/json_data_detail.json.orig
 
+          # download https://eessi.io/api_data/data/eessi_api_metadata_software.json
+          # to where it's expected by docs/available_software/macros.py and scripts/available_software/available_software.py
+          cd docs/available_software/data/
+          curl -OL https://eessi.io/api_data/data/eessi_api_metadata_software.json
+          cd -
+
           export TIME_GENERATED_TEMPLATE="{{ generated_time }}"
           python scripts/available_software/available_software.py
           ./scripts/update_generated_time.sh mkdocs.yml
