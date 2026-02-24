@@ -1,55 +1,19 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft
-    Windows, and MacOS X. FLTK provides modern GUI functionality without the bloat
-    and supports 3D graphics via OpenGL and its built-in GLUT emulation.
-  license: Not confirmed
-  name: FLTK
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''FLTK/1.3.8-GCCcore-12.3.0'']'
-  url: https://www.fltk.org
----
-
-FLTK
-====
+# FLTK
 
 
-FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows, and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL and its built-in GLUT emulation.
+FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,
+ and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL
+ and its built-in GLUT emulation.
 
-https://www.fltk.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.fltk.org](https://www.fltk.org)</span>
+
+## Available installations
 
 
-The overview below shows which FLTK installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.3.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`FLTK/1.3.8-GCCcore-12.3.0`|
 
-To start using FLTK, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load FLTK/1.3.8-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FLTK/1.3.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.fltk.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'FLTK/1.3.8-GCCcore-12.3.0', 'module_name': 'FLTK', 'module_version': '1.3.8-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'libpng/1.6.39-GCCcore-12.3.0', 'module_name': 'libpng', 'module_version': '1.6.39-GCCcore-12.3.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.3.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.3.0'}, {'full_module_name': 'freetype/2.13.0-GCCcore-12.3.0', 'module_name': 'freetype', 'module_version': '2.13.0-GCCcore-12.3.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-12.3.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-12.3.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-12.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'X11/20230603-GCCcore-12.3.0', 'module_name': 'X11', 'module_version': '20230603-GCCcore-12.3.0'}, {'full_module_name': 'libdrm/2.4.115-GCCcore-12.3.0', 'module_name': 'libdrm', 'module_version': '2.4.115-GCCcore-12.3.0'}, {'full_module_name': 'libglvnd/1.6.0-GCCcore-12.3.0', 'module_name': 'libglvnd', 'module_version': '1.6.0-GCCcore-12.3.0'}, {'full_module_name': 'libunwind/1.6.2-GCCcore-12.3.0', 'module_name': 'libunwind', 'module_version': '1.6.2-GCCcore-12.3.0'}, {'full_module_name': 'LLVM/16.0.6-GCCcore-12.3.0', 'module_name': 'LLVM', 'module_version': '16.0.6-GCCcore-12.3.0'}, {'full_module_name': 'Mesa/23.1.4-GCCcore-12.3.0', 'module_name': 'Mesa', 'module_version': '23.1.4-GCCcore-12.3.0'}, {'full_module_name': 'libGLU/9.0.3-GCCcore-12.3.0', 'module_name': 'libGLU', 'module_version': '9.0.3-GCCcore-12.3.0'}, {'full_module_name': 'NASM/2.16.01-GCCcore-12.3.0', 'module_name': 'NASM', 'module_version': '2.16.01-GCCcore-12.3.0'}, {'full_module_name': 'libjpeg-turbo/2.1.5.1-GCCcore-12.3.0', 'module_name': 'libjpeg-turbo', 'module_version': '2.1.5.1-GCCcore-12.3.0'}, {'full_module_name': 'xprop/1.2.6-GCCcore-12.3.0', 'module_name': 'xprop', 'module_version': '1.2.6-GCCcore-12.3.0'}, {'full_module_name': 'FLTK/1.3.8-GCCcore-12.3.0', 'module_name': 'FLTK', 'module_version': '1.3.8-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,\n and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL\n and its built-in GLUT emulation.', 'version': '1.3.8', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.fltk.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'FLTK is a cross-platform C++ GUI toolkit for UNIX/Linux (X11), Microsoft Windows,\n and MacOS X. FLTK provides modern GUI functionality without the bloat and supports 3D graphics via OpenGL\n and its built-in GLUT emulation.'} installations

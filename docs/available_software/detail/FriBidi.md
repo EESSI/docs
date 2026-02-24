@@ -1,56 +1,24 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: The Free Implementation of the Unicode Bidirectional Algorithm.
-  license: Not confirmed
-  name: FriBidi
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''FriBidi/1.0.12-GCCcore-12.2.0'', ''FriBidi/1.0.12-GCCcore-12.3.0'',
-    ''FriBidi/1.0.13-GCCcore-13.2.0'']'
-  url: https://github.com/fribidi/fribidi
----
-
-FriBidi
-=======
+# FriBidi
 
 
-The Free Implementation of the Unicode Bidirectional Algorithm.
 
-https://github.com/fribidi/fribidi
-# Available modules
+ The Free Implementation of the Unicode Bidirectional Algorithm.
 
 
-The overview below shows which FriBidi installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://github.com/fribidi/fribidi](https://github.com/fribidi/fribidi)</span>
 
-To start using FriBidi, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load FriBidi/1.0.13-GCCcore-13.2.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.0.12|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`FriBidi/1.0.12-GCCcore-12.2.0`|
+|1.0.12|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`FriBidi/1.0.12-GCCcore-12.3.0`|
+|1.0.13|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`FriBidi/1.0.13-GCCcore-13.2.0`|
+|1.0.15|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`FriBidi/1.0.15-GCCcore-13.3.0`|
+|1.0.16|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`FriBidi/1.0.16-GCCcore-14.2.0`|
+|1.0.16|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`FriBidi/1.0.16-GCCcore-14.3.0`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FriBidi/1.0.13-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|FriBidi/1.0.12-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|FriBidi/1.0.12-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/fribidi/fribidi', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'FriBidi/1.0.12-GCCcore-12.2.0', 'module_name': 'FriBidi', 'module_version': '1.0.12-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'FriBidi/1.0.12-GCCcore-12.2.0', 'module_name': 'FriBidi', 'module_version': '1.0.12-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The Free Implementation of the Unicode Bidirectional Algorithm.\n', 'version': '1.0.12', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/fribidi/fribidi', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'FriBidi/1.0.12-GCCcore-12.3.0', 'module_name': 'FriBidi', 'module_version': '1.0.12-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'FriBidi/1.0.12-GCCcore-12.3.0', 'module_name': 'FriBidi', 'module_version': '1.0.12-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The Free Implementation of the Unicode Bidirectional Algorithm.\n', 'version': '1.0.12', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/fribidi/fribidi', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'FriBidi/1.0.13-GCCcore-13.2.0', 'module_name': 'FriBidi', 'module_version': '1.0.13-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'FriBidi/1.0.13-GCCcore-13.2.0', 'module_name': 'FriBidi', 'module_version': '1.0.13-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The Free Implementation of the Unicode Bidirectional Algorithm.\n', 'version': '1.0.13', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/fribidi/fribidi', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'FriBidi/1.0.15-GCCcore-13.3.0', 'module_name': 'FriBidi', 'module_version': '1.0.15-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'FriBidi/1.0.15-GCCcore-13.3.0', 'module_name': 'FriBidi', 'module_version': '1.0.15-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The Free Implementation of the Unicode Bidirectional Algorithm.\n', 'version': '1.0.15', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/fribidi/fribidi', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'FriBidi/1.0.16-GCCcore-14.2.0', 'module_name': 'FriBidi', 'module_version': '1.0.16-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'FriBidi/1.0.16-GCCcore-14.2.0', 'module_name': 'FriBidi', 'module_version': '1.0.16-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The Free Implementation of the Unicode Bidirectional Algorithm.\n', 'version': '1.0.16', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/fribidi/fribidi', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'FriBidi/1.0.16-GCCcore-14.3.0', 'module_name': 'FriBidi', 'module_version': '1.0.16-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'FriBidi/1.0.16-GCCcore-14.3.0', 'module_name': 'FriBidi', 'module_version': '1.0.16-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The Free Implementation of the Unicode Bidirectional Algorithm.\n', 'version': '1.0.16', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://github.com/fribidi/fribidi', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\n The Free Implementation of the Unicode Bidirectional Algorithm.\n'} installations

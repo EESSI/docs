@@ -1,53 +1,17 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Network extensions for GLib
-  license: Not confirmed
-  name: glib-networking
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''glib-networking/2.72.1-GCCcore-12.3.0'']'
-  url: https://gitlab.gnome.org/GNOME/glib-networking
----
-
-glib-networking
-===============
+# glib-networking
 
 
 Network extensions for GLib
 
-https://gitlab.gnome.org/GNOME/glib-networking
-# Available modules
+<small>homepage: </small><span class="software-link">[https://gitlab.gnome.org/GNOME/glib-networking](https://gitlab.gnome.org/GNOME/glib-networking)</span>
+
+## Available installations
 
 
-The overview below shows which glib-networking installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|2.72.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`glib-networking/2.72.1-GCCcore-12.3.0`|
 
-To start using glib-networking, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load glib-networking/2.72.1-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|glib-networking/2.72.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://gitlab.gnome.org/GNOME/glib-networking', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'glib-networking/2.72.1-GCCcore-12.3.0', 'module_name': 'glib-networking', 'module_version': '2.72.1-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'PCRE2/10.42-GCCcore-12.3.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-12.3.0'}, {'full_module_name': 'GLib/2.77.1-GCCcore-12.3.0', 'module_name': 'GLib', 'module_version': '2.77.1-GCCcore-12.3.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.3.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.3.0'}, {'full_module_name': 'nettle/3.9.1-GCCcore-12.3.0', 'module_name': 'nettle', 'module_version': '3.9.1-GCCcore-12.3.0'}, {'full_module_name': 'gc/8.2.4-GCCcore-12.3.0', 'module_name': 'gc', 'module_version': '8.2.4-GCCcore-12.3.0'}, {'full_module_name': 'libunistring/1.1-GCCcore-12.3.0', 'module_name': 'libunistring', 'module_version': '1.1-GCCcore-12.3.0'}, {'full_module_name': 'Guile/3.0.9-GCCcore-12.3.0', 'module_name': 'Guile', 'module_version': '3.0.9-GCCcore-12.3.0'}, {'full_module_name': 'libtasn1/4.19.0-GCCcore-12.3.0', 'module_name': 'libtasn1', 'module_version': '4.19.0-GCCcore-12.3.0'}, {'full_module_name': 'libidn2/2.3.7-GCCcore-12.3.0', 'module_name': 'libidn2', 'module_version': '2.3.7-GCCcore-12.3.0'}, {'full_module_name': 'p11-kit/0.25.3-GCCcore-12.3.0', 'module_name': 'p11-kit', 'module_version': '0.25.3-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'GnuTLS/3.7.8-GCCcore-12.3.0', 'module_name': 'GnuTLS', 'module_version': '3.7.8-GCCcore-12.3.0'}, {'full_module_name': 'glib-networking/2.72.1-GCCcore-12.3.0', 'module_name': 'glib-networking', 'module_version': '2.72.1-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Network extensions for GLib', 'version': '2.72.1', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://gitlab.gnome.org/GNOME/glib-networking', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Network extensions for GLib'} installations

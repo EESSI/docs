@@ -1,56 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: WPE is the reference WebKit port for embedded andlow-consumption computer
-    devices. It has been designed from theground-up with performance, small footprint,
-    accelerated contentrendering, and simplicity of deployment in mind, bringing theexcellence
-    of the WebKit engine to countless platforms and target devices.
-  license: Not confirmed
-  name: libwpe
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''libwpe/1.16.0-GCCcore-12.3.0'']'
-  url: https://webkit.org/wpe
----
-
-libwpe
-======
+# libwpe
 
 
-WPE is the reference WebKit port for embedded andlow-consumption computer devices. It has been designed from theground-up with performance, small footprint, accelerated contentrendering, and simplicity of deployment in mind, bringing theexcellence of the WebKit engine to countless platforms and target devices.
+WPE is the reference WebKit port for embedded and
+low-consumption computer devices. It has been designed from the
+ground-up with performance, small footprint, accelerated content
+rendering, and simplicity of deployment in mind, bringing the
+excellence of the WebKit engine to countless platforms and target devices.
 
-https://webkit.org/wpe
-# Available modules
+<small>homepage: </small><span class="software-link">[https://webkit.org/wpe](https://webkit.org/wpe)</span>
+
+## Available installations
 
 
-The overview below shows which libwpe installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.16.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`libwpe/1.16.0-GCCcore-12.3.0`|
 
-To start using libwpe, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load libwpe/1.16.0-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libwpe/1.16.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://webkit.org/wpe', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'libwpe/1.16.0-GCCcore-12.3.0', 'module_name': 'libwpe', 'module_version': '1.16.0-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'libpng/1.6.39-GCCcore-12.3.0', 'module_name': 'libpng', 'module_version': '1.6.39-GCCcore-12.3.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.3.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.3.0'}, {'full_module_name': 'freetype/2.13.0-GCCcore-12.3.0', 'module_name': 'freetype', 'module_version': '2.13.0-GCCcore-12.3.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-12.3.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-12.3.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-12.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'X11/20230603-GCCcore-12.3.0', 'module_name': 'X11', 'module_version': '20230603-GCCcore-12.3.0'}, {'full_module_name': 'libdrm/2.4.115-GCCcore-12.3.0', 'module_name': 'libdrm', 'module_version': '2.4.115-GCCcore-12.3.0'}, {'full_module_name': 'libglvnd/1.6.0-GCCcore-12.3.0', 'module_name': 'libglvnd', 'module_version': '1.6.0-GCCcore-12.3.0'}, {'full_module_name': 'libunwind/1.6.2-GCCcore-12.3.0', 'module_name': 'libunwind', 'module_version': '1.6.2-GCCcore-12.3.0'}, {'full_module_name': 'LLVM/16.0.6-GCCcore-12.3.0', 'module_name': 'LLVM', 'module_version': '16.0.6-GCCcore-12.3.0'}, {'full_module_name': 'Mesa/23.1.4-GCCcore-12.3.0', 'module_name': 'Mesa', 'module_version': '23.1.4-GCCcore-12.3.0'}, {'full_module_name': 'glew/2.2.0-GCCcore-12.3.0-osmesa', 'module_name': 'glew', 'module_version': '2.2.0-GCCcore-12.3.0-osmesa'}, {'full_module_name': 'libwpe/1.16.0-GCCcore-12.3.0', 'module_name': 'libwpe', 'module_version': '1.16.0-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'WPE is the reference WebKit port for embedded and\nlow-consumption computer devices. It has been designed from the\nground-up with performance, small footprint, accelerated content\nrendering, and simplicity of deployment in mind, bringing the\nexcellence of the WebKit engine to countless platforms and target devices.', 'version': '1.16.0', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://webkit.org/wpe', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'WPE is the reference WebKit port for embedded and\nlow-consumption computer devices. It has been designed from the\nground-up with performance, small footprint, accelerated content\nrendering, and simplicity of deployment in mind, bringing the\nexcellence of the WebKit engine to countless platforms and target devices.'} installations

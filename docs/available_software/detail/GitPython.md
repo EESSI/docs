@@ -1,67 +1,43 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: GitPython is a python library used to interact with Git repositories
-  license: Not confirmed
-  name: GitPython
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''GitPython/3.1.40-GCCcore-12.3.0'', ''GitPython/3.1.42-GCCcore-13.2.0'']'
-  url: https://gitpython.readthedocs.org
----
-
-GitPython
-=========
+# GitPython
 
 
-GitPython is a python library used to interact with Git repositories
+ GitPython is a python library used to interact with Git repositories 
 
-https://gitpython.readthedocs.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://gitpython.readthedocs.org](https://gitpython.readthedocs.org)</span>
 
-
-The overview below shows which GitPython installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using GitPython, load one of these modules using a `module load` command like:
-
-```shell
-module load GitPython/3.1.42-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GitPython/3.1.42-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|GitPython/3.1.40-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### GitPython/3.1.42-GCCcore-13.2.0
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.1.40|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`GitPython/3.1.40-GCCcore-12.3.0`|
+|3.1.42|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`GitPython/3.1.42-GCCcore-13.2.0`|
+|3.1.43|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`GitPython/3.1.43-GCCcore-13.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-gitdb-4.0.11, GitPython-3.1.42, smmap-5.0.1
+Overview of extensions included in {'versions': [{'homepage': 'https://gitpython.readthedocs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'GitPython/3.1.40-GCCcore-12.3.0', 'module_name': 'GitPython', 'module_version': '3.1.40-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'cURL/8.0.1-GCCcore-12.3.0', 'module_name': 'cURL', 'module_version': '8.0.1-GCCcore-12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'Perl/5.36.1-GCCcore-12.3.0', 'module_name': 'Perl', 'module_version': '5.36.1-GCCcore-12.3.0'}, {'full_module_name': 'git/2.41.0-GCCcore-12.3.0-nodocs', 'module_name': 'git', 'module_version': '2.41.0-GCCcore-12.3.0-nodocs'}, {'full_module_name': 'GitPython/3.1.40-GCCcore-12.3.0', 'module_name': 'GitPython', 'module_version': '3.1.40-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': ' GitPython is a python library used to interact with Git repositories ', 'version': '3.1.40', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'smmap', 'version': '5.0.1'}, {'type': 'python', 'name': 'gitdb', 'version': '4.0.11'}, {'type': 'python', 'name': 'GitPython', 'version': '3.1.40'}]}, {'homepage': 'https://gitpython.readthedocs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'GitPython/3.1.42-GCCcore-13.2.0', 'module_name': 'GitPython', 'module_version': '3.1.42-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'cURL/8.3.0-GCCcore-13.2.0', 'module_name': 'cURL', 'module_version': '8.3.0-GCCcore-13.2.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-13.2.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-13.2.0'}, {'full_module_name': 'Perl/5.38.0-GCCcore-13.2.0', 'module_name': 'Perl', 'module_version': '5.38.0-GCCcore-13.2.0'}, {'full_module_name': 'git/2.42.0-GCCcore-13.2.0', 'module_name': 'git', 'module_version': '2.42.0-GCCcore-13.2.0'}, {'full_module_name': 'GitPython/3.1.42-GCCcore-13.2.0', 'module_name': 'GitPython', 'module_version': '3.1.42-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': ' GitPython is a python library used to interact with Git repositories ', 'version': '3.1.42', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'smmap', 'version': '5.0.1'}, {'type': 'python', 'name': 'gitdb', 'version': '4.0.11'}, {'type': 'python', 'name': 'GitPython', 'version': '3.1.42'}]}, {'homepage': 'https://gitpython.readthedocs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'GitPython/3.1.43-GCCcore-13.3.0', 'module_name': 'GitPython', 'module_version': '3.1.43-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Tcl/8.6.14-GCCcore-13.3.0', 'module_name': 'Tcl', 'module_version': '8.6.14-GCCcore-13.3.0'}, {'full_module_name': 'SQLite/3.45.3-GCCcore-13.3.0', 'module_name': 'SQLite', 'module_version': '3.45.3-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.12.3-GCCcore-13.3.0', 'module_name': 'Python', 'module_version': '3.12.3-GCCcore-13.3.0'}, {'full_module_name': 'cURL/8.7.1-GCCcore-13.3.0', 'module_name': 'cURL', 'module_version': '8.7.1-GCCcore-13.3.0'}, {'full_module_name': 'expat/2.6.2-GCCcore-13.3.0', 'module_name': 'expat', 'module_version': '2.6.2-GCCcore-13.3.0'}, {'full_module_name': 'Perl/5.38.2-GCCcore-13.3.0', 'module_name': 'Perl', 'module_version': '5.38.2-GCCcore-13.3.0'}, {'full_module_name': 'git/2.45.1-GCCcore-13.3.0', 'module_name': 'git', 'module_version': '2.45.1-GCCcore-13.3.0'}, {'full_module_name': 'GitPython/3.1.43-GCCcore-13.3.0', 'module_name': 'GitPython', 'module_version': '3.1.43-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': ' GitPython is a python library used to interact with Git repositories ', 'version': '3.1.43', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'smmap', 'version': '5.0.1'}, {'type': 'python', 'name': 'gitdb', 'version': '4.0.11'}, {'type': 'python', 'name': 'GitPython', 'version': '3.1.43'}]}], 'homepage': 'https://gitpython.readthedocs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': ' GitPython is a python library used to interact with Git repositories '} installations
 
-### GitPython/3.1.40-GCCcore-12.3.0
 
-This is a list of extensions included in the module:
+### gitdb
 
-gitdb-4.0.11, GitPython-3.1.40, smmap-5.0.1
+
+|`gitdb` version|GitPython modules that include it|
+| --- | --- |
+|4.0.11|`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`|
+
+### GitPython
+
+
+|`GitPython` version|GitPython modules that include it|
+| --- | --- |
+|3.1.40|`GitPython/3.1.40-GCCcore-12.3.0`|
+|3.1.42|`GitPython/3.1.42-GCCcore-13.2.0`|
+|3.1.43|`GitPython/3.1.43-GCCcore-13.3.0`|
+
+### smmap
+
+
+|`smmap` version|GitPython modules that include it|
+| --- | --- |
+|5.0.1|`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`|

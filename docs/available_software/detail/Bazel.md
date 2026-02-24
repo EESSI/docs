@@ -1,55 +1,19 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Bazel is a build tool that builds code quickly and reliably.It is used
-    to build the majority of Google's software.
-  license: Not confirmed
-  name: Bazel
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Bazel/6.1.0-GCCcore-12.3.0'', ''Bazel/6.3.1-GCCcore-12.3.0'']'
-  url: https://bazel.io/
----
-
-Bazel
-=====
+# Bazel
 
 
-Bazel is a build tool that builds code quickly and reliably.It is used to build the majority of Google's software.
+Bazel is a build tool that builds code quickly and reliably.
+It is used to build the majority of Google's software.
 
-https://bazel.io/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://bazel.io/](https://bazel.io/)</span>
+
+## Available installations
 
 
-The overview below shows which Bazel installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|6.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Bazel/6.1.0-GCCcore-12.3.0`|
+|6.3.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Bazel/6.3.1-GCCcore-12.3.0`|
 
-To start using Bazel, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Bazel/6.3.1-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bazel/6.3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Bazel/6.1.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://bazel.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Bazel/6.1.0-GCCcore-12.3.0', 'module_name': 'Bazel', 'module_version': '6.1.0-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Java/11.0.27', 'module_name': 'Java', 'module_version': '11.0.27'}, {'full_module_name': 'Java/11', 'module_name': 'Java', 'module_version': '11'}, {'full_module_name': 'Bazel/6.1.0-GCCcore-12.3.0', 'module_name': 'Bazel', 'module_version': '6.1.0-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Bazel is a build tool that builds code quickly and reliably.\nIt is used to build the majority of Google's software.", 'version': '6.1.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://bazel.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Bazel/6.3.1-GCCcore-12.3.0', 'module_name': 'Bazel', 'module_version': '6.3.1-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Java/11.0.27', 'module_name': 'Java', 'module_version': '11.0.27'}, {'full_module_name': 'Java/11', 'module_name': 'Java', 'module_version': '11'}, {'full_module_name': 'Bazel/6.3.1-GCCcore-12.3.0', 'module_name': 'Bazel', 'module_version': '6.3.1-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Bazel is a build tool that builds code quickly and reliably.\nIt is used to build the majority of Google's software.", 'version': '6.3.1', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://bazel.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': "Bazel is a build tool that builds code quickly and reliably.\nIt is used to build the majority of Google's software."} installations

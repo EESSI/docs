@@ -1,59 +1,24 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: 're2c is a free and open-source lexer generator for C and C++. Its
-    main goal is generatingfast lexers: at least as fast as their reasonably optimized
-    hand-coded counterparts. Instead of usingtraditional table-driven approach, re2c
-    encodes the generated finite state automata directly in the formof conditional
-    jumps and comparisons.'
-  license: Not confirmed
-  name: re2c
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''re2c/3.0-GCCcore-12.2.0'', ''re2c/3.1-GCCcore-12.3.0'', ''re2c/3.1-GCCcore-13.2.0'']'
-  url: https://re2c.org
----
-
-re2c
-====
+# re2c
 
 
-re2c is a free and open-source lexer generator for C and C++. Its main goal is generatingfast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of usingtraditional table-driven approach, re2c encodes the generated finite state automata directly in the formof conditional jumps and comparisons.
+re2c is a free and open-source lexer generator for C and C++. Its main goal is generating
+fast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using
+traditional table-driven approach, re2c encodes the generated finite state automata directly in the form
+of conditional jumps and comparisons.
 
-https://re2c.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://re2c.org](https://re2c.org)</span>
+
+## Available installations
 
 
-The overview below shows which re2c installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`re2c/3.0-GCCcore-12.2.0`|
+|3.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`re2c/3.1-GCCcore-12.3.0`|
+|3.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`re2c/3.1-GCCcore-13.2.0`|
+|3.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`re2c/3.1-GCCcore-13.3.0`|
+|4.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`re2c/4.2-GCCcore-14.2.0`|
 
-To start using re2c, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load re2c/3.1-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|re2c/3.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|re2c/3.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|re2c/3.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://re2c.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 're2c/3.0-GCCcore-12.2.0', 'module_name': 're2c', 'module_version': '3.0-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 're2c/3.0-GCCcore-12.2.0', 'module_name': 're2c', 'module_version': '3.0-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 're2c is a free and open-source lexer generator for C and C++. Its main goal is generating\nfast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using\ntraditional table-driven approach, re2c encodes the generated finite state automata directly in the form\nof conditional jumps and comparisons.', 'version': '3.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://re2c.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 're2c/3.1-GCCcore-12.3.0', 'module_name': 're2c', 'module_version': '3.1-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 're2c/3.1-GCCcore-12.3.0', 'module_name': 're2c', 'module_version': '3.1-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 're2c is a free and open-source lexer generator for C and C++. Its main goal is generating\nfast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using\ntraditional table-driven approach, re2c encodes the generated finite state automata directly in the form\nof conditional jumps and comparisons.', 'version': '3.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://re2c.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 're2c/3.1-GCCcore-13.2.0', 'module_name': 're2c', 'module_version': '3.1-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 're2c/3.1-GCCcore-13.2.0', 'module_name': 're2c', 'module_version': '3.1-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 're2c is a free and open-source lexer generator for C and C++. Its main goal is generating\nfast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using\ntraditional table-driven approach, re2c encodes the generated finite state automata directly in the form\nof conditional jumps and comparisons.', 'version': '3.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://re2c.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 're2c/3.1-GCCcore-13.3.0', 'module_name': 're2c', 'module_version': '3.1-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 're2c/3.1-GCCcore-13.3.0', 'module_name': 're2c', 'module_version': '3.1-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 're2c is a free and open-source lexer generator for C and C++. Its main goal is generating\nfast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using\ntraditional table-driven approach, re2c encodes the generated finite state automata directly in the form\nof conditional jumps and comparisons.', 'version': '3.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://re2c.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 're2c/4.2-GCCcore-14.2.0', 'module_name': 're2c', 'module_version': '4.2-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 're2c/4.2-GCCcore-14.2.0', 'module_name': 're2c', 'module_version': '4.2-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 're2c is a free and open-source lexer generator for C and C++. Its main goal is generating\nfast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using\ntraditional table-driven approach, re2c encodes the generated finite state automata directly in the form\nof conditional jumps and comparisons.', 'version': '4.2', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://re2c.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 're2c is a free and open-source lexer generator for C and C++. Its main goal is generating\nfast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using\ntraditional table-driven approach, re2c encodes the generated finite state automata directly in the form\nof conditional jumps and comparisons.'} installations

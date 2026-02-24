@@ -1,55 +1,19 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Nextflow is a reactive workflow framework and a programming DSL that
-    eases writing computational pipelines with complex data
-  license: Not confirmed
-  name: Nextflow
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Nextflow/23.10.0'', ''Nextflow/24.10.2'']'
-  url: https://www.nextflow.io/
----
-
-Nextflow
-========
+# Nextflow
 
 
-Nextflow is a reactive workflow framework and a programming DSL that eases writing computational pipelines with complex data
+Nextflow is a reactive workflow framework and a programming DSL
+ that eases writing computational pipelines with complex data
 
-https://www.nextflow.io/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.nextflow.io/](https://www.nextflow.io/)</span>
+
+## Available installations
 
 
-The overview below shows which Nextflow installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|23.10.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Nextflow/23.10.0`|
+|24.10.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Nextflow/24.10.2`|
 
-To start using Nextflow, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Nextflow/24.10.2
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Nextflow/24.10.2|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Nextflow/23.10.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.nextflow.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'system', 'version': 'system'}, 'toolchain_families_compatibility': ['2022b_foss', '2023a_foss', '2023b_foss'], 'module': {'full_module_name': 'Nextflow/23.10.0', 'module_name': 'Nextflow', 'module_version': '23.10.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'Java/11.0.27', 'module_name': 'Java', 'module_version': '11.0.27'}, {'full_module_name': 'Java/11', 'module_name': 'Java', 'module_version': '11'}, {'full_module_name': 'Nextflow/23.10.0', 'module_name': 'Nextflow', 'module_version': '23.10.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Nextflow is a reactive workflow framework and a programming DSL\n that eases writing computational pipelines with complex data', 'version': '23.10.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.nextflow.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'system', 'version': 'system'}, 'toolchain_families_compatibility': ['2022b_foss', '2023a_foss', '2023b_foss'], 'module': {'full_module_name': 'Nextflow/24.10.2', 'module_name': 'Nextflow', 'module_version': '24.10.2'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'Java/21.0.7', 'module_name': 'Java', 'module_version': '21.0.7'}, {'full_module_name': 'Java/21', 'module_name': 'Java', 'module_version': '21'}, {'full_module_name': 'Nextflow/24.10.2', 'module_name': 'Nextflow', 'module_version': '24.10.2'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Nextflow is a reactive workflow framework and a programming DSL\n that eases writing computational pipelines with complex data', 'version': '24.10.2', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.nextflow.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Nextflow is a reactive workflow framework and a programming DSL\n that eases writing computational pipelines with complex data'} installations

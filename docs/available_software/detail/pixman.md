@@ -1,58 +1,26 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Pixman is a low-level software library for pixel manipulation, providing
-    features such as image compositing and trapezoid rasterization. Important users
-    of pixman are the cairo graphics library and the X server.
-  license: Not confirmed
-  name: pixman
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''pixman/0.42.2-GCCcore-12.2.0'', ''pixman/0.42.2-GCCcore-12.3.0'',
-    ''pixman/0.42.2-GCCcore-13.2.0'']'
-  url: http://www.pixman.org/
----
-
-pixman
-======
+# pixman
 
 
-Pixman is a low-level software library for pixel manipulation, providing features such as image compositing and trapezoid rasterization. Important users of pixman are the cairo graphics library and the X server.
 
-http://www.pixman.org/
-# Available modules
+ Pixman is a low-level software library for pixel manipulation, providing
+ features such as image compositing and trapezoid rasterization. Important
+ users of pixman are the cairo graphics library and the X server.
 
 
-The overview below shows which pixman installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[http://www.pixman.org/](http://www.pixman.org/)</span>
 
-To start using pixman, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load pixman/0.42.2-GCCcore-13.2.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|0.42.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`pixman/0.42.2-GCCcore-12.2.0`|
+|0.42.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`pixman/0.42.2-GCCcore-12.3.0`|
+|0.42.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`pixman/0.42.2-GCCcore-13.2.0`|
+|0.43.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`pixman/0.43.4-GCCcore-13.3.0`|
+|0.46.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`pixman/0.46.2-GCCcore-14.2.0`|
+|0.46.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`pixman/0.46.4-GCCcore-14.3.0`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pixman/0.42.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|pixman/0.42.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|pixman/0.42.2-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'http://www.pixman.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'pixman/0.42.2-GCCcore-12.2.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'pixman/0.42.2-GCCcore-12.2.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n', 'version': '0.42.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.pixman.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'pixman/0.42.2-GCCcore-12.3.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'pixman/0.42.2-GCCcore-12.3.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n', 'version': '0.42.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.pixman.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'pixman/0.42.2-GCCcore-13.2.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'pixman/0.42.2-GCCcore-13.2.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n', 'version': '0.42.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.pixman.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'pixman/0.43.4-GCCcore-13.3.0', 'module_name': 'pixman', 'module_version': '0.43.4-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'pixman/0.43.4-GCCcore-13.3.0', 'module_name': 'pixman', 'module_version': '0.43.4-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n', 'version': '0.43.4', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.pixman.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'pixman/0.46.2-GCCcore-14.2.0', 'module_name': 'pixman', 'module_version': '0.46.2-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'pixman/0.46.2-GCCcore-14.2.0', 'module_name': 'pixman', 'module_version': '0.46.2-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n', 'version': '0.46.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.pixman.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'pixman/0.46.4-GCCcore-14.3.0', 'module_name': 'pixman', 'module_version': '0.46.4-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'pixman/0.46.4-GCCcore-14.3.0', 'module_name': 'pixman', 'module_version': '0.46.4-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n', 'version': '0.46.4', 'versionsuffix': '', 'extensions': []}], 'homepage': 'http://www.pixman.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\n Pixman is a low-level software library for pixel manipulation, providing\n features such as image compositing and trapezoid rasterization. Important\n users of pixman are the cairo graphics library and the X server.\n'} installations

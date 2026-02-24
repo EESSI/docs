@@ -1,59 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: ParMETIS is an MPI-based parallel library that implements a variety
-    of algorithms for partitioning unstructured graphs, meshes, and for computing
-    fill-reducing orderings of sparse matrices. ParMETIS extends the functionality
-    provided by METIS and includes routines that are especially suited for parallel
-    AMR computations and large scale numerical simulations. The algorithms implemented
-    in ParMETIS are based on the parallel multilevel k-way graph-partitioning, adaptive
-    repartitioning, and parallel multi-constrained partitioning schemes.
-  license: Not confirmed
-  name: ParMETIS
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''ParMETIS/4.0.3-gompi-2023a'']'
-  url: http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
----
-
-ParMETIS
-========
+# ParMETIS
 
 
-ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the functionality provided by METIS and includes routines that are especially suited for parallel AMR computations and large scale numerical simulations. The algorithms implemented in ParMETIS are based on the parallel multilevel k-way graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning schemes.
+ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning
+ unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the
+ functionality provided by METIS and includes routines that are especially suited for parallel AMR computations and
+ large scale numerical simulations. The algorithms implemented in ParMETIS are based on the parallel multilevel k-way
+ graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning schemes.
 
-http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
-# Available modules
+<small>homepage: </small><span class="software-link">[http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview](http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview)</span>
+
+## Available installations
 
 
-The overview below shows which ParMETIS installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|4.0.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`ParMETIS/4.0.3-gompi-2023a`|
 
-To start using ParMETIS, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load ParMETIS/4.0.3-gompi-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ParMETIS/4.0.3-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'ParMETIS/4.0.3-gompi-2023a', 'module_name': 'ParMETIS', 'module_version': '4.0.3-gompi-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.3.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'hwloc/2.9.1-GCCcore-12.3.0', 'module_name': 'hwloc', 'module_version': '2.9.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'UCX/1.14.1-GCCcore-12.3.0', 'module_name': 'UCX', 'module_version': '1.14.1-GCCcore-12.3.0'}, {'full_module_name': 'libfabric/1.18.0-GCCcore-12.3.0', 'module_name': 'libfabric', 'module_version': '1.18.0-GCCcore-12.3.0'}, {'full_module_name': 'PMIx/4.2.4-GCCcore-12.3.0', 'module_name': 'PMIx', 'module_version': '4.2.4-GCCcore-12.3.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-12.3.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenMPI/4.1.5-GCC-12.3.0', 'module_name': 'OpenMPI', 'module_version': '4.1.5-GCC-12.3.0'}, {'full_module_name': 'gompi/2023a', 'module_name': 'gompi', 'module_version': '2023a'}, {'full_module_name': 'ParMETIS/4.0.3-gompi-2023a', 'module_name': 'ParMETIS', 'module_version': '4.0.3-gompi-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning\n unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the\n functionality provided by METIS and includes routines that are especially suited for parallel AMR computations and\n large scale numerical simulations. The algorithms implemented in ParMETIS are based on the parallel multilevel k-way\n graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning schemes.', 'version': '4.0.3', 'versionsuffix': '', 'extensions': []}], 'homepage': 'http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'ParMETIS is an MPI-based parallel library that implements a variety of algorithms for partitioning\n unstructured graphs, meshes, and for computing fill-reducing orderings of sparse matrices. ParMETIS extends the\n functionality provided by METIS and includes routines that are especially suited for parallel AMR computations and\n large scale numerical simulations. The algorithms implemented in ParMETIS are based on the parallel multilevel k-way\n graph-partitioning, adaptive repartitioning, and parallel multi-constrained partitioning schemes.'} installations

@@ -1,56 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Zip is a compression and file packaging/archive utility.Although highly
-    compatible both with PKWARE's PKZIP and PKUNZIPutilities for MS-DOS and with Info-ZIP's
-    own UnZip, our primary objectiveshave been portability and other-than-MSDOS functionality
-  license: Not confirmed
-  name: Zip
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Zip/3.0-GCCcore-12.2.0'', ''Zip/3.0-GCCcore-12.3.0'']'
-  url: http://www.info-zip.org/Zip.html
----
-
-Zip
-===
+# Zip
 
 
-Zip is a compression and file packaging/archive utility.Although highly compatible both with PKWARE's PKZIP and PKUNZIPutilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectiveshave been portability and other-than-MSDOS functionality
+Zip is a compression and file packaging/archive utility.
+Although highly compatible both with PKWARE's PKZIP and PKUNZIP
+utilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectives
+have been portability and other-than-MSDOS functionality
 
-http://www.info-zip.org/Zip.html
-# Available modules
+<small>homepage: </small><span class="software-link">[http://www.info-zip.org/Zip.html](http://www.info-zip.org/Zip.html)</span>
+
+## Available installations
 
 
-The overview below shows which Zip installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Zip/3.0-GCCcore-12.2.0`|
+|3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Zip/3.0-GCCcore-12.3.0`|
 
-To start using Zip, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Zip/3.0-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Zip/3.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Zip/3.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'http://www.info-zip.org/Zip.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'Zip/3.0-GCCcore-12.2.0', 'module_name': 'Zip', 'module_version': '3.0-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'Zip/3.0-GCCcore-12.2.0', 'module_name': 'Zip', 'module_version': '3.0-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Zip is a compression and file packaging/archive utility.\nAlthough highly compatible both with PKWARE's PKZIP and PKUNZIP\nutilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectives\nhave been portability and other-than-MSDOS functionality", 'version': '3.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.info-zip.org/Zip.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Zip/3.0-GCCcore-12.3.0', 'module_name': 'Zip', 'module_version': '3.0-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Zip/3.0-GCCcore-12.3.0', 'module_name': 'Zip', 'module_version': '3.0-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Zip is a compression and file packaging/archive utility.\nAlthough highly compatible both with PKWARE's PKZIP and PKUNZIP\nutilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectives\nhave been portability and other-than-MSDOS functionality", 'version': '3.0', 'versionsuffix': '', 'extensions': []}], 'homepage': 'http://www.info-zip.org/Zip.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': "Zip is a compression and file packaging/archive utility.\nAlthough highly compatible both with PKWARE's PKZIP and PKUNZIP\nutilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectives\nhave been portability and other-than-MSDOS functionality"} installations

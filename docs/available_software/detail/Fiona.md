@@ -1,65 +1,50 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Fiona is designed to be simple and dependable. It focuses on reading
-    and writing datain standard Python IO style and relies upon familiar Python types
-    and protocols such as files, dictionaries,mappings, and iterators instead of classes
-    specific to OGR. Fiona can read and write real-world data usingmulti-layered GIS
-    formats and zipped virtual file systems and integrates readily with other Python
-    GISpackages such as pyproj, Rtree, and Shapely.
-  license: Not confirmed
-  name: Fiona
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Fiona/1.9.5-foss-2023a'']'
-  url: https://github.com/Toblerity/Fiona
----
-
-Fiona
-=====
+# Fiona
 
 
-Fiona is designed to be simple and dependable. It focuses on reading and writing datain standard Python IO style and relies upon familiar Python types and protocols such as files, dictionaries,mappings, and iterators instead of classes specific to OGR. Fiona can read and write real-world data usingmulti-layered GIS formats and zipped virtual file systems and integrates readily with other Python GISpackages such as pyproj, Rtree, and Shapely.
+Fiona is designed to be simple and dependable. It focuses on reading and writing data
+in standard Python IO style and relies upon familiar Python types and protocols such as files, dictionaries,
+mappings, and iterators instead of classes specific to OGR. Fiona can read and write real-world data using
+multi-layered GIS formats and zipped virtual file systems and integrates readily with other Python GIS
+packages such as pyproj, Rtree, and Shapely.
 
-https://github.com/Toblerity/Fiona
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/Toblerity/Fiona](https://github.com/Toblerity/Fiona)</span>
 
-
-The overview below shows which Fiona installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using Fiona, load one of these modules using a `module load` command like:
-
-```shell
-module load Fiona/1.9.5-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Fiona/1.9.5-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### Fiona/1.9.5-foss-2023a
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.9.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Fiona/1.9.5-foss-2023a`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-click-plugins-1.1.1, cligj-0.7.2, fiona-1.9.5, munch-4.0.0
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/Toblerity/Fiona', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'foss', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Fiona/1.9.5-foss-2023a', 'module_name': 'Fiona', 'module_version': '1.9.5-foss-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.3.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'hwloc/2.9.1-GCCcore-12.3.0', 'module_name': 'hwloc', 'module_version': '2.9.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'UCX/1.14.1-GCCcore-12.3.0', 'module_name': 'UCX', 'module_version': '1.14.1-GCCcore-12.3.0'}, {'full_module_name': 'libfabric/1.18.0-GCCcore-12.3.0', 'module_name': 'libfabric', 'module_version': '1.18.0-GCCcore-12.3.0'}, {'full_module_name': 'PMIx/4.2.4-GCCcore-12.3.0', 'module_name': 'PMIx', 'module_version': '4.2.4-GCCcore-12.3.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-12.3.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenMPI/4.1.5-GCC-12.3.0', 'module_name': 'OpenMPI', 'module_version': '4.1.5-GCC-12.3.0'}, {'full_module_name': 'OpenBLAS/0.3.23-GCC-12.3.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.23-GCC-12.3.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-12.3.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-12.3.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-12.3.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-12.3.0'}, {'full_module_name': 'gompi/2023a', 'module_name': 'gompi', 'module_version': '2023a'}, {'full_module_name': 'FFTW.MPI/3.3.10-gompi-2023a', 'module_name': 'FFTW.MPI', 'module_version': '3.3.10-gompi-2023a'}, {'full_module_name': 'ScaLAPACK/2.2.0-gompi-2023a-fb', 'module_name': 'ScaLAPACK', 'module_version': '2.2.0-gompi-2023a-fb'}, {'full_module_name': 'foss/2023a', 'module_name': 'foss', 'module_version': '2023a'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'Szip/2.1.1-GCCcore-12.3.0', 'module_name': 'Szip', 'module_version': '2.1.1-GCCcore-12.3.0'}, {'full_module_name': 'HDF5/1.14.0-gompi-2023a', 'module_name': 'HDF5', 'module_version': '1.14.0-gompi-2023a'}, {'full_module_name': 'cURL/8.0.1-GCCcore-12.3.0', 'module_name': 'cURL', 'module_version': '8.0.1-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'netCDF/4.9.2-gompi-2023a', 'module_name': 'netCDF', 'module_version': '4.9.2-gompi-2023a'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'GEOS/3.12.0-GCC-12.3.0', 'module_name': 'GEOS', 'module_version': '3.12.0-GCC-12.3.0'}, {'full_module_name': 'libarchive/3.6.2-GCCcore-12.3.0', 'module_name': 'libarchive', 'module_version': '3.6.2-GCCcore-12.3.0'}, {'full_module_name': 'libpng/1.6.39-GCCcore-12.3.0', 'module_name': 'libpng', 'module_version': '1.6.39-GCCcore-12.3.0'}, {'full_module_name': 'NASM/2.16.01-GCCcore-12.3.0', 'module_name': 'NASM', 'module_version': '2.16.01-GCCcore-12.3.0'}, {'full_module_name': 'libjpeg-turbo/2.1.5.1-GCCcore-12.3.0', 'module_name': 'libjpeg-turbo', 'module_version': '2.1.5.1-GCCcore-12.3.0'}, {'full_module_name': 'JasPer/4.0.0-GCCcore-12.3.0', 'module_name': 'JasPer', 'module_version': '4.0.0-GCCcore-12.3.0'}, {'full_module_name': 'jbigkit/2.1-GCCcore-12.3.0', 'module_name': 'jbigkit', 'module_version': '2.1-GCCcore-12.3.0'}, {'full_module_name': 'libdeflate/1.18-GCCcore-12.3.0', 'module_name': 'libdeflate', 'module_version': '1.18-GCCcore-12.3.0'}, {'full_module_name': 'LibTIFF/4.5.0-GCCcore-12.3.0', 'module_name': 'LibTIFF', 'module_version': '4.5.0-GCCcore-12.3.0'}, {'full_module_name': 'PCRE/8.45-GCCcore-12.3.0', 'module_name': 'PCRE', 'module_version': '8.45-GCCcore-12.3.0'}, {'full_module_name': 'nlohmann_json/3.11.2-GCCcore-12.3.0', 'module_name': 'nlohmann_json', 'module_version': '3.11.2-GCCcore-12.3.0'}, {'full_module_name': 'PROJ/9.2.0-GCCcore-12.3.0', 'module_name': 'PROJ', 'module_version': '9.2.0-GCCcore-12.3.0'}, {'full_module_name': 'libgeotiff/1.7.1-GCCcore-12.3.0', 'module_name': 'libgeotiff', 'module_version': '1.7.1-GCCcore-12.3.0'}, {'full_module_name': 'gfbf/2023a', 'module_name': 'gfbf', 'module_version': '2023a'}, {'full_module_name': 'cffi/1.15.1-GCCcore-12.3.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-12.3.0'}, {'full_module_name': 'cryptography/41.0.1-GCCcore-12.3.0', 'module_name': 'cryptography', 'module_version': '41.0.1-GCCcore-12.3.0'}, {'full_module_name': 'virtualenv/20.23.1-GCCcore-12.3.0', 'module_name': 'virtualenv', 'module_version': '20.23.1-GCCcore-12.3.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.06-GCCcore-12.3.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.06-GCCcore-12.3.0'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-12.3.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-12.3.0'}, {'full_module_name': 'SciPy-bundle/2023.07-gfbf-2023a', 'module_name': 'SciPy-bundle', 'module_version': '2023.07-gfbf-2023a'}, {'full_module_name': 'libtirpc/1.3.3-GCCcore-12.3.0', 'module_name': 'libtirpc', 'module_version': '1.3.3-GCCcore-12.3.0'}, {'full_module_name': 'HDF/4.2.16-2-GCCcore-12.3.0', 'module_name': 'HDF', 'module_version': '4.2.16-2-GCCcore-12.3.0'}, {'full_module_name': 'ICU/73.2-GCCcore-12.3.0', 'module_name': 'ICU', 'module_version': '73.2-GCCcore-12.3.0'}, {'full_module_name': 'Boost/1.82.0-GCC-12.3.0', 'module_name': 'Boost', 'module_version': '1.82.0-GCC-12.3.0'}, {'full_module_name': 'arpack-ng/3.9.0-foss-2023a', 'module_name': 'arpack-ng', 'module_version': '3.9.0-foss-2023a'}, {'full_module_name': 'Armadillo/12.6.2-foss-2023a', 'module_name': 'Armadillo', 'module_version': '12.6.2-foss-2023a'}, {'full_module_name': 'CFITSIO/4.3.0-GCCcore-12.3.0', 'module_name': 'CFITSIO', 'module_version': '4.3.0-GCCcore-12.3.0'}, {'full_module_name': 'giflib/5.2.1-GCCcore-12.3.0', 'module_name': 'giflib', 'module_version': '5.2.1-GCCcore-12.3.0'}, {'full_module_name': 'json-c/0.16-GCCcore-12.3.0', 'module_name': 'json-c', 'module_version': '0.16-GCCcore-12.3.0'}, {'full_module_name': 'Xerces-C++/3.2.4-GCCcore-12.3.0', 'module_name': 'Xerces-C++', 'module_version': '3.2.4-GCCcore-12.3.0'}, {'full_module_name': 'PCRE2/10.42-GCCcore-12.3.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-12.3.0'}, {'full_module_name': 'Imath/3.1.7-GCCcore-12.3.0', 'module_name': 'Imath', 'module_version': '3.1.7-GCCcore-12.3.0'}, {'full_module_name': 'OpenEXR/3.1.7-GCCcore-12.3.0', 'module_name': 'OpenEXR', 'module_version': '3.1.7-GCCcore-12.3.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.3.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.3.0'}, {'full_module_name': 'Highway/1.0.4-GCCcore-12.3.0', 'module_name': 'Highway', 'module_version': '1.0.4-GCCcore-12.3.0'}, {'full_module_name': 'Brunsli/0.1-GCCcore-12.3.0', 'module_name': 'Brunsli', 'module_version': '0.1-GCCcore-12.3.0'}, {'full_module_name': 'Qhull/2020.2-GCCcore-12.3.0', 'module_name': 'Qhull', 'module_version': '2020.2-GCCcore-12.3.0'}, {'full_module_name': 'LERC/4.0.0-GCCcore-12.3.0', 'module_name': 'LERC', 'module_version': '4.0.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenJPEG/2.5.0-GCCcore-12.3.0', 'module_name': 'OpenJPEG', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'SWIG/4.1.1-GCCcore-12.3.0', 'module_name': 'SWIG', 'module_version': '4.1.1-GCCcore-12.3.0'}, {'full_module_name': 'GDAL/3.7.1-foss-2023a', 'module_name': 'GDAL', 'module_version': '3.7.1-foss-2023a'}, {'full_module_name': 'Shapely/2.0.1-gfbf-2023a', 'module_name': 'Shapely', 'module_version': '2.0.1-gfbf-2023a'}, {'full_module_name': 'Fiona/1.9.5-foss-2023a', 'module_name': 'Fiona', 'module_version': '1.9.5-foss-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Fiona is designed to be simple and dependable. It focuses on reading and writing data\nin standard Python IO style and relies upon familiar Python types and protocols such as files, dictionaries,\nmappings, and iterators instead of classes specific to OGR. Fiona can read and write real-world data using\nmulti-layered GIS formats and zipped virtual file systems and integrates readily with other Python GIS\npackages such as pyproj, Rtree, and Shapely.', 'version': '1.9.5', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'cligj', 'version': '0.7.2'}, {'type': 'python', 'name': 'click-plugins', 'version': '1.1.1'}, {'type': 'python', 'name': 'munch', 'version': '4.0.0'}, {'type': 'python', 'name': 'fiona', 'version': '1.9.5'}]}], 'homepage': 'https://github.com/Toblerity/Fiona', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Fiona is designed to be simple and dependable. It focuses on reading and writing data\nin standard Python IO style and relies upon familiar Python types and protocols such as files, dictionaries,\nmappings, and iterators instead of classes specific to OGR. Fiona can read and write real-world data using\nmulti-layered GIS formats and zipped virtual file systems and integrates readily with other Python GIS\npackages such as pyproj, Rtree, and Shapely.'} installations
+
+
+### click-plugins
+
+
+|`click-plugins` version|Fiona modules that include it|
+| --- | --- |
+|1.1.1|`Fiona/1.9.5-foss-2023a`|
+
+### cligj
+
+
+|`cligj` version|Fiona modules that include it|
+| --- | --- |
+|0.7.2|`Fiona/1.9.5-foss-2023a`|
+
+### fiona
+
+
+|`fiona` version|Fiona modules that include it|
+| --- | --- |
+|1.9.5|`Fiona/1.9.5-foss-2023a`|
+
+### munch
+
+
+|`munch` version|Fiona modules that include it|
+| --- | --- |
+|4.0.0|`Fiona/1.9.5-foss-2023a`|

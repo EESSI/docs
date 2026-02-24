@@ -1,59 +1,24 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Node.js is a platform built on Chrome's JavaScript runtime for easily
-    building fast, scalable network applications. Node.js uses an event-driven, non-blocking
-    I/O model that makes it lightweight and efficient, perfect for data-intensive
-    real-time applications that run across distributed devices.
-  license: Not confirmed
-  name: nodejs
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''nodejs/18.12.1-GCCcore-12.2.0'', ''nodejs/18.17.1-GCCcore-12.3.0'',
-    ''nodejs/20.9.0-GCCcore-13.2.0'']'
-  url: https://nodejs.org
----
-
-nodejs
-======
+# nodejs
 
 
-Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+Node.js is a platform built on Chrome's JavaScript runtime
+ for easily building fast, scalable network applications. Node.js uses an
+ event-driven, non-blocking I/O model that makes it lightweight and efficient,
+ perfect for data-intensive real-time applications that run across distributed devices.
 
-https://nodejs.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://nodejs.org](https://nodejs.org)</span>
+
+## Available installations
 
 
-The overview below shows which nodejs installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|18.12.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`nodejs/18.12.1-GCCcore-12.2.0`|
+|18.17.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`nodejs/18.17.1-GCCcore-12.3.0`|
+|20.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`nodejs/20.9.0-GCCcore-13.2.0`|
+|20.13.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`nodejs/20.13.1-GCCcore-13.3.0`|
+|22.16.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`nodejs/22.16.0-GCCcore-14.2.0`|
 
-To start using nodejs, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load nodejs/20.9.0-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|nodejs/20.9.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|nodejs/18.17.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|nodejs/18.12.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://nodejs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'nodejs/18.12.1-GCCcore-12.2.0', 'module_name': 'nodejs', 'module_version': '18.12.1-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'ICU/72.1-GCCcore-12.2.0', 'module_name': 'ICU', 'module_version': '72.1-GCCcore-12.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'nodejs/18.12.1-GCCcore-12.2.0', 'module_name': 'nodejs', 'module_version': '18.12.1-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Node.js is a platform built on Chrome's JavaScript runtime\n for easily building fast, scalable network applications. Node.js uses an\n event-driven, non-blocking I/O model that makes it lightweight and efficient,\n perfect for data-intensive real-time applications that run across distributed devices.", 'version': '18.12.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://nodejs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'nodejs/18.17.1-GCCcore-12.3.0', 'module_name': 'nodejs', 'module_version': '18.17.1-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'ICU/73.2-GCCcore-12.3.0', 'module_name': 'ICU', 'module_version': '73.2-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'nodejs/18.17.1-GCCcore-12.3.0', 'module_name': 'nodejs', 'module_version': '18.17.1-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Node.js is a platform built on Chrome's JavaScript runtime\n for easily building fast, scalable network applications. Node.js uses an\n event-driven, non-blocking I/O model that makes it lightweight and efficient,\n perfect for data-intensive real-time applications that run across distributed devices.", 'version': '18.17.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://nodejs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'nodejs/20.9.0-GCCcore-13.2.0', 'module_name': 'nodejs', 'module_version': '20.9.0-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'ICU/74.1-GCCcore-13.2.0', 'module_name': 'ICU', 'module_version': '74.1-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'nodejs/20.9.0-GCCcore-13.2.0', 'module_name': 'nodejs', 'module_version': '20.9.0-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Node.js is a platform built on Chrome's JavaScript runtime\n for easily building fast, scalable network applications. Node.js uses an\n event-driven, non-blocking I/O model that makes it lightweight and efficient,\n perfect for data-intensive real-time applications that run across distributed devices.", 'version': '20.9.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://nodejs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'nodejs/20.13.1-GCCcore-13.3.0', 'module_name': 'nodejs', 'module_version': '20.13.1-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'ICU/75.1-GCCcore-13.3.0', 'module_name': 'ICU', 'module_version': '75.1-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'nodejs/20.13.1-GCCcore-13.3.0', 'module_name': 'nodejs', 'module_version': '20.13.1-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Node.js is a platform built on Chrome's JavaScript runtime\n for easily building fast, scalable network applications. Node.js uses an\n event-driven, non-blocking I/O model that makes it lightweight and efficient,\n perfect for data-intensive real-time applications that run across distributed devices.", 'version': '20.13.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://nodejs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'nodejs/22.16.0-GCCcore-14.2.0', 'module_name': 'nodejs', 'module_version': '22.16.0-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'ICU/76.1-GCCcore-14.2.0', 'module_name': 'ICU', 'module_version': '76.1-GCCcore-14.2.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'nodejs/22.16.0-GCCcore-14.2.0', 'module_name': 'nodejs', 'module_version': '22.16.0-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': "Node.js is a platform built on Chrome's JavaScript runtime\n for easily building fast, scalable network applications. Node.js uses an\n event-driven, non-blocking I/O model that makes it lightweight and efficient,\n perfect for data-intensive real-time applications that run across distributed devices.", 'version': '22.16.0', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://nodejs.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': "Node.js is a platform built on Chrome's JavaScript runtime\n for easily building fast, scalable network applications. Node.js uses an\n event-driven, non-blocking I/O model that makes it lightweight and efficient,\n perfect for data-intensive real-time applications that run across distributed devices."} installations

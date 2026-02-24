@@ -1,57 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Tcsh is an enhanced, but completely compatible version of the Berkeley
-    UNIX C shell (csh). It is a command language interpreter usable both as an interactive
-    login shell and a shell script command processor. It includes a command-line editor,
-    programmable word completion, spelling correction, a history mechanism, job control
-    and a C-like syntax.
-  license: Not confirmed
-  name: tcsh
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''tcsh/6.24.07-GCCcore-12.2.0'']'
-  url: https://www.tcsh.org
----
-
-tcsh
-====
+# tcsh
 
 
-Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C shell (csh). It is a command language interpreter usable both as an interactive login shell and a shell script command processor. It includes a command-line editor, programmable word completion, spelling correction, a history mechanism, job control and a C-like syntax.
+Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C shell (csh).
+ It is a command language interpreter usable both as an interactive login shell and a shell script command
+ processor. It includes a command-line editor, programmable word completion, spelling correction, a history
+ mechanism, job control and a C-like syntax.
 
-https://www.tcsh.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.tcsh.org](https://www.tcsh.org)</span>
+
+## Available installations
 
 
-The overview below shows which tcsh installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|6.24.07|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`tcsh/6.24.07-GCCcore-12.2.0`|
+|6.24.13|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`tcsh/6.24.13-GCCcore-13.3.0`|
 
-To start using tcsh, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load tcsh/6.24.07-GCCcore-12.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tcsh/6.24.07-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.tcsh.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'tcsh/6.24.07-GCCcore-12.2.0', 'module_name': 'tcsh', 'module_version': '6.24.07-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'tcsh/6.24.07-GCCcore-12.2.0', 'module_name': 'tcsh', 'module_version': '6.24.07-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C shell (csh).\n It is a command language interpreter usable both as an interactive login shell and a shell script command\n processor. It includes a command-line editor, programmable word completion, spelling correction, a history\n mechanism, job control and a C-like syntax.', 'version': '6.24.07', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.tcsh.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'tcsh/6.24.13-GCCcore-13.3.0', 'module_name': 'tcsh', 'module_version': '6.24.13-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'tcsh/6.24.13-GCCcore-13.3.0', 'module_name': 'tcsh', 'module_version': '6.24.13-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C shell (csh).\n It is a command language interpreter usable both as an interactive login shell and a shell script command\n processor. It includes a command-line editor, programmable word completion, spelling correction, a history\n mechanism, job control and a C-like syntax.', 'version': '6.24.13', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.tcsh.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C shell (csh).\n It is a command language interpreter usable both as an interactive login shell and a shell script command\n processor. It includes a command-line editor, programmable word completion, spelling correction, a history\n mechanism, job control and a C-like syntax.'} installations

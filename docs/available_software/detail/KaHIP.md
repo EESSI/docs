@@ -1,54 +1,18 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: The graph partitioning framework KaHIP -- Karlsruhe High Quality Partitioning.
-  license: Not confirmed
-  name: KaHIP
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''KaHIP/3.14-gompi-2022b'', ''KaHIP/3.16-gompi-2023a'']'
-  url: https://kahip.github.io/
----
-
-KaHIP
-=====
+# KaHIP
 
 
 The graph partitioning framework KaHIP -- Karlsruhe High Quality Partitioning.
 
-https://kahip.github.io/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://kahip.github.io/](https://kahip.github.io/)</span>
+
+## Available installations
 
 
-The overview below shows which KaHIP installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.14|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`KaHIP/3.14-gompi-2022b`|
+|3.16|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`KaHIP/3.16-gompi-2023a`|
 
-To start using KaHIP, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load KaHIP/3.16-gompi-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|KaHIP/3.16-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|KaHIP/3.14-gompi-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://kahip.github.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2022b'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'KaHIP/3.14-gompi-2022b', 'module_name': 'KaHIP', 'module_version': '3.14-gompi-2022b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GCC/12.2.0', 'module_name': 'GCC', 'module_version': '12.2.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.2.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.2.0'}, {'full_module_name': 'libxml2/2.10.3-GCCcore-12.2.0', 'module_name': 'libxml2', 'module_version': '2.10.3-GCCcore-12.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.2.0'}, {'full_module_name': 'hwloc/2.8.0-GCCcore-12.2.0', 'module_name': 'hwloc', 'module_version': '2.8.0-GCCcore-12.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.2.0'}, {'full_module_name': 'UCX/1.13.1-GCCcore-12.2.0', 'module_name': 'UCX', 'module_version': '1.13.1-GCCcore-12.2.0'}, {'full_module_name': 'libfabric/1.16.1-GCCcore-12.2.0', 'module_name': 'libfabric', 'module_version': '1.16.1-GCCcore-12.2.0'}, {'full_module_name': 'PMIx/4.2.2-GCCcore-12.2.0', 'module_name': 'PMIx', 'module_version': '4.2.2-GCCcore-12.2.0'}, {'full_module_name': 'UCC/1.1.0-GCCcore-12.2.0', 'module_name': 'UCC', 'module_version': '1.1.0-GCCcore-12.2.0'}, {'full_module_name': 'OpenMPI/4.1.4-GCC-12.2.0', 'module_name': 'OpenMPI', 'module_version': '4.1.4-GCC-12.2.0'}, {'full_module_name': 'gompi/2022b', 'module_name': 'gompi', 'module_version': '2022b'}, {'full_module_name': 'KaHIP/3.14-gompi-2022b', 'module_name': 'KaHIP', 'module_version': '3.14-gompi-2022b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'The graph partitioning framework KaHIP -- Karlsruhe High Quality Partitioning.', 'version': '3.14', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://kahip.github.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'KaHIP/3.16-gompi-2023a', 'module_name': 'KaHIP', 'module_version': '3.16-gompi-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.3.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'hwloc/2.9.1-GCCcore-12.3.0', 'module_name': 'hwloc', 'module_version': '2.9.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'UCX/1.14.1-GCCcore-12.3.0', 'module_name': 'UCX', 'module_version': '1.14.1-GCCcore-12.3.0'}, {'full_module_name': 'libfabric/1.18.0-GCCcore-12.3.0', 'module_name': 'libfabric', 'module_version': '1.18.0-GCCcore-12.3.0'}, {'full_module_name': 'PMIx/4.2.4-GCCcore-12.3.0', 'module_name': 'PMIx', 'module_version': '4.2.4-GCCcore-12.3.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-12.3.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenMPI/4.1.5-GCC-12.3.0', 'module_name': 'OpenMPI', 'module_version': '4.1.5-GCC-12.3.0'}, {'full_module_name': 'gompi/2023a', 'module_name': 'gompi', 'module_version': '2023a'}, {'full_module_name': 'KaHIP/3.16-gompi-2023a', 'module_name': 'KaHIP', 'module_version': '3.16-gompi-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'The graph partitioning framework KaHIP -- Karlsruhe High Quality Partitioning.', 'version': '3.16', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://kahip.github.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'The graph partitioning framework KaHIP -- Karlsruhe High Quality Partitioning.'} installations

@@ -1,60 +1,25 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: HMMER is used for searching sequence databases for homologs of protein
-    sequences, and for making protein sequence alignments. It implements methods using
-    probabilistic models called profile hidden Markov models (profile HMMs).  Compared
-    to BLAST, FASTA, and other sequence alignment and database search tools based
-    on older scoring methodology, HMMER aims to be significantly more accurate and
-    more able to detect remote homologs because of the strength of its underlying
-    mathematical models. In the past, this strength came at significant computational
-    expense, but in the new HMMER3 project, HMMER is now essentially as fast as BLAST.
-  license: Not confirmed
-  name: HMMER
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''HMMER/3.4-gompi-2023a'']'
-  url: http://hmmer.org/
----
-
-HMMER
-=====
+# HMMER
 
 
-HMMER is used for searching sequence databases for homologs of protein sequences, and for making protein sequence alignments. It implements methods using probabilistic models called profile hidden Markov models (profile HMMs).  Compared to BLAST, FASTA, and other sequence alignment and database search tools based on older scoring methodology, HMMER aims to be significantly more accurate and more able to detect remote homologs because of the strength of its underlying mathematical models. In the past, this strength came at significant computational expense, but in the new HMMER3 project, HMMER is now essentially as fast as BLAST.
+HMMER is used for searching sequence databases for homologs
+ of protein sequences, and for making protein sequence alignments. It
+ implements methods using probabilistic models called profile hidden Markov
+ models (profile HMMs).  Compared to BLAST, FASTA, and other sequence
+ alignment and database search tools based on older scoring methodology,
+ HMMER aims to be significantly more accurate and more able to detect remote
+ homologs because of the strength of its underlying mathematical models. In the
+ past, this strength came at significant computational expense, but in the new
+ HMMER3 project, HMMER is now essentially as fast as BLAST.
 
-http://hmmer.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[http://hmmer.org/](http://hmmer.org/)</span>
+
+## Available installations
 
 
-The overview below shows which HMMER installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`HMMER/3.4-gompi-2023a`|
 
-To start using HMMER, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load HMMER/3.4-gompi-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|HMMER/3.4-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'http://hmmer.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'HMMER/3.4-gompi-2023a', 'module_name': 'HMMER', 'module_version': '3.4-gompi-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.3.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'hwloc/2.9.1-GCCcore-12.3.0', 'module_name': 'hwloc', 'module_version': '2.9.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'UCX/1.14.1-GCCcore-12.3.0', 'module_name': 'UCX', 'module_version': '1.14.1-GCCcore-12.3.0'}, {'full_module_name': 'libfabric/1.18.0-GCCcore-12.3.0', 'module_name': 'libfabric', 'module_version': '1.18.0-GCCcore-12.3.0'}, {'full_module_name': 'PMIx/4.2.4-GCCcore-12.3.0', 'module_name': 'PMIx', 'module_version': '4.2.4-GCCcore-12.3.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-12.3.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenMPI/4.1.5-GCC-12.3.0', 'module_name': 'OpenMPI', 'module_version': '4.1.5-GCC-12.3.0'}, {'full_module_name': 'gompi/2023a', 'module_name': 'gompi', 'module_version': '2023a'}, {'full_module_name': 'HMMER/3.4-gompi-2023a', 'module_name': 'HMMER', 'module_version': '3.4-gompi-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'HMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.', 'version': '3.4', 'versionsuffix': '', 'extensions': []}], 'homepage': 'http://hmmer.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'HMMER is used for searching sequence databases for homologs\n of protein sequences, and for making protein sequence alignments. It\n implements methods using probabilistic models called profile hidden Markov\n models (profile HMMs).  Compared to BLAST, FASTA, and other sequence\n alignment and database search tools based on older scoring methodology,\n HMMER aims to be significantly more accurate and more able to detect remote\n homologs because of the strength of its underlying mathematical models. In the\n past, this strength came at significant computational expense, but in the new\n HMMER3 project, HMMER is now essentially as fast as BLAST.'} installations

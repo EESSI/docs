@@ -1,60 +1,46 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A simple, correct Python build frontend.
-  license: Not confirmed
-  name: build
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''build/1.0.3-GCCcore-12.3.0'']'
-  url: https://github.com/pypa/build
----
-
-build
-=====
+# build
 
 
 A simple, correct Python build frontend.
 
-https://github.com/pypa/build
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/pypa/build](https://github.com/pypa/build)</span>
+
+## Available installations
 
 
-The overview below shows which build installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.0.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`build/1.0.3-GCCcore-12.3.0`|
+|1.2.2.post1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`build/1.2.2.post1-GCCcore-13.3.0`|
+|1.3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`build/1.3.0-GCCcore-14.2.0`|
+|1.3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`build/1.3.0-GCCcore-14.3.0`|
 
-To start using build, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load build/1.0.3-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|build/1.0.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/pypa/build', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'build/1.0.3-GCCcore-12.3.0', 'module_name': 'build', 'module_version': '1.0.3-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'build/1.0.3-GCCcore-12.3.0', 'module_name': 'build', 'module_version': '1.0.3-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A simple, correct Python build frontend.', 'version': '1.0.3', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'pyproject_hooks', 'version': '1.0.0'}, {'type': 'python', 'name': 'build', 'version': '1.0.3'}]}, {'homepage': 'https://github.com/pypa/build', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'build/1.2.2.post1-GCCcore-13.3.0', 'module_name': 'build', 'module_version': '1.2.2.post1-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Tcl/8.6.14-GCCcore-13.3.0', 'module_name': 'Tcl', 'module_version': '8.6.14-GCCcore-13.3.0'}, {'full_module_name': 'SQLite/3.45.3-GCCcore-13.3.0', 'module_name': 'SQLite', 'module_version': '3.45.3-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.12.3-GCCcore-13.3.0', 'module_name': 'Python', 'module_version': '3.12.3-GCCcore-13.3.0'}, {'full_module_name': 'build/1.2.2.post1-GCCcore-13.3.0', 'module_name': 'build', 'module_version': '1.2.2.post1-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A simple, correct Python build frontend.', 'version': '1.2.2.post1', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'packaging', 'version': '24.2'}, {'type': 'python', 'name': 'pyproject_hooks', 'version': '1.0.0'}, {'type': 'python', 'name': 'build', 'version': '1.2.2.post1'}]}, {'homepage': 'https://github.com/pypa/build', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'build/1.3.0-GCCcore-14.2.0', 'module_name': 'build', 'module_version': '1.3.0-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'Tcl/8.6.16-GCCcore-14.2.0', 'module_name': 'Tcl', 'module_version': '8.6.16-GCCcore-14.2.0'}, {'full_module_name': 'SQLite/3.47.2-GCCcore-14.2.0', 'module_name': 'SQLite', 'module_version': '3.47.2-GCCcore-14.2.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-14.2.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-14.2.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.1-GCCcore-14.2.0', 'module_name': 'Python', 'module_version': '3.13.1-GCCcore-14.2.0'}, {'full_module_name': 'build/1.3.0-GCCcore-14.2.0', 'module_name': 'build', 'module_version': '1.3.0-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A simple, correct Python build frontend.', 'version': '1.3.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'packaging', 'version': '25.0'}, {'type': 'python', 'name': 'pyproject_hooks', 'version': '1.2.0'}, {'type': 'python', 'name': 'build', 'version': '1.3.0'}]}, {'homepage': 'https://github.com/pypa/build', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'build/1.3.0-GCCcore-14.3.0', 'module_name': 'build', 'module_version': '1.3.0-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'libtommath/1.3.0-GCCcore-14.3.0', 'module_name': 'libtommath', 'module_version': '1.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Tcl/9.0.1-GCCcore-14.3.0', 'module_name': 'Tcl', 'module_version': '9.0.1-GCCcore-14.3.0'}, {'full_module_name': 'SQLite/3.50.1-GCCcore-14.3.0', 'module_name': 'SQLite', 'module_version': '3.50.1-GCCcore-14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.5-GCCcore-14.3.0', 'module_name': 'Python', 'module_version': '3.13.5-GCCcore-14.3.0'}, {'full_module_name': 'build/1.3.0-GCCcore-14.3.0', 'module_name': 'build', 'module_version': '1.3.0-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A simple, correct Python build frontend.', 'version': '1.3.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'packaging', 'version': '25.0'}, {'type': 'python', 'name': 'pyproject_hooks', 'version': '1.2.0'}, {'type': 'python', 'name': 'build', 'version': '1.3.0'}]}], 'homepage': 'https://github.com/pypa/build', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'A simple, correct Python build frontend.'} installations
 
 
-### build/1.0.3-GCCcore-12.3.0
+### build
 
-This is a list of extensions included in the module:
 
-build-1.0.3, pyproject_hooks-1.0.0
+|`build` version|build modules that include it|
+| --- | --- |
+|1.0.3|`build/1.0.3-GCCcore-12.3.0`|
+|1.2.2.post1|`build/1.2.2.post1-GCCcore-13.3.0`|
+|1.3.0|`build/1.3.0-GCCcore-14.3.0`<br/>`build/1.3.0-GCCcore-14.2.0`|
+
+### packaging
+
+
+|`packaging` version|build modules that include it|
+| --- | --- |
+|24.2|`build/1.2.2.post1-GCCcore-13.3.0`|
+|25.0|`build/1.3.0-GCCcore-14.3.0`<br/>`build/1.3.0-GCCcore-14.2.0`|
+
+### pyproject_hooks
+
+
+|`pyproject_hooks` version|build modules that include it|
+| --- | --- |
+|1.0.0|`build/1.2.2.post1-GCCcore-13.3.0`<br/>`build/1.0.3-GCCcore-12.3.0`|
+|1.2.0|`build/1.3.0-GCCcore-14.3.0`<br/>`build/1.3.0-GCCcore-14.2.0`|

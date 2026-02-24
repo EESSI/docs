@@ -1,76 +1,50 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: 'The goal of the European Environment for Scientific Software Installations
-    (EESSI, pronounced as "easy") is to build a common stack of scientific software
-    installations for HPC systems and beyond, including laptops, personal workstations
-    and cloud infrastructure. This module allows you to extend EESSI using the same
-    configuration for EasyBuild as EESSI itself uses. A number of environment variables
-    control the behaviour of the module: - EESSI_USER_INSTALL can be set to a location
-    to install modules for use by   the user only. The location must already exist
-    on the filesystem. - EESSI_PROJECT_INSTALL can be set to a location to install
-    modules for use by   a project. The location must already exist on the filesystem
-    and you should   ensure that the location has the correct Linux group and the
-    SGID permission   is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`)
-    so that all   members of the group have permission to read and write installations.
-    - EESSI_SITE_INSTALL is either defined or not and cannot be used with another   environment
-    variable. A site installation is done in a defined location and   any installations
-    there are (by default) world readable. - EESSI_CVMFS_INSTALL is either defined
-    or not and cannot be used with another   environment variable. A CVMFS installation
-    targets a defined location which   will be ingested into CVMFS and is only useful
-    for CVMFS administrators. - If none of the environment variables above are defined,
-    an EESSI_USER_INSTALL   is assumed with a value of $HOME/EESSI If both EESSI_USER_INSTALL
-    and EESSI_PROJECT_INSTALL are defined, both sets of installations are exposed,
-    but new installations are created as user installations. Strict installation path
-    checking is enforced by EESSI for EESSI and site installations involving accelerators.
-    In these cases, if you wish to create an accelerator installation you must set
-    the environment variable EESSI_ACCELERATOR_INSTALL (and load/reload this module).'
-  license: Not confirmed
-  name: EESSI-extend
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''EESSI-extend/2023.06-easybuild'']'
-  url: https://eessi.io/docs/
----
-
-EESSI-extend
-============
+# EESSI-extend
 
 
-The goal of the European Environment for Scientific Software Installations (EESSI, pronounced as "easy") is to build a common stack of scientific software installations for HPC systems and beyond, including laptops, personal workstations and cloud infrastructure. This module allows you to extend EESSI using the same configuration for EasyBuild as EESSI itself uses. A number of environment variables control the behaviour of the module: - EESSI_USER_INSTALL can be set to a location to install modules for use by   the user only. The location must already exist on the filesystem. - EESSI_PROJECT_INSTALL can be set to a location to install modules for use by   a project. The location must already exist on the filesystem and you should   ensure that the location has the correct Linux group and the SGID permission   is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all   members of the group have permission to read and write installations. - EESSI_SITE_INSTALL is either defined or not and cannot be used with another   environment variable. A site installation is done in a defined location and   any installations there are (by default) world readable. - EESSI_CVMFS_INSTALL is either defined or not and cannot be used with another   environment variable. A CVMFS installation targets a defined location which   will be ingested into CVMFS and is only useful for CVMFS administrators. - If none of the environment variables above are defined, an EESSI_USER_INSTALL   is assumed with a value of $HOME/EESSI If both EESSI_USER_INSTALL and EESSI_PROJECT_INSTALL are defined, both sets of installations are exposed, but new installations are created as user installations. Strict installation path checking is enforced by EESSI for EESSI and site installations involving accelerators. In these cases, if you wish to create an accelerator installation you must set the environment variable EESSI_ACCELERATOR_INSTALL (and load/reload this module).
 
-https://eessi.io/docs/
-# Available modules
+ The goal of the European Environment for Scientific Software Installations
+ (EESSI, pronounced as "easy") is to build a common stack of scientific
+ software installations for HPC systems and beyond, including laptops,
+ personal workstations and cloud infrastructure.
+
+ This module allows you to extend EESSI using the same configuration for
+ EasyBuild as EESSI itself uses. A number of environment variables control the
+ behaviour of the module:
+ - EESSI_USER_INSTALL can be set to a location to install modules for use by
+   the user only. The location must already exist on the filesystem.
+ - EESSI_PROJECT_INSTALL can be set to a location to install modules for use by
+   a project. The location must already exist on the filesystem and you should
+   ensure that the location has the correct Linux group and the SGID permission
+   is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all
+   members of the group have permission to read and write installations.
+ - EESSI_SITE_INSTALL is either defined or not and cannot be used with another
+   environment variable. A site installation is done in a defined location and
+   any installations there are (by default) world readable.
+ - EESSI_CVMFS_INSTALL is either defined or not and cannot be used with another
+   environment variable. A CVMFS installation targets a defined location which
+   will be ingested into CVMFS and is only useful for CVMFS administrators.
+ - If none of the environment variables above are defined, an EESSI_USER_INSTALL
+   is assumed with a value of $HOME/EESSI
+ If both EESSI_USER_INSTALL and EESSI_PROJECT_INSTALL are defined, both sets of
+ installations are exposed, but new installations are created as user
+ installations.
+
+ Strict installation path checking is enforced by EESSI for EESSI and site
+ installations involving accelerators. In these cases, if you wish to create an
+ accelerator installation you must set the environment variable
+ EESSI_ACCELERATOR_INSTALL (and load/reload this module).
 
 
-The overview below shows which EESSI-extend installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://eessi.io/docs/](https://eessi.io/docs/)</span>
 
-To start using EESSI-extend, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load EESSI-extend/2023.06-easybuild
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|2023.06|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`EESSI-extend/2023.06-easybuild`|
+|2025.06|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`EESSI-extend/2025.06-easybuild`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|EESSI-extend/2023.06-easybuild|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://eessi.io/docs/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'system', 'version': 'system'}, 'toolchain_families_compatibility': ['2022b_foss', '2023a_foss', '2023b_foss'], 'module': {'full_module_name': 'EESSI-extend/2023.06-easybuild', 'module_name': 'EESSI-extend', 'module_version': '2023.06-easybuild'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'EasyBuild/5.2.1', 'module_name': 'EasyBuild', 'module_version': '5.2.1'}, {'full_module_name': 'EESSI-extend/2023.06-easybuild', 'module_name': 'EESSI-extend', 'module_version': '2023.06-easybuild'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The goal of the European Environment for Scientific Software Installations\n (EESSI, pronounced as "easy") is to build a common stack of scientific\n software installations for HPC systems and beyond, including laptops,\n personal workstations and cloud infrastructure.\n\n This module allows you to extend EESSI using the same configuration for\n EasyBuild as EESSI itself uses. A number of environment variables control the\n behaviour of the module:\n - EESSI_USER_INSTALL can be set to a location to install modules for use by\n   the user only. The location must already exist on the filesystem.\n - EESSI_PROJECT_INSTALL can be set to a location to install modules for use by\n   a project. The location must already exist on the filesystem and you should\n   ensure that the location has the correct Linux group and the SGID permission\n   is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all\n   members of the group have permission to read and write installations.\n - EESSI_SITE_INSTALL is either defined or not and cannot be used with another\n   environment variable. A site installation is done in a defined location and\n   any installations there are (by default) world readable.\n - EESSI_CVMFS_INSTALL is either defined or not and cannot be used with another\n   environment variable. A CVMFS installation targets a defined location which\n   will be ingested into CVMFS and is only useful for CVMFS administrators.\n - If none of the environment variables above are defined, an EESSI_USER_INSTALL\n   is assumed with a value of $HOME/EESSI\n If both EESSI_USER_INSTALL and EESSI_PROJECT_INSTALL are defined, both sets of\n installations are exposed, but new installations are created as user\n installations.\n\n Strict installation path checking is enforced by EESSI for EESSI and site\n installations involving accelerators. In these cases, if you wish to create an\n accelerator installation you must set the environment variable\n EESSI_ACCELERATOR_INSTALL (and load/reload this module).\n', 'version': '2023.06', 'versionsuffix': '-easybuild', 'extensions': []}, {'homepage': 'https://eessi.io/docs/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'system', 'version': 'system'}, 'toolchain_families_compatibility': ['2024a_foss', '2025a_foss', '2025b_foss'], 'module': {'full_module_name': 'EESSI-extend/2025.06-easybuild', 'module_name': 'EESSI-extend', 'module_version': '2025.06-easybuild'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'EasyBuild/5.2.1', 'module_name': 'EasyBuild', 'module_version': '5.2.1'}, {'full_module_name': 'EESSI-extend/2025.06-easybuild', 'module_name': 'EESSI-extend', 'module_version': '2025.06-easybuild'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The goal of the European Environment for Scientific Software Installations\n (EESSI, pronounced as "easy") is to build a common stack of scientific\n software installations for HPC systems and beyond, including laptops,\n personal workstations and cloud infrastructure.\n\n This module allows you to extend EESSI using the same configuration for\n EasyBuild as EESSI itself uses. A number of environment variables control the\n behaviour of the module:\n - EESSI_USER_INSTALL can be set to a location to install modules for use by\n   the user only. The location must already exist on the filesystem.\n - EESSI_PROJECT_INSTALL can be set to a location to install modules for use by\n   a project. The location must already exist on the filesystem and you should\n   ensure that the location has the correct Linux group and the SGID permission\n   is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all\n   members of the group have permission to read and write installations.\n - EESSI_SITE_INSTALL is either defined or not and cannot be used with another\n   environment variable. A site installation is done in a defined location and\n   any installations there are (by default) world readable.\n - EESSI_CVMFS_INSTALL is either defined or not and cannot be used with another\n   environment variable. A CVMFS installation targets a defined location which\n   will be ingested into CVMFS and is only useful for CVMFS administrators.\n - If none of the environment variables above are defined, an EESSI_USER_INSTALL\n   is assumed with a value of $HOME/EESSI\n If both EESSI_USER_INSTALL and EESSI_PROJECT_INSTALL are defined, both sets of\n installations are exposed, but new installations are created as user\n installations.\n\n Strict installation path checking is enforced by EESSI for EESSI and site\n installations involving accelerators. In these cases, if you wish to create an\n accelerator installation you must set the environment variable\n EESSI_ACCELERATOR_INSTALL (and load/reload this module).\n', 'version': '2025.06', 'versionsuffix': '-easybuild', 'extensions': []}], 'homepage': 'https://eessi.io/docs/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\n The goal of the European Environment for Scientific Software Installations\n (EESSI, pronounced as "easy") is to build a common stack of scientific\n software installations for HPC systems and beyond, including laptops,\n personal workstations and cloud infrastructure.\n\n This module allows you to extend EESSI using the same configuration for\n EasyBuild as EESSI itself uses. A number of environment variables control the\n behaviour of the module:\n - EESSI_USER_INSTALL can be set to a location to install modules for use by\n   the user only. The location must already exist on the filesystem.\n - EESSI_PROJECT_INSTALL can be set to a location to install modules for use by\n   a project. The location must already exist on the filesystem and you should\n   ensure that the location has the correct Linux group and the SGID permission\n   is set on that directory (`chmod g+s $EESSI_PROJECT_INSTALL`) so that all\n   members of the group have permission to read and write installations.\n - EESSI_SITE_INSTALL is either defined or not and cannot be used with another\n   environment variable. A site installation is done in a defined location and\n   any installations there are (by default) world readable.\n - EESSI_CVMFS_INSTALL is either defined or not and cannot be used with another\n   environment variable. A CVMFS installation targets a defined location which\n   will be ingested into CVMFS and is only useful for CVMFS administrators.\n - If none of the environment variables above are defined, an EESSI_USER_INSTALL\n   is assumed with a value of $HOME/EESSI\n If both EESSI_USER_INSTALL and EESSI_PROJECT_INSTALL are defined, both sets of\n installations are exposed, but new installations are created as user\n installations.\n\n Strict installation path checking is enforced by EESSI for EESSI and site\n installations involving accelerators. In these cases, if you wish to create an\n accelerator installation you must set the environment variable\n EESSI_ACCELERATOR_INSTALL (and load/reload this module).\n'} installations

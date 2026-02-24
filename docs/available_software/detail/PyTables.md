@@ -1,69 +1,45 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: PyTables is a package for managing hierarchical datasets and designed
-    to efficiently and easily cope with extremely large amounts of data. PyTables
-    is built on top of the HDF5 library, using the Python language and the NumPy package.
-    It features an object-oriented interface that, combined with C extensions for
-    the performance-critical parts of the code (generated using Cython), makes it
-    a fast, yet extremely easy to use tool for interactively browsing, processing
-    and searching very large amounts of data. One important feature of PyTables is
-    that it optimizes memory and disk resources so that data takes much less space
-    (specially if on-flight compression is used) than other solutions such as relational
-    or object oriented databases.
-  license: Not confirmed
-  name: PyTables
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''PyTables/3.9.2-foss-2023b'']'
-  url: https://www.pytables.org
----
-
-PyTables
-========
+# PyTables
 
 
-PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browsing, processing and searching very large amounts of data. One important feature of PyTables is that it optimizes memory and disk resources so that data takes much less space (specially if on-flight compression is used) than other solutions such as relational or object oriented databases.
+PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope
+ with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the
+ NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical
+ parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browsing,
+ processing and searching very large amounts of data. One important feature of PyTables is that it optimizes memory and
+ disk resources so that data takes much less space (specially if on-flight compression is used) than other solutions
+ such as relational or object oriented databases.
 
-https://www.pytables.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.pytables.org](https://www.pytables.org)</span>
 
-
-The overview below shows which PyTables installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using PyTables, load one of these modules using a `module load` command like:
-
-```shell
-module load PyTables/3.9.2-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyTables/3.9.2-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### PyTables/3.9.2-foss-2023b
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.9.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`PyTables/3.9.2-foss-2023b`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-blosc2-2.5.1, ndindex-1.8, tables-3.9.2
+Overview of extensions included in {'versions': [{'homepage': 'https://www.pytables.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'foss', 'version': '2023b'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'PyTables/3.9.2-foss-2023b', 'module_name': 'PyTables', 'module_version': '3.9.2-foss-2023b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'GCC/13.2.0', 'module_name': 'GCC', 'module_version': '13.2.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-13.2.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-13.2.0'}, {'full_module_name': 'libxml2/2.11.5-GCCcore-13.2.0', 'module_name': 'libxml2', 'module_version': '2.11.5-GCCcore-13.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-13.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-13.2.0'}, {'full_module_name': 'hwloc/2.9.2-GCCcore-13.2.0', 'module_name': 'hwloc', 'module_version': '2.9.2-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-13.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-13.2.0'}, {'full_module_name': 'UCX/1.15.0-GCCcore-13.2.0', 'module_name': 'UCX', 'module_version': '1.15.0-GCCcore-13.2.0'}, {'full_module_name': 'libfabric/1.19.0-GCCcore-13.2.0', 'module_name': 'libfabric', 'module_version': '1.19.0-GCCcore-13.2.0'}, {'full_module_name': 'PMIx/4.2.6-GCCcore-13.2.0', 'module_name': 'PMIx', 'module_version': '4.2.6-GCCcore-13.2.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-13.2.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-13.2.0'}, {'full_module_name': 'OpenMPI/4.1.6-GCC-13.2.0', 'module_name': 'OpenMPI', 'module_version': '4.1.6-GCC-13.2.0'}, {'full_module_name': 'OpenBLAS/0.3.24-GCC-13.2.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.24-GCC-13.2.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-13.2.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-13.2.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-13.2.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-13.2.0'}, {'full_module_name': 'gompi/2023b', 'module_name': 'gompi', 'module_version': '2023b'}, {'full_module_name': 'FFTW.MPI/3.3.10-gompi-2023b', 'module_name': 'FFTW.MPI', 'module_version': '3.3.10-gompi-2023b'}, {'full_module_name': 'ScaLAPACK/2.2.0-gompi-2023b-fb', 'module_name': 'ScaLAPACK', 'module_version': '2.2.0-gompi-2023b-fb'}, {'full_module_name': 'foss/2023b', 'module_name': 'foss', 'module_version': '2023b'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'gfbf/2023b', 'module_name': 'gfbf', 'module_version': '2023b'}, {'full_module_name': 'cffi/1.15.1-GCCcore-13.2.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-13.2.0'}, {'full_module_name': 'cryptography/41.0.5-GCCcore-13.2.0', 'module_name': 'cryptography', 'module_version': '41.0.5-GCCcore-13.2.0'}, {'full_module_name': 'virtualenv/20.24.6-GCCcore-13.2.0', 'module_name': 'virtualenv', 'module_version': '20.24.6-GCCcore-13.2.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.10-GCCcore-13.2.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.10-GCCcore-13.2.0'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-13.2.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-13.2.0'}, {'full_module_name': 'SciPy-bundle/2023.11-gfbf-2023b', 'module_name': 'SciPy-bundle', 'module_version': '2023.11-gfbf-2023b'}, {'full_module_name': 'Szip/2.1.1-GCCcore-13.2.0', 'module_name': 'Szip', 'module_version': '2.1.1-GCCcore-13.2.0'}, {'full_module_name': 'HDF5/1.14.3-gompi-2023b', 'module_name': 'HDF5', 'module_version': '1.14.3-gompi-2023b'}, {'full_module_name': 'LZO/2.10-GCCcore-13.2.0', 'module_name': 'LZO', 'module_version': '2.10-GCCcore-13.2.0'}, {'full_module_name': 'Blosc/1.21.5-GCCcore-13.2.0', 'module_name': 'Blosc', 'module_version': '1.21.5-GCCcore-13.2.0'}, {'full_module_name': 'Blosc2/2.13.2-GCCcore-13.2.0', 'module_name': 'Blosc2', 'module_version': '2.13.2-GCCcore-13.2.0'}, {'full_module_name': 'py-cpuinfo/9.0.0-GCCcore-13.2.0', 'module_name': 'py-cpuinfo', 'module_version': '9.0.0-GCCcore-13.2.0'}, {'full_module_name': 'PyTables/3.9.2-foss-2023b', 'module_name': 'PyTables', 'module_version': '3.9.2-foss-2023b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope\n with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the\n NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical\n parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browsing,\n processing and searching very large amounts of data. One important feature of PyTables is that it optimizes memory and\n disk resources so that data takes much less space (specially if on-flight compression is used) than other solutions\n such as relational or object oriented databases.', 'version': '3.9.2', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'ndindex', 'version': '1.8'}, {'type': 'python', 'name': 'blosc2', 'version': '2.5.1'}, {'type': 'python', 'name': 'tables', 'version': '3.9.2'}]}], 'homepage': 'https://www.pytables.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'PyTables is a package for managing hierarchical datasets and designed to efficiently and easily cope\n with extremely large amounts of data. PyTables is built on top of the HDF5 library, using the Python language and the\n NumPy package. It features an object-oriented interface that, combined with C extensions for the performance-critical\n parts of the code (generated using Cython), makes it a fast, yet extremely easy to use tool for interactively browsing,\n processing and searching very large amounts of data. One important feature of PyTables is that it optimizes memory and\n disk resources so that data takes much less space (specially if on-flight compression is used) than other solutions\n such as relational or object oriented databases.'} installations
+
+
+### blosc2
+
+
+|`blosc2` version|PyTables modules that include it|
+| --- | --- |
+|2.5.1|`PyTables/3.9.2-foss-2023b`|
+
+### ndindex
+
+
+|`ndindex` version|PyTables modules that include it|
+| --- | --- |
+|1.8|`PyTables/3.9.2-foss-2023b`|
+
+### tables
+
+
+|`tables` version|PyTables modules that include it|
+| --- | --- |
+|3.9.2|`PyTables/3.9.2-foss-2023b`|

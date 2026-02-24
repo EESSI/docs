@@ -1,56 +1,20 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: WPE WebKit allows embedders to create simple and performantsystems
-    based on Web platform technologies. It is a WebKit port designed withflexibility
-    and hardware acceleration in mind, leveraging common 3D graphicsAPIs for best
-    performance.
-  license: Not confirmed
-  name: wpebackend-fdo
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''wpebackend-fdo/1.15.90-GCCcore-12.3.0'']'
-  url: https://wpewebkit.org/
----
-
-wpebackend-fdo
-==============
+# wpebackend-fdo
 
 
-WPE WebKit allows embedders to create simple and performantsystems based on Web platform technologies. It is a WebKit port designed withflexibility and hardware acceleration in mind, leveraging common 3D graphicsAPIs for best performance.
+WPE WebKit allows embedders to create simple and performant
+systems based on Web platform technologies. It is a WebKit port designed with
+flexibility and hardware acceleration in mind, leveraging common 3D graphics
+APIs for best performance.
 
-https://wpewebkit.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://wpewebkit.org/](https://wpewebkit.org/)</span>
+
+## Available installations
 
 
-The overview below shows which wpebackend-fdo installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.15.90|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`wpebackend-fdo/1.15.90-GCCcore-12.3.0`|
 
-To start using wpebackend-fdo, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load wpebackend-fdo/1.15.90-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|wpebackend-fdo/1.15.90-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://wpewebkit.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'wpebackend-fdo/1.15.90-GCCcore-12.3.0', 'module_name': 'wpebackend-fdo', 'module_version': '1.15.90-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'pugixml/1.14-GCCcore-12.3.0', 'module_name': 'pugixml', 'module_version': '1.14-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'Wayland/1.22.0-GCCcore-12.3.0', 'module_name': 'Wayland', 'module_version': '1.22.0-GCCcore-12.3.0'}, {'full_module_name': 'libpng/1.6.39-GCCcore-12.3.0', 'module_name': 'libpng', 'module_version': '1.6.39-GCCcore-12.3.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.3.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.3.0'}, {'full_module_name': 'freetype/2.13.0-GCCcore-12.3.0', 'module_name': 'freetype', 'module_version': '2.13.0-GCCcore-12.3.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-12.3.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-12.3.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-12.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'X11/20230603-GCCcore-12.3.0', 'module_name': 'X11', 'module_version': '20230603-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'libdrm/2.4.115-GCCcore-12.3.0', 'module_name': 'libdrm', 'module_version': '2.4.115-GCCcore-12.3.0'}, {'full_module_name': 'libglvnd/1.6.0-GCCcore-12.3.0', 'module_name': 'libglvnd', 'module_version': '1.6.0-GCCcore-12.3.0'}, {'full_module_name': 'libunwind/1.6.2-GCCcore-12.3.0', 'module_name': 'libunwind', 'module_version': '1.6.2-GCCcore-12.3.0'}, {'full_module_name': 'LLVM/16.0.6-GCCcore-12.3.0', 'module_name': 'LLVM', 'module_version': '16.0.6-GCCcore-12.3.0'}, {'full_module_name': 'Mesa/23.1.4-GCCcore-12.3.0', 'module_name': 'Mesa', 'module_version': '23.1.4-GCCcore-12.3.0'}, {'full_module_name': 'libGLU/9.0.3-GCCcore-12.3.0', 'module_name': 'libGLU', 'module_version': '9.0.3-GCCcore-12.3.0'}, {'full_module_name': 'freeglut/3.4.0-GCCcore-12.3.0', 'module_name': 'freeglut', 'module_version': '3.4.0-GCCcore-12.3.0'}, {'full_module_name': 'Waylandpp/1.0.0-GCCcore-12.3.0', 'module_name': 'Waylandpp', 'module_version': '1.0.0-GCCcore-12.3.0'}, {'full_module_name': 'libepoxy/1.5.10-GCCcore-12.3.0', 'module_name': 'libepoxy', 'module_version': '1.5.10-GCCcore-12.3.0'}, {'full_module_name': 'PCRE2/10.42-GCCcore-12.3.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-12.3.0'}, {'full_module_name': 'GLib/2.77.1-GCCcore-12.3.0', 'module_name': 'GLib', 'module_version': '2.77.1-GCCcore-12.3.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.3.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.3.0'}, {'full_module_name': 'nettle/3.9.1-GCCcore-12.3.0', 'module_name': 'nettle', 'module_version': '3.9.1-GCCcore-12.3.0'}, {'full_module_name': 'gc/8.2.4-GCCcore-12.3.0', 'module_name': 'gc', 'module_version': '8.2.4-GCCcore-12.3.0'}, {'full_module_name': 'libunistring/1.1-GCCcore-12.3.0', 'module_name': 'libunistring', 'module_version': '1.1-GCCcore-12.3.0'}, {'full_module_name': 'Guile/3.0.9-GCCcore-12.3.0', 'module_name': 'Guile', 'module_version': '3.0.9-GCCcore-12.3.0'}, {'full_module_name': 'libtasn1/4.19.0-GCCcore-12.3.0', 'module_name': 'libtasn1', 'module_version': '4.19.0-GCCcore-12.3.0'}, {'full_module_name': 'libidn2/2.3.7-GCCcore-12.3.0', 'module_name': 'libidn2', 'module_version': '2.3.7-GCCcore-12.3.0'}, {'full_module_name': 'p11-kit/0.25.3-GCCcore-12.3.0', 'module_name': 'p11-kit', 'module_version': '0.25.3-GCCcore-12.3.0'}, {'full_module_name': 'GnuTLS/3.7.8-GCCcore-12.3.0', 'module_name': 'GnuTLS', 'module_version': '3.7.8-GCCcore-12.3.0'}, {'full_module_name': 'glib-networking/2.72.1-GCCcore-12.3.0', 'module_name': 'glib-networking', 'module_version': '2.72.1-GCCcore-12.3.0'}, {'full_module_name': 'glew/2.2.0-GCCcore-12.3.0-osmesa', 'module_name': 'glew', 'module_version': '2.2.0-GCCcore-12.3.0-osmesa'}, {'full_module_name': 'libwpe/1.16.0-GCCcore-12.3.0', 'module_name': 'libwpe', 'module_version': '1.16.0-GCCcore-12.3.0'}, {'full_module_name': 'wpebackend-fdo/1.15.90-GCCcore-12.3.0', 'module_name': 'wpebackend-fdo', 'module_version': '1.15.90-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'WPE WebKit allows embedders to create simple and performant\nsystems based on Web platform technologies. It is a WebKit port designed with\nflexibility and hardware acceleration in mind, leveraging common 3D graphics\nAPIs for best performance.', 'version': '1.15.90', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://wpewebkit.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'WPE WebKit allows embedders to create simple and performant\nsystems based on Web platform technologies. It is a WebKit port designed with\nflexibility and hardware acceleration in mind, leveraging common 3D graphics\nAPIs for best performance.'} installations

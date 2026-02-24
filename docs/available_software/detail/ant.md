@@ -1,55 +1,20 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Apache Ant is a Java library and command-line tool whose mission is
-    to drive processes described in build files as targets and extension points dependent
-    upon each other. The main known usage of Ant is the build of Java applications.
-  license: Not confirmed
-  name: ant
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''ant/1.10.14-Java-11'']'
-  url: https://ant.apache.org/
----
-
-ant
-===
+# ant
 
 
-Apache Ant is a Java library and command-line tool whose mission is to drive processes described in build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of Java applications.
+Apache Ant is a Java library and command-line tool whose mission is to drive processes described in
+ build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of
+ Java applications.
 
-https://ant.apache.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://ant.apache.org/](https://ant.apache.org/)</span>
+
+## Available installations
 
 
-The overview below shows which ant installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.10.14|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`ant/1.10.14-Java-11`|
+|1.10.12|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`ant/1.10.12-Java-17`|
 
-To start using ant, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load ant/1.10.14-Java-11
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ant/1.10.14-Java-11|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://ant.apache.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'system', 'version': 'system'}, 'toolchain_families_compatibility': ['2022b_foss', '2023a_foss', '2023b_foss'], 'module': {'full_module_name': 'ant/1.10.14-Java-11', 'module_name': 'ant', 'module_version': '1.10.14-Java-11'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'Java/11.0.27', 'module_name': 'Java', 'module_version': '11.0.27'}, {'full_module_name': 'Java/11', 'module_name': 'Java', 'module_version': '11'}, {'full_module_name': 'ant/1.10.14-Java-11', 'module_name': 'ant', 'module_version': '1.10.14-Java-11'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Apache Ant is a Java library and command-line tool whose mission is to drive processes described in\n build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of\n Java applications.', 'version': '1.10.14', 'versionsuffix': '-Java-11', 'extensions': []}, {'homepage': 'https://ant.apache.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'system', 'version': 'system'}, 'toolchain_families_compatibility': ['2024a_foss', '2025a_foss', '2025b_foss'], 'module': {'full_module_name': 'ant/1.10.12-Java-17', 'module_name': 'ant', 'module_version': '1.10.12-Java-17'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'Java/17.0.15', 'module_name': 'Java', 'module_version': '17.0.15'}, {'full_module_name': 'Java/17', 'module_name': 'Java', 'module_version': '17'}, {'full_module_name': 'ant/1.10.12-Java-17', 'module_name': 'ant', 'module_version': '1.10.12-Java-17'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Apache Ant is a Java library and command-line tool whose mission is to drive processes described in\n build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of\n Java applications.', 'version': '1.10.12', 'versionsuffix': '-Java-17', 'extensions': []}], 'homepage': 'https://ant.apache.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Apache Ant is a Java library and command-line tool whose mission is to drive processes described in\n build files as targets and extension points dependent upon each other. The main known usage of Ant is the build of\n Java applications.'} installations

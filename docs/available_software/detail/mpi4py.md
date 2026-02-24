@@ -1,76 +1,31 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: MPI for Python (mpi4py) provides bindings of the Message Passing Interface
-    (MPI) standard for the Python programming language, allowing any Python program
-    to exploit multiple processors.
-  license: Not confirmed
-  name: mpi4py
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''mpi4py/3.1.4-gompi-2022b'', ''mpi4py/3.1.4-gompi-2023a'', ''mpi4py/3.1.5-gompi-2023b'']'
-  url: https://github.com/mpi4py/mpi4py
----
-
-mpi4py
-======
+# mpi4py
 
 
-MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for the Python programming language, allowing any Python program to exploit multiple processors.
+MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for
+ the Python programming language, allowing any Python program to exploit multiple processors.
 
-https://github.com/mpi4py/mpi4py
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/mpi4py/mpi4py](https://github.com/mpi4py/mpi4py)</span>
 
-
-The overview below shows which mpi4py installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using mpi4py, load one of these modules using a `module load` command like:
-
-```shell
-module load mpi4py/3.1.5-gompi-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|mpi4py/3.1.5-gompi-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|mpi4py/3.1.4-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|mpi4py/3.1.4-gompi-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### mpi4py/3.1.5-gompi-2023b
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.1.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`mpi4py/3.1.4-gompi-2022b`|
+|3.1.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`mpi4py/3.1.4-gompi-2023a`|
+|3.1.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`mpi4py/3.1.5-gompi-2023b`|
+|4.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`mpi4py/4.1.0-gompi-2025a`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-mpi4py-3.1.5
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/mpi4py/mpi4py', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2022b'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'mpi4py/3.1.4-gompi-2022b', 'module_name': 'mpi4py', 'module_version': '3.1.4-gompi-2022b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GCC/12.2.0', 'module_name': 'GCC', 'module_version': '12.2.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.2.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.2.0'}, {'full_module_name': 'libxml2/2.10.3-GCCcore-12.2.0', 'module_name': 'libxml2', 'module_version': '2.10.3-GCCcore-12.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.2.0'}, {'full_module_name': 'hwloc/2.8.0-GCCcore-12.2.0', 'module_name': 'hwloc', 'module_version': '2.8.0-GCCcore-12.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.2.0'}, {'full_module_name': 'UCX/1.13.1-GCCcore-12.2.0', 'module_name': 'UCX', 'module_version': '1.13.1-GCCcore-12.2.0'}, {'full_module_name': 'libfabric/1.16.1-GCCcore-12.2.0', 'module_name': 'libfabric', 'module_version': '1.16.1-GCCcore-12.2.0'}, {'full_module_name': 'PMIx/4.2.2-GCCcore-12.2.0', 'module_name': 'PMIx', 'module_version': '4.2.2-GCCcore-12.2.0'}, {'full_module_name': 'UCC/1.1.0-GCCcore-12.2.0', 'module_name': 'UCC', 'module_version': '1.1.0-GCCcore-12.2.0'}, {'full_module_name': 'OpenMPI/4.1.4-GCC-12.2.0', 'module_name': 'OpenMPI', 'module_version': '4.1.4-GCC-12.2.0'}, {'full_module_name': 'gompi/2022b', 'module_name': 'gompi', 'module_version': '2022b'}, {'full_module_name': 'Tcl/8.6.12-GCCcore-12.2.0', 'module_name': 'Tcl', 'module_version': '8.6.12-GCCcore-12.2.0'}, {'full_module_name': 'SQLite/3.39.4-GCCcore-12.2.0', 'module_name': 'SQLite', 'module_version': '3.39.4-GCCcore-12.2.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.2.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.2.0'}, {'full_module_name': 'Python/3.10.8-GCCcore-12.2.0', 'module_name': 'Python', 'module_version': '3.10.8-GCCcore-12.2.0'}, {'full_module_name': 'mpi4py/3.1.4-gompi-2022b', 'module_name': 'mpi4py', 'module_version': '3.1.4-gompi-2022b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for\n the Python programming language, allowing any Python program to exploit multiple processors.', 'version': '3.1.4', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'mpi4py', 'version': '3.1.4'}]}, {'homepage': 'https://github.com/mpi4py/mpi4py', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'mpi4py/3.1.4-gompi-2023a', 'module_name': 'mpi4py', 'module_version': '3.1.4-gompi-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.3.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'hwloc/2.9.1-GCCcore-12.3.0', 'module_name': 'hwloc', 'module_version': '2.9.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'UCX/1.14.1-GCCcore-12.3.0', 'module_name': 'UCX', 'module_version': '1.14.1-GCCcore-12.3.0'}, {'full_module_name': 'libfabric/1.18.0-GCCcore-12.3.0', 'module_name': 'libfabric', 'module_version': '1.18.0-GCCcore-12.3.0'}, {'full_module_name': 'PMIx/4.2.4-GCCcore-12.3.0', 'module_name': 'PMIx', 'module_version': '4.2.4-GCCcore-12.3.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-12.3.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenMPI/4.1.5-GCC-12.3.0', 'module_name': 'OpenMPI', 'module_version': '4.1.5-GCC-12.3.0'}, {'full_module_name': 'gompi/2023a', 'module_name': 'gompi', 'module_version': '2023a'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'mpi4py/3.1.4-gompi-2023a', 'module_name': 'mpi4py', 'module_version': '3.1.4-gompi-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for\n the Python programming language, allowing any Python program to exploit multiple processors.', 'version': '3.1.4', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'mpi4py', 'version': '3.1.4'}]}, {'homepage': 'https://github.com/mpi4py/mpi4py', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2023b'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'mpi4py/3.1.5-gompi-2023b', 'module_name': 'mpi4py', 'module_version': '3.1.5-gompi-2023b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'GCC/13.2.0', 'module_name': 'GCC', 'module_version': '13.2.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-13.2.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-13.2.0'}, {'full_module_name': 'libxml2/2.11.5-GCCcore-13.2.0', 'module_name': 'libxml2', 'module_version': '2.11.5-GCCcore-13.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-13.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-13.2.0'}, {'full_module_name': 'hwloc/2.9.2-GCCcore-13.2.0', 'module_name': 'hwloc', 'module_version': '2.9.2-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-13.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-13.2.0'}, {'full_module_name': 'UCX/1.15.0-GCCcore-13.2.0', 'module_name': 'UCX', 'module_version': '1.15.0-GCCcore-13.2.0'}, {'full_module_name': 'libfabric/1.19.0-GCCcore-13.2.0', 'module_name': 'libfabric', 'module_version': '1.19.0-GCCcore-13.2.0'}, {'full_module_name': 'PMIx/4.2.6-GCCcore-13.2.0', 'module_name': 'PMIx', 'module_version': '4.2.6-GCCcore-13.2.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-13.2.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-13.2.0'}, {'full_module_name': 'OpenMPI/4.1.6-GCC-13.2.0', 'module_name': 'OpenMPI', 'module_version': '4.1.6-GCC-13.2.0'}, {'full_module_name': 'gompi/2023b', 'module_name': 'gompi', 'module_version': '2023b'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'mpi4py/3.1.5-gompi-2023b', 'module_name': 'mpi4py', 'module_version': '3.1.5-gompi-2023b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for\n the Python programming language, allowing any Python program to exploit multiple processors.', 'version': '3.1.5', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'mpi4py', 'version': '3.1.5'}]}, {'homepage': 'https://github.com/mpi4py/mpi4py', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2025a'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'mpi4py/4.1.0-gompi-2025a', 'module_name': 'mpi4py', 'module_version': '4.1.0-gompi-2025a'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'GCC/14.2.0', 'module_name': 'GCC', 'module_version': '14.2.0'}, {'full_module_name': 'numactl/2.0.19-GCCcore-14.2.0', 'module_name': 'numactl', 'module_version': '2.0.19-GCCcore-14.2.0'}, {'full_module_name': 'libxml2/2.13.4-GCCcore-14.2.0', 'module_name': 'libxml2', 'module_version': '2.13.4-GCCcore-14.2.0'}, {'full_module_name': 'libpciaccess/0.18.1-GCCcore-14.2.0', 'module_name': 'libpciaccess', 'module_version': '0.18.1-GCCcore-14.2.0'}, {'full_module_name': 'hwloc/2.11.2-GCCcore-14.2.0', 'module_name': 'hwloc', 'module_version': '2.11.2-GCCcore-14.2.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'libevent/2.1.12-GCCcore-14.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-14.2.0'}, {'full_module_name': 'UCX/1.18.0-GCCcore-14.2.0', 'module_name': 'UCX', 'module_version': '1.18.0-GCCcore-14.2.0'}, {'full_module_name': 'libfabric/2.0.0-GCCcore-14.2.0', 'module_name': 'libfabric', 'module_version': '2.0.0-GCCcore-14.2.0'}, {'full_module_name': 'PMIx/5.0.6-GCCcore-14.2.0', 'module_name': 'PMIx', 'module_version': '5.0.6-GCCcore-14.2.0'}, {'full_module_name': 'PRRTE/3.0.8-GCCcore-14.2.0', 'module_name': 'PRRTE', 'module_version': '3.0.8-GCCcore-14.2.0'}, {'full_module_name': 'UCC/1.3.0-GCCcore-14.2.0', 'module_name': 'UCC', 'module_version': '1.3.0-GCCcore-14.2.0'}, {'full_module_name': 'OpenMPI/5.0.7-GCC-14.2.0', 'module_name': 'OpenMPI', 'module_version': '5.0.7-GCC-14.2.0'}, {'full_module_name': 'gompi/2025a', 'module_name': 'gompi', 'module_version': '2025a'}, {'full_module_name': 'Tcl/8.6.16-GCCcore-14.2.0', 'module_name': 'Tcl', 'module_version': '8.6.16-GCCcore-14.2.0'}, {'full_module_name': 'SQLite/3.47.2-GCCcore-14.2.0', 'module_name': 'SQLite', 'module_version': '3.47.2-GCCcore-14.2.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-14.2.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-14.2.0'}, {'full_module_name': 'Python/3.13.1-GCCcore-14.2.0', 'module_name': 'Python', 'module_version': '3.13.1-GCCcore-14.2.0'}, {'full_module_name': 'mpi4py/4.1.0-gompi-2025a', 'module_name': 'mpi4py', 'module_version': '4.1.0-gompi-2025a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for\n the Python programming language, allowing any Python program to exploit multiple processors.', 'version': '4.1.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'mpi4py', 'version': '4.1.0'}]}], 'homepage': 'https://github.com/mpi4py/mpi4py', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI) standard for\n the Python programming language, allowing any Python program to exploit multiple processors.'} installations
 
-### mpi4py/3.1.4-gompi-2023a
 
-This is a list of extensions included in the module:
+### mpi4py
 
-mpi4py-3.1.4
 
-### mpi4py/3.1.4-gompi-2022b
-
-This is a list of extensions included in the module:
-
-mpi4py-3.1.4
+|`mpi4py` version|mpi4py modules that include it|
+| --- | --- |
+|3.1.4|`mpi4py/3.1.4-gompi-2022b`<br/>`mpi4py/3.1.4-gompi-2023a`|
+|3.1.5|`mpi4py/3.1.5-gompi-2023b`|
+|4.1.0|`mpi4py/4.1.0-gompi-2025a`|

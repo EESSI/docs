@@ -1,60 +1,33 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: WebSockets support for any application/server
-  license: Not confirmed
-  name: websockify
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''websockify/0.13.0-gfbf-2023a'']'
-  url: https://github.com/novnc/websockify
----
-
-websockify
-==========
+# websockify
 
 
 WebSockets support for any application/server
 
-https://github.com/novnc/websockify
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/novnc/websockify](https://github.com/novnc/websockify)</span>
+
+## Available installations
 
 
-The overview below shows which websockify installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|0.13.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`websockify/0.13.0-gfbf-2023a`|
+|0.13.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`websockify/0.13.0-gfbf-2024a`|
 
-To start using websockify, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load websockify/0.13.0-gfbf-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|websockify/0.13.0-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/novnc/websockify', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gfbf', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'websockify/0.13.0-gfbf-2023a', 'module_name': 'websockify', 'module_version': '0.13.0-gfbf-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'OpenBLAS/0.3.23-GCC-12.3.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.23-GCC-12.3.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-12.3.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-12.3.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-12.3.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-12.3.0'}, {'full_module_name': 'gfbf/2023a', 'module_name': 'gfbf', 'module_version': '2023a'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'cffi/1.15.1-GCCcore-12.3.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-12.3.0'}, {'full_module_name': 'cryptography/41.0.1-GCCcore-12.3.0', 'module_name': 'cryptography', 'module_version': '41.0.1-GCCcore-12.3.0'}, {'full_module_name': 'virtualenv/20.23.1-GCCcore-12.3.0', 'module_name': 'virtualenv', 'module_version': '20.23.1-GCCcore-12.3.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.06-GCCcore-12.3.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.06-GCCcore-12.3.0'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-12.3.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-12.3.0'}, {'full_module_name': 'SciPy-bundle/2023.07-gfbf-2023a', 'module_name': 'SciPy-bundle', 'module_version': '2023.07-gfbf-2023a'}, {'full_module_name': 'typing-extensions/4.9.0-GCCcore-12.3.0', 'module_name': 'typing-extensions', 'module_version': '4.9.0-GCCcore-12.3.0'}, {'full_module_name': 'Redis/7.2.3-GCCcore-12.3.0', 'module_name': 'Redis', 'module_version': '7.2.3-GCCcore-12.3.0'}, {'full_module_name': 'redis-py/5.0.1-GCCcore-12.3.0', 'module_name': 'redis-py', 'module_version': '5.0.1-GCCcore-12.3.0'}, {'full_module_name': 'websockify/0.13.0-gfbf-2023a', 'module_name': 'websockify', 'module_version': '0.13.0-gfbf-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'WebSockets support for any application/server', 'version': '0.13.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'jwcrypto', 'version': '1.5.6'}, {'type': 'python', 'name': 'websockify', 'version': '0.13.0'}]}, {'homepage': 'https://github.com/novnc/websockify', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gfbf', 'version': '2024a'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'websockify/0.13.0-gfbf-2024a', 'module_name': 'websockify', 'module_version': '0.13.0-gfbf-2024a'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'GCC/13.3.0', 'module_name': 'GCC', 'module_version': '13.3.0'}, {'full_module_name': 'OpenBLAS/0.3.27-GCC-13.3.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.27-GCC-13.3.0'}, {'full_module_name': 'FlexiBLAS/3.4.4-GCC-13.3.0', 'module_name': 'FlexiBLAS', 'module_version': '3.4.4-GCC-13.3.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-13.3.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-13.3.0'}, {'full_module_name': 'gfbf/2024a', 'module_name': 'gfbf', 'module_version': '2024a'}, {'full_module_name': 'Tcl/8.6.14-GCCcore-13.3.0', 'module_name': 'Tcl', 'module_version': '8.6.14-GCCcore-13.3.0'}, {'full_module_name': 'SQLite/3.45.3-GCCcore-13.3.0', 'module_name': 'SQLite', 'module_version': '3.45.3-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.12.3-GCCcore-13.3.0', 'module_name': 'Python', 'module_version': '3.12.3-GCCcore-13.3.0'}, {'full_module_name': 'cffi/1.16.0-GCCcore-13.3.0', 'module_name': 'cffi', 'module_version': '1.16.0-GCCcore-13.3.0'}, {'full_module_name': 'cryptography/42.0.8-GCCcore-13.3.0', 'module_name': 'cryptography', 'module_version': '42.0.8-GCCcore-13.3.0'}, {'full_module_name': 'virtualenv/20.26.2-GCCcore-13.3.0', 'module_name': 'virtualenv', 'module_version': '20.26.2-GCCcore-13.3.0'}, {'full_module_name': 'Python-bundle-PyPI/2024.06-GCCcore-13.3.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2024.06-GCCcore-13.3.0'}, {'full_module_name': 'SciPy-bundle/2024.05-gfbf-2024a', 'module_name': 'SciPy-bundle', 'module_version': '2024.05-gfbf-2024a'}, {'full_module_name': 'typing-extensions/4.11.0-GCCcore-13.3.0', 'module_name': 'typing-extensions', 'module_version': '4.11.0-GCCcore-13.3.0'}, {'full_module_name': 'Redis/7.4.1-GCCcore-13.3.0', 'module_name': 'Redis', 'module_version': '7.4.1-GCCcore-13.3.0'}, {'full_module_name': 'redis-py/5.1.1-GCCcore-13.3.0', 'module_name': 'redis-py', 'module_version': '5.1.1-GCCcore-13.3.0'}, {'full_module_name': 'websockify/0.13.0-gfbf-2024a', 'module_name': 'websockify', 'module_version': '0.13.0-gfbf-2024a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'WebSockets support for any application/server', 'version': '0.13.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'jwcrypto', 'version': '1.5.6'}, {'type': 'python', 'name': 'websockify', 'version': '0.13.0'}]}], 'homepage': 'https://github.com/novnc/websockify', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'WebSockets support for any application/server'} installations
 
 
-### websockify/0.13.0-gfbf-2023a
+### jwcrypto
 
-This is a list of extensions included in the module:
 
-jwcrypto-1.5.6, websockify-0.13.0
+|`jwcrypto` version|websockify modules that include it|
+| --- | --- |
+|1.5.6|`websockify/0.13.0-gfbf-2023a`<br/>`websockify/0.13.0-gfbf-2024a`|
+
+### websockify
+
+
+|`websockify` version|websockify modules that include it|
+| --- | --- |
+|0.13.0|`websockify/0.13.0-gfbf-2023a`<br/>`websockify/0.13.0-gfbf-2024a`|

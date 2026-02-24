@@ -1,59 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: 'Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing
-    reads to long reference sequences. It is particularly good at aligning reads of
-    about 50 up to 100s or 1,000s of characters, and particularly good at aligning
-    to relatively long (e.g. mammalian) genomes. Bowtie 2 indexes the genome with
-    an FM Index to keep its memory footprint small: for the human genome, its memory
-    footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end
-    alignment modes.'
-  license: Not confirmed
-  name: Bowtie2
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Bowtie2/2.5.1-GCC-12.2.0'']'
-  url: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml
----
-
-Bowtie2
-=======
+# Bowtie2
 
 
-Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes. Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome, its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
+ Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads
+ to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s
+ of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.
+ Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,
+ its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
 
-https://bowtie-bio.sourceforge.net/bowtie2/index.shtml
-# Available modules
+<small>homepage: </small><span class="software-link">[https://bowtie-bio.sourceforge.net/bowtie2/index.shtml](https://bowtie-bio.sourceforge.net/bowtie2/index.shtml)</span>
+
+## Available installations
 
 
-The overview below shows which Bowtie2 installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|2.5.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Bowtie2/2.5.1-GCC-12.2.0`|
 
-To start using Bowtie2, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Bowtie2/2.5.1-GCC-12.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Bowtie2/2.5.1-GCC-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://bowtie-bio.sourceforge.net/bowtie2/index.shtml', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'Bowtie2/2.5.1-GCC-12.2.0', 'module_name': 'Bowtie2', 'module_version': '2.5.1-GCC-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GCC/12.2.0', 'module_name': 'GCC', 'module_version': '12.2.0'}, {'full_module_name': 'expat/2.4.9-GCCcore-12.2.0', 'module_name': 'expat', 'module_version': '2.4.9-GCCcore-12.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'DB/18.1.40-GCCcore-12.2.0', 'module_name': 'DB', 'module_version': '18.1.40-GCCcore-12.2.0'}, {'full_module_name': 'Perl/5.36.0-GCCcore-12.2.0', 'module_name': 'Perl', 'module_version': '5.36.0-GCCcore-12.2.0'}, {'full_module_name': 'Tcl/8.6.12-GCCcore-12.2.0', 'module_name': 'Tcl', 'module_version': '8.6.12-GCCcore-12.2.0'}, {'full_module_name': 'SQLite/3.39.4-GCCcore-12.2.0', 'module_name': 'SQLite', 'module_version': '3.39.4-GCCcore-12.2.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.2.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.2.0'}, {'full_module_name': 'Python/3.10.8-GCCcore-12.2.0', 'module_name': 'Python', 'module_version': '3.10.8-GCCcore-12.2.0'}, {'full_module_name': 'Bowtie2/2.5.1-GCC-12.2.0', 'module_name': 'Bowtie2', 'module_version': '2.5.1-GCC-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': ' Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.', 'version': '2.5.1', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://bowtie-bio.sourceforge.net/bowtie2/index.shtml', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': ' Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads\n to long reference sequences. It is particularly good at aligning reads of about 50 up to 100s or 1,000s\n of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes.\n Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome,\n its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.'} installations

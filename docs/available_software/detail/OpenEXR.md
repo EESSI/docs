@@ -1,57 +1,22 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: OpenEXR is a high dynamic-range (HDR) image file format developed by
-    Industrial Light & Magic for use in computer imaging applications
-  license: Not confirmed
-  name: OpenEXR
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''OpenEXR/3.1.5-GCCcore-12.2.0'', ''OpenEXR/3.1.7-GCCcore-12.3.0'',
-    ''OpenEXR/3.2.0-GCCcore-13.2.0'']'
-  url: https://www.openexr.com/
----
-
-OpenEXR
-=======
+# OpenEXR
 
 
-OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic for use in computer imaging applications
+OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic
+ for use in computer imaging applications
 
-https://www.openexr.com/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.openexr.com/](https://www.openexr.com/)</span>
+
+## Available installations
 
 
-The overview below shows which OpenEXR installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.1.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenEXR/3.1.5-GCCcore-12.2.0`|
+|3.1.7|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenEXR/3.1.7-GCCcore-12.3.0`|
+|3.2.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenEXR/3.2.0-GCCcore-13.2.0`|
+|3.2.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenEXR/3.2.4-GCCcore-13.3.0`|
+|3.3.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenEXR/3.3.4-GCCcore-14.3.0`|
 
-To start using OpenEXR, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load OpenEXR/3.2.0-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenEXR/3.2.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|OpenEXR/3.1.7-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|OpenEXR/3.1.5-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.openexr.com/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'OpenEXR/3.1.5-GCCcore-12.2.0', 'module_name': 'OpenEXR', 'module_version': '3.1.5-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'Imath/3.1.6-GCCcore-12.2.0', 'module_name': 'Imath', 'module_version': '3.1.6-GCCcore-12.2.0'}, {'full_module_name': 'OpenEXR/3.1.5-GCCcore-12.2.0', 'module_name': 'OpenEXR', 'module_version': '3.1.5-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic\n for use in computer imaging applications', 'version': '3.1.5', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.openexr.com/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'OpenEXR/3.1.7-GCCcore-12.3.0', 'module_name': 'OpenEXR', 'module_version': '3.1.7-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Imath/3.1.7-GCCcore-12.3.0', 'module_name': 'Imath', 'module_version': '3.1.7-GCCcore-12.3.0'}, {'full_module_name': 'OpenEXR/3.1.7-GCCcore-12.3.0', 'module_name': 'OpenEXR', 'module_version': '3.1.7-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic\n for use in computer imaging applications', 'version': '3.1.7', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.openexr.com/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'OpenEXR/3.2.0-GCCcore-13.2.0', 'module_name': 'OpenEXR', 'module_version': '3.2.0-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'Imath/3.1.9-GCCcore-13.2.0', 'module_name': 'Imath', 'module_version': '3.1.9-GCCcore-13.2.0'}, {'full_module_name': 'OpenEXR/3.2.0-GCCcore-13.2.0', 'module_name': 'OpenEXR', 'module_version': '3.2.0-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic\n for use in computer imaging applications', 'version': '3.2.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.openexr.com/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'OpenEXR/3.2.4-GCCcore-13.3.0', 'module_name': 'OpenEXR', 'module_version': '3.2.4-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Imath/3.1.11-GCCcore-13.3.0', 'module_name': 'Imath', 'module_version': '3.1.11-GCCcore-13.3.0'}, {'full_module_name': 'OpenEXR/3.2.4-GCCcore-13.3.0', 'module_name': 'OpenEXR', 'module_version': '3.2.4-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic\n for use in computer imaging applications', 'version': '3.2.4', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.openexr.com/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'OpenEXR/3.3.4-GCCcore-14.3.0', 'module_name': 'OpenEXR', 'module_version': '3.3.4-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'Imath/3.1.12-GCCcore-14.3.0', 'module_name': 'Imath', 'module_version': '3.1.12-GCCcore-14.3.0'}, {'full_module_name': 'OpenEXR/3.3.4-GCCcore-14.3.0', 'module_name': 'OpenEXR', 'module_version': '3.3.4-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic\n for use in computer imaging applications', 'version': '3.3.4', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.openexr.com/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic\n for use in computer imaging applications'} installations

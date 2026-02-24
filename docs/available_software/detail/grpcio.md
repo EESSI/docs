@@ -1,62 +1,29 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: gRPC is a modern, open source, high-performance remote procedure call
-    (RPC)framework that can run anywhere. gRPC enables client and server applications
-    tocommunicate transparently, and simplifies the building of connected systems.
-  license: Not confirmed
-  name: grpcio
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''grpcio/1.57.0-GCCcore-12.3.0'']'
-  url: https://grpc.io/
----
-
-grpcio
-======
+# grpcio
 
 
-gRPC is a modern, open source, high-performance remote procedure call (RPC)framework that can run anywhere. gRPC enables client and server applications tocommunicate transparently, and simplifies the building of connected systems.
+gRPC is a modern, open source, high-performance remote procedure call (RPC)
+framework that can run anywhere. gRPC enables client and server applications to
+communicate transparently, and simplifies the building of connected systems.
 
-https://grpc.io/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://grpc.io/](https://grpc.io/)</span>
 
-
-The overview below shows which grpcio installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using grpcio, load one of these modules using a `module load` command like:
-
-```shell
-module load grpcio/1.57.0-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|grpcio/1.57.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### grpcio/1.57.0-GCCcore-12.3.0
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.57.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`grpcio/1.57.0-GCCcore-12.3.0`|
+|1.70.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`grpcio/1.70.0-GCCcore-13.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-grpcio-1.57.0
+Overview of extensions included in {'versions': [{'homepage': 'https://grpc.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'grpcio/1.57.0-GCCcore-12.3.0', 'module_name': 'grpcio', 'module_version': '1.57.0-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'Abseil/20230125.3-GCCcore-12.3.0', 'module_name': 'Abseil', 'module_version': '20230125.3-GCCcore-12.3.0'}, {'full_module_name': 'protobuf/24.0-GCCcore-12.3.0', 'module_name': 'protobuf', 'module_version': '24.0-GCCcore-12.3.0'}, {'full_module_name': 'protobuf-python/4.24.0-GCCcore-12.3.0', 'module_name': 'protobuf-python', 'module_version': '4.24.0-GCCcore-12.3.0'}, {'full_module_name': 'grpcio/1.57.0-GCCcore-12.3.0', 'module_name': 'grpcio', 'module_version': '1.57.0-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'gRPC is a modern, open source, high-performance remote procedure call (RPC)\nframework that can run anywhere. gRPC enables client and server applications to\ncommunicate transparently, and simplifies the building of connected systems.', 'version': '1.57.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'grpcio', 'version': '1.57.0'}]}, {'homepage': 'https://grpc.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'grpcio/1.70.0-GCCcore-13.3.0', 'module_name': 'grpcio', 'module_version': '1.70.0-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Tcl/8.6.14-GCCcore-13.3.0', 'module_name': 'Tcl', 'module_version': '8.6.14-GCCcore-13.3.0'}, {'full_module_name': 'SQLite/3.45.3-GCCcore-13.3.0', 'module_name': 'SQLite', 'module_version': '3.45.3-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.12.3-GCCcore-13.3.0', 'module_name': 'Python', 'module_version': '3.12.3-GCCcore-13.3.0'}, {'full_module_name': 'Abseil/20240722.0-GCCcore-13.3.0', 'module_name': 'Abseil', 'module_version': '20240722.0-GCCcore-13.3.0'}, {'full_module_name': 'protobuf/28.0-GCCcore-13.3.0', 'module_name': 'protobuf', 'module_version': '28.0-GCCcore-13.3.0'}, {'full_module_name': 'protobuf-python/5.28.0-GCCcore-13.3.0', 'module_name': 'protobuf-python', 'module_version': '5.28.0-GCCcore-13.3.0'}, {'full_module_name': 'grpcio/1.70.0-GCCcore-13.3.0', 'module_name': 'grpcio', 'module_version': '1.70.0-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'gRPC is a modern, open source, high-performance remote procedure call (RPC)\nframework that can run anywhere. gRPC enables client and server applications to\ncommunicate transparently, and simplifies the building of connected systems.', 'version': '1.70.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'grpcio', 'version': '1.70.0'}]}], 'homepage': 'https://grpc.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'gRPC is a modern, open source, high-performance remote procedure call (RPC)\nframework that can run anywhere. gRPC enables client and server applications to\ncommunicate transparently, and simplifies the building of connected systems.'} installations
+
+
+### grpcio
+
+
+|`grpcio` version|grpcio modules that include it|
+| --- | --- |
+|1.57.0|`grpcio/1.57.0-GCCcore-12.3.0`|
+|1.70.0|`grpcio/1.70.0-GCCcore-13.3.0`|

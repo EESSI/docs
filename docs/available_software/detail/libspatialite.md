@@ -1,54 +1,18 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: SpatiaLite is an open source library intended to extend the SQLite
-    core to support fully fledged Spatial SQL capabilities.
-  license: Not confirmed
-  name: libspatialite
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''libspatialite/5.1.0-GCC-12.3.0'']'
-  url: https://www.gaia-gis.it/fossil/libspatialite/home
----
-
-libspatialite
-=============
+# libspatialite
 
 
-SpatiaLite is an open source library intended to extend the SQLite core to support fully fledged Spatial SQL capabilities.
+SpatiaLite is an open source library intended to extend the SQLite core to support
+ fully fledged Spatial SQL capabilities.
 
-https://www.gaia-gis.it/fossil/libspatialite/home
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.gaia-gis.it/fossil/libspatialite/home](https://www.gaia-gis.it/fossil/libspatialite/home)</span>
+
+## Available installations
 
 
-The overview below shows which libspatialite installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|5.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`libspatialite/5.1.0-GCC-12.3.0`|
 
-To start using libspatialite, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load libspatialite/5.1.0-GCC-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libspatialite/5.1.0-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.gaia-gis.it/fossil/libspatialite/home', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'libspatialite/5.1.0-GCC-12.3.0', 'module_name': 'libspatialite', 'module_version': '5.1.0-GCC-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'minizip/1.1-GCCcore-12.3.0', 'module_name': 'minizip', 'module_version': '1.1-GCCcore-12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'FreeXL/2.0.0-GCCcore-12.3.0', 'module_name': 'FreeXL', 'module_version': '2.0.0-GCCcore-12.3.0'}, {'full_module_name': 'GEOS/3.12.0-GCC-12.3.0', 'module_name': 'GEOS', 'module_version': '3.12.0-GCC-12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'NASM/2.16.01-GCCcore-12.3.0', 'module_name': 'NASM', 'module_version': '2.16.01-GCCcore-12.3.0'}, {'full_module_name': 'libjpeg-turbo/2.1.5.1-GCCcore-12.3.0', 'module_name': 'libjpeg-turbo', 'module_version': '2.1.5.1-GCCcore-12.3.0'}, {'full_module_name': 'jbigkit/2.1-GCCcore-12.3.0', 'module_name': 'jbigkit', 'module_version': '2.1-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'libdeflate/1.18-GCCcore-12.3.0', 'module_name': 'libdeflate', 'module_version': '1.18-GCCcore-12.3.0'}, {'full_module_name': 'LibTIFF/4.5.0-GCCcore-12.3.0', 'module_name': 'LibTIFF', 'module_version': '4.5.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'cURL/8.0.1-GCCcore-12.3.0', 'module_name': 'cURL', 'module_version': '8.0.1-GCCcore-12.3.0'}, {'full_module_name': 'nlohmann_json/3.11.2-GCCcore-12.3.0', 'module_name': 'nlohmann_json', 'module_version': '3.11.2-GCCcore-12.3.0'}, {'full_module_name': 'PROJ/9.2.0-GCCcore-12.3.0', 'module_name': 'PROJ', 'module_version': '9.2.0-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'librttopo/1.1.0-GCC-12.3.0', 'module_name': 'librttopo', 'module_version': '1.1.0-GCC-12.3.0'}, {'full_module_name': 'libspatialite/5.1.0-GCC-12.3.0', 'module_name': 'libspatialite', 'module_version': '5.1.0-GCC-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'SpatiaLite is an open source library intended to extend the SQLite core to support\n fully fledged Spatial SQL capabilities.', 'version': '5.1.0', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.gaia-gis.it/fossil/libspatialite/home', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'SpatiaLite is an open source library intended to extend the SQLite core to support\n fully fledged Spatial SQL capabilities.'} installations

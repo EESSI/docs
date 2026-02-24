@@ -1,63 +1,35 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: VeloxChem [RLV+20] is a Python-based open source quantum chemistry
-    software forcontemporary and future hardware architectures. It features interactive
-    program access throughJupyter notebooks as well as massively parallel calculations
-    in high-performancecomputing (HPC) environments.
-  license: Not confirmed
-  name: VeloxChem
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''VeloxChem/1.0-rc4-foss-2023a'']'
-  url: https://veloxchem.org/docs/intro.html
----
-
-VeloxChem
-=========
+# VeloxChem
 
 
-VeloxChem [RLV+20] is a Python-based open source quantum chemistry software forcontemporary and future hardware architectures. It features interactive program access throughJupyter notebooks as well as massively parallel calculations in high-performancecomputing (HPC) environments.
+VeloxChem [RLV+20] is a Python-based open source quantum chemistry software for
+contemporary and future hardware architectures. It features interactive program access through
+Jupyter notebooks as well as massively parallel calculations in high-performance
+computing (HPC) environments.
 
-https://veloxchem.org/docs/intro.html
-# Available modules
+<small>homepage: </small><span class="software-link">[https://veloxchem.org/docs/intro.html](https://veloxchem.org/docs/intro.html)</span>
 
-
-The overview below shows which VeloxChem installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using VeloxChem, load one of these modules using a `module load` command like:
-
-```shell
-module load VeloxChem/1.0-rc4-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|VeloxChem/1.0-rc4-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### VeloxChem/1.0-rc4-foss-2023a
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.0-rc4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`VeloxChem/1.0-rc4-foss-2023a`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-geometric-1.1, VeloxChem-1.0-rc4
+Overview of extensions included in {'versions': [{'homepage': 'https://veloxchem.org/docs/intro.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'foss', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'VeloxChem/1.0-rc4-foss-2023a', 'module_name': 'VeloxChem', 'module_version': '1.0-rc4-foss-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.3.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'hwloc/2.9.1-GCCcore-12.3.0', 'module_name': 'hwloc', 'module_version': '2.9.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'UCX/1.14.1-GCCcore-12.3.0', 'module_name': 'UCX', 'module_version': '1.14.1-GCCcore-12.3.0'}, {'full_module_name': 'libfabric/1.18.0-GCCcore-12.3.0', 'module_name': 'libfabric', 'module_version': '1.18.0-GCCcore-12.3.0'}, {'full_module_name': 'PMIx/4.2.4-GCCcore-12.3.0', 'module_name': 'PMIx', 'module_version': '4.2.4-GCCcore-12.3.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-12.3.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenMPI/4.1.5-GCC-12.3.0', 'module_name': 'OpenMPI', 'module_version': '4.1.5-GCC-12.3.0'}, {'full_module_name': 'OpenBLAS/0.3.23-GCC-12.3.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.23-GCC-12.3.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-12.3.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-12.3.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-12.3.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-12.3.0'}, {'full_module_name': 'gompi/2023a', 'module_name': 'gompi', 'module_version': '2023a'}, {'full_module_name': 'FFTW.MPI/3.3.10-gompi-2023a', 'module_name': 'FFTW.MPI', 'module_version': '3.3.10-gompi-2023a'}, {'full_module_name': 'ScaLAPACK/2.2.0-gompi-2023a-fb', 'module_name': 'ScaLAPACK', 'module_version': '2.2.0-gompi-2023a-fb'}, {'full_module_name': 'foss/2023a', 'module_name': 'foss', 'module_version': '2023a'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'gfbf/2023a', 'module_name': 'gfbf', 'module_version': '2023a'}, {'full_module_name': 'cffi/1.15.1-GCCcore-12.3.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-12.3.0'}, {'full_module_name': 'cryptography/41.0.1-GCCcore-12.3.0', 'module_name': 'cryptography', 'module_version': '41.0.1-GCCcore-12.3.0'}, {'full_module_name': 'virtualenv/20.23.1-GCCcore-12.3.0', 'module_name': 'virtualenv', 'module_version': '20.23.1-GCCcore-12.3.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.06-GCCcore-12.3.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.06-GCCcore-12.3.0'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-12.3.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-12.3.0'}, {'full_module_name': 'SciPy-bundle/2023.07-gfbf-2023a', 'module_name': 'SciPy-bundle', 'module_version': '2023.07-gfbf-2023a'}, {'full_module_name': 'mpi4py/3.1.4-gompi-2023a', 'module_name': 'mpi4py', 'module_version': '3.1.4-gompi-2023a'}, {'full_module_name': 'Szip/2.1.1-GCCcore-12.3.0', 'module_name': 'Szip', 'module_version': '2.1.1-GCCcore-12.3.0'}, {'full_module_name': 'HDF5/1.14.0-gompi-2023a', 'module_name': 'HDF5', 'module_version': '1.14.0-gompi-2023a'}, {'full_module_name': 'h5py/3.9.0-foss-2023a', 'module_name': 'h5py', 'module_version': '3.9.0-foss-2023a'}, {'full_module_name': 'networkx/3.1-gfbf-2023a', 'module_name': 'networkx', 'module_version': '3.1-gfbf-2023a'}, {'full_module_name': 'scikit-build/0.17.6-GCCcore-12.3.0', 'module_name': 'scikit-build', 'module_version': '0.17.6-GCCcore-12.3.0'}, {'full_module_name': 'Eigen/3.4.0-GCCcore-12.3.0', 'module_name': 'Eigen', 'module_version': '3.4.0-GCCcore-12.3.0'}, {'full_module_name': 'libxc/6.2.2-GCC-12.3.0', 'module_name': 'libxc', 'module_version': '6.2.2-GCC-12.3.0'}, {'full_module_name': 'VeloxChem/1.0-rc4-foss-2023a', 'module_name': 'VeloxChem', 'module_version': '1.0-rc4-foss-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'VeloxChem [RLV+20] is a Python-based open source quantum chemistry software for\ncontemporary and future hardware architectures. It features interactive program access through\nJupyter notebooks as well as massively parallel calculations in high-performance\ncomputing (HPC) environments.', 'version': '1.0-rc4', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'geometric', 'version': '1.1'}, {'type': 'python', 'name': 'VeloxChem', 'version': '1.0-rc4'}]}], 'homepage': 'https://veloxchem.org/docs/intro.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'VeloxChem [RLV+20] is a Python-based open source quantum chemistry software for\ncontemporary and future hardware architectures. It features interactive program access through\nJupyter notebooks as well as massively parallel calculations in high-performance\ncomputing (HPC) environments.'} installations
+
+
+### geometric
+
+
+|`geometric` version|VeloxChem modules that include it|
+| --- | --- |
+|1.1|`VeloxChem/1.0-rc4-foss-2023a`|
+
+### VeloxChem
+
+
+|`VeloxChem` version|VeloxChem modules that include it|
+| --- | --- |
+|1.0-rc4|`VeloxChem/1.0-rc4-foss-2023a`|

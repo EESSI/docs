@@ -1,56 +1,20 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: yelp-tools is a collection of scripts and build utilities to help create,manage,
-    and publish documentation for Yelp and the web. Most of the heavylifting is done
-    by packages like yelp-xsl and itstool. This package justwraps things up in a developer-friendly
-    way.
-  license: Not confirmed
-  name: yelp-tools
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''yelp-tools/42.1-GCCcore-12.3.0'']'
-  url: https://gitlab.gnome.org/GNOME/yelp-tools
----
-
-yelp-tools
-==========
+# yelp-tools
 
 
-yelp-tools is a collection of scripts and build utilities to help create,manage, and publish documentation for Yelp and the web. Most of the heavylifting is done by packages like yelp-xsl and itstool. This package justwraps things up in a developer-friendly way.
+yelp-tools is a collection of scripts and build utilities to help create,
+manage, and publish documentation for Yelp and the web. Most of the heavy
+lifting is done by packages like yelp-xsl and itstool. This package just
+wraps things up in a developer-friendly way.
 
-https://gitlab.gnome.org/GNOME/yelp-tools
-# Available modules
+<small>homepage: </small><span class="software-link">[https://gitlab.gnome.org/GNOME/yelp-tools](https://gitlab.gnome.org/GNOME/yelp-tools)</span>
+
+## Available installations
 
 
-The overview below shows which yelp-tools installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|42.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`yelp-tools/42.1-GCCcore-12.3.0`|
 
-To start using yelp-tools, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load yelp-tools/42.1-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|yelp-tools/42.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://gitlab.gnome.org/GNOME/yelp-tools', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'yelp-tools/42.1-GCCcore-12.3.0', 'module_name': 'yelp-tools', 'module_version': '42.1-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'yelp-xsl/42.1-GCCcore-12.3.0', 'module_name': 'yelp-xsl', 'module_version': '42.1-GCCcore-12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libiconv/1.17-GCCcore-12.3.0', 'module_name': 'libiconv', 'module_version': '1.17-GCCcore-12.3.0'}, {'full_module_name': 'ICU/73.2-GCCcore-12.3.0', 'module_name': 'ICU', 'module_version': '73.2-GCCcore-12.3.0'}, {'full_module_name': 'libxml2-python/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2-python', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'ITSTool/2.0.7-GCCcore-12.3.0', 'module_name': 'ITSTool', 'module_version': '2.0.7-GCCcore-12.3.0'}, {'full_module_name': 'mallard-ducktype/1.0.2-GCCcore-12.3.0', 'module_name': 'mallard-ducktype', 'module_version': '1.0.2-GCCcore-12.3.0'}, {'full_module_name': 'libxslt/1.1.38-GCCcore-12.3.0', 'module_name': 'libxslt', 'module_version': '1.1.38-GCCcore-12.3.0'}, {'full_module_name': 'lxml/4.9.2-GCCcore-12.3.0', 'module_name': 'lxml', 'module_version': '4.9.2-GCCcore-12.3.0'}, {'full_module_name': 'yelp-tools/42.1-GCCcore-12.3.0', 'module_name': 'yelp-tools', 'module_version': '42.1-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'yelp-tools is a collection of scripts and build utilities to help create,\nmanage, and publish documentation for Yelp and the web. Most of the heavy\nlifting is done by packages like yelp-xsl and itstool. This package just\nwraps things up in a developer-friendly way.', 'version': '42.1', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://gitlab.gnome.org/GNOME/yelp-tools', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'yelp-tools is a collection of scripts and build utilities to help create,\nmanage, and publish documentation for Yelp and the web. Most of the heavy\nlifting is done by packages like yelp-xsl and itstool. This package just\nwraps things up in a developer-friendly way.'} installations

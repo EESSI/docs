@@ -1,58 +1,23 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: 'GnuTLS is a secure communications library implementing the SSL, TLS
-    and DTLS protocols and technologies around them. It provides a simple C language
-    application programming interface (API) to access the secure communications protocols
-    as well as APIs to parse and write X.509, PKCS #12, OpenPGP and other required
-    structures. It is aimed to be portable and efficient with focus on security and
-    interoperability.'
-  license: Not confirmed
-  name: GnuTLS
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''GnuTLS/3.7.8-GCCcore-12.3.0'']'
-  url: https://www.gnutls.org
----
-
-GnuTLS
-======
+# GnuTLS
 
 
-GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them. It provides a simple C language application programming interface (API) to access the secure communications protocols as well as APIs to parse and write X.509, PKCS #12, OpenPGP and other required structures. It is aimed to be portable and efficient with focus on security and interoperability.
+GnuTLS is a secure communications library implementing the SSL, TLS
+ and DTLS protocols and technologies around them. It provides a simple
+ C language application programming interface (API) to access the secure
+ communications protocols as well as APIs to parse and write X.509, PKCS #12,
+ OpenPGP and other required structures. It is aimed to be portable
+ and efficient with focus on security and interoperability.
 
-https://www.gnutls.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.gnutls.org](https://www.gnutls.org)</span>
+
+## Available installations
 
 
-The overview below shows which GnuTLS installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.7.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`GnuTLS/3.7.8-GCCcore-12.3.0`|
+|3.8.10|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`GnuTLS/3.8.10-GCCcore-14.3.0`|
 
-To start using GnuTLS, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load GnuTLS/3.7.8-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GnuTLS/3.7.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.gnutls.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'GnuTLS/3.7.8-GCCcore-12.3.0', 'module_name': 'GnuTLS', 'module_version': '3.7.8-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.3.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.3.0'}, {'full_module_name': 'nettle/3.9.1-GCCcore-12.3.0', 'module_name': 'nettle', 'module_version': '3.9.1-GCCcore-12.3.0'}, {'full_module_name': 'gc/8.2.4-GCCcore-12.3.0', 'module_name': 'gc', 'module_version': '8.2.4-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'libunistring/1.1-GCCcore-12.3.0', 'module_name': 'libunistring', 'module_version': '1.1-GCCcore-12.3.0'}, {'full_module_name': 'Guile/3.0.9-GCCcore-12.3.0', 'module_name': 'Guile', 'module_version': '3.0.9-GCCcore-12.3.0'}, {'full_module_name': 'libtasn1/4.19.0-GCCcore-12.3.0', 'module_name': 'libtasn1', 'module_version': '4.19.0-GCCcore-12.3.0'}, {'full_module_name': 'libidn2/2.3.7-GCCcore-12.3.0', 'module_name': 'libidn2', 'module_version': '2.3.7-GCCcore-12.3.0'}, {'full_module_name': 'p11-kit/0.25.3-GCCcore-12.3.0', 'module_name': 'p11-kit', 'module_version': '0.25.3-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'GnuTLS/3.7.8-GCCcore-12.3.0', 'module_name': 'GnuTLS', 'module_version': '3.7.8-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'GnuTLS is a secure communications library implementing the SSL, TLS\n and DTLS protocols and technologies around them. It provides a simple\n C language application programming interface (API) to access the secure\n communications protocols as well as APIs to parse and write X.509, PKCS #12,\n OpenPGP and other required structures. It is aimed to be portable\n and efficient with focus on security and interoperability.', 'version': '3.7.8', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.gnutls.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'GnuTLS/3.8.10-GCCcore-14.3.0', 'module_name': 'GnuTLS', 'module_version': '3.8.10-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-14.3.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-14.3.0'}, {'full_module_name': 'nettle/3.10.2-GCCcore-14.3.0', 'module_name': 'nettle', 'module_version': '3.10.2-GCCcore-14.3.0'}, {'full_module_name': 'libtasn1/4.20.0-GCCcore-14.3.0', 'module_name': 'libtasn1', 'module_version': '4.20.0-GCCcore-14.3.0'}, {'full_module_name': 'libidn2/2.3.8-GCCcore-14.3.0', 'module_name': 'libidn2', 'module_version': '2.3.8-GCCcore-14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'p11-kit/0.25.10-GCCcore-14.3.0', 'module_name': 'p11-kit', 'module_version': '0.25.10-GCCcore-14.3.0'}, {'full_module_name': 'gzip/1.14-GCCcore-14.3.0', 'module_name': 'gzip', 'module_version': '1.14-GCCcore-14.3.0'}, {'full_module_name': 'lz4/1.10.0-GCCcore-14.3.0', 'module_name': 'lz4', 'module_version': '1.10.0-GCCcore-14.3.0'}, {'full_module_name': 'zstd/1.5.7-GCCcore-14.3.0', 'module_name': 'zstd', 'module_version': '1.5.7-GCCcore-14.3.0'}, {'full_module_name': 'Brotli/1.1.0-GCCcore-14.3.0', 'module_name': 'Brotli', 'module_version': '1.1.0-GCCcore-14.3.0'}, {'full_module_name': 'libiconv/1.18-GCCcore-14.3.0', 'module_name': 'libiconv', 'module_version': '1.18-GCCcore-14.3.0'}, {'full_module_name': 'libunistring/1.3-GCCcore-14.3.0', 'module_name': 'libunistring', 'module_version': '1.3-GCCcore-14.3.0'}, {'full_module_name': 'GnuTLS/3.8.10-GCCcore-14.3.0', 'module_name': 'GnuTLS', 'module_version': '3.8.10-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'GnuTLS is a secure communications library implementing the SSL, TLS\n and DTLS protocols and technologies around them. It provides a simple\n C language application programming interface (API) to access the secure\n communications protocols as well as APIs to parse and write X.509, PKCS #12,\n OpenPGP and other required structures. It is aimed to be portable\n and efficient with focus on security and interoperability.', 'version': '3.8.10', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.gnutls.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'GnuTLS is a secure communications library implementing the SSL, TLS\n and DTLS protocols and technologies around them. It provides a simple\n C language application programming interface (API) to access the secure\n communications protocols as well as APIs to parse and write X.509, PKCS #12,\n OpenPGP and other required structures. It is aimed to be portable\n and efficient with focus on security and interoperability.'} installations

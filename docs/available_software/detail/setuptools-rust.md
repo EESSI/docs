@@ -1,68 +1,63 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: setuptools-rust is a plugin for setuptools to build Rust Python extensionsimplemented
-    with PyO3 or rust-cpython.
-  license: Not confirmed
-  name: setuptools-rust
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''setuptools-rust/1.6.0-GCCcore-12.3.0'', ''setuptools-rust/1.8.0-GCCcore-13.2.0'']'
-  url: https://github.com/PyO3/setuptools-rust
----
-
-setuptools-rust
-===============
+# setuptools-rust
 
 
-setuptools-rust is a plugin for setuptools to build Rust Python extensionsimplemented with PyO3 or rust-cpython.
+setuptools-rust is a plugin for setuptools to build Rust Python extensions
+implemented with PyO3 or rust-cpython.
 
-https://github.com/PyO3/setuptools-rust
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/PyO3/setuptools-rust](https://github.com/PyO3/setuptools-rust)</span>
 
-
-The overview below shows which setuptools-rust installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using setuptools-rust, load one of these modules using a `module load` command like:
-
-```shell
-module load setuptools-rust/1.8.0-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|setuptools-rust/1.8.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|setuptools-rust/1.6.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### setuptools-rust/1.8.0-GCCcore-13.2.0
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.6.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.6.0-GCCcore-12.3.0`|
+|1.8.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.8.0-GCCcore-13.2.0`|
+|1.11.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.11.0-GCCcore-14.2.0`|
+|1.11.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.11.0-GCCcore-14.3.0`|
+|1.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.9.0-GCCcore-13.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-semantic_version-2.10.0, setuptools-rust-1.8.0, typing_extensions-4.8.0
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/PyO3/setuptools-rust', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'setuptools-rust/1.6.0-GCCcore-12.3.0', 'module_name': 'setuptools-rust', 'module_version': '1.6.0-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'setuptools-rust/1.6.0-GCCcore-12.3.0', 'module_name': 'setuptools-rust', 'module_version': '1.6.0-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'setuptools-rust is a plugin for setuptools to build Rust Python extensions\nimplemented with PyO3 or rust-cpython.', 'version': '1.6.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'typing_extensions', 'version': '4.6.3'}, {'type': 'python', 'name': 'semantic_version', 'version': '2.10.0'}, {'type': 'python', 'name': 'setuptools-rust', 'version': '1.6.0'}]}, {'homepage': 'https://github.com/PyO3/setuptools-rust', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'setuptools-rust/1.8.0-GCCcore-13.2.0', 'module_name': 'setuptools-rust', 'module_version': '1.8.0-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'setuptools-rust/1.8.0-GCCcore-13.2.0', 'module_name': 'setuptools-rust', 'module_version': '1.8.0-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'setuptools-rust is a plugin for setuptools to build Rust Python extensions\nimplemented with PyO3 or rust-cpython.', 'version': '1.8.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'typing_extensions', 'version': '4.8.0'}, {'type': 'python', 'name': 'semantic_version', 'version': '2.10.0'}, {'type': 'python', 'name': 'setuptools-rust', 'version': '1.8.0'}]}, {'homepage': 'https://github.com/PyO3/setuptools-rust', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'setuptools-rust/1.11.0-GCCcore-14.2.0', 'module_name': 'setuptools-rust', 'module_version': '1.11.0-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'Tcl/8.6.16-GCCcore-14.2.0', 'module_name': 'Tcl', 'module_version': '8.6.16-GCCcore-14.2.0'}, {'full_module_name': 'SQLite/3.47.2-GCCcore-14.2.0', 'module_name': 'SQLite', 'module_version': '3.47.2-GCCcore-14.2.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-14.2.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-14.2.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.1-GCCcore-14.2.0', 'module_name': 'Python', 'module_version': '3.13.1-GCCcore-14.2.0'}, {'full_module_name': 'setuptools-rust/1.11.0-GCCcore-14.2.0', 'module_name': 'setuptools-rust', 'module_version': '1.11.0-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'setuptools-rust is a plugin for setuptools to build Rust Python extensions\nimplemented with PyO3 or rust-cpython.', 'version': '1.11.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'typing-extensions', 'version': '4.12.2'}, {'type': 'python', 'name': 'semantic-version', 'version': '2.10.0'}, {'type': 'python', 'name': 'setuptools-rust', 'version': '1.11.0'}]}, {'homepage': 'https://github.com/PyO3/setuptools-rust', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'setuptools-rust/1.11.0-GCCcore-14.3.0', 'module_name': 'setuptools-rust', 'module_version': '1.11.0-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'libtommath/1.3.0-GCCcore-14.3.0', 'module_name': 'libtommath', 'module_version': '1.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Tcl/9.0.1-GCCcore-14.3.0', 'module_name': 'Tcl', 'module_version': '9.0.1-GCCcore-14.3.0'}, {'full_module_name': 'SQLite/3.50.1-GCCcore-14.3.0', 'module_name': 'SQLite', 'module_version': '3.50.1-GCCcore-14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.5-GCCcore-14.3.0', 'module_name': 'Python', 'module_version': '3.13.5-GCCcore-14.3.0'}, {'full_module_name': 'setuptools-rust/1.11.0-GCCcore-14.3.0', 'module_name': 'setuptools-rust', 'module_version': '1.11.0-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'setuptools-rust is a plugin for setuptools to build Rust Python extensions\nimplemented with PyO3 or rust-cpython.', 'version': '1.11.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'typing-extensions', 'version': '4.14.1'}, {'type': 'python', 'name': 'semantic-version', 'version': '2.10.0'}, {'type': 'python', 'name': 'setuptools-rust', 'version': '1.11.0'}]}, {'homepage': 'https://github.com/PyO3/setuptools-rust', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'setuptools-rust/1.9.0-GCCcore-13.3.0', 'module_name': 'setuptools-rust', 'module_version': '1.9.0-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Tcl/8.6.14-GCCcore-13.3.0', 'module_name': 'Tcl', 'module_version': '8.6.14-GCCcore-13.3.0'}, {'full_module_name': 'SQLite/3.45.3-GCCcore-13.3.0', 'module_name': 'SQLite', 'module_version': '3.45.3-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.12.3-GCCcore-13.3.0', 'module_name': 'Python', 'module_version': '3.12.3-GCCcore-13.3.0'}, {'full_module_name': 'setuptools-rust/1.9.0-GCCcore-13.3.0', 'module_name': 'setuptools-rust', 'module_version': '1.9.0-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'setuptools-rust is a plugin for setuptools to build Rust Python extensions\nimplemented with PyO3 or rust-cpython.', 'version': '1.9.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'typing-extensions', 'version': '4.12.2'}, {'type': 'python', 'name': 'semantic-version', 'version': '2.10.0'}, {'type': 'python', 'name': 'setuptools-rust', 'version': '1.9.0'}]}], 'homepage': 'https://github.com/PyO3/setuptools-rust', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'setuptools-rust is a plugin for setuptools to build Rust Python extensions\nimplemented with PyO3 or rust-cpython.'} installations
 
-### setuptools-rust/1.6.0-GCCcore-12.3.0
 
-This is a list of extensions included in the module:
+### semantic-version
 
-semantic_version-2.10.0, setuptools-rust-1.6.0, typing_extensions-4.6.3
+
+|`semantic-version` version|setuptools-rust modules that include it|
+| --- | --- |
+|2.10.0|`setuptools-rust/1.11.0-GCCcore-14.3.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.2.0`<br/>`setuptools-rust/1.9.0-GCCcore-13.3.0`|
+
+### semantic_version
+
+
+|`semantic_version` version|setuptools-rust modules that include it|
+| --- | --- |
+|2.10.0|`setuptools-rust/1.6.0-GCCcore-12.3.0`<br/>`setuptools-rust/1.8.0-GCCcore-13.2.0`|
+
+### setuptools-rust
+
+
+|`setuptools-rust` version|setuptools-rust modules that include it|
+| --- | --- |
+|1.11.0|`setuptools-rust/1.11.0-GCCcore-14.3.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.2.0`|
+|1.6.0|`setuptools-rust/1.6.0-GCCcore-12.3.0`|
+|1.8.0|`setuptools-rust/1.8.0-GCCcore-13.2.0`|
+|1.9.0|`setuptools-rust/1.9.0-GCCcore-13.3.0`|
+
+### typing-extensions
+
+
+|`typing-extensions` version|setuptools-rust modules that include it|
+| --- | --- |
+|4.12.2|`setuptools-rust/1.11.0-GCCcore-14.2.0`<br/>`setuptools-rust/1.9.0-GCCcore-13.3.0`|
+|4.14.1|`setuptools-rust/1.11.0-GCCcore-14.3.0`|
+
+### typing_extensions
+
+
+|`typing_extensions` version|setuptools-rust modules that include it|
+| --- | --- |
+|4.6.3|`setuptools-rust/1.6.0-GCCcore-12.3.0`|
+|4.8.0|`setuptools-rust/1.8.0-GCCcore-13.2.0`|

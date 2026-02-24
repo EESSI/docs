@@ -1,56 +1,19 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A tool designed to provide fast all-in-one preprocessing for FastQ
-    files. This tool is developed in C++ with multithreading supported to afford high
-    performance.
-  license: Not confirmed
-  name: fastp
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''fastp/0.23.4-GCC-12.2.0'', ''fastp/0.23.4-GCC-12.3.0'']'
-  url: https://github.com/OpenGene/fastp
----
-
-fastp
-=====
+# fastp
 
 
-A tool designed to provide fast all-in-one preprocessing for FastQ files. This tool is developed in C++ with multithreading supported to afford high performance.
+A tool designed to provide fast all-in-one preprocessing for FastQ files.
+ This tool is developed in C++ with multithreading supported to afford high performance.
 
-https://github.com/OpenGene/fastp
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/OpenGene/fastp](https://github.com/OpenGene/fastp)</span>
+
+## Available installations
 
 
-The overview below shows which fastp installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|0.23.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`fastp/0.23.4-GCC-12.2.0`|
+|0.23.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`fastp/0.23.4-GCC-12.3.0`|
 
-To start using fastp, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load fastp/0.23.4-GCC-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|fastp/0.23.4-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|fastp/0.23.4-GCC-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/OpenGene/fastp', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'fastp/0.23.4-GCC-12.2.0', 'module_name': 'fastp', 'module_version': '0.23.4-GCC-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GCC/12.2.0', 'module_name': 'GCC', 'module_version': '12.2.0'}, {'full_module_name': 'libdeflate/1.15-GCCcore-12.2.0', 'module_name': 'libdeflate', 'module_version': '1.15-GCCcore-12.2.0'}, {'full_module_name': 'NASM/2.15.05-GCCcore-12.2.0', 'module_name': 'NASM', 'module_version': '2.15.05-GCCcore-12.2.0'}, {'full_module_name': 'ISA-L/2.30.0-GCCcore-12.2.0', 'module_name': 'ISA-L', 'module_version': '2.30.0-GCCcore-12.2.0'}, {'full_module_name': 'fastp/0.23.4-GCC-12.2.0', 'module_name': 'fastp', 'module_version': '0.23.4-GCC-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A tool designed to provide fast all-in-one preprocessing for FastQ files.\n This tool is developed in C++ with multithreading supported to afford high performance.', 'version': '0.23.4', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/OpenGene/fastp', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'fastp/0.23.4-GCC-12.3.0', 'module_name': 'fastp', 'module_version': '0.23.4-GCC-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'libdeflate/1.18-GCCcore-12.3.0', 'module_name': 'libdeflate', 'module_version': '1.18-GCCcore-12.3.0'}, {'full_module_name': 'NASM/2.16.01-GCCcore-12.3.0', 'module_name': 'NASM', 'module_version': '2.16.01-GCCcore-12.3.0'}, {'full_module_name': 'ISA-L/2.30.0-GCCcore-12.3.0', 'module_name': 'ISA-L', 'module_version': '2.30.0-GCCcore-12.3.0'}, {'full_module_name': 'fastp/0.23.4-GCC-12.3.0', 'module_name': 'fastp', 'module_version': '0.23.4-GCC-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A tool designed to provide fast all-in-one preprocessing for FastQ files.\n This tool is developed in C++ with multithreading supported to afford high performance.', 'version': '0.23.4', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://github.com/OpenGene/fastp', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'A tool designed to provide fast all-in-one preprocessing for FastQ files.\n This tool is developed in C++ with multithreading supported to afford high performance.'} installations

@@ -1,54 +1,17 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A comprehensive software library for efficient processing of structured
-    genome annotations.
-  license: Not confirmed
-  name: GenomeTools
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''GenomeTools/1.6.2-GCC-12.2.0'']'
-  url: http://genometools.org
----
-
-GenomeTools
-===========
+# GenomeTools
 
 
 A comprehensive software library for efficient processing of structured genome annotations.
 
-http://genometools.org
-# Available modules
+<small>homepage: </small><span class="software-link">[http://genometools.org](http://genometools.org)</span>
+
+## Available installations
 
 
-The overview below shows which GenomeTools installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.6.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`GenomeTools/1.6.2-GCC-12.2.0`|
 
-To start using GenomeTools, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load GenomeTools/1.6.2-GCC-12.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GenomeTools/1.6.2-GCC-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'http://genometools.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'GenomeTools/1.6.2-GCC-12.2.0', 'module_name': 'GenomeTools', 'module_version': '1.6.2-GCC-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GCC/12.2.0', 'module_name': 'GCC', 'module_version': '12.2.0'}, {'full_module_name': 'expat/2.4.9-GCCcore-12.2.0', 'module_name': 'expat', 'module_version': '2.4.9-GCCcore-12.2.0'}, {'full_module_name': 'libpng/1.6.38-GCCcore-12.2.0', 'module_name': 'libpng', 'module_version': '1.6.38-GCCcore-12.2.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.2.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.2.0'}, {'full_module_name': 'freetype/2.12.1-GCCcore-12.2.0', 'module_name': 'freetype', 'module_version': '2.12.1-GCCcore-12.2.0'}, {'full_module_name': 'fontconfig/2.14.1-GCCcore-12.2.0', 'module_name': 'fontconfig', 'module_version': '2.14.1-GCCcore-12.2.0'}, {'full_module_name': 'xorg-macros/1.19.3-GCCcore-12.2.0', 'module_name': 'xorg-macros', 'module_version': '1.19.3-GCCcore-12.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.2.0'}, {'full_module_name': 'X11/20221110-GCCcore-12.2.0', 'module_name': 'X11', 'module_version': '20221110-GCCcore-12.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.2.0'}, {'full_module_name': 'libxml2/2.10.3-GCCcore-12.2.0', 'module_name': 'libxml2', 'module_version': '2.10.3-GCCcore-12.2.0'}, {'full_module_name': 'PCRE2/10.40-GCCcore-12.2.0', 'module_name': 'PCRE2', 'module_version': '10.40-GCCcore-12.2.0'}, {'full_module_name': 'GLib/2.75.0-GCCcore-12.2.0', 'module_name': 'GLib', 'module_version': '2.75.0-GCCcore-12.2.0'}, {'full_module_name': 'pixman/0.42.2-GCCcore-12.2.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-12.2.0'}, {'full_module_name': 'cairo/1.17.4-GCCcore-12.2.0', 'module_name': 'cairo', 'module_version': '1.17.4-GCCcore-12.2.0'}, {'full_module_name': 'ICU/72.1-GCCcore-12.2.0', 'module_name': 'ICU', 'module_version': '72.1-GCCcore-12.2.0'}, {'full_module_name': 'HarfBuzz/5.3.1-GCCcore-12.2.0', 'module_name': 'HarfBuzz', 'module_version': '5.3.1-GCCcore-12.2.0'}, {'full_module_name': 'FriBidi/1.0.12-GCCcore-12.2.0', 'module_name': 'FriBidi', 'module_version': '1.0.12-GCCcore-12.2.0'}, {'full_module_name': 'Pango/1.50.12-GCCcore-12.2.0', 'module_name': 'Pango', 'module_version': '1.50.12-GCCcore-12.2.0'}, {'full_module_name': 'GenomeTools/1.6.2-GCC-12.2.0', 'module_name': 'GenomeTools', 'module_version': '1.6.2-GCC-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A comprehensive software library for efficient processing of structured genome annotations.', 'version': '1.6.2', 'versionsuffix': '', 'extensions': []}], 'homepage': 'http://genometools.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'A comprehensive software library for efficient processing of structured genome annotations.'} installations

@@ -1,68 +1,60 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Scikit-Build, or skbuild, is an improved build system generatorfor
-    CPython C/C++/Fortran/Cython extensions.
-  license: Not confirmed
-  name: scikit-build
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''scikit-build/0.17.6-GCCcore-12.3.0'', ''scikit-build/0.17.6-GCCcore-13.2.0'']'
-  url: https://scikit-build.readthedocs.io/en/latest
----
-
-scikit-build
-============
+# scikit-build
 
 
-Scikit-Build, or skbuild, is an improved build system generatorfor CPython C/C++/Fortran/Cython extensions.
+Scikit-Build, or skbuild, is an improved build system generator
+for CPython C/C++/Fortran/Cython extensions.
 
-https://scikit-build.readthedocs.io/en/latest
-# Available modules
+<small>homepage: </small><span class="software-link">[https://scikit-build.readthedocs.io/en/latest](https://scikit-build.readthedocs.io/en/latest)</span>
 
-
-The overview below shows which scikit-build installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using scikit-build, load one of these modules using a `module load` command like:
-
-```shell
-module load scikit-build/0.17.6-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-build/0.17.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|scikit-build/0.17.6-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### scikit-build/0.17.6-GCCcore-13.2.0
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|0.17.6|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`scikit-build/0.17.6-GCCcore-12.3.0`|
+|0.17.6|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`scikit-build/0.17.6-GCCcore-13.2.0`|
+|0.17.6|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`scikit-build/0.17.6-GCCcore-13.3.0`|
+|0.18.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`scikit-build/0.18.1-GCCcore-14.2.0`|
+|0.18.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`scikit-build/0.18.1-GCCcore-14.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-distro-1.8.0, packaging-23.1, scikit_build-0.17.6
+Overview of extensions included in {'versions': [{'homepage': 'https://scikit-build.readthedocs.io/en/latest', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'scikit-build/0.17.6-GCCcore-12.3.0', 'module_name': 'scikit-build', 'module_version': '0.17.6-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'scikit-build/0.17.6-GCCcore-12.3.0', 'module_name': 'scikit-build', 'module_version': '0.17.6-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Scikit-Build, or skbuild, is an improved build system generator\nfor CPython C/C++/Fortran/Cython extensions.', 'version': '0.17.6', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'packaging', 'version': '23.1'}, {'type': 'python', 'name': 'distro', 'version': '1.8.0'}, {'type': 'python', 'name': 'scikit_build', 'version': '0.17.6'}]}, {'homepage': 'https://scikit-build.readthedocs.io/en/latest', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'scikit-build/0.17.6-GCCcore-13.2.0', 'module_name': 'scikit-build', 'module_version': '0.17.6-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'scikit-build/0.17.6-GCCcore-13.2.0', 'module_name': 'scikit-build', 'module_version': '0.17.6-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Scikit-Build, or skbuild, is an improved build system generator\nfor CPython C/C++/Fortran/Cython extensions.', 'version': '0.17.6', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'packaging', 'version': '23.1'}, {'type': 'python', 'name': 'distro', 'version': '1.8.0'}, {'type': 'python', 'name': 'scikit_build', 'version': '0.17.6'}]}, {'homepage': 'https://scikit-build.readthedocs.io/en/latest', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'scikit-build/0.17.6-GCCcore-13.3.0', 'module_name': 'scikit-build', 'module_version': '0.17.6-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Tcl/8.6.14-GCCcore-13.3.0', 'module_name': 'Tcl', 'module_version': '8.6.14-GCCcore-13.3.0'}, {'full_module_name': 'SQLite/3.45.3-GCCcore-13.3.0', 'module_name': 'SQLite', 'module_version': '3.45.3-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.12.3-GCCcore-13.3.0', 'module_name': 'Python', 'module_version': '3.12.3-GCCcore-13.3.0'}, {'full_module_name': 'scikit-build/0.17.6-GCCcore-13.3.0', 'module_name': 'scikit-build', 'module_version': '0.17.6-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Scikit-Build, or skbuild, is an improved build system generator\nfor CPython C/C++/Fortran/Cython extensions.', 'version': '0.17.6', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'distro', 'version': '1.8.0'}, {'type': 'python', 'name': 'scikit-build', 'version': '0.17.6'}]}, {'homepage': 'https://scikit-build.readthedocs.io/en/latest', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'scikit-build/0.18.1-GCCcore-14.2.0', 'module_name': 'scikit-build', 'module_version': '0.18.1-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'Tcl/8.6.16-GCCcore-14.2.0', 'module_name': 'Tcl', 'module_version': '8.6.16-GCCcore-14.2.0'}, {'full_module_name': 'SQLite/3.47.2-GCCcore-14.2.0', 'module_name': 'SQLite', 'module_version': '3.47.2-GCCcore-14.2.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-14.2.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-14.2.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.1-GCCcore-14.2.0', 'module_name': 'Python', 'module_version': '3.13.1-GCCcore-14.2.0'}, {'full_module_name': 'scikit-build/0.18.1-GCCcore-14.2.0', 'module_name': 'scikit-build', 'module_version': '0.18.1-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Scikit-Build, or skbuild, is an improved build system generator\nfor CPython C/C++/Fortran/Cython extensions.', 'version': '0.18.1', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'distro', 'version': '1.9.0'}, {'type': 'python', 'name': 'pyproject-metadata', 'version': '0.9.1'}, {'type': 'python', 'name': 'scikit-build', 'version': '0.18.1'}]}, {'homepage': 'https://scikit-build.readthedocs.io/en/latest', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'scikit-build/0.18.1-GCCcore-14.3.0', 'module_name': 'scikit-build', 'module_version': '0.18.1-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'libtommath/1.3.0-GCCcore-14.3.0', 'module_name': 'libtommath', 'module_version': '1.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Tcl/9.0.1-GCCcore-14.3.0', 'module_name': 'Tcl', 'module_version': '9.0.1-GCCcore-14.3.0'}, {'full_module_name': 'SQLite/3.50.1-GCCcore-14.3.0', 'module_name': 'SQLite', 'module_version': '3.50.1-GCCcore-14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.5-GCCcore-14.3.0', 'module_name': 'Python', 'module_version': '3.13.5-GCCcore-14.3.0'}, {'full_module_name': 'scikit-build/0.18.1-GCCcore-14.3.0', 'module_name': 'scikit-build', 'module_version': '0.18.1-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Scikit-Build, or skbuild, is an improved build system generator\nfor CPython C/C++/Fortran/Cython extensions.', 'version': '0.18.1', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'distro', 'version': '1.9.0'}, {'type': 'python', 'name': 'pyproject-metadata', 'version': '0.9.1'}, {'type': 'python', 'name': 'scikit-build', 'version': '0.18.1'}]}], 'homepage': 'https://scikit-build.readthedocs.io/en/latest', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Scikit-Build, or skbuild, is an improved build system generator\nfor CPython C/C++/Fortran/Cython extensions.'} installations
 
-### scikit-build/0.17.6-GCCcore-12.3.0
 
-This is a list of extensions included in the module:
+### distro
 
-distro-1.8.0, packaging-23.1, scikit_build-0.17.6
+
+|`distro` version|scikit-build modules that include it|
+| --- | --- |
+|1.8.0|`scikit-build/0.17.6-GCCcore-13.3.0`<br/>`scikit-build/0.17.6-GCCcore-12.3.0`<br/>`scikit-build/0.17.6-GCCcore-13.2.0`|
+|1.9.0|`scikit-build/0.18.1-GCCcore-14.2.0`<br/>`scikit-build/0.18.1-GCCcore-14.3.0`|
+
+### packaging
+
+
+|`packaging` version|scikit-build modules that include it|
+| --- | --- |
+|23.1|`scikit-build/0.17.6-GCCcore-12.3.0`<br/>`scikit-build/0.17.6-GCCcore-13.2.0`|
+
+### pyproject-metadata
+
+
+|`pyproject-metadata` version|scikit-build modules that include it|
+| --- | --- |
+|0.9.1|`scikit-build/0.18.1-GCCcore-14.2.0`<br/>`scikit-build/0.18.1-GCCcore-14.3.0`|
+
+### scikit-build
+
+
+|`scikit-build` version|scikit-build modules that include it|
+| --- | --- |
+|0.17.6|`scikit-build/0.17.6-GCCcore-13.3.0`|
+|0.18.1|`scikit-build/0.18.1-GCCcore-14.2.0`<br/>`scikit-build/0.18.1-GCCcore-14.3.0`|
+
+### scikit_build
+
+
+|`scikit_build` version|scikit-build modules that include it|
+| --- | --- |
+|0.17.6|`scikit-build/0.17.6-GCCcore-12.3.0`<br/>`scikit-build/0.17.6-GCCcore-13.2.0`|

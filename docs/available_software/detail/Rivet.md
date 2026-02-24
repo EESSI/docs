@@ -1,54 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Rivet toolkit (Robust Independent Validation of Experiment and Theory)To
-    use your own analysis you must append the path to `RIVET_ANALYSIS_PATH`.
-  license: Not confirmed
-  name: Rivet
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Rivet/3.1.9-gompi-2023a-HepMC3-3.2.6'']'
-  url: https://gitlab.com/hepcedar/rivet
----
-
-Rivet
-=====
+# Rivet
 
 
-Rivet toolkit (Robust Independent Validation of Experiment and Theory)To use your own analysis you must append the path to `RIVET_ANALYSIS_PATH`.
 
-https://gitlab.com/hepcedar/rivet
-# Available modules
+Rivet toolkit (Robust Independent Validation of Experiment and Theory)
+
+To use your own analysis you must append the path to `RIVET_ANALYSIS_PATH`.
 
 
-The overview below shows which Rivet installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://gitlab.com/hepcedar/rivet](https://gitlab.com/hepcedar/rivet)</span>
 
-To start using Rivet, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load Rivet/3.1.9-gompi-2023a-HepMC3-3.2.6
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.1.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Rivet/3.1.9-gompi-2023a-HepMC3-3.2.6`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Rivet/3.1.9-gompi-2023a-HepMC3-3.2.6|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://gitlab.com/hepcedar/rivet', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Rivet/3.1.9-gompi-2023a-HepMC3-3.2.6', 'module_name': 'Rivet', 'module_version': '3.1.9-gompi-2023a-HepMC3-3.2.6'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.3.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'hwloc/2.9.1-GCCcore-12.3.0', 'module_name': 'hwloc', 'module_version': '2.9.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'UCX/1.14.1-GCCcore-12.3.0', 'module_name': 'UCX', 'module_version': '1.14.1-GCCcore-12.3.0'}, {'full_module_name': 'libfabric/1.18.0-GCCcore-12.3.0', 'module_name': 'libfabric', 'module_version': '1.18.0-GCCcore-12.3.0'}, {'full_module_name': 'PMIx/4.2.4-GCCcore-12.3.0', 'module_name': 'PMIx', 'module_version': '4.2.4-GCCcore-12.3.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-12.3.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenMPI/4.1.5-GCC-12.3.0', 'module_name': 'OpenMPI', 'module_version': '4.1.5-GCC-12.3.0'}, {'full_module_name': 'gompi/2023a', 'module_name': 'gompi', 'module_version': '2023a'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'YODA/1.9.9-GCC-12.3.0', 'module_name': 'YODA', 'module_version': '1.9.9-GCC-12.3.0'}, {'full_module_name': 'siscone/3.0.6-GCCcore-12.3.0', 'module_name': 'siscone', 'module_version': '3.0.6-GCCcore-12.3.0'}, {'full_module_name': 'CGAL/5.6-GCCcore-12.3.0', 'module_name': 'CGAL', 'module_version': '5.6-GCCcore-12.3.0'}, {'full_module_name': 'fastjet/3.4.2-gompi-2023a', 'module_name': 'fastjet', 'module_version': '3.4.2-gompi-2023a'}, {'full_module_name': 'fastjet-contrib/1.053-gompi-2023a', 'module_name': 'fastjet-contrib', 'module_version': '1.053-gompi-2023a'}, {'full_module_name': 'HepMC3/3.2.6-GCC-12.3.0', 'module_name': 'HepMC3', 'module_version': '3.2.6-GCC-12.3.0'}, {'full_module_name': 'GSL/2.7-GCC-12.3.0', 'module_name': 'GSL', 'module_version': '2.7-GCC-12.3.0'}, {'full_module_name': 'Rivet/3.1.9-gompi-2023a-HepMC3-3.2.6', 'module_name': 'Rivet', 'module_version': '3.1.9-gompi-2023a-HepMC3-3.2.6'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\nRivet toolkit (Robust Independent Validation of Experiment and Theory)\n\nTo use your own analysis you must append the path to `RIVET_ANALYSIS_PATH`.\n', 'version': '3.1.9', 'versionsuffix': '-HepMC3-3.2.6', 'extensions': []}], 'homepage': 'https://gitlab.com/hepcedar/rivet', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\nRivet toolkit (Robust Independent Validation of Experiment and Theory)\n\nTo use your own analysis you must append the path to `RIVET_ANALYSIS_PATH`.\n'} installations

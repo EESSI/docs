@@ -1,55 +1,19 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: xxd is part of the VIM package and this will only install xxd, not
-    vim!xxd converts to/from hexdumps of binary files.
-  license: Not confirmed
-  name: xxd
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''xxd/9.0.2112-GCCcore-12.3.0'', ''xxd/9.1.0307-GCCcore-13.2.0'']'
-  url: https://www.vim.org
----
-
-xxd
-===
+# xxd
 
 
-xxd is part of the VIM package and this will only install xxd, not vim!xxd converts to/from hexdumps of binary files.
+xxd is part of the VIM package and this will only install xxd, not vim!
+xxd converts to/from hexdumps of binary files.
 
-https://www.vim.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.vim.org](https://www.vim.org)</span>
+
+## Available installations
 
 
-The overview below shows which xxd installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|9.0.2112|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`xxd/9.0.2112-GCCcore-12.3.0`|
+|9.1.0307|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`xxd/9.1.0307-GCCcore-13.2.0`|
 
-To start using xxd, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load xxd/9.1.0307-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|xxd/9.1.0307-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|xxd/9.0.2112-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.vim.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'xxd/9.0.2112-GCCcore-12.3.0', 'module_name': 'xxd', 'module_version': '9.0.2112-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'xxd/9.0.2112-GCCcore-12.3.0', 'module_name': 'xxd', 'module_version': '9.0.2112-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'xxd is part of the VIM package and this will only install xxd, not vim!\nxxd converts to/from hexdumps of binary files.', 'version': '9.0.2112', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.vim.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'xxd/9.1.0307-GCCcore-13.2.0', 'module_name': 'xxd', 'module_version': '9.1.0307-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'xxd/9.1.0307-GCCcore-13.2.0', 'module_name': 'xxd', 'module_version': '9.1.0307-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'xxd is part of the VIM package and this will only install xxd, not vim!\nxxd converts to/from hexdumps of binary files.', 'version': '9.1.0307', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.vim.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'xxd is part of the VIM package and this will only install xxd, not vim!\nxxd converts to/from hexdumps of binary files.'} installations

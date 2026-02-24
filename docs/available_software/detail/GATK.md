@@ -1,58 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: The Genome Analysis Toolkit or GATK is a software package developed
-    at the Broad Institute to analyse next-generation resequencing data. The toolkit
-    offers a wide variety of tools, with a primary focus on variant discovery and
-    genotyping as well as strong emphasis on data quality assurance. Its robust architecture,
-    powerful processing engine and high-performance computing features make it capable
-    of taking on projects of any size.
-  license: Not confirmed
-  name: GATK
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''GATK/4.5.0.0-GCCcore-12.3.0-Java-17'']'
-  url: https://www.broadinstitute.org/gatk/
----
-
-GATK
-====
+# GATK
 
 
-The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute to analyse next-generation resequencing data. The toolkit offers a wide variety of tools, with a primary focus on variant discovery and genotyping as well as strong emphasis on data quality assurance. Its robust architecture, powerful processing engine and high-performance computing features make it capable of taking on projects of any size.
+The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute
+ to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,
+ with a primary focus on variant discovery and genotyping as well as strong emphasis on
+ data quality assurance. Its robust architecture, powerful processing engine and
+ high-performance computing features make it capable of taking on projects of any size.
 
-https://www.broadinstitute.org/gatk/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.broadinstitute.org/gatk/](https://www.broadinstitute.org/gatk/)</span>
+
+## Available installations
 
 
-The overview below shows which GATK installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|4.5.0.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`GATK/4.5.0.0-GCCcore-12.3.0-Java-17`|
 
-To start using GATK, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load GATK/4.5.0.0-GCCcore-12.3.0-Java-17
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GATK/4.5.0.0-GCCcore-12.3.0-Java-17|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.broadinstitute.org/gatk/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'GATK/4.5.0.0-GCCcore-12.3.0-Java-17', 'module_name': 'GATK', 'module_version': '4.5.0.0-GCCcore-12.3.0-Java-17'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Java/17.0.15', 'module_name': 'Java', 'module_version': '17.0.15'}, {'full_module_name': 'Java/17', 'module_name': 'Java', 'module_version': '17'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'GATK/4.5.0.0-GCCcore-12.3.0-Java-17', 'module_name': 'GATK', 'module_version': '4.5.0.0-GCCcore-12.3.0-Java-17'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute\n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on\n data quality assurance. Its robust architecture, powerful processing engine and\n high-performance computing features make it capable of taking on projects of any size.', 'version': '4.5.0.0', 'versionsuffix': '-Java-17', 'extensions': []}], 'homepage': 'https://www.broadinstitute.org/gatk/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'The Genome Analysis Toolkit or GATK is a software package developed at the Broad Institute\n to analyse next-generation resequencing data. The toolkit offers a wide variety of tools,\n with a primary focus on variant discovery and genotyping as well as strong emphasis on\n data quality assurance. Its robust architecture, powerful processing engine and\n high-performance computing features make it capable of taking on projects of any size.'} installations

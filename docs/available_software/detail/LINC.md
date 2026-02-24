@@ -1,61 +1,49 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: LINC is a pipeline to correct for various instrumental and ionospheric
-    effects in both LOFAR HBA and LOFAR LBAobservations.
-  license: Not confirmed
-  name: LINC
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''LINC/5.0-foss-2023b'']'
-  url: https://linc.readthedocs.io/en/latest/
----
-
-LINC
-====
+# LINC
 
 
-LINC is a pipeline to correct for various instrumental and ionospheric effects in both LOFAR HBA and LOFAR LBAobservations.
 
-https://linc.readthedocs.io/en/latest/
-# Available modules
-
-
-The overview below shows which LINC installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using LINC, load one of these modules using a `module load` command like:
-
-```shell
-module load LINC/5.0-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LINC/5.0-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+LINC is a pipeline to correct for various instrumental and ionospheric effects in both LOFAR HBA and LOFAR LBA
+observations.
 
 
-### LINC/5.0-foss-2023b
+<small>homepage: </small><span class="software-link">[https://linc.readthedocs.io/en/latest/](https://linc.readthedocs.io/en/latest/)</span>
 
-This is a list of extensions included in the module:
+## Available installations
 
-backports.shutil_get_terminal_size-1.0.0, bdsf-1.13.0.post2, LINC-5.0, pyregion-2.3.0
+
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|5.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`LINC/5.0-foss-2023b`|
+
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://linc.readthedocs.io/en/latest/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'foss', 'version': '2023b'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'LINC/5.0-foss-2023b', 'module_name': 'LINC', 'module_version': '5.0-foss-2023b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'GCC/13.2.0', 'module_name': 'GCC', 'module_version': '13.2.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-13.2.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-13.2.0'}, {'full_module_name': 'libxml2/2.11.5-GCCcore-13.2.0', 'module_name': 'libxml2', 'module_version': '2.11.5-GCCcore-13.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-13.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-13.2.0'}, {'full_module_name': 'hwloc/2.9.2-GCCcore-13.2.0', 'module_name': 'hwloc', 'module_version': '2.9.2-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-13.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-13.2.0'}, {'full_module_name': 'UCX/1.15.0-GCCcore-13.2.0', 'module_name': 'UCX', 'module_version': '1.15.0-GCCcore-13.2.0'}, {'full_module_name': 'libfabric/1.19.0-GCCcore-13.2.0', 'module_name': 'libfabric', 'module_version': '1.19.0-GCCcore-13.2.0'}, {'full_module_name': 'PMIx/4.2.6-GCCcore-13.2.0', 'module_name': 'PMIx', 'module_version': '4.2.6-GCCcore-13.2.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-13.2.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-13.2.0'}, {'full_module_name': 'OpenMPI/4.1.6-GCC-13.2.0', 'module_name': 'OpenMPI', 'module_version': '4.1.6-GCC-13.2.0'}, {'full_module_name': 'OpenBLAS/0.3.24-GCC-13.2.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.24-GCC-13.2.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-13.2.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-13.2.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-13.2.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-13.2.0'}, {'full_module_name': 'gompi/2023b', 'module_name': 'gompi', 'module_version': '2023b'}, {'full_module_name': 'FFTW.MPI/3.3.10-gompi-2023b', 'module_name': 'FFTW.MPI', 'module_version': '3.3.10-gompi-2023b'}, {'full_module_name': 'ScaLAPACK/2.2.0-gompi-2023b-fb', 'module_name': 'ScaLAPACK', 'module_version': '2.2.0-gompi-2023b-fb'}, {'full_module_name': 'foss/2023b', 'module_name': 'foss', 'module_version': '2023b'}, {'full_module_name': 'gzip/1.13-GCCcore-13.2.0', 'module_name': 'gzip', 'module_version': '1.13-GCCcore-13.2.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-13.2.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-13.2.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-13.2.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-13.2.0'}, {'full_module_name': 'ICU/74.1-GCCcore-13.2.0', 'module_name': 'ICU', 'module_version': '74.1-GCCcore-13.2.0'}, {'full_module_name': 'Boost/1.83.0-GCC-13.2.0', 'module_name': 'Boost', 'module_version': '1.83.0-GCC-13.2.0'}, {'full_module_name': 'gfbf/2023b', 'module_name': 'gfbf', 'module_version': '2023b'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'cffi/1.15.1-GCCcore-13.2.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-13.2.0'}, {'full_module_name': 'cryptography/41.0.5-GCCcore-13.2.0', 'module_name': 'cryptography', 'module_version': '41.0.5-GCCcore-13.2.0'}, {'full_module_name': 'virtualenv/20.24.6-GCCcore-13.2.0', 'module_name': 'virtualenv', 'module_version': '20.24.6-GCCcore-13.2.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.10-GCCcore-13.2.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.10-GCCcore-13.2.0'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-13.2.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-13.2.0'}, {'full_module_name': 'SciPy-bundle/2023.11-gfbf-2023b', 'module_name': 'SciPy-bundle', 'module_version': '2023.11-gfbf-2023b'}, {'full_module_name': 'Boost.Python-NumPy/1.83.0-gfbf-2023b', 'module_name': 'Boost.Python-NumPy', 'module_version': '1.83.0-gfbf-2023b'}, {'full_module_name': 'cURL/8.3.0-GCCcore-13.2.0', 'module_name': 'cURL', 'module_version': '8.3.0-GCCcore-13.2.0'}, {'full_module_name': 'CFITSIO/4.3.1-GCCcore-13.2.0', 'module_name': 'CFITSIO', 'module_version': '4.3.1-GCCcore-13.2.0'}, {'full_module_name': 'libpng/1.6.40-GCCcore-13.2.0', 'module_name': 'libpng', 'module_version': '1.6.40-GCCcore-13.2.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-13.2.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-13.2.0'}, {'full_module_name': 'Brotli/1.1.0-GCCcore-13.2.0', 'module_name': 'Brotli', 'module_version': '1.1.0-GCCcore-13.2.0'}, {'full_module_name': 'freetype/2.13.2-GCCcore-13.2.0', 'module_name': 'freetype', 'module_version': '2.13.2-GCCcore-13.2.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-13.2.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-13.2.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-13.2.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-13.2.0'}, {'full_module_name': 'X11/20231019-GCCcore-13.2.0', 'module_name': 'X11', 'module_version': '20231019-GCCcore-13.2.0'}, {'full_module_name': 'PGPLOT/5.2.2-GCCcore-13.2.0', 'module_name': 'PGPLOT', 'module_version': '5.2.2-GCCcore-13.2.0'}, {'full_module_name': 'WCSLIB/7.11-GCC-13.2.0', 'module_name': 'WCSLIB', 'module_version': '7.11-GCC-13.2.0'}, {'full_module_name': 'Szip/2.1.1-GCCcore-13.2.0', 'module_name': 'Szip', 'module_version': '2.1.1-GCCcore-13.2.0'}, {'full_module_name': 'HDF5/1.14.3-gompi-2023b', 'module_name': 'HDF5', 'module_version': '1.14.3-gompi-2023b'}, {'full_module_name': 'GSL/2.7-GCC-13.2.0', 'module_name': 'GSL', 'module_version': '2.7-GCC-13.2.0'}, {'full_module_name': 'Boost.Python/1.83.0-GCC-13.2.0', 'module_name': 'Boost.Python', 'module_version': '1.83.0-GCC-13.2.0'}, {'full_module_name': 'casacore/3.5.0-foss-2023b', 'module_name': 'casacore', 'module_version': '3.5.0-foss-2023b'}, {'full_module_name': 'EveryBeam/0.6.1-foss-2023b', 'module_name': 'EveryBeam', 'module_version': '0.6.1-foss-2023b'}, {'full_module_name': 'Eigen/3.4.0-GCCcore-13.2.0', 'module_name': 'Eigen', 'module_version': '3.4.0-GCCcore-13.2.0'}, {'full_module_name': 'arpack-ng/3.9.0-foss-2023b', 'module_name': 'arpack-ng', 'module_version': '3.9.0-foss-2023b'}, {'full_module_name': 'Armadillo/12.8.0-foss-2023b', 'module_name': 'Armadillo', 'module_version': '12.8.0-foss-2023b'}, {'full_module_name': 'Lua/5.4.6-GCCcore-13.2.0', 'module_name': 'Lua', 'module_version': '5.4.6-GCCcore-13.2.0'}, {'full_module_name': 'AOFlagger/3.4.0-foss-2023b', 'module_name': 'AOFlagger', 'module_version': '3.4.0-foss-2023b'}, {'full_module_name': 'IDG/1.2.0-foss-2023b', 'module_name': 'IDG', 'module_version': '1.2.0-foss-2023b'}, {'full_module_name': 'DP3/6.2-foss-2023b', 'module_name': 'DP3', 'module_version': '6.2-foss-2023b'}, {'full_module_name': 'LZO/2.10-GCCcore-13.2.0', 'module_name': 'LZO', 'module_version': '2.10-GCCcore-13.2.0'}, {'full_module_name': 'Blosc/1.21.5-GCCcore-13.2.0', 'module_name': 'Blosc', 'module_version': '1.21.5-GCCcore-13.2.0'}, {'full_module_name': 'Blosc2/2.13.2-GCCcore-13.2.0', 'module_name': 'Blosc2', 'module_version': '2.13.2-GCCcore-13.2.0'}, {'full_module_name': 'py-cpuinfo/9.0.0-GCCcore-13.2.0', 'module_name': 'py-cpuinfo', 'module_version': '9.0.0-GCCcore-13.2.0'}, {'full_module_name': 'PyTables/3.9.2-foss-2023b', 'module_name': 'PyTables', 'module_version': '3.9.2-foss-2023b'}, {'full_module_name': 'Tk/8.6.13-GCCcore-13.2.0', 'module_name': 'Tk', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'Tkinter/3.11.5-GCCcore-13.2.0', 'module_name': 'Tkinter', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'NASM/2.16.01-GCCcore-13.2.0', 'module_name': 'NASM', 'module_version': '2.16.01-GCCcore-13.2.0'}, {'full_module_name': 'libjpeg-turbo/3.0.1-GCCcore-13.2.0', 'module_name': 'libjpeg-turbo', 'module_version': '3.0.1-GCCcore-13.2.0'}, {'full_module_name': 'jbigkit/2.1-GCCcore-13.2.0', 'module_name': 'jbigkit', 'module_version': '2.1-GCCcore-13.2.0'}, {'full_module_name': 'libdeflate/1.19-GCCcore-13.2.0', 'module_name': 'libdeflate', 'module_version': '1.19-GCCcore-13.2.0'}, {'full_module_name': 'LibTIFF/4.6.0-GCCcore-13.2.0', 'module_name': 'LibTIFF', 'module_version': '4.6.0-GCCcore-13.2.0'}, {'full_module_name': 'giflib/5.2.1-GCCcore-13.2.0', 'module_name': 'giflib', 'module_version': '5.2.1-GCCcore-13.2.0'}, {'full_module_name': 'libwebp/1.3.2-GCCcore-13.2.0', 'module_name': 'libwebp', 'module_version': '1.3.2-GCCcore-13.2.0'}, {'full_module_name': 'OpenJPEG/2.5.0-GCCcore-13.2.0', 'module_name': 'OpenJPEG', 'module_version': '2.5.0-GCCcore-13.2.0'}, {'full_module_name': 'LittleCMS/2.15-GCCcore-13.2.0', 'module_name': 'LittleCMS', 'module_version': '2.15-GCCcore-13.2.0'}, {'full_module_name': 'Pillow/10.2.0-GCCcore-13.2.0', 'module_name': 'Pillow', 'module_version': '10.2.0-GCCcore-13.2.0'}, {'full_module_name': 'Qhull/2020.2-GCCcore-13.2.0', 'module_name': 'Qhull', 'module_version': '2020.2-GCCcore-13.2.0'}, {'full_module_name': 'matplotlib/3.8.2-gfbf-2023b', 'module_name': 'matplotlib', 'module_version': '3.8.2-gfbf-2023b'}, {'full_module_name': 'python-casacore/3.5.2-foss-2023b', 'module_name': 'python-casacore', 'module_version': '3.5.2-foss-2023b'}, {'full_module_name': 'LoSoTo/2.5.0-foss-2023b', 'module_name': 'LoSoTo', 'module_version': '2.5.0-foss-2023b'}, {'full_module_name': 'libyaml/0.2.5-GCCcore-13.2.0', 'module_name': 'libyaml', 'module_version': '0.2.5-GCCcore-13.2.0'}, {'full_module_name': 'PyYAML/6.0.1-GCCcore-13.2.0', 'module_name': 'PyYAML', 'module_version': '6.0.1-GCCcore-13.2.0'}, {'full_module_name': 'astropy/7.0.0-gfbf-2023b', 'module_name': 'astropy', 'module_version': '7.0.0-gfbf-2023b'}, {'full_module_name': 'PyVO/1.7-foss-2023b', 'module_name': 'PyVO', 'module_version': '1.7-foss-2023b'}, {'full_module_name': 'LSMTool/1.7.0-foss-2023b', 'module_name': 'LSMTool', 'module_version': '1.7.0-foss-2023b'}, {'full_module_name': 'PCRE2/10.42-GCCcore-13.2.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-13.2.0'}, {'full_module_name': 'GLib/2.78.1-GCCcore-13.2.0', 'module_name': 'GLib', 'module_version': '2.78.1-GCCcore-13.2.0'}, {'full_module_name': 'SAGECal/0.8.4-foss-2023b', 'module_name': 'SAGECal', 'module_version': '0.8.4-foss-2023b'}, {'full_module_name': 'RMextract/0.5.1-foss-2023b', 'module_name': 'RMextract', 'module_version': '0.5.1-foss-2023b'}, {'full_module_name': 'WSClean/3.5-foss-2023b', 'module_name': 'WSClean', 'module_version': '3.5-foss-2023b'}, {'full_module_name': 'LofarStMan/1.0-foss-2023b', 'module_name': 'LofarStMan', 'module_version': '1.0-foss-2023b'}, {'full_module_name': 'dysco/1.3-foss-2023b', 'module_name': 'dysco', 'module_version': '1.3-foss-2023b'}, {'full_module_name': 'mpi4py/3.1.5-gompi-2023b', 'module_name': 'mpi4py', 'module_version': '3.1.5-gompi-2023b'}, {'full_module_name': 'h5py/3.11.0-foss-2023b', 'module_name': 'h5py', 'module_version': '3.11.0-foss-2023b'}, {'full_module_name': 'nodejs/20.9.0-GCCcore-13.2.0', 'module_name': 'nodejs', 'module_version': '20.9.0-GCCcore-13.2.0'}, {'full_module_name': 'ruamel.yaml/0.18.6-GCCcore-13.2.0', 'module_name': 'ruamel.yaml', 'module_version': '0.18.6-GCCcore-13.2.0'}, {'full_module_name': 'RDFlib/7.1.4-GCCcore-13.2.0', 'module_name': 'RDFlib', 'module_version': '7.1.4-GCCcore-13.2.0'}, {'full_module_name': 'libxslt/1.1.38-GCCcore-13.2.0', 'module_name': 'libxslt', 'module_version': '1.1.38-GCCcore-13.2.0'}, {'full_module_name': 'lxml/4.9.3-GCCcore-13.2.0', 'module_name': 'lxml', 'module_version': '4.9.3-GCCcore-13.2.0'}, {'full_module_name': 'networkx/3.2.1-gfbf-2023b', 'module_name': 'networkx', 'module_version': '3.2.1-gfbf-2023b'}, {'full_module_name': 'pydot/2.0.0-GCCcore-13.2.0', 'module_name': 'pydot', 'module_version': '2.0.0-GCCcore-13.2.0'}, {'full_module_name': 'cwltool/3.1.20250110105449-foss-2023b', 'module_name': 'cwltool', 'module_version': '3.1.20250110105449-foss-2023b'}, {'full_module_name': 'dill/0.3.8-GCCcore-13.2.0', 'module_name': 'dill', 'module_version': '0.3.8-GCCcore-13.2.0'}, {'full_module_name': 'typing-extensions/4.10.0-GCCcore-13.2.0', 'module_name': 'typing-extensions', 'module_version': '4.10.0-GCCcore-13.2.0'}, {'full_module_name': 'psutil/6.1.0-GCCcore-13.2.0', 'module_name': 'psutil', 'module_version': '6.1.0-GCCcore-13.2.0'}, {'full_module_name': 'pydantic/2.7.4-GCCcore-13.2.0', 'module_name': 'pydantic', 'module_version': '2.7.4-GCCcore-13.2.0'}, {'full_module_name': 'toil-cwl/8.2.0-foss-2023b', 'module_name': 'toil-cwl', 'module_version': '8.2.0-foss-2023b'}, {'full_module_name': 'LINC/5.0-foss-2023b', 'module_name': 'LINC', 'module_version': '5.0-foss-2023b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\nLINC is a pipeline to correct for various instrumental and ionospheric effects in both LOFAR HBA and LOFAR LBA\nobservations.\n', 'version': '5.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'pyregion', 'version': '2.3.0'}, {'type': 'python', 'name': 'backports.shutil_get_terminal_size', 'version': '1.0.0'}, {'type': 'python', 'name': 'bdsf', 'version': '1.13.0.post2'}, {'type': 'python', 'name': 'LINC', 'version': '5.0'}]}], 'homepage': 'https://linc.readthedocs.io/en/latest/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\nLINC is a pipeline to correct for various instrumental and ionospheric effects in both LOFAR HBA and LOFAR LBA\nobservations.\n'} installations
+
+
+### backports.shutil_get_terminal_size
+
+
+|`backports.shutil_get_terminal_size` version|LINC modules that include it|
+| --- | --- |
+|1.0.0|`LINC/5.0-foss-2023b`|
+
+### bdsf
+
+
+|`bdsf` version|LINC modules that include it|
+| --- | --- |
+|1.13.0.post2|`LINC/5.0-foss-2023b`|
+
+### LINC
+
+
+|`LINC` version|LINC modules that include it|
+| --- | --- |
+|5.0|`LINC/5.0-foss-2023b`|
+
+### pyregion
+
+
+|`pyregion` version|LINC modules that include it|
+| --- | --- |
+|2.3.0|`LINC/5.0-foss-2023b`|

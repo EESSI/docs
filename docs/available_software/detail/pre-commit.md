@@ -1,66 +1,52 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A framework for managing and maintaining multi-language pre-commit
-    hooks.Git hook scripts are useful for identifying simple issues before submission
-    to code review. We run our hooks on every commit to automatically point out issues
-    in code such as missing semicolons, trailing whitespace, and debug statements.
-    By pointing these issues out before code review, this allows a code reviewer to
-    focus on the architecture of a change while not wasting time with trivial style
-    nitpicks.
-  license: Not confirmed
-  name: pre-commit
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''pre-commit/3.7.0-GCCcore-13.2.0'']'
-  url: https://pre-commit.com/
----
-
-pre-commit
-==========
+# pre-commit
 
 
-A framework for managing and maintaining multi-language pre-commit hooks.Git hook scripts are useful for identifying simple issues before submission to code review. We run our hooks on every commit to automatically point out issues in code such as missing semicolons, trailing whitespace, and debug statements. By pointing these issues out before code review, this allows a code reviewer to focus on the architecture of a change while not wasting time with trivial style nitpicks.
+A framework for managing and maintaining multi-language pre-commit hooks.
 
-https://pre-commit.com/
-# Available modules
+Git hook scripts are useful for identifying simple issues before submission to code review.
+ We run our hooks on every commit to automatically point out issues in code such as missing semicolons,
+ trailing whitespace, and debug statements. By pointing these issues out before code review,
+ this allows a code reviewer to focus on the architecture of a change while not wasting time
+ with trivial style nitpicks.
 
+<small>homepage: </small><span class="software-link">[https://pre-commit.com/](https://pre-commit.com/)</span>
 
-The overview below shows which pre-commit installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using pre-commit, load one of these modules using a `module load` command like:
-
-```shell
-module load pre-commit/3.7.0-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|pre-commit/3.7.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### pre-commit/3.7.0-GCCcore-13.2.0
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.7.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`pre-commit/3.7.0-GCCcore-13.2.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-cfgv-3.4.0, identify-2.5.35, nodeenv-1.8.0, pre-commit-3.7.0
+Overview of extensions included in {'versions': [{'homepage': 'https://pre-commit.com/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'pre-commit/3.7.0-GCCcore-13.2.0', 'module_name': 'pre-commit', 'module_version': '3.7.0-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'libyaml/0.2.5-GCCcore-13.2.0', 'module_name': 'libyaml', 'module_version': '0.2.5-GCCcore-13.2.0'}, {'full_module_name': 'cffi/1.15.1-GCCcore-13.2.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-13.2.0'}, {'full_module_name': 'cryptography/41.0.5-GCCcore-13.2.0', 'module_name': 'cryptography', 'module_version': '41.0.5-GCCcore-13.2.0'}, {'full_module_name': 'virtualenv/20.24.6-GCCcore-13.2.0', 'module_name': 'virtualenv', 'module_version': '20.24.6-GCCcore-13.2.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.10-GCCcore-13.2.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.10-GCCcore-13.2.0'}, {'full_module_name': 'PyYAML/6.0.1-GCCcore-13.2.0', 'module_name': 'PyYAML', 'module_version': '6.0.1-GCCcore-13.2.0'}, {'full_module_name': 'pre-commit/3.7.0-GCCcore-13.2.0', 'module_name': 'pre-commit', 'module_version': '3.7.0-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A framework for managing and maintaining multi-language pre-commit hooks.\n\nGit hook scripts are useful for identifying simple issues before submission to code review.\n We run our hooks on every commit to automatically point out issues in code such as missing semicolons,\n trailing whitespace, and debug statements. By pointing these issues out before code review,\n this allows a code reviewer to focus on the architecture of a change while not wasting time\n with trivial style nitpicks.', 'version': '3.7.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'nodeenv', 'version': '1.8.0'}, {'type': 'python', 'name': 'identify', 'version': '2.5.35'}, {'type': 'python', 'name': 'cfgv', 'version': '3.4.0'}, {'type': 'python', 'name': 'pre-commit', 'version': '3.7.0'}]}], 'homepage': 'https://pre-commit.com/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'A framework for managing and maintaining multi-language pre-commit hooks.\n\nGit hook scripts are useful for identifying simple issues before submission to code review.\n We run our hooks on every commit to automatically point out issues in code such as missing semicolons,\n trailing whitespace, and debug statements. By pointing these issues out before code review,\n this allows a code reviewer to focus on the architecture of a change while not wasting time\n with trivial style nitpicks.'} installations
+
+
+### cfgv
+
+
+|`cfgv` version|pre-commit modules that include it|
+| --- | --- |
+|3.4.0|`pre-commit/3.7.0-GCCcore-13.2.0`|
+
+### identify
+
+
+|`identify` version|pre-commit modules that include it|
+| --- | --- |
+|2.5.35|`pre-commit/3.7.0-GCCcore-13.2.0`|
+
+### nodeenv
+
+
+|`nodeenv` version|pre-commit modules that include it|
+| --- | --- |
+|1.8.0|`pre-commit/3.7.0-GCCcore-13.2.0`|
+
+### pre-commit
+
+
+|`pre-commit` version|pre-commit modules that include it|
+| --- | --- |
+|3.7.0|`pre-commit/3.7.0-GCCcore-13.2.0`|

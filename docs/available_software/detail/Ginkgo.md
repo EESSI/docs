@@ -1,60 +1,23 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Ginkgo is a high-performance numerical linear algebra library witha
-    focus on the solution of sparse linear systems. It also has support for popular
-    GPUs(NVIDIA, AMD and Intel) with their native programming models, aiming to maximize
-    the attainableperformance. It also has distributed support with MPI and can be
-    used to run solvers and preconditionerson large scale supercomputers. With a focus
-    on sustainable software development, it has comprehensive unittests, usage examples
-    and continuous integration setups to ensure robustness. It also has been integratedinto
-    many popular applications such as MFEM, OpenCARP, deal.ii, OpenFOAM etc.
-  license: Not confirmed
-  name: Ginkgo
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Ginkgo/1.9.0-gompi-2023b'']'
-  url: https://github.com/ginkgo-project/ginkgo
----
-
-Ginkgo
-======
+# Ginkgo
 
 
-Ginkgo is a high-performance numerical linear algebra library witha focus on the solution of sparse linear systems. It also has support for popular GPUs(NVIDIA, AMD and Intel) with their native programming models, aiming to maximize the attainableperformance. It also has distributed support with MPI and can be used to run solvers and preconditionerson large scale supercomputers. With a focus on sustainable software development, it has comprehensive unittests, usage examples and continuous integration setups to ensure robustness. It also has been integratedinto many popular applications such as MFEM, OpenCARP, deal.ii, OpenFOAM etc.
+Ginkgo is a high-performance numerical linear algebra library with
+a focus on the solution of sparse linear systems. It also has support for popular GPUs
+(NVIDIA, AMD and Intel) with their native programming models, aiming to maximize the attainable
+performance. It also has distributed support with MPI and can be used to run solvers and preconditioners
+on large scale supercomputers. With a focus on sustainable software development, it has comprehensive unit
+tests, usage examples and continuous integration setups to ensure robustness. It also has been integrated
+into many popular applications such as MFEM, OpenCARP, deal.ii, OpenFOAM etc.
 
-https://github.com/ginkgo-project/ginkgo
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/ginkgo-project/ginkgo](https://github.com/ginkgo-project/ginkgo)</span>
+
+## Available installations
 
 
-The overview below shows which Ginkgo installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Ginkgo/1.9.0-gompi-2023b`|
 
-To start using Ginkgo, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Ginkgo/1.9.0-gompi-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Ginkgo/1.9.0-gompi-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/ginkgo-project/ginkgo', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gompi', 'version': '2023b'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'Ginkgo/1.9.0-gompi-2023b', 'module_name': 'Ginkgo', 'module_version': '1.9.0-gompi-2023b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'GCC/13.2.0', 'module_name': 'GCC', 'module_version': '13.2.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-13.2.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-13.2.0'}, {'full_module_name': 'libxml2/2.11.5-GCCcore-13.2.0', 'module_name': 'libxml2', 'module_version': '2.11.5-GCCcore-13.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-13.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-13.2.0'}, {'full_module_name': 'hwloc/2.9.2-GCCcore-13.2.0', 'module_name': 'hwloc', 'module_version': '2.9.2-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-13.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-13.2.0'}, {'full_module_name': 'UCX/1.15.0-GCCcore-13.2.0', 'module_name': 'UCX', 'module_version': '1.15.0-GCCcore-13.2.0'}, {'full_module_name': 'libfabric/1.19.0-GCCcore-13.2.0', 'module_name': 'libfabric', 'module_version': '1.19.0-GCCcore-13.2.0'}, {'full_module_name': 'PMIx/4.2.6-GCCcore-13.2.0', 'module_name': 'PMIx', 'module_version': '4.2.6-GCCcore-13.2.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-13.2.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-13.2.0'}, {'full_module_name': 'OpenMPI/4.1.6-GCC-13.2.0', 'module_name': 'OpenMPI', 'module_version': '4.1.6-GCC-13.2.0'}, {'full_module_name': 'gompi/2023b', 'module_name': 'gompi', 'module_version': '2023b'}, {'full_module_name': 'Ginkgo/1.9.0-gompi-2023b', 'module_name': 'Ginkgo', 'module_version': '1.9.0-gompi-2023b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Ginkgo is a high-performance numerical linear algebra library with\na focus on the solution of sparse linear systems. It also has support for popular GPUs\n(NVIDIA, AMD and Intel) with their native programming models, aiming to maximize the attainable\nperformance. It also has distributed support with MPI and can be used to run solvers and preconditioners\non large scale supercomputers. With a focus on sustainable software development, it has comprehensive unit\ntests, usage examples and continuous integration setups to ensure robustness. It also has been integrated\ninto many popular applications such as MFEM, OpenCARP, deal.ii, OpenFOAM etc.', 'version': '1.9.0', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://github.com/ginkgo-project/ginkgo', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Ginkgo is a high-performance numerical linear algebra library with\na focus on the solution of sparse linear systems. It also has support for popular GPUs\n(NVIDIA, AMD and Intel) with their native programming models, aiming to maximize the attainable\nperformance. It also has distributed support with MPI and can be used to run solvers and preconditioners\non large scale supercomputers. With a focus on sustainable software development, it has comprehensive unit\ntests, usage examples and continuous integration setups to ensure robustness. It also has been integrated\ninto many popular applications such as MFEM, OpenCARP, deal.ii, OpenFOAM etc.'} installations

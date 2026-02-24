@@ -1,54 +1,18 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: 'MariaDB is an enhanced, drop-in replacement for MySQL.Included engines:
-    myISAM, Aria, InnoDB, RocksDB, TokuDB, OQGraph, Mroonga.'
-  license: Not confirmed
-  name: MariaDB
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''MariaDB/11.6.0-GCC-12.3.0'']'
-  url: https://mariadb.org/
----
-
-MariaDB
-=======
+# MariaDB
 
 
-MariaDB is an enhanced, drop-in replacement for MySQL.Included engines: myISAM, Aria, InnoDB, RocksDB, TokuDB, OQGraph, Mroonga.
+MariaDB is an enhanced, drop-in replacement for MySQL.
+Included engines: myISAM, Aria, InnoDB, RocksDB, TokuDB, OQGraph, Mroonga.
 
-https://mariadb.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://mariadb.org/](https://mariadb.org/)</span>
+
+## Available installations
 
 
-The overview below shows which MariaDB installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|11.6.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`MariaDB/11.6.0-GCC-12.3.0`|
 
-To start using MariaDB, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load MariaDB/11.6.0-GCC-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MariaDB/11.6.0-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://mariadb.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'MariaDB/11.6.0-GCC-12.3.0', 'module_name': 'MariaDB', 'module_version': '11.6.0-GCC-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'LZO/2.10-GCCcore-12.3.0', 'module_name': 'LZO', 'module_version': '2.10-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'jemalloc/5.3.0-GCCcore-12.3.0', 'module_name': 'jemalloc', 'module_version': '5.3.0-GCCcore-12.3.0'}, {'full_module_name': 'snappy/1.1.10-GCCcore-12.3.0', 'module_name': 'snappy', 'module_version': '1.1.10-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'ICU/73.2-GCCcore-12.3.0', 'module_name': 'ICU', 'module_version': '73.2-GCCcore-12.3.0'}, {'full_module_name': 'Boost/1.82.0-GCC-12.3.0', 'module_name': 'Boost', 'module_version': '1.82.0-GCC-12.3.0'}, {'full_module_name': 'Judy/1.0.5-GCCcore-12.3.0', 'module_name': 'Judy', 'module_version': '1.0.5-GCCcore-12.3.0'}, {'full_module_name': 'PCRE2/10.42-GCCcore-12.3.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'MariaDB/11.6.0-GCC-12.3.0', 'module_name': 'MariaDB', 'module_version': '11.6.0-GCC-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'MariaDB is an enhanced, drop-in replacement for MySQL.\nIncluded engines: myISAM, Aria, InnoDB, RocksDB, TokuDB, OQGraph, Mroonga.', 'version': '11.6.0', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://mariadb.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'MariaDB is an enhanced, drop-in replacement for MySQL.\nIncluded engines: myISAM, Aria, InnoDB, RocksDB, TokuDB, OQGraph, Mroonga.'} installations

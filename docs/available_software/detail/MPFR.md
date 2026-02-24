@@ -1,57 +1,25 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: The MPFR library is a C library for multiple-precision floating-point
-    computations with correct rounding.
-  license: Not confirmed
-  name: MPFR
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''MPFR/4.2.0-GCCcore-12.2.0'', ''MPFR/4.2.0-GCCcore-12.3.0'',
-    ''MPFR/4.2.1-GCCcore-13.2.0'']'
-  url: https://www.mpfr.org
----
-
-MPFR
-====
+# MPFR
 
 
-The MPFR library is a C library for multiple-precision floating-point computations with correct rounding.
 
-https://www.mpfr.org
-# Available modules
+ The MPFR library is a C library for multiple-precision floating-point
+ computations with correct rounding.
 
 
-The overview below shows which MPFR installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://www.mpfr.org](https://www.mpfr.org)</span>
 
-To start using MPFR, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load MPFR/4.2.1-GCCcore-13.2.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|4.2.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`MPFR/4.2.0-GCCcore-12.2.0`|
+|4.2.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`MPFR/4.2.0-GCCcore-12.3.0`|
+|4.2.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`MPFR/4.2.1-GCCcore-13.2.0`|
+|4.2.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`MPFR/4.2.1-GCCcore-13.3.0`|
+|4.2.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`MPFR/4.2.2-GCCcore-14.2.0`|
+|4.2.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`MPFR/4.2.2-GCCcore-14.3.0`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MPFR/4.2.1-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|MPFR/4.2.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|MPFR/4.2.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://www.mpfr.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'MPFR/4.2.0-GCCcore-12.2.0', 'module_name': 'MPFR', 'module_version': '4.2.0-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.2.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.2.0'}, {'full_module_name': 'MPFR/4.2.0-GCCcore-12.2.0', 'module_name': 'MPFR', 'module_version': '4.2.0-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The MPFR library is a C library for multiple-precision floating-point\n computations with correct rounding.\n', 'version': '4.2.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.mpfr.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'MPFR/4.2.0-GCCcore-12.3.0', 'module_name': 'MPFR', 'module_version': '4.2.0-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.3.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.3.0'}, {'full_module_name': 'MPFR/4.2.0-GCCcore-12.3.0', 'module_name': 'MPFR', 'module_version': '4.2.0-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The MPFR library is a C library for multiple-precision floating-point\n computations with correct rounding.\n', 'version': '4.2.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.mpfr.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'MPFR/4.2.1-GCCcore-13.2.0', 'module_name': 'MPFR', 'module_version': '4.2.1-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-13.2.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-13.2.0'}, {'full_module_name': 'MPFR/4.2.1-GCCcore-13.2.0', 'module_name': 'MPFR', 'module_version': '4.2.1-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The MPFR library is a C library for multiple-precision floating-point\n computations with correct rounding.\n', 'version': '4.2.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.mpfr.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'MPFR/4.2.1-GCCcore-13.3.0', 'module_name': 'MPFR', 'module_version': '4.2.1-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-13.3.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-13.3.0'}, {'full_module_name': 'MPFR/4.2.1-GCCcore-13.3.0', 'module_name': 'MPFR', 'module_version': '4.2.1-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The MPFR library is a C library for multiple-precision floating-point\n computations with correct rounding.\n', 'version': '4.2.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.mpfr.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'MPFR/4.2.2-GCCcore-14.2.0', 'module_name': 'MPFR', 'module_version': '4.2.2-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-14.2.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-14.2.0'}, {'full_module_name': 'MPFR/4.2.2-GCCcore-14.2.0', 'module_name': 'MPFR', 'module_version': '4.2.2-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The MPFR library is a C library for multiple-precision floating-point\n computations with correct rounding.\n', 'version': '4.2.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.mpfr.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'MPFR/4.2.2-GCCcore-14.3.0', 'module_name': 'MPFR', 'module_version': '4.2.2-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-14.3.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-14.3.0'}, {'full_module_name': 'MPFR/4.2.2-GCCcore-14.3.0', 'module_name': 'MPFR', 'module_version': '4.2.2-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n The MPFR library is a C library for multiple-precision floating-point\n computations with correct rounding.\n', 'version': '4.2.2', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.mpfr.org', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\n The MPFR library is a C library for multiple-precision floating-point\n computations with correct rounding.\n'} installations

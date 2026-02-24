@@ -1,59 +1,56 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Wayland is a project to define a protocol for a compositor to talk
-    to its clients as well as a library implementation of the protocol.  The compositor
-    can be a standalone display server running on Linux kernel modesetting and evdev
-    input devices, an X application, or a wayland client itself.  The clients can
-    be traditional applications, X servers (rootless or fullscreen) or other display
-    servers.
-  license: Not confirmed
-  name: Wayland
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Wayland/1.22.0-GCCcore-12.3.0'', ''Wayland/1.22.0-GCCcore-13.2.0'']'
-  url: https://wayland.freedesktop.org/
----
-
-Wayland
-=======
+# Wayland
 
 
-Wayland is a project to define a protocol for a compositor to talk to its clients as well as a library implementation of the protocol.  The compositor can be a standalone display server running on Linux kernel modesetting and evdev input devices, an X application, or a wayland client itself.  The clients can be traditional applications, X servers (rootless or fullscreen) or other display servers.
 
-https://wayland.freedesktop.org/
-# Available modules
+Wayland is a project to define a protocol for a compositor to talk to
+ its clients as well as a library implementation of the protocol.  The
+ compositor can be a standalone display server running on Linux kernel
+ modesetting and evdev input devices, an X application, or a wayland
+ client itself.  The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
 
 
-The overview below shows which Wayland installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://wayland.freedesktop.org/](https://wayland.freedesktop.org/)</span>
 
-To start using Wayland, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load Wayland/1.22.0-GCCcore-13.2.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.22.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Wayland/1.22.0-GCCcore-12.3.0`|
+|1.22.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Wayland/1.22.0-GCCcore-13.2.0`|
+|1.23.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Wayland/1.23.0-GCCcore-13.3.0`|
+|1.23.92|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Wayland/1.23.92-GCCcore-14.2.0`|
+|1.24.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Wayland/1.24.0-GCCcore-14.3.0`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Wayland/1.22.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Wayland/1.22.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://wayland.freedesktop.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Wayland/1.22.0-GCCcore-12.3.0', 'module_name': 'Wayland', 'module_version': '1.22.0-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'Wayland/1.22.0-GCCcore-12.3.0', 'module_name': 'Wayland', 'module_version': '1.22.0-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\nWayland is a project to define a protocol for a compositor to talk to\n its clients as well as a library implementation of the protocol.  The\n compositor can be a standalone display server running on Linux kernel\n modesetting and evdev input devices, an X application, or a wayland\n client itself.  The clients can be traditional applications, X servers\n (rootless or fullscreen) or other display servers.\n', 'version': '1.22.0', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'wayland', 'version': '1.22.0'}, {'type': 'component', 'name': 'wayland-protocols', 'version': '1.32'}]}, {'homepage': 'https://wayland.freedesktop.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'Wayland/1.22.0-GCCcore-13.2.0', 'module_name': 'Wayland', 'module_version': '1.22.0-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-13.2.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-13.2.0'}, {'full_module_name': 'libxml2/2.11.5-GCCcore-13.2.0', 'module_name': 'libxml2', 'module_version': '2.11.5-GCCcore-13.2.0'}, {'full_module_name': 'Wayland/1.22.0-GCCcore-13.2.0', 'module_name': 'Wayland', 'module_version': '1.22.0-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\nWayland is a project to define a protocol for a compositor to talk to\n its clients as well as a library implementation of the protocol.  The\n compositor can be a standalone display server running on Linux kernel\n modesetting and evdev input devices, an X application, or a wayland\n client itself.  The clients can be traditional applications, X servers\n (rootless or fullscreen) or other display servers.\n', 'version': '1.22.0', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'wayland', 'version': '1.22.0'}, {'type': 'component', 'name': 'wayland-protocols', 'version': '1.32'}]}, {'homepage': 'https://wayland.freedesktop.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'Wayland/1.23.0-GCCcore-13.3.0', 'module_name': 'Wayland', 'module_version': '1.23.0-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'expat/2.6.2-GCCcore-13.3.0', 'module_name': 'expat', 'module_version': '2.6.2-GCCcore-13.3.0'}, {'full_module_name': 'libxml2/2.12.7-GCCcore-13.3.0', 'module_name': 'libxml2', 'module_version': '2.12.7-GCCcore-13.3.0'}, {'full_module_name': 'Wayland/1.23.0-GCCcore-13.3.0', 'module_name': 'Wayland', 'module_version': '1.23.0-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\nWayland is a project to define a protocol for a compositor to talk to\n its clients as well as a library implementation of the protocol.  The\n compositor can be a standalone display server running on Linux kernel\n modesetting and evdev input devices, an X application, or a wayland\n client itself.  The clients can be traditional applications, X servers\n (rootless or fullscreen) or other display servers.\n', 'version': '1.23.0', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'wayland', 'version': '1.23.0'}, {'type': 'component', 'name': 'wayland-protocols', 'version': '1.36'}, {'type': 'component', 'name': 'wayland-utils', 'version': '1.2.0'}]}, {'homepage': 'https://wayland.freedesktop.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'Wayland/1.23.92-GCCcore-14.2.0', 'module_name': 'Wayland', 'module_version': '1.23.92-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-14.2.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-14.2.0'}, {'full_module_name': 'expat/2.6.4-GCCcore-14.2.0', 'module_name': 'expat', 'module_version': '2.6.4-GCCcore-14.2.0'}, {'full_module_name': 'libxml2/2.13.4-GCCcore-14.2.0', 'module_name': 'libxml2', 'module_version': '2.13.4-GCCcore-14.2.0'}, {'full_module_name': 'Wayland/1.23.92-GCCcore-14.2.0', 'module_name': 'Wayland', 'module_version': '1.23.92-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\nWayland is a project to define a protocol for a compositor to talk to\n its clients as well as a library implementation of the protocol.  The\n compositor can be a standalone display server running on Linux kernel\n modesetting and evdev input devices, an X application, or a wayland\n client itself.  The clients can be traditional applications, X servers\n (rootless or fullscreen) or other display servers.\n', 'version': '1.23.92', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'wayland', 'version': '1.23.92'}, {'type': 'component', 'name': 'wayland-protocols', 'version': '1.44'}, {'type': 'component', 'name': 'wayland-utils', 'version': '1.2.0'}]}, {'homepage': 'https://wayland.freedesktop.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'Wayland/1.24.0-GCCcore-14.3.0', 'module_name': 'Wayland', 'module_version': '1.24.0-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'expat/2.7.1-GCCcore-14.3.0', 'module_name': 'expat', 'module_version': '2.7.1-GCCcore-14.3.0'}, {'full_module_name': 'libxml2/2.14.3-GCCcore-14.3.0', 'module_name': 'libxml2', 'module_version': '2.14.3-GCCcore-14.3.0'}, {'full_module_name': 'Wayland/1.24.0-GCCcore-14.3.0', 'module_name': 'Wayland', 'module_version': '1.24.0-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\nWayland is a project to define a protocol for a compositor to talk to\n its clients as well as a library implementation of the protocol.  The\n compositor can be a standalone display server running on Linux kernel\n modesetting and evdev input devices, an X application, or a wayland\n client itself.  The clients can be traditional applications, X servers\n (rootless or fullscreen) or other display servers.\n', 'version': '1.24.0', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'wayland', 'version': '1.24.0'}, {'type': 'component', 'name': 'wayland-protocols', 'version': '1.45'}, {'type': 'component', 'name': 'wayland-utils', 'version': '1.2.0'}]}], 'homepage': 'https://wayland.freedesktop.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\nWayland is a project to define a protocol for a compositor to talk to\n its clients as well as a library implementation of the protocol.  The\n compositor can be a standalone display server running on Linux kernel\n modesetting and evdev input devices, an X application, or a wayland\n client itself.  The clients can be traditional applications, X servers\n (rootless or fullscreen) or other display servers.\n'} installations
+
+
+### wayland
+
+
+|`wayland` version|Wayland modules that include it|
+| --- | --- |
+|1.22.0|`Wayland/1.22.0-GCCcore-13.2.0`<br/>`Wayland/1.22.0-GCCcore-12.3.0`|
+|1.23.0|`Wayland/1.23.0-GCCcore-13.3.0`|
+|1.23.92|`Wayland/1.23.92-GCCcore-14.2.0`|
+|1.24.0|`Wayland/1.24.0-GCCcore-14.3.0`|
+
+### wayland-protocols
+
+
+|`wayland-protocols` version|Wayland modules that include it|
+| --- | --- |
+|1.32|`Wayland/1.22.0-GCCcore-13.2.0`<br/>`Wayland/1.22.0-GCCcore-12.3.0`|
+|1.36|`Wayland/1.23.0-GCCcore-13.3.0`|
+|1.44|`Wayland/1.23.92-GCCcore-14.2.0`|
+|1.45|`Wayland/1.24.0-GCCcore-14.3.0`|
+
+### wayland-utils
+
+
+|`wayland-utils` version|Wayland modules that include it|
+| --- | --- |
+|1.2.0|`Wayland/1.24.0-GCCcore-14.3.0`<br/>`Wayland/1.23.92-GCCcore-14.2.0`<br/>`Wayland/1.23.0-GCCcore-13.3.0`|

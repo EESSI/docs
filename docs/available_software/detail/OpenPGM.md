@@ -1,59 +1,28 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: OpenPGM is an open source implementation of the Pragmatic General Multicast
-    (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable and
-    scalable multicast protocol that enables receivers to detect loss, request retransmission
-    of lost data, or notify an application of unrecoverable loss. PGM is a receiver-reliable
-    protocol, which means the receiver is responsible for ensuring all data is received,
-    absolving the sender of reception responsibility.
-  license: Not confirmed
-  name: OpenPGM
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''OpenPGM/5.2.122-GCCcore-12.3.0'', ''OpenPGM/5.2.122-GCCcore-13.2.0'']'
-  url: https://code.google.com/p/openpgm/
----
-
-OpenPGM
-=======
+# OpenPGM
 
 
-OpenPGM is an open source implementation of the Pragmatic General Multicast (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable and scalable multicast protocol that enables receivers to detect loss, request retransmission of lost data, or notify an application of unrecoverable loss. PGM is a receiver-reliable protocol, which means the receiver is responsible for ensuring all data is received, absolving the sender of reception responsibility.
 
-https://code.google.com/p/openpgm/
-# Available modules
+ OpenPGM is an open source implementation of the Pragmatic General Multicast
+ (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable
+ and scalable multicast protocol that enables receivers to detect loss, request
+ retransmission of lost data, or notify an application of unrecoverable loss.
+ PGM is a receiver-reliable protocol, which means the receiver is responsible
+ for ensuring all data is received, absolving the sender of reception
+ responsibility.
 
 
-The overview below shows which OpenPGM installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://code.google.com/p/openpgm/](https://code.google.com/p/openpgm/)</span>
 
-To start using OpenPGM, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load OpenPGM/5.2.122-GCCcore-13.2.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|5.2.122|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenPGM/5.2.122-GCCcore-12.3.0`|
+|5.2.122|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenPGM/5.2.122-GCCcore-13.2.0`|
+|5.2.122|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenPGM/5.2.122-GCCcore-13.3.0`|
+|5.2.122|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`OpenPGM/5.2.122-GCCcore-14.2.0`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|OpenPGM/5.2.122-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|OpenPGM/5.2.122-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://code.google.com/p/openpgm/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'OpenPGM/5.2.122-GCCcore-12.3.0', 'module_name': 'OpenPGM', 'module_version': '5.2.122-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'OpenPGM/5.2.122-GCCcore-12.3.0', 'module_name': 'OpenPGM', 'module_version': '5.2.122-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n OpenPGM is an open source implementation of the Pragmatic General Multicast\n (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable\n and scalable multicast protocol that enables receivers to detect loss, request\n retransmission of lost data, or notify an application of unrecoverable loss.\n PGM is a receiver-reliable protocol, which means the receiver is responsible\n for ensuring all data is received, absolving the sender of reception\n responsibility.\n', 'version': '5.2.122', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://code.google.com/p/openpgm/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'OpenPGM/5.2.122-GCCcore-13.2.0', 'module_name': 'OpenPGM', 'module_version': '5.2.122-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'OpenPGM/5.2.122-GCCcore-13.2.0', 'module_name': 'OpenPGM', 'module_version': '5.2.122-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n OpenPGM is an open source implementation of the Pragmatic General Multicast\n (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable\n and scalable multicast protocol that enables receivers to detect loss, request\n retransmission of lost data, or notify an application of unrecoverable loss.\n PGM is a receiver-reliable protocol, which means the receiver is responsible\n for ensuring all data is received, absolving the sender of reception\n responsibility.\n', 'version': '5.2.122', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://code.google.com/p/openpgm/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'OpenPGM/5.2.122-GCCcore-13.3.0', 'module_name': 'OpenPGM', 'module_version': '5.2.122-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Perl/5.38.2-GCCcore-13.3.0', 'module_name': 'Perl', 'module_version': '5.38.2-GCCcore-13.3.0'}, {'full_module_name': 'OpenPGM/5.2.122-GCCcore-13.3.0', 'module_name': 'OpenPGM', 'module_version': '5.2.122-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n OpenPGM is an open source implementation of the Pragmatic General Multicast\n (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable\n and scalable multicast protocol that enables receivers to detect loss, request\n retransmission of lost data, or notify an application of unrecoverable loss.\n PGM is a receiver-reliable protocol, which means the receiver is responsible\n for ensuring all data is received, absolving the sender of reception\n responsibility.\n', 'version': '5.2.122', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://code.google.com/p/openpgm/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'OpenPGM/5.2.122-GCCcore-14.2.0', 'module_name': 'OpenPGM', 'module_version': '5.2.122-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'Perl/5.40.0-GCCcore-14.2.0', 'module_name': 'Perl', 'module_version': '5.40.0-GCCcore-14.2.0'}, {'full_module_name': 'OpenPGM/5.2.122-GCCcore-14.2.0', 'module_name': 'OpenPGM', 'module_version': '5.2.122-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n OpenPGM is an open source implementation of the Pragmatic General Multicast\n (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable\n and scalable multicast protocol that enables receivers to detect loss, request\n retransmission of lost data, or notify an application of unrecoverable loss.\n PGM is a receiver-reliable protocol, which means the receiver is responsible\n for ensuring all data is received, absolving the sender of reception\n responsibility.\n', 'version': '5.2.122', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://code.google.com/p/openpgm/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\n OpenPGM is an open source implementation of the Pragmatic General Multicast\n (PGM) specification in RFC 3208 available at www.ietf.org. PGM is a reliable\n and scalable multicast protocol that enables receivers to detect loss, request\n retransmission of lost data, or notify an application of unrecoverable loss.\n PGM is a receiver-reliable protocol, which means the receiver is responsible\n for ensuring all data is received, absolving the sender of reception\n responsibility.\n'} installations

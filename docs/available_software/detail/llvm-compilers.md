@@ -1,0 +1,18 @@
+# llvm-compilers
+
+
+The LLVM Project is a collection of modular and reusable compiler
+and toolchain technologies.
+
+<small>homepage: </small><span class="software-link">[https://llvm.org/](https://llvm.org/)</span>
+
+## Available installations
+
+
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|20.1.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`llvm-compilers/20.1.8`|
+
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://llvm.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'system', 'version': 'system'}, 'toolchain_families_compatibility': ['2024a_foss', '2025a_foss', '2025b_foss'], 'module': {'full_module_name': 'llvm-compilers/20.1.8', 'module_name': 'llvm-compilers', 'module_version': '20.1.8'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'libxml2/2.14.3-GCCcore-14.3.0', 'module_name': 'libxml2', 'module_version': '2.14.3-GCCcore-14.3.0'}, {'full_module_name': 'libtommath/1.3.0-GCCcore-14.3.0', 'module_name': 'libtommath', 'module_version': '1.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Tcl/9.0.1-GCCcore-14.3.0', 'module_name': 'Tcl', 'module_version': '9.0.1-GCCcore-14.3.0'}, {'full_module_name': 'SQLite/3.50.1-GCCcore-14.3.0', 'module_name': 'SQLite', 'module_version': '3.50.1-GCCcore-14.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.5-GCCcore-14.3.0', 'module_name': 'Python', 'module_version': '3.13.5-GCCcore-14.3.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-14.3.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Z3/4.15.1-GCCcore-14.3.0', 'module_name': 'Z3', 'module_version': '4.15.1-GCCcore-14.3.0'}, {'full_module_name': 'gzip/1.14-GCCcore-14.3.0', 'module_name': 'gzip', 'module_version': '1.14-GCCcore-14.3.0'}, {'full_module_name': 'lz4/1.10.0-GCCcore-14.3.0', 'module_name': 'lz4', 'module_version': '1.10.0-GCCcore-14.3.0'}, {'full_module_name': 'zstd/1.5.7-GCCcore-14.3.0', 'module_name': 'zstd', 'module_version': '1.5.7-GCCcore-14.3.0'}, {'full_module_name': 'LLVM/20.1.8-GCCcore-14.3.0', 'module_name': 'LLVM', 'module_version': '20.1.8-GCCcore-14.3.0'}, {'full_module_name': 'llvm-compilers/20.1.8', 'module_name': 'llvm-compilers', 'module_version': '20.1.8'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'The LLVM Project is a collection of modular and reusable compiler\nand toolchain technologies.', 'version': '20.1.8', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://llvm.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'The LLVM Project is a collection of modular and reusable compiler\nand toolchain technologies.'} installations

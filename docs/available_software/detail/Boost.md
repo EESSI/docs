@@ -1,55 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Boost provides free peer-reviewed portable C++ source libraries.
-  license: Not confirmed
-  name: Boost
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Boost/1.81.0-GCC-12.2.0'', ''Boost/1.82.0-GCC-12.3.0'', ''Boost/1.83.0-GCC-13.2.0'']'
-  url: https://www.boost.org/
----
-
-Boost
-=====
+# Boost
 
 
 Boost provides free peer-reviewed portable C++ source libraries.
 
-https://www.boost.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.boost.org/](https://www.boost.org/)</span>
+
+## Available installations
 
 
-The overview below shows which Boost installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.81.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Boost/1.81.0-GCC-12.2.0`|
+|1.82.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Boost/1.82.0-GCC-12.3.0`|
+|1.83.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Boost/1.83.0-GCC-13.2.0`|
+|1.85.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Boost/1.85.0-GCC-13.3.0`|
+|1.88.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Boost/1.88.0-GCC-14.2.0`|
 
-To start using Boost, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Boost/1.83.0-GCC-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boost/1.83.0-GCC-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Boost/1.82.0-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Boost/1.81.0-GCC-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.boost.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'Boost/1.81.0-GCC-12.2.0', 'module_name': 'Boost', 'module_version': '1.81.0-GCC-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GCC/12.2.0', 'module_name': 'GCC', 'module_version': '12.2.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.2.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.2.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.2.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.2.0'}, {'full_module_name': 'zstd/1.5.2-GCCcore-12.2.0', 'module_name': 'zstd', 'module_version': '1.5.2-GCCcore-12.2.0'}, {'full_module_name': 'ICU/72.1-GCCcore-12.2.0', 'module_name': 'ICU', 'module_version': '72.1-GCCcore-12.2.0'}, {'full_module_name': 'Boost/1.81.0-GCC-12.2.0', 'module_name': 'Boost', 'module_version': '1.81.0-GCC-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Boost provides free peer-reviewed portable C++ source libraries.', 'version': '1.81.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.boost.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Boost/1.82.0-GCC-12.3.0', 'module_name': 'Boost', 'module_version': '1.82.0-GCC-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'ICU/73.2-GCCcore-12.3.0', 'module_name': 'ICU', 'module_version': '73.2-GCCcore-12.3.0'}, {'full_module_name': 'Boost/1.82.0-GCC-12.3.0', 'module_name': 'Boost', 'module_version': '1.82.0-GCC-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Boost provides free peer-reviewed portable C++ source libraries.', 'version': '1.82.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.boost.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'Boost/1.83.0-GCC-13.2.0', 'module_name': 'Boost', 'module_version': '1.83.0-GCC-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'GCC/13.2.0', 'module_name': 'GCC', 'module_version': '13.2.0'}, {'full_module_name': 'gzip/1.13-GCCcore-13.2.0', 'module_name': 'gzip', 'module_version': '1.13-GCCcore-13.2.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-13.2.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-13.2.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-13.2.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-13.2.0'}, {'full_module_name': 'ICU/74.1-GCCcore-13.2.0', 'module_name': 'ICU', 'module_version': '74.1-GCCcore-13.2.0'}, {'full_module_name': 'Boost/1.83.0-GCC-13.2.0', 'module_name': 'Boost', 'module_version': '1.83.0-GCC-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Boost provides free peer-reviewed portable C++ source libraries.', 'version': '1.83.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.boost.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'Boost/1.85.0-GCC-13.3.0', 'module_name': 'Boost', 'module_version': '1.85.0-GCC-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'GCC/13.3.0', 'module_name': 'GCC', 'module_version': '13.3.0'}, {'full_module_name': 'gzip/1.13-GCCcore-13.3.0', 'module_name': 'gzip', 'module_version': '1.13-GCCcore-13.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-13.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-13.3.0'}, {'full_module_name': 'zstd/1.5.6-GCCcore-13.3.0', 'module_name': 'zstd', 'module_version': '1.5.6-GCCcore-13.3.0'}, {'full_module_name': 'ICU/75.1-GCCcore-13.3.0', 'module_name': 'ICU', 'module_version': '75.1-GCCcore-13.3.0'}, {'full_module_name': 'Boost/1.85.0-GCC-13.3.0', 'module_name': 'Boost', 'module_version': '1.85.0-GCC-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Boost provides free peer-reviewed portable C++ source libraries.', 'version': '1.85.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.boost.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'Boost/1.88.0-GCC-14.2.0', 'module_name': 'Boost', 'module_version': '1.88.0-GCC-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'GCC/14.2.0', 'module_name': 'GCC', 'module_version': '14.2.0'}, {'full_module_name': 'gzip/1.13-GCCcore-14.2.0', 'module_name': 'gzip', 'module_version': '1.13-GCCcore-14.2.0'}, {'full_module_name': 'lz4/1.10.0-GCCcore-14.2.0', 'module_name': 'lz4', 'module_version': '1.10.0-GCCcore-14.2.0'}, {'full_module_name': 'zstd/1.5.6-GCCcore-14.2.0', 'module_name': 'zstd', 'module_version': '1.5.6-GCCcore-14.2.0'}, {'full_module_name': 'ICU/76.1-GCCcore-14.2.0', 'module_name': 'ICU', 'module_version': '76.1-GCCcore-14.2.0'}, {'full_module_name': 'Boost/1.88.0-GCC-14.2.0', 'module_name': 'Boost', 'module_version': '1.88.0-GCC-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Boost provides free peer-reviewed portable C++ source libraries.', 'version': '1.88.0', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.boost.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Boost provides free peer-reviewed portable C++ source libraries.'} installations

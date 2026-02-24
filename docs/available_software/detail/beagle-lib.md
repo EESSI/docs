@@ -1,55 +1,20 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: beagle-lib is a high-performance library that can perform the core
-    calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics
-    packages.
-  license: Not confirmed
-  name: beagle-lib
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''beagle-lib/4.0.1-GCC-12.3.0'']'
-  url: https://github.com/beagle-dev/beagle-lib
----
-
-beagle-lib
-==========
+# beagle-lib
 
 
-beagle-lib is a high-performance library that can perform the core calculations at the heart of most Bayesian and Maximum Likelihood phylogenetics packages.
+beagle-lib is a high-performance library that can perform the core calculations at the heart of most
+ Bayesian and Maximum Likelihood phylogenetics packages.
 
-https://github.com/beagle-dev/beagle-lib
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/beagle-dev/beagle-lib](https://github.com/beagle-dev/beagle-lib)</span>
+
+## Available installations
 
 
-The overview below shows which beagle-lib installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|4.0.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|<span class="software-gpu-nvidia">NVIDIA</span>: `cc70`, `cc80`, `cc90`<br/>|`beagle-lib/4.0.1-GCC-12.3.0-CUDA-12.1.1`|
+|4.0.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`beagle-lib/4.0.1-GCC-12.3.0`|
+|4.0.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`beagle-lib/4.0.1-GCC-14.2.0`|
 
-To start using beagle-lib, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load beagle-lib/4.0.1-GCC-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|beagle-lib/4.0.1-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/beagle-dev/beagle-lib', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'beagle-lib/4.0.1-GCC-12.3.0-CUDA-12.1.1', 'module_name': 'beagle-lib', 'module_version': '4.0.1-GCC-12.3.0-CUDA-12.1.1'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'Java/11.0.27', 'module_name': 'Java', 'module_version': '11.0.27'}, {'full_module_name': 'Java/11', 'module_name': 'Java', 'module_version': '11'}, {'full_module_name': 'beagle-lib/4.0.1-GCC-12.3.0-CUDA-12.1.1', 'module_name': 'beagle-lib', 'module_version': '4.0.1-GCC-12.3.0-CUDA-12.1.1'}], 'cpu_arch': ['aarch64/generic', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {'aarch64/generic': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'aarch64/neoverse_n1': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'aarch64/neoverse_v1': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'aarch64/nvidia/grace': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/generic': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/amd/zen2': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/amd/zen3': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/amd/zen4': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/intel/haswell': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/intel/skylake_avx512': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/intel/sapphirerapids': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/intel/icelake': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90'], 'x86_64/intel/cascadelake': ['nvidia/cc70', 'nvidia/cc80', 'nvidia/cc90']}, 'description': 'beagle-lib is a high-performance library that can perform the core calculations at the heart of most\n Bayesian and Maximum Likelihood phylogenetics packages.', 'version': '4.0.1', 'versionsuffix': '-CUDA-12.1.1', 'extensions': []}, {'homepage': 'https://github.com/beagle-dev/beagle-lib', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'beagle-lib/4.0.1-GCC-12.3.0', 'module_name': 'beagle-lib', 'module_version': '4.0.1-GCC-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'Java/11.0.27', 'module_name': 'Java', 'module_version': '11.0.27'}, {'full_module_name': 'Java/11', 'module_name': 'Java', 'module_version': '11'}, {'full_module_name': 'beagle-lib/4.0.1-GCC-12.3.0', 'module_name': 'beagle-lib', 'module_version': '4.0.1-GCC-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'beagle-lib is a high-performance library that can perform the core calculations at the heart of most\n Bayesian and Maximum Likelihood phylogenetics packages.', 'version': '4.0.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/beagle-dev/beagle-lib', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'beagle-lib/4.0.1-GCC-14.2.0', 'module_name': 'beagle-lib', 'module_version': '4.0.1-GCC-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'GCC/14.2.0', 'module_name': 'GCC', 'module_version': '14.2.0'}, {'full_module_name': 'Java/21.0.8', 'module_name': 'Java', 'module_version': '21.0.8'}, {'full_module_name': 'Java/21', 'module_name': 'Java', 'module_version': '21'}, {'full_module_name': 'beagle-lib/4.0.1-GCC-14.2.0', 'module_name': 'beagle-lib', 'module_version': '4.0.1-GCC-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'beagle-lib is a high-performance library that can perform the core calculations at the heart of most\n Bayesian and Maximum Likelihood phylogenetics packages.', 'version': '4.0.1', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://github.com/beagle-dev/beagle-lib', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'beagle-lib is a high-performance library that can perform the core calculations at the heart of most\n Bayesian and Maximum Likelihood phylogenetics packages.'} installations

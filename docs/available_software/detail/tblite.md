@@ -1,60 +1,25 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Light-weight tight-binding framework
-  license: Not confirmed
-  name: tblite
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''tblite/0.4.0-gfbf-2023b'']'
-  url: https://github.com/tblite/tblite
----
-
-tblite
-======
+# tblite
 
 
 Light-weight tight-binding framework
 
-https://github.com/tblite/tblite
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/tblite/tblite](https://github.com/tblite/tblite)</span>
+
+## Available installations
 
 
-The overview below shows which tblite installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|0.4.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`tblite/0.4.0-gfbf-2023b`|
 
-To start using tblite, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load tblite/0.4.0-gfbf-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tblite/0.4.0-gfbf-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/tblite/tblite', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gfbf', 'version': '2023b'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'tblite/0.4.0-gfbf-2023b', 'module_name': 'tblite', 'module_version': '0.4.0-gfbf-2023b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'GCC/13.2.0', 'module_name': 'GCC', 'module_version': '13.2.0'}, {'full_module_name': 'OpenBLAS/0.3.24-GCC-13.2.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.24-GCC-13.2.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-13.2.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-13.2.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-13.2.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-13.2.0'}, {'full_module_name': 'gfbf/2023b', 'module_name': 'gfbf', 'module_version': '2023b'}, {'full_module_name': 'json-fortran/9.0.2-GCC-13.2.0', 'module_name': 'json-fortran', 'module_version': '9.0.2-GCC-13.2.0'}, {'full_module_name': 'mctc-lib/0.3.1-GCC-13.2.0', 'module_name': 'mctc-lib', 'module_version': '0.3.1-GCC-13.2.0'}, {'full_module_name': 'mstore/0.3.0-GCC-13.2.0', 'module_name': 'mstore', 'module_version': '0.3.0-GCC-13.2.0'}, {'full_module_name': 'TOML-Fortran/0.4.2-GCC-13.2.0', 'module_name': 'TOML-Fortran', 'module_version': '0.4.2-GCC-13.2.0'}, {'full_module_name': 'Simple-DFTD3/1.2.1-gfbf-2023b', 'module_name': 'Simple-DFTD3', 'module_version': '1.2.1-gfbf-2023b'}, {'full_module_name': 'multicharge/0.3.0-gfbf-2023b', 'module_name': 'multicharge', 'module_version': '0.3.0-gfbf-2023b'}, {'full_module_name': 'dftd4/3.7.0-gfbf-2023b', 'module_name': 'dftd4', 'module_version': '3.7.0-gfbf-2023b'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'cffi/1.15.1-GCCcore-13.2.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-13.2.0'}, {'full_module_name': 'cryptography/41.0.5-GCCcore-13.2.0', 'module_name': 'cryptography', 'module_version': '41.0.5-GCCcore-13.2.0'}, {'full_module_name': 'virtualenv/20.24.6-GCCcore-13.2.0', 'module_name': 'virtualenv', 'module_version': '20.24.6-GCCcore-13.2.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.10-GCCcore-13.2.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.10-GCCcore-13.2.0'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-13.2.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-13.2.0'}, {'full_module_name': 'SciPy-bundle/2023.11-gfbf-2023b', 'module_name': 'SciPy-bundle', 'module_version': '2023.11-gfbf-2023b'}, {'full_module_name': 'tblite/0.4.0-gfbf-2023b', 'module_name': 'tblite', 'module_version': '0.4.0-gfbf-2023b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Light-weight tight-binding framework', 'version': '0.4.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'tblite', 'version': '0.4.0'}]}], 'homepage': 'https://github.com/tblite/tblite', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Light-weight tight-binding framework'} installations
 
 
-### tblite/0.4.0-gfbf-2023b
+### tblite
 
-This is a list of extensions included in the module:
 
-tblite-0.4.0
+|`tblite` version|tblite modules that include it|
+| --- | --- |
+|0.4.0|`tblite/0.4.0-gfbf-2023b`|

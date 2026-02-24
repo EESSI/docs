@@ -1,55 +1,18 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Libint library is used to evaluate the traditional (electron repulsion)
-    and certain novel two-body matrix elements (integrals) over Cartesian Gaussian
-    functions used in modern atomic and molecular theory.
-  license: Not confirmed
-  name: Libint
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k'']'
-  url: https://github.com/evaleev/libint
----
-
-Libint
-======
+# Libint
 
 
-Libint library is used to evaluate the traditional (electron repulsion) and certain novel two-body matrix elements (integrals) over Cartesian Gaussian functions used in modern atomic and molecular theory.
+Libint library is used to evaluate the traditional (electron repulsion) and certain novel two-body
+ matrix elements (integrals) over Cartesian Gaussian functions used in modern atomic and molecular theory.
 
-https://github.com/evaleev/libint
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/evaleev/libint](https://github.com/evaleev/libint)</span>
+
+## Available installations
 
 
-The overview below shows which Libint installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|2.7.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k`|
 
-To start using Libint, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/evaleev/libint', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k', 'module_name': 'Libint', 'module_version': '2.7.2-GCC-12.3.0-lmax-6-cp2k'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'Libint/2.7.2-GCC-12.3.0-lmax-6-cp2k', 'module_name': 'Libint', 'module_version': '2.7.2-GCC-12.3.0-lmax-6-cp2k'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Libint library is used to evaluate the traditional (electron repulsion) and certain novel two-body\n matrix elements (integrals) over Cartesian Gaussian functions used in modern atomic and molecular theory.', 'version': '2.7.2', 'versionsuffix': '-lmax-6-cp2k', 'extensions': []}], 'homepage': 'https://github.com/evaleev/libint', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Libint library is used to evaluate the traditional (electron repulsion) and certain novel two-body\n matrix elements (integrals) over Cartesian Gaussian functions used in modern atomic and molecular theory.'} installations

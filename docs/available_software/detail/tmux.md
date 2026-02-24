@@ -1,55 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: 'tmux is a terminal multiplexer: it enables a number ofterminals to
-    be created, accessed, and controlled from a single screen. tmuxmay be detached
-    from a screen and continue running in the background, thenlater reattached.'
-  license: Not confirmed
-  name: tmux
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''tmux/3.3a-GCCcore-12.3.0'']'
-  url: https://github.com/tmux/tmux/
----
-
-tmux
-====
+# tmux
 
 
-tmux is a terminal multiplexer: it enables a number ofterminals to be created, accessed, and controlled from a single screen. tmuxmay be detached from a screen and continue running in the background, thenlater reattached.
+tmux is a terminal multiplexer: it enables a number of
+terminals to be created, accessed, and controlled from a single screen. tmux
+may be detached from a screen and continue running in the background, then
+later reattached.
 
-https://github.com/tmux/tmux/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/tmux/tmux/](https://github.com/tmux/tmux/)</span>
+
+## Available installations
 
 
-The overview below shows which tmux installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.3a|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`tmux/3.3a-GCCcore-12.3.0`|
+|3.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`tmux/3.4-GCCcore-13.3.0`|
 
-To start using tmux, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load tmux/3.3a-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tmux/3.3a-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/tmux/tmux/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'tmux/3.3a-GCCcore-12.3.0', 'module_name': 'tmux', 'module_version': '3.3a-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'tmux/3.3a-GCCcore-12.3.0', 'module_name': 'tmux', 'module_version': '3.3a-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'tmux is a terminal multiplexer: it enables a number of\nterminals to be created, accessed, and controlled from a single screen. tmux\nmay be detached from a screen and continue running in the background, then\nlater reattached.', 'version': '3.3a', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/tmux/tmux/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'tmux/3.4-GCCcore-13.3.0', 'module_name': 'tmux', 'module_version': '3.4-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'libevent/2.1.12-GCCcore-13.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-13.3.0'}, {'full_module_name': 'tmux/3.4-GCCcore-13.3.0', 'module_name': 'tmux', 'module_version': '3.4-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'tmux is a terminal multiplexer: it enables a number of\nterminals to be created, accessed, and controlled from a single screen. tmux\nmay be detached from a screen and continue running in the background, then\nlater reattached.', 'version': '3.4', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://github.com/tmux/tmux/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'tmux is a terminal multiplexer: it enables a number of\nterminals to be created, accessed, and controlled from a single screen. tmux\nmay be detached from a screen and continue running in the background, then\nlater reattached.'} installations

@@ -1,55 +1,20 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: libsoup is an HTTP client/server library for GNOME. Ituses GObjects
-    and the glib main loop, to integrate well with GNOMEapplications, and also has
-    a synchronous API, for use in threadedapplications.
-  license: Not confirmed
-  name: LibSoup
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''LibSoup/3.6.1-GCC-12.3.0'']'
-  url: https://wiki.gnome.org/Projects/libsoup
----
-
-LibSoup
-=======
+# LibSoup
 
 
-libsoup is an HTTP client/server library for GNOME. Ituses GObjects and the glib main loop, to integrate well with GNOMEapplications, and also has a synchronous API, for use in threadedapplications.
+libsoup is an HTTP client/server library for GNOME. It
+uses GObjects and the glib main loop, to integrate well with GNOME
+applications, and also has a synchronous API, for use in threaded
+applications.
 
-https://wiki.gnome.org/Projects/libsoup
-# Available modules
+<small>homepage: </small><span class="software-link">[https://wiki.gnome.org/Projects/libsoup](https://wiki.gnome.org/Projects/libsoup)</span>
+
+## Available installations
 
 
-The overview below shows which LibSoup installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.6.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`LibSoup/3.6.1-GCC-12.3.0`|
 
-To start using LibSoup, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load LibSoup/3.6.1-GCC-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LibSoup/3.6.1-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://wiki.gnome.org/Projects/libsoup', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'LibSoup/3.6.1-GCC-12.3.0', 'module_name': 'LibSoup', 'module_version': '3.6.1-GCC-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'PCRE2/10.42-GCCcore-12.3.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-12.3.0'}, {'full_module_name': 'GLib/2.77.1-GCCcore-12.3.0', 'module_name': 'GLib', 'module_version': '2.77.1-GCCcore-12.3.0'}, {'full_module_name': 'libidn2/2.3.7-GCCcore-12.3.0', 'module_name': 'libidn2', 'module_version': '2.3.7-GCCcore-12.3.0'}, {'full_module_name': 'libunistring/1.1-GCCcore-12.3.0', 'module_name': 'libunistring', 'module_version': '1.1-GCCcore-12.3.0'}, {'full_module_name': 'libpsl/0.21.5-GCCcore-12.3.0', 'module_name': 'libpsl', 'module_version': '0.21.5-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'cURL/8.0.1-GCCcore-12.3.0', 'module_name': 'cURL', 'module_version': '8.0.1-GCCcore-12.3.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.3.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.3.0'}, {'full_module_name': 'nettle/3.9.1-GCCcore-12.3.0', 'module_name': 'nettle', 'module_version': '3.9.1-GCCcore-12.3.0'}, {'full_module_name': 'gc/8.2.4-GCCcore-12.3.0', 'module_name': 'gc', 'module_version': '8.2.4-GCCcore-12.3.0'}, {'full_module_name': 'Guile/3.0.9-GCCcore-12.3.0', 'module_name': 'Guile', 'module_version': '3.0.9-GCCcore-12.3.0'}, {'full_module_name': 'libtasn1/4.19.0-GCCcore-12.3.0', 'module_name': 'libtasn1', 'module_version': '4.19.0-GCCcore-12.3.0'}, {'full_module_name': 'p11-kit/0.25.3-GCCcore-12.3.0', 'module_name': 'p11-kit', 'module_version': '0.25.3-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'GnuTLS/3.7.8-GCCcore-12.3.0', 'module_name': 'GnuTLS', 'module_version': '3.7.8-GCCcore-12.3.0'}, {'full_module_name': 'nghttp3/1.3.0-GCCcore-12.3.0', 'module_name': 'nghttp3', 'module_version': '1.3.0-GCCcore-12.3.0'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'Jansson/2.14-GCC-12.3.0', 'module_name': 'Jansson', 'module_version': '2.14-GCC-12.3.0'}, {'full_module_name': 'jemalloc/5.3.0-GCCcore-12.3.0', 'module_name': 'jemalloc', 'module_version': '5.3.0-GCCcore-12.3.0'}, {'full_module_name': 'libev/4.33-GCC-12.3.0', 'module_name': 'libev', 'module_version': '4.33-GCC-12.3.0'}, {'full_module_name': 'ngtcp2/1.2.0-GCC-12.3.0', 'module_name': 'ngtcp2', 'module_version': '1.2.0-GCC-12.3.0'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'c-ares/1.19.1-GCCcore-12.3.0', 'module_name': 'c-ares', 'module_version': '1.19.1-GCCcore-12.3.0'}, {'full_module_name': 'nghttp2/1.58.0-GCC-12.3.0', 'module_name': 'nghttp2', 'module_version': '1.58.0-GCC-12.3.0'}, {'full_module_name': 'glib-networking/2.72.1-GCCcore-12.3.0', 'module_name': 'glib-networking', 'module_version': '2.72.1-GCCcore-12.3.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.3.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.3.0'}, {'full_module_name': 'LibSoup/3.6.1-GCC-12.3.0', 'module_name': 'LibSoup', 'module_version': '3.6.1-GCC-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'libsoup is an HTTP client/server library for GNOME. It\nuses GObjects and the glib main loop, to integrate well with GNOME\napplications, and also has a synchronous API, for use in threaded\napplications.', 'version': '3.6.1', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://wiki.gnome.org/Projects/libsoup', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'libsoup is an HTTP client/server library for GNOME. It\nuses GObjects and the glib main loop, to integrate well with GNOME\napplications, and also has a synchronous API, for use in threaded\napplications.'} installations

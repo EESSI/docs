@@ -1,58 +1,21 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Libsndfile is a C library for reading and writing files containing
-    sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one
-    standard library interface.
-  license: Not confirmed
-  name: libsndfile
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''libsndfile/1.2.0-GCCcore-12.2.0'', ''libsndfile/1.2.2-GCCcore-12.3.0'',
-    ''libsndfile/1.2.2-GCCcore-13.2.0'']'
-  url: http://www.mega-nerd.com/libsndfile
----
-
-libsndfile
-==========
+# libsndfile
 
 
-Libsndfile is a C library for reading and writing files containing sampled sound (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.
+Libsndfile is a C library for reading and writing files containing sampled sound
+ (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.
 
-http://www.mega-nerd.com/libsndfile
-# Available modules
+<small>homepage: </small><span class="software-link">[http://www.mega-nerd.com/libsndfile](http://www.mega-nerd.com/libsndfile)</span>
+
+## Available installations
 
 
-The overview below shows which libsndfile installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.2.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`libsndfile/1.2.0-GCCcore-12.2.0`|
+|1.2.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`libsndfile/1.2.2-GCCcore-12.3.0`|
+|1.2.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`libsndfile/1.2.2-GCCcore-13.2.0`|
+|1.2.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`libsndfile/1.2.2-GCCcore-13.3.0`|
 
-To start using libsndfile, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load libsndfile/1.2.2-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libsndfile/1.2.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|libsndfile/1.2.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|libsndfile/1.2.0-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'http://www.mega-nerd.com/libsndfile', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'libsndfile/1.2.0-GCCcore-12.2.0', 'module_name': 'libsndfile', 'module_version': '1.2.0-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'libogg/1.3.5-GCCcore-12.2.0', 'module_name': 'libogg', 'module_version': '1.3.5-GCCcore-12.2.0'}, {'full_module_name': 'FLAC/1.4.2-GCCcore-12.2.0', 'module_name': 'FLAC', 'module_version': '1.4.2-GCCcore-12.2.0'}, {'full_module_name': 'libvorbis/1.3.7-GCCcore-12.2.0', 'module_name': 'libvorbis', 'module_version': '1.3.7-GCCcore-12.2.0'}, {'full_module_name': 'libopus/1.3.1-GCCcore-12.2.0', 'module_name': 'libopus', 'module_version': '1.3.1-GCCcore-12.2.0'}, {'full_module_name': 'LAME/3.100-GCCcore-12.2.0', 'module_name': 'LAME', 'module_version': '3.100-GCCcore-12.2.0'}, {'full_module_name': 'libsndfile/1.2.0-GCCcore-12.2.0', 'module_name': 'libsndfile', 'module_version': '1.2.0-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Libsndfile is a C library for reading and writing files containing sampled sound\n (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.', 'version': '1.2.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.mega-nerd.com/libsndfile', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'libsndfile/1.2.2-GCCcore-12.3.0', 'module_name': 'libsndfile', 'module_version': '1.2.2-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'libogg/1.3.5-GCCcore-12.3.0', 'module_name': 'libogg', 'module_version': '1.3.5-GCCcore-12.3.0'}, {'full_module_name': 'FLAC/1.4.2-GCCcore-12.3.0', 'module_name': 'FLAC', 'module_version': '1.4.2-GCCcore-12.3.0'}, {'full_module_name': 'libvorbis/1.3.7-GCCcore-12.3.0', 'module_name': 'libvorbis', 'module_version': '1.3.7-GCCcore-12.3.0'}, {'full_module_name': 'libopus/1.4-GCCcore-12.3.0', 'module_name': 'libopus', 'module_version': '1.4-GCCcore-12.3.0'}, {'full_module_name': 'LAME/3.100-GCCcore-12.3.0', 'module_name': 'LAME', 'module_version': '3.100-GCCcore-12.3.0'}, {'full_module_name': 'libsndfile/1.2.2-GCCcore-12.3.0', 'module_name': 'libsndfile', 'module_version': '1.2.2-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Libsndfile is a C library for reading and writing files containing sampled sound\n (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.', 'version': '1.2.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.mega-nerd.com/libsndfile', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'libsndfile/1.2.2-GCCcore-13.2.0', 'module_name': 'libsndfile', 'module_version': '1.2.2-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'libogg/1.3.5-GCCcore-13.2.0', 'module_name': 'libogg', 'module_version': '1.3.5-GCCcore-13.2.0'}, {'full_module_name': 'FLAC/1.4.3-GCCcore-13.2.0', 'module_name': 'FLAC', 'module_version': '1.4.3-GCCcore-13.2.0'}, {'full_module_name': 'libvorbis/1.3.7-GCCcore-13.2.0', 'module_name': 'libvorbis', 'module_version': '1.3.7-GCCcore-13.2.0'}, {'full_module_name': 'libopus/1.5.2-GCCcore-13.2.0', 'module_name': 'libopus', 'module_version': '1.5.2-GCCcore-13.2.0'}, {'full_module_name': 'LAME/3.100-GCCcore-13.2.0', 'module_name': 'LAME', 'module_version': '3.100-GCCcore-13.2.0'}, {'full_module_name': 'libsndfile/1.2.2-GCCcore-13.2.0', 'module_name': 'libsndfile', 'module_version': '1.2.2-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Libsndfile is a C library for reading and writing files containing sampled sound\n (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.', 'version': '1.2.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://www.mega-nerd.com/libsndfile', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'libsndfile/1.2.2-GCCcore-13.3.0', 'module_name': 'libsndfile', 'module_version': '1.2.2-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'libogg/1.3.5-GCCcore-13.3.0', 'module_name': 'libogg', 'module_version': '1.3.5-GCCcore-13.3.0'}, {'full_module_name': 'FLAC/1.4.3-GCCcore-13.3.0', 'module_name': 'FLAC', 'module_version': '1.4.3-GCCcore-13.3.0'}, {'full_module_name': 'libvorbis/1.3.7-GCCcore-13.3.0', 'module_name': 'libvorbis', 'module_version': '1.3.7-GCCcore-13.3.0'}, {'full_module_name': 'libopus/1.5.2-GCCcore-13.3.0', 'module_name': 'libopus', 'module_version': '1.5.2-GCCcore-13.3.0'}, {'full_module_name': 'LAME/3.100-GCCcore-13.3.0', 'module_name': 'LAME', 'module_version': '3.100-GCCcore-13.3.0'}, {'full_module_name': 'libsndfile/1.2.2-GCCcore-13.3.0', 'module_name': 'libsndfile', 'module_version': '1.2.2-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Libsndfile is a C library for reading and writing files containing sampled sound\n (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.', 'version': '1.2.2', 'versionsuffix': '', 'extensions': []}], 'homepage': 'http://www.mega-nerd.com/libsndfile', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Libsndfile is a C library for reading and writing files containing sampled sound\n (such as MS Windows WAV and the Apple/SGI AIFF format) through one standard library interface.'} installations

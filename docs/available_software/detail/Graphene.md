@@ -1,56 +1,20 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Graphene is a thin layer of types for graphic libraries
-  license: Not confirmed
-  name: Graphene
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Graphene/1.10.8-GCCcore-12.2.0'', ''Graphene/1.10.8-GCCcore-12.3.0'',
-    ''Graphene/1.10.8-GCCcore-13.2.0'']'
-  url: https://ebassi.github.io/graphene/
----
-
-Graphene
-========
+# Graphene
 
 
 Graphene is a thin layer of types for graphic libraries
 
-https://ebassi.github.io/graphene/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://ebassi.github.io/graphene/](https://ebassi.github.io/graphene/)</span>
+
+## Available installations
 
 
-The overview below shows which Graphene installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|1.10.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Graphene/1.10.8-GCCcore-12.2.0`|
+|1.10.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Graphene/1.10.8-GCCcore-12.3.0`|
+|1.10.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Graphene/1.10.8-GCCcore-13.2.0`|
+|1.10.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Graphene/1.10.8-GCCcore-14.3.0`|
 
-To start using Graphene, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Graphene/1.10.8-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Graphene/1.10.8-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Graphene/1.10.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Graphene/1.10.8-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://ebassi.github.io/graphene/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'Graphene/1.10.8-GCCcore-12.2.0', 'module_name': 'Graphene', 'module_version': '1.10.8-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.2.0'}, {'full_module_name': 'libxml2/2.10.3-GCCcore-12.2.0', 'module_name': 'libxml2', 'module_version': '2.10.3-GCCcore-12.2.0'}, {'full_module_name': 'PCRE2/10.40-GCCcore-12.2.0', 'module_name': 'PCRE2', 'module_version': '10.40-GCCcore-12.2.0'}, {'full_module_name': 'GLib/2.75.0-GCCcore-12.2.0', 'module_name': 'GLib', 'module_version': '2.75.0-GCCcore-12.2.0'}, {'full_module_name': 'Graphene/1.10.8-GCCcore-12.2.0', 'module_name': 'Graphene', 'module_version': '1.10.8-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Graphene is a thin layer of types for graphic libraries', 'version': '1.10.8', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://ebassi.github.io/graphene/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Graphene/1.10.8-GCCcore-12.3.0', 'module_name': 'Graphene', 'module_version': '1.10.8-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'PCRE2/10.42-GCCcore-12.3.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-12.3.0'}, {'full_module_name': 'GLib/2.77.1-GCCcore-12.3.0', 'module_name': 'GLib', 'module_version': '2.77.1-GCCcore-12.3.0'}, {'full_module_name': 'Graphene/1.10.8-GCCcore-12.3.0', 'module_name': 'Graphene', 'module_version': '1.10.8-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Graphene is a thin layer of types for graphic libraries', 'version': '1.10.8', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://ebassi.github.io/graphene/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'Graphene/1.10.8-GCCcore-13.2.0', 'module_name': 'Graphene', 'module_version': '1.10.8-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'libxml2/2.11.5-GCCcore-13.2.0', 'module_name': 'libxml2', 'module_version': '2.11.5-GCCcore-13.2.0'}, {'full_module_name': 'PCRE2/10.42-GCCcore-13.2.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-13.2.0'}, {'full_module_name': 'GLib/2.78.1-GCCcore-13.2.0', 'module_name': 'GLib', 'module_version': '2.78.1-GCCcore-13.2.0'}, {'full_module_name': 'Graphene/1.10.8-GCCcore-13.2.0', 'module_name': 'Graphene', 'module_version': '1.10.8-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Graphene is a thin layer of types for graphic libraries', 'version': '1.10.8', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://ebassi.github.io/graphene/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'Graphene/1.10.8-GCCcore-14.3.0', 'module_name': 'Graphene', 'module_version': '1.10.8-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'libxml2/2.14.3-GCCcore-14.3.0', 'module_name': 'libxml2', 'module_version': '2.14.3-GCCcore-14.3.0'}, {'full_module_name': 'PCRE2/10.45-GCCcore-14.3.0', 'module_name': 'PCRE2', 'module_version': '10.45-GCCcore-14.3.0'}, {'full_module_name': 'GLib/2.85.3-GCCcore-14.3.0', 'module_name': 'GLib', 'module_version': '2.85.3-GCCcore-14.3.0'}, {'full_module_name': 'Graphene/1.10.8-GCCcore-14.3.0', 'module_name': 'Graphene', 'module_version': '1.10.8-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Graphene is a thin layer of types for graphic libraries', 'version': '1.10.8', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://ebassi.github.io/graphene/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Graphene is a thin layer of types for graphic libraries'} installations

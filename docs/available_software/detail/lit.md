@@ -1,68 +1,47 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: lit is a portable tool for executing LLVM and Clang style test suites,
-    summarizing their results, andproviding indication of failures.
-  license: Not confirmed
-  name: lit
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''lit/18.1.2-GCCcore-12.3.0'', ''lit/18.1.7-GCCcore-13.2.0'']'
-  url: https://llvm.org/docs/CommandGuide/lit.html
----
-
-lit
-===
+# lit
 
 
-lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, andproviding indication of failures.
+lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and
+providing indication of failures.
 
-https://llvm.org/docs/CommandGuide/lit.html
-# Available modules
+<small>homepage: </small><span class="software-link">[https://llvm.org/docs/CommandGuide/lit.html](https://llvm.org/docs/CommandGuide/lit.html)</span>
 
-
-The overview below shows which lit installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using lit, load one of these modules using a `module load` command like:
-
-```shell
-module load lit/18.1.7-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|lit/18.1.7-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|lit/18.1.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### lit/18.1.7-GCCcore-13.2.0
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|18.1.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`lit/18.1.2-GCCcore-12.3.0`|
+|18.1.7|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`lit/18.1.7-GCCcore-13.2.0`|
+|18.1.7|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`lit/18.1.7-GCCcore-13.3.0`|
+|18.1.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`lit/18.1.8-GCCcore-13.3.0`|
+|18.1.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`lit/18.1.8-GCCcore-14.2.0`|
+|18.1.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`lit/18.1.8-GCCcore-14.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-lit-18.1.7, pexpect-4.9.0, ptyprocess-0.7.0
+Overview of extensions included in {'versions': [{'homepage': 'https://llvm.org/docs/CommandGuide/lit.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'lit/18.1.2-GCCcore-12.3.0', 'module_name': 'lit', 'module_version': '18.1.2-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'lit/18.1.2-GCCcore-12.3.0', 'module_name': 'lit', 'module_version': '18.1.2-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and\nproviding indication of failures.', 'version': '18.1.2', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'lit', 'version': '18.1.2'}]}, {'homepage': 'https://llvm.org/docs/CommandGuide/lit.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'lit/18.1.7-GCCcore-13.2.0', 'module_name': 'lit', 'module_version': '18.1.7-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'lit/18.1.7-GCCcore-13.2.0', 'module_name': 'lit', 'module_version': '18.1.7-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and\nproviding indication of failures.', 'version': '18.1.7', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'ptyprocess', 'version': '0.7.0'}, {'type': 'python', 'name': 'pexpect', 'version': '4.9.0'}, {'type': 'python', 'name': 'lit', 'version': '18.1.7'}]}, {'homepage': 'https://llvm.org/docs/CommandGuide/lit.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'lit/18.1.7-GCCcore-13.3.0', 'module_name': 'lit', 'module_version': '18.1.7-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Tcl/8.6.14-GCCcore-13.3.0', 'module_name': 'Tcl', 'module_version': '8.6.14-GCCcore-13.3.0'}, {'full_module_name': 'SQLite/3.45.3-GCCcore-13.3.0', 'module_name': 'SQLite', 'module_version': '3.45.3-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.12.3-GCCcore-13.3.0', 'module_name': 'Python', 'module_version': '3.12.3-GCCcore-13.3.0'}, {'full_module_name': 'lit/18.1.7-GCCcore-13.3.0', 'module_name': 'lit', 'module_version': '18.1.7-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and\nproviding indication of failures.', 'version': '18.1.7', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'ptyprocess', 'version': '0.7.0'}, {'type': 'python', 'name': 'pexpect', 'version': '4.9.0'}, {'type': 'python', 'name': 'lit', 'version': '18.1.7'}]}, {'homepage': 'https://llvm.org/docs/CommandGuide/lit.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'lit/18.1.8-GCCcore-13.3.0', 'module_name': 'lit', 'module_version': '18.1.8-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'Tcl/8.6.14-GCCcore-13.3.0', 'module_name': 'Tcl', 'module_version': '8.6.14-GCCcore-13.3.0'}, {'full_module_name': 'SQLite/3.45.3-GCCcore-13.3.0', 'module_name': 'SQLite', 'module_version': '3.45.3-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.12.3-GCCcore-13.3.0', 'module_name': 'Python', 'module_version': '3.12.3-GCCcore-13.3.0'}, {'full_module_name': 'lit/18.1.8-GCCcore-13.3.0', 'module_name': 'lit', 'module_version': '18.1.8-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and\nproviding indication of failures.', 'version': '18.1.8', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'ptyprocess', 'version': '0.7.0'}, {'type': 'python', 'name': 'pexpect', 'version': '4.9.0'}, {'type': 'python', 'name': 'lit', 'version': '18.1.8'}]}, {'homepage': 'https://llvm.org/docs/CommandGuide/lit.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'lit/18.1.8-GCCcore-14.2.0', 'module_name': 'lit', 'module_version': '18.1.8-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'Tcl/8.6.16-GCCcore-14.2.0', 'module_name': 'Tcl', 'module_version': '8.6.16-GCCcore-14.2.0'}, {'full_module_name': 'SQLite/3.47.2-GCCcore-14.2.0', 'module_name': 'SQLite', 'module_version': '3.47.2-GCCcore-14.2.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-14.2.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-14.2.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.1-GCCcore-14.2.0', 'module_name': 'Python', 'module_version': '3.13.1-GCCcore-14.2.0'}, {'full_module_name': 'lit/18.1.8-GCCcore-14.2.0', 'module_name': 'lit', 'module_version': '18.1.8-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and\nproviding indication of failures.', 'version': '18.1.8', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'ptyprocess', 'version': '0.7.0'}, {'type': 'python', 'name': 'pexpect', 'version': '4.9.0'}, {'type': 'python', 'name': 'lit', 'version': '18.1.8'}]}, {'homepage': 'https://llvm.org/docs/CommandGuide/lit.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'lit/18.1.8-GCCcore-14.3.0', 'module_name': 'lit', 'module_version': '18.1.8-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'libtommath/1.3.0-GCCcore-14.3.0', 'module_name': 'libtommath', 'module_version': '1.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Tcl/9.0.1-GCCcore-14.3.0', 'module_name': 'Tcl', 'module_version': '9.0.1-GCCcore-14.3.0'}, {'full_module_name': 'SQLite/3.50.1-GCCcore-14.3.0', 'module_name': 'SQLite', 'module_version': '3.50.1-GCCcore-14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.5-GCCcore-14.3.0', 'module_name': 'Python', 'module_version': '3.13.5-GCCcore-14.3.0'}, {'full_module_name': 'lit/18.1.8-GCCcore-14.3.0', 'module_name': 'lit', 'module_version': '18.1.8-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and\nproviding indication of failures.', 'version': '18.1.8', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'ptyprocess', 'version': '0.7.0'}, {'type': 'python', 'name': 'pexpect', 'version': '4.9.0'}, {'type': 'python', 'name': 'lit', 'version': '18.1.8'}]}], 'homepage': 'https://llvm.org/docs/CommandGuide/lit.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'lit is a portable tool for executing LLVM and Clang style test suites, summarizing their results, and\nproviding indication of failures.'} installations
 
-### lit/18.1.2-GCCcore-12.3.0
 
-This is a list of extensions included in the module:
+### lit
 
-lit-18.1.2
+
+|`lit` version|lit modules that include it|
+| --- | --- |
+|18.1.2|`lit/18.1.2-GCCcore-12.3.0`|
+|18.1.7|`lit/18.1.7-GCCcore-13.3.0`<br/>`lit/18.1.7-GCCcore-13.2.0`|
+|18.1.8|`lit/18.1.8-GCCcore-14.3.0`<br/>`lit/18.1.8-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.2.0`|
+
+### pexpect
+
+
+|`pexpect` version|lit modules that include it|
+| --- | --- |
+|4.9.0|`lit/18.1.7-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.3.0`<br/>`lit/18.1.8-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.2.0`<br/>`lit/18.1.7-GCCcore-13.2.0`|
+
+### ptyprocess
+
+
+|`ptyprocess` version|lit modules that include it|
+| --- | --- |
+|0.7.0|`lit/18.1.7-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.3.0`<br/>`lit/18.1.8-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.2.0`<br/>`lit/18.1.7-GCCcore-13.2.0`|

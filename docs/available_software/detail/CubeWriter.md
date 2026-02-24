@@ -1,58 +1,27 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Cube, which is used as performance report explorer for Scalasca and
-    Score-P, is a generic tool for displaying a multi-dimensional performance space
-    consisting of the dimensions (i) performance metric, (ii) call path, and (iii)
-    system resource. Each dimension can be represented as a tree, where non-leaf nodes
-    of the tree can be collapsed or expanded to achieve the desired level of granularity.
-    This module provides the Cube high-performance C writer library component.
-  license: Not confirmed
-  name: CubeWriter
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''CubeWriter/4.8.2-GCCcore-13.2.0'']'
-  url: https://www.scalasca.org/software/cube-4.x/download.html
----
-
-CubeWriter
-==========
+# CubeWriter
 
 
-Cube, which is used as performance report explorer for Scalasca and Score-P, is a generic tool for displaying a multi-dimensional performance space consisting of the dimensions (i) performance metric, (ii) call path, and (iii) system resource. Each dimension can be represented as a tree, where non-leaf nodes of the tree can be collapsed or expanded to achieve the desired level of granularity. This module provides the Cube high-performance C writer library component.
 
-https://www.scalasca.org/software/cube-4.x/download.html
-# Available modules
+ Cube, which is used as performance report explorer for Scalasca and Score-P,
+ is a generic tool for displaying a multi-dimensional performance space
+ consisting of the dimensions (i) performance metric, (ii) call path, and
+ (iii) system resource. Each dimension can be represented as a tree, where
+ non-leaf nodes of the tree can be collapsed or expanded to achieve the
+ desired level of granularity.
+
+ This module provides the Cube high-performance C writer library component.
 
 
-The overview below shows which CubeWriter installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://www.scalasca.org/software/cube-4.x/download.html](https://www.scalasca.org/software/cube-4.x/download.html)</span>
 
-To start using CubeWriter, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load CubeWriter/4.8.2-GCCcore-13.2.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|4.8.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`CubeWriter/4.8.2-GCCcore-13.2.0`|
+|4.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`CubeWriter/4.9-GCCcore-14.2.0`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|CubeWriter/4.8.2-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://www.scalasca.org/software/cube-4.x/download.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'CubeWriter/4.8.2-GCCcore-13.2.0', 'module_name': 'CubeWriter', 'module_version': '4.8.2-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'CubeWriter/4.8.2-GCCcore-13.2.0', 'module_name': 'CubeWriter', 'module_version': '4.8.2-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Cube, which is used as performance report explorer for Scalasca and Score-P,\n is a generic tool for displaying a multi-dimensional performance space\n consisting of the dimensions (i) performance metric, (ii) call path, and\n (iii) system resource. Each dimension can be represented as a tree, where\n non-leaf nodes of the tree can be collapsed or expanded to achieve the\n desired level of granularity.\n\n This module provides the Cube high-performance C writer library component.\n', 'version': '4.8.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://www.scalasca.org/software/cube-4.x/download.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'CubeWriter/4.9-GCCcore-14.2.0', 'module_name': 'CubeWriter', 'module_version': '4.9-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'CubeWriter/4.9-GCCcore-14.2.0', 'module_name': 'CubeWriter', 'module_version': '4.9-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Cube, which is used as performance report explorer for Scalasca and Score-P,\n is a generic tool for displaying a multi-dimensional performance space\n consisting of the dimensions (i) performance metric, (ii) call path, and\n (iii) system resource. Each dimension can be represented as a tree, where\n non-leaf nodes of the tree can be collapsed or expanded to achieve the\n desired level of granularity.\n\n This module provides the Cube high-performance C writer library component.\n', 'version': '4.9', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://www.scalasca.org/software/cube-4.x/download.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\n Cube, which is used as performance report explorer for Scalasca and Score-P,\n is a generic tool for displaying a multi-dimensional performance space\n consisting of the dimensions (i) performance metric, (ii) call path, and\n (iii) system resource. Each dimension can be represented as a tree, where\n non-leaf nodes of the tree can be collapsed or expanded to achieve the\n desired level of granularity.\n\n This module provides the Cube high-performance C writer library component.\n'} installations

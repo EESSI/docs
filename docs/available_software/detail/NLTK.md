@@ -1,61 +1,39 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: NLTK is a leading platform for building Python programs to work with
-    human language data.
-  license: Not confirmed
-  name: NLTK
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''NLTK/3.8.1-foss-2023b'']'
-  url: https://www.nltk.org/
----
-
-NLTK
-====
+# NLTK
 
 
 NLTK is a leading platform for building Python programs to work with human language data.
 
-https://www.nltk.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.nltk.org/](https://www.nltk.org/)</span>
+
+## Available installations
 
 
-The overview below shows which NLTK installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.8.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`NLTK/3.8.1-foss-2023b`|
 
-To start using NLTK, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load NLTK/3.8.1-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|NLTK/3.8.1-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://www.nltk.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'foss', 'version': '2023b'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'NLTK/3.8.1-foss-2023b', 'module_name': 'NLTK', 'module_version': '3.8.1-foss-2023b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'GCC/13.2.0', 'module_name': 'GCC', 'module_version': '13.2.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-13.2.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-13.2.0'}, {'full_module_name': 'libxml2/2.11.5-GCCcore-13.2.0', 'module_name': 'libxml2', 'module_version': '2.11.5-GCCcore-13.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-13.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-13.2.0'}, {'full_module_name': 'hwloc/2.9.2-GCCcore-13.2.0', 'module_name': 'hwloc', 'module_version': '2.9.2-GCCcore-13.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-13.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-13.2.0'}, {'full_module_name': 'UCX/1.15.0-GCCcore-13.2.0', 'module_name': 'UCX', 'module_version': '1.15.0-GCCcore-13.2.0'}, {'full_module_name': 'libfabric/1.19.0-GCCcore-13.2.0', 'module_name': 'libfabric', 'module_version': '1.19.0-GCCcore-13.2.0'}, {'full_module_name': 'PMIx/4.2.6-GCCcore-13.2.0', 'module_name': 'PMIx', 'module_version': '4.2.6-GCCcore-13.2.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-13.2.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-13.2.0'}, {'full_module_name': 'OpenMPI/4.1.6-GCC-13.2.0', 'module_name': 'OpenMPI', 'module_version': '4.1.6-GCC-13.2.0'}, {'full_module_name': 'OpenBLAS/0.3.24-GCC-13.2.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.24-GCC-13.2.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-13.2.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-13.2.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-13.2.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-13.2.0'}, {'full_module_name': 'gompi/2023b', 'module_name': 'gompi', 'module_version': '2023b'}, {'full_module_name': 'FFTW.MPI/3.3.10-gompi-2023b', 'module_name': 'FFTW.MPI', 'module_version': '3.3.10-gompi-2023b'}, {'full_module_name': 'ScaLAPACK/2.2.0-gompi-2023b-fb', 'module_name': 'ScaLAPACK', 'module_version': '2.2.0-gompi-2023b-fb'}, {'full_module_name': 'foss/2023b', 'module_name': 'foss', 'module_version': '2023b'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-13.2.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'SQLite/3.43.1-GCCcore-13.2.0', 'module_name': 'SQLite', 'module_version': '3.43.1-GCCcore-13.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-13.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-13.2.0'}, {'full_module_name': 'Python/3.11.5-GCCcore-13.2.0', 'module_name': 'Python', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'gfbf/2023b', 'module_name': 'gfbf', 'module_version': '2023b'}, {'full_module_name': 'cffi/1.15.1-GCCcore-13.2.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-13.2.0'}, {'full_module_name': 'cryptography/41.0.5-GCCcore-13.2.0', 'module_name': 'cryptography', 'module_version': '41.0.5-GCCcore-13.2.0'}, {'full_module_name': 'virtualenv/20.24.6-GCCcore-13.2.0', 'module_name': 'virtualenv', 'module_version': '20.24.6-GCCcore-13.2.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.10-GCCcore-13.2.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.10-GCCcore-13.2.0'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-13.2.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-13.2.0'}, {'full_module_name': 'SciPy-bundle/2023.11-gfbf-2023b', 'module_name': 'SciPy-bundle', 'module_version': '2023.11-gfbf-2023b'}, {'full_module_name': 'scikit-learn/1.4.0-gfbf-2023b', 'module_name': 'scikit-learn', 'module_version': '1.4.0-gfbf-2023b'}, {'full_module_name': 'libpng/1.6.40-GCCcore-13.2.0', 'module_name': 'libpng', 'module_version': '1.6.40-GCCcore-13.2.0'}, {'full_module_name': 'Brotli/1.1.0-GCCcore-13.2.0', 'module_name': 'Brotli', 'module_version': '1.1.0-GCCcore-13.2.0'}, {'full_module_name': 'freetype/2.13.2-GCCcore-13.2.0', 'module_name': 'freetype', 'module_version': '2.13.2-GCCcore-13.2.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-13.2.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-13.2.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-13.2.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-13.2.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-13.2.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-13.2.0'}, {'full_module_name': 'X11/20231019-GCCcore-13.2.0', 'module_name': 'X11', 'module_version': '20231019-GCCcore-13.2.0'}, {'full_module_name': 'Tk/8.6.13-GCCcore-13.2.0', 'module_name': 'Tk', 'module_version': '8.6.13-GCCcore-13.2.0'}, {'full_module_name': 'Tkinter/3.11.5-GCCcore-13.2.0', 'module_name': 'Tkinter', 'module_version': '3.11.5-GCCcore-13.2.0'}, {'full_module_name': 'NASM/2.16.01-GCCcore-13.2.0', 'module_name': 'NASM', 'module_version': '2.16.01-GCCcore-13.2.0'}, {'full_module_name': 'libjpeg-turbo/3.0.1-GCCcore-13.2.0', 'module_name': 'libjpeg-turbo', 'module_version': '3.0.1-GCCcore-13.2.0'}, {'full_module_name': 'jbigkit/2.1-GCCcore-13.2.0', 'module_name': 'jbigkit', 'module_version': '2.1-GCCcore-13.2.0'}, {'full_module_name': 'gzip/1.13-GCCcore-13.2.0', 'module_name': 'gzip', 'module_version': '1.13-GCCcore-13.2.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-13.2.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-13.2.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-13.2.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-13.2.0'}, {'full_module_name': 'libdeflate/1.19-GCCcore-13.2.0', 'module_name': 'libdeflate', 'module_version': '1.19-GCCcore-13.2.0'}, {'full_module_name': 'LibTIFF/4.6.0-GCCcore-13.2.0', 'module_name': 'LibTIFF', 'module_version': '4.6.0-GCCcore-13.2.0'}, {'full_module_name': 'giflib/5.2.1-GCCcore-13.2.0', 'module_name': 'giflib', 'module_version': '5.2.1-GCCcore-13.2.0'}, {'full_module_name': 'libwebp/1.3.2-GCCcore-13.2.0', 'module_name': 'libwebp', 'module_version': '1.3.2-GCCcore-13.2.0'}, {'full_module_name': 'OpenJPEG/2.5.0-GCCcore-13.2.0', 'module_name': 'OpenJPEG', 'module_version': '2.5.0-GCCcore-13.2.0'}, {'full_module_name': 'LittleCMS/2.15-GCCcore-13.2.0', 'module_name': 'LittleCMS', 'module_version': '2.15-GCCcore-13.2.0'}, {'full_module_name': 'Pillow/10.2.0-GCCcore-13.2.0', 'module_name': 'Pillow', 'module_version': '10.2.0-GCCcore-13.2.0'}, {'full_module_name': 'Qhull/2020.2-GCCcore-13.2.0', 'module_name': 'Qhull', 'module_version': '2020.2-GCCcore-13.2.0'}, {'full_module_name': 'matplotlib/3.8.2-gfbf-2023b', 'module_name': 'matplotlib', 'module_version': '3.8.2-gfbf-2023b'}, {'full_module_name': 'tqdm/4.66.2-GCCcore-13.2.0', 'module_name': 'tqdm', 'module_version': '4.66.2-GCCcore-13.2.0'}, {'full_module_name': 'NLTK/3.8.1-foss-2023b', 'module_name': 'NLTK', 'module_version': '3.8.1-foss-2023b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'NLTK is a leading platform for building Python programs to work with human language data.', 'version': '3.8.1', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'regex', 'version': '2023.12.25'}, {'type': 'python', 'name': 'python-crfsuite', 'version': '0.9.10'}, {'type': 'python', 'name': 'NLTK', 'version': '3.8.1'}]}], 'homepage': 'https://www.nltk.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'NLTK is a leading platform for building Python programs to work with human language data.'} installations
 
 
-### NLTK/3.8.1-foss-2023b
+### NLTK
 
-This is a list of extensions included in the module:
 
-NLTK-3.8.1, python-crfsuite-0.9.10, regex-2023.12.25
+|`NLTK` version|NLTK modules that include it|
+| --- | --- |
+|3.8.1|`NLTK/3.8.1-foss-2023b`|
+
+### python-crfsuite
+
+
+|`python-crfsuite` version|NLTK modules that include it|
+| --- | --- |
+|0.9.10|`NLTK/3.8.1-foss-2023b`|
+
+### regex
+
+
+|`regex` version|NLTK modules that include it|
+| --- | --- |
+|2023.12.25|`NLTK/3.8.1-foss-2023b`|

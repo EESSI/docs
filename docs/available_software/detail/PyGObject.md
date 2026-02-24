@@ -1,54 +1,19 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: PyGObject is a Python package which provides bindings for GObject basedlibraries
-    such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more.
-  license: Not confirmed
-  name: PyGObject
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''PyGObject/3.46.0-GCCcore-12.3.0'']'
-  url: https://pygobject.readthedocs.io/
----
-
-PyGObject
-=========
+# PyGObject
 
 
-PyGObject is a Python package which provides bindings for GObject basedlibraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more.
+PyGObject is a Python package which provides bindings for GObject based
+libraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more.
 
-https://pygobject.readthedocs.io/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://pygobject.readthedocs.io/](https://pygobject.readthedocs.io/)</span>
+
+## Available installations
 
 
-The overview below shows which PyGObject installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|3.46.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`PyGObject/3.46.0-GCCcore-12.3.0`|
+|3.54.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`PyGObject/3.54.3-GCCcore-14.3.0`|
 
-To start using PyGObject, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load PyGObject/3.46.0-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyGObject/3.46.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://pygobject.readthedocs.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'PyGObject/3.46.0-GCCcore-12.3.0', 'module_name': 'PyGObject', 'module_version': '3.46.0-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'PCRE2/10.42-GCCcore-12.3.0', 'module_name': 'PCRE2', 'module_version': '10.42-GCCcore-12.3.0'}, {'full_module_name': 'GLib/2.77.1-GCCcore-12.3.0', 'module_name': 'GLib', 'module_version': '2.77.1-GCCcore-12.3.0'}, {'full_module_name': 'GObject-Introspection/1.76.1-GCCcore-12.3.0', 'module_name': 'GObject-Introspection', 'module_version': '1.76.1-GCCcore-12.3.0'}, {'full_module_name': 'libpng/1.6.39-GCCcore-12.3.0', 'module_name': 'libpng', 'module_version': '1.6.39-GCCcore-12.3.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.3.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.3.0'}, {'full_module_name': 'freetype/2.13.0-GCCcore-12.3.0', 'module_name': 'freetype', 'module_version': '2.13.0-GCCcore-12.3.0'}, {'full_module_name': 'pixman/0.42.2-GCCcore-12.3.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-12.3.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-12.3.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-12.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'X11/20230603-GCCcore-12.3.0', 'module_name': 'X11', 'module_version': '20230603-GCCcore-12.3.0'}, {'full_module_name': 'cairo/1.17.8-GCCcore-12.3.0', 'module_name': 'cairo', 'module_version': '1.17.8-GCCcore-12.3.0'}, {'full_module_name': 'PyCairo/1.25.0-GCCcore-12.3.0', 'module_name': 'PyCairo', 'module_version': '1.25.0-GCCcore-12.3.0'}, {'full_module_name': 'PyGObject/3.46.0-GCCcore-12.3.0', 'module_name': 'PyGObject', 'module_version': '3.46.0-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'PyGObject is a Python package which provides bindings for GObject based\nlibraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more.', 'version': '3.46.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://pygobject.readthedocs.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'PyGObject/3.54.3-GCCcore-14.3.0', 'module_name': 'PyGObject', 'module_version': '3.54.3-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'libtommath/1.3.0-GCCcore-14.3.0', 'module_name': 'libtommath', 'module_version': '1.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Tcl/9.0.1-GCCcore-14.3.0', 'module_name': 'Tcl', 'module_version': '9.0.1-GCCcore-14.3.0'}, {'full_module_name': 'SQLite/3.50.1-GCCcore-14.3.0', 'module_name': 'SQLite', 'module_version': '3.50.1-GCCcore-14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.5-GCCcore-14.3.0', 'module_name': 'Python', 'module_version': '3.13.5-GCCcore-14.3.0'}, {'full_module_name': 'libxml2/2.14.3-GCCcore-14.3.0', 'module_name': 'libxml2', 'module_version': '2.14.3-GCCcore-14.3.0'}, {'full_module_name': 'PCRE2/10.45-GCCcore-14.3.0', 'module_name': 'PCRE2', 'module_version': '10.45-GCCcore-14.3.0'}, {'full_module_name': 'GLib/2.85.3-GCCcore-14.3.0', 'module_name': 'GLib', 'module_version': '2.85.3-GCCcore-14.3.0'}, {'full_module_name': 'GObject-Introspection/1.84.0-GCCcore-14.3.0', 'module_name': 'GObject-Introspection', 'module_version': '1.84.0-GCCcore-14.3.0'}, {'full_module_name': 'libpng/1.6.50-GCCcore-14.3.0', 'module_name': 'libpng', 'module_version': '1.6.50-GCCcore-14.3.0'}, {'full_module_name': 'Brotli/1.1.0-GCCcore-14.3.0', 'module_name': 'Brotli', 'module_version': '1.1.0-GCCcore-14.3.0'}, {'full_module_name': 'freetype/2.13.3-GCCcore-14.3.0', 'module_name': 'freetype', 'module_version': '2.13.3-GCCcore-14.3.0'}, {'full_module_name': 'pixman/0.46.4-GCCcore-14.3.0', 'module_name': 'pixman', 'module_version': '0.46.4-GCCcore-14.3.0'}, {'full_module_name': 'expat/2.7.1-GCCcore-14.3.0', 'module_name': 'expat', 'module_version': '2.7.1-GCCcore-14.3.0'}, {'full_module_name': 'fontconfig/2.17.0-GCCcore-14.3.0', 'module_name': 'fontconfig', 'module_version': '2.17.0-GCCcore-14.3.0'}, {'full_module_name': 'xorg-macros/1.20.2-GCCcore-14.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.2-GCCcore-14.3.0'}, {'full_module_name': 'libpciaccess/0.18.1-GCCcore-14.3.0', 'module_name': 'libpciaccess', 'module_version': '0.18.1-GCCcore-14.3.0'}, {'full_module_name': 'X11/20250608-GCCcore-14.3.0', 'module_name': 'X11', 'module_version': '20250608-GCCcore-14.3.0'}, {'full_module_name': 'cairo/1.18.4-GCCcore-14.3.0', 'module_name': 'cairo', 'module_version': '1.18.4-GCCcore-14.3.0'}, {'full_module_name': 'PyCairo/1.28.0-GCCcore-14.3.0', 'module_name': 'PyCairo', 'module_version': '1.28.0-GCCcore-14.3.0'}, {'full_module_name': 'PyGObject/3.54.3-GCCcore-14.3.0', 'module_name': 'PyGObject', 'module_version': '3.54.3-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'PyGObject is a Python package which provides bindings for GObject based\nlibraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more.', 'version': '3.54.3', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://pygobject.readthedocs.io/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'PyGObject is a Python package which provides bindings for GObject based\nlibraries such as GTK, GStreamer, WebKitGTK, GLib, GIO and many more.'} installations

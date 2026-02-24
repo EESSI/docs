@@ -1,57 +1,109 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Xvfb is an X server that can run on machines with no display hardware
-    and no physical input devices. It emulates a dumb framebuffer using virtual memory.
-  license: Not confirmed
-  name: Xvfb
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Xvfb/21.1.6-GCCcore-12.2.0'', ''Xvfb/21.1.8-GCCcore-12.3.0'',
-    ''Xvfb/21.1.9-GCCcore-13.2.0'']'
-  url: https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml
----
-
-Xvfb
-====
+# Xvfb
 
 
-Xvfb is an X server that can run on machines with no display hardware and no physical input devices. It emulates a dumb framebuffer using virtual memory.
+Xvfb is an X server that can run on machines with no display hardware and no physical input devices.
+ It emulates a dumb framebuffer using virtual memory.
 
-https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml](https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml)</span>
+
+## Available installations
 
 
-The overview below shows which Xvfb installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|21.1.6|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Xvfb/21.1.6-GCCcore-12.2.0`|
+|21.1.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Xvfb/21.1.8-GCCcore-12.3.0`|
+|21.1.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Xvfb/21.1.9-GCCcore-13.2.0`|
+|21.1.14|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Xvfb/21.1.14-GCCcore-13.3.0`|
+|21.1.18|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`Xvfb/21.1.18-GCCcore-14.3.0`|
 
-To start using Xvfb, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Xvfb/21.1.9-GCCcore-13.2.0
-```
+Overview of extensions included in {'versions': [{'homepage': 'https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'Xvfb/21.1.6-GCCcore-12.2.0', 'module_name': 'Xvfb', 'module_version': '21.1.6-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'expat/2.4.9-GCCcore-12.2.0', 'module_name': 'expat', 'module_version': '2.4.9-GCCcore-12.2.0'}, {'full_module_name': 'libpng/1.6.38-GCCcore-12.2.0', 'module_name': 'libpng', 'module_version': '1.6.38-GCCcore-12.2.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.2.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.2.0'}, {'full_module_name': 'freetype/2.12.1-GCCcore-12.2.0', 'module_name': 'freetype', 'module_version': '2.12.1-GCCcore-12.2.0'}, {'full_module_name': 'fontconfig/2.14.1-GCCcore-12.2.0', 'module_name': 'fontconfig', 'module_version': '2.14.1-GCCcore-12.2.0'}, {'full_module_name': 'xorg-macros/1.19.3-GCCcore-12.2.0', 'module_name': 'xorg-macros', 'module_version': '1.19.3-GCCcore-12.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.2.0'}, {'full_module_name': 'X11/20221110-GCCcore-12.2.0', 'module_name': 'X11', 'module_version': '20221110-GCCcore-12.2.0'}, {'full_module_name': 'pixman/0.42.2-GCCcore-12.2.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-12.2.0'}, {'full_module_name': 'libdrm/2.4.114-GCCcore-12.2.0', 'module_name': 'libdrm', 'module_version': '2.4.114-GCCcore-12.2.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.2.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.2.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.2.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.2.0'}, {'full_module_name': 'zstd/1.5.2-GCCcore-12.2.0', 'module_name': 'zstd', 'module_version': '1.5.2-GCCcore-12.2.0'}, {'full_module_name': 'libglvnd/1.6.0-GCCcore-12.2.0', 'module_name': 'libglvnd', 'module_version': '1.6.0-GCCcore-12.2.0'}, {'full_module_name': 'libunwind/1.6.2-GCCcore-12.2.0', 'module_name': 'libunwind', 'module_version': '1.6.2-GCCcore-12.2.0'}, {'full_module_name': 'LLVM/15.0.5-GCCcore-12.2.0', 'module_name': 'LLVM', 'module_version': '15.0.5-GCCcore-12.2.0'}, {'full_module_name': 'Mesa/22.2.4-GCCcore-12.2.0', 'module_name': 'Mesa', 'module_version': '22.2.4-GCCcore-12.2.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.2.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.2.0'}, {'full_module_name': 'nettle/3.8.1-GCCcore-12.2.0', 'module_name': 'nettle', 'module_version': '3.8.1-GCCcore-12.2.0'}, {'full_module_name': 'Xvfb/21.1.6-GCCcore-12.2.0', 'module_name': 'Xvfb', 'module_version': '21.1.6-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Xvfb is an X server that can run on machines with no display hardware and no physical input devices.\n It emulates a dumb framebuffer using virtual memory.', 'version': '21.1.6', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'mkfontscale', 'version': '1.2.2'}, {'type': 'component', 'name': 'mkfontdir', 'version': '1.0.7'}, {'type': 'component', 'name': 'bdftopcf', 'version': '1.1'}, {'type': 'component', 'name': 'font-util', 'version': '1.3.3'}, {'type': 'component', 'name': 'font-misc-misc', 'version': '1.1.2'}, {'type': 'component', 'name': 'xkbcomp', 'version': '1.4.6'}, {'type': 'component', 'name': 'xkeyboard-config', 'version': '2.37'}, {'type': 'component', 'name': 'xauth', 'version': '1.1.2'}, {'type': 'component', 'name': 'libxcvt', 'version': '0.1.2'}, {'type': 'component', 'name': 'Xvfb', 'version': '21.1.6'}]}, {'homepage': 'https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'Xvfb/21.1.8-GCCcore-12.3.0', 'module_name': 'Xvfb', 'module_version': '21.1.8-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'libpng/1.6.39-GCCcore-12.3.0', 'module_name': 'libpng', 'module_version': '1.6.39-GCCcore-12.3.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.3.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.3.0'}, {'full_module_name': 'freetype/2.13.0-GCCcore-12.3.0', 'module_name': 'freetype', 'module_version': '2.13.0-GCCcore-12.3.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-12.3.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-12.3.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-12.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'X11/20230603-GCCcore-12.3.0', 'module_name': 'X11', 'module_version': '20230603-GCCcore-12.3.0'}, {'full_module_name': 'pixman/0.42.2-GCCcore-12.3.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-12.3.0'}, {'full_module_name': 'libdrm/2.4.115-GCCcore-12.3.0', 'module_name': 'libdrm', 'module_version': '2.4.115-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'libglvnd/1.6.0-GCCcore-12.3.0', 'module_name': 'libglvnd', 'module_version': '1.6.0-GCCcore-12.3.0'}, {'full_module_name': 'libunwind/1.6.2-GCCcore-12.3.0', 'module_name': 'libunwind', 'module_version': '1.6.2-GCCcore-12.3.0'}, {'full_module_name': 'LLVM/16.0.6-GCCcore-12.3.0', 'module_name': 'LLVM', 'module_version': '16.0.6-GCCcore-12.3.0'}, {'full_module_name': 'Mesa/23.1.4-GCCcore-12.3.0', 'module_name': 'Mesa', 'module_version': '23.1.4-GCCcore-12.3.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.3.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.3.0'}, {'full_module_name': 'nettle/3.9.1-GCCcore-12.3.0', 'module_name': 'nettle', 'module_version': '3.9.1-GCCcore-12.3.0'}, {'full_module_name': 'Xvfb/21.1.8-GCCcore-12.3.0', 'module_name': 'Xvfb', 'module_version': '21.1.8-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Xvfb is an X server that can run on machines with no display hardware and no physical input devices.\n It emulates a dumb framebuffer using virtual memory.', 'version': '21.1.8', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'mkfontscale', 'version': '1.2.2'}, {'type': 'component', 'name': 'mkfontdir', 'version': '1.0.7'}, {'type': 'component', 'name': 'bdftopcf', 'version': '1.1'}, {'type': 'component', 'name': 'font-util', 'version': '1.4.0'}, {'type': 'component', 'name': 'font-misc-misc', 'version': '1.1.3'}, {'type': 'component', 'name': 'xkbcomp', 'version': '1.4.6'}, {'type': 'component', 'name': 'xkeyboard-config', 'version': '2.39'}, {'type': 'component', 'name': 'xauth', 'version': '1.1.2'}, {'type': 'component', 'name': 'libxcvt', 'version': '0.1.2'}, {'type': 'component', 'name': 'Xvfb', 'version': '21.1.8'}]}, {'homepage': 'https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'Xvfb/21.1.9-GCCcore-13.2.0', 'module_name': 'Xvfb', 'module_version': '21.1.9-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-13.2.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-13.2.0'}, {'full_module_name': 'libpng/1.6.40-GCCcore-13.2.0', 'module_name': 'libpng', 'module_version': '1.6.40-GCCcore-13.2.0'}, {'full_module_name': 'Brotli/1.1.0-GCCcore-13.2.0', 'module_name': 'Brotli', 'module_version': '1.1.0-GCCcore-13.2.0'}, {'full_module_name': 'freetype/2.13.2-GCCcore-13.2.0', 'module_name': 'freetype', 'module_version': '2.13.2-GCCcore-13.2.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-13.2.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-13.2.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-13.2.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-13.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-13.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-13.2.0'}, {'full_module_name': 'X11/20231019-GCCcore-13.2.0', 'module_name': 'X11', 'module_version': '20231019-GCCcore-13.2.0'}, {'full_module_name': 'pixman/0.42.2-GCCcore-13.2.0', 'module_name': 'pixman', 'module_version': '0.42.2-GCCcore-13.2.0'}, {'full_module_name': 'libdrm/2.4.117-GCCcore-13.2.0', 'module_name': 'libdrm', 'module_version': '2.4.117-GCCcore-13.2.0'}, {'full_module_name': 'gzip/1.13-GCCcore-13.2.0', 'module_name': 'gzip', 'module_version': '1.13-GCCcore-13.2.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-13.2.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-13.2.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-13.2.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-13.2.0'}, {'full_module_name': 'libglvnd/1.7.0-GCCcore-13.2.0', 'module_name': 'libglvnd', 'module_version': '1.7.0-GCCcore-13.2.0'}, {'full_module_name': 'libunwind/1.6.2-GCCcore-13.2.0', 'module_name': 'libunwind', 'module_version': '1.6.2-GCCcore-13.2.0'}, {'full_module_name': 'LLVM/16.0.6-GCCcore-13.2.0', 'module_name': 'LLVM', 'module_version': '16.0.6-GCCcore-13.2.0'}, {'full_module_name': 'Mesa/23.1.9-GCCcore-13.2.0', 'module_name': 'Mesa', 'module_version': '23.1.9-GCCcore-13.2.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-13.2.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-13.2.0'}, {'full_module_name': 'nettle/3.9.1-GCCcore-13.2.0', 'module_name': 'nettle', 'module_version': '3.9.1-GCCcore-13.2.0'}, {'full_module_name': 'Xvfb/21.1.9-GCCcore-13.2.0', 'module_name': 'Xvfb', 'module_version': '21.1.9-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Xvfb is an X server that can run on machines with no display hardware and no physical input devices.\n It emulates a dumb framebuffer using virtual memory.', 'version': '21.1.9', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'mkfontscale', 'version': '1.2.2'}, {'type': 'component', 'name': 'mkfontdir', 'version': '1.0.7'}, {'type': 'component', 'name': 'bdftopcf', 'version': '1.1'}, {'type': 'component', 'name': 'font-util', 'version': '1.4.1'}, {'type': 'component', 'name': 'font-misc-misc', 'version': '1.1.3'}, {'type': 'component', 'name': 'xkbcomp', 'version': '1.4.6'}, {'type': 'component', 'name': 'xkeyboard-config', 'version': '2.40'}, {'type': 'component', 'name': 'xauth', 'version': '1.1.2'}, {'type': 'component', 'name': 'libxcvt', 'version': '0.1.2'}, {'type': 'component', 'name': 'Xvfb', 'version': '21.1.9'}]}, {'homepage': 'https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'Xvfb/21.1.14-GCCcore-13.3.0', 'module_name': 'Xvfb', 'module_version': '21.1.14-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'expat/2.6.2-GCCcore-13.3.0', 'module_name': 'expat', 'module_version': '2.6.2-GCCcore-13.3.0'}, {'full_module_name': 'libpng/1.6.43-GCCcore-13.3.0', 'module_name': 'libpng', 'module_version': '1.6.43-GCCcore-13.3.0'}, {'full_module_name': 'Brotli/1.1.0-GCCcore-13.3.0', 'module_name': 'Brotli', 'module_version': '1.1.0-GCCcore-13.3.0'}, {'full_module_name': 'freetype/2.13.2-GCCcore-13.3.0', 'module_name': 'freetype', 'module_version': '2.13.2-GCCcore-13.3.0'}, {'full_module_name': 'fontconfig/2.15.0-GCCcore-13.3.0', 'module_name': 'fontconfig', 'module_version': '2.15.0-GCCcore-13.3.0'}, {'full_module_name': 'xorg-macros/1.20.1-GCCcore-13.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.1-GCCcore-13.3.0'}, {'full_module_name': 'libpciaccess/0.18.1-GCCcore-13.3.0', 'module_name': 'libpciaccess', 'module_version': '0.18.1-GCCcore-13.3.0'}, {'full_module_name': 'X11/20240607-GCCcore-13.3.0', 'module_name': 'X11', 'module_version': '20240607-GCCcore-13.3.0'}, {'full_module_name': 'pixman/0.43.4-GCCcore-13.3.0', 'module_name': 'pixman', 'module_version': '0.43.4-GCCcore-13.3.0'}, {'full_module_name': 'libdrm/2.4.122-GCCcore-13.3.0', 'module_name': 'libdrm', 'module_version': '2.4.122-GCCcore-13.3.0'}, {'full_module_name': 'gzip/1.13-GCCcore-13.3.0', 'module_name': 'gzip', 'module_version': '1.13-GCCcore-13.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-13.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-13.3.0'}, {'full_module_name': 'zstd/1.5.6-GCCcore-13.3.0', 'module_name': 'zstd', 'module_version': '1.5.6-GCCcore-13.3.0'}, {'full_module_name': 'libglvnd/1.7.0-GCCcore-13.3.0', 'module_name': 'libglvnd', 'module_version': '1.7.0-GCCcore-13.3.0'}, {'full_module_name': 'libunwind/1.8.1-GCCcore-13.3.0', 'module_name': 'libunwind', 'module_version': '1.8.1-GCCcore-13.3.0'}, {'full_module_name': 'libxml2/2.12.7-GCCcore-13.3.0', 'module_name': 'libxml2', 'module_version': '2.12.7-GCCcore-13.3.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-13.3.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-13.3.0'}, {'full_module_name': 'LLVM/18.1.8-GCCcore-13.3.0-minimal', 'module_name': 'LLVM', 'module_version': '18.1.8-GCCcore-13.3.0-minimal'}, {'full_module_name': 'Wayland/1.23.0-GCCcore-13.3.0', 'module_name': 'Wayland', 'module_version': '1.23.0-GCCcore-13.3.0'}, {'full_module_name': 'Mesa/24.1.3-GCCcore-13.3.0', 'module_name': 'Mesa', 'module_version': '24.1.3-GCCcore-13.3.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-13.3.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-13.3.0'}, {'full_module_name': 'nettle/3.10-GCCcore-13.3.0', 'module_name': 'nettle', 'module_version': '3.10-GCCcore-13.3.0'}, {'full_module_name': 'Xvfb/21.1.14-GCCcore-13.3.0', 'module_name': 'Xvfb', 'module_version': '21.1.14-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Xvfb is an X server that can run on machines with no display hardware and no physical input devices.\n It emulates a dumb framebuffer using virtual memory.', 'version': '21.1.14', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'mkfontscale', 'version': '1.2.3'}, {'type': 'component', 'name': 'mkfontdir', 'version': '1.0.7'}, {'type': 'component', 'name': 'bdftopcf', 'version': '1.1'}, {'type': 'component', 'name': 'font-util', 'version': '1.4.1'}, {'type': 'component', 'name': 'font-misc-misc', 'version': '1.1.3'}, {'type': 'component', 'name': 'xkbcomp', 'version': '1.4.7'}, {'type': 'component', 'name': 'xkeyboard-config', 'version': '2.43'}, {'type': 'component', 'name': 'xauth', 'version': '1.1.3'}, {'type': 'component', 'name': 'libxcvt', 'version': '0.1.2'}, {'type': 'component', 'name': 'Xvfb', 'version': '21.1.14'}]}, {'homepage': 'https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.3.0'}, 'toolchain_families_compatibility': ['2025b_foss'], 'module': {'full_module_name': 'Xvfb/21.1.18-GCCcore-14.3.0', 'module_name': 'Xvfb', 'module_version': '21.1.18-GCCcore-14.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.3.0', 'module_name': 'GCCcore', 'module_version': '14.3.0'}, {'full_module_name': 'expat/2.7.1-GCCcore-14.3.0', 'module_name': 'expat', 'module_version': '2.7.1-GCCcore-14.3.0'}, {'full_module_name': 'libpng/1.6.50-GCCcore-14.3.0', 'module_name': 'libpng', 'module_version': '1.6.50-GCCcore-14.3.0'}, {'full_module_name': 'Brotli/1.1.0-GCCcore-14.3.0', 'module_name': 'Brotli', 'module_version': '1.1.0-GCCcore-14.3.0'}, {'full_module_name': 'freetype/2.13.3-GCCcore-14.3.0', 'module_name': 'freetype', 'module_version': '2.13.3-GCCcore-14.3.0'}, {'full_module_name': 'fontconfig/2.17.0-GCCcore-14.3.0', 'module_name': 'fontconfig', 'module_version': '2.17.0-GCCcore-14.3.0'}, {'full_module_name': 'xorg-macros/1.20.2-GCCcore-14.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.2-GCCcore-14.3.0'}, {'full_module_name': 'libpciaccess/0.18.1-GCCcore-14.3.0', 'module_name': 'libpciaccess', 'module_version': '0.18.1-GCCcore-14.3.0'}, {'full_module_name': 'X11/20250608-GCCcore-14.3.0', 'module_name': 'X11', 'module_version': '20250608-GCCcore-14.3.0'}, {'full_module_name': 'pixman/0.46.4-GCCcore-14.3.0', 'module_name': 'pixman', 'module_version': '0.46.4-GCCcore-14.3.0'}, {'full_module_name': 'libdrm/2.4.125-GCCcore-14.3.0', 'module_name': 'libdrm', 'module_version': '2.4.125-GCCcore-14.3.0'}, {'full_module_name': 'libffi/3.5.1-GCCcore-14.3.0', 'module_name': 'libffi', 'module_version': '3.5.1-GCCcore-14.3.0'}, {'full_module_name': 'libxml2/2.14.3-GCCcore-14.3.0', 'module_name': 'libxml2', 'module_version': '2.14.3-GCCcore-14.3.0'}, {'full_module_name': 'libtommath/1.3.0-GCCcore-14.3.0', 'module_name': 'libtommath', 'module_version': '1.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Tcl/9.0.1-GCCcore-14.3.0', 'module_name': 'Tcl', 'module_version': '9.0.1-GCCcore-14.3.0'}, {'full_module_name': 'SQLite/3.50.1-GCCcore-14.3.0', 'module_name': 'SQLite', 'module_version': '3.50.1-GCCcore-14.3.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.5-GCCcore-14.3.0', 'module_name': 'Python', 'module_version': '3.13.5-GCCcore-14.3.0'}, {'full_module_name': 'GMP/6.3.0-GCCcore-14.3.0', 'module_name': 'GMP', 'module_version': '6.3.0-GCCcore-14.3.0'}, {'full_module_name': 'Z3/4.15.1-GCCcore-14.3.0', 'module_name': 'Z3', 'module_version': '4.15.1-GCCcore-14.3.0'}, {'full_module_name': 'gzip/1.14-GCCcore-14.3.0', 'module_name': 'gzip', 'module_version': '1.14-GCCcore-14.3.0'}, {'full_module_name': 'lz4/1.10.0-GCCcore-14.3.0', 'module_name': 'lz4', 'module_version': '1.10.0-GCCcore-14.3.0'}, {'full_module_name': 'zstd/1.5.7-GCCcore-14.3.0', 'module_name': 'zstd', 'module_version': '1.5.7-GCCcore-14.3.0'}, {'full_module_name': 'LLVM/20.1.8-GCCcore-14.3.0', 'module_name': 'LLVM', 'module_version': '20.1.8-GCCcore-14.3.0'}, {'full_module_name': 'Wayland/1.24.0-GCCcore-14.3.0', 'module_name': 'Wayland', 'module_version': '1.24.0-GCCcore-14.3.0'}, {'full_module_name': 'libiconv/1.18-GCCcore-14.3.0', 'module_name': 'libiconv', 'module_version': '1.18-GCCcore-14.3.0'}, {'full_module_name': 'libarchive/3.8.1-GCCcore-14.3.0', 'module_name': 'libarchive', 'module_version': '3.8.1-GCCcore-14.3.0'}, {'full_module_name': 'elfutils/0.193-GCCcore-14.3.0', 'module_name': 'elfutils', 'module_version': '0.193-GCCcore-14.3.0'}, {'full_module_name': 'libunwind/1.8.2-GCCcore-14.3.0', 'module_name': 'libunwind', 'module_version': '1.8.2-GCCcore-14.3.0'}, {'full_module_name': 'nettle/3.10.2-GCCcore-14.3.0', 'module_name': 'nettle', 'module_version': '3.10.2-GCCcore-14.3.0'}, {'full_module_name': 'OpenGL/2025.09-GCCcore-14.3.0', 'module_name': 'OpenGL', 'module_version': '2025.09-GCCcore-14.3.0'}, {'full_module_name': 'Xvfb/21.1.18-GCCcore-14.3.0', 'module_name': 'Xvfb', 'module_version': '21.1.18-GCCcore-14.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Xvfb is an X server that can run on machines with no display hardware and no physical input devices.\n It emulates a dumb framebuffer using virtual memory.', 'version': '21.1.18', 'versionsuffix': '', 'extensions': [{'type': 'component', 'name': 'mkfontscale', 'version': '1.2.3'}, {'type': 'component', 'name': 'mkfontdir', 'version': '1.0.7'}, {'type': 'component', 'name': 'bdftopcf', 'version': '1.1'}, {'type': 'component', 'name': 'font-util', 'version': '1.4.1'}, {'type': 'component', 'name': 'font-misc-misc', 'version': '1.1.3'}, {'type': 'component', 'name': 'xkbcomp', 'version': '1.4.7'}, {'type': 'component', 'name': 'xkeyboard-config', 'version': '2.46'}, {'type': 'component', 'name': 'xauth', 'version': '1.1.4'}, {'type': 'component', 'name': 'libxcvt', 'version': '0.1.3'}, {'type': 'component', 'name': 'Xvfb', 'version': '21.1.18'}]}], 'homepage': 'https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Xvfb is an X server that can run on machines with no display hardware and no physical input devices.\n It emulates a dumb framebuffer using virtual memory.'} installations
 
-*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Xvfb/21.1.9-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Xvfb/21.1.8-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Xvfb/21.1.6-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+### bdftopcf
+
+
+|`bdftopcf` version|Xvfb modules that include it|
+| --- | --- |
+|1.1|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
+
+### font-misc-misc
+
+
+|`font-misc-misc` version|Xvfb modules that include it|
+| --- | --- |
+|1.1.2|`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.1.3|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
+
+### font-util
+
+
+|`font-util` version|Xvfb modules that include it|
+| --- | --- |
+|1.3.3|`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.4.0|`Xvfb/21.1.8-GCCcore-12.3.0`|
+|1.4.1|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
+
+### libxcvt
+
+
+|`libxcvt` version|Xvfb modules that include it|
+| --- | --- |
+|0.1.2|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
+|0.1.3|`Xvfb/21.1.18-GCCcore-14.3.0`|
+
+### mkfontdir
+
+
+|`mkfontdir` version|Xvfb modules that include it|
+| --- | --- |
+|1.0.7|`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
+
+### mkfontscale
+
+
+|`mkfontscale` version|Xvfb modules that include it|
+| --- | --- |
+|1.2.2|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
+|1.2.3|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
+
+### xauth
+
+
+|`xauth` version|Xvfb modules that include it|
+| --- | --- |
+|1.1.2|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
+|1.1.3|`Xvfb/21.1.14-GCCcore-13.3.0`|
+|1.1.4|`Xvfb/21.1.18-GCCcore-14.3.0`|
+
+### xkbcomp
+
+
+|`xkbcomp` version|Xvfb modules that include it|
+| --- | --- |
+|1.4.6|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
+|1.4.7|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
+
+### xkeyboard-config
+
+
+|`xkeyboard-config` version|Xvfb modules that include it|
+| --- | --- |
+|2.37|`Xvfb/21.1.6-GCCcore-12.2.0`|
+|2.39|`Xvfb/21.1.8-GCCcore-12.3.0`|
+|2.40|`Xvfb/21.1.9-GCCcore-13.2.0`|
+|2.43|`Xvfb/21.1.14-GCCcore-13.3.0`|
+|2.46|`Xvfb/21.1.18-GCCcore-14.3.0`|
+
+### Xvfb
+
+
+|`Xvfb` version|Xvfb modules that include it|
+| --- | --- |
+|21.1.14|`Xvfb/21.1.14-GCCcore-13.3.0`|
+|21.1.18|`Xvfb/21.1.18-GCCcore-14.3.0`|
+|21.1.6|`Xvfb/21.1.6-GCCcore-12.2.0`|
+|21.1.8|`Xvfb/21.1.8-GCCcore-12.3.0`|
+|21.1.9|`Xvfb/21.1.9-GCCcore-13.2.0`|

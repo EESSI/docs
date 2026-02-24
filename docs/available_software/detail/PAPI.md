@@ -1,58 +1,26 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: PAPI provides the tool designer and application engineer with a consistent
-    interface and methodology for use of the performance counter hardware found in
-    most major microprocessors. PAPI enables software engineers to see, in near real
-    time, the relation between software performance and processor events. In addition
-    Component PAPI provides access to a collection of components that expose performance
-    measurement opportunites across the hardware and software stack.
-  license: Not confirmed
-  name: PAPI
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''PAPI/7.1.0-GCCcore-13.2.0'']'
-  url: https://icl.cs.utk.edu/projects/papi/
----
-
-PAPI
-====
+# PAPI
 
 
-PAPI provides the tool designer and application engineer with a consistent interface and methodology for use of the performance counter hardware found in most major microprocessors. PAPI enables software engineers to see, in near real time, the relation between software performance and processor events. In addition Component PAPI provides access to a collection of components that expose performance measurement opportunites across the hardware and software stack.
 
-https://icl.cs.utk.edu/projects/papi/
-# Available modules
+ PAPI provides the tool designer and application engineer with a consistent
+ interface and methodology for use of the performance counter hardware found
+ in most major microprocessors. PAPI enables software engineers to see, in near
+ real time, the relation between software performance and processor events.
+ In addition Component PAPI provides access to a collection of components
+ that expose performance measurement opportunites across the hardware and
+ software stack.
 
 
-The overview below shows which PAPI installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://icl.cs.utk.edu/projects/papi/](https://icl.cs.utk.edu/projects/papi/)</span>
 
-To start using PAPI, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load PAPI/7.1.0-GCCcore-13.2.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|7.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`PAPI/7.1.0-GCCcore-13.2.0`|
+|7.2.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`PAPI/7.2.0-GCCcore-14.2.0`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PAPI/7.1.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://icl.cs.utk.edu/projects/papi/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.2.0'}, 'toolchain_families_compatibility': ['2023b_foss'], 'module': {'full_module_name': 'PAPI/7.1.0-GCCcore-13.2.0', 'module_name': 'PAPI', 'module_version': '7.1.0-GCCcore-13.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/13.2.0', 'module_name': 'GCCcore', 'module_version': '13.2.0'}, {'full_module_name': 'PAPI/7.1.0-GCCcore-13.2.0', 'module_name': 'PAPI', 'module_version': '7.1.0-GCCcore-13.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n PAPI provides the tool designer and application engineer with a consistent\n interface and methodology for use of the performance counter hardware found\n in most major microprocessors. PAPI enables software engineers to see, in near\n real time, the relation between software performance and processor events.\n In addition Component PAPI provides access to a collection of components\n that expose performance measurement opportunites across the hardware and\n software stack.\n', 'version': '7.1.0', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://icl.cs.utk.edu/projects/papi/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'PAPI/7.2.0-GCCcore-14.2.0', 'module_name': 'PAPI', 'module_version': '7.2.0-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'PAPI/7.2.0-GCCcore-14.2.0', 'module_name': 'PAPI', 'module_version': '7.2.0-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n PAPI provides the tool designer and application engineer with a consistent\n interface and methodology for use of the performance counter hardware found\n in most major microprocessors. PAPI enables software engineers to see, in near\n real time, the relation between software performance and processor events.\n In addition Component PAPI provides access to a collection of components\n that expose performance measurement opportunites across the hardware and\n software stack.\n', 'version': '7.2.0', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://icl.cs.utk.edu/projects/papi/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\n PAPI provides the tool designer and application engineer with a consistent\n interface and methodology for use of the performance counter hardware found\n in most major microprocessors. PAPI enables software engineers to see, in near\n real time, the relation between software performance and processor events.\n In addition Component PAPI provides access to a collection of components\n that expose performance measurement opportunites across the hardware and\n software stack.\n'} installations

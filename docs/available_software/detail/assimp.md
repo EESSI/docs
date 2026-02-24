@@ -1,0 +1,21 @@
+# assimp
+
+
+
+ Open Asset Import Library (assimp) is a library to import and export various
+ 3d-model-formats including scene-post-processing to generate missing render data.
+
+
+<small>homepage: </small><span class="software-link">[https://github.com/assimp/assimp](https://github.com/assimp/assimp)</span>
+
+## Available installations
+
+
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|5.4.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`assimp/5.4.3-GCCcore-13.3.0`|
+|6.0.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`assimp/6.0.2-GCCcore-14.2.0`|
+
+## Extensions
+
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/assimp/assimp', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'assimp/5.4.3-GCCcore-13.3.0', 'module_name': 'assimp', 'module_version': '5.4.3-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'assimp/5.4.3-GCCcore-13.3.0', 'module_name': 'assimp', 'module_version': '5.4.3-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Open Asset Import Library (assimp) is a library to import and export various\n 3d-model-formats including scene-post-processing to generate missing render data.\n', 'version': '5.4.3', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/assimp/assimp', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '14.2.0'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'assimp/6.0.2-GCCcore-14.2.0', 'module_name': 'assimp', 'module_version': '6.0.2-GCCcore-14.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'assimp/6.0.2-GCCcore-14.2.0', 'module_name': 'assimp', 'module_version': '6.0.2-GCCcore-14.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': '\n Open Asset Import Library (assimp) is a library to import and export various\n 3d-model-formats including scene-post-processing to generate missing render data.\n', 'version': '6.0.2', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://github.com/assimp/assimp', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': '\n Open Asset Import Library (assimp) is a library to import and export various\n 3d-model-formats including scene-post-processing to generate missing render data.\n'} installations

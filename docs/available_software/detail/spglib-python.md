@@ -1,62 +1,42 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Spglib for Python. Spglib is a library for finding and handling crystal
-    symmetries written in C.
-  license: Not confirmed
-  name: spglib-python
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''spglib-python/2.0.2-gfbf-2022b'', ''spglib-python/2.1.0-gfbf-2023a'']'
-  url: https://pypi.python.org/pypi/spglib
----
-
-spglib-python
-=============
+# spglib-python
 
 
 Spglib for Python. Spglib is a library for finding and handling crystal symmetries written in C.
 
-https://pypi.python.org/pypi/spglib
-# Available modules
+<small>homepage: </small><span class="software-link">[https://pypi.python.org/pypi/spglib](https://pypi.python.org/pypi/spglib)</span>
+
+## Available installations
 
 
-The overview below shows which spglib-python installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|2.0.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`spglib-python/2.0.2-gfbf-2022b`|
+|2.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`spglib-python/2.1.0-gfbf-2023a`|
+|2.6.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`spglib-python/2.6.0-gfbf-2025a`|
 
-To start using spglib-python, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load spglib-python/2.1.0-gfbf-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spglib-python/2.1.0-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|spglib-python/2.0.2-gfbf-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://pypi.python.org/pypi/spglib', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gfbf', 'version': '2022b'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'spglib-python/2.0.2-gfbf-2022b', 'module_name': 'spglib-python', 'module_version': '2.0.2-gfbf-2022b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GCC/12.2.0', 'module_name': 'GCC', 'module_version': '12.2.0'}, {'full_module_name': 'OpenBLAS/0.3.21-GCC-12.2.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.21-GCC-12.2.0'}, {'full_module_name': 'FlexiBLAS/3.2.1-GCC-12.2.0', 'module_name': 'FlexiBLAS', 'module_version': '3.2.1-GCC-12.2.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-12.2.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-12.2.0'}, {'full_module_name': 'gfbf/2022b', 'module_name': 'gfbf', 'module_version': '2022b'}, {'full_module_name': 'Tcl/8.6.12-GCCcore-12.2.0', 'module_name': 'Tcl', 'module_version': '8.6.12-GCCcore-12.2.0'}, {'full_module_name': 'SQLite/3.39.4-GCCcore-12.2.0', 'module_name': 'SQLite', 'module_version': '3.39.4-GCCcore-12.2.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.2.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.10.8-GCCcore-12.2.0', 'module_name': 'Python', 'module_version': '3.10.8-GCCcore-12.2.0'}, {'full_module_name': 'pybind11/2.10.3-GCCcore-12.2.0', 'module_name': 'pybind11', 'module_version': '2.10.3-GCCcore-12.2.0'}, {'full_module_name': 'SciPy-bundle/2023.02-gfbf-2022b', 'module_name': 'SciPy-bundle', 'module_version': '2023.02-gfbf-2022b'}, {'full_module_name': 'spglib-python/2.0.2-gfbf-2022b', 'module_name': 'spglib-python', 'module_version': '2.0.2-gfbf-2022b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Spglib for Python. Spglib is a library for finding and handling crystal symmetries written in C.', 'version': '2.0.2', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://pypi.python.org/pypi/spglib', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gfbf', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'spglib-python/2.1.0-gfbf-2023a', 'module_name': 'spglib-python', 'module_version': '2.1.0-gfbf-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'OpenBLAS/0.3.23-GCC-12.3.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.23-GCC-12.3.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-12.3.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-12.3.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-12.3.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-12.3.0'}, {'full_module_name': 'gfbf/2023a', 'module_name': 'gfbf', 'module_version': '2023a'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'cffi/1.15.1-GCCcore-12.3.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-12.3.0'}, {'full_module_name': 'cryptography/41.0.1-GCCcore-12.3.0', 'module_name': 'cryptography', 'module_version': '41.0.1-GCCcore-12.3.0'}, {'full_module_name': 'virtualenv/20.23.1-GCCcore-12.3.0', 'module_name': 'virtualenv', 'module_version': '20.23.1-GCCcore-12.3.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.06-GCCcore-12.3.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.06-GCCcore-12.3.0'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-12.3.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-12.3.0'}, {'full_module_name': 'SciPy-bundle/2023.07-gfbf-2023a', 'module_name': 'SciPy-bundle', 'module_version': '2023.07-gfbf-2023a'}, {'full_module_name': 'spglib-python/2.1.0-gfbf-2023a', 'module_name': 'spglib-python', 'module_version': '2.1.0-gfbf-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Spglib for Python. Spglib is a library for finding and handling crystal symmetries written in C.', 'version': '2.1.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'pyproject-metadata', 'version': '0.7.1'}, {'type': 'python', 'name': 'spglib', 'version': '2.1.0'}]}, {'homepage': 'https://pypi.python.org/pypi/spglib', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'gfbf', 'version': '2025a'}, 'toolchain_families_compatibility': ['2025a_foss'], 'module': {'full_module_name': 'spglib-python/2.6.0-gfbf-2025a', 'module_name': 'spglib-python', 'module_version': '2.6.0-gfbf-2025a'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/14.2.0', 'module_name': 'GCCcore', 'module_version': '14.2.0'}, {'full_module_name': 'GCC/14.2.0', 'module_name': 'GCC', 'module_version': '14.2.0'}, {'full_module_name': 'OpenBLAS/0.3.29-GCC-14.2.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.29-GCC-14.2.0'}, {'full_module_name': 'FlexiBLAS/3.4.5-GCC-14.2.0', 'module_name': 'FlexiBLAS', 'module_version': '3.4.5-GCC-14.2.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-14.2.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-14.2.0'}, {'full_module_name': 'gfbf/2025a', 'module_name': 'gfbf', 'module_version': '2025a'}, {'full_module_name': 'Tcl/8.6.16-GCCcore-14.2.0', 'module_name': 'Tcl', 'module_version': '8.6.16-GCCcore-14.2.0'}, {'full_module_name': 'SQLite/3.47.2-GCCcore-14.2.0', 'module_name': 'SQLite', 'module_version': '3.47.2-GCCcore-14.2.0'}, {'full_module_name': 'libffi/3.4.5-GCCcore-14.2.0', 'module_name': 'libffi', 'module_version': '3.4.5-GCCcore-14.2.0'}, {'full_module_name': 'OpenSSL/3', 'module_name': 'OpenSSL', 'module_version': '3'}, {'full_module_name': 'Python/3.13.1-GCCcore-14.2.0', 'module_name': 'Python', 'module_version': '3.13.1-GCCcore-14.2.0'}, {'full_module_name': 'cffi/1.17.1-GCCcore-14.2.0', 'module_name': 'cffi', 'module_version': '1.17.1-GCCcore-14.2.0'}, {'full_module_name': 'cryptography/44.0.2-GCCcore-14.2.0', 'module_name': 'cryptography', 'module_version': '44.0.2-GCCcore-14.2.0'}, {'full_module_name': 'virtualenv/20.29.2-GCCcore-14.2.0', 'module_name': 'virtualenv', 'module_version': '20.29.2-GCCcore-14.2.0'}, {'full_module_name': 'Python-bundle-PyPI/2025.04-GCCcore-14.2.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2025.04-GCCcore-14.2.0'}, {'full_module_name': 'SciPy-bundle/2025.06-gfbf-2025a', 'module_name': 'SciPy-bundle', 'module_version': '2025.06-gfbf-2025a'}, {'full_module_name': 'spglib-python/2.6.0-gfbf-2025a', 'module_name': 'spglib-python', 'module_version': '2.6.0-gfbf-2025a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Spglib for Python.\n\nSpglib is a library for finding and handling crystal symmetries written in C.\n', 'version': '2.6.0', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'pyproject_metadata', 'version': '0.9.1'}, {'type': 'python', 'name': 'spglib', 'version': '2.6.0'}]}], 'homepage': 'https://pypi.python.org/pypi/spglib', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Spglib for Python. Spglib is a library for finding and handling crystal symmetries written in C.'} installations
 
 
-### spglib-python/2.1.0-gfbf-2023a
+### pyproject-metadata
 
-This is a list of extensions included in the module:
 
-pyproject-metadata-0.7.1, spglib-2.1.0
+|`pyproject-metadata` version|spglib-python modules that include it|
+| --- | --- |
+|0.7.1|`spglib-python/2.1.0-gfbf-2023a`|
+
+### pyproject_metadata
+
+
+|`pyproject_metadata` version|spglib-python modules that include it|
+| --- | --- |
+|0.9.1|`spglib-python/2.6.0-gfbf-2025a`|
+
+### spglib
+
+
+|`spglib` version|spglib-python modules that include it|
+| --- | --- |
+|2.1.0|`spglib-python/2.1.0-gfbf-2023a`|
+|2.6.0|`spglib-python/2.6.0-gfbf-2025a`|

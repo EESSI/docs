@@ -1,68 +1,106 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Dask natively scales Python. Dask provides advanced parallelism for
-    analytics, enabling performance at scale for the tools you love.
-  license: Not confirmed
-  name: dask
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''dask/2023.7.1-foss-2022b'', ''dask/2023.9.2-foss-2023a'']'
-  url: https://dask.org/
----
-
-dask
-====
+# dask
 
 
-Dask natively scales Python. Dask provides advanced parallelism for analytics, enabling performance at scale for the tools you love.
+Dask natively scales Python. Dask provides advanced parallelism for analytics, enabling performance
+ at scale for the tools you love.
 
-https://dask.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://dask.org/](https://dask.org/)</span>
 
-
-The overview below shows which dask installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using dask, load one of these modules using a `module load` command like:
-
-```shell
-module load dask/2023.9.2-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|dask/2023.9.2-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|dask/2023.7.1-foss-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### dask/2023.9.2-foss-2023a
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|2023.7.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`dask/2023.7.1-foss-2022b`|
+|2023.9.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`dask/2023.9.2-foss-2023a`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-dask-2023.9.2, dask-jobqueue-0.8.2, dask-mpi-2022.4.0, distributed-2023.9.2, docrep-0.3.2, HeapDict-1.0.1, locket-1.0.0, partd-1.4.0, tblib-2.0.0, toolz-0.12.0, zict-3.0.0
+Overview of extensions included in {'versions': [{'homepage': 'https://dask.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'foss', 'version': '2022b'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'dask/2023.7.1-foss-2022b', 'module_name': 'dask', 'module_version': '2023.7.1-foss-2022b'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'GCC/12.2.0', 'module_name': 'GCC', 'module_version': '12.2.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.2.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.2.0'}, {'full_module_name': 'libxml2/2.10.3-GCCcore-12.2.0', 'module_name': 'libxml2', 'module_version': '2.10.3-GCCcore-12.2.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.2.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.2.0'}, {'full_module_name': 'hwloc/2.8.0-GCCcore-12.2.0', 'module_name': 'hwloc', 'module_version': '2.8.0-GCCcore-12.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.2.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.2.0'}, {'full_module_name': 'UCX/1.13.1-GCCcore-12.2.0', 'module_name': 'UCX', 'module_version': '1.13.1-GCCcore-12.2.0'}, {'full_module_name': 'libfabric/1.16.1-GCCcore-12.2.0', 'module_name': 'libfabric', 'module_version': '1.16.1-GCCcore-12.2.0'}, {'full_module_name': 'PMIx/4.2.2-GCCcore-12.2.0', 'module_name': 'PMIx', 'module_version': '4.2.2-GCCcore-12.2.0'}, {'full_module_name': 'UCC/1.1.0-GCCcore-12.2.0', 'module_name': 'UCC', 'module_version': '1.1.0-GCCcore-12.2.0'}, {'full_module_name': 'OpenMPI/4.1.4-GCC-12.2.0', 'module_name': 'OpenMPI', 'module_version': '4.1.4-GCC-12.2.0'}, {'full_module_name': 'OpenBLAS/0.3.21-GCC-12.2.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.21-GCC-12.2.0'}, {'full_module_name': 'FlexiBLAS/3.2.1-GCC-12.2.0', 'module_name': 'FlexiBLAS', 'module_version': '3.2.1-GCC-12.2.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-12.2.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-12.2.0'}, {'full_module_name': 'gompi/2022b', 'module_name': 'gompi', 'module_version': '2022b'}, {'full_module_name': 'FFTW.MPI/3.3.10-gompi-2022b', 'module_name': 'FFTW.MPI', 'module_version': '3.3.10-gompi-2022b'}, {'full_module_name': 'ScaLAPACK/2.2.0-gompi-2022b-fb', 'module_name': 'ScaLAPACK', 'module_version': '2.2.0-gompi-2022b-fb'}, {'full_module_name': 'foss/2022b', 'module_name': 'foss', 'module_version': '2022b'}, {'full_module_name': 'Tcl/8.6.12-GCCcore-12.2.0', 'module_name': 'Tcl', 'module_version': '8.6.12-GCCcore-12.2.0'}, {'full_module_name': 'SQLite/3.39.4-GCCcore-12.2.0', 'module_name': 'SQLite', 'module_version': '3.39.4-GCCcore-12.2.0'}, {'full_module_name': 'GMP/6.2.1-GCCcore-12.2.0', 'module_name': 'GMP', 'module_version': '6.2.1-GCCcore-12.2.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.2.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.2.0'}, {'full_module_name': 'Python/3.10.8-GCCcore-12.2.0', 'module_name': 'Python', 'module_version': '3.10.8-GCCcore-12.2.0'}, {'full_module_name': 'libyaml/0.2.5-GCCcore-12.2.0', 'module_name': 'libyaml', 'module_version': '0.2.5-GCCcore-12.2.0'}, {'full_module_name': 'PyYAML/6.0-GCCcore-12.2.0', 'module_name': 'PyYAML', 'module_version': '6.0-GCCcore-12.2.0'}, {'full_module_name': 'gfbf/2022b', 'module_name': 'gfbf', 'module_version': '2022b'}, {'full_module_name': 'pybind11/2.10.3-GCCcore-12.2.0', 'module_name': 'pybind11', 'module_version': '2.10.3-GCCcore-12.2.0'}, {'full_module_name': 'SciPy-bundle/2023.02-gfbf-2022b', 'module_name': 'SciPy-bundle', 'module_version': '2023.02-gfbf-2022b'}, {'full_module_name': 'libpng/1.6.38-GCCcore-12.2.0', 'module_name': 'libpng', 'module_version': '1.6.38-GCCcore-12.2.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.2.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.2.0'}, {'full_module_name': 'freetype/2.12.1-GCCcore-12.2.0', 'module_name': 'freetype', 'module_version': '2.12.1-GCCcore-12.2.0'}, {'full_module_name': 'expat/2.4.9-GCCcore-12.2.0', 'module_name': 'expat', 'module_version': '2.4.9-GCCcore-12.2.0'}, {'full_module_name': 'fontconfig/2.14.1-GCCcore-12.2.0', 'module_name': 'fontconfig', 'module_version': '2.14.1-GCCcore-12.2.0'}, {'full_module_name': 'xorg-macros/1.19.3-GCCcore-12.2.0', 'module_name': 'xorg-macros', 'module_version': '1.19.3-GCCcore-12.2.0'}, {'full_module_name': 'X11/20221110-GCCcore-12.2.0', 'module_name': 'X11', 'module_version': '20221110-GCCcore-12.2.0'}, {'full_module_name': 'Tk/8.6.12-GCCcore-12.2.0', 'module_name': 'Tk', 'module_version': '8.6.12-GCCcore-12.2.0'}, {'full_module_name': 'Tkinter/3.10.8-GCCcore-12.2.0', 'module_name': 'Tkinter', 'module_version': '3.10.8-GCCcore-12.2.0'}, {'full_module_name': 'NASM/2.15.05-GCCcore-12.2.0', 'module_name': 'NASM', 'module_version': '2.15.05-GCCcore-12.2.0'}, {'full_module_name': 'libjpeg-turbo/2.1.4-GCCcore-12.2.0', 'module_name': 'libjpeg-turbo', 'module_version': '2.1.4-GCCcore-12.2.0'}, {'full_module_name': 'jbigkit/2.1-GCCcore-12.2.0', 'module_name': 'jbigkit', 'module_version': '2.1-GCCcore-12.2.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.2.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.2.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.2.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.2.0'}, {'full_module_name': 'zstd/1.5.2-GCCcore-12.2.0', 'module_name': 'zstd', 'module_version': '1.5.2-GCCcore-12.2.0'}, {'full_module_name': 'libdeflate/1.15-GCCcore-12.2.0', 'module_name': 'libdeflate', 'module_version': '1.15-GCCcore-12.2.0'}, {'full_module_name': 'LibTIFF/4.4.0-GCCcore-12.2.0', 'module_name': 'LibTIFF', 'module_version': '4.4.0-GCCcore-12.2.0'}, {'full_module_name': 'Pillow/9.4.0-GCCcore-12.2.0', 'module_name': 'Pillow', 'module_version': '9.4.0-GCCcore-12.2.0'}, {'full_module_name': 'Qhull/2020.2-GCCcore-12.2.0', 'module_name': 'Qhull', 'module_version': '2020.2-GCCcore-12.2.0'}, {'full_module_name': 'matplotlib/3.7.0-gfbf-2022b', 'module_name': 'matplotlib', 'module_version': '3.7.0-gfbf-2022b'}, {'full_module_name': 'bokeh/3.2.1-foss-2022b', 'module_name': 'bokeh', 'module_version': '3.2.1-foss-2022b'}, {'full_module_name': 'dask/2023.7.1-foss-2022b', 'module_name': 'dask', 'module_version': '2023.7.1-foss-2022b'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Dask natively scales Python. Dask provides advanced parallelism for analytics, enabling performance\n at scale for the tools you love.', 'version': '2023.7.1', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'toolz', 'version': '0.12.0'}, {'type': 'python', 'name': 'locket', 'version': '1.0.0'}, {'type': 'python', 'name': 'partd', 'version': '1.4.0'}, {'type': 'python', 'name': 'HeapDict', 'version': '1.0.1'}, {'type': 'python', 'name': 'zict', 'version': '3.0.0'}, {'type': 'python', 'name': 'tblib', 'version': '2.0.0'}, {'type': 'python', 'name': 'versioneer', 'version': '0.29'}, {'type': 'python', 'name': 'dask', 'version': '2023.7.1'}, {'type': 'python', 'name': 'distributed', 'version': '2023.7.1'}, {'type': 'python', 'name': 'dask-mpi', 'version': '2022.4.0'}, {'type': 'python', 'name': 'docrep', 'version': '0.3.2'}, {'type': 'python', 'name': 'dask-jobqueue', 'version': '0.8.2'}]}, {'homepage': 'https://dask.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'foss', 'version': '2023a'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'dask/2023.9.2-foss-2023a', 'module_name': 'dask', 'module_version': '2023.9.2-foss-2023a'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'numactl/2.0.16-GCCcore-12.3.0', 'module_name': 'numactl', 'module_version': '2.0.16-GCCcore-12.3.0'}, {'full_module_name': 'libxml2/2.11.4-GCCcore-12.3.0', 'module_name': 'libxml2', 'module_version': '2.11.4-GCCcore-12.3.0'}, {'full_module_name': 'libpciaccess/0.17-GCCcore-12.3.0', 'module_name': 'libpciaccess', 'module_version': '0.17-GCCcore-12.3.0'}, {'full_module_name': 'hwloc/2.9.1-GCCcore-12.3.0', 'module_name': 'hwloc', 'module_version': '2.9.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'libevent/2.1.12-GCCcore-12.3.0', 'module_name': 'libevent', 'module_version': '2.1.12-GCCcore-12.3.0'}, {'full_module_name': 'UCX/1.14.1-GCCcore-12.3.0', 'module_name': 'UCX', 'module_version': '1.14.1-GCCcore-12.3.0'}, {'full_module_name': 'libfabric/1.18.0-GCCcore-12.3.0', 'module_name': 'libfabric', 'module_version': '1.18.0-GCCcore-12.3.0'}, {'full_module_name': 'PMIx/4.2.4-GCCcore-12.3.0', 'module_name': 'PMIx', 'module_version': '4.2.4-GCCcore-12.3.0'}, {'full_module_name': 'UCC/1.2.0-GCCcore-12.3.0', 'module_name': 'UCC', 'module_version': '1.2.0-GCCcore-12.3.0'}, {'full_module_name': 'OpenMPI/4.1.5-GCC-12.3.0', 'module_name': 'OpenMPI', 'module_version': '4.1.5-GCC-12.3.0'}, {'full_module_name': 'OpenBLAS/0.3.23-GCC-12.3.0', 'module_name': 'OpenBLAS', 'module_version': '0.3.23-GCC-12.3.0'}, {'full_module_name': 'FlexiBLAS/3.3.1-GCC-12.3.0', 'module_name': 'FlexiBLAS', 'module_version': '3.3.1-GCC-12.3.0'}, {'full_module_name': 'FFTW/3.3.10-GCC-12.3.0', 'module_name': 'FFTW', 'module_version': '3.3.10-GCC-12.3.0'}, {'full_module_name': 'gompi/2023a', 'module_name': 'gompi', 'module_version': '2023a'}, {'full_module_name': 'FFTW.MPI/3.3.10-gompi-2023a', 'module_name': 'FFTW.MPI', 'module_version': '3.3.10-gompi-2023a'}, {'full_module_name': 'ScaLAPACK/2.2.0-gompi-2023a-fb', 'module_name': 'ScaLAPACK', 'module_version': '2.2.0-gompi-2023a-fb'}, {'full_module_name': 'foss/2023a', 'module_name': 'foss', 'module_version': '2023a'}, {'full_module_name': 'Tcl/8.6.13-GCCcore-12.3.0', 'module_name': 'Tcl', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'SQLite/3.42.0-GCCcore-12.3.0', 'module_name': 'SQLite', 'module_version': '3.42.0-GCCcore-12.3.0'}, {'full_module_name': 'libffi/3.4.4-GCCcore-12.3.0', 'module_name': 'libffi', 'module_version': '3.4.4-GCCcore-12.3.0'}, {'full_module_name': 'Python/3.11.3-GCCcore-12.3.0', 'module_name': 'Python', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'cffi/1.15.1-GCCcore-12.3.0', 'module_name': 'cffi', 'module_version': '1.15.1-GCCcore-12.3.0'}, {'full_module_name': 'cryptography/41.0.1-GCCcore-12.3.0', 'module_name': 'cryptography', 'module_version': '41.0.1-GCCcore-12.3.0'}, {'full_module_name': 'virtualenv/20.23.1-GCCcore-12.3.0', 'module_name': 'virtualenv', 'module_version': '20.23.1-GCCcore-12.3.0'}, {'full_module_name': 'Python-bundle-PyPI/2023.06-GCCcore-12.3.0', 'module_name': 'Python-bundle-PyPI', 'module_version': '2023.06-GCCcore-12.3.0'}, {'full_module_name': 'libyaml/0.2.5-GCCcore-12.3.0', 'module_name': 'libyaml', 'module_version': '0.2.5-GCCcore-12.3.0'}, {'full_module_name': 'PyYAML/6.0-GCCcore-12.3.0', 'module_name': 'PyYAML', 'module_version': '6.0-GCCcore-12.3.0'}, {'full_module_name': 'gfbf/2023a', 'module_name': 'gfbf', 'module_version': '2023a'}, {'full_module_name': 'pybind11/2.11.1-GCCcore-12.3.0', 'module_name': 'pybind11', 'module_version': '2.11.1-GCCcore-12.3.0'}, {'full_module_name': 'SciPy-bundle/2023.07-gfbf-2023a', 'module_name': 'SciPy-bundle', 'module_version': '2023.07-gfbf-2023a'}, {'full_module_name': 'libpng/1.6.39-GCCcore-12.3.0', 'module_name': 'libpng', 'module_version': '1.6.39-GCCcore-12.3.0'}, {'full_module_name': 'Brotli/1.0.9-GCCcore-12.3.0', 'module_name': 'Brotli', 'module_version': '1.0.9-GCCcore-12.3.0'}, {'full_module_name': 'freetype/2.13.0-GCCcore-12.3.0', 'module_name': 'freetype', 'module_version': '2.13.0-GCCcore-12.3.0'}, {'full_module_name': 'expat/2.5.0-GCCcore-12.3.0', 'module_name': 'expat', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'fontconfig/2.14.2-GCCcore-12.3.0', 'module_name': 'fontconfig', 'module_version': '2.14.2-GCCcore-12.3.0'}, {'full_module_name': 'xorg-macros/1.20.0-GCCcore-12.3.0', 'module_name': 'xorg-macros', 'module_version': '1.20.0-GCCcore-12.3.0'}, {'full_module_name': 'X11/20230603-GCCcore-12.3.0', 'module_name': 'X11', 'module_version': '20230603-GCCcore-12.3.0'}, {'full_module_name': 'Tk/8.6.13-GCCcore-12.3.0', 'module_name': 'Tk', 'module_version': '8.6.13-GCCcore-12.3.0'}, {'full_module_name': 'Tkinter/3.11.3-GCCcore-12.3.0', 'module_name': 'Tkinter', 'module_version': '3.11.3-GCCcore-12.3.0'}, {'full_module_name': 'NASM/2.16.01-GCCcore-12.3.0', 'module_name': 'NASM', 'module_version': '2.16.01-GCCcore-12.3.0'}, {'full_module_name': 'libjpeg-turbo/2.1.5.1-GCCcore-12.3.0', 'module_name': 'libjpeg-turbo', 'module_version': '2.1.5.1-GCCcore-12.3.0'}, {'full_module_name': 'jbigkit/2.1-GCCcore-12.3.0', 'module_name': 'jbigkit', 'module_version': '2.1-GCCcore-12.3.0'}, {'full_module_name': 'gzip/1.12-GCCcore-12.3.0', 'module_name': 'gzip', 'module_version': '1.12-GCCcore-12.3.0'}, {'full_module_name': 'lz4/1.9.4-GCCcore-12.3.0', 'module_name': 'lz4', 'module_version': '1.9.4-GCCcore-12.3.0'}, {'full_module_name': 'zstd/1.5.5-GCCcore-12.3.0', 'module_name': 'zstd', 'module_version': '1.5.5-GCCcore-12.3.0'}, {'full_module_name': 'libdeflate/1.18-GCCcore-12.3.0', 'module_name': 'libdeflate', 'module_version': '1.18-GCCcore-12.3.0'}, {'full_module_name': 'LibTIFF/4.5.0-GCCcore-12.3.0', 'module_name': 'LibTIFF', 'module_version': '4.5.0-GCCcore-12.3.0'}, {'full_module_name': 'giflib/5.2.1-GCCcore-12.3.0', 'module_name': 'giflib', 'module_version': '5.2.1-GCCcore-12.3.0'}, {'full_module_name': 'libwebp/1.3.1-GCCcore-12.3.0', 'module_name': 'libwebp', 'module_version': '1.3.1-GCCcore-12.3.0'}, {'full_module_name': 'OpenJPEG/2.5.0-GCCcore-12.3.0', 'module_name': 'OpenJPEG', 'module_version': '2.5.0-GCCcore-12.3.0'}, {'full_module_name': 'LittleCMS/2.15-GCCcore-12.3.0', 'module_name': 'LittleCMS', 'module_version': '2.15-GCCcore-12.3.0'}, {'full_module_name': 'Pillow/10.0.0-GCCcore-12.3.0', 'module_name': 'Pillow', 'module_version': '10.0.0-GCCcore-12.3.0'}, {'full_module_name': 'Qhull/2020.2-GCCcore-12.3.0', 'module_name': 'Qhull', 'module_version': '2020.2-GCCcore-12.3.0'}, {'full_module_name': 'Ninja/1.11.1-GCCcore-12.3.0', 'module_name': 'Ninja', 'module_version': '1.11.1-GCCcore-12.3.0'}, {'full_module_name': 'Meson/1.1.1-GCCcore-12.3.0', 'module_name': 'Meson', 'module_version': '1.1.1-GCCcore-12.3.0'}, {'full_module_name': 'meson-python/0.13.2-GCCcore-12.3.0', 'module_name': 'meson-python', 'module_version': '0.13.2-GCCcore-12.3.0'}, {'full_module_name': 'matplotlib/3.7.2-gfbf-2023a', 'module_name': 'matplotlib', 'module_version': '3.7.2-gfbf-2023a'}, {'full_module_name': 'Pillow-SIMD/9.5.0-GCCcore-12.3.0', 'module_name': 'Pillow-SIMD', 'module_version': '9.5.0-GCCcore-12.3.0'}, {'full_module_name': 'tornado/6.3.2-GCCcore-12.3.0', 'module_name': 'tornado', 'module_version': '6.3.2-GCCcore-12.3.0'}, {'full_module_name': 'bokeh/3.2.2-foss-2023a', 'module_name': 'bokeh', 'module_version': '3.2.2-foss-2023a'}, {'full_module_name': 'dask/2023.9.2-foss-2023a', 'module_name': 'dask', 'module_version': '2023.9.2-foss-2023a'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Dask natively scales Python. Dask provides advanced parallelism for analytics, enabling performance\n at scale for the tools you love.', 'version': '2023.9.2', 'versionsuffix': '', 'extensions': [{'type': 'python', 'name': 'toolz', 'version': '0.12.0'}, {'type': 'python', 'name': 'locket', 'version': '1.0.0'}, {'type': 'python', 'name': 'partd', 'version': '1.4.0'}, {'type': 'python', 'name': 'HeapDict', 'version': '1.0.1'}, {'type': 'python', 'name': 'zict', 'version': '3.0.0'}, {'type': 'python', 'name': 'tblib', 'version': '2.0.0'}, {'type': 'python', 'name': 'dask', 'version': '2023.9.2'}, {'type': 'python', 'name': 'distributed', 'version': '2023.9.2'}, {'type': 'python', 'name': 'dask-mpi', 'version': '2022.4.0'}, {'type': 'python', 'name': 'docrep', 'version': '0.3.2'}, {'type': 'python', 'name': 'dask-jobqueue', 'version': '0.8.2'}]}], 'homepage': 'https://dask.org/', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Dask natively scales Python. Dask provides advanced parallelism for analytics, enabling performance\n at scale for the tools you love.'} installations
 
-### dask/2023.7.1-foss-2022b
 
-This is a list of extensions included in the module:
+### dask
 
-dask-2023.7.1, dask-jobqueue-0.8.2, dask-mpi-2022.4.0, distributed-2023.7.1, docrep-0.3.2, HeapDict-1.0.1, locket-1.0.0, partd-1.4.0, tblib-2.0.0, toolz-0.12.0, versioneer-0.29, zict-3.0.0
+
+|`dask` version|dask modules that include it|
+| --- | --- |
+|2023.7.1|`dask/2023.7.1-foss-2022b`|
+|2023.9.2|`dask/2023.9.2-foss-2023a`|
+
+### dask-jobqueue
+
+
+|`dask-jobqueue` version|dask modules that include it|
+| --- | --- |
+|0.8.2|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+
+### dask-mpi
+
+
+|`dask-mpi` version|dask modules that include it|
+| --- | --- |
+|2022.4.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+
+### distributed
+
+
+|`distributed` version|dask modules that include it|
+| --- | --- |
+|2023.7.1|`dask/2023.7.1-foss-2022b`|
+|2023.9.2|`dask/2023.9.2-foss-2023a`|
+
+### docrep
+
+
+|`docrep` version|dask modules that include it|
+| --- | --- |
+|0.3.2|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+
+### HeapDict
+
+
+|`HeapDict` version|dask modules that include it|
+| --- | --- |
+|1.0.1|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+
+### locket
+
+
+|`locket` version|dask modules that include it|
+| --- | --- |
+|1.0.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+
+### partd
+
+
+|`partd` version|dask modules that include it|
+| --- | --- |
+|1.4.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+
+### tblib
+
+
+|`tblib` version|dask modules that include it|
+| --- | --- |
+|2.0.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+
+### toolz
+
+
+|`toolz` version|dask modules that include it|
+| --- | --- |
+|0.12.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+
+### versioneer
+
+
+|`versioneer` version|dask modules that include it|
+| --- | --- |
+|0.29|`dask/2023.7.1-foss-2022b`|
+
+### zict
+
+
+|`zict` version|dask modules that include it|
+| --- | --- |
+|3.0.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|

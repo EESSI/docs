@@ -1,55 +1,19 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Krona Tools is a set of scripts to create Krona charts from several
-    Bioinformatics tools as well as from text and XML files.
-  license: Not confirmed
-  name: KronaTools
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''KronaTools/2.8.1-GCCcore-12.2.0'', ''KronaTools/2.8.1-GCCcore-12.3.0'']'
-  url: https://github.com/marbl/Krona/wiki/KronaTools
----
-
-KronaTools
-==========
+# KronaTools
 
 
-Krona Tools is a set of scripts to create Krona charts from several Bioinformatics tools as well as from text and XML files.
+Krona Tools is a set of scripts to create Krona charts from 
+several Bioinformatics tools as well as from text and XML files.
 
-https://github.com/marbl/Krona/wiki/KronaTools
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/marbl/Krona/wiki/KronaTools](https://github.com/marbl/Krona/wiki/KronaTools)</span>
+
+## Available installations
 
 
-The overview below shows which KronaTools installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|2.8.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`KronaTools/2.8.1-GCCcore-12.2.0`|
+|2.8.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`KronaTools/2.8.1-GCCcore-12.3.0`|
 
-To start using KronaTools, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load KronaTools/2.8.1-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|KronaTools/2.8.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|KronaTools/2.8.1-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'https://github.com/marbl/Krona/wiki/KronaTools', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.2.0'}, 'toolchain_families_compatibility': ['2022b_foss'], 'module': {'full_module_name': 'KronaTools/2.8.1-GCCcore-12.2.0', 'module_name': 'KronaTools', 'module_version': '2.8.1-GCCcore-12.2.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.2.0', 'module_name': 'GCCcore', 'module_version': '12.2.0'}, {'full_module_name': 'expat/2.4.9-GCCcore-12.2.0', 'module_name': 'expat', 'module_version': '2.4.9-GCCcore-12.2.0'}, {'full_module_name': 'OpenSSL/1.1', 'module_name': 'OpenSSL', 'module_version': '1.1'}, {'full_module_name': 'DB/18.1.40-GCCcore-12.2.0', 'module_name': 'DB', 'module_version': '18.1.40-GCCcore-12.2.0'}, {'full_module_name': 'Perl/5.36.0-GCCcore-12.2.0', 'module_name': 'Perl', 'module_version': '5.36.0-GCCcore-12.2.0'}, {'full_module_name': 'KronaTools/2.8.1-GCCcore-12.2.0', 'module_name': 'KronaTools', 'module_version': '2.8.1-GCCcore-12.2.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Krona Tools is a set of scripts to create Krona charts from \nseveral Bioinformatics tools as well as from text and XML files.', 'version': '2.8.1', 'versionsuffix': '', 'extensions': []}, {'homepage': 'https://github.com/marbl/Krona/wiki/KronaTools', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'KronaTools/2.8.1-GCCcore-12.3.0', 'module_name': 'KronaTools', 'module_version': '2.8.1-GCCcore-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'Perl/5.36.1-GCCcore-12.3.0', 'module_name': 'Perl', 'module_version': '5.36.1-GCCcore-12.3.0'}, {'full_module_name': 'KronaTools/2.8.1-GCCcore-12.3.0', 'module_name': 'KronaTools', 'module_version': '2.8.1-GCCcore-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'Krona Tools is a set of scripts to create Krona charts from \nseveral Bioinformatics tools as well as from text and XML files.', 'version': '2.8.1', 'versionsuffix': '', 'extensions': []}], 'homepage': 'https://github.com/marbl/Krona/wiki/KronaTools', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'Krona Tools is a set of scripts to create Krona charts from \nseveral Bioinformatics tools as well as from text and XML files.'} installations

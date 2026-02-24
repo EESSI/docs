@@ -1,56 +1,22 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A full-featured and high-performance (see benchmark)event loop that
-    is loosely modelled after libevent, but without itslimitations and bugs. It is
-    used in GNU Virtual Private Ethernet,rxvt-unicode, auditd, the Deliantra MORPG
-    Server and Client, and manyother programs.
-  license: Not confirmed
-  name: libev
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''libev/4.33-GCC-12.3.0'']'
-  url: http://software.schmorp.de/pkg/libev.html
----
-
-libev
-=====
+# libev
 
 
-A full-featured and high-performance (see benchmark)event loop that is loosely modelled after libevent, but without itslimitations and bugs. It is used in GNU Virtual Private Ethernet,rxvt-unicode, auditd, the Deliantra MORPG Server and Client, and manyother programs.
+A full-featured and high-performance (see benchmark)
+event loop that is loosely modelled after libevent, but without its
+limitations and bugs. It is used in GNU Virtual Private Ethernet,
+rxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many
+other programs.
 
-http://software.schmorp.de/pkg/libev.html
-# Available modules
+<small>homepage: </small><span class="software-link">[http://software.schmorp.de/pkg/libev.html](http://software.schmorp.de/pkg/libev.html)</span>
+
+## Available installations
 
 
-The overview below shows which libev installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Version|Supported CPU targets|Supported GPU targets|Module|
+| --- | --- | --- | --- |
+|4.33|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`libev/4.33-GCC-12.3.0`|
+|4.33|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`libev/4.33-GCCcore-13.3.0`|
 
-To start using libev, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load libev/4.33-GCC-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libev/4.33-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in {'versions': [{'homepage': 'http://software.schmorp.de/pkg/libev.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCC', 'version': '12.3.0'}, 'toolchain_families_compatibility': ['2023a_foss'], 'module': {'full_module_name': 'libev/4.33-GCC-12.3.0', 'module_name': 'libev', 'module_version': '4.33-GCC-12.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2023.06', 'module_name': 'EESSI', 'module_version': '2023.06'}, {'full_module_name': 'GCCcore/12.3.0', 'module_name': 'GCCcore', 'module_version': '12.3.0'}, {'full_module_name': 'GCC/12.3.0', 'module_name': 'GCC', 'module_version': '12.3.0'}, {'full_module_name': 'libev/4.33-GCC-12.3.0', 'module_name': 'libev', 'module_version': '4.33-GCC-12.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A full-featured and high-performance (see benchmark)\nevent loop that is loosely modelled after libevent, but without its\nlimitations and bugs. It is used in GNU Virtual Private Ethernet,\nrxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many\nother programs.', 'version': '4.33', 'versionsuffix': '', 'extensions': []}, {'homepage': 'http://software.schmorp.de/pkg/libev.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'toolchain': {'name': 'GCCcore', 'version': '13.3.0'}, 'toolchain_families_compatibility': ['2024a_foss'], 'module': {'full_module_name': 'libev/4.33-GCCcore-13.3.0', 'module_name': 'libev', 'module_version': '4.33-GCCcore-13.3.0'}, 'required_modules': [{'full_module_name': 'EESSI/2025.06', 'module_name': 'EESSI', 'module_version': '2025.06'}, {'full_module_name': 'GCCcore/13.3.0', 'module_name': 'GCCcore', 'module_version': '13.3.0'}, {'full_module_name': 'libev/4.33-GCCcore-13.3.0', 'module_name': 'libev', 'module_version': '4.33-GCCcore-13.3.0'}], 'cpu_arch': ['aarch64/generic', 'aarch64/a64fx', 'aarch64/neoverse_n1', 'aarch64/neoverse_v1', 'aarch64/nvidia/grace', 'x86_64/generic', 'x86_64/amd/zen2', 'x86_64/amd/zen3', 'x86_64/amd/zen4', 'x86_64/intel/haswell', 'x86_64/intel/skylake_avx512', 'x86_64/intel/sapphirerapids', 'x86_64/intel/icelake', 'x86_64/intel/cascadelake'], 'gpu_arch': {}, 'description': 'A full-featured and high-performance (see benchmark)\nevent loop that is loosely modelled after libevent, but without its\nlimitations and bugs. It is used in GNU Virtual Private Ethernet,\nrxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many\nother programs.', 'version': '4.33', 'versionsuffix': '', 'extensions': []}], 'homepage': 'http://software.schmorp.de/pkg/libev.html', 'license': [], 'image': '', 'categories': [], 'identifier': '', 'description': 'A full-featured and high-performance (see benchmark)\nevent loop that is loosely modelled after libevent, but without its\nlimitations and bugs. It is used in GNU Virtual Private Ethernet,\nrxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many\nother programs.'} installations
