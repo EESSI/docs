@@ -23,6 +23,7 @@ from typing import Union, Tuple
 from string import Template
 import numpy as np
 from mdutils.mdutils import MdUtils
+from mdutils.tools.Table import Table
 from natsort import natsorted
 from functools import cmp_to_key
 
@@ -30,6 +31,13 @@ EESSI_TOPDIR = "/cvmfs/software.eessi.io/versions/2023.06"
 
 # some CPU targets are excluded for now, because software layer is too incomplete currently
 EXCLUDE_CPU_TARGETS = []
+
+AARCH64 = 'aarch64'
+AMD = 'amd'
+GENERIC = 'generic'
+INTEL = 'intel'
+NVIDIA = 'nvidia'
+X86_64 = 'x86_64'
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -56,8 +64,14 @@ def main():
     print("Done!")
 
     # Generate detail markdown pages
-    print("Generate detailed pages... ", end="", flush=True)
-    generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/detail"))
+    #print("Generate detailed pages... ", end="", flush=True)
+    #generate_detail_pages(json_path, os.path.join(root_dir, "docs/available_software/detail"))
+    #print("Done!")
+
+    # Generate software-specific pages using data from https://eessi.io/api_data/data/eessi_api_metadata_software.json
+    print("Generating software-specific pages... ", end="", flush=True)
+    api_data_software_json = os.path.join(root_dir, 'docs', 'available_software', 'data', 'eessi_api_metadata_software.json')
+    generate_software_pages(api_data_software_json, os.path.join(root_dir, 'docs', 'available_software', 'detail'))
     print("Done!")
 
 
@@ -491,6 +505,155 @@ def generate_software_detail_page(
         f.write("---\n" + yaml_topmatter + "---\n" + read_data)
 
 
+def format_cpu_arch_list(cpu_archs):
+
+    res = []
+
+    # generic CPU targets
+    gen_cpu_targets = [c for c in cpu_archs if c.endswith('/' + GENERIC)]
+    res.append("`generic`: " + ', '.join(['`' + x.split('/', maxsplit=1)[0] + '`' for x in gen_cpu_targets]) + "<br/>")
+
+    # Arm CPU targets
+    arm_cpu_targets = [c for c in cpu_archs if c.startswith(AARCH64) and not c.endswith('/' + GENERIC)]
+    label = '<span class="software-cpu-arm">Arm</span>'
+    res.append(label + ": " + ', '.join(['`' + x.split('/', maxsplit=1)[1] + '`' for x in arm_cpu_targets]) + "<br/>")
+
+    # x86_64 AMD CPU targets
+    amd_cpu_targets = [c for c in cpu_archs if c.startswith(X86_64 + '/' + AMD)]
+    label = '<span class="software-cpu-amd">AMD</span>'
+    res.append(label + ": " + ', '.join(['`' + x.split('/', maxsplit=2)[2] + '`' for x in amd_cpu_targets]) + "<br/>")
+
+    # x86_64 Intel CPU targets
+    intel_cpu_targets = [c for c in cpu_archs if c.startswith(X86_64 + '/' + INTEL)]
+    label = '<span class="software-cpu-intel">Intel</span>'
+    res.append(label + ": " + ', '.join(['`' + x.split('/', maxsplit=2)[2] + '`' for x in intel_cpu_targets]) + "<br/>")
+
+    return res
+
+
+def format_gpu_arch_list(gpu_archs):
+
+    res = []
+
+    all_gpu_archs = set([y for x in gpu_archs.values() for y in x])
+
+    # AMD GPU targets
+    amd_gpu_targets = sorted([g for g in all_gpu_archs if g.startswith(AMD + '/')])
+    if amd_gpu_targets:
+        label = '<span class="software-gpu-amd">AMD</span>'
+        res.append(label + ": " + ', '.join(['`' + x.split('/', maxsplit=1)[1] + '`' for x in amd_gpu_targets]) + "<br/>")
+
+    # NVIDIA GPU targets
+    nvidia_gpu_targets = sorted([g for g in all_gpu_archs if g.startswith(NVIDIA + '/')])
+    if nvidia_gpu_targets:
+        label = '<span class="software-gpu-nvidia">NVIDIA</span>'
+        res.append(label + ": " + ', '.join(['`' + x.split('/', maxsplit=1)[1] + '`' for x in nvidia_gpu_targets]) + "<br/>")
+
+    return res
+
+
+def generate_software_page(
+        software_name: str,
+        software_data: dict,
+        path: str
+) -> None:
+    """
+    Generate one software specific detail page.
+
+    @param software_name: Name of the software
+    @param software_data: Additional information about the software (version, etc...)
+    @param generated_time: Timestamp when the data was generated
+    @param targets: List with all the target names
+    @param path: Path of the directory where the detailed page will be created.
+    """
+    filename = os.path.join(path, f"{software_name}.md")
+
+    md_lines = [
+        f"# {software_name}",
+        '',
+    ]
+    if 'description' in software_data.keys():
+        description = software_data['description']
+        md_lines.extend([
+            '',
+            f"{description}",
+            '',
+        ])
+
+    if 'homepage' in software_data.keys():
+        homepage = software_data['homepage']
+        md_lines.append(f'<small>homepage: </small><span class="software-link">[{homepage}]({homepage})</span>')
+
+    md_lines.extend([
+        '',
+        "## Available installations",
+        '',
+    ])
+
+    table_data = ['Version', 'Supported CPU targets', 'Supported GPU targets', 'Module']
+    n_cols = len(table_data)
+
+    n_rows = 1
+    for version in software_data['versions']:
+        cpu_targets = format_cpu_arch_list(version['cpu_arch'])
+        gpu_targets = format_gpu_arch_list(version['gpu_arch'])
+        table_data.extend([
+                version['version'],
+                ''.join(cpu_targets),
+                ''.join(gpu_targets) or '*(none)*',
+                '`' + version['module']['full_module_name'] + '`',
+        ])
+        n_rows += 1
+
+    table = Table().create_table(columns=n_cols, rows=n_rows, text=table_data)
+    md_lines.extend(table.splitlines())
+
+    md_lines.extend([
+        '',
+        f'## Extensions',
+        '',
+        f"Overview of extensions included in {software_data} installations",
+        '',
+    ])
+
+    exts = {}
+    for version in software_data['versions']:
+        for ext_data in version['extensions']:
+            ext_details = exts.setdefault(ext_data['name'], {})
+            ext_version = ext_details.setdefault(ext_data['version'], set())
+            ext_version.add(version['module']['full_module_name'])
+
+    table_header = ['`%s` version', f'{software_name} modules that include it']
+    n_cols = len(table_header)
+
+    for ext_name, ext_details in sorted(exts.items(), key=lambda x: x[0].lower()):
+
+        md_lines.extend([
+            '',
+            f'### {ext_name}',
+            '',
+        ])
+
+        table_data = table_header[:]
+        table_data[0] = table_data[0] % ext_name
+
+        n_rows = 1
+        for ext_version, ext_version_mods in sorted(ext_details.items(), key=lambda x: x[0]):
+            n_rows += 1
+            table_data.extend([
+                ext_version,
+                '<br/>'.join('`' + m + '`' for m in ext_version_mods),
+            ])
+
+        table = Table().create_table(columns=n_cols, rows=n_rows, text=table_data)
+        md_lines.extend(table.splitlines())
+
+    md_txt = '\n'.join(md_lines)
+
+    with open(filename, 'w') as fp:
+        fp.write(md_txt)
+
+
 def generate_detail_pages(json_path, dest_path) -> None:
     """
     Generate all the detailed pages for all the software that is available.
@@ -508,6 +671,18 @@ def generate_detail_pages(json_path, dest_path) -> None:
         else:
             time_generated = data["time_generated"]
         generate_software_detail_page(software, content, time_generated, all_targets, dest_path)
+
+
+def generate_software_pages(json_path, dest_path) -> None:
+    """
+    Generate software-specific pages
+    """
+
+    with open(json_path) as json_data:
+        data = json.load(json_data)
+
+    for name in data['software']:
+        generate_software_page(name, data['software'][name], dest_path)
 
 
 # --------------------------------------------------------------------------------------------------------
