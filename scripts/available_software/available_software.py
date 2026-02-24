@@ -590,17 +590,27 @@ def generate_software_page(
         '',
     ])
 
-    table_data = ['Version', 'Supported CPU targets', 'Supported GPU targets', 'Module']
+    table_data = [f'{software_name} version', 'Supported CPU targets', 'Supported GPU targets', 'EESSI version', 'Module']
     n_cols = len(table_data)
 
     n_rows = 1
     for version in sorted(software_data['versions'], key=lambda x: x['version']):
         cpu_targets = format_cpu_arch_list(version['cpu_arch'])
         gpu_targets = format_gpu_arch_list(version['gpu_arch'])
+
+        req_mods = version['required_modules']
+        if req_mods and req_mods[0].get('module_name') == 'EESSI':
+            eessi_version = req_mods[0]['module_version']
+            eessi_version_no_dots = eessi_version.replace('.', '')
+            eessi_version_label = f'<span class="software-eessi-version-{eessi_version_no_dots}">{eessi_version}</span>'
+        else:
+            eessi_version_label = "*???*"
+
         table_data.extend([
                 version['version'],
                 ''.join(cpu_targets),
                 ''.join(gpu_targets) or '*(none)*',
+                eessi_version_label,
                 '`' + version['module']['full_module_name'] + '`',
         ])
         n_rows += 1

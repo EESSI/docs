@@ -9,13 +9,13 @@ a modern, extensible Python project manager.
 ## Available installations
 
 
-|Version|Supported CPU targets|Supported GPU targets|Module|
-| --- | --- | --- | --- |
-|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`hatchling/1.18.0-GCCcore-12.3.0`|
-|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`hatchling/1.18.0-GCCcore-13.2.0`|
-|1.24.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`hatchling/1.24.2-GCCcore-13.3.0`|
-|1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`hatchling/1.27.0-GCCcore-14.2.0`|
-|1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`hatchling/1.27.0-GCCcore-14.3.0`|
+|hatchling version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`hatchling/1.18.0-GCCcore-12.3.0`|
+|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`hatchling/1.18.0-GCCcore-13.2.0`|
+|1.24.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.24.2-GCCcore-13.3.0`|
+|1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.2.0`|
+|1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.3.0`|
 
 ## Extensions
 
@@ -28,7 +28,7 @@ Overview of extensions included in hatchling installations
 |`editables` version|hatchling modules that include it|
 | --- | --- |
 |0.3|`hatchling/1.18.0-GCCcore-12.3.0`|
-|0.5|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
+|0.5|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 
 ### hatch-docstring-description
 
@@ -50,7 +50,7 @@ Overview of extensions included in hatchling installations
 
 |`hatch-requirements-txt` version|hatchling modules that include it|
 | --- | --- |
-|0.4.1|`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
+|0.4.1|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
 
 ### hatch-vcs
 
@@ -81,7 +81,7 @@ Overview of extensions included in hatchling installations
 | --- | --- |
 |1.18.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
 |1.24.2|`hatchling/1.24.2-GCCcore-13.3.0`|
-|1.27.0|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
+|1.27.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
 
 ### pathspec
 
@@ -90,7 +90,7 @@ Overview of extensions included in hatchling installations
 | --- | --- |
 |0.11.1|`hatchling/1.18.0-GCCcore-12.3.0`|
 |0.11.2|`hatchling/1.18.0-GCCcore-13.2.0`|
-|0.12.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+|0.12.1|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 
 ### pluggy
 

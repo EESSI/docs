@@ -8,10 +8,10 @@ The Snakemake workflow management system is a tool to create reproducible and sc
 ## Available installations
 
 
-|Version|Supported CPU targets|Supported GPU targets|Module|
-| --- | --- | --- | --- |
-|8.28.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`snakemake/8.28.0-foss-2023b`|
-|8.4.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`snakemake/8.4.2-foss-2023a`|
+|snakemake version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|8.28.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`snakemake/8.28.0-foss-2023b`|
+|8.4.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`snakemake/8.4.2-foss-2023a`|
 
 ## Extensions
 
@@ -23,7 +23,7 @@ Overview of extensions included in snakemake installations
 
 |`argparse-dataclass` version|snakemake modules that include it|
 | --- | --- |
-|2.0.0|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|2.0.0|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### conda-inject
 
@@ -38,21 +38,21 @@ Overview of extensions included in snakemake installations
 
 |`ConfigArgParse` version|snakemake modules that include it|
 | --- | --- |
-|1.7|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|1.7|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### connection-pool
 
 
 |`connection-pool` version|snakemake modules that include it|
 | --- | --- |
-|0.0.3|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|0.0.3|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### datrie
 
 
 |`datrie` version|snakemake modules that include it|
 | --- | --- |
-|0.8.2|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|0.8.2|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### dpath
 
@@ -67,14 +67,14 @@ Overview of extensions included in snakemake installations
 
 |`fastjsonschema` version|snakemake modules that include it|
 | --- | --- |
-|2.19.1|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|2.19.1|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### humanfriendly
 
 
 |`humanfriendly` version|snakemake modules that include it|
 | --- | --- |
-|10.0|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|10.0|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### immutables
 
@@ -113,7 +113,7 @@ Overview of extensions included in snakemake installations
 
 |`reretry` version|snakemake modules that include it|
 | --- | --- |
-|0.11.8|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|0.11.8|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### smart-open
 
@@ -207,21 +207,21 @@ Overview of extensions included in snakemake installations
 
 |`stopit` version|snakemake modules that include it|
 | --- | --- |
-|1.1.2|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|1.1.2|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### throttler
 
 
 |`throttler` version|snakemake modules that include it|
 | --- | --- |
-|1.2.2|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|1.2.2|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### toposort
 
 
 |`toposort` version|snakemake modules that include it|
 | --- | --- |
-|1.10|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
+|1.10|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
 
 ### wrapt
 

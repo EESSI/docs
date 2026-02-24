@@ -13,12 +13,12 @@ IPython provides a rich architecture for interactive computing with:
 ## Available installations
 
 
-|Version|Supported CPU targets|Supported GPU targets|Module|
-| --- | --- | --- | --- |
-|8.14.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`IPython/8.14.0-GCCcore-12.3.0`|
-|8.17.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`IPython/8.17.2-GCCcore-13.2.0`|
-|8.28.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`IPython/8.28.0-GCCcore-13.3.0`|
-|9.3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`IPython/9.3.0-GCCcore-14.2.0`|
+|IPython version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|8.14.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`IPython/8.14.0-GCCcore-12.3.0`|
+|8.17.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`IPython/8.17.2-GCCcore-13.2.0`|
+|8.28.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`IPython/8.28.0-GCCcore-13.3.0`|
+|9.3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`IPython/9.3.0-GCCcore-14.2.0`|
 
 ## Extensions
 
@@ -39,7 +39,7 @@ Overview of extensions included in IPython installations
 
 |`backcall` version|IPython modules that include it|
 | --- | --- |
-|0.2.0|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
+|0.2.0|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
 
 ### executing
 
@@ -79,7 +79,7 @@ Overview of extensions included in IPython installations
 
 |`matplotlib-inline` version|IPython modules that include it|
 | --- | --- |
-|0.1.6|`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
+|0.1.6|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
 
 ### matplotlib_inline
 
@@ -100,7 +100,7 @@ Overview of extensions included in IPython installations
 
 |`pickleshare` version|IPython modules that include it|
 | --- | --- |
-|0.7.5|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
+|0.7.5|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
 
 ### prompt_toolkit
 
@@ -116,7 +116,7 @@ Overview of extensions included in IPython installations
 
 |`pure_eval` version|IPython modules that include it|
 | --- | --- |
-|0.2.2|`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
+|0.2.2|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
 |0.2.3|`IPython/9.3.0-GCCcore-14.2.0`|
 
 ### stack_data

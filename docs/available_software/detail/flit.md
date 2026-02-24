@@ -8,13 +8,13 @@ A simple packaging tool for simple packages.
 ## Available installations
 
 
-|Version|Supported CPU targets|Supported GPU targets|Module|
-| --- | --- | --- | --- |
-|3.10.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`flit/3.10.1-GCCcore-14.2.0`|
-|3.12.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`flit/3.12.0-GCCcore-14.3.0`|
-|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`flit/3.9.0-GCCcore-12.3.0`|
-|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`flit/3.9.0-GCCcore-13.2.0`|
-|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`flit/3.9.0-GCCcore-13.3.0`|
+|flit version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.10.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.10.1-GCCcore-14.2.0`|
+|3.12.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.12.0-GCCcore-14.3.0`|
+|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`flit/3.9.0-GCCcore-12.3.0`|
+|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`flit/3.9.0-GCCcore-13.2.0`|
+|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.9.0-GCCcore-13.3.0`|
 
 ## Extensions
 
@@ -48,7 +48,7 @@ Overview of extensions included in flit installations
 
 |`docutils` version|flit modules that include it|
 | --- | --- |
-|0.20.1|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
+|0.20.1|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
 |0.21.2|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 
 ### flit
@@ -58,7 +58,7 @@ Overview of extensions included in flit installations
 | --- | --- |
 |3.10.1|`flit/3.10.1-GCCcore-14.2.0`|
 |3.12.0|`flit/3.12.0-GCCcore-14.3.0`|
-|3.9.0|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
+|3.9.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 
 ### flit-scm
 
@@ -72,7 +72,7 @@ Overview of extensions included in flit installations
 
 |`flit_scm` version|flit modules that include it|
 | --- | --- |
-|1.7.0|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
+|1.7.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
 
 ### idna
 
@@ -80,7 +80,7 @@ Overview of extensions included in flit installations
 |`idna` version|flit modules that include it|
 | --- | --- |
 |3.10|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
-|3.4|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
+|3.4|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
 |3.7|`flit/3.9.0-GCCcore-13.3.0`|
 
 ### packaging
@@ -97,7 +97,7 @@ Overview of extensions included in flit installations
 
 |`requests` version|flit modules that include it|
 | --- | --- |
-|2.31.0|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
+|2.31.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
 |2.32.3|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 |2.32.4|`flit/3.12.0-GCCcore-14.3.0`|
 
@@ -129,7 +129,7 @@ Overview of extensions included in flit installations
 
 |`tomli_w` version|flit modules that include it|
 | --- | --- |
-|1.0.0|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
+|1.0.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
 
 ### typing-extensions
 

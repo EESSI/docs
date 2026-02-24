@@ -8,13 +8,13 @@ Bundle of Python packages for scientific software
 ## Available installations
 
 
-|Version|Supported CPU targets|Supported GPU targets|Module|
-| --- | --- | --- | --- |
-|2023.02|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`SciPy-bundle/2023.02-gfbf-2022b`|
-|2023.07|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`SciPy-bundle/2023.07-gfbf-2023a`|
-|2023.11|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`SciPy-bundle/2023.11-gfbf-2023b`|
-|2024.05|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`SciPy-bundle/2024.05-gfbf-2024a`|
-|2025.06|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`SciPy-bundle/2025.06-gfbf-2025a`|
+|SciPy-bundle version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2023.02|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SciPy-bundle/2023.02-gfbf-2022b`|
+|2023.07|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SciPy-bundle/2023.07-gfbf-2023a`|
+|2023.11|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SciPy-bundle/2023.11-gfbf-2023b`|
+|2024.05|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`SciPy-bundle/2024.05-gfbf-2024a`|
+|2025.06|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`SciPy-bundle/2025.06-gfbf-2025a`|
 
 ## Extensions
 
@@ -26,7 +26,7 @@ Overview of extensions included in SciPy-bundle installations
 
 |`beniget` version|SciPy-bundle modules that include it|
 | --- | --- |
-|0.4.1|`SciPy-bundle/2024.05-gfbf-2024a`<br/>`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`<br/>`SciPy-bundle/2023.02-gfbf-2022b`|
+|0.4.1|`SciPy-bundle/2023.02-gfbf-2022b`<br/>`SciPy-bundle/2024.05-gfbf-2024a`<br/>`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`|
 |0.4.2.post1|`SciPy-bundle/2025.06-gfbf-2025a`|
 
 ### Bottleneck
@@ -52,7 +52,7 @@ Overview of extensions included in SciPy-bundle installations
 | --- | --- |
 |1.3.3|`SciPy-bundle/2023.02-gfbf-2022b`|
 |1.4.0|`SciPy-bundle/2023.07-gfbf-2023a`|
-|1.4.1|`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2024.05-gfbf-2024a`|
+|1.4.1|`SciPy-bundle/2024.05-gfbf-2024a`<br/>`SciPy-bundle/2023.11-gfbf-2023b`|
 |1.4.3|`SciPy-bundle/2025.06-gfbf-2025a`|
 
 ### gast
@@ -61,7 +61,7 @@ Overview of extensions included in SciPy-bundle installations
 |`gast` version|SciPy-bundle modules that include it|
 | --- | --- |
 |0.5.3|`SciPy-bundle/2023.02-gfbf-2022b`|
-|0.5.4|`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`<br/>`SciPy-bundle/2024.05-gfbf-2024a`|
+|0.5.4|`SciPy-bundle/2024.05-gfbf-2024a`<br/>`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`|
 |0.6.0|`SciPy-bundle/2025.06-gfbf-2025a`|
 
 ### mpmath
@@ -70,7 +70,7 @@ Overview of extensions included in SciPy-bundle installations
 |`mpmath` version|SciPy-bundle modules that include it|
 | --- | --- |
 |1.2.1|`SciPy-bundle/2023.02-gfbf-2022b`|
-|1.3.0|`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`<br/>`SciPy-bundle/2025.06-gfbf-2025a`<br/>`SciPy-bundle/2024.05-gfbf-2024a`|
+|1.3.0|`SciPy-bundle/2025.06-gfbf-2025a`<br/>`SciPy-bundle/2024.05-gfbf-2024a`<br/>`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`|
 
 ### numexpr
 
@@ -79,7 +79,7 @@ Overview of extensions included in SciPy-bundle installations
 | --- | --- |
 |2.10.0|`SciPy-bundle/2024.05-gfbf-2024a`|
 |2.11.0|`SciPy-bundle/2025.06-gfbf-2025a`|
-|2.8.4|`SciPy-bundle/2023.07-gfbf-2023a`<br/>`SciPy-bundle/2023.02-gfbf-2022b`|
+|2.8.4|`SciPy-bundle/2023.02-gfbf-2022b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`|
 |2.8.7|`SciPy-bundle/2023.11-gfbf-2023b`|
 
 ### numpy
@@ -109,7 +109,7 @@ Overview of extensions included in SciPy-bundle installations
 
 |`ply` version|SciPy-bundle modules that include it|
 | --- | --- |
-|3.11|`SciPy-bundle/2024.05-gfbf-2024a`<br/>`SciPy-bundle/2023.07-gfbf-2023a`<br/>`SciPy-bundle/2025.06-gfbf-2025a`<br/>`SciPy-bundle/2023.02-gfbf-2022b`<br/>`SciPy-bundle/2023.11-gfbf-2023b`|
+|3.11|`SciPy-bundle/2024.05-gfbf-2024a`<br/>`SciPy-bundle/2025.06-gfbf-2025a`<br/>`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.02-gfbf-2022b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`|
 
 ### pythran
 
@@ -147,4 +147,4 @@ Overview of extensions included in SciPy-bundle installations
 
 |`versioneer` version|SciPy-bundle modules that include it|
 | --- | --- |
-|0.29|`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`<br/>`SciPy-bundle/2025.06-gfbf-2025a`<br/>`SciPy-bundle/2024.05-gfbf-2024a`|
+|0.29|`SciPy-bundle/2025.06-gfbf-2025a`<br/>`SciPy-bundle/2024.05-gfbf-2024a`<br/>`SciPy-bundle/2023.11-gfbf-2023b`<br/>`SciPy-bundle/2023.07-gfbf-2023a`|
