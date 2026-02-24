@@ -59,7 +59,6 @@ def define_env(env):
             licenses = ', '.join(y for x in versions for y in x['license'])
 
             # determine set of supported CPU families (first part of CPU target names, like x86_64 or aarch64)
-            cpu_families = set(c for v in versions for x in v['cpu_arch'] for c in CPU_ARCHS[x.split('/')[0]])
             cpu_families = set()
             for version in versions:
                 for cpu_arch in version['cpu_arch']:
