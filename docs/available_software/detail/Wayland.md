@@ -53,4 +53,4 @@ Overview of extensions included in Wayland installations
 
 |`wayland-utils` version|Wayland modules that include it|
 | --- | --- |
-|1.2.0|`Wayland/1.23.92-GCCcore-14.2.0`<br/>`Wayland/1.24.0-GCCcore-14.3.0`<br/>`Wayland/1.23.0-GCCcore-13.3.0`|
+|1.2.0|`Wayland/1.23.0-GCCcore-13.3.0`<br/>`Wayland/1.24.0-GCCcore-14.3.0`<br/>`Wayland/1.23.92-GCCcore-14.2.0`|

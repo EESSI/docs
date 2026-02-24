@@ -31,7 +31,7 @@ Overview of extensions included in Flask installations
 |`asgiref` version|Flask modules that include it|
 | --- | --- |
 |3.6.0|`Flask/2.2.3-GCCcore-12.2.0`|
-|3.7.2|`Flask/2.3.3-GCCcore-12.3.0`<br/>`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/3.0.3-GCCcore-13.3.0`|
+|3.7.2|`Flask/3.0.3-GCCcore-13.3.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`<br/>`Flask/3.0.0-GCCcore-13.2.0`|
 |3.9.1|`Flask/3.1.1-GCCcore-14.2.0`|
 
 ### blinker
@@ -49,7 +49,7 @@ Overview of extensions included in Flask installations
 
 |`cachelib` version|Flask modules that include it|
 | --- | --- |
-|0.10.2|`Flask/2.3.3-GCCcore-12.3.0`<br/>`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.2.3-GCCcore-12.2.0`|
+|0.10.2|`Flask/2.2.3-GCCcore-12.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`<br/>`Flask/3.0.0-GCCcore-13.2.0`|
 |0.13.0|`Flask/3.0.3-GCCcore-13.3.0`<br/>`Flask/3.1.1-GCCcore-14.2.0`|
 
 ### Flask
@@ -93,7 +93,7 @@ Overview of extensions included in Flask installations
 
 |`itsdangerous` version|Flask modules that include it|
 | --- | --- |
-|2.1.2|`Flask/2.3.3-GCCcore-12.3.0`<br/>`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.2.3-GCCcore-12.2.0`|
+|2.1.2|`Flask/2.2.3-GCCcore-12.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`<br/>`Flask/3.0.0-GCCcore-13.2.0`|
 |2.2.0|`Flask/3.0.3-GCCcore-13.3.0`<br/>`Flask/3.1.1-GCCcore-14.2.0`|
 
 ### msgspec

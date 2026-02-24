@@ -12,8 +12,8 @@ Voila.
 
 |Version|Supported CPU targets|Supported GPU targets|Module|
 | --- | --- | --- | --- |
-|2.7.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 |2.14.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|2.7.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ## Extensions
 
@@ -33,14 +33,14 @@ Overview of extensions included in jupyter-server installations
 
 |`argon2-cffi-bindings` version|jupyter-server modules that include it|
 | --- | --- |
-|21.2.0|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|21.2.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### argon2_cffi
 
 
 |`argon2_cffi` version|jupyter-server modules that include it|
 | --- | --- |
-|23.1.0|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|23.1.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### arrow
 
@@ -78,14 +78,14 @@ Overview of extensions included in jupyter-server installations
 
 |`defusedxml` version|jupyter-server modules that include it|
 | --- | --- |
-|0.7.1|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.7.1|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### deprecation
 
 
 |`deprecation` version|jupyter-server modules that include it|
 | --- | --- |
-|2.1.0|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|2.1.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### fastjsonschema
 
@@ -122,7 +122,7 @@ Overview of extensions included in jupyter-server installations
 
 |`ipython_genutils` version|jupyter-server modules that include it|
 | --- | --- |
-|0.2.0|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.2.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### ipywidgets
 
@@ -177,7 +177,7 @@ Overview of extensions included in jupyter-server installations
 
 |`jupyter_packaging` version|jupyter-server modules that include it|
 | --- | --- |
-|0.12.3|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.12.3|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jupyter_server
 
@@ -288,7 +288,7 @@ Overview of extensions included in jupyter-server installations
 
 |`python-json-logger` version|jupyter-server modules that include it|
 | --- | --- |
-|2.0.7|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|2.0.7|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### referencing
 
@@ -303,14 +303,14 @@ Overview of extensions included in jupyter-server installations
 
 |`rfc3339_validator` version|jupyter-server modules that include it|
 | --- | --- |
-|0.1.4|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.1.4|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### rfc3986_validator
 
 
 |`rfc3986_validator` version|jupyter-server modules that include it|
 | --- | --- |
-|0.1.1|`jupyter-server/2.7.2-GCCcore-12.3.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.1.1|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### rpds_py
 

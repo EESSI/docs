@@ -35,21 +35,21 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`appdirs` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.4.4|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.4.4|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### asn1crypto
 
 
 |`asn1crypto` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.5.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.5.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### atomicwrites
 
 
 |`atomicwrites` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.4.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.4.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### attrs
 
@@ -76,14 +76,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`backports.entry-points-selectable` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |1.2.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|1.3.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|1.3.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### backports.functools-lru-cache
 
 
 |`backports.functools-lru-cache` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|2.0.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|2.0.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### backports.functools_lru_cache
 
@@ -142,7 +142,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`cachy` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.3.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.3.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### certifi
 
@@ -170,7 +170,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`chardet` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |5.1.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
-|5.2.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
+|5.2.0|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### charset-normalizer
 
@@ -189,7 +189,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`cleo` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |2.0.1|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|2.1.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|2.1.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### click
 
@@ -215,21 +215,21 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`colorama` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.4.6|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.4.6|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### commonmark
 
 
 |`commonmark` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.9.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.9.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### crashtest
 
 
 |`crashtest` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.4.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.4.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### Cython
 
@@ -264,14 +264,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`distro` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |1.8.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|1.9.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|1.9.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### docopt
 
 
 |`docopt` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.6.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.6.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### docutils
 
@@ -279,14 +279,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`docutils` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |0.20.1|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|0.21.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|0.21.2|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### doit
 
 
 |`doit` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.36.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.36.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### dulwich
 
@@ -313,7 +313,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`editables` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |0.3|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
-|0.5|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
+|0.5|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### exceptiongroup
 
@@ -333,7 +333,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 | --- | --- |
 |1.9.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 |2.0.2|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|2.1.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|2.1.1|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### filelock
 
@@ -362,21 +362,21 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`future` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |0.18.3|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|1.0.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|1.0.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### glob2
 
 
 |`glob2` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.7|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.7|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### html5lib
 
 
 |`html5lib` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### idna
 
@@ -392,7 +392,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`imagesize` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.4.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.4.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### importlib-metadata
 
@@ -439,21 +439,21 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`intervaltree` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|3.1.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|3.1.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### intreehooks
 
 
 |`intreehooks` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### ipaddress
 
 
 |`ipaddress` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.0.23|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.0.23|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### jaraco.classes
 
@@ -462,7 +462,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 | --- | --- |
 |3.2.3|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 |3.3.0|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|3.4.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|3.4.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### jaraco.context
 
@@ -504,7 +504,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 | --- | --- |
 |1.2.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 |1.3.2|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|1.4.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`|
+|1.4.2|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 |1.5.1|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
 
 ### jsonschema
@@ -550,21 +550,21 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`liac-arff` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|2.5.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|2.5.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### lockfile
 
 
 |`lockfile` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.12.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.12.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### markdown-it-py
 
 
 |`markdown-it-py` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|3.0.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|3.0.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### MarkupSafe
 
@@ -580,7 +580,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`mdurl` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.1.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.1.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### mock
 
@@ -619,14 +619,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 | --- | --- |
 |0.8.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 |0.9.0|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|1.3.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|1.3.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### netifaces
 
 
 |`netifaces` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.11.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.11.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### packaging
 
@@ -642,14 +642,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`pastel` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.2.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.2.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### pathlib2
 
 
 |`pathlib2` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|2.3.7.post1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|2.3.7.post1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### pathspec
 
@@ -658,7 +658,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 | --- | --- |
 |0.11.1|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 |0.11.2|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|0.12.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|0.12.1|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### pbr
 
@@ -675,7 +675,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`pexpect` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |4.8.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|4.9.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|4.9.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### pkginfo
 
@@ -704,7 +704,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 | --- | --- |
 |1.2.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 |1.3.0|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|1.5.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`|
+|1.5.0|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 |1.6.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
 
 ### pooch
@@ -714,7 +714,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 | --- | --- |
 |1.7.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 |1.8.0|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|1.8.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|1.8.2|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### psutil
 
@@ -731,21 +731,21 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`ptyprocess` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.7.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.7.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### py
 
 
 |`py` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.11.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.11.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### py-expression-eval
 
 
 |`py-expression-eval` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.3.14|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|0.3.14|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### py_expression_eval
 
@@ -769,7 +769,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`pycparser` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |2.21|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|2.22|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|2.22|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### pycryptodome
 
@@ -787,7 +787,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`pydevtool` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.3.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.3.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### Pygments
 
@@ -805,14 +805,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`pylev` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.4.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.4.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### PyNaCl
 
 
 |`PyNaCl` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.5.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.5.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### pyparsing
 
@@ -830,7 +830,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`pyrsistent` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |0.19.3|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
-|0.20.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
+|0.20.0|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### pytest
 
@@ -849,7 +849,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`pytest-xdist` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |3.3.1|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|3.6.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`|
+|3.6.1|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 |3.8.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
 
 ### python-dateutil
@@ -858,14 +858,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`python-dateutil` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |2.8.2|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|2.9.0.post0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|2.9.0.post0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### pytoml
 
 
 |`pytoml` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.1.21|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.1.21|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### pytz
 
@@ -912,7 +912,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`requests` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |2.31.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|2.32.3|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`|
+|2.32.3|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 |2.32.4|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
 
 ### requests-toolbelt
@@ -920,7 +920,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`requests-toolbelt` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.0.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.0.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### rich
 
@@ -965,21 +965,21 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`scandir` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.10.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.10.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### SecretStorage
 
 
 |`SecretStorage` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|3.3.3|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|3.3.3|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### semantic-version
 
 
 |`semantic-version` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|2.10.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|2.10.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 
 ### semantic_version
 
@@ -994,14 +994,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 |`shellingham` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
 |1.5.0.post1|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
-|1.5.4|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
+|1.5.4|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### simplegeneric
 
 
 |`simplegeneric` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.8.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.8.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### simplejson
 
@@ -1025,7 +1025,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`snowballstemmer` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|2.2.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
+|2.2.0|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 |3.0.1|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
 
 ### sortedcontainers
@@ -1033,7 +1033,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`sortedcontainers` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|2.4.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|2.4.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### Sphinx
 
@@ -1056,7 +1056,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`sphinx-bootstrap-theme` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.8.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.8.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### sphinxcontrib-applehelp
 
@@ -1090,7 +1090,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`sphinxcontrib-jsmath` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|1.0.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|1.0.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### sphinxcontrib-qthelp
 
@@ -1166,7 +1166,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`tabulate` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.9.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.9.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### threadpoolctl
 
@@ -1183,7 +1183,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`toml` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.10.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.10.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### tomli
 
@@ -1223,7 +1223,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`ujson` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|5.10.0|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|5.10.0|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 |5.8.0|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### urllib3
@@ -1242,7 +1242,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`wcwidth` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.2.13|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
+|0.2.13|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
 |0.2.6|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 |0.2.8|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
@@ -1251,14 +1251,14 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`webencodings` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.5.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.5.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### xlrd
 
 
 |`xlrd` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|2.0.1|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
+|2.0.1|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 |2.0.2|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
 
 ### zipfile36
@@ -1266,7 +1266,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`zipfile36` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|0.1.3|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|0.1.3|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
 
 ### zipp
 

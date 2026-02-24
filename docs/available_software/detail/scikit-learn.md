@@ -36,4 +36,4 @@ Overview of extensions included in scikit-learn installations
 
 |`sklearn` version|scikit-learn modules that include it|
 | --- | --- |
-|0.0|`scikit-learn/1.5.2-gfbf-2024a`<br/>`scikit-learn/1.3.1-gfbf-2023a`<br/>`scikit-learn/1.4.0-gfbf-2023b`|
+|0.0|`scikit-learn/1.3.1-gfbf-2023a`<br/>`scikit-learn/1.4.0-gfbf-2023b`<br/>`scikit-learn/1.5.2-gfbf-2024a`|

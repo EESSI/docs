@@ -23,4 +23,4 @@ Overview of extensions included in pystencils installations
 
 |`pystencils` version|pystencils modules that include it|
 | --- | --- |
-|1.3.4|`pystencils/1.3.4-gfbf-2023a`<br/>`pystencils/1.3.4-gfbf-2023b`|
+|1.3.4|`pystencils/1.3.4-gfbf-2023b`<br/>`pystencils/1.3.4-gfbf-2023a`|

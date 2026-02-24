@@ -53,4 +53,4 @@ Overview of extensions included in WhatsHap installations
 
 |`xopen` version|WhatsHap modules that include it|
 | --- | --- |
-|1.7.0|`WhatsHap/2.2-foss-2023a`<br/>`WhatsHap/2.1-foss-2022b`|
+|1.7.0|`WhatsHap/2.1-foss-2022b`<br/>`WhatsHap/2.2-foss-2023a`|

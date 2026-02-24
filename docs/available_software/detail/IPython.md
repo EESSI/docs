@@ -31,7 +31,7 @@ Overview of extensions included in IPython installations
 |`asttokens` version|IPython modules that include it|
 | --- | --- |
 |2.2.1|`IPython/8.14.0-GCCcore-12.3.0`|
-|2.4.1|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
+|2.4.1|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |3.0.0|`IPython/9.3.0-GCCcore-14.2.0`|
 
 ### backcall
@@ -39,7 +39,7 @@ Overview of extensions included in IPython installations
 
 |`backcall` version|IPython modules that include it|
 | --- | --- |
-|0.2.0|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
+|0.2.0|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
 
 ### executing
 
@@ -47,7 +47,7 @@ Overview of extensions included in IPython installations
 |`executing` version|IPython modules that include it|
 | --- | --- |
 |1.2.0|`IPython/8.14.0-GCCcore-12.3.0`|
-|2.0.1|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
+|2.0.1|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |2.2.0|`IPython/9.3.0-GCCcore-14.2.0`|
 
 ### ipython
@@ -79,7 +79,7 @@ Overview of extensions included in IPython installations
 
 |`matplotlib-inline` version|IPython modules that include it|
 | --- | --- |
-|0.1.6|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
+|0.1.6|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
 
 ### matplotlib_inline
 
@@ -100,7 +100,7 @@ Overview of extensions included in IPython installations
 
 |`pickleshare` version|IPython modules that include it|
 | --- | --- |
-|0.7.5|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
+|0.7.5|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
 
 ### prompt_toolkit
 
@@ -108,7 +108,7 @@ Overview of extensions included in IPython installations
 |`prompt_toolkit` version|IPython modules that include it|
 | --- | --- |
 |3.0.39|`IPython/8.14.0-GCCcore-12.3.0`|
-|3.0.41|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
+|3.0.41|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |3.0.51|`IPython/9.3.0-GCCcore-14.2.0`|
 
 ### pure_eval
@@ -116,7 +116,7 @@ Overview of extensions included in IPython installations
 
 |`pure_eval` version|IPython modules that include it|
 | --- | --- |
-|0.2.2|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
+|0.2.2|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
 |0.2.3|`IPython/9.3.0-GCCcore-14.2.0`|
 
 ### stack_data
@@ -125,13 +125,13 @@ Overview of extensions included in IPython installations
 |`stack_data` version|IPython modules that include it|
 | --- | --- |
 |0.6.2|`IPython/8.14.0-GCCcore-12.3.0`|
-|0.6.3|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
+|0.6.3|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
 
 ### traitlets
 
 
 |`traitlets` version|IPython modules that include it|
 | --- | --- |
-|5.13.0|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
+|5.13.0|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |5.14.3|`IPython/9.3.0-GCCcore-14.2.0`|
 |5.9.0|`IPython/8.14.0-GCCcore-12.3.0`|

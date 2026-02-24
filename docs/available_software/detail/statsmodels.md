@@ -24,11 +24,11 @@ Overview of extensions included in statsmodels installations
 
 |`patsy` version|statsmodels modules that include it|
 | --- | --- |
-|0.5.6|`statsmodels/0.14.1-gfbf-2023a`<br/>`statsmodels/0.14.1-gfbf-2023b`|
+|0.5.6|`statsmodels/0.14.1-gfbf-2023b`<br/>`statsmodels/0.14.1-gfbf-2023a`|
 
 ### statsmodels
 
 
 |`statsmodels` version|statsmodels modules that include it|
 | --- | --- |
-|0.14.1|`statsmodels/0.14.1-gfbf-2023a`<br/>`statsmodels/0.14.1-gfbf-2023b`|
+|0.14.1|`statsmodels/0.14.1-gfbf-2023b`<br/>`statsmodels/0.14.1-gfbf-2023a`|

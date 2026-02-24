@@ -159,14 +159,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`anytime` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.3.9|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.3.9|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### aroma.affymetrix
 
 
 |`aroma.affymetrix` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.2.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|3.2.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |3.2.2|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### aroma.apd
@@ -182,7 +182,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`aroma.core` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.3.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|3.3.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |3.3.1|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### aroma.light
@@ -199,7 +199,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`ash` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.0-15|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.0-15|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### assorthead
 
@@ -231,21 +231,21 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`aws.s3` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.3.21|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.3.21|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### aws.signature
 
 
 |`aws.signature` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.6.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.6.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### babelgene
 
 
 |`babelgene` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|22.9|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|22.9|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### ballgown
 
@@ -448,7 +448,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`blme` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.0-5|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|1.0-5|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |1.0-6|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### bluster
@@ -483,28 +483,28 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`BSgenome.Cfamiliaris.UCSC.canFam3` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.4.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.4.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### BSgenome.Hsapiens.UCSC.hg19
 
 
 |`BSgenome.Hsapiens.UCSC.hg19` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.4.3|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.4.3|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### BSgenome.Hsapiens.UCSC.hg38
 
 
 |`BSgenome.Hsapiens.UCSC.hg38` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.4.5|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.4.5|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### BSgenome.Mmusculus.UCSC.mm10
 
 
 |`BSgenome.Mmusculus.UCSC.mm10` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.4.3|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.4.3|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### bsseq
 
@@ -529,7 +529,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`ca` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.71.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.71.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### CAGEfightR
 
@@ -659,7 +659,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`colorRamps` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.3.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|2.3.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |2.3.4|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### ComplexHeatmap
@@ -897,14 +897,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`DO.db` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.9|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|2.9|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### docopt
 
 
 |`docopt` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.7.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.7.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### DOSE
 
@@ -992,7 +992,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`egg` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.4.5|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.4.5|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### emmeans
 
@@ -1016,21 +1016,21 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`EnsDb.Hsapiens.v75` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.99.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|2.99.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### EnsDb.Hsapiens.v79
 
 
 |`EnsDb.Hsapiens.v79` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.99.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|2.99.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### EnsDb.Hsapiens.v86
 
 
 |`EnsDb.Hsapiens.v86` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.99.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|2.99.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### ensembldb
 
@@ -1055,7 +1055,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`estimability` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.4.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|1.4.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 
 ### ExperimentHub
 
@@ -1079,7 +1079,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`factoextra` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.0.7|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.0.7|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### fANCOVA
 
@@ -1102,21 +1102,21 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`FDb.InfiniumMethylation.hg19` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.2.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|2.2.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### fds
 
 
 |`fds` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.8|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.8|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### feature
 
 
 |`feature` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.2.15|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.2.15|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### fgsea
 
@@ -1275,7 +1275,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`fresh` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.2.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.2.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.2.1|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### gcrma
@@ -1461,7 +1461,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`ggdendro` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1.23|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.1.23|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.2.0|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### ggnewscale
@@ -1485,7 +1485,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`ggpointdensity` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.1.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### ggrastr
 
@@ -1500,7 +1500,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`ggseqlogo` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.2|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### ggtangle
@@ -1639,14 +1639,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`gsmoothr` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1.7|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.1.7|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### gson
 
 
 |`gson` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.1.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### GSVA
 
@@ -1671,7 +1671,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`GWASExactHW` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.01|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|1.01|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |1.2|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### GWASTools
@@ -1704,7 +1704,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`HDO.db` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.99.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.99.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |1.0.0|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### hdrcde
@@ -1712,7 +1712,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`hdrcde` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.4|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|3.4|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### heatmaply
 
@@ -1727,7 +1727,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`hgu133plus2.db` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.13.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|3.13.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### hiAnnotator
 
@@ -1768,7 +1768,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`Homo.sapiens` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.3.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.3.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### IHW
 
@@ -1784,35 +1784,35 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`IlluminaHumanMethylation450kanno.ilmn12.hg19` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.6.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.6.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### IlluminaHumanMethylation450kmanifest
 
 
 |`IlluminaHumanMethylation450kmanifest` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.4.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.4.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### IlluminaHumanMethylationEPICanno.ilm10b2.hg19
 
 
 |`IlluminaHumanMethylationEPICanno.ilm10b2.hg19` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.6.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.6.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### IlluminaHumanMethylationEPICanno.ilm10b4.hg19
 
 
 |`IlluminaHumanMethylationEPICanno.ilm10b4.hg19` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.6.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.6.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### IlluminaHumanMethylationEPICmanifest
 
 
 |`IlluminaHumanMethylationEPICmanifest` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.3.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.3.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### IlluminaHumanMethylationEPICv2anno.20a1.hg38
 
@@ -1869,7 +1869,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`intervals` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.15.4|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.15.4|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.15.5|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### IRanges
@@ -1886,14 +1886,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`isva` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.9|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.9|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### JASPAR2020
 
 
 |`JASPAR2020` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.99.10|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.99.10|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### KEGGgraph
 
@@ -1943,7 +1943,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`log4r` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.4.3|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.4.3|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.4.4|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### lpsymphony
@@ -1960,7 +1960,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`lsa` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.73.3|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.73.3|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### lumi
 
@@ -2028,7 +2028,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`MBA` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1-0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.1-0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.1-2|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### MEDIPS
@@ -2062,7 +2062,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`metaMA` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.1.3|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|3.1.3|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### metap
 
@@ -2220,7 +2220,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`msigdbr` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|7.5.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|7.5.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### MSnbase
 
@@ -2317,7 +2317,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`mutoss` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1-13|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.1-13|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### mzID
 
@@ -2342,7 +2342,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`NADA` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.6-1.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.6-1.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### ncdfFlow
 
@@ -2412,14 +2412,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`oompaBase` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.2.9|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|3.2.9|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### oompaData
 
 
 |`oompaData` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.1.3|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|3.1.3|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |3.1.4|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### openCyto
@@ -2550,7 +2550,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`poweRlaw` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.70.6|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.70.6|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.80.0|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### preprocessCore
@@ -2603,14 +2603,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`PRROC` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.3.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.3.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### PSCBS
 
 
 |`PSCBS` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.66.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.66.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.67.0|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### PSMatch
@@ -2641,7 +2641,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`qap` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1-2|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.1-2|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### QDNAseq
 
@@ -2665,7 +2665,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`qlcMatrix` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.9.7|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.9.7|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |0.9.8|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### qqconf
@@ -2699,7 +2699,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`R.devices` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.17.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|2.17.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |2.17.2|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### R.filesets
@@ -2707,7 +2707,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`R.filesets` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.15.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|2.15.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |2.15.1|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### R.huge
@@ -2731,14 +2731,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`randomcoloR` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.1.0.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.1.0.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### rARPACK
 
 
 |`rARPACK` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.11-0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|0.11-0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 
 ### RBGL
 
@@ -2787,14 +2787,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`RcppML` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.3.7|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.3.7|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### RcppZiggurat
 
 
 |`RcppZiggurat` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1.6|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.1.6|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### reactome.db
 
@@ -2828,7 +2828,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`reldist` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.7-2|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.7-2|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### remaCor
 
@@ -2871,7 +2871,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`restfulr` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.0.15|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.0.15|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### Rfast
 
@@ -3099,7 +3099,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`rsvd` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.0.5|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.0.5|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### rtracklayer
 
@@ -3115,7 +3115,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`Rwave` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.6-5|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|2.6-5|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### S4Arrays
 
@@ -3139,7 +3139,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`samr` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|3.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### SamSPECTRAL
 
@@ -3225,7 +3225,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`scrime` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.3.5|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.3.5|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### scuttle
 
@@ -3303,14 +3303,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`shinyBS` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.61.1|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.61.1|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### shinydashboardPlus
 
 
 |`shinydashboardPlus` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.0.3|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`|
+|2.0.3|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`|
 |2.0.5|`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### shinyFiles
@@ -3318,21 +3318,21 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`shinyFiles` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.9.3|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.9.3|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### shinyhelper
 
 
 |`shinyhelper` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.3.2|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.3.2|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### shinypanel
 
 
 |`shinypanel` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.1.5|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.1.5|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### shinyWidgets
 
@@ -3417,7 +3417,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`sitmo` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|2.0.2|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|2.0.2|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### slingshot
 
@@ -3433,7 +3433,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`SMVar` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|1.3.4|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|1.3.4|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### SNPRelate
 
@@ -3475,7 +3475,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`sparsesvd` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.2-2|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.2-2|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### SpatialExperiment
 
@@ -3562,7 +3562,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`susieR` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.12.35|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.12.35|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### sva
 
@@ -3578,7 +3578,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`TailRank` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.2.2|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|3.2.2|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### TFBSTools
 
@@ -3594,7 +3594,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`TFMPvalue` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.0.9|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.0.9|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### tkWidgets
 
@@ -3645,14 +3645,14 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`TxDb.Hsapiens.UCSC.hg19.knownGene` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.2.2|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|3.2.2|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### TxDb.Mmusculus.UCSC.mm10.knownGene
 
 
 |`TxDb.Mmusculus.UCSC.mm10.knownGene` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|3.10.0|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|3.10.0|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### txdbmaker
 
@@ -3742,7 +3742,7 @@ Overview of extensions included in R-bundle-Bioconductor installations
 
 |`waiter` version|R-bundle-Bioconductor modules that include it|
 | --- | --- |
-|0.2.5|`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
+|0.2.5|`R-bundle-Bioconductor/3.16-foss-2022b-R-4.2.2`<br/>`R-bundle-Bioconductor/3.18-foss-2023a-R-4.3.2`<br/>`R-bundle-Bioconductor/3.20-foss-2024a-R-4.4.2`|
 
 ### wateRmelon
 

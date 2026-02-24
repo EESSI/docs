@@ -28,7 +28,7 @@ Overview of extensions included in SQLAlchemy installations
 
 |`alembic` version|SQLAlchemy modules that include it|
 | --- | --- |
-|1.13.1|`SQLAlchemy/2.0.25-GCCcore-12.3.0`<br/>`SQLAlchemy/2.0.29-GCCcore-13.2.0`|
+|1.13.1|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
 |1.14.0|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
 
 ### async-timeout
@@ -36,7 +36,7 @@ Overview of extensions included in SQLAlchemy installations
 
 |`async-timeout` version|SQLAlchemy modules that include it|
 | --- | --- |
-|4.0.3|`SQLAlchemy/2.0.25-GCCcore-12.3.0`<br/>`SQLAlchemy/2.0.29-GCCcore-13.2.0`|
+|4.0.3|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
 |5.0.1|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
 
 ### asyncpg
@@ -44,7 +44,7 @@ Overview of extensions included in SQLAlchemy installations
 
 |`asyncpg` version|SQLAlchemy modules that include it|
 | --- | --- |
-|0.29.0|`SQLAlchemy/2.0.25-GCCcore-12.3.0`<br/>`SQLAlchemy/2.0.29-GCCcore-13.2.0`|
+|0.29.0|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
 |0.30.0|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
 
 ### greenlet

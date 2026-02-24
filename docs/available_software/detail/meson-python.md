@@ -30,9 +30,9 @@ Overview of extensions included in meson-python installations
 | --- | --- |
 |0.11.0|`meson-python/0.11.0-GCCcore-12.2.0`|
 |0.13.2|`meson-python/0.13.2-GCCcore-12.3.0`|
-|0.15.0|`meson-python/0.15.0-GCCcore-13.2.0`<br/>`meson-python/0.15.0-GCCcore-12.3.0`|
+|0.15.0|`meson-python/0.15.0-GCCcore-12.3.0`<br/>`meson-python/0.15.0-GCCcore-13.2.0`|
 |0.16.0|`meson-python/0.16.0-GCCcore-13.3.0`|
-|0.18.0|`meson-python/0.18.0-GCCcore-14.3.0`<br/>`meson-python/0.18.0-GCCcore-14.2.0`|
+|0.18.0|`meson-python/0.18.0-GCCcore-14.2.0`<br/>`meson-python/0.18.0-GCCcore-14.3.0`|
 
 ### pyproject-metadata
 
@@ -40,6 +40,6 @@ Overview of extensions included in meson-python installations
 |`pyproject-metadata` version|meson-python modules that include it|
 | --- | --- |
 |0.6.1|`meson-python/0.11.0-GCCcore-12.2.0`|
-|0.7.1|`meson-python/0.13.2-GCCcore-12.3.0`<br/>`meson-python/0.15.0-GCCcore-13.2.0`<br/>`meson-python/0.15.0-GCCcore-12.3.0`|
+|0.7.1|`meson-python/0.15.0-GCCcore-12.3.0`<br/>`meson-python/0.13.2-GCCcore-12.3.0`<br/>`meson-python/0.15.0-GCCcore-13.2.0`|
 |0.8.0|`meson-python/0.16.0-GCCcore-13.3.0`|
-|0.9.1|`meson-python/0.18.0-GCCcore-14.3.0`<br/>`meson-python/0.18.0-GCCcore-14.2.0`|
+|0.9.1|`meson-python/0.18.0-GCCcore-14.2.0`<br/>`meson-python/0.18.0-GCCcore-14.3.0`|

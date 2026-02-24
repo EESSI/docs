@@ -29,7 +29,7 @@ Overview of extensions included in lit installations
 |`lit` version|lit modules that include it|
 | --- | --- |
 |18.1.2|`lit/18.1.2-GCCcore-12.3.0`|
-|18.1.7|`lit/18.1.7-GCCcore-13.3.0`<br/>`lit/18.1.7-GCCcore-13.2.0`|
+|18.1.7|`lit/18.1.7-GCCcore-13.2.0`<br/>`lit/18.1.7-GCCcore-13.3.0`|
 |18.1.8|`lit/18.1.8-GCCcore-14.3.0`<br/>`lit/18.1.8-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.2.0`|
 
 ### pexpect
@@ -37,11 +37,11 @@ Overview of extensions included in lit installations
 
 |`pexpect` version|lit modules that include it|
 | --- | --- |
-|4.9.0|`lit/18.1.7-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.2.0`<br/>`lit/18.1.7-GCCcore-13.2.0`<br/>`lit/18.1.8-GCCcore-14.3.0`<br/>`lit/18.1.8-GCCcore-13.3.0`|
+|4.9.0|`lit/18.1.7-GCCcore-13.3.0`<br/>`lit/18.1.7-GCCcore-13.2.0`<br/>`lit/18.1.8-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.2.0`<br/>`lit/18.1.8-GCCcore-14.3.0`|
 
 ### ptyprocess
 
 
 |`ptyprocess` version|lit modules that include it|
 | --- | --- |
-|0.7.0|`lit/18.1.7-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.2.0`<br/>`lit/18.1.7-GCCcore-13.2.0`<br/>`lit/18.1.8-GCCcore-14.3.0`<br/>`lit/18.1.8-GCCcore-13.3.0`|
+|0.7.0|`lit/18.1.7-GCCcore-13.3.0`<br/>`lit/18.1.7-GCCcore-13.2.0`<br/>`lit/18.1.8-GCCcore-13.3.0`<br/>`lit/18.1.8-GCCcore-14.2.0`<br/>`lit/18.1.8-GCCcore-14.3.0`|

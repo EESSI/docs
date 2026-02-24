@@ -196,7 +196,7 @@ Overview of extensions included in R installations
 |`askpass` version|R modules that include it|
 | --- | --- |
 |1.1|`R/4.2.2-foss-2022b`|
-|1.2.0|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.2.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`|
 |1.2.1|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### asnipe
@@ -358,7 +358,7 @@ Overview of extensions included in R installations
 
 |`b` version|R modules that include it|
 | --- | --- |
-|a|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|a|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### backports
 
@@ -400,7 +400,7 @@ Overview of extensions included in R installations
 
 |`base64enc` version|R modules that include it|
 | --- | --- |
-|0.1-3|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.1-3|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### BatchJobs
 
@@ -694,8 +694,8 @@ Overview of extensions included in R installations
 
 |`brew` version|R modules that include it|
 | --- | --- |
-|1.0-10|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
-|1.0-8|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|1.0-10|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
+|1.0-8|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
 
 ### brglm
 
@@ -723,8 +723,8 @@ Overview of extensions included in R installations
 
 |`brio` version|R modules that include it|
 | --- | --- |
-|1.1.3|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.1.5|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.1.3|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.1.5|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### brms
 
@@ -784,7 +784,7 @@ Overview of extensions included in R installations
 
 |`c` version|R modules that include it|
 | --- | --- |
-|o|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|o|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### cachem
 
@@ -793,7 +793,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.0.7|`R/4.2.2-foss-2022b`|
 |1.0.8|`R/4.3.2-gfbf-2023a`|
-|1.1.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.1.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### Cairo
 
@@ -814,8 +814,8 @@ Overview of extensions included in R installations
 
 |`callr` version|R modules that include it|
 | --- | --- |
-|3.7.3|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|3.7.6|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|3.7.3|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|3.7.6|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### car
 
@@ -964,7 +964,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |3.6.0|`R/4.2.2-foss-2022b`|
 |3.6.1|`R/4.3.2-gfbf-2023a`|
-|3.6.3|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|3.6.3|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |3.6.5|`R/4.5.1-gfbf-2025a`|
 
 ### clipr
@@ -972,7 +972,7 @@ Overview of extensions included in R installations
 
 |`clipr` version|R modules that include it|
 | --- | --- |
-|0.8.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.8.0|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### clisymbols
 
@@ -1260,8 +1260,8 @@ Overview of extensions included in R installations
 
 |`crayon` version|R modules that include it|
 | --- | --- |
-|1.5.2|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.5.3|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.5.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.5.3|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### credentials
 
@@ -1269,7 +1269,7 @@ Overview of extensions included in R installations
 |`credentials` version|R modules that include it|
 | --- | --- |
 |1.3.2|`R/4.2.2-foss-2022b`|
-|2.0.1|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.1-gfbf-2023b`|
+|2.0.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`|
 |2.0.2|`R/4.4.2-gfbf-2024a`|
 |2.0.3|`R/4.5.1-gfbf-2025a`|
 
@@ -1366,7 +1366,7 @@ Overview of extensions included in R installations
 
 |`d` version|R modules that include it|
 | --- | --- |
-|a|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|a|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### d3Network
 
@@ -1513,8 +1513,8 @@ Overview of extensions included in R installations
 
 |`desc` version|R modules that include it|
 | --- | --- |
-|1.4.2|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.4.3|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.4.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.4.3|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### DescTools
 
@@ -1535,7 +1535,7 @@ Overview of extensions included in R installations
 
 |`devtools` version|R modules that include it|
 | --- | --- |
-|2.4.5|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|2.4.5|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.4.2-gfbf-2024a`|
 |2.4.6|`R/4.5.1-gfbf-2025a`|
 
 ### dfidx
@@ -1592,7 +1592,7 @@ Overview of extensions included in R installations
 
 |`diffobj` version|R modules that include it|
 | --- | --- |
-|0.3.5|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.3.5|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.4.2-gfbf-2024a`|
 |0.3.6|`R/4.5.1-gfbf-2025a`|
 
 ### digest
@@ -1745,7 +1745,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |0.4.2|`R/4.2.2-foss-2022b`|
 |0.4.3|`R/4.3.2-gfbf-2023a`|
-|0.4.4|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.4.4|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### downloader
 
@@ -1892,7 +1892,7 @@ Overview of extensions included in R installations
 
 |`ellipsis` version|R modules that include it|
 | --- | --- |
-|0.3.2|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.3.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### elliptic
 
@@ -2087,7 +2087,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.0.4|`R/4.2.2-foss-2022b`|
 |1.0.5|`R/4.3.2-gfbf-2023a`|
-|1.0.6|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.0.6|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### farver
 
@@ -2129,8 +2129,8 @@ Overview of extensions included in R installations
 
 |`fastmap` version|R modules that include it|
 | --- | --- |
-|1.1.1|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.2.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.1.1|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.2.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### fastmatch
 
@@ -2285,7 +2285,7 @@ Overview of extensions included in R installations
 |`fontawesome` version|R modules that include it|
 | --- | --- |
 |0.5.0|`R/4.2.2-foss-2022b`|
-|0.5.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.5.2|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`|
 |0.5.3|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### fontBitstreamVera
@@ -2437,7 +2437,7 @@ Overview of extensions included in R installations
 
 |`g` version|R modules that include it|
 | --- | --- |
-|r|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|r|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### gam
 
@@ -2854,8 +2854,8 @@ Overview of extensions included in R installations
 
 |`gh` version|R modules that include it|
 | --- | --- |
-|1.4.0|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.4.1|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.4.0|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.4.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.5.0|`R/4.5.1-gfbf-2025a`|
 
 ### GillespieSSA
@@ -2877,7 +2877,7 @@ Overview of extensions included in R installations
 
 |`gitcreds` version|R modules that include it|
 | --- | --- |
-|0.1.2|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.1.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### GJRM
 
@@ -2947,7 +2947,7 @@ Overview of extensions included in R installations
 
 |`glue` version|R modules that include it|
 | --- | --- |
-|1.6.2|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|1.6.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
 |1.7.0|`R/4.4.1-gfbf-2023b`|
 |1.8.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
@@ -3264,8 +3264,8 @@ Overview of extensions included in R installations
 
 |`highr` version|R modules that include it|
 | --- | --- |
-|0.10|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|0.11|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.10|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|0.11|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### Hmisc
 
@@ -3302,7 +3302,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |0.5.4|`R/4.2.2-foss-2022b`|
 |0.5.7|`R/4.3.2-gfbf-2023a`|
-|0.5.8.1|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.5.8.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### htmlwidgets
 
@@ -3311,7 +3311,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.6.1|`R/4.2.2-foss-2022b`|
 |1.6.2|`R/4.3.2-gfbf-2023a`|
-|1.6.4|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.6.4|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### httpcode
 
@@ -3326,7 +3326,7 @@ Overview of extensions included in R installations
 |`httpuv` version|R modules that include it|
 | --- | --- |
 |1.6.12|`R/4.3.2-gfbf-2023a`|
-|1.6.15|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.6.15|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.6.16|`R/4.5.1-gfbf-2025a`|
 |1.6.9|`R/4.2.2-foss-2022b`|
 
@@ -3336,7 +3336,7 @@ Overview of extensions included in R installations
 |`httr` version|R modules that include it|
 | --- | --- |
 |1.4.5|`R/4.2.2-foss-2022b`|
-|1.4.7|`R/4.5.1-gfbf-2025a`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.4.7|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### httr2
 
@@ -3473,7 +3473,7 @@ Overview of extensions included in R installations
 
 |`ini` version|R modules that include it|
 | --- | --- |
-|0.3.1|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.3.1|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### inline
 
@@ -3648,7 +3648,7 @@ Overview of extensions included in R installations
 
 |`jquerylib` version|R modules that include it|
 | --- | --- |
-|0.1.4|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.1.4|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### jsonify
 
@@ -3819,7 +3819,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.3.0|`R/4.2.2-foss-2022b`|
 |1.3.1|`R/4.3.2-gfbf-2023a`|
-|1.3.2|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.3.2|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.4.4|`R/4.5.1-gfbf-2025a`|
 
 ### lattice
@@ -3953,8 +3953,8 @@ Overview of extensions included in R installations
 
 |`lifecycle` version|R modules that include it|
 | --- | --- |
-|1.0.3|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.0.4|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.0.3|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.0.4|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### limSolve
 
@@ -4157,7 +4157,7 @@ Overview of extensions included in R installations
 
 |`m` version|R modules that include it|
 | --- | --- |
-|e|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|e|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### magic
 
@@ -4178,7 +4178,7 @@ Overview of extensions included in R installations
 
 |`magrittr` version|R modules that include it|
 | --- | --- |
-|2.0.3|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|2.0.3|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.4.2-gfbf-2024a`|
 |2.0.4|`R/4.5.1-gfbf-2025a`|
 
 ### MALDIquant
@@ -4382,7 +4382,7 @@ Overview of extensions included in R installations
 
 |`memoise` version|R modules that include it|
 | --- | --- |
-|2.0.1|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|2.0.1|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### memuse
 
@@ -4487,7 +4487,7 @@ Overview of extensions included in R installations
 
 |`mime` version|R modules that include it|
 | --- | --- |
-|0.12|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.12|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.4.2-gfbf-2024a`|
 |0.13|`R/4.5.1-gfbf-2025a`|
 
 ### minerva
@@ -4502,7 +4502,7 @@ Overview of extensions included in R installations
 
 |`miniUI` version|R modules that include it|
 | --- | --- |
-|0.1.1.1|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.1.1.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.4.2-gfbf-2024a`|
 |0.1.2|`R/4.5.1-gfbf-2025a`|
 
 ### minpack.lm
@@ -5123,7 +5123,7 @@ Overview of extensions included in R installations
 
 |`p` version|R modules that include it|
 | --- | --- |
-|a|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|a|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### packrat
 
@@ -5349,7 +5349,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.11.1|`R/4.5.1-gfbf-2025a`|
 |1.8.1|`R/4.2.2-foss-2022b`|
-|1.9.0|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.9.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### pim
 
@@ -5388,14 +5388,14 @@ Overview of extensions included in R installations
 
 |`pkgconfig` version|R modules that include it|
 | --- | --- |
-|2.0.3|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|2.0.3|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### pkgdown
 
 
 |`pkgdown` version|R modules that include it|
 | --- | --- |
-|2.0.7|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|2.0.7|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
 |2.0.9|`R/4.4.1-gfbf-2023b`|
 |2.1.1|`R/4.4.2-gfbf-2024a`|
 |2.1.3|`R/4.5.1-gfbf-2025a`|
@@ -5570,7 +5570,7 @@ Overview of extensions included in R installations
 
 |`praise` version|R modules that include it|
 | --- | --- |
-|1.0.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|1.0.0|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### PresenceAbsence
 
@@ -5599,7 +5599,7 @@ Overview of extensions included in R installations
 |`prettyunits` version|R modules that include it|
 | --- | --- |
 |1.1.1|`R/4.2.2-foss-2022b`|
-|1.2.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.2.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### princurve
 
@@ -5622,7 +5622,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |3.8.0|`R/4.2.2-foss-2022b`|
 |3.8.2|`R/4.3.2-gfbf-2023a`|
-|3.8.4|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|3.8.4|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |3.8.6|`R/4.5.1-gfbf-2025a`|
 
 ### prodlim
@@ -5652,7 +5652,7 @@ Overview of extensions included in R installations
 |`profvis` version|R modules that include it|
 | --- | --- |
 |0.3.7|`R/4.2.2-foss-2022b`|
-|0.3.8|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.3.8|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`|
 |0.4.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### progress
@@ -5683,7 +5683,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.2.0.1|`R/4.2.2-foss-2022b`|
 |1.2.1|`R/4.3.2-gfbf-2023a`|
-|1.3.0|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.3.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.3.3|`R/4.5.1-gfbf-2025a`|
 
 ### proto
@@ -5773,7 +5773,7 @@ Overview of extensions included in R installations
 |`purrr` version|R modules that include it|
 | --- | --- |
 |1.0.1|`R/4.2.2-foss-2022b`|
-|1.0.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.0.2|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`|
 |1.1.0|`R/4.5.1-gfbf-2025a`|
 
 ### pvclust
@@ -5900,7 +5900,7 @@ Overview of extensions included in R installations
 
 |`R6` version|R modules that include it|
 | --- | --- |
-|2.5.1|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|2.5.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.4.2-gfbf-2024a`|
 |2.6.1|`R/4.5.1-gfbf-2025a`|
 
 ### ragg
@@ -5975,7 +5975,7 @@ Overview of extensions included in R installations
 
 |`rappdirs` version|R modules that include it|
 | --- | --- |
-|0.3.3|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.3.3|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### rARPACK
 
@@ -6059,7 +6059,7 @@ Overview of extensions included in R installations
 
 |`rcmdcheck` version|R modules that include it|
 | --- | --- |
-|1.4.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|1.4.0|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### RColorBrewer
 
@@ -6252,7 +6252,7 @@ Overview of extensions included in R installations
 
 |`rematch2` version|R modules that include it|
 | --- | --- |
-|2.1.2|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|2.1.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### remotes
 
@@ -6261,7 +6261,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |2.4.2|`R/4.2.2-foss-2022b`|
 |2.4.2.1|`R/4.3.2-gfbf-2023a`|
-|2.5.0|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|2.5.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### rentrez
 
@@ -6452,7 +6452,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.1.0|`R/4.2.2-foss-2022b`|
 |1.1.2|`R/4.3.2-gfbf-2023a`|
-|1.1.4|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.1.4|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.1.6|`R/4.5.1-gfbf-2025a`|
 
 ### rle
@@ -6625,7 +6625,7 @@ Overview of extensions included in R installations
 
 |`roxygen2` version|R modules that include it|
 | --- | --- |
-|7.2.3|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|7.2.3|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
 |7.3.1|`R/4.4.1-gfbf-2023b`|
 |7.3.2|`R/4.4.2-gfbf-2024a`|
 |7.3.3|`R/4.5.1-gfbf-2025a`|
@@ -6664,7 +6664,7 @@ Overview of extensions included in R installations
 |`rprojroot` version|R modules that include it|
 | --- | --- |
 |2.0.3|`R/4.2.2-foss-2022b`|
-|2.0.4|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|2.0.4|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`|
 |2.1.1|`R/4.5.1-gfbf-2025a`|
 
 ### rrcov
@@ -6808,7 +6808,7 @@ Overview of extensions included in R installations
 
 |`rversions` version|R modules that include it|
 | --- | --- |
-|2.1.2|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|2.1.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### rvertnet
 
@@ -6857,8 +6857,8 @@ Overview of extensions included in R installations
 
 |`s` version|R modules that include it|
 | --- | --- |
-|p|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|t|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|p|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
+|t|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### s2
 
@@ -6889,7 +6889,7 @@ Overview of extensions included in R installations
 |0.4.10|`R/4.5.1-gfbf-2025a`|
 |0.4.5|`R/4.2.2-foss-2022b`|
 |0.4.7|`R/4.3.2-gfbf-2023a`|
-|0.4.9|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.4.9|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### SBdecomp
 
@@ -7029,7 +7029,7 @@ Overview of extensions included in R installations
 
 |`sessioninfo` version|R modules that include it|
 | --- | --- |
-|1.2.2|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.2.2|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.2.3|`R/4.5.1-gfbf-2025a`|
 
 ### setRNG
@@ -7272,7 +7272,7 @@ Overview of extensions included in R installations
 
 |`sourcetools` version|R modules that include it|
 | --- | --- |
-|0.1.7-1|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.1.7-1|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### sp
 
@@ -7531,8 +7531,8 @@ Overview of extensions included in R installations
 
 |`stringi` version|R modules that include it|
 | --- | --- |
-|1.7.12|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.8.4|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.7.12|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.8.4|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.8.7|`R/4.5.1-gfbf-2025a`|
 
 ### stringr
@@ -7540,8 +7540,8 @@ Overview of extensions included in R installations
 
 |`stringr` version|R modules that include it|
 | --- | --- |
-|1.5.0|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.5.1|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.5.0|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.5.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.5.2|`R/4.5.1-gfbf-2025a`|
 
 ### strucchange
@@ -7634,7 +7634,7 @@ Overview of extensions included in R installations
 |`sys` version|R modules that include it|
 | --- | --- |
 |3.4.1|`R/4.2.2-foss-2022b`|
-|3.4.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.1-gfbf-2023b`|
+|3.4.2|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`|
 |3.4.3|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### systemfonts
@@ -7644,7 +7644,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.0.4|`R/4.2.2-foss-2022b`|
 |1.0.5|`R/4.3.2-gfbf-2023a`|
-|1.1.0|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.1.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.3.1|`R/4.5.1-gfbf-2025a`|
 
 ### t
@@ -7652,8 +7652,8 @@ Overview of extensions included in R installations
 
 |`t` version|R modules that include it|
 | --- | --- |
-|c|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|o|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|c|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
+|o|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### tableone
 
@@ -7746,7 +7746,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |3.1.7|`R/4.2.2-foss-2022b`|
 |3.2.0|`R/4.3.2-gfbf-2023a`|
-|3.2.1.1|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|3.2.1.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |3.2.3|`R/4.5.1-gfbf-2025a`|
 
 ### textcat
@@ -7770,7 +7770,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |0.3.6|`R/4.2.2-foss-2022b`|
 |0.3.7|`R/4.3.2-gfbf-2023a`|
-|0.4.0|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.4.0|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.0.3|`R/4.5.1-gfbf-2025a`|
 
 ### TFisher
@@ -7800,7 +7800,7 @@ Overview of extensions included in R installations
 |`tibble` version|R modules that include it|
 | --- | --- |
 |3.2.0|`R/4.2.2-foss-2022b`|
-|3.2.1|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|3.2.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`|
 |3.3.0|`R/4.5.1-gfbf-2025a`|
 
 ### tictoc
@@ -8092,7 +8092,7 @@ Overview of extensions included in R installations
 
 |`u` version|R modules that include it|
 | --- | --- |
-|t|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|t|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### ucminf
 
@@ -8169,7 +8169,7 @@ Overview of extensions included in R installations
 
 |`urlchecker` version|R modules that include it|
 | --- | --- |
-|1.0.1|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|1.0.1|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### urltools
 
@@ -8202,7 +8202,7 @@ Overview of extensions included in R installations
 |`utf8` version|R modules that include it|
 | --- | --- |
 |1.2.3|`R/4.2.2-foss-2022b`|
-|1.2.4|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.2.4|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`|
 |1.2.6|`R/4.5.1-gfbf-2025a`|
 
 ### uuid
@@ -8247,7 +8247,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |0.6.0|`R/4.2.2-foss-2022b`|
 |0.6.4|`R/4.3.2-gfbf-2023a`|
-|0.6.5|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.6.5|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### vegan
 
@@ -8346,7 +8346,7 @@ Overview of extensions included in R installations
 |`waldo` version|R modules that include it|
 | --- | --- |
 |0.4.0|`R/4.2.2-foss-2022b`|
-|0.5.2|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.1-gfbf-2023b`|
+|0.5.2|`R/4.4.1-gfbf-2023b`<br/>`R/4.3.2-gfbf-2023a`|
 |0.6.1|`R/4.4.2-gfbf-2024a`|
 |0.6.2|`R/4.5.1-gfbf-2025a`|
 
@@ -8411,7 +8411,7 @@ Overview of extensions included in R installations
 
 |`whisker` version|R modules that include it|
 | --- | --- |
-|0.4.1|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|0.4.1|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### widgetframe
 
@@ -8539,7 +8539,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |1.3.3|`R/4.2.2-foss-2022b`|
 |1.3.5|`R/4.3.2-gfbf-2023a`|
-|1.3.6|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.3.6|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |1.4.0|`R/4.5.1-gfbf-2025a`|
 
 ### xopen
@@ -8547,15 +8547,15 @@ Overview of extensions included in R installations
 
 |`xopen` version|R modules that include it|
 | --- | --- |
-|1.0.0|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
-|1.0.1|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|1.0.0|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
+|1.0.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
 
 ### xtable
 
 
 |`xtable` version|R modules that include it|
 | --- | --- |
-|1.8-4|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|1.8-4|`R/4.3.2-gfbf-2023a`<br/>`R/4.4.2-gfbf-2024a`<br/>`R/4.5.1-gfbf-2025a`<br/>`R/4.4.1-gfbf-2023b`<br/>`R/4.2.2-foss-2022b`|
 
 ### xts
 
@@ -8577,7 +8577,7 @@ Overview of extensions included in R installations
 |`yaml` version|R modules that include it|
 | --- | --- |
 |2.3.10|`R/4.5.1-gfbf-2025a`<br/>`R/4.4.2-gfbf-2024a`|
-|2.3.7|`R/4.2.2-foss-2022b`<br/>`R/4.3.2-gfbf-2023a`|
+|2.3.7|`R/4.3.2-gfbf-2023a`<br/>`R/4.2.2-foss-2022b`|
 |2.3.8|`R/4.4.1-gfbf-2023b`|
 
 ### yulab.utils
@@ -8601,7 +8601,7 @@ Overview of extensions included in R installations
 | --- | --- |
 |2.2.2|`R/4.2.2-foss-2022b`|
 |2.3.0|`R/4.3.2-gfbf-2023a`|
-|2.3.1|`R/4.4.2-gfbf-2024a`<br/>`R/4.4.1-gfbf-2023b`|
+|2.3.1|`R/4.4.1-gfbf-2023b`<br/>`R/4.4.2-gfbf-2024a`|
 |2.3.3|`R/4.5.1-gfbf-2025a`|
 
 ### zoo

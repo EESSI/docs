@@ -299,7 +299,7 @@ Overview of extensions included in Python installations
 |3.10.1|`Python/3.13.1-GCCcore-14.2.0`|
 |3.12.0|`Python/3.13.5-GCCcore-14.3.0`|
 |3.8.0|`Python/3.10.8-GCCcore-12.2.0`|
-|3.9.0|`Python/3.11.3-GCCcore-12.3.0`<br/>`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.11.5-GCCcore-13.2.0`|
+|3.9.0|`Python/3.11.5-GCCcore-13.2.0`<br/>`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.11.3-GCCcore-12.3.0`|
 
 ### flit_scm
 
@@ -848,7 +848,7 @@ Overview of extensions included in Python installations
 | --- | --- |
 |7.0.5|`Python/3.10.8-GCCcore-12.2.0`|
 |7.1.0|`Python/3.11.3-GCCcore-12.3.0`|
-|8.1.0|`Python/3.13.1-GCCcore-14.2.0`<br/>`Python/3.12.3-GCCcore-13.3.0`|
+|8.1.0|`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.13.1-GCCcore-14.2.0`|
 |8.3.1|`Python/3.13.5-GCCcore-14.3.0`|
 
 ### shellingham
@@ -982,7 +982,7 @@ Overview of extensions included in Python installations
 
 |`tomli` version|Python modules that include it|
 | --- | --- |
-|2.0.1|`Python/3.11.3-GCCcore-12.3.0`<br/>`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.10.8-GCCcore-12.2.0`<br/>`Python/3.11.5-GCCcore-13.2.0`|
+|2.0.1|`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.11.5-GCCcore-13.2.0`<br/>`Python/3.10.8-GCCcore-12.2.0`<br/>`Python/3.11.3-GCCcore-12.3.0`|
 |2.2.1|`Python/3.13.1-GCCcore-14.2.0`<br/>`Python/3.13.5-GCCcore-14.3.0`|
 
 ### tomli_w

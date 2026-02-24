@@ -594,7 +594,7 @@ def generate_software_page(
     n_cols = len(table_data)
 
     n_rows = 1
-    for version in software_data['versions']:
+    for version in sorted(software_data['versions'], key=lambda x: x['version']):
         cpu_targets = format_cpu_arch_list(version['cpu_arch'])
         gpu_targets = format_gpu_arch_list(version['gpu_arch'])
         table_data.extend([

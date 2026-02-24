@@ -28,7 +28,7 @@ Overview of extensions included in Mako installations
 |`Mako` version|Mako modules that include it|
 | --- | --- |
 |1.2.4|`Mako/1.2.4-GCCcore-13.2.0`<br/>`Mako/1.2.4-GCCcore-12.3.0`|
-|1.3.10|`Mako/1.3.10-GCCcore-14.2.0`<br/>`Mako/1.3.10-GCCcore-14.3.0`|
+|1.3.10|`Mako/1.3.10-GCCcore-14.3.0`<br/>`Mako/1.3.10-GCCcore-14.2.0`|
 |1.3.5|`Mako/1.3.5-GCCcore-13.3.0`|
 
 ### MarkupSafe
@@ -44,4 +44,4 @@ Overview of extensions included in Mako installations
 
 |`MarkUpSafe` version|Mako modules that include it|
 | --- | --- |
-|3.0.2|`Mako/1.3.10-GCCcore-14.2.0`<br/>`Mako/1.3.10-GCCcore-14.3.0`|
+|3.0.2|`Mako/1.3.10-GCCcore-14.3.0`<br/>`Mako/1.3.10-GCCcore-14.2.0`|

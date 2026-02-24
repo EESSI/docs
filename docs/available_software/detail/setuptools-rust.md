@@ -11,10 +11,10 @@ implemented with PyO3 or rust-cpython.
 
 |Version|Supported CPU targets|Supported GPU targets|Module|
 | --- | --- | --- | --- |
-|1.6.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.6.0-GCCcore-12.3.0`|
-|1.8.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.8.0-GCCcore-13.2.0`|
 |1.11.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.11.0-GCCcore-14.2.0`|
 |1.11.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.11.0-GCCcore-14.3.0`|
+|1.6.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.6.0-GCCcore-12.3.0`|
+|1.8.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.8.0-GCCcore-13.2.0`|
 |1.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|`setuptools-rust/1.9.0-GCCcore-13.3.0`|
 
 ## Extensions
@@ -27,7 +27,7 @@ Overview of extensions included in setuptools-rust installations
 
 |`semantic-version` version|setuptools-rust modules that include it|
 | --- | --- |
-|2.10.0|`setuptools-rust/1.11.0-GCCcore-14.2.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.3.0`<br/>`setuptools-rust/1.9.0-GCCcore-13.3.0`|
+|2.10.0|`setuptools-rust/1.11.0-GCCcore-14.3.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.2.0`<br/>`setuptools-rust/1.9.0-GCCcore-13.3.0`|
 
 ### semantic_version
 
@@ -41,7 +41,7 @@ Overview of extensions included in setuptools-rust installations
 
 |`setuptools-rust` version|setuptools-rust modules that include it|
 | --- | --- |
-|1.11.0|`setuptools-rust/1.11.0-GCCcore-14.2.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.3.0`|
+|1.11.0|`setuptools-rust/1.11.0-GCCcore-14.3.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.2.0`|
 |1.6.0|`setuptools-rust/1.6.0-GCCcore-12.3.0`|
 |1.8.0|`setuptools-rust/1.8.0-GCCcore-13.2.0`|
 |1.9.0|`setuptools-rust/1.9.0-GCCcore-13.3.0`|

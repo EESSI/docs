@@ -24,18 +24,18 @@ Overview of extensions included in BioPerl installations
 
 |`Bio::Procedural` version|BioPerl modules that include it|
 | --- | --- |
-|1.7.4|`BioPerl/1.7.8-GCCcore-12.2.0`<br/>`BioPerl/1.7.8-GCCcore-12.3.0`|
+|1.7.4|`BioPerl/1.7.8-GCCcore-12.3.0`<br/>`BioPerl/1.7.8-GCCcore-12.2.0`|
 
 ### BioPerl
 
 
 |`BioPerl` version|BioPerl modules that include it|
 | --- | --- |
-|1.7.8|`BioPerl/1.7.8-GCCcore-12.2.0`<br/>`BioPerl/1.7.8-GCCcore-12.3.0`|
+|1.7.8|`BioPerl/1.7.8-GCCcore-12.3.0`<br/>`BioPerl/1.7.8-GCCcore-12.2.0`|
 
 ### XML::Writer
 
 
 |`XML::Writer` version|BioPerl modules that include it|
 | --- | --- |
-|0.900|`BioPerl/1.7.8-GCCcore-12.2.0`<br/>`BioPerl/1.7.8-GCCcore-12.3.0`|
+|0.900|`BioPerl/1.7.8-GCCcore-12.3.0`<br/>`BioPerl/1.7.8-GCCcore-12.2.0`|

@@ -31,7 +31,7 @@ Overview of extensions included in bokeh installations
 
 |`contourpy` version|bokeh modules that include it|
 | --- | --- |
-|1.0.7|`bokeh/3.2.2-foss-2023a`<br/>`bokeh/3.2.1-foss-2022b`|
+|1.0.7|`bokeh/3.2.1-foss-2022b`<br/>`bokeh/3.2.2-foss-2023a`|
 
 ### tornado
 
@@ -45,4 +45,4 @@ Overview of extensions included in bokeh installations
 
 |`xyzservices` version|bokeh modules that include it|
 | --- | --- |
-|2023.7.0|`bokeh/3.2.2-foss-2023a`<br/>`bokeh/3.2.1-foss-2022b`|
+|2023.7.0|`bokeh/3.2.1-foss-2022b`<br/>`bokeh/3.2.2-foss-2023a`|
