@@ -19,7 +19,7 @@ Overview of software available in [EESSI's production repository `software.eessi
 {% if pkg.is_extension -%}
 - <span class="software-item software-card"
     data-search="name:{{ pkg.name }} extension ext_type:{{ pkg.type }}" >
-    <span class="software-name"><a href="https://eessi.io/docs/available_software/detail/{{ pkg_slug }}">{{ pkg.name }}</a></span>
+    <span class="software-name"><a href="detail/{{ pkg_slug }}" target="_blank">{{ pkg.name }}</a></span>
     <span class="software-more-info"><small>(extension)</small></span>
     <br/>
     <p class="software-description">
@@ -28,7 +28,7 @@ Overview of software available in [EESSI's production repository `software.eessi
     <ul>
     {% for parent in pkg.all_parent_names %}
     {% set parent_slug = parent | replace(' ', '-') %}
-    <li><a href="https://eessi.io/docs/available_software/detail/{{ parent_slug }}">{{ parent }}</a></li>
+    <li><a href="detail/{{ parent_slug }}" target="_blank">{{ parent }}</a></li>
     {% endfor %}
     </p>
     </ul>
@@ -37,9 +37,9 @@ Overview of software available in [EESSI's production repository `software.eessi
 - <span class="software-item software-card"
        data-search="name:{{ pkg.name }} {{ pkg.homepage }} {{ pkg.description }} {{ pkg.cpu_families }} {{ pkg.eessi_versions }} ">
 
-    <span class="software-name"><a href="https://eessi.io/docs/available_software/detail/{{ pkg_slug }}">{{ pkg.name }}</a></span>
+    <span class="software-name"><a href="detail/{{ pkg_slug }}" target="_blank">{{ pkg.name }}</a></span>
     <!-- <span class="software-versions">{% if pkg.n_versions == 1 -%}({{ pkg.n_versions }} version){% else -%}({{ pkg.n_versions }} versions){% endif %}</span> -->
-    <span class="software-more-info"><a href="https://eessi.io/docs/available_software/detail/{{ pkg_slug }}">(more details)</a></span>
+    <span class="software-more-info"><a href="detail/{{ pkg_slug }}" target="_blank">(more details)</a></span>
     <br/>
     <span class="software-link">{{ pkg.homepages }}</span>
     <br/>
