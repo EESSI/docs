@@ -1,67 +1,43 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: GitPython is a python library used to interact with Git repositories
-  license: Not confirmed
-  name: GitPython
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''GitPython/3.1.40-GCCcore-12.3.0'', ''GitPython/3.1.42-GCCcore-13.2.0'']'
-  url: https://gitpython.readthedocs.org
----
-
-GitPython
-=========
+# GitPython
 
 
-GitPython is a python library used to interact with Git repositories
+ GitPython is a python library used to interact with Git repositories 
 
-https://gitpython.readthedocs.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://gitpython.readthedocs.org](https://gitpython.readthedocs.org)</span>
 
-
-The overview below shows which GitPython installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using GitPython, load one of these modules using a `module load` command like:
-
-```shell
-module load GitPython/3.1.42-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GitPython/3.1.42-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|GitPython/3.1.40-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### GitPython/3.1.42-GCCcore-13.2.0
+|GitPython version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.1.40|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`GitPython/3.1.40-GCCcore-12.3.0`|
+|3.1.42|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`GitPython/3.1.42-GCCcore-13.2.0`|
+|3.1.43|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GitPython/3.1.43-GCCcore-13.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-gitdb-4.0.11, GitPython-3.1.42, smmap-5.0.1
+Overview of extensions included in GitPython installations
 
-### GitPython/3.1.40-GCCcore-12.3.0
 
-This is a list of extensions included in the module:
+### gitdb
 
-gitdb-4.0.11, GitPython-3.1.40, smmap-5.0.1
+
+|`gitdb` version|GitPython modules that include it|
+| --- | --- |
+|4.0.11|`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`|
+
+### GitPython
+
+
+|`GitPython` version|GitPython modules that include it|
+| --- | --- |
+|3.1.40|`GitPython/3.1.40-GCCcore-12.3.0`|
+|3.1.42|`GitPython/3.1.42-GCCcore-13.2.0`|
+|3.1.43|`GitPython/3.1.43-GCCcore-13.3.0`|
+
+### smmap
+
+
+|`smmap` version|GitPython modules that include it|
+| --- | --- |
+|5.0.1|`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`|

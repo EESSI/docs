@@ -1,63 +1,154 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Bundle of Python packages required to run AiiDA.An open-source Python
-    infrastructure to help researchers with automating, managing, persisting,sharing
-    and reproducing the complex workflows associated with modern computational science
-    and all associated data.
-  license: Not confirmed
-  name: aiida-core
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''aiida-core/2.7.2-foss-2023a'']'
-  url: https://www.aiida.net/
----
-
-aiida-core
-==========
+# aiida-core
 
 
-Bundle of Python packages required to run AiiDA.An open-source Python infrastructure to help researchers with automating, managing, persisting,sharing and reproducing the complex workflows associated with modern computational science and all associated data.
-
-https://www.aiida.net/
-# Available modules
-
-
-The overview below shows which aiida-core installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using aiida-core, load one of these modules using a `module load` command like:
-
-```shell
-module load aiida-core/2.7.2-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|aiida-core/2.7.2-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Bundle of Python packages required to run AiiDA.
+An open-source Python infrastructure to help researchers with automating, managing, persisting,
+sharing and reproducing the complex workflows associated with modern computational science and all associated data.
 
 
-### aiida-core/2.7.2-foss-2023a
+<small>homepage: </small><span class="software-link">[https://www.aiida.net/](https://www.aiida.net/)</span>
 
-This is a list of extensions included in the module:
+## Available installations
 
-aiida-core-2.7.2, aniso8601-10.0.1, archive-path-0.4.2, asyncssh-2.19.0, circus-0.19.0, click-spinner-0.1.10, disk_objectstore-1.3.0, docstring_parser-0.16, Flask-RESTful-0.3.10, graphviz-0.20.3, pgsu-0.3.0, PyCifRW-4.4.6, PyMySQL-0.9.3, pyparsing-3.1.0, python-memcached-1.62, pytray-0.3.4, seekpath-2.1.0, tqdm-4.67.1, upf-to-json-0.9.5
+
+|aiida-core version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.7.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|*???*|`aiida-core/2.7.2-foss-2023a`|
+
+## Extensions
+
+Overview of extensions included in aiida-core installations
+
+
+### aiida-core
+
+
+|`aiida-core` version|aiida-core modules that include it|
+| --- | --- |
+|2.7.2|`aiida-core/2.7.2-foss-2023a`|
+
+### aniso8601
+
+
+|`aniso8601` version|aiida-core modules that include it|
+| --- | --- |
+|10.0.1|`aiida-core/2.7.2-foss-2023a`|
+
+### archive-path
+
+
+|`archive-path` version|aiida-core modules that include it|
+| --- | --- |
+|0.4.2|`aiida-core/2.7.2-foss-2023a`|
+
+### asyncssh
+
+
+|`asyncssh` version|aiida-core modules that include it|
+| --- | --- |
+|2.19.0|`aiida-core/2.7.2-foss-2023a`|
+
+### circus
+
+
+|`circus` version|aiida-core modules that include it|
+| --- | --- |
+|0.19.0|`aiida-core/2.7.2-foss-2023a`|
+
+### click-spinner
+
+
+|`click-spinner` version|aiida-core modules that include it|
+| --- | --- |
+|0.1.10|`aiida-core/2.7.2-foss-2023a`|
+
+### disk_objectstore
+
+
+|`disk_objectstore` version|aiida-core modules that include it|
+| --- | --- |
+|1.3.0|`aiida-core/2.7.2-foss-2023a`|
+
+### docstring_parser
+
+
+|`docstring_parser` version|aiida-core modules that include it|
+| --- | --- |
+|0.16|`aiida-core/2.7.2-foss-2023a`|
+
+### Flask-RESTful
+
+
+|`Flask-RESTful` version|aiida-core modules that include it|
+| --- | --- |
+|0.3.10|`aiida-core/2.7.2-foss-2023a`|
+
+### graphviz
+
+
+|`graphviz` version|aiida-core modules that include it|
+| --- | --- |
+|0.20.3|`aiida-core/2.7.2-foss-2023a`|
+
+### pgsu
+
+
+|`pgsu` version|aiida-core modules that include it|
+| --- | --- |
+|0.3.0|`aiida-core/2.7.2-foss-2023a`|
+
+### PyCifRW
+
+
+|`PyCifRW` version|aiida-core modules that include it|
+| --- | --- |
+|4.4.6|`aiida-core/2.7.2-foss-2023a`|
+
+### PyMySQL
+
+
+|`PyMySQL` version|aiida-core modules that include it|
+| --- | --- |
+|0.9.3|`aiida-core/2.7.2-foss-2023a`|
+
+### pyparsing
+
+
+|`pyparsing` version|aiida-core modules that include it|
+| --- | --- |
+|3.1.0|`aiida-core/2.7.2-foss-2023a`|
+
+### python-memcached
+
+
+|`python-memcached` version|aiida-core modules that include it|
+| --- | --- |
+|1.62|`aiida-core/2.7.2-foss-2023a`|
+
+### pytray
+
+
+|`pytray` version|aiida-core modules that include it|
+| --- | --- |
+|0.3.4|`aiida-core/2.7.2-foss-2023a`|
+
+### seekpath
+
+
+|`seekpath` version|aiida-core modules that include it|
+| --- | --- |
+|2.1.0|`aiida-core/2.7.2-foss-2023a`|
+
+### tqdm
+
+
+|`tqdm` version|aiida-core modules that include it|
+| --- | --- |
+|4.67.1|`aiida-core/2.7.2-foss-2023a`|
+
+### upf-to-json
+
+
+|`upf-to-json` version|aiida-core modules that include it|
+| --- | --- |
+|0.9.5|`aiida-core/2.7.2-foss-2023a`|

@@ -1,61 +1,32 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: PyOpenGL is the most common cross platform Python binding to OpenGL
-    and related APIs.
-  license: Not confirmed
-  name: PyOpenGL
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''PyOpenGL/3.1.7-GCCcore-12.3.0'']'
-  url: http://pyopengl.sourceforge.net
----
-
-PyOpenGL
-========
+# PyOpenGL
 
 
 PyOpenGL is the most common cross platform Python binding to OpenGL and related APIs.
 
-http://pyopengl.sourceforge.net
-# Available modules
+<small>homepage: </small><span class="software-link">[http://pyopengl.sourceforge.net](http://pyopengl.sourceforge.net)</span>
+
+## Available installations
 
 
-The overview below shows which PyOpenGL installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|PyOpenGL version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.1.7|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`PyOpenGL/3.1.7-GCCcore-12.3.0`|
 
-To start using PyOpenGL, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load PyOpenGL/3.1.7-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyOpenGL/3.1.7-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in PyOpenGL installations
 
 
-### PyOpenGL/3.1.7-GCCcore-12.3.0
+### PyOpenGL
 
-This is a list of extensions included in the module:
 
-PyOpenGL-3.1.7, PyOpenGL-accelerate-3.1.7
+|`PyOpenGL` version|PyOpenGL modules that include it|
+| --- | --- |
+|3.1.7|`PyOpenGL/3.1.7-GCCcore-12.3.0`|
+
+### PyOpenGL-accelerate
+
+
+|`PyOpenGL-accelerate` version|PyOpenGL modules that include it|
+| --- | --- |
+|3.1.7|`PyOpenGL/3.1.7-GCCcore-12.3.0`|

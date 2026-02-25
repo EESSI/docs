@@ -1,60 +1,3043 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A set of common packages from CPAN
-  license: Not confirmed
-  name: Perl-bundle-CPAN
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0'']'
-  url: https://www.perl.org/
----
-
-Perl-bundle-CPAN
-================
+# Perl-bundle-CPAN
 
 
 A set of common packages from CPAN
 
-https://www.perl.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.perl.org/](https://www.perl.org/)</span>
+
+## Available installations
 
 
-The overview below shows which Perl-bundle-CPAN installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Perl-bundle-CPAN version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|5.36.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|5.38.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|5.40.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
 
-To start using Perl-bundle-CPAN, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in Perl-bundle-CPAN installations
 
 
-### Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0
+### Algorithm::Dependency
 
-This is a list of extensions included in the module:
 
-Algorithm::Dependency-1.112, Algorithm::Diff-1.201, aliased-0.34, AnyEvent-7.17, App::Cmd-0.335, App::cpanminus-1.7046, AppConfig-1.71, Archive::Extract-0.88, Array::Transpose-0.06, Array::Utils-0.5, Authen::NTLM-1.09, Authen::SASL-2.16, AutoLoader-5.74, B::COW-0.007, B::Hooks::EndOfScope-0.26, B::Lint-1.20, boolean-0.46, Business::ISBN-3.008, Business::ISBN::Data-20230516.001, Canary::Stability-2013, Capture::Tiny-0.48, Carp::Clan-6.08, Carp::Heavy-1.50, CGI-4.57, Class::Accessor-0.51, Class::Data::Inheritable-0.09, Class::DBI-v3.0.17, Class::DBI::SQLite-0.11, Class::Inspector-1.36, Class::ISA-0.36, Class::Load-0.25, Class::Load::XS-0.10, Class::Method::Modifiers-2.15, Class::Singleton-1.6, Class::Tiny-1.008, Class::Trigger-0.15, Class::XSAccessor-1.19, Clone-0.46, Clone::Choose-0.010, common::sense-3.75, Compress::Raw::Zlib-2.204, Config::General-2.65, Config::INI-0.029, Config::MVP-2.200013, Config::MVP::Reader::INI-2.101465, Config::Simple-4.58, Config::Tiny-2.29, Const::Exporter-1.2.2, Const::Fast-0.014, CPAN::Meta::Check-0.017, CPAN::Uploader-0.103018, CPANPLUS-0.9914, Crypt::DES-2.07, Crypt::Rijndael-1.16, Cwd-3.75, Cwd::Guard-0.05, Data::Dump-1.25, Data::Dumper::Concise-2.023, Data::Grove-0.08, Data::OptList-0.114, Data::Section-0.200008, Data::Section::Simple-0.07, Data::Stag-0.14, Data::Types-0.17, Data::UUID-1.226, Date::Handler-1.2, Date::Language-2.33, DateTime-1.59, DateTime::Locale-1.38, DateTime::TimeZone-2.60, DateTime::Tiny-1.07, DBD::CSV-0.60, DBD::SQLite-1.72, DBI-1.643, DBIx::Admin::CreateTable-2.11, DBIx::Admin::DSNManager-2.02, DBIx::Admin::TableInfo-3.04, DBIx::ContextualFetch-1.03, DBIx::Simple-1.37, Devel::CheckCompiler-0.07, Devel::CheckLib-1.16, Devel::Cycle-1.12, Devel::FindPerl-0.016, Devel::GlobalDestruction-0.14, Devel::OverloadInfo-0.007, Devel::Size-0.83, Devel::StackTrace-2.04, Digest::HMAC-1.04, Digest::MD5::File-0.08, Digest::SHA1-2.13, Dist::CheckConflicts-0.11, Dist::Zilla-6.030, Email::Date::Format-1.008, Encode-3.19, Encode::Locale-1.05, Error-0.17029, Eval::Closure-0.14, Exception::Class-1.45, Expect-1.35, Exporter::Declare-0.114, Exporter::Tiny-1.006002, ExtUtils::CBuilder-0.280236, ExtUtils::Config-0.008, ExtUtils::Constant-0.25, ExtUtils::CppGuess-0.26, ExtUtils::Helpers-0.026, ExtUtils::InstallPaths-0.012, ExtUtils::MakeMaker-7.70, ExtUtils::ParseXS-3.44, Fennec::Lite-0.004, File::CheckTree-4.42, File::Copy::Recursive-0.45, File::Copy::Recursive::Reduced-0.006, File::Find::Rule-0.34, File::Find::Rule::Perl-1.16, File::Grep-0.02, File::HomeDir-1.006, File::Listing-6.15, File::Next-1.18, File::pushd-1.016, File::Remove-1.61, File::ShareDir-1.118, File::ShareDir::Install-0.14, File::Slurp-9999.32, File::Slurp::Tiny-0.004, File::Slurper-0.014, File::Temp-0.2311, File::Which-1.27, Font::TTF-1.06, Getopt::Long::Descriptive-0.111, Git-0.42, GO-0.04, GO::Utils-0.15, Graph-0.9726, Graph::ReadWrite-2.10, Hash::Merge-0.302, Hash::Objectify-0.008, Heap-0.80, Hook::LexWrap-0.26, HTML::Entities::Interpolate-1.10, HTML::Form-6.11, HTML::Parser-3.81, HTML::Tagset-3.20, HTML::Template-2.97, HTML::Tree-5.07, HTTP::CookieJar-0.014, HTTP::Cookies-6.10, HTTP::Daemon-6.16, HTTP::Date-6.05, HTTP::Message-6.44, HTTP::Negotiate-6.01, HTTP::Tiny-0.082, if-0.0608, Ima::DBI-0.35, Import::Into-1.002005, Importer-0.026, Inline-0.86, IO::Compress::Zip-2.204, IO::HTML-1.004, IO::Socket::SSL-2.083, IO::String-1.08, IO::Stringy-2.113, IO::TieCombine-1.005, IO::Tty-1.17, IO::Tty-1.17, IPC::Cmd-1.04, IPC::Run-20220807.0, IPC::Run3-0.048, IPC::System::Simple-1.30, JSON-4.10, JSON::MaybeXS-1.004005, JSON::XS-4.03, Lingua::EN::PluralToSingular-0.21, List::AllUtils-0.19, List::MoreUtils-0.430, List::MoreUtils::XS-0.430, List::SomeUtils-0.59, List::UtilsBy-0.12, local::lib-2.000029, Locale::Maketext::Simple-0.21, Log::Dispatch-2.71, Log::Dispatch::Array-1.005, Log::Dispatchouli-3.002, Log::Handler-0.90, Log::Log4perl-1.57, Log::Message-0.08, Log::Message::Simple-0.10, Log::Report-1.34, Log::Report::Optional-1.07, Logger::Simple-2.0, LWP::MediaTypes-6.04, LWP::Protocol::https-6.10, LWP::Simple-6.70, Mail::Util-2.21, Math::Bezier-0.01, Math::CDF-0.1, Math::Round-0.07, Math::Utils-1.14, Math::VecStat-0.08, MCE::Mutex-1.884, Meta::Builder-0.004, MIME::Base64-3.16, MIME::Charset-v1.013.1, MIME::Lite-3.033, MIME::Types-2.24, Mixin::Linewise::Readers-0.111, Mock::Quick-1.111, Module::Build-0.4234, Module::Build::Tiny-0.045, Module::Build::XSUtil-0.19, Module::CoreList-5.20230423, Module::Implementation-0.09, Module::Install-1.21, Module::Load-0.36, Module::Load::Conditional-0.74, Module::Metadata-1.000038, Module::Path-0.19, Module::Path-0.19, Module::Pluggable-5.2, Module::Runtime-0.016, Module::Runtime::Conflicts-0.003, Moo-2.005005, Moose-2.2203, MooseX::LazyRequire-0.11, MooseX::OneArgNew-0.007, MooseX::Role::Parameterized-1.11, MooseX::SetOnce-0.203, MooseX::Types-0.50, MooseX::Types::Perl-0.101344, Mouse-v2.5.10, Mozilla::CA-20221114, MRO::Compat-0.15, namespace::autoclean-0.29, namespace::clean-0.27, Net::Domain-3.15, Net::HTTP-6.22, Net::SMTP::SSL-1.04, Net::SNMP-v6.0.1, Net::SSLeay-1.92, Number::Compare-0.03, Number::Format-1.75, Object::Accessor-0.48, Object::InsideOut-4.05, Object::InsideOut-4.05, Package::Constants-0.06, Package::DeprecationManager-0.18, Package::Stash-0.40, Package::Stash::XS-0.30, PadWalker-2.5, Parallel::ForkManager-2.02, Params::Check-0.38, Params::Util-1.102, Params::Validate-1.31, Params::ValidationCompiler-0.31, parent-0.241, Parse::RecDescent-1.967015, Parse::Yapp-1.21, Path::Tiny-0.144, PDF::API2-2.044, Perl::OSType-1.010, Perl::PrereqScanner-1.100, PerlIO::utf8_strict-0.010, Pod::Elemental-0.103006, Pod::Escapes-1.07, Pod::Eventual-0.094003, Pod::LaTeX-0.61, Pod::Man-5.01, Pod::Parser-1.66, Pod::Plainer-1.04, Pod::POM-2.01, Pod::Simple-3.45, Pod::Weaver-4.019, PPI-1.276, Readonly-2.05, Ref::Util-0.204, Regexp::Common-2017060201, Role::HasMessage-0.007, Role::Identifiable::HasIdent-0.009, Role::Tiny-2.002004, Scalar::Util-1.63, Scalar::Util::Numeric-0.40, Scope::Guard-0.21, Set::Array-0.30, Set::IntervalTree-0.12, Set::IntSpan-1.19, Set::IntSpan::Fast-1.15, Set::Object-1.42, Set::Scalar-1.29, Shell-0.73, Socket-2.036, Software::License-0.104003, Specio-0.48, Spiffy-0.46, SQL::Abstract-2.000001, SQL::Statement-1.414, Statistics::Basic-1.6611, Statistics::Descriptive-3.0800, Storable-3.25, strictures-2.000006, String::Errf-0.009, String::Flogger-1.101246, String::Formatter-1.235, String::Print-0.94, String::RewritePrefix-0.009, String::Truncate-1.100603, String::TtyLength-0.03, Sub::Exporter-0.989, Sub::Exporter::ForMethods-0.100055, Sub::Exporter::GlobExporter-0.006, Sub::Exporter::Progressive-0.001013, Sub::Identify-0.14, Sub::Info-0.002, Sub::Install-0.929, Sub::Name-0.27, Sub::Quote-2.006008, Sub::Uplevel-0.2800, SVG-2.87, Switch-2.17, Sys::Info-0.7811, Sys::Info::Base-0.7807, Sys::Info::Driver::Linux-0.7905, Sys::Info::Driver::Unknown-0.79, Template-3.101, Template::Plugin::Number::Format-1.06, Term::Encoding-0.03, Term::ReadKey-2.38, Term::ReadLine::Gnu-1.45, Term::Table-0.016, Term::UI-0.50, Test-1.26, Test2::Plugin::NoWarnings-0.09, Test2::Require::Module-0.000155, Test::Base-0.89, Test::CheckDeps-0.010, Test::ClassAPI-1.07, Test::CleanNamespaces-0.24, Test::Deep-1.204, Test::Differences-0.69, Test::Exception-0.43, Test::FailWarnings-0.008, Test::Fatal-0.017, Test::File-1.993, Test::File::ShareDir::Dist-1.001002, Test::Harness-3.44, Test::LeakTrace-0.17, Test::Memory::Cycle-1.06, Test::More::UTF8-0.05, Test::Most-0.38, Test::Needs-0.002010, Test::NoWarnings-1.06, Test::Object-0.08, Test::Output-1.033, Test::Pod-1.52, Test::Requires-0.11, Test::RequiresInternet-0.05, Test::Simple-1.302195, Test::SubCalls-1.10, Test::Sys::Info-0.23, Test::Version-2.09, Test::Warn-0.37, Test::Warnings-0.031, Test::Without::Module-0.21, Test::YAML-1.07, Text::Aligner-0.16, Text::Balanced-2.06, Text::CSV-2.02, Text::CSV_XS-1.50, Text::Diff-1.45, Text::Format-0.62, Text::Glob-0.11, Text::Iconv-1.7, Text::Soundex-3.05, Text::Table-1.135, Text::Table::Manifold-1.03, Text::Template-1.61, Throwable-1.001, Tie::Function-0.02, Tie::IxHash-1.23, Time::Local-1.35, Time::Piece-1.3401, Time::Piece::MySQL-0.06, Tree::DAG_Node-1.32, Try::Tiny-0.31, Type::Tiny-2.004000, Types::Serialiser-1.01, Types::Serialiser-1.01, Unicode::EastAsianWidth-12.0, Unicode::LineBreak-2019.001, UNIVERSAL::moniker-0.08, Unix::Processors-2.046, Unix::Processors-2.046, URI-5.19, Variable::Magic-0.63, version-0.9929, Want-0.29, WWW::RobotRules-6.02, XML::Bare-0.53, XML::DOM-1.46, XML::Filter::BufferText-1.01, XML::NamespaceSupport-1.12, XML::Parser-2.46, XML::RegExp-0.04, XML::SAX-1.02, XML::SAX::Base-1.09, XML::SAX::Expat-0.51, XML::SAX::Writer-0.57, XML::Simple-2.25, XML::Tiny-2.07, XML::Twig-3.52, XML::Writer-0.900, XML::XPath-1.48, XSLoader-0.24, YAML-1.30, YAML::Tiny-1.74
+|`Algorithm::Dependency` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.112|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Algorithm::Diff
+
+
+|`Algorithm::Diff` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.201|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### aliased
+
+
+|`aliased` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.34|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### AnyEvent
+
+
+|`AnyEvent` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|7.17|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### App::Cmd
+
+
+|`App::Cmd` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.335|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.336|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### App::cpanminus
+
+
+|`App::cpanminus` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.7046|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.7047|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.7048|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### AppConfig
+
+
+|`AppConfig` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.71|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Archive::Extract
+
+
+|`Archive::Extract` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.88|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Array::Transpose
+
+
+|`Array::Transpose` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Array::Utils
+
+
+|`Array::Utils` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.5|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Authen::NTLM
+
+
+|`Authen::NTLM` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.09|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Authen::SASL
+
+
+|`Authen::SASL` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.16|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.1700|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### AutoLoader
+
+
+|`AutoLoader` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|5.74|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### B::COW
+
+
+|`B::COW` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.007|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### B::Hooks::EndOfScope
+
+
+|`B::Hooks::EndOfScope` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.26|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.28|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### B::Lint
+
+
+|`B::Lint` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.20|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### boolean
+
+
+|`boolean` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.46|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Business::ISBN
+
+
+|`Business::ISBN` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.008|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.009|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Business::ISBN::Data
+
+
+|`Business::ISBN::Data` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|20230516.001|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|20240614.001|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|20241205.001|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Canary::Stability
+
+
+|`Canary::Stability` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2013|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Capture::Tiny
+
+
+|`Capture::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.48|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Carp::Clan
+
+
+|`Carp::Clan` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Carp::Heavy
+
+
+|`Carp::Heavy` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.50|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### CGI
+
+
+|`CGI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|4.57|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|4.66|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Class::Accessor
+
+
+|`Class::Accessor` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.51|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::Data::Inheritable
+
+
+|`Class::Data::Inheritable` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.09|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.10|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Class::DBI
+
+
+|`Class::DBI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|v3.0.17|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::DBI::SQLite
+
+
+|`Class::DBI::SQLite` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::Inspector
+
+
+|`Class::Inspector` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.36|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::ISA
+
+
+|`Class::ISA` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.36|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::Load
+
+
+|`Class::Load` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.25|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::Load::XS
+
+
+|`Class::Load::XS` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.10|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::Method::Modifiers
+
+
+|`Class::Method::Modifiers` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.15|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::Singleton
+
+
+|`Class::Singleton` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.6|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::Tiny
+
+
+|`Class::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::Trigger
+
+
+|`Class::Trigger` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.15|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Class::XSAccessor
+
+
+|`Class::XSAccessor` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.19|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Clone
+
+
+|`Clone` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.46|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.47|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Clone::Choose
+
+
+|`Clone::Choose` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.010|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### common::sense
+
+
+|`common::sense` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.75|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Compress::Raw::Bzip2
+
+
+|`Compress::Raw::Bzip2` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.212|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|2.213|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Compress::Raw::Zlib
+
+
+|`Compress::Raw::Zlib` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.204|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.212|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|2.213|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Config::General
+
+
+|`Config::General` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.65|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Config::INI
+
+
+|`Config::INI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.029|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Config::MVP
+
+
+|`Config::MVP` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.200013|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Config::MVP::Reader::INI
+
+
+|`Config::MVP::Reader::INI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.101465|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Config::Simple
+
+
+|`Config::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|4.58|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Config::Tiny
+
+
+|`Config::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.29|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.30|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Const::Exporter
+
+
+|`Const::Exporter` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.2.2|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|v1.2.3|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Const::Fast
+
+
+|`Const::Fast` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.014|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### CPAN::Meta::Check
+
+
+|`CPAN::Meta::Check` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.017|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.018|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### CPAN::Meta::Requirements
+
+
+|`CPAN::Meta::Requirements` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.143|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### CPAN::Requirements::Dynamic
+
+
+|`CPAN::Requirements::Dynamic` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.001|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### CPAN::Uploader
+
+
+|`CPAN::Uploader` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.103018|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### CPANPLUS
+
+
+|`CPANPLUS` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.9914|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Crypt::DES
+
+
+|`Crypt::DES` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Crypt::Rijndael
+
+
+|`Crypt::Rijndael` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.16|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Cwd
+
+
+|`Cwd` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.75|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Cwd::Guard
+
+
+|`Cwd::Guard` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::Dump
+
+
+|`Data::Dump` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.25|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::Dumper::Concise
+
+
+|`Data::Dumper::Concise` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.023|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::Grove
+
+
+|`Data::Grove` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::OptList
+
+
+|`Data::OptList` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.114|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::Section
+
+
+|`Data::Section` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.200008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::Section::Simple
+
+
+|`Data::Section::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::Stag
+
+
+|`Data::Stag` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.14|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::Types
+
+
+|`Data::Types` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.17|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Data::UUID
+
+
+|`Data::UUID` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.226|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.227|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Date::Handler
+
+
+|`Date::Handler` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.2|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Date::Language
+
+
+|`Date::Language` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.33|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### DateTime
+
+
+|`DateTime` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.59|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.65|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### DateTime::Locale
+
+
+|`DateTime::Locale` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.38|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.42|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.44|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### DateTime::TimeZone
+
+
+|`DateTime::TimeZone` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.60|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.62|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|2.63|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### DateTime::Tiny
+
+
+|`DateTime::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### DBD::CSV
+
+
+|`DBD::CSV` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.60|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### DBD::SQLite
+
+
+|`DBD::SQLite` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.72|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.74|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.76|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### DBI
+
+
+|`DBI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.643|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.645|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### DBIx::Admin::CreateTable
+
+
+|`DBIx::Admin::CreateTable` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### DBIx::Admin::DSNManager
+
+
+|`DBIx::Admin::DSNManager` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.02|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### DBIx::Admin::TableInfo
+
+
+|`DBIx::Admin::TableInfo` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.04|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### DBIx::ContextualFetch
+
+
+|`DBIx::ContextualFetch` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.03|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### DBIx::Simple
+
+
+|`DBIx::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.37|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Devel::CheckCompiler
+
+
+|`Devel::CheckCompiler` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Devel::CheckLib
+
+
+|`Devel::CheckLib` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.16|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Devel::Cycle
+
+
+|`Devel::Cycle` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.12|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Devel::FindPerl
+
+
+|`Devel::FindPerl` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.016|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Devel::GlobalDestruction
+
+
+|`Devel::GlobalDestruction` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.14|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Devel::OverloadInfo
+
+
+|`Devel::OverloadInfo` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.007|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Devel::Size
+
+
+|`Devel::Size` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.83|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.84|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Devel::StackTrace
+
+
+|`Devel::StackTrace` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.04|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Digest::HMAC
+
+
+|`Digest::HMAC` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.04|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Digest::MD5::File
+
+
+|`Digest::MD5::File` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Digest::SHA1
+
+
+|`Digest::SHA1` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.13|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Dist::CheckConflicts
+
+
+|`Dist::CheckConflicts` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Dist::Zilla
+
+
+|`Dist::Zilla` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.030|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.032|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Email::Date::Format
+
+
+|`Email::Date::Format` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Encode
+
+
+|`Encode` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.19|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.21|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Encode::Locale
+
+
+|`Encode::Locale` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Error
+
+
+|`Error` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.17029|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Eval::Closure
+
+
+|`Eval::Closure` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.14|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Exception::Class
+
+
+|`Exception::Class` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.45|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Expect
+
+
+|`Expect` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.35|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.38|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Exporter::Declare
+
+
+|`Exporter::Declare` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.114|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Exporter::Tiny
+
+
+|`Exporter::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.006002|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### ExtUtils::CBuilder
+
+
+|`ExtUtils::CBuilder` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.280236|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### ExtUtils::Config
+
+
+|`ExtUtils::Config` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.008|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.009|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.010|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### ExtUtils::Constant
+
+
+|`ExtUtils::Constant` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.25|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### ExtUtils::CppGuess
+
+
+|`ExtUtils::CppGuess` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.26|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.27|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### ExtUtils::Helpers
+
+
+|`ExtUtils::Helpers` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.026|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.027|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.028|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### ExtUtils::InstallPaths
+
+
+|`ExtUtils::InstallPaths` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.012|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.013|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.014|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### ExtUtils::MakeMaker
+
+
+|`ExtUtils::MakeMaker` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|7.70|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### ExtUtils::ParseXS
+
+
+|`ExtUtils::ParseXS` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.44|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.51|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Fennec::Lite
+
+
+|`Fennec::Lite` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.004|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::CheckTree
+
+
+|`File::CheckTree` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|4.42|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Copy::Recursive
+
+
+|`File::Copy::Recursive` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.45|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Copy::Recursive::Reduced
+
+
+|`File::Copy::Recursive::Reduced` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.006|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### File::Find::Rule
+
+
+|`File::Find::Rule` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.34|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Find::Rule::Perl
+
+
+|`File::Find::Rule::Perl` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.16|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Grep
+
+
+|`File::Grep` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.02|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::HomeDir
+
+
+|`File::HomeDir` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.006|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Listing
+
+
+|`File::Listing` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.15|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.16|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### File::Next
+
+
+|`File::Next` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.18|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::pushd
+
+
+|`File::pushd` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.016|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Remove
+
+
+|`File::Remove` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.61|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::ShareDir
+
+
+|`File::ShareDir` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.118|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::ShareDir::Install
+
+
+|`File::ShareDir::Install` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.14|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Slurp
+
+
+|`File::Slurp` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|9999.32|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Slurp::Tiny
+
+
+|`File::Slurp::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.004|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Slurper
+
+
+|`File::Slurper` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.014|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Temp
+
+
+|`File::Temp` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.2311|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### File::Which
+
+
+|`File::Which` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.27|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Font::TTF
+
+
+|`Font::TTF` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Getopt::Long::Descriptive
+
+
+|`Getopt::Long::Descriptive` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.111|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.114|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.115|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Git
+
+
+|`Git` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.42|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### GO
+
+
+|`GO` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.04|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### GO::Utils
+
+
+|`GO::Utils` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.15|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Graph
+
+
+|`Graph` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.9726|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.9729|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.9732|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Graph::ReadWrite
+
+
+|`Graph::ReadWrite` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.10|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Hash::Merge
+
+
+|`Hash::Merge` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.302|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Hash::Objectify
+
+
+|`Hash::Objectify` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Heap
+
+
+|`Heap` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.80|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Hook::LexWrap
+
+
+|`Hook::LexWrap` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.26|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### HTML::Entities::Interpolate
+
+
+|`HTML::Entities::Interpolate` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.10|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### HTML::Form
+
+
+|`HTML::Form` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.11|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.12|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### HTML::Parser
+
+
+|`HTML::Parser` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.81|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.82|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|3.83|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### HTML::Tagset
+
+
+|`HTML::Tagset` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.20|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.24|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### HTML::Template
+
+
+|`HTML::Template` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.97|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### HTML::Tree
+
+
+|`HTML::Tree` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|5.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### HTTP::CookieJar
+
+
+|`HTTP::CookieJar` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.014|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### HTTP::Cookies
+
+
+|`HTTP::Cookies` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.10|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### HTTP::Daemon
+
+
+|`HTTP::Daemon` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.16|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### HTTP::Date
+
+
+|`HTTP::Date` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.05|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### HTTP::Message
+
+
+|`HTTP::Message` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.44|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.46|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|7.00|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### HTTP::Negotiate
+
+
+|`HTTP::Negotiate` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.01|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### HTTP::Tiny
+
+
+|`HTTP::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.082|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.088|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.090|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### if
+
+
+|`if` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.0608|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Ima::DBI
+
+
+|`Ima::DBI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.35|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Import::Into
+
+
+|`Import::Into` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.002005|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Importer
+
+
+|`Importer` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.026|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Inline
+
+
+|`Inline` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.86|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### IO::Compress::Zip
+
+
+|`IO::Compress::Zip` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.204|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.212|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|2.213|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### IO::HTML
+
+
+|`IO::HTML` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.004|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### IO::Socket::SSL
+
+
+|`IO::Socket::SSL` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.083|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.087|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|2.089|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### IO::String
+
+
+|`IO::String` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### IO::Stringy
+
+
+|`IO::Stringy` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.113|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### IO::TieCombine
+
+
+|`IO::TieCombine` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.005|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### IO::Tty
+
+
+|`IO::Tty` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.17|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.20|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### IPC::Cmd
+
+
+|`IPC::Cmd` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.04|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### IPC::Run
+
+
+|`IPC::Run` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|20220807.0|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|20231003.0|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### IPC::Run3
+
+
+|`IPC::Run3` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.048|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.049|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### IPC::System::Simple
+
+
+|`IPC::System::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.30|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### JSON
+
+
+|`JSON` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|4.10|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### JSON::MaybeXS
+
+
+|`JSON::MaybeXS` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.004005|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.004008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### JSON::XS
+
+
+|`JSON::XS` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|4.03|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Lingua::EN::PluralToSingular
+
+
+|`Lingua::EN::PluralToSingular` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.21|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### List::AllUtils
+
+
+|`List::AllUtils` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.19|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### List::MoreUtils
+
+
+|`List::MoreUtils` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.430|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### List::MoreUtils::XS
+
+
+|`List::MoreUtils::XS` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.430|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### List::SomeUtils
+
+
+|`List::SomeUtils` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.59|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### List::UtilsBy
+
+
+|`List::UtilsBy` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.12|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### local::lib
+
+
+|`local::lib` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.000029|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Locale::Maketext::Simple
+
+
+|`Locale::Maketext::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.21|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Log::Dispatch
+
+
+|`Log::Dispatch` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.71|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Log::Dispatch::Array
+
+
+|`Log::Dispatch::Array` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.005|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Log::Dispatchouli
+
+
+|`Log::Dispatchouli` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.002|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.007|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|3.008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Log::Handler
+
+
+|`Log::Handler` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.90|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Log::Log4perl
+
+
+|`Log::Log4perl` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.57|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Log::Message
+
+
+|`Log::Message` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Log::Message::Simple
+
+
+|`Log::Message::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.10|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Log::Report
+
+
+|`Log::Report` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.34|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.37|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.39|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Log::Report::Optional
+
+
+|`Log::Report::Optional` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Logger::Simple
+
+
+|`Logger::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.0|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### LWP::MediaTypes
+
+
+|`LWP::MediaTypes` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.04|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### LWP::Protocol::https
+
+
+|`LWP::Protocol::https` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.10|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.14|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### LWP::Simple
+
+
+|`LWP::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.70|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.77|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Mail::Util
+
+
+|`Mail::Util` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.21|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.22|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Math::Bezier
+
+
+|`Math::Bezier` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.01|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Math::CDF
+
+
+|`Math::CDF` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.1|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Math::Round
+
+
+|`Math::Round` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.07|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Math::Utils
+
+
+|`Math::Utils` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.14|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Math::VecStat
+
+
+|`Math::VecStat` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MCE::Mutex
+
+
+|`MCE::Mutex` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.884|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.897|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.900|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Meta::Builder
+
+
+|`Meta::Builder` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.004|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MIME::Base32
+
+
+|`MIME::Base32` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.303|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### MIME::Base64
+
+
+|`MIME::Base64` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.16|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MIME::Charset
+
+
+|`MIME::Charset` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|v1.013.1|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MIME::Lite
+
+
+|`MIME::Lite` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.033|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MIME::Types
+
+
+|`MIME::Types` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.24|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.26|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Mixin::Linewise::Readers
+
+
+|`Mixin::Linewise::Readers` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.111|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Mock::Quick
+
+
+|`Mock::Quick` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.111|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Build
+
+
+|`Module::Build` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.4234|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Build::Tiny
+
+
+|`Module::Build::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.045|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.048|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.051|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Module::Build::XSUtil
+
+
+|`Module::Build::XSUtil` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.19|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::CoreList
+
+
+|`Module::CoreList` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|5.20230423|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|5.20240702|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|5.20241120|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Module::Implementation
+
+
+|`Module::Implementation` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.09|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Install
+
+
+|`Module::Install` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.21|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Load
+
+
+|`Module::Load` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.36|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Load::Conditional
+
+
+|`Module::Load::Conditional` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.74|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Metadata
+
+
+|`Module::Metadata` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.000038|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Path
+
+
+|`Module::Path` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.19|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Pluggable
+
+
+|`Module::Pluggable` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|5.2|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.2|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Module::Runtime
+
+
+|`Module::Runtime` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.016|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Module::Runtime::Conflicts
+
+
+|`Module::Runtime::Conflicts` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.003|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Moo
+
+
+|`Moo` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.005005|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Moose
+
+
+|`Moose` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.2203|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.2207|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### MooseX::LazyRequire
+
+
+|`MooseX::LazyRequire` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MooseX::OneArgNew
+
+
+|`MooseX::OneArgNew` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.007|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MooseX::Role::Parameterized
+
+
+|`MooseX::Role::Parameterized` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MooseX::SetOnce
+
+
+|`MooseX::SetOnce` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.203|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MooseX::Types
+
+
+|`MooseX::Types` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.50|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### MooseX::Types::Perl
+
+
+|`MooseX::Types::Perl` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.101344|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Mouse
+
+
+|`Mouse` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|v2.5.10|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|v2.5.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Mozilla::CA
+
+
+|`Mozilla::CA` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|20221114|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|20240313|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|20240924|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### MRO::Compat
+
+
+|`MRO::Compat` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.15|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### namespace::autoclean
+
+
+|`namespace::autoclean` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.29|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.31|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### namespace::clean
+
+
+|`namespace::clean` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.27|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Net::Domain
+
+
+|`Net::Domain` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.15|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Net::HTTP
+
+
+|`Net::HTTP` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.22|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|6.23|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Net::SMTP::SSL
+
+
+|`Net::SMTP::SSL` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.04|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Net::SNMP
+
+
+|`Net::SNMP` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|v6.0.1|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Net::SSLeay
+
+
+|`Net::SSLeay` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.92|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.94|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Number::Compare
+
+
+|`Number::Compare` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.03|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Number::Format
+
+
+|`Number::Format` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.75|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.76|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Object::Accessor
+
+
+|`Object::Accessor` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.48|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Object::InsideOut
+
+
+|`Object::InsideOut` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|4.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Package::Constants
+
+
+|`Package::Constants` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Package::DeprecationManager
+
+
+|`Package::DeprecationManager` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.18|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Package::Stash
+
+
+|`Package::Stash` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.40|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Package::Stash::XS
+
+
+|`Package::Stash::XS` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.30|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### PadWalker
+
+
+|`PadWalker` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.5|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Parallel::ForkManager
+
+
+|`Parallel::ForkManager` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.02|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.03|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Params::Check
+
+
+|`Params::Check` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.38|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Params::Util
+
+
+|`Params::Util` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.102|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Params::Validate
+
+
+|`Params::Validate` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.31|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Params::ValidationCompiler
+
+
+|`Params::ValidationCompiler` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.31|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### parent
+
+
+|`parent` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.241|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.243|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Parse::RecDescent
+
+
+|`Parse::RecDescent` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.967015|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Parse::Yapp
+
+
+|`Parse::Yapp` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.21|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Path::Tiny
+
+
+|`Path::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.144|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.146|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### PDF::API2
+
+
+|`PDF::API2` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.044|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.047|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Perl::OSType
+
+
+|`Perl::OSType` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.010|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Perl::PrereqScanner
+
+
+|`Perl::PrereqScanner` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.100|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### PerlIO::utf8_strict
+
+
+|`PerlIO::utf8_strict` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.010|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Pod::Elemental
+
+
+|`Pod::Elemental` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.103006|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Pod::Escapes
+
+
+|`Pod::Escapes` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Pod::Eventual
+
+
+|`Pod::Eventual` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.094003|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Pod::LaTeX
+
+
+|`Pod::LaTeX` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.61|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Pod::Man
+
+
+|`Pod::Man` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|5.01|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|v6.0.2|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Pod::Parser
+
+
+|`Pod::Parser` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.66|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.67|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Pod::Plainer
+
+
+|`Pod::Plainer` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.04|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Pod::POM
+
+
+|`Pod::POM` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.01|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Pod::Simple
+
+
+|`Pod::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.45|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Pod::Weaver
+
+
+|`Pod::Weaver` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|4.019|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|4.020|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### PPI
+
+
+|`PPI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.276|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.278|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.279|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Readonly
+
+
+|`Readonly` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Ref::Util
+
+
+|`Ref::Util` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.204|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Regexp::Common
+
+
+|`Regexp::Common` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2017060201|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2024080801|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Role::HasMessage
+
+
+|`Role::HasMessage` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.007|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Role::Identifiable::HasIdent
+
+
+|`Role::Identifiable::HasIdent` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.009|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Role::Tiny
+
+
+|`Role::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.002004|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Scalar::Util
+
+
+|`Scalar::Util` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.63|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.68|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Scalar::Util::Numeric
+
+
+|`Scalar::Util::Numeric` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.40|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Scope::Guard
+
+
+|`Scope::Guard` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.21|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Set::Array
+
+
+|`Set::Array` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.30|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Set::IntervalTree
+
+
+|`Set::IntervalTree` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.12|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Set::IntSpan
+
+
+|`Set::IntSpan` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.19|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Set::IntSpan::Fast
+
+
+|`Set::IntSpan::Fast` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.15|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Set::Object
+
+
+|`Set::Object` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.42|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Set::Scalar
+
+
+|`Set::Scalar` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.29|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Shell
+
+
+|`Shell` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.73|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Socket
+
+
+|`Socket` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.036|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.038|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Software::License
+
+
+|`Software::License` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.104003|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.104006|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Specio
+
+
+|`Specio` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.48|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Spiffy
+
+
+|`Spiffy` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.46|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### SQL::Abstract
+
+
+|`SQL::Abstract` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.000001|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### SQL::Statement
+
+
+|`SQL::Statement` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.414|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Statistics::Basic
+
+
+|`Statistics::Basic` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.6611|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Statistics::Descriptive
+
+
+|`Statistics::Descriptive` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.0800|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.0801|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Storable
+
+
+|`Storable` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.25|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### strictures
+
+
+|`strictures` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.000006|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### String::Errf
+
+
+|`String::Errf` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.009|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### String::Flogger
+
+
+|`String::Flogger` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.101246|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### String::Formatter
+
+
+|`String::Formatter` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.235|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### String::Print
+
+
+|`String::Print` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.94|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### String::RewritePrefix
+
+
+|`String::RewritePrefix` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.009|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### String::Truncate
+
+
+|`String::Truncate` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.100603|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### String::TtyLength
+
+
+|`String::TtyLength` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.03|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Exporter
+
+
+|`Sub::Exporter` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.989|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.991|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Sub::Exporter::ForMethods
+
+
+|`Sub::Exporter::ForMethods` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.100055|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Exporter::GlobExporter
+
+
+|`Sub::Exporter::GlobExporter` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.006|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Exporter::Progressive
+
+
+|`Sub::Exporter::Progressive` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.001013|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Identify
+
+
+|`Sub::Identify` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.14|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Info
+
+
+|`Sub::Info` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.002|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Install
+
+
+|`Sub::Install` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.929|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Name
+
+
+|`Sub::Name` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.27|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Quote
+
+
+|`Sub::Quote` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.006008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sub::Uplevel
+
+
+|`Sub::Uplevel` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.2800|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### SVG
+
+
+|`SVG` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.87|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Switch
+
+
+|`Switch` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.17|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sys::Info
+
+
+|`Sys::Info` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.7811|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sys::Info::Base
+
+
+|`Sys::Info::Base` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.7807|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sys::Info::Driver::Linux
+
+
+|`Sys::Info::Driver::Linux` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.7905|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Sys::Info::Driver::Unknown
+
+
+|`Sys::Info::Driver::Unknown` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.79|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Template
+
+
+|`Template` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.101|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.102|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Template::Plugin::Number::Format
+
+
+|`Template::Plugin::Number::Format` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Term::Encoding
+
+
+|`Term::Encoding` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.03|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Term::ReadKey
+
+
+|`Term::ReadKey` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.38|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Term::ReadLine::Gnu
+
+
+|`Term::ReadLine::Gnu` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.45|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.46|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Term::Table
+
+
+|`Term::Table` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.016|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.018|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.023|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Term::UI
+
+
+|`Term::UI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.50|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test
+
+
+|`Test` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.26|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test2::Plugin::NoWarnings
+
+
+|`Test2::Plugin::NoWarnings` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.09|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.10|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Test2::Require::Module
+
+
+|`Test2::Require::Module` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.000155|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.000163|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.302204|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Test::Base
+
+
+|`Test::Base` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.89|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::CheckDeps
+
+
+|`Test::CheckDeps` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.010|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::ClassAPI
+
+
+|`Test::ClassAPI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::CleanNamespaces
+
+
+|`Test::CleanNamespaces` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.24|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Deep
+
+
+|`Test::Deep` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.204|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Differences
+
+
+|`Test::Differences` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.69|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.71|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Test::Exception
+
+
+|`Test::Exception` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.43|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::FailWarnings
+
+
+|`Test::FailWarnings` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.008|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Fatal
+
+
+|`Test::Fatal` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.017|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::File
+
+
+|`Test::File` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.993|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::File::ShareDir::Dist
+
+
+|`Test::File::ShareDir::Dist` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.001002|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Harness
+
+
+|`Test::Harness` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.44|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|3.48|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|3.50|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Test::LeakTrace
+
+
+|`Test::LeakTrace` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.17|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Memory::Cycle
+
+
+|`Test::Memory::Cycle` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::More::UTF8
+
+
+|`Test::More::UTF8` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Most
+
+
+|`Test::Most` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.38|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Needs
+
+
+|`Test::Needs` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.002010|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::NoWarnings
+
+
+|`Test::NoWarnings` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Object
+
+
+|`Test::Object` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Output
+
+
+|`Test::Output` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.033|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.034|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Test::Pod
+
+
+|`Test::Pod` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.52|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Requires
+
+
+|`Test::Requires` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::RequiresInternet
+
+
+|`Test::RequiresInternet` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Simple
+
+
+|`Test::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.302195|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.302199|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.302204|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Test::SubCalls
+
+
+|`Test::SubCalls` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.10|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Sys::Info
+
+
+|`Test::Sys::Info` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.23|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Version
+
+
+|`Test::Version` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.09|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Warn
+
+
+|`Test::Warn` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.37|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Test::Warnings
+
+
+|`Test::Warnings` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.031|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.033|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Test::Without::Module
+
+
+|`Test::Without::Module` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.21|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.22|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.23|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Test::YAML
+
+
+|`Test::YAML` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::Aligner
+
+
+|`Text::Aligner` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.16|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::Balanced
+
+
+|`Text::Balanced` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::CSV
+
+
+|`Text::CSV` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.02|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.04|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### Text::CSV_XS
+
+
+|`Text::CSV_XS` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.50|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.55|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|1.57|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Text::Diff
+
+
+|`Text::Diff` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.45|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::Format
+
+
+|`Text::Format` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.62|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.63|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Text::Glob
+
+
+|`Text::Glob` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.11|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::Iconv
+
+
+|`Text::Iconv` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.7|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::Soundex
+
+
+|`Text::Soundex` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.05|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::Table
+
+
+|`Text::Table` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.135|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::Table::Manifold
+
+
+|`Text::Table::Manifold` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.03|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Text::Template
+
+
+|`Text::Template` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.61|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Throwable
+
+
+|`Throwable` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.001|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Tie::Function
+
+
+|`Tie::Function` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.02|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Tie::IxHash
+
+
+|`Tie::IxHash` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.23|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Time::Local
+
+
+|`Time::Local` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.35|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Time::Piece
+
+
+|`Time::Piece` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.3401|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Time::Piece::MySQL
+
+
+|`Time::Piece::MySQL` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.06|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Tree::DAG_Node
+
+
+|`Tree::DAG_Node` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.32|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Try::Tiny
+
+
+|`Try::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.31|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.32|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Type::Tiny
+
+
+|`Type::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.004000|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.006000|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Types::Serialiser
+
+
+|`Types::Serialiser` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.01|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Unicode::EastAsianWidth
+
+
+|`Unicode::EastAsianWidth` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|12.0|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Unicode::LineBreak
+
+
+|`Unicode::LineBreak` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2019.001|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### UNIVERSAL::moniker
+
+
+|`UNIVERSAL::moniker` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.08|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### Unix::Processors
+
+
+|`Unix::Processors` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.046|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### URI
+
+
+|`URI` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|5.19|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|5.28|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|5.31|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Variable::Magic
+
+
+|`Variable::Magic` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.63|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.64|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### version
+
+
+|`version` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.9929|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|0.9932|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+|0.9933|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
+
+### Want
+
+
+|`Want` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.29|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### WWW::RobotRules
+
+
+|`WWW::RobotRules` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|6.02|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::Bare
+
+
+|`XML::Bare` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.53|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::DOM
+
+
+|`XML::DOM` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.46|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::Filter::BufferText
+
+
+|`XML::Filter::BufferText` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.01|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::NamespaceSupport
+
+
+|`XML::NamespaceSupport` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.12|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::Parser
+
+
+|`XML::Parser` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.46|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|2.47|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### XML::RegExp
+
+
+|`XML::RegExp` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.04|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::SAX
+
+
+|`XML::SAX` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.02|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::SAX::Base
+
+
+|`XML::SAX::Base` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.09|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::SAX::Expat
+
+
+|`XML::SAX::Expat` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.51|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::SAX::Writer
+
+
+|`XML::SAX::Writer` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.57|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::Simple
+
+
+|`XML::Simple` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.25|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::Tiny
+
+
+|`XML::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|2.07|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::Twig
+
+
+|`XML::Twig` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|3.52|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::Writer
+
+
+|`XML::Writer` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.900|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XML::XPath
+
+
+|`XML::XPath` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.48|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### XSLoader
+
+
+|`XSLoader` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|0.24|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+
+### YAML
+
+
+|`YAML` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.30|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|1.31|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
+
+### YAML::Tiny
+
+
+|`YAML::Tiny` version|Perl-bundle-CPAN modules that include it|
+| --- | --- |
+|1.74|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|

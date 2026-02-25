@@ -1,62 +1,42 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Spglib for Python. Spglib is a library for finding and handling crystal
-    symmetries written in C.
-  license: Not confirmed
-  name: spglib-python
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''spglib-python/2.0.2-gfbf-2022b'', ''spglib-python/2.1.0-gfbf-2023a'']'
-  url: https://pypi.python.org/pypi/spglib
----
-
-spglib-python
-=============
+# spglib-python
 
 
 Spglib for Python. Spglib is a library for finding and handling crystal symmetries written in C.
 
-https://pypi.python.org/pypi/spglib
-# Available modules
+<small>homepage: </small><span class="software-link">[https://pypi.python.org/pypi/spglib](https://pypi.python.org/pypi/spglib)</span>
+
+## Available installations
 
 
-The overview below shows which spglib-python installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|spglib-python version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.0.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`spglib-python/2.0.2-gfbf-2022b`|
+|2.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`spglib-python/2.1.0-gfbf-2023a`|
+|2.6.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`spglib-python/2.6.0-gfbf-2025a`|
 
-To start using spglib-python, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load spglib-python/2.1.0-gfbf-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|spglib-python/2.1.0-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|spglib-python/2.0.2-gfbf-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in spglib-python installations
 
 
-### spglib-python/2.1.0-gfbf-2023a
+### pyproject-metadata
 
-This is a list of extensions included in the module:
 
-pyproject-metadata-0.7.1, spglib-2.1.0
+|`pyproject-metadata` version|spglib-python modules that include it|
+| --- | --- |
+|0.7.1|`spglib-python/2.1.0-gfbf-2023a`|
+
+### pyproject_metadata
+
+
+|`pyproject_metadata` version|spglib-python modules that include it|
+| --- | --- |
+|0.9.1|`spglib-python/2.6.0-gfbf-2025a`|
+
+### spglib
+
+
+|`spglib` version|spglib-python modules that include it|
+| --- | --- |
+|2.1.0|`spglib-python/2.1.0-gfbf-2023a`|
+|2.6.0|`spglib-python/2.6.0-gfbf-2025a`|

@@ -1,67 +1,158 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A simple packaging tool for simple packages.
-  license: Not confirmed
-  name: flit
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''flit/3.9.0-GCCcore-12.3.0'', ''flit/3.9.0-GCCcore-13.2.0'']'
-  url: https://github.com/pypa/flit
----
-
-flit
-====
+# flit
 
 
 A simple packaging tool for simple packages.
 
-https://github.com/pypa/flit
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/pypa/flit](https://github.com/pypa/flit)</span>
+
+## Available installations
 
 
-The overview below shows which flit installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|flit version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.10.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.10.1-GCCcore-14.2.0`|
+|3.12.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.12.0-GCCcore-14.3.0`|
+|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`flit/3.9.0-GCCcore-12.3.0`|
+|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`flit/3.9.0-GCCcore-13.2.0`|
+|3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.9.0-GCCcore-13.3.0`|
 
-To start using flit, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load flit/3.9.0-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|flit/3.9.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|flit/3.9.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in flit installations
 
 
-### flit/3.9.0-GCCcore-13.2.0
+### certifi
 
-This is a list of extensions included in the module:
 
-certifi-2023.7.22, charset-normalizer-3.3.1, docutils-0.20.1, flit-3.9.0, flit_scm-1.7.0, idna-3.4, packaging-23.2, requests-2.31.0, setuptools-scm-8.0.4, tomli_w-1.0.0, typing_extensions-4.8.0, urllib3-2.0.7
+|`certifi` version|flit modules that include it|
+| --- | --- |
+|2023.5.7|`flit/3.9.0-GCCcore-12.3.0`|
+|2023.7.22|`flit/3.9.0-GCCcore-13.2.0`|
+|2024.6.2|`flit/3.9.0-GCCcore-13.3.0`|
+|2025.1.31|`flit/3.10.1-GCCcore-14.2.0`|
+|2025.7.14|`flit/3.12.0-GCCcore-14.3.0`|
 
-### flit/3.9.0-GCCcore-12.3.0
+### charset-normalizer
 
-This is a list of extensions included in the module:
 
-certifi-2023.5.7, charset-normalizer-3.1.0, docutils-0.20.1, flit-3.9.0, flit_scm-1.7.0, idna-3.4, packaging-23.1, requests-2.31.0, setuptools_scm-7.1.0, tomli_w-1.0.0, typing_extensions-4.6.3, urllib3-1.26.16
+|`charset-normalizer` version|flit modules that include it|
+| --- | --- |
+|3.1.0|`flit/3.9.0-GCCcore-12.3.0`|
+|3.3.1|`flit/3.9.0-GCCcore-13.2.0`|
+|3.3.2|`flit/3.9.0-GCCcore-13.3.0`|
+|3.4.1|`flit/3.10.1-GCCcore-14.2.0`|
+|3.4.2|`flit/3.12.0-GCCcore-14.3.0`|
+
+### docutils
+
+
+|`docutils` version|flit modules that include it|
+| --- | --- |
+|0.20.1|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
+|0.21.2|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
+
+### flit
+
+
+|`flit` version|flit modules that include it|
+| --- | --- |
+|3.10.1|`flit/3.10.1-GCCcore-14.2.0`|
+|3.12.0|`flit/3.12.0-GCCcore-14.3.0`|
+|3.9.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
+
+### flit-scm
+
+
+|`flit-scm` version|flit modules that include it|
+| --- | --- |
+|1.7.0|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
+
+### flit_scm
+
+
+|`flit_scm` version|flit modules that include it|
+| --- | --- |
+|1.7.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
+
+### idna
+
+
+|`idna` version|flit modules that include it|
+| --- | --- |
+|3.10|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+|3.4|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
+|3.7|`flit/3.9.0-GCCcore-13.3.0`|
+
+### packaging
+
+
+|`packaging` version|flit modules that include it|
+| --- | --- |
+|23.1|`flit/3.9.0-GCCcore-12.3.0`|
+|23.2|`flit/3.9.0-GCCcore-13.2.0`|
+|24.1|`flit/3.9.0-GCCcore-13.3.0`|
+
+### requests
+
+
+|`requests` version|flit modules that include it|
+| --- | --- |
+|2.31.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
+|2.32.3|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
+|2.32.4|`flit/3.12.0-GCCcore-14.3.0`|
+
+### setuptools-scm
+
+
+|`setuptools-scm` version|flit modules that include it|
+| --- | --- |
+|8.0.4|`flit/3.9.0-GCCcore-13.2.0`|
+|8.1.0|`flit/3.9.0-GCCcore-13.3.0`|
+
+### setuptools_scm
+
+
+|`setuptools_scm` version|flit modules that include it|
+| --- | --- |
+|7.1.0|`flit/3.9.0-GCCcore-12.3.0`|
+
+### tomli-w
+
+
+|`tomli-w` version|flit modules that include it|
+| --- | --- |
+|1.0.0|`flit/3.9.0-GCCcore-13.3.0`|
+|1.2.0|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+
+### tomli_w
+
+
+|`tomli_w` version|flit modules that include it|
+| --- | --- |
+|1.0.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
+
+### typing-extensions
+
+
+|`typing-extensions` version|flit modules that include it|
+| --- | --- |
+|4.12.2|`flit/3.9.0-GCCcore-13.3.0`|
+
+### typing_extensions
+
+
+|`typing_extensions` version|flit modules that include it|
+| --- | --- |
+|4.6.3|`flit/3.9.0-GCCcore-12.3.0`|
+|4.8.0|`flit/3.9.0-GCCcore-13.2.0`|
+
+### urllib3
+
+
+|`urllib3` version|flit modules that include it|
+| --- | --- |
+|1.26.16|`flit/3.9.0-GCCcore-12.3.0`|
+|2.0.7|`flit/3.9.0-GCCcore-13.2.0`|
+|2.2.1|`flit/3.9.0-GCCcore-13.3.0`|
+|2.4.0|`flit/3.10.1-GCCcore-14.2.0`|
+|2.5.0|`flit/3.12.0-GCCcore-14.3.0`|

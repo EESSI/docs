@@ -1,61 +1,49 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: LINC is a pipeline to correct for various instrumental and ionospheric
-    effects in both LOFAR HBA and LOFAR LBAobservations.
-  license: Not confirmed
-  name: LINC
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''LINC/5.0-foss-2023b'']'
-  url: https://linc.readthedocs.io/en/latest/
----
-
-LINC
-====
+# LINC
 
 
-LINC is a pipeline to correct for various instrumental and ionospheric effects in both LOFAR HBA and LOFAR LBAobservations.
 
-https://linc.readthedocs.io/en/latest/
-# Available modules
-
-
-The overview below shows which LINC installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using LINC, load one of these modules using a `module load` command like:
-
-```shell
-module load LINC/5.0-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LINC/5.0-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+LINC is a pipeline to correct for various instrumental and ionospheric effects in both LOFAR HBA and LOFAR LBA
+observations.
 
 
-### LINC/5.0-foss-2023b
+<small>homepage: </small><span class="software-link">[https://linc.readthedocs.io/en/latest/](https://linc.readthedocs.io/en/latest/)</span>
 
-This is a list of extensions included in the module:
+## Available installations
 
-backports.shutil_get_terminal_size-1.0.0, bdsf-1.13.0.post2, LINC-5.0, pyregion-2.3.0
+
+|LINC version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|5.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`LINC/5.0-foss-2023b`|
+
+## Extensions
+
+Overview of extensions included in LINC installations
+
+
+### backports.shutil_get_terminal_size
+
+
+|`backports.shutil_get_terminal_size` version|LINC modules that include it|
+| --- | --- |
+|1.0.0|`LINC/5.0-foss-2023b`|
+
+### bdsf
+
+
+|`bdsf` version|LINC modules that include it|
+| --- | --- |
+|1.13.0.post2|`LINC/5.0-foss-2023b`|
+
+### LINC
+
+
+|`LINC` version|LINC modules that include it|
+| --- | --- |
+|5.0|`LINC/5.0-foss-2023b`|
+
+### pyregion
+
+
+|`pyregion` version|LINC modules that include it|
+| --- | --- |
+|2.3.0|`LINC/5.0-foss-2023b`|

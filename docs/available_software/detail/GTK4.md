@@ -1,56 +1,48 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: GTK+ is the primary library used to construct user interfaces in GNOME.
-    It provides all the user interface controls, or widgets, used in a common graphical
-    application. Its object-oriented API allows you to construct user interfaces without
-    dealing with the low-level details of drawing and device interaction.
-  license: Not confirmed
-  name: GTK4
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''GTK4/4.13.1-GCC-12.3.0'']'
-  url: https://docs.gtk.org/gtk4/
----
-
-GTK4
-====
+# GTK4
 
 
-GTK+ is the primary library used to construct user interfaces in GNOME. It provides all the user interface controls, or widgets, used in a common graphical application. Its object-oriented API allows you to construct user interfaces without dealing with the low-level details of drawing and device interaction.
+GTK+ is the primary library used to construct user interfaces in GNOME. It
+ provides all the user interface controls, or widgets, used in a common
+ graphical application. Its object-oriented API allows you to construct
+ user interfaces without dealing with the low-level details of drawing and
+ device interaction.
 
-https://docs.gtk.org/gtk4/
-# Available modules
+
+<small>homepage: </small><span class="software-link">[https://docs.gtk.org/gtk4/](https://docs.gtk.org/gtk4/)</span>
+
+## Available installations
 
 
-The overview below shows which GTK4 installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|GTK4 version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|4.13.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`GTK4/4.13.1-GCC-12.3.0`|
+|4.20.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GTK4/4.20.2-GCCcore-14.3.0`|
 
-To start using GTK4, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load GTK4/4.13.1-GCC-12.3.0
-```
+Overview of extensions included in GTK4 installations
 
-*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GTK4/4.13.1-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+### adwaita-icon-theme
+
+
+|`adwaita-icon-theme` version|GTK4 modules that include it|
+| --- | --- |
+|45.0|`GTK4/4.13.1-GCC-12.3.0`|
+|49.0|`GTK4/4.20.2-GCCcore-14.3.0`|
+
+### GTK
+
+
+|`GTK` version|GTK4 modules that include it|
+| --- | --- |
+|4.13.1|`GTK4/4.13.1-GCC-12.3.0`|
+|4.20.2|`GTK4/4.20.2-GCCcore-14.3.0`|
+
+### hicolor-icon-theme
+
+
+|`hicolor-icon-theme` version|GTK4 modules that include it|
+| --- | --- |
+|0.17|`GTK4/4.13.1-GCC-12.3.0`|
+|0.18|`GTK4/4.20.2-GCCcore-14.3.0`|

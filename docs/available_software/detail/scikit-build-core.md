@@ -1,84 +1,53 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Scikit-build-core is a complete ground-up rewrite of scikit-build on
-    top ofmodern packaging APIs. It provides a bridge between CMake and the Python
-    buildsystem, allowing you to make Python modules with CMake.
-  license: Not confirmed
-  name: scikit-build-core
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''scikit-build-core/0.5.0-GCCcore-12.3.0'', ''scikit-build-core/0.9.3-GCCcore-12.3.0'',
-    ''scikit-build-core/0.9.3-GCCcore-13.2.0'', ''scikit-build-core/0.10.7-GCCcore-13.2.0'']'
-  url: https://scikit-build.readthedocs.io/en/latest/
----
-
-scikit-build-core
-=================
+# scikit-build-core
 
 
-Scikit-build-core is a complete ground-up rewrite of scikit-build on top ofmodern packaging APIs. It provides a bridge between CMake and the Python buildsystem, allowing you to make Python modules with CMake.
+Scikit-build-core is a complete ground-up rewrite of scikit-build on top of
+modern packaging APIs. It provides a bridge between CMake and the Python build
+system, allowing you to make Python modules with CMake.
 
-https://scikit-build.readthedocs.io/en/latest/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://scikit-build.readthedocs.io/en/latest/](https://scikit-build.readthedocs.io/en/latest/)</span>
 
-
-The overview below shows which scikit-build-core installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using scikit-build-core, load one of these modules using a `module load` command like:
-
-```shell
-module load scikit-build-core/0.10.7-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|scikit-build-core/0.10.7-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|scikit-build-core/0.9.3-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|scikit-build-core/0.9.3-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|scikit-build-core/0.5.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### scikit-build-core/0.10.7-GCCcore-13.2.0
+|scikit-build-core version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|0.10.6|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`scikit-build-core/0.10.6-GCCcore-13.3.0`|
+|0.10.7|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`scikit-build-core/0.10.7-GCCcore-13.2.0`|
+|0.11.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`scikit-build-core/0.11.1-GCCcore-14.2.0`|
+|0.11.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`scikit-build-core/0.11.5-GCCcore-14.3.0`|
+|0.5.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`scikit-build-core/0.5.0-GCCcore-12.3.0`|
+|0.9.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`scikit-build-core/0.9.3-GCCcore-12.3.0`|
+|0.9.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`scikit-build-core/0.9.3-GCCcore-13.2.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-pyproject-metadata-0.8.0, scikit_build_core-0.10.7
+Overview of extensions included in scikit-build-core installations
 
-### scikit-build-core/0.9.3-GCCcore-13.2.0
 
-This is a list of extensions included in the module:
+### pathspec
 
-pyproject-metadata-0.8.0, scikit_build_core-0.9.3
 
-### scikit-build-core/0.9.3-GCCcore-12.3.0
+|`pathspec` version|scikit-build-core modules that include it|
+| --- | --- |
+|0.12.1|`scikit-build-core/0.11.1-GCCcore-14.2.0`<br/>`scikit-build-core/0.11.5-GCCcore-14.3.0`|
 
-This is a list of extensions included in the module:
+### pyproject-metadata
 
-pyproject-metadata-0.8.0, scikit_build_core-0.9.3
 
-### scikit-build-core/0.5.0-GCCcore-12.3.0
+|`pyproject-metadata` version|scikit-build-core modules that include it|
+| --- | --- |
+|0.8.0|`scikit-build-core/0.10.7-GCCcore-13.2.0`<br/>`scikit-build-core/0.5.0-GCCcore-12.3.0`<br/>`scikit-build-core/0.9.3-GCCcore-12.3.0`<br/>`scikit-build-core/0.9.3-GCCcore-13.2.0`|
+|0.9.1|`scikit-build-core/0.11.1-GCCcore-14.2.0`<br/>`scikit-build-core/0.11.5-GCCcore-14.3.0`|
 
-This is a list of extensions included in the module:
+### scikit_build_core
 
-pyproject-metadata-0.8.0, scikit_build_core-0.5.0
+
+|`scikit_build_core` version|scikit-build-core modules that include it|
+| --- | --- |
+|0.10.6|`scikit-build-core/0.10.6-GCCcore-13.3.0`|
+|0.10.7|`scikit-build-core/0.10.7-GCCcore-13.2.0`|
+|0.11.1|`scikit-build-core/0.11.1-GCCcore-14.2.0`|
+|0.11.5|`scikit-build-core/0.11.5-GCCcore-14.3.0`|
+|0.5.0|`scikit-build-core/0.5.0-GCCcore-12.3.0`|
+|0.9.3|`scikit-build-core/0.9.3-GCCcore-12.3.0`<br/>`scikit-build-core/0.9.3-GCCcore-13.2.0`|

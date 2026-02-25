@@ -1,60 +1,200 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A Package for Cas9-Enabled Single Cell Lineage Tracing Tree Reconstruction.
-  license: Not confirmed
-  name: Cassiopeia
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Cassiopeia/2.0.0-foss-2023a'']'
-  url: https://github.com/YosefLab/Cassiopeia
----
-
-Cassiopeia
-==========
+# Cassiopeia
 
 
 A Package for Cas9-Enabled Single Cell Lineage Tracing Tree Reconstruction.
 
-https://github.com/YosefLab/Cassiopeia
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/YosefLab/Cassiopeia](https://github.com/YosefLab/Cassiopeia)</span>
+
+## Available installations
 
 
-The overview below shows which Cassiopeia installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Cassiopeia version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.0.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Cassiopeia/2.0.0-foss-2023a`|
 
-To start using Cassiopeia, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Cassiopeia/2.0.0-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cassiopeia/2.0.0-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in Cassiopeia installations
 
 
-### Cassiopeia/2.0.0-foss-2023a
+### bleach
 
-This is a list of extensions included in the module:
 
-bleach-6.1.0, Cassiopeia-2.0.0, comm-0.2.2, defusedxml-0.7.1, deprecation-2.1.0, fastjsonschema-2.19.1, hits-0.4.0, ipywidgets-8.1.2, itolapi-4.1.4, jupyter_client-8.6.1, jupyter_core-5.7.2, jupyter_packaging-0.12.3, jupyterlab_pygments-0.3.0, jupyterlab_widgets-3.0.10, Levenshtein-0.22.0, mistune-3.0.2, nbclient-0.10.0, nbconvert-7.16.3, nbformat-5.10.3, ngs-tools-1.8.5, pandocfilters-1.5.1, python-Levenshtein-0.22.0, shortuuid-1.0.13, tinycss2-1.2.1, traitlets-5.14.2, widgetsnbextension-4.0.10
+|`bleach` version|Cassiopeia modules that include it|
+| --- | --- |
+|6.1.0|`Cassiopeia/2.0.0-foss-2023a`|
+
+### Cassiopeia
+
+
+|`Cassiopeia` version|Cassiopeia modules that include it|
+| --- | --- |
+|2.0.0|`Cassiopeia/2.0.0-foss-2023a`|
+
+### comm
+
+
+|`comm` version|Cassiopeia modules that include it|
+| --- | --- |
+|0.2.2|`Cassiopeia/2.0.0-foss-2023a`|
+
+### defusedxml
+
+
+|`defusedxml` version|Cassiopeia modules that include it|
+| --- | --- |
+|0.7.1|`Cassiopeia/2.0.0-foss-2023a`|
+
+### deprecation
+
+
+|`deprecation` version|Cassiopeia modules that include it|
+| --- | --- |
+|2.1.0|`Cassiopeia/2.0.0-foss-2023a`|
+
+### fastjsonschema
+
+
+|`fastjsonschema` version|Cassiopeia modules that include it|
+| --- | --- |
+|2.19.1|`Cassiopeia/2.0.0-foss-2023a`|
+
+### hits
+
+
+|`hits` version|Cassiopeia modules that include it|
+| --- | --- |
+|0.4.0|`Cassiopeia/2.0.0-foss-2023a`|
+
+### ipywidgets
+
+
+|`ipywidgets` version|Cassiopeia modules that include it|
+| --- | --- |
+|8.1.2|`Cassiopeia/2.0.0-foss-2023a`|
+
+### itolapi
+
+
+|`itolapi` version|Cassiopeia modules that include it|
+| --- | --- |
+|4.1.4|`Cassiopeia/2.0.0-foss-2023a`|
+
+### jupyter_client
+
+
+|`jupyter_client` version|Cassiopeia modules that include it|
+| --- | --- |
+|8.6.1|`Cassiopeia/2.0.0-foss-2023a`|
+
+### jupyter_core
+
+
+|`jupyter_core` version|Cassiopeia modules that include it|
+| --- | --- |
+|5.7.2|`Cassiopeia/2.0.0-foss-2023a`|
+
+### jupyter_packaging
+
+
+|`jupyter_packaging` version|Cassiopeia modules that include it|
+| --- | --- |
+|0.12.3|`Cassiopeia/2.0.0-foss-2023a`|
+
+### jupyterlab_pygments
+
+
+|`jupyterlab_pygments` version|Cassiopeia modules that include it|
+| --- | --- |
+|0.3.0|`Cassiopeia/2.0.0-foss-2023a`|
+
+### jupyterlab_widgets
+
+
+|`jupyterlab_widgets` version|Cassiopeia modules that include it|
+| --- | --- |
+|3.0.10|`Cassiopeia/2.0.0-foss-2023a`|
+
+### Levenshtein
+
+
+|`Levenshtein` version|Cassiopeia modules that include it|
+| --- | --- |
+|0.22.0|`Cassiopeia/2.0.0-foss-2023a`|
+
+### mistune
+
+
+|`mistune` version|Cassiopeia modules that include it|
+| --- | --- |
+|3.0.2|`Cassiopeia/2.0.0-foss-2023a`|
+
+### nbclient
+
+
+|`nbclient` version|Cassiopeia modules that include it|
+| --- | --- |
+|0.10.0|`Cassiopeia/2.0.0-foss-2023a`|
+
+### nbconvert
+
+
+|`nbconvert` version|Cassiopeia modules that include it|
+| --- | --- |
+|7.16.3|`Cassiopeia/2.0.0-foss-2023a`|
+
+### nbformat
+
+
+|`nbformat` version|Cassiopeia modules that include it|
+| --- | --- |
+|5.10.3|`Cassiopeia/2.0.0-foss-2023a`|
+
+### ngs-tools
+
+
+|`ngs-tools` version|Cassiopeia modules that include it|
+| --- | --- |
+|1.8.5|`Cassiopeia/2.0.0-foss-2023a`|
+
+### pandocfilters
+
+
+|`pandocfilters` version|Cassiopeia modules that include it|
+| --- | --- |
+|1.5.1|`Cassiopeia/2.0.0-foss-2023a`|
+
+### python-Levenshtein
+
+
+|`python-Levenshtein` version|Cassiopeia modules that include it|
+| --- | --- |
+|0.22.0|`Cassiopeia/2.0.0-foss-2023a`|
+
+### shortuuid
+
+
+|`shortuuid` version|Cassiopeia modules that include it|
+| --- | --- |
+|1.0.13|`Cassiopeia/2.0.0-foss-2023a`|
+
+### tinycss2
+
+
+|`tinycss2` version|Cassiopeia modules that include it|
+| --- | --- |
+|1.2.1|`Cassiopeia/2.0.0-foss-2023a`|
+
+### traitlets
+
+
+|`traitlets` version|Cassiopeia modules that include it|
+| --- | --- |
+|5.14.2|`Cassiopeia/2.0.0-foss-2023a`|
+
+### widgetsnbextension
+
+
+|`widgetsnbextension` version|Cassiopeia modules that include it|
+| --- | --- |
+|4.0.10|`Cassiopeia/2.0.0-foss-2023a`|

@@ -1,62 +1,107 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: This is the reference implementation of the Common Workflow Language
-    openstandards. It is intended to be feature complete and provide comprehensivevalidation
-    of CWL files as well as provide other tools related to working withCWL.
-  license: Not confirmed
-  name: cwltool
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''cwltool/3.1.20250110105449-foss-2023b'']'
-  url: https://cwltool.readthedocs.io/
----
-
-cwltool
-=======
+# cwltool
 
 
-This is the reference implementation of the Common Workflow Language openstandards. It is intended to be feature complete and provide comprehensivevalidation of CWL files as well as provide other tools related to working withCWL.
 
-https://cwltool.readthedocs.io/
-# Available modules
-
-
-The overview below shows which cwltool installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using cwltool, load one of these modules using a `module load` command like:
-
-```shell
-module load cwltool/3.1.20250110105449-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|cwltool/3.1.20250110105449-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+This is the reference implementation of the Common Workflow Language open
+standards. It is intended to be feature complete and provide comprehensive
+validation of CWL files as well as provide other tools related to working with
+CWL.
 
 
-### cwltool/3.1.20250110105449-foss-2023b
+<small>homepage: </small><span class="software-link">[https://cwltool.readthedocs.io/](https://cwltool.readthedocs.io/)</span>
 
-This is a list of extensions included in the module:
+## Available installations
 
-argcomplete-3.6.2, coloredlogs-15.0.1, cwl-upgrader-1.2.12, cwl-utils-0.38, cwltool-3.1.20250110105449, humanfriendly-10.0, mistune-3.0.2, mypy-extensions-1.1.0, prov-1.5.1, rich-argparse-1.7.1, schema-salad-8.9.20250408123006, spython-0.3.14
+
+|cwltool version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.1.20250110105449|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`cwltool/3.1.20250110105449-foss-2023b`|
+
+## Extensions
+
+Overview of extensions included in cwltool installations
+
+
+### argcomplete
+
+
+|`argcomplete` version|cwltool modules that include it|
+| --- | --- |
+|3.6.2|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### coloredlogs
+
+
+|`coloredlogs` version|cwltool modules that include it|
+| --- | --- |
+|15.0.1|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### cwl-upgrader
+
+
+|`cwl-upgrader` version|cwltool modules that include it|
+| --- | --- |
+|1.2.12|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### cwl-utils
+
+
+|`cwl-utils` version|cwltool modules that include it|
+| --- | --- |
+|0.38|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### cwltool
+
+
+|`cwltool` version|cwltool modules that include it|
+| --- | --- |
+|3.1.20250110105449|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### humanfriendly
+
+
+|`humanfriendly` version|cwltool modules that include it|
+| --- | --- |
+|10.0|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### mistune
+
+
+|`mistune` version|cwltool modules that include it|
+| --- | --- |
+|3.0.2|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### mypy-extensions
+
+
+|`mypy-extensions` version|cwltool modules that include it|
+| --- | --- |
+|1.1.0|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### prov
+
+
+|`prov` version|cwltool modules that include it|
+| --- | --- |
+|1.5.1|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### rich-argparse
+
+
+|`rich-argparse` version|cwltool modules that include it|
+| --- | --- |
+|1.7.1|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### schema-salad
+
+
+|`schema-salad` version|cwltool modules that include it|
+| --- | --- |
+|8.9.20250408123006|`cwltool/3.1.20250110105449-foss-2023b`|
+
+### spython
+
+
+|`spython` version|cwltool modules that include it|
+| --- | --- |
+|0.3.14|`cwltool/3.1.20250110105449-foss-2023b`|

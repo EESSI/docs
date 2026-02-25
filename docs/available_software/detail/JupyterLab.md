@@ -1,63 +1,82 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: JupyterLab is the next-generation user interface for Project Jupyter
-    offering all the familiar building blocks of the classic Jupyter Notebook (notebook,
-    terminal, text editor, file browser, rich outputs, etc.) in a flexible and powerful
-    user interface. JupyterLab will eventually replace the classic Jupyter Notebook.
-  license: Not confirmed
-  name: JupyterLab
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''JupyterLab/4.0.5-GCCcore-12.3.0'']'
-  url: https://jupyter.org/
----
-
-JupyterLab
-==========
+# JupyterLab
 
 
-JupyterLab is the next-generation user interface for Project Jupyter offering all the familiar building blocks of the classic Jupyter Notebook (notebook, terminal, text editor, file browser, rich outputs, etc.) in a flexible and powerful user interface. JupyterLab will eventually replace the classic Jupyter Notebook.
+JupyterLab is the next-generation user interface for Project Jupyter offering all the familiar
+ building blocks of the classic Jupyter Notebook (notebook, terminal, text editor, file browser, rich outputs,
+ etc.) in a flexible and powerful user interface. JupyterLab will eventually replace the classic Jupyter
+ Notebook.
 
-https://jupyter.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://jupyter.org/](https://jupyter.org/)</span>
 
-
-The overview below shows which JupyterLab installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using JupyterLab, load one of these modules using a `module load` command like:
-
-```shell
-module load JupyterLab/4.0.5-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JupyterLab/4.0.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### JupyterLab/4.0.5-GCCcore-12.3.0
+|JupyterLab version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|4.0.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`JupyterLab/4.0.5-GCCcore-12.3.0`|
+|4.2.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterLab/4.2.5-GCCcore-13.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-async-lru-2.0.4, json5-0.9.14, jupyter-lsp-2.2.0, jupyterlab-4.0.5, jupyterlab_server-2.24.0
+Overview of extensions included in JupyterLab installations
+
+
+### async-lru
+
+
+|`async-lru` version|JupyterLab modules that include it|
+| --- | --- |
+|2.0.4|`JupyterLab/4.2.5-GCCcore-13.3.0`<br/>`JupyterLab/4.0.5-GCCcore-12.3.0`|
+
+### h11
+
+
+|`h11` version|JupyterLab modules that include it|
+| --- | --- |
+|0.14.0|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+
+### httpcore
+
+
+|`httpcore` version|JupyterLab modules that include it|
+| --- | --- |
+|1.0.6|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+
+### httpx
+
+
+|`httpx` version|JupyterLab modules that include it|
+| --- | --- |
+|0.27.2|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+
+### json5
+
+
+|`json5` version|JupyterLab modules that include it|
+| --- | --- |
+|0.9.14|`JupyterLab/4.0.5-GCCcore-12.3.0`|
+|0.9.25|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+
+### jupyter-lsp
+
+
+|`jupyter-lsp` version|JupyterLab modules that include it|
+| --- | --- |
+|2.2.0|`JupyterLab/4.0.5-GCCcore-12.3.0`|
+|2.2.5|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+
+### jupyterlab
+
+
+|`jupyterlab` version|JupyterLab modules that include it|
+| --- | --- |
+|4.0.5|`JupyterLab/4.0.5-GCCcore-12.3.0`|
+|4.2.5|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+
+### jupyterlab_server
+
+
+|`jupyterlab_server` version|JupyterLab modules that include it|
+| --- | --- |
+|2.24.0|`JupyterLab/4.0.5-GCCcore-12.3.0`|
+|2.27.3|`JupyterLab/4.2.5-GCCcore-13.3.0`|

@@ -1,62 +1,29 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: gRPC is a modern, open source, high-performance remote procedure call
-    (RPC)framework that can run anywhere. gRPC enables client and server applications
-    tocommunicate transparently, and simplifies the building of connected systems.
-  license: Not confirmed
-  name: grpcio
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''grpcio/1.57.0-GCCcore-12.3.0'']'
-  url: https://grpc.io/
----
-
-grpcio
-======
+# grpcio
 
 
-gRPC is a modern, open source, high-performance remote procedure call (RPC)framework that can run anywhere. gRPC enables client and server applications tocommunicate transparently, and simplifies the building of connected systems.
+gRPC is a modern, open source, high-performance remote procedure call (RPC)
+framework that can run anywhere. gRPC enables client and server applications to
+communicate transparently, and simplifies the building of connected systems.
 
-https://grpc.io/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://grpc.io/](https://grpc.io/)</span>
 
-
-The overview below shows which grpcio installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using grpcio, load one of these modules using a `module load` command like:
-
-```shell
-module load grpcio/1.57.0-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|grpcio/1.57.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### grpcio/1.57.0-GCCcore-12.3.0
+|grpcio version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.57.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`grpcio/1.57.0-GCCcore-12.3.0`|
+|1.70.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`grpcio/1.70.0-GCCcore-13.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-grpcio-1.57.0
+Overview of extensions included in grpcio installations
+
+
+### grpcio
+
+
+|`grpcio` version|grpcio modules that include it|
+| --- | --- |
+|1.57.0|`grpcio/1.57.0-GCCcore-12.3.0`|
+|1.70.0|`grpcio/1.70.0-GCCcore-13.3.0`|

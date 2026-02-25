@@ -1,60 +1,207 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: An open-source software library for Machine Intelligence
-  license: Not confirmed
-  name: TensorFlow
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''TensorFlow/2.13.0-foss-2023a'']'
-  url: https://www.tensorflow.org/
----
-
-TensorFlow
-==========
+# TensorFlow
 
 
 An open-source software library for Machine Intelligence
 
-https://www.tensorflow.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.tensorflow.org/](https://www.tensorflow.org/)</span>
+
+## Available installations
 
 
-The overview below shows which TensorFlow installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|TensorFlow version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.13.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`TensorFlow/2.13.0-foss-2023a`|
 
-To start using TensorFlow, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load TensorFlow/2.13.0-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|TensorFlow/2.13.0-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in TensorFlow installations
 
 
-### TensorFlow/2.13.0-foss-2023a
+### absl-py
 
-This is a list of extensions included in the module:
 
-absl-py-1.4.0, astor-0.8.1, astunparse-1.6.3, cachetools-5.3.1, google-auth-2.22.0, google-auth-oauthlib-1.0.0, google-pasta-0.2.0, grpcio-1.57.0, gviz-api-1.10.0, keras-2.13.1, Markdown-3.4.4, oauthlib-3.2.2, opt-einsum-3.3.0, portpicker-1.5.2, pyasn1-modules-0.3.0, requests-oauthlib-1.3.1, rsa-4.9, tblib-2.0.0, tensorboard-2.13.0, tensorboard-data-server-0.7.1, tensorboard-plugin-profile-2.13.1, tensorboard-plugin-wit-1.8.1, TensorFlow-2.13.0, tensorflow-estimator-2.13.0, termcolor-2.3.0, Werkzeug-2.3.7, wrapt-1.15.0
+|`absl-py` version|TensorFlow modules that include it|
+| --- | --- |
+|1.4.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### astor
+
+
+|`astor` version|TensorFlow modules that include it|
+| --- | --- |
+|0.8.1|`TensorFlow/2.13.0-foss-2023a`|
+
+### astunparse
+
+
+|`astunparse` version|TensorFlow modules that include it|
+| --- | --- |
+|1.6.3|`TensorFlow/2.13.0-foss-2023a`|
+
+### cachetools
+
+
+|`cachetools` version|TensorFlow modules that include it|
+| --- | --- |
+|5.3.1|`TensorFlow/2.13.0-foss-2023a`|
+
+### google-auth
+
+
+|`google-auth` version|TensorFlow modules that include it|
+| --- | --- |
+|2.22.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### google-auth-oauthlib
+
+
+|`google-auth-oauthlib` version|TensorFlow modules that include it|
+| --- | --- |
+|1.0.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### google-pasta
+
+
+|`google-pasta` version|TensorFlow modules that include it|
+| --- | --- |
+|0.2.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### grpcio
+
+
+|`grpcio` version|TensorFlow modules that include it|
+| --- | --- |
+|1.57.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### gviz-api
+
+
+|`gviz-api` version|TensorFlow modules that include it|
+| --- | --- |
+|1.10.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### keras
+
+
+|`keras` version|TensorFlow modules that include it|
+| --- | --- |
+|2.13.1|`TensorFlow/2.13.0-foss-2023a`|
+
+### Markdown
+
+
+|`Markdown` version|TensorFlow modules that include it|
+| --- | --- |
+|3.4.4|`TensorFlow/2.13.0-foss-2023a`|
+
+### oauthlib
+
+
+|`oauthlib` version|TensorFlow modules that include it|
+| --- | --- |
+|3.2.2|`TensorFlow/2.13.0-foss-2023a`|
+
+### opt-einsum
+
+
+|`opt-einsum` version|TensorFlow modules that include it|
+| --- | --- |
+|3.3.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### portpicker
+
+
+|`portpicker` version|TensorFlow modules that include it|
+| --- | --- |
+|1.5.2|`TensorFlow/2.13.0-foss-2023a`|
+
+### pyasn1-modules
+
+
+|`pyasn1-modules` version|TensorFlow modules that include it|
+| --- | --- |
+|0.3.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### requests-oauthlib
+
+
+|`requests-oauthlib` version|TensorFlow modules that include it|
+| --- | --- |
+|1.3.1|`TensorFlow/2.13.0-foss-2023a`|
+
+### rsa
+
+
+|`rsa` version|TensorFlow modules that include it|
+| --- | --- |
+|4.9|`TensorFlow/2.13.0-foss-2023a`|
+
+### tblib
+
+
+|`tblib` version|TensorFlow modules that include it|
+| --- | --- |
+|2.0.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### tensorboard
+
+
+|`tensorboard` version|TensorFlow modules that include it|
+| --- | --- |
+|2.13.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### tensorboard-data-server
+
+
+|`tensorboard-data-server` version|TensorFlow modules that include it|
+| --- | --- |
+|0.7.1|`TensorFlow/2.13.0-foss-2023a`|
+
+### tensorboard-plugin-profile
+
+
+|`tensorboard-plugin-profile` version|TensorFlow modules that include it|
+| --- | --- |
+|2.13.1|`TensorFlow/2.13.0-foss-2023a`|
+
+### tensorboard-plugin-wit
+
+
+|`tensorboard-plugin-wit` version|TensorFlow modules that include it|
+| --- | --- |
+|1.8.1|`TensorFlow/2.13.0-foss-2023a`|
+
+### TensorFlow
+
+
+|`TensorFlow` version|TensorFlow modules that include it|
+| --- | --- |
+|2.13.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### tensorflow-estimator
+
+
+|`tensorflow-estimator` version|TensorFlow modules that include it|
+| --- | --- |
+|2.13.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### termcolor
+
+
+|`termcolor` version|TensorFlow modules that include it|
+| --- | --- |
+|2.3.0|`TensorFlow/2.13.0-foss-2023a`|
+
+### Werkzeug
+
+
+|`Werkzeug` version|TensorFlow modules that include it|
+| --- | --- |
+|2.3.7|`TensorFlow/2.13.0-foss-2023a`|
+
+### wrapt
+
+
+|`wrapt` version|TensorFlow modules that include it|
+| --- | --- |
+|1.15.0|`TensorFlow/2.13.0-foss-2023a`|

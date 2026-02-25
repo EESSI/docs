@@ -1,63 +1,50 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: 'ml_dtypes is a stand-alone implementation of several NumPy dtype extensions
-    usedin machine learning libraries, including:bfloat16: an alternative to the standard
-    float16 formatfloat8_*: several experimental 8-bit floating point representations
-    including:float8_e4m3b11fnuzfloat8_e4m3fnfloat8_e4m3fnuzfloat8_e5m2float8_e5m2fnuz'
-  license: Not confirmed
-  name: ml_dtypes
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''ml_dtypes/0.3.2-gfbf-2023a'']'
-  url: https://github.com/jax-ml/ml_dtypes
----
-
-ml_dtypes
-=========
+# ml_dtypes
 
 
-ml_dtypes is a stand-alone implementation of several NumPy dtype extensions usedin machine learning libraries, including:bfloat16: an alternative to the standard float16 formatfloat8_*: several experimental 8-bit floating point representations including:float8_e4m3b11fnuzfloat8_e4m3fnfloat8_e4m3fnuzfloat8_e5m2float8_e5m2fnuz
 
-https://github.com/jax-ml/ml_dtypes
-# Available modules
+ml_dtypes is a stand-alone implementation of several NumPy dtype extensions used
+in machine learning libraries, including:
 
-
-The overview below shows which ml_dtypes installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using ml_dtypes, load one of these modules using a `module load` command like:
-
-```shell
-module load ml_dtypes/0.3.2-gfbf-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ml_dtypes/0.3.2-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+bfloat16: an alternative to the standard float16 format
+float8_*: several experimental 8-bit floating point representations including:
+float8_e4m3b11fnuz
+float8_e4m3fn
+float8_e4m3fnuz
+float8_e5m2
+float8_e5m2fnuz
 
 
-### ml_dtypes/0.3.2-gfbf-2023a
+<small>homepage: </small><span class="software-link">[https://github.com/jax-ml/ml_dtypes](https://github.com/jax-ml/ml_dtypes)</span>
 
-This is a list of extensions included in the module:
+## Available installations
 
-etils-1.6.0, ml_dtypes-0.3.2, opt_einsum-3.3.0
+
+|ml_dtypes version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|0.3.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`ml_dtypes/0.3.2-gfbf-2023a`|
+
+## Extensions
+
+Overview of extensions included in ml_dtypes installations
+
+
+### etils
+
+
+|`etils` version|ml_dtypes modules that include it|
+| --- | --- |
+|1.6.0|`ml_dtypes/0.3.2-gfbf-2023a`|
+
+### ml_dtypes
+
+
+|`ml_dtypes` version|ml_dtypes modules that include it|
+| --- | --- |
+|0.3.2|`ml_dtypes/0.3.2-gfbf-2023a`|
+
+### opt_einsum
+
+
+|`opt_einsum` version|ml_dtypes modules that include it|
+| --- | --- |
+|3.3.0|`ml_dtypes/0.3.2-gfbf-2023a`|

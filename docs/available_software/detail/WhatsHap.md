@@ -1,69 +1,56 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: WhatsHap is a software for phasing genomic variants using DNAsequencing
-    reads, also called read-based phasing or haplotype assembly. It isespecially suitable
-    for long reads, but works also well with short reads.
-  license: Not confirmed
-  name: WhatsHap
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''WhatsHap/2.1-foss-2022b'', ''WhatsHap/2.2-foss-2023a'']'
-  url: https://whatshap.readthedocs.io
----
-
-WhatsHap
-========
+# WhatsHap
 
 
-WhatsHap is a software for phasing genomic variants using DNAsequencing reads, also called read-based phasing or haplotype assembly. It isespecially suitable for long reads, but works also well with short reads.
+WhatsHap is a software for phasing genomic variants using DNA
+sequencing reads, also called read-based phasing or haplotype assembly. It is
+especially suitable for long reads, but works also well with short reads.
 
-https://whatshap.readthedocs.io
-# Available modules
+<small>homepage: </small><span class="software-link">[https://whatshap.readthedocs.io](https://whatshap.readthedocs.io)</span>
 
-
-The overview below shows which WhatsHap installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using WhatsHap, load one of these modules using a `module load` command like:
-
-```shell
-module load WhatsHap/2.2-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WhatsHap/2.2-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|WhatsHap/2.1-foss-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### WhatsHap/2.2-foss-2023a
+|WhatsHap version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`WhatsHap/2.1-foss-2022b`|
+|2.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`WhatsHap/2.2-foss-2023a`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-PuLP-2.8.0, whatshap-2.2, xopen-1.7.0
+Overview of extensions included in WhatsHap installations
 
-### WhatsHap/2.1-foss-2022b
 
-This is a list of extensions included in the module:
+### pulp
 
-pulp-2.8.0, WhatsHap-2.1, xopen-1.7.0
+
+|`pulp` version|WhatsHap modules that include it|
+| --- | --- |
+|2.8.0|`WhatsHap/2.1-foss-2022b`|
+
+### PuLP
+
+
+|`PuLP` version|WhatsHap modules that include it|
+| --- | --- |
+|2.8.0|`WhatsHap/2.2-foss-2023a`|
+
+### WhatsHap
+
+
+|`WhatsHap` version|WhatsHap modules that include it|
+| --- | --- |
+|2.1|`WhatsHap/2.1-foss-2022b`|
+
+### whatshap
+
+
+|`whatshap` version|WhatsHap modules that include it|
+| --- | --- |
+|2.2|`WhatsHap/2.2-foss-2023a`|
+
+### xopen
+
+
+|`xopen` version|WhatsHap modules that include it|
+| --- | --- |
+|1.7.0|`WhatsHap/2.1-foss-2022b`<br/>`WhatsHap/2.2-foss-2023a`|

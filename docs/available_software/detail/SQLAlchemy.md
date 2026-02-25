@@ -1,71 +1,70 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that
-    givesapplication developers the full power and flexibility of SQL. SQLAlchemyprovides
-    a full suite of well known enterprise-level persistence patterns,designed for
-    efficient and high-performing database access, adapted into asimple and Pythonic
-    domain language.
-  license: Not confirmed
-  name: SQLAlchemy
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''SQLAlchemy/2.0.25-GCCcore-12.3.0'', ''SQLAlchemy/2.0.29-GCCcore-13.2.0'']'
-  url: https://www.sqlalchemy.org/
----
-
-SQLAlchemy
-==========
+# SQLAlchemy
 
 
-SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that givesapplication developers the full power and flexibility of SQL. SQLAlchemyprovides a full suite of well known enterprise-level persistence patterns,designed for efficient and high-performing database access, adapted into asimple and Pythonic domain language.
+SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives
+application developers the full power and flexibility of SQL. SQLAlchemy
+provides a full suite of well known enterprise-level persistence patterns,
+designed for efficient and high-performing database access, adapted into a
+simple and Pythonic domain language.
 
-https://www.sqlalchemy.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.sqlalchemy.org/](https://www.sqlalchemy.org/)</span>
 
-
-The overview below shows which SQLAlchemy installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using SQLAlchemy, load one of these modules using a `module load` command like:
-
-```shell
-module load SQLAlchemy/2.0.29-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SQLAlchemy/2.0.29-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|SQLAlchemy/2.0.25-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### SQLAlchemy/2.0.29-GCCcore-13.2.0
+|SQLAlchemy version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.0.25|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
+|2.0.29|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SQLAlchemy/2.0.29-GCCcore-13.2.0`|
+|2.0.36|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-alembic-1.13.1, async-timeout-4.0.3, asyncpg-0.29.0, SQLAlchemy-2.0.29
+Overview of extensions included in SQLAlchemy installations
 
-### SQLAlchemy/2.0.25-GCCcore-12.3.0
 
-This is a list of extensions included in the module:
+### alembic
 
-alembic-1.13.1, async-timeout-4.0.3, asyncpg-0.29.0, greenlet-3.0.3, SQLAlchemy-2.0.25
+
+|`alembic` version|SQLAlchemy modules that include it|
+| --- | --- |
+|1.13.1|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
+|1.14.0|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
+
+### async-timeout
+
+
+|`async-timeout` version|SQLAlchemy modules that include it|
+| --- | --- |
+|4.0.3|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
+|5.0.1|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
+
+### asyncpg
+
+
+|`asyncpg` version|SQLAlchemy modules that include it|
+| --- | --- |
+|0.29.0|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
+|0.30.0|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
+
+### greenlet
+
+
+|`greenlet` version|SQLAlchemy modules that include it|
+| --- | --- |
+|3.0.3|`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
+
+### SQLAlchemy
+
+
+|`SQLAlchemy` version|SQLAlchemy modules that include it|
+| --- | --- |
+|2.0.25|`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
+|2.0.29|`SQLAlchemy/2.0.29-GCCcore-13.2.0`|
+
+### sqlalchemy
+
+
+|`sqlalchemy` version|SQLAlchemy modules that include it|
+| --- | --- |
+|2.0.36|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|

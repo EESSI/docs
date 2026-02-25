@@ -1,59 +1,56 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Wayland is a project to define a protocol for a compositor to talk
-    to its clients as well as a library implementation of the protocol.  The compositor
-    can be a standalone display server running on Linux kernel modesetting and evdev
-    input devices, an X application, or a wayland client itself.  The clients can
-    be traditional applications, X servers (rootless or fullscreen) or other display
-    servers.
-  license: Not confirmed
-  name: Wayland
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Wayland/1.22.0-GCCcore-12.3.0'', ''Wayland/1.22.0-GCCcore-13.2.0'']'
-  url: https://wayland.freedesktop.org/
----
-
-Wayland
-=======
+# Wayland
 
 
-Wayland is a project to define a protocol for a compositor to talk to its clients as well as a library implementation of the protocol.  The compositor can be a standalone display server running on Linux kernel modesetting and evdev input devices, an X application, or a wayland client itself.  The clients can be traditional applications, X servers (rootless or fullscreen) or other display servers.
 
-https://wayland.freedesktop.org/
-# Available modules
+Wayland is a project to define a protocol for a compositor to talk to
+ its clients as well as a library implementation of the protocol.  The
+ compositor can be a standalone display server running on Linux kernel
+ modesetting and evdev input devices, an X application, or a wayland
+ client itself.  The clients can be traditional applications, X servers
+ (rootless or fullscreen) or other display servers.
 
 
-The overview below shows which Wayland installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://wayland.freedesktop.org/](https://wayland.freedesktop.org/)</span>
 
-To start using Wayland, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load Wayland/1.22.0-GCCcore-13.2.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
+|Wayland version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.22.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Wayland/1.22.0-GCCcore-12.3.0`|
+|1.22.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Wayland/1.22.0-GCCcore-13.2.0`|
+|1.23.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Wayland/1.23.0-GCCcore-13.3.0`|
+|1.23.92|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Wayland/1.23.92-GCCcore-14.2.0`|
+|1.24.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Wayland/1.24.0-GCCcore-14.3.0`|
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Wayland/1.22.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Wayland/1.22.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Extensions
+
+Overview of extensions included in Wayland installations
+
+
+### wayland
+
+
+|`wayland` version|Wayland modules that include it|
+| --- | --- |
+|1.22.0|`Wayland/1.22.0-GCCcore-12.3.0`<br/>`Wayland/1.22.0-GCCcore-13.2.0`|
+|1.23.0|`Wayland/1.23.0-GCCcore-13.3.0`|
+|1.23.92|`Wayland/1.23.92-GCCcore-14.2.0`|
+|1.24.0|`Wayland/1.24.0-GCCcore-14.3.0`|
+
+### wayland-protocols
+
+
+|`wayland-protocols` version|Wayland modules that include it|
+| --- | --- |
+|1.32|`Wayland/1.22.0-GCCcore-12.3.0`<br/>`Wayland/1.22.0-GCCcore-13.2.0`|
+|1.36|`Wayland/1.23.0-GCCcore-13.3.0`|
+|1.44|`Wayland/1.23.92-GCCcore-14.2.0`|
+|1.45|`Wayland/1.24.0-GCCcore-14.3.0`|
+
+### wayland-utils
+
+
+|`wayland-utils` version|Wayland modules that include it|
+| --- | --- |
+|1.2.0|`Wayland/1.24.0-GCCcore-14.3.0`<br/>`Wayland/1.23.0-GCCcore-13.3.0`<br/>`Wayland/1.23.92-GCCcore-14.2.0`|

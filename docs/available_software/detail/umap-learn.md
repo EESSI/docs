@@ -1,62 +1,36 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Uniform Manifold Approximation and Projection (UMAP) is a dimension
-    reduction techniquethat can be used for visualisation similarly to t-SNE, but
-    also for general non-lineardimension reduction.
-  license: Not confirmed
-  name: umap-learn
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''umap-learn/0.5.5-foss-2023a'']'
-  url: https://umap-learn.readthedocs.io/en/latest/
----
-
-umap-learn
-==========
+# umap-learn
 
 
-Uniform Manifold Approximation and Projection (UMAP) is a dimension reduction techniquethat can be used for visualisation similarly to t-SNE, but also for general non-lineardimension reduction.
 
-https://umap-learn.readthedocs.io/en/latest/
-# Available modules
-
-
-The overview below shows which umap-learn installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using umap-learn, load one of these modules using a `module load` command like:
-
-```shell
-module load umap-learn/0.5.5-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|umap-learn/0.5.5-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Uniform Manifold Approximation and Projection (UMAP) is a dimension reduction technique
+that can be used for visualisation similarly to t-SNE, but also for general non-linear
+dimension reduction.
 
 
-### umap-learn/0.5.5-foss-2023a
+<small>homepage: </small><span class="software-link">[https://umap-learn.readthedocs.io/en/latest/](https://umap-learn.readthedocs.io/en/latest/)</span>
 
-This is a list of extensions included in the module:
+## Available installations
 
-pynndescent-0.5.11, umap-learn-0.5.5
+
+|umap-learn version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|0.5.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`umap-learn/0.5.5-foss-2023a`|
+
+## Extensions
+
+Overview of extensions included in umap-learn installations
+
+
+### pynndescent
+
+
+|`pynndescent` version|umap-learn modules that include it|
+| --- | --- |
+|0.5.11|`umap-learn/0.5.5-foss-2023a`|
+
+### umap-learn
+
+
+|`umap-learn` version|umap-learn modules that include it|
+| --- | --- |
+|0.5.5|`umap-learn/0.5.5-foss-2023a`|

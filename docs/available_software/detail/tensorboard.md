@@ -1,61 +1,129 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: TensorBoard is a suite of web applications for inspecting andunderstanding
-    your TensorFlow runs and graphs.
-  license: Not confirmed
-  name: tensorboard
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''tensorboard/2.15.1-gfbf-2023a'']'
-  url: https://github.com/tensorflow/tensorboard
----
-
-tensorboard
-===========
+# tensorboard
 
 
-TensorBoard is a suite of web applications for inspecting andunderstanding your TensorFlow runs and graphs.
+TensorBoard is a suite of web applications for inspecting and
+understanding your TensorFlow runs and graphs.
 
-https://github.com/tensorflow/tensorboard
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/tensorflow/tensorboard](https://github.com/tensorflow/tensorboard)</span>
 
-
-The overview below shows which tensorboard installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using tensorboard, load one of these modules using a `module load` command like:
-
-```shell
-module load tensorboard/2.15.1-gfbf-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|tensorboard/2.15.1-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### tensorboard/2.15.1-gfbf-2023a
+|tensorboard version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.15.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`tensorboard/2.15.1-gfbf-2023a`|
+|2.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`tensorboard/2.18.0-gfbf-2024a`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-absl-py-2.1.0, cachetools-5.3.2, google-auth-2.26.2, google-auth-oauthlib-1.2.0, gviz-api-1.10.0, Markdown-3.5.2, oauthlib-3.2.2, pyasn1_modules-0.3.0, requests-oauthlib-1.3.1, rsa-4.9, tensorboard-2.15.1, tensorboard-plugin-profile-2.15.1, tensorboard_data_server-0.7.2, Werkzeug-3.0.1
+Overview of extensions included in tensorboard installations
+
+
+### absl-py
+
+
+|`absl-py` version|tensorboard modules that include it|
+| --- | --- |
+|2.1.0|`tensorboard/2.15.1-gfbf-2023a`|
+
+### cachetools
+
+
+|`cachetools` version|tensorboard modules that include it|
+| --- | --- |
+|5.3.2|`tensorboard/2.15.1-gfbf-2023a`|
+|5.5.0|`tensorboard/2.18.0-gfbf-2024a`|
+
+### google-auth
+
+
+|`google-auth` version|tensorboard modules that include it|
+| --- | --- |
+|2.26.2|`tensorboard/2.15.1-gfbf-2023a`|
+
+### google-auth-oauthlib
+
+
+|`google-auth-oauthlib` version|tensorboard modules that include it|
+| --- | --- |
+|1.2.0|`tensorboard/2.15.1-gfbf-2023a`|
+
+### google_auth
+
+
+|`google_auth` version|tensorboard modules that include it|
+| --- | --- |
+|2.35.0|`tensorboard/2.18.0-gfbf-2024a`|
+
+### gviz-api
+
+
+|`gviz-api` version|tensorboard modules that include it|
+| --- | --- |
+|1.10.0|`tensorboard/2.15.1-gfbf-2023a`|
+
+### Markdown
+
+
+|`Markdown` version|tensorboard modules that include it|
+| --- | --- |
+|3.5.2|`tensorboard/2.15.1-gfbf-2023a`|
+
+### oauthlib
+
+
+|`oauthlib` version|tensorboard modules that include it|
+| --- | --- |
+|3.2.2|`tensorboard/2.15.1-gfbf-2023a`|
+
+### pyasn1_modules
+
+
+|`pyasn1_modules` version|tensorboard modules that include it|
+| --- | --- |
+|0.3.0|`tensorboard/2.15.1-gfbf-2023a`|
+|0.4.1|`tensorboard/2.18.0-gfbf-2024a`|
+
+### requests-oauthlib
+
+
+|`requests-oauthlib` version|tensorboard modules that include it|
+| --- | --- |
+|1.3.1|`tensorboard/2.15.1-gfbf-2023a`|
+
+### rsa
+
+
+|`rsa` version|tensorboard modules that include it|
+| --- | --- |
+|4.9|`tensorboard/2.18.0-gfbf-2024a`<br/>`tensorboard/2.15.1-gfbf-2023a`|
+
+### tensorboard
+
+
+|`tensorboard` version|tensorboard modules that include it|
+| --- | --- |
+|2.15.1|`tensorboard/2.15.1-gfbf-2023a`|
+|2.18.0|`tensorboard/2.18.0-gfbf-2024a`|
+
+### tensorboard-plugin-profile
+
+
+|`tensorboard-plugin-profile` version|tensorboard modules that include it|
+| --- | --- |
+|2.15.1|`tensorboard/2.15.1-gfbf-2023a`|
+
+### tensorboard_data_server
+
+
+|`tensorboard_data_server` version|tensorboard modules that include it|
+| --- | --- |
+|0.7.2|`tensorboard/2.18.0-gfbf-2024a`<br/>`tensorboard/2.15.1-gfbf-2023a`|
+
+### Werkzeug
+
+
+|`Werkzeug` version|tensorboard modules that include it|
+| --- | --- |
+|3.0.1|`tensorboard/2.15.1-gfbf-2023a`|
+|3.1.3|`tensorboard/2.18.0-gfbf-2024a`|

@@ -1,67 +1,66 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: A tool for creating isolated virtual python environments.
-  license: Not confirmed
-  name: virtualenv
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''virtualenv/20.23.1-GCCcore-12.3.0'', ''virtualenv/20.24.6-GCCcore-13.2.0'']'
-  url: https://github.com/pypa/virtualenv
----
-
-virtualenv
-==========
+# virtualenv
 
 
 A tool for creating isolated virtual python environments.
 
-https://github.com/pypa/virtualenv
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/pypa/virtualenv](https://github.com/pypa/virtualenv)</span>
+
+## Available installations
 
 
-The overview below shows which virtualenv installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|virtualenv version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|20.23.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`virtualenv/20.23.1-GCCcore-12.3.0`|
+|20.24.6|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`virtualenv/20.24.6-GCCcore-13.2.0`|
+|20.26.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`virtualenv/20.26.2-GCCcore-13.3.0`|
+|20.29.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`virtualenv/20.29.2-GCCcore-14.2.0`|
+|20.32.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`virtualenv/20.32.0-GCCcore-14.3.0`|
 
-To start using virtualenv, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load virtualenv/20.24.6-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|virtualenv/20.24.6-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|virtualenv/20.23.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in virtualenv installations
 
 
-### virtualenv/20.24.6-GCCcore-13.2.0
+### distlib
 
-This is a list of extensions included in the module:
 
-distlib-0.3.7, filelock-3.13.0, platformdirs-3.11.0, virtualenv-20.24.6
+|`distlib` version|virtualenv modules that include it|
+| --- | --- |
+|0.3.6|`virtualenv/20.23.1-GCCcore-12.3.0`|
+|0.3.7|`virtualenv/20.24.6-GCCcore-13.2.0`|
+|0.3.8|`virtualenv/20.26.2-GCCcore-13.3.0`|
+|0.3.9|`virtualenv/20.29.2-GCCcore-14.2.0`|
+|0.4.0|`virtualenv/20.32.0-GCCcore-14.3.0`|
 
-### virtualenv/20.23.1-GCCcore-12.3.0
+### filelock
 
-This is a list of extensions included in the module:
 
-distlib-0.3.6, filelock-3.12.2, platformdirs-3.8.0, virtualenv-20.23.1
+|`filelock` version|virtualenv modules that include it|
+| --- | --- |
+|3.12.2|`virtualenv/20.23.1-GCCcore-12.3.0`|
+|3.13.0|`virtualenv/20.24.6-GCCcore-13.2.0`|
+|3.15.1|`virtualenv/20.26.2-GCCcore-13.3.0`|
+|3.17.0|`virtualenv/20.29.2-GCCcore-14.2.0`|
+|3.18.0|`virtualenv/20.32.0-GCCcore-14.3.0`|
+
+### platformdirs
+
+
+|`platformdirs` version|virtualenv modules that include it|
+| --- | --- |
+|3.11.0|`virtualenv/20.24.6-GCCcore-13.2.0`|
+|3.8.0|`virtualenv/20.23.1-GCCcore-12.3.0`|
+|4.2.2|`virtualenv/20.26.2-GCCcore-13.3.0`|
+|4.3.6|`virtualenv/20.29.2-GCCcore-14.2.0`|
+|4.3.8|`virtualenv/20.32.0-GCCcore-14.3.0`|
+
+### virtualenv
+
+
+|`virtualenv` version|virtualenv modules that include it|
+| --- | --- |
+|20.23.1|`virtualenv/20.23.1-GCCcore-12.3.0`|
+|20.24.6|`virtualenv/20.24.6-GCCcore-13.2.0`|
+|20.26.2|`virtualenv/20.26.2-GCCcore-13.3.0`|
+|20.29.2|`virtualenv/20.29.2-GCCcore-14.2.0`|
+|20.32.0|`virtualenv/20.32.0-GCCcore-14.3.0`|

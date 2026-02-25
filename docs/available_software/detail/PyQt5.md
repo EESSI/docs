@@ -1,55 +1,40 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: "PyQt5 is a set of Python bindings for v5 of the Qt application framework\
-    \ from The Qt Company.This bundle includes PyQtWebEngine, a set of Python bindings\
-    \ for The Qt Company\u2019s Qt WebEngine framework."
-  license: Not confirmed
-  name: PyQt5
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''PyQt5/5.15.10-GCCcore-12.3.0'']'
-  url: https://www.riverbankcomputing.com/software/pyqt
----
-
-PyQt5
-=====
+# PyQt5
 
 
-PyQt5 is a set of Python bindings for v5 of the Qt application framework from The Qt Company.This bundle includes PyQtWebEngine, a set of Python bindings for The Qt Company’s Qt WebEngine framework.
+PyQt5 is a set of Python bindings for v5 of the Qt application framework from The Qt Company.
+This bundle includes PyQtWebEngine, a set of Python bindings for The Qt Company’s Qt WebEngine framework.
 
-https://www.riverbankcomputing.com/software/pyqt
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.riverbankcomputing.com/software/pyqt](https://www.riverbankcomputing.com/software/pyqt)</span>
+
+## Available installations
 
 
-The overview below shows which PyQt5 installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|PyQt5 version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|5.15.10|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`PyQt5/5.15.10-GCCcore-12.3.0`|
 
-To start using PyQt5, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load PyQt5/5.15.10-GCCcore-12.3.0
-```
+Overview of extensions included in PyQt5 installations
 
-*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PyQt5/5.15.10-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+### PyQt5
+
+
+|`PyQt5` version|PyQt5 modules that include it|
+| --- | --- |
+|5.15.10|`PyQt5/5.15.10-GCCcore-12.3.0`|
+
+### PyQt5_sip
+
+
+|`PyQt5_sip` version|PyQt5 modules that include it|
+| --- | --- |
+|12.13.0|`PyQt5/5.15.10-GCCcore-12.3.0`|
+
+### PyQtWebEngine
+
+
+|`PyQtWebEngine` version|PyQt5 modules that include it|
+| --- | --- |
+|5.15.6|`PyQt5/5.15.10-GCCcore-12.3.0`|

@@ -1,54 +1,15 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: 'This library aims to be a friendly, portable C implementation of the
-    AV1 Image File Format,as described here: https://aomediacodec.github.io/av1-avif/'
-  license: Not confirmed
-  name: libavif
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''libavif/1.0.4-GCCcore-12.3.0'']'
-  url: https://github.com/AOMediaCodec/libavif
----
-
-libavif
-=======
+# libavif
 
 
-This library aims to be a friendly, portable C implementation of the AV1 Image File Format,as described here: https://aomediacodec.github.io/av1-avif/
-
-https://github.com/AOMediaCodec/libavif
-# Available modules
+This library aims to be a friendly, portable C implementation of the AV1 Image File Format,
+as described here: https://aomediacodec.github.io/av1-avif/
 
 
-The overview below shows which libavif installations are available per target architecture in EESSI, ordered based on software version (new to old).
+<small>homepage: </small><span class="software-link">[https://github.com/AOMediaCodec/libavif](https://github.com/AOMediaCodec/libavif)</span>
 
-To start using libavif, load one of these modules using a `module load` command like:
+## Available installations
 
-```shell
-module load libavif/1.0.4-GCCcore-12.3.0
-```
 
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libavif/1.0.4-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|libavif version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.0.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`libavif/1.0.4-GCCcore-12.3.0`|

@@ -1,62 +1,57 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: The Astropy Project is a community effort to develop a common core
-    package for Astronomy in Python and foster an ecosystem of interoperable astronomy
-    packages.The Astropy community is committed to supporting diversity and inclusion.
-  license: Not confirmed
-  name: astropy
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''astropy/7.0.0-gfbf-2023b'']'
-  url: https://www.astropy.org/
----
-
-astropy
-=======
+# astropy
 
 
-The Astropy Project is a community effort to develop a common core package for Astronomy in Python and foster an ecosystem of interoperable astronomy packages.The Astropy community is committed to supporting diversity and inclusion.
+The Astropy Project is a community effort to develop a common 
+core package for Astronomy in Python and foster an ecosystem of interoperable 
+astronomy packages.
 
-https://www.astropy.org/
-# Available modules
+The Astropy community is committed to supporting diversity and inclusion.
 
+<small>homepage: </small><span class="software-link">[https://www.astropy.org/](https://www.astropy.org/)</span>
 
-The overview below shows which astropy installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using astropy, load one of these modules using a `module load` command like:
-
-```shell
-module load astropy/7.0.0-gfbf-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|astropy/7.0.0-gfbf-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### astropy/7.0.0-gfbf-2023b
+|astropy version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|7.0.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`astropy/7.0.0-gfbf-2023b`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-astropy-7.0.0, astropy-iers-data-0.2025.1.6.0.33.42, colorlog-6.9.0, extension-helpers-1.2.0, pyerfa-2.0.1.5
+Overview of extensions included in astropy installations
+
+
+### astropy
+
+
+|`astropy` version|astropy modules that include it|
+| --- | --- |
+|7.0.0|`astropy/7.0.0-gfbf-2023b`|
+
+### astropy-iers-data
+
+
+|`astropy-iers-data` version|astropy modules that include it|
+| --- | --- |
+|0.2025.1.6.0.33.42|`astropy/7.0.0-gfbf-2023b`|
+
+### colorlog
+
+
+|`colorlog` version|astropy modules that include it|
+| --- | --- |
+|6.9.0|`astropy/7.0.0-gfbf-2023b`|
+
+### extension-helpers
+
+
+|`extension-helpers` version|astropy modules that include it|
+| --- | --- |
+|1.2.0|`astropy/7.0.0-gfbf-2023b`|
+
+### pyerfa
+
+
+|`pyerfa` version|astropy modules that include it|
+| --- | --- |
+|2.0.1.5|`astropy/7.0.0-gfbf-2023b`|

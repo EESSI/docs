@@ -1,56 +1,16 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: WSClean (w-stacking clean) is a fast generic widefield imager.It implements
-    several gridding algorithms and offers fully-automated multi-scalemulti-frequency
-    deconvolution.
-  license: Not confirmed
-  name: WSClean
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''WSClean/3.4-foss-2023b'', ''WSClean/3.5-foss-2023b'']'
-  url: https://wsclean.readthedocs.io/
----
-
-WSClean
-=======
+# WSClean
 
 
-WSClean (w-stacking clean) is a fast generic widefield imager.It implements several gridding algorithms and offers fully-automated multi-scalemulti-frequency deconvolution.
+WSClean (w-stacking clean) is a fast generic widefield imager.
+It implements several gridding algorithms and offers fully-automated multi-scale
+multi-frequency deconvolution.
 
-https://wsclean.readthedocs.io/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://wsclean.readthedocs.io/](https://wsclean.readthedocs.io/)</span>
+
+## Available installations
 
 
-The overview below shows which WSClean installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using WSClean, load one of these modules using a `module load` command like:
-
-```shell
-module load WSClean/3.5-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|WSClean/3.5-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|WSClean/3.4-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|WSClean version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`WSClean/3.4-foss-2023b`|
+|3.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`WSClean/3.5-foss-2023b`|

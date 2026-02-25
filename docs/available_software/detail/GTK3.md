@@ -1,59 +1,57 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: GTK+ is the primary library used to construct user interfaces in GNOME.
-    It provides all the user interface controls, or widgets, used in a common graphical
-    application. Its object-oriented API allows you to construct user interfaces without
-    dealing with the low-level details of drawing and device interaction.
-  license: Not confirmed
-  name: GTK3
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''GTK3/3.24.35-GCCcore-12.2.0'', ''GTK3/3.24.37-GCCcore-12.3.0'',
-    ''GTK3/3.24.39-GCCcore-13.2.0'']'
-  url: https://developer.gnome.org/gtk3/stable/
----
-
-GTK3
-====
+# GTK3
 
 
-GTK+ is the primary library used to construct user interfaces in GNOME. It provides all the user interface controls, or widgets, used in a common graphical application. Its object-oriented API allows you to construct user interfaces without dealing with the low-level details of drawing and device interaction.
+GTK+ is the primary library used to construct user interfaces in GNOME. It
+ provides all the user interface controls, or widgets, used in a common
+ graphical application. Its object-oriented API allows you to construct
+ user interfaces without dealing with the low-level details of drawing and
+ device interaction.
 
-https://developer.gnome.org/gtk3/stable/
-# Available modules
+
+<small>homepage: </small><span class="software-link">[https://developer.gnome.org/gtk3/stable/](https://developer.gnome.org/gtk3/stable/)</span>
+
+## Available installations
 
 
-The overview below shows which GTK3 installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|GTK3 version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.24.35|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`GTK3/3.24.35-GCCcore-12.2.0`|
+|3.24.37|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`GTK3/3.24.37-GCCcore-12.3.0`|
+|3.24.39|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`GTK3/3.24.39-GCCcore-13.2.0`|
+|3.24.42|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GTK3/3.24.42-GCCcore-13.3.0`|
+|3.24.43|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GTK3/3.24.43-GCCcore-14.3.0`|
 
-To start using GTK3, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load GTK3/3.24.39-GCCcore-13.2.0
-```
+Overview of extensions included in GTK3 installations
 
-*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|GTK3/3.24.39-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|GTK3/3.24.37-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|GTK3/3.24.35-GCCcore-12.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+### adwaita-icon-theme
+
+
+|`adwaita-icon-theme` version|GTK3 modules that include it|
+| --- | --- |
+|42.0|`GTK3/3.24.35-GCCcore-12.2.0`|
+|44.0|`GTK3/3.24.37-GCCcore-12.3.0`|
+|45.0|`GTK3/3.24.39-GCCcore-13.2.0`|
+|47.0|`GTK3/3.24.42-GCCcore-13.3.0`|
+|49.0|`GTK3/3.24.43-GCCcore-14.3.0`|
+
+### GTK+
+
+
+|`GTK+` version|GTK3 modules that include it|
+| --- | --- |
+|3.24.35|`GTK3/3.24.35-GCCcore-12.2.0`|
+|3.24.37|`GTK3/3.24.37-GCCcore-12.3.0`|
+|3.24.39|`GTK3/3.24.39-GCCcore-13.2.0`|
+|3.24.42|`GTK3/3.24.42-GCCcore-13.3.0`|
+|3.24.43|`GTK3/3.24.43-GCCcore-14.3.0`|
+
+### hicolor-icon-theme
+
+
+|`hicolor-icon-theme` version|GTK3 modules that include it|
+| --- | --- |
+|0.17|`GTK3/3.24.39-GCCcore-13.2.0`<br/>`GTK3/3.24.37-GCCcore-12.3.0`<br/>`GTK3/3.24.35-GCCcore-12.2.0`|
+|0.18|`GTK3/3.24.43-GCCcore-14.3.0`<br/>`GTK3/3.24.42-GCCcore-13.3.0`|

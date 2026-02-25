@@ -1,56 +1,17 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Clp (Coin-or linear programming) is an open-source linear programming
-    solver.It is primarily meant to be used as a callable library, but a basic,stand-alone
-    executable version is also available.
-  license: Not confirmed
-  name: Clp
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Clp/1.17.9-foss-2023a'', ''Clp/1.17.9-foss-2023b'']'
-  url: https://github.com/coin-or/Clp
----
-
-Clp
-===
+# Clp
 
 
-Clp (Coin-or linear programming) is an open-source linear programming solver.It is primarily meant to be used as a callable library, but a basic,stand-alone executable version is also available.
+Clp (Coin-or linear programming) is an open-source linear programming solver.
+It is primarily meant to be used as a callable library, but a basic,
+stand-alone executable version is also available.
 
-https://github.com/coin-or/Clp
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/coin-or/Clp](https://github.com/coin-or/Clp)</span>
+
+## Available installations
 
 
-The overview below shows which Clp installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using Clp, load one of these modules using a `module load` command like:
-
-```shell
-module load Clp/1.17.9-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Clp/1.17.9-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Clp/1.17.9-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Clp version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.17.10|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Clp/1.17.10-foss-2024a`|
+|1.17.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Clp/1.17.9-foss-2023a`|
+|1.17.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Clp/1.17.9-foss-2023b`|

@@ -1,68 +1,120 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Extensible, standards compliant build backend used by Hatch,a modern,
-    extensible Python project manager.
-  license: Not confirmed
-  name: hatchling
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''hatchling/1.18.0-GCCcore-12.3.0'', ''hatchling/1.18.0-GCCcore-13.2.0'']'
-  url: https://hatch.pypa.io
----
-
-hatchling
-=========
+# hatchling
 
 
-Extensible, standards compliant build backend used by Hatch,a modern, extensible Python project manager.
+Extensible, standards compliant build backend used by Hatch,
+a modern, extensible Python project manager.
 
-https://hatch.pypa.io
-# Available modules
+<small>homepage: </small><span class="software-link">[https://hatch.pypa.io](https://hatch.pypa.io)</span>
 
-
-The overview below shows which hatchling installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using hatchling, load one of these modules using a `module load` command like:
-
-```shell
-module load hatchling/1.18.0-GCCcore-13.2.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|hatchling/1.18.0-GCCcore-13.2.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|hatchling/1.18.0-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### hatchling/1.18.0-GCCcore-13.2.0
+|hatchling version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`hatchling/1.18.0-GCCcore-12.3.0`|
+|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`hatchling/1.18.0-GCCcore-13.2.0`|
+|1.24.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.24.2-GCCcore-13.3.0`|
+|1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.2.0`|
+|1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.3.0`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-editables-0.5, hatch-requirements-txt-0.4.1, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0, pathspec-0.11.2, pluggy-1.3.0, trove_classifiers-2023.10.18
+Overview of extensions included in hatchling installations
 
-### hatchling/1.18.0-GCCcore-12.3.0
 
-This is a list of extensions included in the module:
+### editables
 
-editables-0.3, hatch-requirements-txt-0.4.1, hatch_fancy_pypi_readme-23.1.0, hatch_vcs-0.3.0, hatchling-1.18.0, pathspec-0.11.1, pluggy-1.2.0, trove_classifiers-2023.5.24
+
+|`editables` version|hatchling modules that include it|
+| --- | --- |
+|0.3|`hatchling/1.18.0-GCCcore-12.3.0`|
+|0.5|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+
+### hatch-docstring-description
+
+
+|`hatch-docstring-description` version|hatchling modules that include it|
+| --- | --- |
+|1.1.1|`hatchling/1.27.0-GCCcore-14.3.0`|
+
+### hatch-fancy-pypi-readme
+
+
+|`hatch-fancy-pypi-readme` version|hatchling modules that include it|
+| --- | --- |
+|24.1.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+|25.1.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+
+### hatch-requirements-txt
+
+
+|`hatch-requirements-txt` version|hatchling modules that include it|
+| --- | --- |
+|0.4.1|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+
+### hatch-vcs
+
+
+|`hatch-vcs` version|hatchling modules that include it|
+| --- | --- |
+|0.4.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+|0.5.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+
+### hatch_fancy_pypi_readme
+
+
+|`hatch_fancy_pypi_readme` version|hatchling modules that include it|
+| --- | --- |
+|23.1.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
+
+### hatch_vcs
+
+
+|`hatch_vcs` version|hatchling modules that include it|
+| --- | --- |
+|0.3.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
+
+### hatchling
+
+
+|`hatchling` version|hatchling modules that include it|
+| --- | --- |
+|1.18.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
+|1.24.2|`hatchling/1.24.2-GCCcore-13.3.0`|
+|1.27.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+
+### pathspec
+
+
+|`pathspec` version|hatchling modules that include it|
+| --- | --- |
+|0.11.1|`hatchling/1.18.0-GCCcore-12.3.0`|
+|0.11.2|`hatchling/1.18.0-GCCcore-13.2.0`|
+|0.12.1|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+
+### pluggy
+
+
+|`pluggy` version|hatchling modules that include it|
+| --- | --- |
+|1.2.0|`hatchling/1.18.0-GCCcore-12.3.0`|
+|1.3.0|`hatchling/1.18.0-GCCcore-13.2.0`|
+|1.5.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+|1.6.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+
+### trove-classifiers
+
+
+|`trove-classifiers` version|hatchling modules that include it|
+| --- | --- |
+|2024.5.22|`hatchling/1.24.2-GCCcore-13.3.0`|
+|2025.2.18.16|`hatchling/1.27.0-GCCcore-14.2.0`|
+|2025.5.9.12|`hatchling/1.27.0-GCCcore-14.3.0`|
+
+### trove_classifiers
+
+
+|`trove_classifiers` version|hatchling modules that include it|
+| --- | --- |
+|2023.10.18|`hatchling/1.18.0-GCCcore-13.2.0`|
+|2023.5.24|`hatchling/1.18.0-GCCcore-12.3.0`|

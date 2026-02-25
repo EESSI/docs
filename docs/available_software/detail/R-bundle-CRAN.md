@@ -1,67 +1,8728 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Bundle of R packages from CRAN
-  license: Not confirmed
-  name: R-bundle-CRAN
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''R-bundle-CRAN/2023.12-foss-2023a'', ''R-bundle-CRAN/2024.06-foss-2023b'']'
-  url: https://www.r-project.org/
----
-
-R-bundle-CRAN
-=============
+# R-bundle-CRAN
 
 
 Bundle of R packages from CRAN
 
-https://www.r-project.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.r-project.org/](https://www.r-project.org/)</span>
+
+## Available installations
 
 
-The overview below shows which R-bundle-CRAN installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|R-bundle-CRAN version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2023.12|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2024.06|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2024.11|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`R-bundle-CRAN/2024.11-foss-2024a`|
 
-To start using R-bundle-CRAN, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load R-bundle-CRAN/2024.06-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|R-bundle-CRAN/2024.06-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|R-bundle-CRAN/2023.12-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in R-bundle-CRAN installations
 
 
-### R-bundle-CRAN/2024.06-foss-2023b
+### abc
 
-This is a list of extensions included in the module:
 
-abc-2.2.1, abc.data-1.1, abe-3.0.1, abind-1.4-5, acepack-1.4.2, adabag-5.0, ade4-1.7-22, ADGofTest-0.3, admisc-0.35, aggregation-1.0.1, AICcmodavg-2.3-3, akima-0.6-3.4, alabama-2023.1.0, AlgDesign-1.2.1, alluvial-0.1-2, AMAPVox-2.2.1, animation-2.7, aod-1.3.3, apcluster-1.4.13, ape-5.8, aplot-0.2.3, argparse-2.2.3, aricode-1.0.3, arm-1.14-4, arrayhelpers-1.1-0, asnipe-1.1.17, assertive-0.3-6, assertive.base-0.0-9, assertive.code-0.0-4, assertive.data-0.0-3, assertive.data.uk-0.0-2, assertive.data.us-0.0-2, assertive.datetimes-0.0-3, assertive.files-0.0-2, assertive.matrices-0.0-2, assertive.models-0.0-2, assertive.numbers-0.0-2, assertive.properties-0.0-5, assertive.reflection-0.0-5, assertive.sets-0.0-3, assertive.strings-0.0-3, assertive.types-0.0-3, assertthat-0.2.1, AUC-0.3.2, audio-0.1-11, aws-2.5-5, awsMethods-1.1-1, backports-1.5.0, bacr-1.0.1, bartMachine-1.3.4.1, bartMachineJARs-1.2.1, base64-2.0.1, BatchJobs-1.9, batchmeans-1.0-4, BayesianTools-0.1.8, BayesLogit-2.1, bayesm-3.1-6, BayesPen-1.0, bayesplot-1.11.1, bayestestR-0.14.0, BB-2019.10-1, BBmisc-1.13, bbmle-1.0.25.1, BCEE-1.3.2, BDgraph-2.72, bdsmatrix-1.3-7, beanplot-1.3.1, beeswarm-0.4.0, berryFunctions-1.22.5, betareg-3.1-4, BH-1.84.0-0, BiasedUrn-2.0.12, bibtex-0.5.1, BIEN-1.2.6, bigD-0.2.0, BIGL-1.9.1, bigmemory-4.6.4, bigmemory.sri-0.1.8, bindr-0.1.1, bindrcpp-0.2.3, bio3d-2.4-4, biom-0.3.12, biomod2-4.2-5-2, bit-4.0.5, bit64-4.0.5, bitops-1.0-7, blavaan-0.5-5, blob-1.2.4, BMA-3.18.17, bmp-0.3, bnlearn-4.9.4, bold-1.3.0, boot-1.3-30, bootstrap-2019.6, Boruta-8.0.0, brglm-0.7.2, bridgedist-0.1.2, bridgesampling-1.1-2, brms-2.21.0, Brobdingnag-1.2-9, broom-1.0.6, broom.helpers-1.15.0, broom.mixed-0.2.9.5, bst-0.3-24, Cairo-1.6-2, calibrate-1.7.7, car-3.1-2, carData-3.0-5, caret-6.0-94, catlearn-1.0, caTools-1.18.2, CBPS-0.23, celestial-1.4.6, cellranger-1.1.0, cgdsr-1.3.0, cghFLasso-0.2-1, changepoint-2.2.4, checkmate-2.3.1, chemometrics-1.4.4, chk-0.9.1, chkptstanr-0.1.1, chron-2.3-61, circlize-0.4.16, circular-0.5-0, class-7.3-22, classInt-0.4-10, cld2-1.2.4, clisymbols-1.2.0, clock-0.7.0, clue-0.3-65, cluster-2.1.6, clusterGeneration-1.3.8, clusterRepro-0.9, clustree-0.5.1, clValid-0.7, cmna-1.0.5, cmprsk-2.2-12, cNORM-3.0.4, cobalt-4.5.5, cobs-1.3-8, coda-0.19-4.1, codetools-0.2-20, coin-1.4-3, collapse-2.0.14, colorspace-2.1-0, colourpicker-1.3.0, combinat-0.0-8, ComICS-1.0.4, ComplexUpset-1.3.3, compositions-2.0-8, CompQuadForm-1.4.3, conditionz-0.1.0, conflicted-1.2.0, conquer-1.3.3, ConsRank-2.1.4, contfrac-1.1-12, copCAR-2.0-4, copula-1.1-3, corpcor-1.6.10, corrplot-0.92, covr-3.6.4, CovSel-1.2.1, covsim-1.1.0, cowplot-1.1.3, coxed-0.3.3, coxme-2.2-20, crfsuite-0.4.2, crosstalk-1.2.1, crul-1.4.2, cSEM-0.5.0, csSAM-1.2.4, ctmle-0.1.2, cubature-2.1.0, cubelyr-1.0.2, cvAUC-1.1.4, CVST-0.2-3, CVXR-1.0-13, d3Network-0.5.2.1, dagitty-0.3-4, data.table-1.15.4, data.tree-1.1.0, DataCombine-0.2.21, datawizard-0.12.2, date-1.2-42, dbarts-0.9-28, DBI-1.2.3, dbplyr-2.5.0, dbscan-1.1-12, dcurver-0.9.2, ddalpha-1.3.15, deal-1.2-42, debugme-1.2.0, deldir-2.0-4, dendextend-1.17.1, DEoptim-2.2-8, DEoptimR-1.1-3, DepthProc-2.1.5, Deriv-4.1.3, DescTools-0.99.54, deSolve-1.40, dfidx-0.0-5, DHARMa-0.4.6, dHSIC-2.1, diagram-1.6.5, DiagrammeR-1.0.11, DiceKriging-1.6.0, dichromat-2.0-0.1, dimRed-0.2.6, diptest-0.77-1, DiscriMiner-0.1-29, dismo-1.3-14, distillery-1.2-1, distr-2.9.3, distrEx-2.9.2, distributional-0.4.0, DistributionUtils-0.6-1, diveRsity-1.9.90, dlm-1.1-6, DMCfun-3.5.4, doc2vec-0.2.0, docstring-1.0.0, doMC-1.3.8, doParallel-1.0.17, doRNG-1.8.6, doSNOW-1.0.20, dotCall64-1.1-1, downloader-0.4, dplyr-1.1.4, dr-3.0.10, dreamerr-1.4.0, drgee-1.1.10, DRR-0.0.4, drugCombo-1.2.1, DT-0.33, dtangle-2.0.9, dtplyr-1.3.1, DTRreg-2.2, dtw-1.23-1, dummies-1.5.6, dygraphs-1.1.1.6, dynamicTreeCut-1.63-1, e1071-1.7-14, earth-5.3.3, EasyABC-1.5.2, ECOSolveR-0.5.5, ellipse-0.5.0, elliptic-1.4-0, emdbook-1.3.13, emmeans-1.10.2, emoa-0.5-2, emulator-1.2-24, energy-1.7-11, ENMeval-2.0.4, entropy-1.3.1, EnvStats-2.8.1, epitools-0.5-10.1, ergm-4.6.0, ergm.count-4.1.2, ergm.multi-0.2.1, estimability-1.5.1, EValue-4.1.3, evd-2.3-7, Exact-3.2, expm-0.999-9, ExPosition-2.8.23, expsmooth-2.3, extrafont-0.19, extrafontdb-1.0, extRemes-2.1-4, FactoMineR-2.11, FactorCopula-0.9.3, fail-1.3, farver-2.1.2, fastcluster-1.2.6, fastDummies-1.7.3, fasterize-1.0.5, fastICA-1.2-4, fastmatch-1.1-4, fdrtool-1.2.17, feather-0.3.5, ff-4.0.12, fftw-1.0-8, fftwtools-0.9-11, fields-15.2, filehash-2.4-5, finalfit-1.0.7, findpython-1.0.8, fishMod-0.29, fitdistrplus-1.1-11, fixest-0.12.1, FKSUM-1.0.1, flashClust-1.01-2, flexclust-1.4-2, flexmix-2.3-19, flextable-0.9.6, fma-2.5, FME-1.3.6.3, fmri-1.9.12, FNN-1.1.4, fontBitstreamVera-0.1.1, fontLiberation-0.1.0, fontquiver-0.2.1, forcats-1.0.0, foreach-1.5.2, forecast-8.23.0, foreign-0.8-86, formatR-1.14, Formula-1.2-5, formula.tools-1.7.1, fossil-0.4.0, fpc-2.2-12, fpp-0.5, fracdiff-1.5-3, furrr-0.3.1, futile.logger-1.4.3, futile.options-1.0.1, future-1.33.2, future.apply-1.11.2, gam-1.22-3, gamlss-5.4-22, gamlss.data-6.0-6, gamlss.dist-6.1-1, gamlss.tr-5.1-9, gamm4-0.2-6, gap-1.5-3, gap.datasets-0.0.6, gapfill-0.9.6-1, gargle-1.5.2, gaussquad-1.0-3, gbm-2.1.9, gbRd-0.4.12, gclus-1.3.2, gdalUtils-2.0.3.2, gdata-3.0.0, gdistance-1.6.4, gdtools-0.3.7, gee-4.13-27, geeM-0.10.1, geepack-1.3.11, geex-1.1.1, geiger-2.0.11, GeneNet-1.2.16, generics-0.1.3, genoPlotR-0.8.11, GenSA-1.1.14, geojsonsf-2.0.3, geometries-0.2.4, geometry-0.4.7, getopt-1.20.4, GetoptLong-1.0.5, gfonts-0.2.0, GGally-2.2.1, ggbeeswarm-0.7.2, ggdag-0.2.12, ggdist-3.3.2, ggExtra-0.10.1, ggfan-0.1.3, ggforce-0.4.2, ggformula-0.12.0, ggfun-0.1.5, ggh4x-0.2.8, ggnetwork-0.5.13, ggplot2-3.5.1, ggplotify-0.1.2, ggpubr-0.6.0, ggraph-2.2.1, ggrepel-0.9.5, ggridges-0.5.6, ggsci-3.2.0, ggsignif-0.6.4, ggstance-0.3.7, ggstats-0.6.0, ggvenn-0.1.10, ggvis-0.4.9, GillespieSSA-0.6.2, git2r-0.33.0, GJRM-0.2-6.5, glasso-1.11, gld-2.6.6, gllvm-1.4.3, glmmML-1.1.6, glmmTMB-1.1.9, glmnet-4.1-8, GlobalOptions-0.1.2, globals-0.16.3, gmm-1.8, gmodels-2.19.1, gmp-0.7-4, gnumeric-0.7-10, goftest-1.2-3, gomms-1.0, googledrive-2.1.1, googlesheets4-1.1.1, gower-1.0.1, GPArotation-2024.3-1, gplots-3.1.3.1, graphlayouts-1.1.1, grf-2.3.2, gridBase-0.4-7, gridExtra-2.3, gridGraphics-0.5-1, grImport2-0.3-1, grpreg-3.4.0, GSA-1.03.3, gsalib-2.2.1, gsl-2.1-8, gsw-1.1-1, gt-0.10.1, gtable-0.3.5, gtools-3.9.5, gtsummary-1.7.2, GUTS-1.2.5, gWidgets2-1.0-9, gWidgets2tcltk-1.0-8, GxEScanR-2.0.2, h2o-3.44.0.3, hal9001-0.4.6, haldensify-0.2.3, hardhat-1.4.0, harmony-1.2.0, hash-2.2.6.3, haven-2.5.4, hdf5r-1.3.10, hdm-0.3.2, heatmap3-1.1.9, here-1.0.1, hexbin-1.28.3, HGNChelper-0.8.14, HiddenMarkov-1.8-13, Hmisc-5.1-3, hms-1.1.3, Hmsc-3.0-13, htmlTable-2.4.2, httpcode-0.3.0, huge-1.3.5, hunspell-3.0.3, hwriter-1.3.2.1, HWxtest-1.1.9, hypergeo-1.2-13, ica-1.0-3, IDPmisc-1.1.21, idr-1.3, ids-1.0.1, ie2misc-0.9.1, igraph-2.0.3, image.binarization-0.1.3, imager-1.0.2, imagerExtra-1.3.2, ineq-0.2-13, influenceR-0.1.5, infotheo-1.2.0.1, inline-0.3.19, insight-0.20.3, intergraph-2.0-4, interp-1.1-6, interpretR-0.2.5, intrinsicDimension-1.2.0, inum-1.0-5, ipred-0.9-14, irace-3.5, irlba-2.3.5.1, ismev-1.42, Iso-0.0-21, isoband-0.2.7, ISOcodes-2024.02.12, ISOweek-0.6-2, iterators-1.0.14, itertools-0.1-3, JADE-2.0-4, janeaustenr-1.0.0, JBTools-0.7.2.9, jiebaR-0.11, jiebaRD-0.1, jomo-2.7-6, jpeg-0.1-10, jsonify-1.2.2, jstable-1.2.6, juicyjuice-0.1.0, kde1d-1.0.7, kedd-1.0.4, kernlab-0.9-32, KernSmooth-2.23-24, kinship2-1.9.6.1, klaR-1.7-3, KODAMA-2.4, kohonen-3.0.12, ks-1.14.2, labdsv-2.1-0, labeling-0.4.3, labelled-2.13.0, laeken-0.5.3, lambda.r-1.2.4, LaplacesDemon-16.1.6, lars-1.3, lassosum-0.4.5, lattice-0.22-6, latticeExtra-0.6-30, lava-1.8.0, lavaan-0.6-18, lazy-1.2-18, lazyeval-0.2.2, LCFdata-2.0, lda-1.5.2, ldbounds-2.0.2, leafem-0.2.3, leaflet-2.2.2, leaflet.providers-2.0.0, leafsync-0.1.0, leaps-3.2, LearnBayes-2.15.1, leiden-0.4.3.1, lhs-1.1.6, libcoin-1.0-10, limSolve-1.5.7.1, linkcomm-1.0-14, linprog-0.9-4, liquidSVM-1.2.4, listenv-0.9.1, lme4-1.1-35.4, LMERConvenienceFunctions-3.0, lmerTest-3.1-3, lmom-3.0, Lmoments-1.3-1, lmtest-0.9-40, lobstr-1.1.2, locfdr-1.1-8, locfit-1.5-9.10, logcondens-2.1.8, logger-0.3.0, logistf-1.26.0, logspline-2.1.22, longitudinal-1.1.13, longmemo-1.1-2, loo-2.7.0, lpSolve-5.6.20, lpSolveAPI-5.5.2.0-17.11, lqa-1.0-3, lsei-1.3-0, lslx-0.6.11, lubridate-1.9.3, lwgeom-0.2-14, magic-1.6-1, magick-2.8.3, MALDIquant-1.22.2, manipulateWidget-0.11.1, mapproj-1.2.11, maps-3.4.2, maptools-1.1-8, markdown-1.13, MASS-7.3-61, Matching-4.10-14, MatchIt-4.5.5, mathjaxr-1.6-0, matlab-1.0.4, Matrix-1.7-0, matrixcalc-1.0-6, MatrixModels-0.5-3, matrixStats-1.3.0, maxLik-1.5-2.1, maxlike-0.1-11, maxnet-0.1.4, mboost-2.9-10, mclogit-0.9.6, mclust-6.1.1, mcmc-0.9-8, MCMCpack-1.7-0, mcmcse-1.5-0, mda-0.5-4, medflex-0.6-10, mediation-4.5.0, memisc-0.99.31.7, memuse-4.2-3, MESS-0.5.12, metadat-1.2-0, metafor-4.6-0, MetaUtility-2.1.2, mets-1.3.4, mgcv-1.9-1, mgsub-1.7.3, mhsmm-0.4.21, mi-1.1, mice-3.16.0, miceadds-3.17-44, microbenchmark-1.4.10, MIIVsem-0.5.8, minerva-1.5.10, minpack.lm-1.2-4, minqa-1.2.7, minty-0.0.1, mirt-1.41, misc3d-0.9-1, miscTools-0.6-28, missForest-1.5, missMDA-1.19, mitml-0.4-5, mitools-2.4, mixtools-2.0.0, mlbench-2.1-5, mlegp-3.1.9, MLmetrics-1.1.3, mlogit-1.1-1, mlr-2.19.2, mlrMBO-1.1.5.1, mltools-0.3.5, mnormt-2.1.1, ModelMetrics-1.2.2.2, modelr-0.1.11, modeltools-0.2-23, momentfit-0.5, moments-0.14.1, MonteCarlo-1.0.6, mosaicCore-0.9.4.0, mpath-0.4-2.25, mRMRe-2.1.2.1, msm-1.7.1, mstate-0.3.2, multcomp-1.4-25, multcompView-0.1-10, multicool-1.0.1, multipol-1.0-9, multitaper-1.0-17, munsell-0.5.1, mvabund-4.2.1, mvnfast-0.2.8, mvtnorm-1.2-5, nabor-0.5.0, naniar-1.1.0, natserv-1.0.0, naturalsort-0.1.3, ncbit-2013.03.29.1, ncdf4-1.22, NCmisc-1.2.0, network-1.18.2, networkDynamic-0.11.4, networkLite-1.0.5, neuralnet-1.44.2, neuRosim-0.2-14, ngspatial-1.2-2, NISTunits-1.0.1, nleqslv-3.3.5, nlme-3.1-165, nloptr-2.1.0, NLP-0.2-1, nlsem-0.8-1, nnet-7.3-19, nnls-1.5, nonnest2-0.5-7, nor1mix-1.3-3, norm-1.0-11.1, nortest-1.0-4, np-0.60-17, npsurv-0.5-0, numDeriv-2016.8-1.1, oai-0.4.0, oce-1.8-2, OceanView-1.0.7, oddsratio-2.0.1, officer-0.6.6, openair-2.18-2, OpenMx-2.21.11, openxlsx-4.2.5.2, operator.tools-1.6.3, optextras-2019-12.4, optimParallel-1.0-2, optimr-2019-12.16, optimx-2023-10.21, optmatch-0.10.7, optparse-1.7.5, ordinal-2023.12-4, origami-1.0.7, oro.nifti-0.11.4, orthopolynom-1.0-6.1, osqp-0.6.3.3, outliers-0.15, packrat-0.9.2, pacman-0.5.1, pammtools-0.5.93, pamr-1.56.2, pan-1.9, parallelDist-0.2.6, parallelly-1.37.1, parallelMap-1.5.1, ParamHelpers-1.14.1, parsedate-1.3.1, party-1.3-15, partykit-1.2-20, pastecs-1.4.2, patchwork-1.2.0, pbapply-1.7-2, pbivnorm-0.6.0, pbkrtest-0.5.2, PCAmatchR-0.3.3, pcaPP-2.0-4, pdp-0.8.1, PearsonDS-1.3.1, pec-2023.04.12, penalized-0.9-52, penfa-0.1.1, peperr-1.5, performance-0.12.2, PermAlgo-1.2, permute-0.9-7, phangorn-2.11.1, pheatmap-1.0.12, phylobase-0.8.12, phytools-2.3-0, pim-2.0.2, pinfsc50-1.3.0, pixmap-0.4-13, pkgmaker-0.32.10, PKI-0.1-14, plogr-0.2.0, plot3D-1.4.1, plot3Drgl-1.0.4, plotly-4.10.4, plotmo-3.6.3, plotrix-3.8-4, pls-2.8-3, plyr-1.8.9, PMA-1.2-3, png-0.1-8, PoissonSeq-1.1.2, poLCA-1.6.0.1, polspline-1.1.25, Polychrome-1.5.1, polyclip-1.10-6, polycor-0.8-1, polynom-1.4-1, posterior-1.5.0, ppcor-1.1, prabclus-2.3-3, pracma-2.4.4, PresenceAbsence-1.1.11, preseqR-4.0.0, prettyGraphs-2.1.6, princurve-2.1.6, pROC-1.18.5, prodlim-2023.08.28, profileModel-0.6.1, proftools-0.99-3, progress-1.2.3, progressr-0.14.0, projpred-2.8.0, proto-1.0.0, proxy-0.4-27, proxyC-0.4.1, pryr-0.1.6, pscl-1.5.9, pspline-1.0-20, psych-2.4.3, Publish-2023.01.17, pulsar-0.3.11, pvclust-2.2-0, qgam-1.3.4, qgraph-1.9.8, qqman-0.1.9, qrnn-2.1.1, quadprog-1.5-8, quanteda-4.0.2, quantmod-0.4.26, quantreg-5.98, questionr-0.7.8, QuickJSR-1.2.2, R.cache-0.16.0, R.matlab-3.7.0, R.methodsS3-1.8.2, R.oo-1.26.0, R.rsp-0.46.0, R.utils-2.12.3, R2WinBUGS-2.1-22.1, random-0.2.6, randomForest-4.7-1.1, randomForestSRC-3.2.3, randtoolbox-2.0.4, rangeModelMetadata-0.1.5, ranger-0.16.0, RANN-2.6.1, rapidjsonr-1.2.0, rARPACK-0.11-0, raster-3.6-26, rasterVis-0.51.6, ratelimitr-0.4.1, RBesT-1.7-3, rbibutils-2.2.16, rbison-1.0.0, Rborist-0.3-7, RCAL-2.0, Rcgmin-2022-4.30, RCircos-1.2.2, RColorBrewer-1.1-3, RcppArmadillo-0.12.8.4.0, RcppEigen-0.3.4.0.0, RcppGSL-0.3.13, RcppParallel-5.1.7, RcppProgress-0.4.2, RcppRoll-0.3.0, RcppThread-2.1.7, RcppTOML-0.2.2, RCurl-1.98-1.14, rda-1.2-1, Rdpack-2.6, rdrop2-0.8.2.1, reactable-0.4.4, reactR-0.5.0, readbitmap-0.1.5, reader-1.0.6, readODS-2.3.0, readr-2.1.5, readxl-1.4.3, rebird-1.3.0, recipes-1.0.10, RefFreeEWAS-2.2, registry-0.5-1, regsem-1.9.5, relsurv-2.2-9, rematch-2.0.0, rentrez-1.2.3, renv-1.0.7, reprex-2.1.0, resample-0.6, reshape-0.8.9, reshape2-1.4.4, reticulate-1.38.0, rex-1.2.1, rgbif-3.8.0, RGCCA-3.0.3, rgdal-1.6-7, rgeos-0.6-4, rgexf-0.16.2, rgl-1.3.1, Rglpk-0.6-5.1, rhandsontable-0.3.8, RhpcBLASctl-0.23-42, ridge-3.3, ridigbio-0.3.8, RInside-0.2.18, rio-1.1.1, riskRegression-2023.12.21, ritis-1.0.0, RItools-0.3-4, rJava-1.0-11, rjson-0.2.21, RJSONIO-1.3-1.9, rle-0.9.2, rlecuyer-0.3-8, rlemon-0.2.1, rlist-0.4.6.2, rmeta-3.0, Rmpfr-0.9-5, rms-6.8-1, RMTstat-0.3.1, rncl-0.8.7, rnetcarto-0.2.6, RNeXML-2.4.11, rngtools-1.5.2, rngWELL-0.10-9, RNifti-1.7.0, robustbase-0.99-2, ROCR-1.0-11, ROI-1.0-1, ROI.plugin.glpk-1.0-0, Rook-1.2, rootSolve-1.8.2.4, roptim-0.1.6, rotl-3.1.0, rpact-4.0.0, rpart-4.1.23, rpf-1.0.14, RPMM-1.25, RPostgreSQL-0.7-6, rrcov-1.7-5, rredlist-0.7.1, rsample-1.2.1, rsconnect-1.3.1, Rserve-1.8-13, RSNNS-0.4-17, Rsolnp-1.16, RSpectra-0.16-1, RSQLite-2.3.7, Rssa-1.0.5, rstan-2.32.6, rstantools-2.4.0, rstatix-0.7.2, rtdists-0.11-5, Rtsne-0.17, Rttf2pt1-1.3.12, RUnit-0.4.33, ruv-0.9.7.1, rvertnet-0.8.4, rvest-1.0.4, rvinecopulib-0.6.3.1.1, Rvmmin-2018-4.17.1, RWeka-0.4-46, RWekajars-3.9.3-2, s2-1.1.6, sampling-2.10, sandwich-3.1-0, SBdecomp-1.2, scales-1.3.0, scam-1.2-17, scatterpie-0.2.3, scatterplot3d-0.3-44, scs-3.2.4, sctransform-0.4.1, SDMTools-1.1-221.2, seewave-2.2.3, segmented-2.1-0, selectr-0.4-2, sem-3.1-15, semPLS-1.0-10, semTools-0.5-6, sendmailR-1.4-0, sensemakr-0.1.4, sentometrics-1.0.0, seqinr-4.2-36, servr-0.30, setRNG-2024.2-1, sf-1.0-16, sfheaders-0.4.4, sfsmisc-1.1-18, shadowtext-0.1.3, shape-1.4.6.1, shapefiles-0.7.2, shinycssloaders-1.0.0, shinydashboard-0.7.2, shinyjs-2.1.0, shinystan-2.6.0, shinythemes-1.2.0, signal-1.8-0, SignifReg-4.3, simex-1.8, SimSeq-1.4.0, SKAT-2.2.5, slam-0.1-50, slider-0.3.1, sm-2.2-6.0, smoof-1.6.0.3, smoother-1.3, sn-2.1.1, sna-2.7-2, SNFtool-2.3.1, snow-0.4-4, SnowballC-0.7.1, snowfall-1.84-6.3, SOAR-0.99-11, solrium-1.2.0, som-0.3-5.1, soundecology-1.3.3, sp-2.1-4, spaa-0.2.2, spam-2.10-0, spaMM-4.5.0, SparseM-1.83, SPAtest-3.1.2, spatial-7.3-17, spatstat-3.0-8, spatstat.core-2.4-4, spatstat.data-3.1-2, spatstat.explore-3.2-7, spatstat.geom-3.2-9, spatstat.linnet-3.1-5, spatstat.model-3.2-11, spatstat.random-3.2-3, spatstat.sparse-3.1-0, spatstat.utils-3.0-5, spData-2.3.1, spdep-1.3-5, splitstackshape-1.4.8, spls-2.2-3, spocc-1.2.3, spThin-0.2.0, SQUAREM-2021.1, stabledist-0.7-1, stabs-0.6-4, StanHeaders-2.32.9, stargazer-5.2.3, stars-0.6-5, startupmsg-0.9.6.1, StatMatch-1.4.2, statmod-1.5.0, statnet-2019.6, statnet.common-4.9.0, stdReg-3.4.1, stopwords-2.3, stringdist-0.9.12, stringmagic-1.1.2, strucchange-1.5-3, styler-1.10.3, subplex-1.8, SuperLearner-2.0-29, SuppDists-1.1-9.7, survey-4.4-2, survival-3.7-0, survivalROC-1.0.3.1, svd-0.5.5, svglite-2.1.3, svUnit-1.0.6, swagger-5.17.14, symmoments-1.2.1, tableone-0.13.2, tabletools-0.1.0, tau-0.0-25, taxize-0.9.100, tcltk2-1.2-11, tclust-2.0-4, TeachingDemos-2.13, tensor-1.5, tensorA-0.36.2.1, tergm-4.2.0, terra-1.7-78, testit-0.13, textcat-1.0-8, textplot-0.2.2, TFisher-0.2.0, TH.data-1.1-2, threejs-0.3.3, tictoc-1.2.1, tidybayes-3.0.6, tidygraph-1.3.1, tidyr-1.3.1, tidyselect-1.2.1, tidytext-0.4.2, tidytree-0.4.6, tidyverse-2.0.0, tiff-0.1-12, timechange-0.3.0, timeDate-4032.109, timereg-2.0.5, tkrplot-0.0-27, tm-0.7-13, tmap-3.3-4, tmaptools-3.1-1, TMB-1.9.12, tmle-2.0.1.1, tmvnsim-1.0-2, tmvtnorm-1.6, tokenizers-0.3.0, topicmodels-0.2-16, TraMineR-2.2-10, tree-1.0-43, triebeard-0.4.1, trimcluster-0.1-5, tripack-1.3-9.1, TruncatedNormal-2.2.2, truncnorm-1.0-9, trust-0.1-8, tseries-0.10-56, tseriesChaos-0.1-13.1, tsna-0.3.5, tsne-0.1-3.1, TTR-0.24.4, tuneR-1.4.7, twang-2.6, tweedie-2.3.5, tweenr-2.0.3, tzdb-0.4.0, ucminf-1.2.1, udpipe-0.8.11, umap-0.2.10.0, unbalanced-2.0, unikn-1.0.0, uniqueAtomMat-0.1-3-2, units-0.8-5, unmarked-1.4.1, UpSetR-1.4.0, urca-1.3-4, urltools-1.7.3, uroot-2.1-3, uuid-1.2-0, V8-4.4.2, varhandle-2.0.6, vcd-1.4-12, vcfR-1.15.0, vegan-2.6-6.1, VennDiagram-1.7.3, VGAM-1.1-11, VIM-6.2.2, VineCopula-2.5.0, vioplot-0.4.0, vipor-0.4.7, viridis-0.6.5, viridisLite-0.4.2, visdat-0.6.0, visNetwork-2.1.2, vroom-1.6.5, VSURF-1.2.0, warp-0.2.1, waveslim-1.8.5, wdm-0.2.4, webshot-0.5.5, webutils-1.2.0, weights-1.0.4, WeightSVM-1.7-13, wellknown-0.7.4, widgetframe-0.3.1, WikidataQueryServiceR-1.0.0, WikidataR-2.3.3, WikipediR-1.7.1, wikitaxa-0.4.0, wk-0.9.1, word2vec-0.4.0, wordcloud-2.6, worrms-0.4.3, writexl-1.5.0, WriteXLS-6.6.0, XBRL-0.99.19.1, xgboost-1.7.7.1, xlsx-0.6.5, xlsxjars-0.6.1, XML-3.99-0.16.1, xts-0.14.0, yaImpute-1.0-34, yulab.utils-0.1.4, zeallot-0.1.0, zoo-1.8-12
+|`abc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
 
-### R-bundle-CRAN/2023.12-foss-2023a
+### abc.data
 
-This is a list of extensions included in the module:
 
-abc-2.2.1, abc.data-1.0, abe-3.0.1, abind-1.4-5, acepack-1.4.2, adabag-5.0, ade4-1.7-22, ADGofTest-0.3, admisc-0.34, aggregation-1.0.1, AICcmodavg-2.3-3, akima-0.6-3.4, alabama-2023.1.0, AlgDesign-1.2.1, alluvial-0.1-2, AMAPVox-1.0.1, animation-2.7, aod-1.3.2, apcluster-1.4.11, ape-5.7-1, aplot-0.2.2, argparse-2.2.2, aricode-1.0.3, arm-1.13-1, arrayhelpers-1.1-0, asnipe-1.1.17, assertive-0.3-6, assertive.base-0.0-9, assertive.code-0.0-4, assertive.data-0.0-3, assertive.data.uk-0.0-2, assertive.data.us-0.0-2, assertive.datetimes-0.0-3, assertive.files-0.0-2, assertive.matrices-0.0-2, assertive.models-0.0-2, assertive.numbers-0.0-2, assertive.properties-0.0-5, assertive.reflection-0.0-5, assertive.sets-0.0-3, assertive.strings-0.0-3, assertive.types-0.0-3, assertthat-0.2.1, AUC-0.3.2, audio-0.1-11, aws-2.5-3, awsMethods-1.1-1, backports-1.4.1, bacr-1.0.1, bartMachine-1.3.4.1, bartMachineJARs-1.2.1, base64-2.0.1, BatchJobs-1.9, batchmeans-1.0-4, BayesianTools-0.1.8, BayesLogit-2.1, bayesm-3.1-6, BayesPen-1.0, bayesplot-1.10.0, BB-2019.10-1, BBmisc-1.13, bbmle-1.0.25.1, BCEE-1.3.2, BDgraph-2.72, bdsmatrix-1.3-6, beanplot-1.3.1, beeswarm-0.4.0, berryFunctions-1.22.0, betareg-3.1-4, BH-1.81.0-1, BiasedUrn-2.0.11, bibtex-0.5.1, BIEN-1.2.6, bigD-0.2.0, BIGL-1.8.0, bigmemory-4.6.1, bigmemory.sri-0.1.6, bindr-0.1.1, bindrcpp-0.2.2, bio3d-2.4-4, biom-0.3.12, biomod2-4.2-4, bit-4.0.5, bit64-4.0.5, bitops-1.0-7, blavaan-0.5-2, blob-1.2.4, BMA-3.18.17, bmp-0.3, bnlearn-4.9.1, bold-1.3.0, boot-1.3-28.1, bootstrap-2019.6, Boruta-8.0.0, brglm-0.7.2, bridgedist-0.1.2, bridgesampling-1.1-2, brms-2.20.4, Brobdingnag-1.2-9, broom-1.0.5, broom.helpers-1.14.0, broom.mixed-0.2.9.4, bst-0.3-24, Cairo-1.6-2, calibrate-1.7.7, car-3.1-2, carData-3.0-5, caret-6.0-94, catlearn-1.0, caTools-1.18.2, CBPS-0.23, celestial-1.4.6, cellranger-1.1.0, cgdsr-1.3.0, cghFLasso-0.2-1, changepoint-2.2.4, checkmate-2.3.1, chemometrics-1.4.4, chk-0.9.1, chkptstanr-0.1.1, chron-2.3-61, circlize-0.4.15, circular-0.5-0, class-7.3-22, classInt-0.4-10, cld2-1.2.4, clisymbols-1.2.0, clock-0.7.0, clue-0.3-65, cluster-2.1.6, clusterGeneration-1.3.8, clusterRepro-0.9, clustree-0.5.1, clValid-0.7, cmna-1.0.5, cmprsk-2.2-11, cNORM-3.0.4, cobalt-4.5.2, cobs-1.3-5, coda-0.19-4, codetools-0.2-19, coin-1.4-3, collapse-2.0.7, colorspace-2.1-0, colourpicker-1.3.0, combinat-0.0-8, ComICS-1.0.4, ComplexUpset-1.3.3, compositions-2.0-6, CompQuadForm-1.4.3, conditionz-0.1.0, conflicted-1.2.0, conquer-1.3.3, ConsRank-2.1.3, contfrac-1.1-12, copCAR-2.0-4, copula-1.1-3, corpcor-1.6.10, corrplot-0.92, covr-3.6.4, CovSel-1.2.1, covsim-1.0.0, cowplot-1.1.1, coxed-0.3.3, coxme-2.2-18.1, crfsuite-0.4.2, crosstalk-1.2.1, crul-1.4.0, cSEM-0.5.0, csSAM-1.2.4, ctmle-0.1.2, cubature-2.1.0, cubelyr-1.0.2, cvAUC-1.1.4, CVST-0.2-3, CVXR-1.0-11, d3Network-0.5.2.1, dagitty-0.3-4, data.table-1.14.10, data.tree-1.1.0, DataCombine-0.2.21, date-1.2-42, dbarts-0.9-25, DBI-1.1.3, dbplyr-2.4.0, dbscan-1.1-12, dcurver-0.9.2, ddalpha-1.3.13, deal-1.2-42, debugme-1.1.0, deldir-2.0-2, dendextend-1.17.1, DEoptim-2.2-8, DEoptimR-1.1-3, DepthProc-2.1.5, Deriv-4.1.3, DescTools-0.99.52, deSolve-1.40, dfidx-0.0-5, DHARMa-0.4.6, dHSIC-2.1, diagram-1.6.5, DiagrammeR-1.0.10, DiceKriging-1.6.0, dichromat-2.0-0.1, dimRed-0.2.6, diptest-0.77-0, DiscriMiner-0.1-29, dismo-1.3-14, distillery-1.2-1, distr-2.9.2, distrEx-2.9.0, distributional-0.3.2, DistributionUtils-0.6-1, diveRsity-1.9.90, dlm-1.1-6, DMCfun-2.0.2, doc2vec-0.2.0, docstring-1.0.0, doMC-1.3.8, doParallel-1.0.17, doRNG-1.8.6, doSNOW-1.0.20, dotCall64-1.1-1, downloader-0.4, dplyr-1.1.4, dr-3.0.10, dreamerr-1.4.0, drgee-1.1.10, DRR-0.0.4, drugCombo-1.2.1, DT-0.31, dtangle-2.0.9, dtplyr-1.3.1, DTRreg-2.0, dtw-1.23-1, dummies-1.5.6, dygraphs-1.1.1.6, dynamicTreeCut-1.63-1, e1071-1.7-14, earth-5.3.2, EasyABC-1.5.2, ECOSolveR-0.5.5, ellipse-0.5.0, elliptic-1.4-0, emdbook-1.3.13, emmeans-1.8.9, emoa-0.5-0.2, emulator-1.2-21, energy-1.7-11, ENMeval-2.0.4, entropy-1.3.1, EnvStats-2.8.1, epitools-0.5-10.1, ergm-4.5.0, ergm.count-4.1.1, ergm.multi-0.2.0, estimability-1.4.1, EValue-4.1.3, evd-2.3-6.1, Exact-3.2, expm-0.999-8, ExPosition-2.8.23, expsmooth-2.3, extrafont-0.19, extrafontdb-1.0, extRemes-2.1-3, FactoMineR-2.9, FactorCopula-0.9.3, fail-1.3, farver-2.1.1, fastcluster-1.2.3, fastDummies-1.7.3, fasterize-1.0.5, fastICA-1.2-4, fastmatch-1.1-4, fdrtool-1.2.17, feather-0.3.5, ff-4.0.9, fftw-1.0-7, fftwtools-0.9-11, fields-15.2, filehash-2.4-5, finalfit-1.0.7, findpython-1.0.8, fishMod-0.29, fitdistrplus-1.1-11, fixest-0.11.2, FKSUM-1.0.1, flashClust-1.01-2, flexclust-1.4-1, flexmix-2.3-19, flextable-0.9.4, fma-2.5, FME-1.3.6.3, fmri-1.9.12, FNN-1.1.3.2, fontBitstreamVera-0.1.1, fontLiberation-0.1.0, fontquiver-0.2.1, forcats-1.0.0, foreach-1.5.2, forecast-8.21.1, foreign-0.8-86, formatR-1.14, Formula-1.2-5, formula.tools-1.7.1, fossil-0.4.0, fpc-2.2-10, fpp-0.5, fracdiff-1.5-2, furrr-0.3.1, futile.logger-1.4.3, futile.options-1.0.1, future-1.33.0, future.apply-1.11.0, gam-1.22-3, gamlss-5.4-20, gamlss.data-6.0-2, gamlss.dist-6.1-1, gamlss.tr-5.1-7, gamm4-0.2-6, gap-1.5-3, gap.datasets-0.0.6, gapfill-0.9.6-1, gargle-1.5.2, gaussquad-1.0-3, gbm-2.1.8.1, gbRd-0.4-11, gclus-1.3.2, gdalUtils-2.0.3.2, gdata-3.0.0, gdistance-1.6.4, gdtools-0.3.5, gee-4.13-26, geeM-0.10.1, geepack-1.3.9, geex-1.1.1, geiger-2.0.11, GeneNet-1.2.16, generics-0.1.3, genoPlotR-0.8.11, GenSA-1.1.10.1, geojsonsf-2.0.3, geometries-0.2.3, geometry-0.4.7, getopt-1.20.4, GetoptLong-1.0.5, gfonts-0.2.0, GGally-2.2.0, ggbeeswarm-0.7.2, ggdag-0.2.10, ggdist-3.3.1, ggExtra-0.10.1, ggfan-0.1.3, ggforce-0.4.1, ggformula-0.12.0, ggfun-0.1.3, ggh4x-0.2.6, ggnetwork-0.5.12, ggplot2-3.4.4, ggplotify-0.1.2, ggpubr-0.6.0, ggraph-2.1.0, ggrepel-0.9.4, ggridges-0.5.4, ggsci-3.0.0, ggsignif-0.6.4, ggstance-0.3.6, ggstats-0.5.1, ggvenn-0.1.10, ggvis-0.4.8, GillespieSSA-0.6.2, git2r-0.33.0, GJRM-0.2-6.4, glasso-1.11, gld-2.6.6, gllvm-1.4.3, glmmML-1.1.6, glmmTMB-1.1.8, glmnet-4.1-8, GlobalOptions-0.1.2, globals-0.16.2, gmm-1.8, gmodels-2.18.1.1, gmp-0.7-3, gnumeric-0.7-10, goftest-1.2-3, gomms-1.0, googledrive-2.1.1, googlesheets4-1.1.1, gower-1.0.1, GPArotation-2023.11-1, gplots-3.1.3, graphlayouts-1.0.2, grf-2.3.1, gridBase-0.4-7, gridExtra-2.3, gridGraphics-0.5-1, grImport2-0.3-1, grpreg-3.4.0, GSA-1.03.2, gsalib-2.2.1, gsl-2.1-8, gsw-1.1-1, gt-0.10.0, gtable-0.3.4, gtools-3.9.5, gtsummary-1.7.2, GUTS-1.2.5, gWidgets2-1.0-9, gWidgets2tcltk-1.0-8, GxEScanR-2.0.2, h2o-3.42.0.2, hal9001-0.4.6, haldensify-0.2.3, hardhat-1.3.0, harmony-1.2.0, hash-2.2.6.3, haven-2.5.4, hdf5r-1.3.8, hdm-0.3.1, heatmap3-1.1.9, here-1.0.1, hexbin-1.28.3, HGNChelper-0.8.1, HiddenMarkov-1.8-13, Hmisc-5.1-1, hms-1.1.3, Hmsc-3.0-13, htmlTable-2.4.2, httpcode-0.3.0, huge-1.3.5, hunspell-3.0.3, hwriter-1.3.2.1, HWxtest-1.1.9, hypergeo-1.2-13, ica-1.0-3, IDPmisc-1.1.20, idr-1.3, ids-1.0.1, ie2misc-0.9.1, igraph-1.5.1, image.binarization-0.1.3, imager-0.45.2, imagerExtra-1.3.2, ineq-0.2-13, influenceR-0.1.5, infotheo-1.2.0.1, inline-0.3.19, intergraph-2.0-3, interp-1.1-5, interpretR-0.2.5, intrinsicDimension-1.2.0, inum-1.0-5, ipred-0.9-14, irace-3.5, irlba-2.3.5.1, ismev-1.42, Iso-0.0-21, isoband-0.2.7, ISOcodes-2023.12.07, ISOweek-0.6-2, iterators-1.0.14, itertools-0.1-3, JADE-2.0-4, janeaustenr-1.0.0, JBTools-0.7.2.9, jiebaR-0.11, jiebaRD-0.1, jomo-2.7-6, jpeg-0.1-10, jsonify-1.2.2, jstable-1.1.3, juicyjuice-0.1.0, kde1d-1.0.5, kedd-1.0.3, kernlab-0.9-32, KernSmooth-2.23-22, kinship2-1.9.6, klaR-1.7-2, KODAMA-2.4, kohonen-3.0.12, ks-1.14.1, labdsv-2.1-0, labeling-0.4.3, labelled-2.12.0, laeken-0.5.2, lambda.r-1.2.4, LaplacesDemon-16.1.6, lars-1.3, lassosum-0.4.5, lattice-0.22-5, latticeExtra-0.6-30, lava-1.7.3, lavaan-0.6-16, lazy-1.2-18, lazyeval-0.2.2, LCFdata-2.0, lda-1.4.2, ldbounds-2.0.2, leafem-0.2.3, leaflet-2.2.1, leaflet.providers-2.0.0, leafsync-0.1.0, leaps-3.1, LearnBayes-2.15.1, leiden-0.4.3.1, lhs-1.1.6, libcoin-1.0-10, limSolve-1.5.7, linkcomm-1.0-14, linprog-0.9-4, liquidSVM-1.2.4, listenv-0.9.0, lme4-1.1-35.1, LMERConvenienceFunctions-3.0, lmerTest-3.1-3, lmom-3.0, Lmoments-1.3-1, lmtest-0.9-40, lobstr-1.1.2, locfdr-1.1-8, locfit-1.5-9.8, logcondens-2.1.8, logger-0.2.2, logistf-1.26.0, logspline-2.1.21, longitudinal-1.1.13, longmemo-1.1-2, loo-2.6.0, lpSolve-5.6.19, lpSolveAPI-5.5.2.0-17.11, lqa-1.0-3, lsei-1.3-0, lslx-0.6.11, lubridate-1.9.3, lwgeom-0.2-13, magic-1.6-1, magick-2.8.1, MALDIquant-1.22.1, manipulateWidget-0.11.1, mapproj-1.2.11, maps-3.4.1.1, maptools-1.1-8, markdown-1.12, MASS-7.3-60, Matching-4.10-14, MatchIt-4.5.5, mathjaxr-1.6-0, matlab-1.0.4, Matrix-1.6-4, matrixcalc-1.0-6, MatrixModels-0.5-3, matrixStats-1.1.0, maxLik-1.5-2, maxlike-0.1-10, maxnet-0.1.4, mboost-2.9-9, mclogit-0.9.6, mclust-6.0.1, mcmc-0.9-8, MCMCpack-1.6-3, mcmcse-1.5-0, mda-0.5-4, medflex-0.6-10, mediation-4.5.0, memisc-0.99.31.6, memuse-4.2-3, MESS-0.5.12, metadat-1.2-0, metafor-4.4-0, MetaUtility-2.1.2, mets-1.3.3, mgcv-1.9-0, mgsub-1.7.3, mhsmm-0.4.21, mi-1.1, mice-3.16.0, miceadds-3.16-18, microbenchmark-1.4.10, MIIVsem-0.5.8, minerva-1.5.10, minpack.lm-1.2-4, minqa-1.2.6, mirt-1.41, misc3d-0.9-1, miscTools-0.6-28, missForest-1.5, missMDA-1.19, mitml-0.4-5, mitools-2.4, mixtools-2.0.0, mlbench-2.1-3.1, mlegp-3.1.9, MLmetrics-1.1.1, mlogit-1.1-1, mlr-2.19.1, mlrMBO-1.1.5.1, mltools-0.3.5, mnormt-2.1.1, ModelMetrics-1.2.2.2, modelr-0.1.11, modeltools-0.2-23, momentfit-0.5, moments-0.14.1, MonteCarlo-1.0.6, mosaicCore-0.9.4.0, mpath-0.4-2.23, mRMRe-2.1.2.1, msm-1.7.1, mstate-0.3.2, multcomp-1.4-25, multcompView-0.1-9, multicool-1.0.0, multipol-1.0-9, munsell-0.5.0, mvabund-4.2.1, mvnfast-0.2.8, mvtnorm-1.2-4, nabor-0.5.0, naniar-1.0.0, natserv-1.0.0, naturalsort-0.1.3, ncbit-2013.03.29.1, ncdf4-1.22, NCmisc-1.2.0, network-1.18.2, networkDynamic-0.11.3, networkLite-1.0.5, neuralnet-1.44.2, neuRosim-0.2-14, ngspatial-1.2-2, NISTunits-1.0.1, nleqslv-3.3.5, nlme-3.1-164, nloptr-2.0.3, NLP-0.2-1, nlsem-0.8-1, nnet-7.3-19, nnls-1.5, nonnest2-0.5-6, nor1mix-1.3-2, norm-1.0-11.1, nortest-1.0-4, np-0.60-17, npsurv-0.5-0, numDeriv-2016.8-1.1, oai-0.4.0, oce-1.8-2, OceanView-1.0.6, oddsratio-2.0.1, officer-0.6.3, openair-2.18-0, OpenMx-2.21.11, openxlsx-4.2.5.2, operator.tools-1.6.3, optextras-2019-12.4, optimParallel-1.0-2, optimr-2019-12.16, optimx-2023-10.21, optmatch-0.10.7, optparse-1.7.3, ordinal-2023.12-4, origami-1.0.7, oro.nifti-0.11.4, orthopolynom-1.0-6.1, osqp-0.6.3.2, outliers-0.15, packrat-0.9.2, pacman-0.5.1, pammtools-0.5.92, pamr-1.56.1, pan-1.9, parallelDist-0.2.6, parallelly-1.36.0, parallelMap-1.5.1, ParamHelpers-1.14.1, parsedate-1.3.1, party-1.3-14, partykit-1.2-20, pastecs-1.3.21, patchwork-1.1.3, pbapply-1.7-2, pbivnorm-0.6.0, pbkrtest-0.5.2, PCAmatchR-0.3.3, pcaPP-2.0-4, pdp-0.8.1, PearsonDS-1.3.0, pec-2023.04.12, penalized-0.9-52, penfa-0.1.1, peperr-1.5, PermAlgo-1.2, permute-0.9-7, phangorn-2.11.1, pheatmap-1.0.12, phylobase-0.8.10, phytools-2.0-3, pim-2.0.2, pinfsc50-1.3.0, pixmap-0.4-12, pkgmaker-0.32.10, plogr-0.2.0, plot3D-1.4, plot3Drgl-1.0.4, plotly-4.10.3, plotmo-3.6.2, plotrix-3.8-4, pls-2.8-3, plyr-1.8.9, PMA-1.2-2, png-0.1-8, PoissonSeq-1.1.2, poLCA-1.6.0.1, polspline-1.1.24, Polychrome-1.5.1, polyclip-1.10-6, polycor-0.8-1, polynom-1.4-1, posterior-1.5.0, ppcor-1.1, prabclus-2.3-3, pracma-2.4.4, PresenceAbsence-1.1.11, preseqR-4.0.0, prettyGraphs-2.1.6, princurve-2.1.6, pROC-1.18.5, prodlim-2023.08.28, profileModel-0.6.1, proftools-0.99-3, progress-1.2.3, progressr-0.14.0, projpred-2.7.0, proto-1.0.0, proxy-0.4-27, proxyC-0.3.4, pryr-0.1.6, pscl-1.5.5.1, pspline-1.0-19, psych-2.3.9, Publish-2023.01.17, pulsar-0.3.11, pvclust-2.2-0, qgam-1.3.4, qgraph-1.9.8, qqman-0.1.9, qrnn-2.1, quadprog-1.5-8, quanteda-3.3.1, quantmod-0.4.25, quantreg-5.97, questionr-0.7.8, QuickJSR-1.0.8, R.cache-0.16.0, R.matlab-3.7.0, R.methodsS3-1.8.2, R.oo-1.25.0, R.rsp-0.45.0, R.utils-2.12.3, R2WinBUGS-2.1-21, random-0.2.6, randomForest-4.7-1.1, randomForestSRC-3.2.3, randtoolbox-2.0.4, rangeModelMetadata-0.1.5, ranger-0.16.0, RANN-2.6.1, rapidjsonr-1.2.0, rARPACK-0.11-0, raster-3.6-26, rasterVis-0.51.6, ratelimitr-0.4.1, RBesT-1.7-2, rbibutils-2.2.16, rbison-1.0.0, Rborist-0.3-5, RCAL-2.0, Rcgmin-2022-4.30, RCircos-1.2.2, RColorBrewer-1.1-3, RcppArmadillo-0.12.6.6.1, RcppEigen-0.3.3.9.4, RcppGSL-0.3.13, RcppParallel-5.1.7, RcppProgress-0.4.2, RcppRoll-0.3.0, RcppThread-2.1.6, RcppTOML-0.2.2, RCurl-1.98-1.13, rda-1.2-1, Rdpack-2.6, rdrop2-0.8.2.1, reactable-0.4.4, reactR-0.5.0, readbitmap-0.1.5, reader-1.0.6, readODS-2.1.0, readr-2.1.4, readxl-1.4.3, rebird-1.3.0, recipes-1.0.8, RefFreeEWAS-2.2, registry-0.5-1, regsem-1.9.5, relsurv-2.2-9, rematch-2.0.0, rentrez-1.2.3, renv-1.0.3, reprex-2.0.2, resample-0.6, reshape-0.8.9, reshape2-1.4.4, reticulate-1.34.0, rex-1.2.1, rgbif-3.7.8, RGCCA-3.0.2, rgdal-1.6-7, rgeos-0.6-4, rgexf-0.16.2, rgl-1.2.8, Rglpk-0.6-5, rhandsontable-0.3.8, RhpcBLASctl-0.23-42, ridge-3.3, ridigbio-0.3.7, RInside-0.2.18, rio-1.0.1, riskRegression-2023.09.08, ritis-1.0.0, RItools-0.3-3, rJava-1.0-10, rjson-0.2.21, RJSONIO-1.3-1.9, rle-0.9.2, rlecuyer-0.3-8, rlemon-0.2.1, rlist-0.4.6.2, rmeta-3.0, Rmpfr-0.9-4, rms-6.7-1, RMTstat-0.3.1, rncl-0.8.7, rnetcarto-0.2.6, RNeXML-2.4.11, rngtools-1.5.2, rngWELL-0.10-9, RNifti-1.5.1, robustbase-0.99-1, ROCR-1.0-11, ROI-1.0-1, ROI.plugin.glpk-1.0-0, Rook-1.2, rootSolve-1.8.2.4, roptim-0.1.6, rotl-3.1.0, rpact-3.4.0, rpart-4.1.23, rpf-1.0.14, RPMM-1.25, RPostgreSQL-0.7-5, rrcov-1.7-4, rredlist-0.7.1, rsample-1.2.0, rsconnect-1.1.1, Rserve-1.8-13, RSNNS-0.4-17, Rsolnp-1.16, RSpectra-0.16-1, RSQLite-2.3.4, Rssa-1.0.5, rstan-2.32.3, rstantools-2.3.1.1, rstatix-0.7.2, rtdists-0.11-5, Rtsne-0.17, Rttf2pt1-1.3.12, RUnit-0.4.32, ruv-0.9.7.1, rvertnet-0.8.2, rvest-1.0.3, rvinecopulib-0.6.3.1.1, Rvmmin-2018-4.17.1, RWeka-0.4-46, RWekajars-3.9.3-2, s2-1.1.4, sampling-2.10, sandwich-3.0-2, SBdecomp-1.2, scales-1.3.0, scam-1.2-14, scatterpie-0.2.1, scatterplot3d-0.3-44, scs-3.2.4, sctransform-0.4.1, SDMTools-1.1-221.2, seewave-2.2.3, segmented-2.0-0, selectr-0.4-2, sem-3.1-15, semPLS-1.0-10, semTools-0.5-6, sendmailR-1.4-0, sensemakr-0.1.4, sentometrics-1.0.0, seqinr-4.2-36, servr-0.27, setRNG-2022.4-1, sf-1.0-14, sfheaders-0.4.3, sfsmisc-1.1-16, shadowtext-0.1.2, shape-1.4.6, shapefiles-0.7.2, shinycssloaders-1.0.0, shinydashboard-0.7.2, shinyjs-2.1.0, shinystan-2.6.0, shinythemes-1.2.0, signal-1.8-0, SignifReg-4.3, simex-1.8, SimSeq-1.4.0, SKAT-2.2.5, slam-0.1-50, slider-0.3.1, sm-2.2-5.7.1, smoof-1.6.0.3, smoother-1.1, sn-2.1.1, sna-2.7-2, SNFtool-2.3.1, snow-0.4-4, SnowballC-0.7.1, snowfall-1.84-6.3, SOAR-0.99-11, solrium-1.2.0, som-0.3-5.1, soundecology-1.3.3, sp-2.1-2, spaa-0.2.2, spam-2.10-0, spaMM-4.4.0, SparseM-1.81, SPAtest-3.1.2, spatial-7.3-17, spatstat-3.0-7, spatstat.core-2.4-4, spatstat.data-3.0-3, spatstat.explore-3.2-5, spatstat.geom-3.2-7, spatstat.linnet-3.1-3, spatstat.model-3.2-8, spatstat.random-3.2-2, spatstat.sparse-3.0-3, spatstat.utils-3.0-4, spData-2.3.0, spdep-1.3-1, splitstackshape-1.4.8, spls-2.2-3, spocc-1.2.2, spThin-0.2.0, SQUAREM-2021.1, stabledist-0.7-1, stabs-0.6-4, StanHeaders-2.26.28, stargazer-5.2.3, stars-0.6-4, startupmsg-0.9.6, StatMatch-1.4.1, statmod-1.5.0, statnet-2019.6, statnet.common-4.9.0, stdReg-3.4.1, stopwords-2.3, stringdist-0.9.12, stringmagic-1.0.0, strucchange-1.5-3, styler-1.10.2, subplex-1.8, SuperLearner-2.0-28.1, SuppDists-1.1-9.7, survey-4.2-1, survival-3.5-7, survivalROC-1.0.3.1, svd-0.5.5, svglite-2.1.3, svUnit-1.0.6, swagger-3.33.1, symmoments-1.2.1, tableone-0.13.2, tabletools-0.1.0, tau-0.0-25, taxize-0.9.100, tcltk2-1.2-11, tclust-1.5-5, TeachingDemos-2.12, tensor-1.5, tensorA-0.36.2, tergm-4.2.0, terra-1.7-55, testit-0.13, textcat-1.0-8, textplot-0.2.2, TFisher-0.2.0, TH.data-1.1-2, threejs-0.3.3, tictoc-1.2, tidybayes-3.0.6, tidygraph-1.2.3, tidyr-1.3.0, tidyselect-1.2.0, tidytext-0.4.1, tidytree-0.4.5, tidyverse-2.0.0, tiff-0.1-12, timechange-0.2.0, timeDate-4022.108, timereg-2.0.5, tkrplot-0.0-27, tm-0.7-11, tmap-3.3-4, tmaptools-3.1-1, TMB-1.9.9, tmle-2.0.0, tmvnsim-1.0-2, tmvtnorm-1.6, tokenizers-0.3.0, topicmodels-0.2-15, TraMineR-2.2-8, tree-1.0-43, triebeard-0.4.1, trimcluster-0.1-5, tripack-1.3-9.1, TruncatedNormal-2.2.2, truncnorm-1.0-9, trust-0.1-8, tseries-0.10-55, tseriesChaos-0.1-13.1, tsna-0.3.5, tsne-0.1-3.1, TTR-0.24.4, tuneR-1.4.6, twang-2.6, tweedie-2.3.5, tweenr-2.0.2, tzdb-0.4.0, ucminf-1.2.0, udpipe-0.8.11, umap-0.2.10.0, unbalanced-2.0, unikn-0.9.0, uniqueAtomMat-0.1-3-2, units-0.8-5, unmarked-1.3.2, UpSetR-1.4.0, urca-1.3-3, urltools-1.7.3, uroot-2.1-2, uuid-1.1-1, V8-4.4.1, varhandle-2.0.6, vcd-1.4-11, vcfR-1.15.0, vegan-2.6-4, VennDiagram-1.7.3, VGAM-1.1-9, VIM-6.2.2, VineCopula-2.5.0, vioplot-0.4.0, vipor-0.4.5, viridis-0.6.4, viridisLite-0.4.2, visdat-0.6.0, visNetwork-2.1.2, vroom-1.6.5, VSURF-1.2.0, warp-0.2.1, waveslim-1.8.4, wdm-0.2.4, webshot-0.5.5, webutils-1.2.0, weights-1.0.4, WeightSVM-1.7-13, wellknown-0.7.4, widgetframe-0.3.1, WikidataQueryServiceR-1.0.0, WikidataR-2.3.3, WikipediR-1.5.0, wikitaxa-0.4.0, wk-0.9.1, word2vec-0.4.0, wordcloud-2.6, worrms-0.4.3, writexl-1.4.2, WriteXLS-6.4.0, XBRL-0.99.19.1, xgboost-1.7.6.1, xlsx-0.6.5, xlsxjars-0.6.1, XML-3.99-0.16, xts-0.13.1, yaImpute-1.0-33, yulab.utils-0.1.0, zeallot-0.1.0, zoo-1.8-12
+|`abc.data` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### abe
+
+
+|`abe` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### abind
+
+
+|`abind` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4-5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4-8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### acepack
+
+
+|`acepack` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### adabag
+
+
+|`adabag` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ade4
+
+
+|`ade4` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-22|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ADGofTest
+
+
+|`ADGofTest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### admisc
+
+
+|`admisc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.34|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.35|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.36|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### aggregation
+
+
+|`aggregation` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### AICcmodavg
+
+
+|`AICcmodavg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### akima
+
+
+|`akima` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-3.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### alabama
+
+
+|`alabama` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### AlgDesign
+
+
+|`AlgDesign` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### alluvial
+
+
+|`alluvial` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### AMAPVox
+
+
+|`AMAPVox` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### animation
+
+
+|`animation` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### aod
+
+
+|`aod` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### apcluster
+
+
+|`apcluster` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.11|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ape
+
+
+|`ape` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.7-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### aplot
+
+
+|`aplot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### argparse
+
+
+|`argparse` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.2.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### aricode
+
+
+|`aricode` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### arm
+
+
+|`arm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.13-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.14-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### arrayhelpers
+
+
+|`arrayhelpers` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### asnipe
+
+
+|`asnipe` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive
+
+
+|`assertive` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.base
+
+
+|`assertive.base` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.code
+
+
+|`assertive.code` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.data
+
+
+|`assertive.data` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.data.uk
+
+
+|`assertive.data.uk` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.data.us
+
+
+|`assertive.data.us` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.datetimes
+
+
+|`assertive.datetimes` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.files
+
+
+|`assertive.files` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.matrices
+
+
+|`assertive.matrices` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.models
+
+
+|`assertive.models` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.numbers
+
+
+|`assertive.numbers` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.properties
+
+
+|`assertive.properties` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.reflection
+
+
+|`assertive.reflection` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.sets
+
+
+|`assertive.sets` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.strings
+
+
+|`assertive.strings` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertive.types
+
+
+|`assertive.types` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### assertthat
+
+
+|`assertthat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### AUC
+
+
+|`AUC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### audio
+
+
+|`audio` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### aws
+
+
+|`aws` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.5-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.5-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.5-6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### awsMethods
+
+
+|`awsMethods` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### backports
+
+
+|`backports` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### bacr
+
+
+|`bacr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### bartMachine
+
+
+|`bartMachine` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.4.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### bartMachineJARs
+
+
+|`bartMachineJARs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### base64
+
+
+|`base64` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### BatchJobs
+
+
+|`BatchJobs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### batchmeans
+
+
+|`batchmeans` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### BayesianTools
+
+
+|`BayesianTools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### BayesLogit
+
+
+|`BayesLogit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### bayesm
+
+
+|`bayesm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### BayesPen
+
+
+|`BayesPen` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### bayesplot
+
+
+|`bayesplot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.10.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.11.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### bayestestR
+
+
+|`bayestestR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.14.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.15.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### BB
+
+
+|`BB` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2019.10-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### BBmisc
+
+
+|`BBmisc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### bbmle
+
+
+|`bbmle` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.25.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### BCEE
+
+
+|`BCEE` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### BDgraph
+
+
+|`BDgraph` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.72|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.73|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bdsmatrix
+
+
+|`bdsmatrix` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3-7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### beanplot
+
+
+|`beanplot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### beepr
+
+
+|`beepr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### beeswarm
+
+
+|`beeswarm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### berryFunctions
+
+
+|`berryFunctions` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.22.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.22.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### betareg
+
+
+|`betareg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.2-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### BH
+
+
+|`BH` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.81.0-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.84.0-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### BiasedUrn
+
+
+|`BiasedUrn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.11|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### bibtex
+
+
+|`bibtex` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### BIEN
+
+
+|`BIEN` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### bigD
+
+
+|`bigD` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### BIGL
+
+
+|`BIGL` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.9.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.9.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### biglm
+
+
+|`biglm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bigmemory
+
+
+|`bigmemory` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.6.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.6.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### bigmemory.sri
+
+
+|`bigmemory.sri` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### bindr
+
+
+|`bindr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bindrcpp
+
+
+|`bindrcpp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### bio3d
+
+
+|`bio3d` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4-4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.4-5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### biom
+
+
+|`biom` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### biomod2
+
+
+|`biomod2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.2-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.2-5-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### bit
+
+
+|`bit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.0.5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.5.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bit64
+
+
+|`bit64` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.0.5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.5.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bitops
+
+
+|`bitops` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-7|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0-9|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### blavaan
+
+
+|`blavaan` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.5-6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### blob
+
+
+|`blob` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### BMA
+
+
+|`BMA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.18.17|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.18.19|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bmp
+
+
+|`bmp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### bnlearn
+
+
+|`bnlearn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.9.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.9.4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|5.0.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bold
+
+
+|`bold` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### boot
+
+
+|`boot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-28.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3-30|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3-31|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bootstrap
+
+
+|`bootstrap` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2019.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Boruta
+
+
+|`Boruta` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|8.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### brglm
+
+
+|`brglm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### bridgedist
+
+
+|`bridgedist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bridgesampling
+
+
+|`bridgesampling` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### brms
+
+
+|`brms` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.20.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.21.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.22.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### Brobdingnag
+
+
+|`Brobdingnag` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### broom
+
+
+|`broom` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.6|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.0.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### broom.helpers
+
+
+|`broom.helpers` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.14.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.15.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.17.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### broom.mixed
+
+
+|`broom.mixed` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.9.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.9.5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.2.9.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### bst
+
+
+|`bst` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-24|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Cairo
+
+
+|`Cairo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### calibrate
+
+
+|`calibrate` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### car
+
+
+|`car` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.1-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### carData
+
+
+|`carData` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cards
+
+
+|`cards` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### caret
+
+
+|`caret` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|6.0-94|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### catlearn
+
+
+|`catlearn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### caTools
+
+
+|`caTools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.18.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.18.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### CBPS
+
+
+|`CBPS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.23|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### celestial
+
+
+|`celestial` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cellranger
+
+
+|`cellranger` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cgdsr
+
+
+|`cgdsr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cghFLasso
+
+
+|`cghFLasso` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### changepoint
+
+
+|`changepoint` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### checkmate
+
+
+|`checkmate` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### chemometrics
+
+
+|`chemometrics` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### chk
+
+
+|`chk` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### chkptstanr
+
+
+|`chkptstanr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### chron
+
+
+|`chron` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3-61|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### circlize
+
+
+|`circlize` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.15|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.16|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### circular
+
+
+|`circular` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### class
+
+
+|`class` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|7.3-22|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### classInt
+
+
+|`classInt` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cld2
+
+
+|`cld2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### clisymbols
+
+
+|`clisymbols` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### clock
+
+
+|`clock` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.7.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### clue
+
+
+|`clue` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-65|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3-66|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### cluster
+
+
+|`cluster` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### clusterGeneration
+
+
+|`clusterGeneration` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### clusterRepro
+
+
+|`clusterRepro` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### clustree
+
+
+|`clustree` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### clValid
+
+
+|`clValid` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cmna
+
+
+|`cmna` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cmprsk
+
+
+|`cmprsk` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-11|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2-12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### cNORM
+
+
+|`cNORM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.4.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### cobalt
+
+
+|`cobalt` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.5.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.5.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### cobs
+
+
+|`cobs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### coda
+
+
+|`coda` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.19-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.19-4.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### codetools
+
+
+|`codetools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-19|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2-20|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### coin
+
+
+|`coin` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### collapse
+
+
+|`collapse` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.14|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.0.18|`R-bundle-CRAN/2024.11-foss-2024a`|
+|2.0.7|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### colorspace
+
+
+|`colorspace` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1-0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### colourpicker
+
+
+|`colourpicker` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### combinat
+
+
+|`combinat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ComICS
+
+
+|`ComICS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ComplexUpset
+
+
+|`ComplexUpset` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### compositions
+
+
+|`compositions` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### CompQuadForm
+
+
+|`CompQuadForm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### conditionz
+
+
+|`conditionz` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### conflicted
+
+
+|`conflicted` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### conquer
+
+
+|`conquer` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ConsRank
+
+
+|`ConsRank` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### contfrac
+
+
+|`contfrac` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### copCAR
+
+
+|`copCAR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### copula
+
+
+|`copula` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1-4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### corpcor
+
+
+|`corpcor` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6.10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### corrplot
+
+
+|`corrplot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.92|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.95|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### covr
+
+
+|`covr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.6.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### CovSel
+
+
+|`CovSel` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### covsim
+
+
+|`covsim` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### cowplot
+
+
+|`cowplot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### coxed
+
+
+|`coxed` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### coxme
+
+
+|`coxme` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-18.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2-20|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.2-22|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### cplm
+
+
+|`cplm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7-12.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### crfsuite
+
+
+|`crfsuite` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### crosstalk
+
+
+|`crosstalk` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### crul
+
+
+|`crul` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.5.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### cSEM
+
+
+|`cSEM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### csSAM
+
+
+|`csSAM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ctmle
+
+
+|`ctmle` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cubature
+
+
+|`cubature` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### cubelyr
+
+
+|`cubelyr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### cvAUC
+
+
+|`cvAUC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### CVST
+
+
+|`CVST` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### CVXR
+
+
+|`CVXR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-11|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0-13|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.0-15|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### d3Network
+
+
+|`d3Network` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dagitty
+
+
+|`dagitty` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### data.table
+
+
+|`data.table` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.14.10|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.15.4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.16.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### data.tree
+
+
+|`data.tree` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### DataCombine
+
+
+|`DataCombine` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.21|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### datawizard
+
+
+|`datawizard` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.12.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.13.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### date
+
+
+|`date` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-42|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dbarts
+
+
+|`dbarts` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-25|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9-28|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### DBI
+
+
+|`DBI` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### dbplyr
+
+
+|`dbplyr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### dbscan
+
+
+|`dbscan` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-12|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### dcurver
+
+
+|`dcurver` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ddalpha
+
+
+|`ddalpha` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.13|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.15|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3.16|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### deal
+
+
+|`deal` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-42|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### debugme
+
+
+|`debugme` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### deldir
+
+
+|`deldir` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### dendextend
+
+
+|`dendextend` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.17.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.19.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### DEoptim
+
+
+|`DEoptim` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### DEoptimR
+
+
+|`DEoptimR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1-3-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### DepthProc
+
+
+|`DepthProc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Deriv
+
+
+|`Deriv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.1.3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.1.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### DescTools
+
+
+|`DescTools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.99.52|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.99.54|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.99.58|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### deSolve
+
+
+|`deSolve` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.40|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dfidx
+
+
+|`dfidx` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### DHARMa
+
+
+|`DHARMa` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.6|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### dHSIC
+
+
+|`dHSIC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### diagram
+
+
+|`diagram` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### DiagrammeR
+
+
+|`DiagrammeR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.10|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### DiceKriging
+
+
+|`DiceKriging` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dichromat
+
+
+|`dichromat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dimRed
+
+
+|`dimRed` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### diptest
+
+
+|`diptest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.77-0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.77-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### DiscriMiner
+
+
+|`DiscriMiner` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-29|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dismo
+
+
+|`dismo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-14|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### distillery
+
+
+|`distillery` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### distr
+
+
+|`distr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.9.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.9.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.9.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### distrEx
+
+
+|`distrEx` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.9.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.9.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.9.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### distributional
+
+
+|`distributional` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.5.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### DistributionUtils
+
+
+|`DistributionUtils` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### diveRsity
+
+
+|`diveRsity` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9.90|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dlm
+
+
+|`dlm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-6|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1-6.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### DMCfun
+
+
+|`DMCfun` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.5.4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|4.0.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### doBy
+
+
+|`doBy` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.6.24|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### doc2vec
+
+
+|`doc2vec` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### docstring
+
+
+|`docstring` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### doMC
+
+
+|`doMC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### doParallel
+
+
+|`doParallel` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### doRNG
+
+
+|`doRNG` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### doSNOW
+
+
+|`doSNOW` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.20|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dotCall64
+
+
+|`dotCall64` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### downloader
+
+
+|`downloader` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dplyr
+
+
+|`dplyr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dr
+
+
+|`dr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dreamerr
+
+
+|`dreamerr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### drgee
+
+
+|`drgee` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### DRR
+
+
+|`DRR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### drugCombo
+
+
+|`drugCombo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### DT
+
+
+|`DT` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.31|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.33|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### dtangle
+
+
+|`dtangle` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dtplyr
+
+
+|`dtplyr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### DTRreg
+
+
+|`DTRreg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### dtw
+
+
+|`dtw` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.23-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dummies
+
+
+|`dummies` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dygraphs
+
+
+|`dygraphs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.1.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### dynamicTreeCut
+
+
+|`dynamicTreeCut` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.63-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### e1071
+
+
+|`e1071` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-14|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-16|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### earth
+
+
+|`earth` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.3.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.3.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|5.3.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### EasyABC
+
+
+|`EasyABC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ECOSolveR
+
+
+|`ECOSolveR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ellipse
+
+
+|`ellipse` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### elliptic
+
+
+|`elliptic` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### emdbook
+
+
+|`emdbook` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### emmeans
+
+
+|`emmeans` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.10.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.10.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+|1.8.9|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### emoa
+
+
+|`emoa` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-0.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5-2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.5-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### emulator
+
+
+|`emulator` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-21|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-24|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### energy
+
+
+|`energy` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-11|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-12|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ENMeval
+
+
+|`ENMeval` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### entropy
+
+
+|`entropy` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### EnvStats
+
+
+|`EnvStats` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.8.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.0.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### epitools
+
+
+|`epitools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-10.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ergm
+
+
+|`ergm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.5.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.6.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|4.7.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ergm.count
+
+
+|`ergm.count` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ergm.multi
+
+
+|`ergm.multi` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### estimability
+
+
+|`estimability` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### EValue
+
+
+|`EValue` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### evd
+
+
+|`evd` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3-6.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3-7|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.3-7.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### Exact
+
+
+|`Exact` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### expm
+
+
+|`expm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.999-8|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.999-9|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.0-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ExPosition
+
+
+|`ExPosition` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.8.23|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### expsmooth
+
+
+|`expsmooth` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### extrafont
+
+
+|`extrafont` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.19|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### extrafontdb
+
+
+|`extrafontdb` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### extRemes
+
+
+|`extRemes` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### FactoMineR
+
+
+|`FactoMineR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.9|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### FactorCopula
+
+
+|`FactorCopula` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fail
+
+
+|`fail` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### farver
+
+
+|`farver` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### fastcluster
+
+
+|`fastcluster` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### fastDummies
+
+
+|`fastDummies` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fasterize
+
+
+|`fasterize` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fastGHQuad
+
+
+|`fastGHQuad` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fastICA
+
+
+|`fastICA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-5.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fastlogranktest
+
+
+|`fastlogranktest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fastmatch
+
+
+|`fastmatch` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fBasics
+
+
+|`fBasics` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4041.97|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fdrtool
+
+
+|`fdrtool` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.17|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.18|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### feather
+
+
+|`feather` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ff
+
+
+|`ff` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.0.12|`R-bundle-CRAN/2024.06-foss-2023b`|
+|4.0.9|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.5.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fftw
+
+
+|`fftw` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-7|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0-8|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.0-9|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fftwtools
+
+
+|`fftwtools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fields
+
+
+|`fields` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|15.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|16.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### filehash
+
+
+|`filehash` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4-5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.4-6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### finalfit
+
+
+|`finalfit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.7|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### findpython
+
+
+|`findpython` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.8|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.9|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fishMod
+
+
+|`fishMod` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.29|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.29.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fitdistrplus
+
+
+|`fitdistrplus` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-11|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fixest
+
+
+|`fixest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.11.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.12.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### FKSUM
+
+
+|`FKSUM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### flashClust
+
+
+|`flashClust` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.01-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### flexclust
+
+
+|`flexclust` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### flexmix
+
+
+|`flexmix` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3-19|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### flextable
+
+
+|`flextable` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9.6|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.9.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fma
+
+
+|`fma` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### FME
+
+
+|`FME` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.6.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fmri
+
+
+|`fmri` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9.12|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.9.12.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### FNN
+
+
+|`FNN` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.3.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.1.4.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fontBitstreamVera
+
+
+|`fontBitstreamVera` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fontLiberation
+
+
+|`fontLiberation` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fontquiver
+
+
+|`fontquiver` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### forcats
+
+
+|`forcats` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### foreach
+
+
+|`foreach` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### forecast
+
+
+|`forecast` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|8.21.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|8.23.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### foreign
+
+
+|`foreign` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8-86|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.8-87|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### formatR
+
+
+|`formatR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.14|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Formula
+
+
+|`Formula` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### formula.tools
+
+
+|`formula.tools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fossil
+
+
+|`fossil` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fpc
+
+
+|`fpc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-10|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2-12|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.2-13|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### fpp
+
+
+|`fpp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### fracdiff
+
+
+|`fracdiff` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### frbs
+
+
+|`frbs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.2-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### furrr
+
+
+|`furrr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### futile.logger
+
+
+|`futile.logger` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### futile.options
+
+
+|`futile.options` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### future
+
+
+|`future` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.33.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.33.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.34.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### future.apply
+
+
+|`future.apply` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.11.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.11.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.11.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gam
+
+
+|`gam` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.22-3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.22-5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gamlss
+
+
+|`gamlss` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.4-20|`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.4-22|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### gamlss.data
+
+
+|`gamlss.data` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|6.0-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|6.0-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### gamlss.dist
+
+
+|`gamlss.dist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|6.1-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gamlss.tr
+
+
+|`gamlss.tr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.1-7|`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.1-9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### gamm4
+
+
+|`gamm4` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gap
+
+
+|`gap` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5-3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gap.datasets
+
+
+|`gap.datasets` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gapfill
+
+
+|`gapfill` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.6-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gargle
+
+
+|`gargle` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gaussquad
+
+
+|`gaussquad` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gbm
+
+
+|`gbm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.8.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.9|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.2.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gbRd
+
+
+|`gbRd` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-11|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### gclus
+
+
+|`gclus` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gcmr
+
+
+|`gcmr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gdalUtils
+
+
+|`gdalUtils` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.3.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gdata
+
+
+|`gdata` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.0.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gdistance
+
+
+|`gdistance` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gdtools
+
+
+|`gdtools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.7|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.4.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gee
+
+
+|`gee` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.13-26|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.13-27|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### geeM
+
+
+|`geeM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.10.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### geepack
+
+
+|`geepack` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.11|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3.12|`R-bundle-CRAN/2024.11-foss-2024a`|
+|1.3.9|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### geex
+
+
+|`geex` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### geiger
+
+
+|`geiger` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### GeneNet
+
+
+|`GeneNet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.16|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### generics
+
+
+|`generics` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### genoPlotR
+
+
+|`genoPlotR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### GenSA
+
+
+|`GenSA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.10.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.14|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.1.14.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### geojsonsf
+
+
+|`geojsonsf` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### geometries
+
+
+|`geometries` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### geometry
+
+
+|`geometry` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.7|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### getopt
+
+
+|`getopt` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.20.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### GetoptLong
+
+
+|`GetoptLong` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gfonts
+
+
+|`gfonts` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### GGally
+
+
+|`GGally` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggbeeswarm
+
+
+|`ggbeeswarm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ggdag
+
+
+|`ggdag` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.10|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.12|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.2.13|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ggdist
+
+
+|`ggdist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.3.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.3.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggExtra
+
+
+|`ggExtra` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.10.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ggfan
+
+
+|`ggfan` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ggforce
+
+
+|`ggforce` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggformula
+
+
+|`ggformula` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.12.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ggfun
+
+
+|`ggfun` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1.5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.1.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ggh4x
+
+
+|`ggh4x` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggnetwork
+
+
+|`ggnetwork` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.12|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggplot2
+
+
+|`ggplot2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.4.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggplotify
+
+
+|`ggplotify` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ggprism
+
+
+|`ggprism` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ggpubr
+
+
+|`ggpubr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ggraph
+
+
+|`ggraph` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggrepel
+
+
+|`ggrepel` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9.5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.9.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ggridges
+
+
+|`ggridges` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggsci
+
+
+|`ggsci` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggsignif
+
+
+|`ggsignif` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ggstance
+
+
+|`ggstance` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ggstats
+
+
+|`ggstats` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.7.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ggvenn
+
+
+|`ggvenn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ggvis
+
+
+|`ggvis` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.8|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### GillespieSSA
+
+
+|`GillespieSSA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### git2r
+
+
+|`git2r` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.33.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.35.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### GJRM
+
+
+|`GJRM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-6.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2-6.5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.2-6.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### glasso
+
+
+|`glasso` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gld
+
+
+|`gld` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.6.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gllvm
+
+
+|`gllvm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### glmmML
+
+
+|`glmmML` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.6|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### glmmTMB
+
+
+|`glmmTMB` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.10|`R-bundle-CRAN/2024.11-foss-2024a`|
+|1.1.8|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.9|`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### glmnet
+
+
+|`glmnet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.1-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### GlobalOptions
+
+
+|`GlobalOptions` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### globals
+
+
+|`globals` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.16.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.16.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### gmm
+
+
+|`gmm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gmodels
+
+
+|`gmodels` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.18.1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.19.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### gmp
+
+
+|`gmp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.7-4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.7-5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gnumeric
+
+
+|`gnumeric` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7-10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### goftest
+
+
+|`goftest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### goldilocks
+
+
+|`goldilocks` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gomms
+
+
+|`gomms` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### googledrive
+
+
+|`googledrive` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### googlesheets4
+
+
+|`googlesheets4` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gower
+
+
+|`gower` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### GPArotation
+
+
+|`GPArotation` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023.11-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2024.3-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### gplots
+
+
+|`gplots` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.1.3.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.2.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### graphlayouts
+
+
+|`graphlayouts` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### grf
+
+
+|`grf` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.4.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gridBase
+
+
+|`gridBase` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gridExtra
+
+
+|`gridExtra` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gridGraphics
+
+
+|`gridGraphics` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### grImport2
+
+
+|`grImport2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### grpreg
+
+
+|`grpreg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.4.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.5.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### GSA
+
+
+|`GSA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.03.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.03.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### gsalib
+
+
+|`gsalib` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gsDesign
+
+
+|`gsDesign` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.6.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gsl
+
+
+|`gsl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gss
+
+
+|`gss` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-9|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gsubfn
+
+
+|`gsubfn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gsw
+
+
+|`gsw` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gt
+
+
+|`gt` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.10.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.10.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.11.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gtable
+
+
+|`gtable` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.3.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### gtools
+
+
+|`gtools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.9.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gtsummary
+
+
+|`gtsummary` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### GUTS
+
+
+|`GUTS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gWidgets2
+
+
+|`gWidgets2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### gWidgets2tcltk
+
+
+|`gWidgets2tcltk` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### GxEScanR
+
+
+|`GxEScanR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### h2o
+
+
+|`h2o` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.42.0.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.44.0.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### hal9001
+
+
+|`hal9001` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### haldensify
+
+
+|`haldensify` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### hardhat
+
+
+|`hardhat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### harmony
+
+
+|`harmony` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### hash
+
+
+|`hash` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.6.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### haven
+
+
+|`haven` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.5.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### hdf5r
+
+
+|`hdf5r` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.10|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3.11|`R-bundle-CRAN/2024.11-foss-2024a`|
+|1.3.8|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### hdm
+
+
+|`hdm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### heatmap3
+
+
+|`heatmap3` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### here
+
+
+|`here` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### hexbin
+
+
+|`hexbin` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.28.3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.28.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### HGNChelper
+
+
+|`HGNChelper` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.8.14|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.8.15|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### HiddenMarkov
+
+
+|`HiddenMarkov` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8-13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Hmisc
+
+
+|`Hmisc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.1-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.1-3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|5.2-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### hms
+
+
+|`hms` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Hmsc
+
+
+|`Hmsc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0-13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### htmlTable
+
+
+|`htmlTable` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.4.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### httpcode
+
+
+|`httpcode` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### huge
+
+
+|`huge` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### hunspell
+
+
+|`hunspell` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.0.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### hwriter
+
+
+|`hwriter` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### HWxtest
+
+
+|`HWxtest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### hypergeo
+
+
+|`hypergeo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ica
+
+
+|`ica` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### IDPmisc
+
+
+|`IDPmisc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.20|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.21|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### idr
+
+
+|`idr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ids
+
+
+|`ids` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ie2misc
+
+
+|`ie2misc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### igraph
+
+
+|`igraph` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### image.binarization
+
+
+|`image.binarization` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### imager
+
+
+|`imager` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.45.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### imagerExtra
+
+
+|`imagerExtra` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ineq
+
+
+|`ineq` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### influenceR
+
+
+|`influenceR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### infotheo
+
+
+|`infotheo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### inline
+
+
+|`inline` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.19|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.20|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### insight
+
+
+|`insight` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.20.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.20.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### intergraph
+
+
+|`intergraph` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### interp
+
+
+|`interp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### interpretR
+
+
+|`interpretR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### intrinsicDimension
+
+
+|`intrinsicDimension` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### inum
+
+
+|`inum` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ipred
+
+
+|`ipred` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-14|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9-15|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### irace
+
+
+|`irace` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### irlba
+
+
+|`irlba` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ismev
+
+
+|`ismev` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.42|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Iso
+
+
+|`Iso` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-21|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### isoband
+
+
+|`isoband` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ISOcodes
+
+
+|`ISOcodes` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023.12.07|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2024.02.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ISOweek
+
+
+|`ISOweek` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### iterators
+
+
+|`iterators` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.14|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### itertools
+
+
+|`itertools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### JADE
+
+
+|`JADE` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### janeaustenr
+
+
+|`janeaustenr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### JBTools
+
+
+|`JBTools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.2.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### jiebaR
+
+
+|`jiebaR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### jiebaRD
+
+
+|`jiebaRD` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### jomo
+
+
+|`jomo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.7-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### jpeg
+
+
+|`jpeg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### jsonify
+
+
+|`jsonify` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### jstable
+
+
+|`jstable` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.6|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### juicyjuice
+
+
+|`juicyjuice` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### kableExtra
+
+
+|`kableExtra` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### kde1d
+
+
+|`kde1d` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### kedd
+
+
+|`kedd` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### kernlab
+
+
+|`kernlab` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-32|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9-33|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### KernSmooth
+
+
+|`KernSmooth` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.23-22|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.23-24|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### kinship2
+
+
+|`kinship2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.9.6.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### klaR
+
+
+|`klaR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### KODAMA
+
+
+|`KODAMA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.4.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### kohonen
+
+
+|`kohonen` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ks
+
+
+|`ks` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.14.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.14.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.14.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### labdsv
+
+
+|`labdsv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### labeling
+
+
+|`labeling` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### labelled
+
+
+|`labelled` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.12.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.13.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### laeken
+
+
+|`laeken` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### lambda.r
+
+
+|`lambda.r` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### LaplacesDemon
+
+
+|`LaplacesDemon` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|16.1.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lars
+
+
+|`lars` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lassosum
+
+
+|`lassosum` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lattice
+
+
+|`lattice` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.22-5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.22-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### latticeExtra
+
+
+|`latticeExtra` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-30|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lava
+
+
+|`lava` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.8.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### lavaan
+
+
+|`lavaan` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-16|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6-18|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.6-19|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### lazy
+
+
+|`lazy` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-18|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lazyeval
+
+
+|`lazyeval` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### LCFdata
+
+
+|`LCFdata` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lda
+
+
+|`lda` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ldbounds
+
+
+|`ldbounds` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### leafem
+
+
+|`leafem` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### leaflet
+
+
+|`leaflet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### leaflet.providers
+
+
+|`leaflet.providers` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### leafsync
+
+
+|`leafsync` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### leaps
+
+
+|`leaps` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### LearnBayes
+
+
+|`LearnBayes` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.15.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### leiden
+
+
+|`leiden` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lhs
+
+
+|`lhs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.6|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### libcoin
+
+
+|`libcoin` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### limSolve
+
+
+|`limSolve` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.7|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5.7.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### linkcomm
+
+
+|`linkcomm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-14|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### linprog
+
+
+|`linprog` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### liquidSVM
+
+
+|`liquidSVM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### listenv
+
+
+|`listenv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### lme4
+
+
+|`lme4` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-35.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1-35.4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.1-35.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### LMERConvenienceFunctions
+
+
+|`LMERConvenienceFunctions` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lmerTest
+
+
+|`lmerTest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lmom
+
+
+|`lmom` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### Lmoments
+
+
+|`Lmoments` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lmtest
+
+
+|`lmtest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-40|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lobstr
+
+
+|`lobstr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### locfdr
+
+
+|`locfdr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### locfit
+
+
+|`locfit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5-9.10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.5-9.8|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### logcondens
+
+
+|`logcondens` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### logger
+
+
+|`logger` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.4.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### logging
+
+
+|`logging` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.10-108|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### logistf
+
+
+|`logistf` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.26.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### logspline
+
+
+|`logspline` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.21|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.22|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### longitudinal
+
+
+|`longitudinal` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### longmemo
+
+
+|`longmemo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### loo
+
+
+|`loo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.6.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.7.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.8.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### lpSolve
+
+
+|`lpSolve` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.6.19|`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.6.20|`R-bundle-CRAN/2024.06-foss-2023b`|
+|5.6.22|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### lpSolveAPI
+
+
+|`lpSolveAPI` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.5.2.0-17.11|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.5.2.0-17.12|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### lqa
+
+
+|`lqa` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lsei
+
+
+|`lsei` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lslx
+
+
+|`lslx` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lubridate
+
+
+|`lubridate` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### lwgeom
+
+
+|`lwgeom` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-13|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2-14|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### magic
+
+
+|`magic` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### magick
+
+
+|`magick` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.8.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.8.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.8.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### MALDIquant
+
+
+|`MALDIquant` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.22.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.22.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.22.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### manipulateWidget
+
+
+|`manipulateWidget` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.11.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mapproj
+
+
+|`mapproj` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### maps
+
+
+|`maps` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.4.1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.4.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.4.2.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### maptools
+
+
+|`maptools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### markdown
+
+
+|`markdown` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.12|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### MASS
+
+
+|`MASS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|7.3-60|`R-bundle-CRAN/2023.12-foss-2023a`|
+|7.3-61|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### Matching
+
+
+|`Matching` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.10-14|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.10-15|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### MatchIt
+
+
+|`MatchIt` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.5.5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.6.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### mathjaxr
+
+
+|`mathjaxr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### matlab
+
+
+|`matlab` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.4.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### Matrix
+
+
+|`Matrix` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.7-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### matrixcalc
+
+
+|`matrixcalc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### MatrixModels
+
+
+|`MatrixModels` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### matrixStats
+
+
+|`matrixStats` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.4.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### maxLik
+
+
+|`maxLik` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5-2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### maxlike
+
+
+|`maxlike` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-10|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1-11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### maxnet
+
+
+|`maxnet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mboost
+
+
+|`mboost` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.9-10|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.9-11|`R-bundle-CRAN/2024.11-foss-2024a`|
+|2.9-9|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mclogit
+
+
+|`mclogit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mclust
+
+
+|`mclust` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|6.0.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|6.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### mcmc
+
+
+|`mcmc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### MCMCpack
+
+
+|`MCMCpack` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.7-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### mcmcse
+
+
+|`mcmcse` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mda
+
+
+|`mda` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5-5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### medflex
+
+
+|`medflex` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mediation
+
+
+|`mediation` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### memisc
+
+
+|`memisc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.99.31.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.99.31.7|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.99.31.8.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### memuse
+
+
+|`memuse` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.2-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### MESS
+
+
+|`MESS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### metadat
+
+
+|`metadat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### metafor
+
+
+|`metafor` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.4-0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.6-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### MetaUtility
+
+
+|`MetaUtility` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mets
+
+
+|`mets` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### mgcv
+
+
+|`mgcv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9-0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.9-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### mgsub
+
+
+|`mgsub` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mhsmm
+
+
+|`mhsmm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.21|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mi
+
+
+|`mi` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mice
+
+
+|`mice` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.16.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### miceadds
+
+
+|`miceadds` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.16-18|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.17-44|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### microbenchmark
+
+
+|`microbenchmark` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.10|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### MicrobiomeStat
+
+
+|`MicrobiomeStat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### MIIVsem
+
+
+|`MIIVsem` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### minerva
+
+
+|`minerva` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### minpack.lm
+
+
+|`minpack.lm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### minqa
+
+
+|`minqa` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.7|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.2.8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### minty
+
+
+|`minty` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.0.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### mirt
+
+
+|`mirt` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.41|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.43|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### misc3d
+
+
+|`misc3d` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### miscTools
+
+
+|`miscTools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-28|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### missForest
+
+
+|`missForest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### missMDA
+
+
+|`missMDA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.19|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mitml
+
+
+|`mitml` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mitools
+
+
+|`mitools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mixtools
+
+
+|`mixtools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mlbench
+
+
+|`mlbench` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1-3.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### mlegp
+
+
+|`mlegp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### MLmetrics
+
+
+|`MLmetrics` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### mlogit
+
+
+|`mlogit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mlr
+
+
+|`mlr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.19.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.19.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### mlrMBO
+
+
+|`mlrMBO` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mltools
+
+
+|`mltools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mnormt
+
+
+|`mnormt` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### modeest
+
+
+|`modeest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ModelMetrics
+
+
+|`ModelMetrics` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### modelr
+
+
+|`modelr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### modeltools
+
+
+|`modeltools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-23|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### modsem
+
+
+|`modsem` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### momentfit
+
+
+|`momentfit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### moments
+
+
+|`moments` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.14.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### MonteCarlo
+
+
+|`MonteCarlo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mosaicCore
+
+
+|`mosaicCore` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mpath
+
+
+|`mpath` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-2.23|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4-2.25|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.4-2.26|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### MplusAutomation
+
+
+|`MplusAutomation` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### mRMRe
+
+
+|`mRMRe` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.2.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.2.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### msm
+
+
+|`msm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.8.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### mstate
+
+
+|`mstate` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### multcomp
+
+
+|`multcomp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4-25|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4-26|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### multcompView
+
+
+|`multcompView` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.1-9|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### multicool
+
+
+|`multicool` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### multipol
+
+
+|`multipol` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### multitaper
+
+
+|`multitaper` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### munsell
+
+
+|`munsell` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### mvabund
+
+
+|`mvabund` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mvnfast
+
+
+|`mvnfast` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### mvtnorm
+
+
+|`mvtnorm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3-2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### nabor
+
+
+|`nabor` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### naniar
+
+
+|`naniar` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### natserv
+
+
+|`natserv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### naturalsort
+
+
+|`naturalsort` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ncbit
+
+
+|`ncbit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2013.03.29.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ncdf4
+
+
+|`ncdf4` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.22|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.23|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### NCmisc
+
+
+|`NCmisc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### network
+
+
+|`network` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.18.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### networkDynamic
+
+
+|`networkDynamic` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.11.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.11.4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.11.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### networkLite
+
+
+|`networkLite` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### neuralnet
+
+
+|`neuralnet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.44.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### neuRosim
+
+
+|`neuRosim` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-14|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ngspatial
+
+
+|`ngspatial` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### NISTunits
+
+
+|`NISTunits` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### nleqslv
+
+
+|`nleqslv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.3.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### nlme
+
+
+|`nlme` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-164|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.1-165|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.1-166|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### nloptr
+
+
+|`nloptr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### NLP
+
+
+|`NLP` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3-2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### nlsem
+
+
+|`nlsem` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### nnet
+
+
+|`nnet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|7.3-19|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### nnls
+
+
+|`nnls` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### nonnest2
+
+
+|`nonnest2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5-7|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.5-8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### nor1mix
+
+
+|`nor1mix` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### norm
+
+
+|`norm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-11.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### nortest
+
+
+|`nortest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### np
+
+
+|`np` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.60-17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### npsurv
+
+
+|`npsurv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### numDeriv
+
+
+|`numDeriv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2016.8-1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### oai
+
+
+|`oai` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### oce
+
+
+|`oce` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8-2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.8-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### OceanView
+
+
+|`OceanView` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### oddsratio
+
+
+|`oddsratio` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### officer
+
+
+|`officer` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6.6|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.6.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### openair
+
+
+|`openair` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.18-0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.18-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### OpenMx
+
+
+|`OpenMx` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.21.11|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.21.13|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### openxlsx
+
+
+|`openxlsx` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.2.5.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.2.7.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### operator.tools
+
+
+|`operator.tools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### optextras
+
+
+|`optextras` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2019-12.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### optimParallel
+
+
+|`optimParallel` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### optimr
+
+
+|`optimr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2019-12.16|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### optimx
+
+
+|`optimx` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023-10.21|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### optmatch
+
+
+|`optmatch` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.10.7|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.10.8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### optparse
+
+
+|`optparse` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ordinal
+
+
+|`ordinal` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023.12-4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2023.12-4.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### origami
+
+
+|`origami` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### oro.nifti
+
+
+|`oro.nifti` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.11.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### orthopolynom
+
+
+|`orthopolynom` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-6.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### osqp
+
+
+|`osqp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.3.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### outliers
+
+
+|`outliers` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.15|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### packrat
+
+
+|`packrat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pacman
+
+
+|`pacman` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pammtools
+
+
+|`pammtools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.92|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.93|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### pamr
+
+
+|`pamr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.56.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.56.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.57|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### pan
+
+
+|`pan` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pander
+
+
+|`pander` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### parallelDist
+
+
+|`parallelDist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### parallelly
+
+
+|`parallelly` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.36.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.37.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.39.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### parallelMap
+
+
+|`parallelMap` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ParamHelpers
+
+
+|`ParamHelpers` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.14.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### parsedate
+
+
+|`parsedate` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### party
+
+
+|`party` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-14|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3-15|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3-17|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### partykit
+
+
+|`partykit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-20|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-22|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### pastecs
+
+
+|`pastecs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.21|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### patchwork
+
+
+|`patchwork` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### pbapply
+
+
+|`pbapply` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pbivnorm
+
+
+|`pbivnorm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pbkrtest
+
+
+|`pbkrtest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### pbmcapply
+
+
+|`pbmcapply` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### PCAmatchR
+
+
+|`PCAmatchR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pcaPP
+
+
+|`pcaPP` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0-5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### pdp
+
+
+|`pdp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.8.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### PearsonDS
+
+
+|`PearsonDS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### pec
+
+
+|`pec` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023.04.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### penalized
+
+
+|`penalized` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-52|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### penfa
+
+
+|`penfa` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### peperr
+
+
+|`peperr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### performance
+
+
+|`performance` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.12.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.12.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### PermAlgo
+
+
+|`PermAlgo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### permute
+
+
+|`permute` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### phangorn
+
+
+|`phangorn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.11.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.12.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### pheatmap
+
+
+|`pheatmap` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### phylobase
+
+
+|`phylobase` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.10|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.8.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### phytools
+
+
+|`phytools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### pim
+
+
+|`pim` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pinfsc50
+
+
+|`pinfsc50` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pixmap
+
+
+|`pixmap` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-12|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4-13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### pkgmaker
+
+
+|`pkgmaker` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.32.10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### PKI
+
+
+|`PKI` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-14|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### plogr
+
+
+|`plogr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### plot3D
+
+
+|`plot3D` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### plot3Drgl
+
+
+|`plot3Drgl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### plotly
+
+
+|`plotly` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.10.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.10.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### plotmo
+
+
+|`plotmo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.6.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.6.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.6.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### plotrix
+
+
+|`plotrix` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.8-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pls
+
+
+|`pls` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.8-3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.8-5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### plyr
+
+
+|`plyr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### PMA
+
+
+|`PMA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.2-4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### png
+
+
+|`png` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### PoissonSeq
+
+
+|`PoissonSeq` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### poLCA
+
+
+|`poLCA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6.0.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### polspline
+
+
+|`polspline` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.24|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.25|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### Polychrome
+
+
+|`Polychrome` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### polyclip
+
+
+|`polyclip` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.10-6|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.10-7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### polycor
+
+
+|`polycor` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### polynom
+
+
+|`polynom` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### posterior
+
+
+|`posterior` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.6.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ppcor
+
+
+|`ppcor` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### prabclus
+
+
+|`prabclus` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3-3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3-4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### pracma
+
+
+|`pracma` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### PresenceAbsence
+
+
+|`PresenceAbsence` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### preseqR
+
+
+|`preseqR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### prettyGraphs
+
+
+|`prettyGraphs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### princurve
+
+
+|`princurve` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pROC
+
+
+|`pROC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.18.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### prodlim
+
+
+|`prodlim` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023.08.28|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2024.06.25|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### profileModel
+
+
+|`profileModel` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### proftools
+
+
+|`proftools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.99-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### progress
+
+
+|`progress` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### progressr
+
+
+|`progressr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.14.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.15.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### projpred
+
+
+|`projpred` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.7.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.8.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### proto
+
+
+|`proto` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### proxy
+
+
+|`proxy` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-27|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### proxyC
+
+
+|`proxyC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### pryr
+
+
+|`pryr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pscl
+
+
+|`pscl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.5.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### pspline
+
+
+|`pspline` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-19|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0-20|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### psych
+
+
+|`psych` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.9|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.4.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.4.6.26|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### Publish
+
+
+|`Publish` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023.01.17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pulsar
+
+
+|`pulsar` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### pvclust
+
+
+|`pvclust` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### PWEALL
+
+
+|`PWEALL` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### qgam
+
+
+|`qgam` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### qgraph
+
+
+|`qgraph` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### qqman
+
+
+|`qqman` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### qrng
+
+
+|`qrng` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-10|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### qrnn
+
+
+|`qrnn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### quadprog
+
+
+|`quadprog` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### quanteda
+
+
+|`quanteda` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.3.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.0.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|4.1.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### quantmod
+
+
+|`quantmod` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.25|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.26|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### quantreg
+
+
+|`quantreg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.97|`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.98|`R-bundle-CRAN/2024.06-foss-2023b`|
+|5.99.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### questionr
+
+
+|`questionr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### QuickJSR
+
+
+|`QuickJSR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.8|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.4.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### R.cache
+
+
+|`R.cache` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.16.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### R.matlab
+
+
+|`R.matlab` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.7.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### R.methodsS3
+
+
+|`R.methodsS3` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### R.oo
+
+
+|`R.oo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.25.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.26.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.27.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### R.rsp
+
+
+|`R.rsp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.45.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.46.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### R.utils
+
+
+|`R.utils` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.12.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### r2rtf
+
+
+|`r2rtf` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### R2WinBUGS
+
+
+|`R2WinBUGS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1-21|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1-22.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### random
+
+
+|`random` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### randomForest
+
+
+|`randomForest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.7-1.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.7-1.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### randomForestSRC
+
+
+|`randomForestSRC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.2.3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.3.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### randtoolbox
+
+
+|`randtoolbox` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0.5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rangeModelMetadata
+
+
+|`rangeModelMetadata` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ranger
+
+
+|`ranger` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.16.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.17.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RANN
+
+
+|`RANN` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.6.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.6.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rapidjsonr
+
+
+|`rapidjsonr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rARPACK
+
+
+|`rARPACK` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.11-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### raster
+
+
+|`raster` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.6-26|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.6-30|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rasterVis
+
+
+|`rasterVis` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.51.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ratelimitr
+
+
+|`ratelimitr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RBesT
+
+
+|`RBesT` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.7-4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rbibutils
+
+
+|`rbibutils` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.16|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rbison
+
+
+|`rbison` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rborist
+
+
+|`Rborist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3-7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### RCAL
+
+
+|`RCAL` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rcgmin
+
+
+|`Rcgmin` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2022-4.30|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RCircos
+
+
+|`RCircos` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RColorBrewer
+
+
+|`RColorBrewer` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RcppArmadillo
+
+
+|`RcppArmadillo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.12.6.6.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.12.8.4.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|14.2.0-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RcppEigen
+
+
+|`RcppEigen` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.3.9.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.4.0.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.3.4.0.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RcppGSL
+
+
+|`RcppGSL` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RcppParallel
+
+
+|`RcppParallel` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.1.7|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.1.9|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RcppProgress
+
+
+|`RcppProgress` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RcppRoll
+
+
+|`RcppRoll` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RcppThread
+
+
+|`RcppThread` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### RcppTOML
+
+
+|`RcppTOML` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RCurl
+
+
+|`RCurl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.98-1.13|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.98-1.14|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.98-1.16|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rda
+
+
+|`rda` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rdpack
+
+
+|`Rdpack` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.6|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.6.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rdrop2
+
+
+|`rdrop2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### reactable
+
+
+|`reactable` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### reactR
+
+
+|`reactR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### readbitmap
+
+
+|`readbitmap` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### reader
+
+
+|`reader` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### readODS
+
+
+|`readODS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.3.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### readr
+
+
+|`readr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### readxl
+
+
+|`readxl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rebird
+
+
+|`rebird` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### recipes
+
+
+|`recipes` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.10|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.0.8|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RefFreeEWAS
+
+
+|`RefFreeEWAS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### reformulas
+
+
+|`reformulas` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### registry
+
+
+|`registry` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### regsem
+
+
+|`regsem` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### relsurv
+
+
+|`relsurv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rematch
+
+
+|`rematch` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rentrez
+
+
+|`rentrez` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### renv
+
+
+|`renv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.11|`R-bundle-CRAN/2024.11-foss-2024a`|
+|1.0.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.7|`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### reprex
+
+
+|`reprex` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### resample
+
+
+|`resample` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### reshape
+
+
+|`reshape` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### reshape2
+
+
+|`reshape2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### reticulate
+
+
+|`reticulate` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.34.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.38.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.40.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rex
+
+
+|`rex` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rgbif
+
+
+|`rgbif` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.7.8|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.8.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.8.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RGCCA
+
+
+|`RGCCA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.0.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rgdal
+
+
+|`rgdal` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6-7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rgeos
+
+
+|`rgeos` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rgexf
+
+
+|`rgexf` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.16.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.16.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rgl
+
+
+|`rgl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.8|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3.14|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### Rglpk
+
+
+|`Rglpk` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6-5.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rhandsontable
+
+
+|`rhandsontable` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RhpcBLASctl
+
+
+|`RhpcBLASctl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.23-42|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ridge
+
+
+|`ridge` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ridigbio
+
+
+|`ridigbio` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.7|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.8|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.4.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RInside
+
+
+|`RInside` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.18|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rio
+
+
+|`rio` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.2.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### riskRegression
+
+
+|`riskRegression` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2023.09.08|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2023.12.21|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ritis
+
+
+|`ritis` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RItools
+
+
+|`RItools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rJava
+
+
+|`rJava` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-10|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0-11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rjson
+
+
+|`rjson` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.21|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.23|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RJSONIO
+
+
+|`RJSONIO` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-1.9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rle
+
+
+|`rle` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rlecuyer
+
+
+|`rlecuyer` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rlemon
+
+
+|`rlemon` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rlist
+
+
+|`rlist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.6.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rmeta
+
+
+|`rmeta` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rmpfr
+
+
+|`Rmpfr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.0-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rms
+
+
+|`rms` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|6.7-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|6.8-1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|6.8-2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RMTstat
+
+
+|`RMTstat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rmutil
+
+
+|`rmutil` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.10|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rncl
+
+
+|`rncl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rnetcarto
+
+
+|`rnetcarto` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RNeXML
+
+
+|`RNeXML` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rngtools
+
+
+|`rngtools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rngWELL
+
+
+|`rngWELL` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.10-10|`R-bundle-CRAN/2024.11-foss-2024a`|
+|0.10-9|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RNifti
+
+
+|`RNifti` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### robustbase
+
+
+|`robustbase` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.99-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.99-2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.99-4-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### ROCR
+
+
+|`ROCR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ROI
+
+
+|`ROI` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ROI.plugin.glpk
+
+
+|`ROI.plugin.glpk` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rook
+
+
+|`Rook` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rootSolve
+
+
+|`rootSolve` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8.2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### roptim
+
+
+|`roptim` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rotl
+
+
+|`rotl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rpact
+
+
+|`rpact` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.4.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.0.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|4.1.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rpart
+
+
+|`rpart` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.1.23|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rpf
+
+
+|`rpf` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.14|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RPMM
+
+
+|`RPMM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.25|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RPostgreSQL
+
+
+|`RPostgreSQL` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7-5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.7-6|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.7-7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RPushbullet
+
+
+|`RPushbullet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rrcov
+
+
+|`rrcov` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.7-6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rredlist
+
+
+|`rredlist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rsample
+
+
+|`rsample` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rsconnect
+
+
+|`rsconnect` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### Rserve
+
+
+|`Rserve` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8-13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RSNNS
+
+
+|`RSNNS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rsolnp
+
+
+|`Rsolnp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.16|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RSpectra
+
+
+|`RSpectra` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.16-1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.16-2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### RSQLite
+
+
+|`RSQLite` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3.7|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.3.8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### Rssa
+
+
+|`Rssa` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### rstan
+
+
+|`rstan` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.32.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.32.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rstantools
+
+
+|`rstantools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rstatix
+
+
+|`rstatix` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rtdists
+
+
+|`rtdists` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.11-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rtsne
+
+
+|`Rtsne` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rttf2pt1
+
+
+|`Rttf2pt1` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RUnit
+
+
+|`RUnit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.32|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.33|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### ruv
+
+
+|`ruv` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.7.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### rvertnet
+
+
+|`rvertnet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.8.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rvest
+
+
+|`rvest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### rvinecopulib
+
+
+|`rvinecopulib` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.3.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### Rvmmin
+
+
+|`Rvmmin` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2018-4.17.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RWeka
+
+
+|`RWeka` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-46|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### RWekajars
+
+
+|`RWekajars` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.9.3-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### s2
+
+
+|`s2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.6|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.1.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### sampling
+
+
+|`sampling` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### sandwich
+
+
+|`sandwich` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.1-0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.1-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### SBdecomp
+
+
+|`SBdecomp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### scales
+
+
+|`scales` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### scam
+
+
+|`scam` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-14|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### scatterpie
+
+
+|`scatterpie` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.2.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### scatterplot3d
+
+
+|`scatterplot3d` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-44|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### scs
+
+
+|`scs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### sctransform
+
+
+|`sctransform` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### SDMTools
+
+
+|`SDMTools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-221.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### seewave
+
+
+|`seewave` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### segmented
+
+
+|`segmented` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1-0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.1-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### selectr
+
+
+|`selectr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### sem
+
+
+|`sem` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-15|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.1-16|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### semPLS
+
+
+|`semPLS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### semTools
+
+
+|`semTools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5-6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### sendmailR
+
+
+|`sendmailR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### sensemakr
+
+
+|`sensemakr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.4|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### sentometrics
+
+
+|`sentometrics` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### seqinr
+
+
+|`seqinr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.2-36|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### servr
+
+
+|`servr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.27|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.30|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.32|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### setRNG
+
+
+|`setRNG` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2022.4-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2024.2-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### sf
+
+
+|`sf` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-14|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0-16|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.0-19|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### sfheaders
+
+
+|`sfheaders` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### sfsmisc
+
+
+|`sfsmisc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-16|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1-18|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.1-20|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### sgdGMF
+
+
+|`sgdGMF` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### shadowtext
+
+
+|`shadowtext` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1.3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.1.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### shape
+
+
+|`shape` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.6.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### shapefiles
+
+
+|`shapefiles` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### shinycssloaders
+
+
+|`shinycssloaders` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### shinydashboard
+
+
+|`shinydashboard` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### shinyjs
+
+
+|`shinyjs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### shinystan
+
+
+|`shinystan` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.6.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### shinythemes
+
+
+|`shinythemes` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### signal
+
+
+|`signal` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8-0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.8-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### SignifReg
+
+
+|`SignifReg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### SimDesign
+
+
+|`SimDesign` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.17.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### simex
+
+
+|`simex` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### SimSeq
+
+
+|`SimSeq` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### SKAT
+
+
+|`SKAT` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### slam
+
+
+|`slam` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-50|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1-55|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### slider
+
+
+|`slider` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### sm
+
+
+|`sm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-5.7.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.2-6.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### smoof
+
+
+|`smoof` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6.0.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### smoother
+
+
+|`smoother` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### sn
+
+
+|`sn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### sna
+
+
+|`sna` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.7-2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### SNFtool
+
+
+|`SNFtool` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### snow
+
+
+|`snow` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### SnowballC
+
+
+|`SnowballC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### snowfall
+
+
+|`snowfall` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.84-6.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### SOAR
+
+
+|`SOAR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.99-11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### solrium
+
+
+|`solrium` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### som
+
+
+|`som` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3-5.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3-5.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### soundecology
+
+
+|`soundecology` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### sp
+
+
+|`sp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### spaa
+
+
+|`spaa` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### spacefillr
+
+
+|`spacefillr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spam
+
+
+|`spam` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.10-0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.11-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spaMM
+
+
+|`spaMM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.4.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### SparseM
+
+
+|`SparseM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.81|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.83|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.84-2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### SPAtest
+
+
+|`SPAtest` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### spatial
+
+
+|`spatial` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|7.3-17|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### spatstat
+
+
+|`spatstat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0-7|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.0-8|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.3-0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spatstat.core
+
+
+|`spatstat.core` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.4-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### spatstat.data
+
+
+|`spatstat.data` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.1-2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.1-4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spatstat.explore
+
+
+|`spatstat.explore` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.2-5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.2-7|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.3-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spatstat.geom
+
+
+|`spatstat.geom` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.2-7|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.2-9|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.3-4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spatstat.linnet
+
+
+|`spatstat.linnet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.1-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.2-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spatstat.model
+
+
+|`spatstat.model` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.2-11|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.2-8|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.3-3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spatstat.random
+
+
+|`spatstat.random` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.2-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.2-3|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.3-2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spatstat.sparse
+
+
+|`spatstat.sparse` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.1-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### spatstat.univar
+
+
+|`spatstat.univar` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spatstat.utils
+
+
+|`spatstat.utils` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.0-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.1-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spData
+
+
+|`spData` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.3.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### spdep
+
+
+|`spdep` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.3-6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### splitstackshape
+
+
+|`splitstackshape` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### spls
+
+
+|`spls` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### spocc
+
+
+|`spocc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### spThin
+
+
+|`spThin` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### SQUAREM
+
+
+|`SQUAREM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2021.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### stable
+
+
+|`stable` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### stabledist
+
+
+|`stabledist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7-1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.7-2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### stabs
+
+
+|`stabs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### StanHeaders
+
+
+|`StanHeaders` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.26.28|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.32.10|`R-bundle-CRAN/2024.11-foss-2024a`|
+|2.32.9|`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### stargazer
+
+
+|`stargazer` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|5.2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### stars
+
+
+|`stars` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6-5|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.6-7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### startupmsg
+
+
+|`startupmsg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9.6.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.9.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### statip
+
+
+|`statip` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### StatMatch
+
+
+|`StatMatch` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### statmod
+
+
+|`statmod` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### statnet
+
+
+|`statnet` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2019.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### statnet.common
+
+
+|`statnet.common` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.10.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+|4.9.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### stdReg
+
+
+|`stdReg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.4.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### stopwords
+
+
+|`stopwords` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### stringdist
+
+
+|`stringdist` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### stringmagic
+
+
+|`stringmagic` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### strucchange
+
+
+|`strucchange` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5-3|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5-4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### styler
+
+
+|`styler` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.10.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.10.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### subplex
+
+
+|`subplex` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.9|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### SuperLearner
+
+
+|`SuperLearner` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0-28.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0-29|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### SuppDists
+
+
+|`SuppDists` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-9.7|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.1-9.8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### survey
+
+
+|`survey` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.2-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.4-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### survival
+
+
+|`survival` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.5-7|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.7-0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### survivalROC
+
+
+|`survivalROC` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### svd
+
+
+|`svd` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### svglite
+
+
+|`svglite` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### svUnit
+
+
+|`svUnit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### swagger
+
+
+|`swagger` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.33.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|5.17.14|`R-bundle-CRAN/2024.06-foss-2023b`|
+|5.17.14.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### symmoments
+
+
+|`symmoments` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tableone
+
+
+|`tableone` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.13.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tabletools
+
+
+|`tabletools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tau
+
+
+|`tau` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-25|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.0-26|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### taxize
+
+
+|`taxize` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.100|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9.100.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### tcltk2
+
+
+|`tcltk2` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2-11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tclust
+
+
+|`tclust` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5-5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0-4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.0-5|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### TeachingDemos
+
+
+|`TeachingDemos` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.12|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tensor
+
+
+|`tensor` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tensorA
+
+
+|`tensorA` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.36.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.36.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tergm
+
+
+|`tergm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.2.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.2.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### terra
+
+
+|`terra` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-55|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-78|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.7-83|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### testit
+
+
+|`testit` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.13|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### texreg
+
+
+|`texreg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.39.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### textcat
+
+
+|`textcat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-8|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0-9|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### textplot
+
+
+|`textplot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### TFisher
+
+
+|`TFisher` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### TH.data
+
+
+|`TH.data` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### threejs
+
+
+|`threejs` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tictoc
+
+
+|`tictoc` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tidybayes
+
+
+|`tidybayes` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.0.6|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.0.7|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### tidygraph
+
+
+|`tidygraph` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tidyr
+
+
+|`tidyr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tidyselect
+
+
+|`tidyselect` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tidytext
+
+
+|`tidytext` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tidytree
+
+
+|`tidytree` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tidyverse
+
+
+|`tidyverse` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tiff
+
+
+|`tiff` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### timechange
+
+
+|`timechange` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### timeDate
+
+
+|`timeDate` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4022.108|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4032.109|`R-bundle-CRAN/2024.06-foss-2023b`|
+|4041.110|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### timereg
+
+
+|`timereg` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.5|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0.6|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### timeSeries
+
+
+|`timeSeries` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4041.111|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### tkrplot
+
+
+|`tkrplot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.0-27|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tm
+
+
+|`tm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7-11|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.7-13|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.7-15|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### tmap
+
+
+|`tmap` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.3-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tmaptools
+
+
+|`tmaptools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.1-1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### TMB
+
+
+|`TMB` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.9.12|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.9.15|`R-bundle-CRAN/2024.11-foss-2024a`|
+|1.9.9|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tmle
+
+
+|`tmle` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0.1.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tmvnsim
+
+
+|`tmvnsim` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tmvtnorm
+
+
+|`tmvtnorm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tokenizers
+
+
+|`tokenizers` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### topicmodels
+
+
+|`topicmodels` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2-15|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.2-16|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.2-17|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### TraMineR
+
+
+|`TraMineR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2-10|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.2-8|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tree
+
+
+|`tree` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-43|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### triebeard
+
+
+|`triebeard` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### trimcluster
+
+
+|`trimcluster` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tripack
+
+
+|`tripack` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-9.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3-9.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### TruncatedNormal
+
+
+|`TruncatedNormal` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.2.2|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### truncnorm
+
+
+|`truncnorm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-9|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### trust
+
+
+|`trust` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-8|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tseries
+
+
+|`tseries` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.10-55|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.10-56|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.10-58|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### tseriesChaos
+
+
+|`tseriesChaos` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-13.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tsna
+
+
+|`tsna` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tsne
+
+
+|`tsne` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### TTR
+
+
+|`TTR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.24.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tuneR
+
+
+|`tuneR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.6|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### twang
+
+
+|`twang` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.6|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.6.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### tweedie
+
+
+|`tweedie` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### tweenr
+
+
+|`tweenr` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.0.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### tzdb
+
+
+|`tzdb` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### ucminf
+
+
+|`ucminf` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.2.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### udpipe
+
+
+|`udpipe` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8.11|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### umap
+
+
+|`umap` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.10.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### unbalanced
+
+
+|`unbalanced` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### unikn
+
+
+|`unikn` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### uniqueAtomMat
+
+
+|`uniqueAtomMat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1-3-2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### units
+
+
+|`units` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.8-5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### unmarked
+
+
+|`unmarked` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.4.3|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### UpSetR
+
+
+|`UpSetR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### urca
+
+
+|`urca` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.3-3|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.3-4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### urltools
+
+
+|`urltools` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### uroot
+
+
+|`uroot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1-2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.1-3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### uuid
+
+
+|`uuid` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2-0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.2-1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### V8
+
+
+|`V8` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|4.4.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|4.4.2|`R-bundle-CRAN/2024.06-foss-2023b`|
+|6.0.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### varhandle
+
+
+|`varhandle` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.0.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### vcd
+
+
+|`vcd` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4-11|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.4-12|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.4-13|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### vcfR
+
+
+|`vcfR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.15.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### vegan
+
+
+|`vegan` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.6-4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.6-6.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|2.6-8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### VennDiagram
+
+
+|`VennDiagram` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### VGAM
+
+
+|`VGAM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.1-11|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.1-12|`R-bundle-CRAN/2024.11-foss-2024a`|
+|1.1-9|`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### VIM
+
+
+|`VIM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|6.2.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### VineCopula
+
+
+|`VineCopula` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.5.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|2.5.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### vioplot
+
+
+|`vioplot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.5.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### vipor
+
+
+|`vipor` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.5|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.4.7|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### viridis
+
+
+|`viridis` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### viridisLite
+
+
+|`viridisLite` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### visdat
+
+
+|`visdat` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### visNetwork
+
+
+|`visNetwork` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.1.2|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### vroom
+
+
+|`vroom` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.6.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### VSURF
+
+
+|`VSURF` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### warp
+
+
+|`warp` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### waveslim
+
+
+|`waveslim` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8.4|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.8.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### wdm
+
+
+|`wdm` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.2.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### webshot
+
+
+|`webshot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.5.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### webutils
+
+
+|`webutils` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.2.0|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.2.2|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### weights
+
+
+|`weights` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### WeightSVM
+
+
+|`WeightSVM` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7-13|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7-16|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### wellknown
+
+
+|`wellknown` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.7.4|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### widgetframe
+
+
+|`widgetframe` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.3.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### WikidataQueryServiceR
+
+
+|`WikidataQueryServiceR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### WikidataR
+
+
+|`WikidataR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.3.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### WikipediR
+
+
+|`WikipediR` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.5.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`|
+
+### wikitaxa
+
+
+|`wikitaxa` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### wk
+
+
+|`wk` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.9.1|`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.9.4|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### word2vec
+
+
+|`word2vec` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### wordcloud
+
+
+|`wordcloud` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|2.6|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### worrms
+
+
+|`worrms` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.4.3|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### writexl
+
+
+|`writexl` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.4.2|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.5.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.5.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### WriteXLS
+
+
+|`WriteXLS` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|6.4.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|6.6.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|6.7.0|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### XBRL
+
+
+|`XBRL` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.99.19.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### xgboost
+
+
+|`xgboost` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.7.6.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.7.7.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.7.8.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### xlsx
+
+
+|`xlsx` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.5|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### xlsxjars
+
+
+|`xlsxjars` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.6.1|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### XML
+
+
+|`XML` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|3.99-0.16|`R-bundle-CRAN/2023.12-foss-2023a`|
+|3.99-0.16.1|`R-bundle-CRAN/2024.06-foss-2023b`|
+|3.99-0.17|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### xts
+
+
+|`xts` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.13.1|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.14.0|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.14.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### yaImpute
+
+
+|`yaImpute` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.0-33|`R-bundle-CRAN/2023.12-foss-2023a`|
+|1.0-34|`R-bundle-CRAN/2024.06-foss-2023b`|
+|1.0-34.1|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### yulab.utils
+
+
+|`yulab.utils` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.0|`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.1.4|`R-bundle-CRAN/2024.06-foss-2023b`|
+|0.1.8|`R-bundle-CRAN/2024.11-foss-2024a`|
+
+### zeallot
+
+
+|`zeallot` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|0.1.0|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+
+### zoo
+
+
+|`zoo` version|R-bundle-CRAN modules that include it|
+| --- | --- |
+|1.8-12|`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|

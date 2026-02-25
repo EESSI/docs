@@ -1,60 +1,60 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Asynchronous HTTP client/server framework for asyncio and Python.
-  license: Not confirmed
-  name: aiohttp
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''aiohttp/3.8.5-GCCcore-12.3.0'']'
-  url: https://github.com/aio-libs/aiohttp
----
-
-aiohttp
-=======
+# aiohttp
 
 
 Asynchronous HTTP client/server framework for asyncio and Python.
 
-https://github.com/aio-libs/aiohttp
-# Available modules
+<small>homepage: </small><span class="software-link">[https://github.com/aio-libs/aiohttp](https://github.com/aio-libs/aiohttp)</span>
+
+## Available installations
 
 
-The overview below shows which aiohttp installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|aiohttp version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.8.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`aiohttp/3.8.5-GCCcore-12.3.0`|
 
-To start using aiohttp, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load aiohttp/3.8.5-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|aiohttp/3.8.5-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in aiohttp installations
 
 
-### aiohttp/3.8.5-GCCcore-12.3.0
+### aiohttp
 
-This is a list of extensions included in the module:
 
-aiohttp-3.8.5, aiosignal-1.3.1, async-timeout-4.0.3, frozenlist-1.4.0, multidict-6.0.4, yarl-1.9.2
+|`aiohttp` version|aiohttp modules that include it|
+| --- | --- |
+|3.8.5|`aiohttp/3.8.5-GCCcore-12.3.0`|
+
+### aiosignal
+
+
+|`aiosignal` version|aiohttp modules that include it|
+| --- | --- |
+|1.3.1|`aiohttp/3.8.5-GCCcore-12.3.0`|
+
+### async-timeout
+
+
+|`async-timeout` version|aiohttp modules that include it|
+| --- | --- |
+|4.0.3|`aiohttp/3.8.5-GCCcore-12.3.0`|
+
+### frozenlist
+
+
+|`frozenlist` version|aiohttp modules that include it|
+| --- | --- |
+|1.4.0|`aiohttp/3.8.5-GCCcore-12.3.0`|
+
+### multidict
+
+
+|`multidict` version|aiohttp modules that include it|
+| --- | --- |
+|6.0.4|`aiohttp/3.8.5-GCCcore-12.3.0`|
+
+### yarl
+
+
+|`yarl` version|aiohttp modules that include it|
+| --- | --- |
+|1.9.2|`aiohttp/3.8.5-GCCcore-12.3.0`|

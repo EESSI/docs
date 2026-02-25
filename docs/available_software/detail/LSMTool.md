@@ -1,61 +1,27 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: LSMTool is a Python package which allows for the manipulation of LOFAR
-    sky models in the makesourcedb format.
-  license: Not confirmed
-  name: LSMTool
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''LSMTool/1.7.0-foss-2023b'']'
-  url: https://lsmtool.readthedocs.io/en/latest/
----
+# LSMTool
 
-LSMTool
-=======
 
 
 LSMTool is a Python package which allows for the manipulation of LOFAR sky models in the makesourcedb format.
 
-https://lsmtool.readthedocs.io/en/latest/
-# Available modules
+
+<small>homepage: </small><span class="software-link">[https://lsmtool.readthedocs.io/en/latest/](https://lsmtool.readthedocs.io/en/latest/)</span>
+
+## Available installations
 
 
-The overview below shows which LSMTool installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|LSMTool version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.7.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`LSMTool/1.7.0-foss-2023b`|
 
-To start using LSMTool, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load LSMTool/1.7.0-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LSMTool/1.7.0-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in LSMTool installations
 
 
-### LSMTool/1.7.0-foss-2023b
+### lsmtool
 
-This is a list of extensions included in the module:
 
-lsmtool-1.7.0
+|`lsmtool` version|LSMTool modules that include it|
+| --- | --- |
+|1.7.0|`LSMTool/1.7.0-foss-2023b`|

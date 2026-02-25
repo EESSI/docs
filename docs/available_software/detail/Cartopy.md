@@ -1,61 +1,53 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: Cartopy is a Python package designed to make drawing maps for data
-    analysis and visualisation easy.
-  license: Not confirmed
-  name: Cartopy
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''Cartopy/0.22.0-foss-2023a'']'
-  url: https://scitools.org.uk/cartopy/docs/latest/
----
-
-Cartopy
-=======
+# Cartopy
 
 
 Cartopy is a Python package designed to make drawing maps for data analysis and visualisation easy.
 
-https://scitools.org.uk/cartopy/docs/latest/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://scitools.org.uk/cartopy/docs/latest/](https://scitools.org.uk/cartopy/docs/latest/)</span>
+
+## Available installations
 
 
-The overview below shows which Cartopy installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|Cartopy version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|0.22.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Cartopy/0.22.0-foss-2023a`|
 
-To start using Cartopy, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load Cartopy/0.22.0-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Cartopy/0.22.0-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+Overview of extensions included in Cartopy installations
 
 
-### Cartopy/0.22.0-foss-2023a
+### Cartopy
 
-This is a list of extensions included in the module:
 
-Cartopy-0.22.0, OWSLib-0.29.3, pyepsg-0.4.0, pykdtree-1.3.10, pyshp-2.3.1
+|`Cartopy` version|Cartopy modules that include it|
+| --- | --- |
+|0.22.0|`Cartopy/0.22.0-foss-2023a`|
+
+### OWSLib
+
+
+|`OWSLib` version|Cartopy modules that include it|
+| --- | --- |
+|0.29.3|`Cartopy/0.22.0-foss-2023a`|
+
+### pyepsg
+
+
+|`pyepsg` version|Cartopy modules that include it|
+| --- | --- |
+|0.4.0|`Cartopy/0.22.0-foss-2023a`|
+
+### pykdtree
+
+
+|`pykdtree` version|Cartopy modules that include it|
+| --- | --- |
+|1.3.10|`Cartopy/0.22.0-foss-2023a`|
+
+### pyshp
+
+
+|`pyshp` version|Cartopy modules that include it|
+| --- | --- |
+|2.3.1|`Cartopy/0.22.0-foss-2023a`|

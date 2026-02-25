@@ -1,54 +1,14 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: SuiteSparse is a collection of libraries to manipulate sparse matrices.
-  license: Not confirmed
-  name: SuiteSparse
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''SuiteSparse/7.1.0-foss-2023a'', ''SuiteSparse/7.7.0-foss-2023b'']'
-  url: https://faculty.cse.tamu.edu/davis/suitesparse.html
----
-
-SuiteSparse
-===========
+# SuiteSparse
 
 
 SuiteSparse is a collection of libraries to manipulate sparse matrices.
 
-https://faculty.cse.tamu.edu/davis/suitesparse.html
-# Available modules
+<small>homepage: </small><span class="software-link">[https://faculty.cse.tamu.edu/davis/suitesparse.html](https://faculty.cse.tamu.edu/davis/suitesparse.html)</span>
+
+## Available installations
 
 
-The overview below shows which SuiteSparse installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using SuiteSparse, load one of these modules using a `module load` command like:
-
-```shell
-module load SuiteSparse/7.7.0-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|SuiteSparse/7.7.0-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|SuiteSparse/7.1.0-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|SuiteSparse version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|7.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SuiteSparse/7.1.0-foss-2023a`|
+|7.7.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SuiteSparse/7.7.0-foss-2023b`|

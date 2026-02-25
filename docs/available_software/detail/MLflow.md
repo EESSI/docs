@@ -1,69 +1,230 @@
----
-hide:
-- toc
-json_ld:
-  '@context': https://schema.org
-  '@type': SoftwareApplication
-  applicationCategory: DeveloperApplication
-  description: MLflow is a platform to streamline machine learning development, including
-    tracking experiments,packaging code into reproducible runs, and sharing and deploying
-    models.
-  license: Not confirmed
-  name: MLflow
-  offers:
-    '@type': Offer
-    price: 0
-  operatingSystem: LINUX
-  review:
-    '@type': Review
-    author:
-      '@type': Organization
-      name: EESSI
-    reviewBody: Application has been successfully made available on all architectures
-      supported by EESSI
-    reviewRating:
-      '@type': Rating
-      ratingValue: 5
-  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
-    on your system
-  softwareVersion: '[''MLflow/2.10.2-gfbf-2023a'', ''MLflow/2.18.0-gfbf-2023b'']'
-  url: https://mlflow.org
----
-
-MLflow
-======
+# MLflow
 
 
-MLflow is a platform to streamline machine learning development, including tracking experiments,packaging code into reproducible runs, and sharing and deploying models.
+MLflow is a platform to streamline machine learning development, including tracking experiments,
+packaging code into reproducible runs, and sharing and deploying models.
 
-https://mlflow.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://mlflow.org](https://mlflow.org)</span>
 
-
-The overview below shows which MLflow installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using MLflow, load one of these modules using a `module load` command like:
-
-```shell
-module load MLflow/2.18.0-gfbf-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|MLflow/2.18.0-gfbf-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|MLflow/2.10.2-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### MLflow/2.18.0-gfbf-2023b
+|MLflow version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.10.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`MLflow/2.10.2-gfbf-2023a`|
+|2.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`MLflow/2.18.0-gfbf-2023b`|
+|2.22.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`MLflow/2.22.4-gfbf-2024a`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-alembic-1.14.0, cachetools-5.5.0, databricks_sdk-0.36.0, docker-7.1.0, google-auth-2.35.0, graphene-3.4.1, graphql-relay-3.2.0, graphql_core-3.2.5, gunicorn-23.0.0, mlflow-2.18.0, mlflow_skinny-2.18.0, opentelemetry_api-1.27.0, opentelemetry_sdk-1.27.0, opentelemetry_semantic_conventions-0.48b0, pyasn1-modules-0.4.1, rsa-4.9, sqlparse-0.5.1
+Overview of extensions included in MLflow installations
 
-### MLflow/2.10.2-gfbf-2023a
 
-This is a list of extensions included in the module:
+### alembic
 
-docker-7.0.0, entrypoints-0.4, gunicorn-21.2.0, Markdown-3.5.2, mlflow-2.10.2, querystring_parser-1.2.4, sqlparse-0.4.4
+
+|`alembic` version|MLflow modules that include it|
+| --- | --- |
+|1.14.0|`MLflow/2.18.0-gfbf-2023b`|
+
+### annotated_doc
+
+
+|`annotated_doc` version|MLflow modules that include it|
+| --- | --- |
+|0.0.4|`MLflow/2.22.4-gfbf-2024a`|
+
+### anyio
+
+
+|`anyio` version|MLflow modules that include it|
+| --- | --- |
+|4.9.0|`MLflow/2.22.4-gfbf-2024a`|
+
+### cachetools
+
+
+|`cachetools` version|MLflow modules that include it|
+| --- | --- |
+|5.5.0|`MLflow/2.22.4-gfbf-2024a`<br/>`MLflow/2.18.0-gfbf-2023b`|
+
+### databricks_sdk
+
+
+|`databricks_sdk` version|MLflow modules that include it|
+| --- | --- |
+|0.36.0|`MLflow/2.18.0-gfbf-2023b`|
+|0.72.0|`MLflow/2.22.4-gfbf-2024a`|
+
+### docker
+
+
+|`docker` version|MLflow modules that include it|
+| --- | --- |
+|7.0.0|`MLflow/2.10.2-gfbf-2023a`|
+|7.1.0|`MLflow/2.22.4-gfbf-2024a`<br/>`MLflow/2.18.0-gfbf-2023b`|
+
+### entrypoints
+
+
+|`entrypoints` version|MLflow modules that include it|
+| --- | --- |
+|0.4|`MLflow/2.10.2-gfbf-2023a`|
+
+### fastapi
+
+
+|`fastapi` version|MLflow modules that include it|
+| --- | --- |
+|0.126.0|`MLflow/2.22.4-gfbf-2024a`|
+
+### google-auth
+
+
+|`google-auth` version|MLflow modules that include it|
+| --- | --- |
+|2.35.0|`MLflow/2.18.0-gfbf-2023b`|
+
+### graphene
+
+
+|`graphene` version|MLflow modules that include it|
+| --- | --- |
+|3.4.1|`MLflow/2.18.0-gfbf-2023b`|
+|3.4.3|`MLflow/2.22.4-gfbf-2024a`|
+
+### graphql-relay
+
+
+|`graphql-relay` version|MLflow modules that include it|
+| --- | --- |
+|3.2.0|`MLflow/2.18.0-gfbf-2023b`|
+
+### graphql_core
+
+
+|`graphql_core` version|MLflow modules that include it|
+| --- | --- |
+|3.2.5|`MLflow/2.18.0-gfbf-2023b`|
+|3.2.7|`MLflow/2.22.4-gfbf-2024a`|
+
+### graphql_relay
+
+
+|`graphql_relay` version|MLflow modules that include it|
+| --- | --- |
+|3.2.0|`MLflow/2.22.4-gfbf-2024a`|
+
+### gunicorn
+
+
+|`gunicorn` version|MLflow modules that include it|
+| --- | --- |
+|21.2.0|`MLflow/2.10.2-gfbf-2023a`|
+|23.0.0|`MLflow/2.22.4-gfbf-2024a`<br/>`MLflow/2.18.0-gfbf-2023b`|
+
+### h11
+
+
+|`h11` version|MLflow modules that include it|
+| --- | --- |
+|0.16.0|`MLflow/2.22.4-gfbf-2024a`|
+
+### Markdown
+
+
+|`Markdown` version|MLflow modules that include it|
+| --- | --- |
+|3.5.2|`MLflow/2.10.2-gfbf-2023a`|
+
+### mlflow
+
+
+|`mlflow` version|MLflow modules that include it|
+| --- | --- |
+|2.10.2|`MLflow/2.10.2-gfbf-2023a`|
+|2.18.0|`MLflow/2.18.0-gfbf-2023b`|
+|2.22.4|`MLflow/2.22.4-gfbf-2024a`|
+
+### mlflow_skinny
+
+
+|`mlflow_skinny` version|MLflow modules that include it|
+| --- | --- |
+|2.18.0|`MLflow/2.18.0-gfbf-2023b`|
+|2.22.4|`MLflow/2.22.4-gfbf-2024a`|
+
+### opentelemetry_api
+
+
+|`opentelemetry_api` version|MLflow modules that include it|
+| --- | --- |
+|1.27.0|`MLflow/2.18.0-gfbf-2023b`|
+|1.36.0|`MLflow/2.22.4-gfbf-2024a`|
+
+### opentelemetry_sdk
+
+
+|`opentelemetry_sdk` version|MLflow modules that include it|
+| --- | --- |
+|1.27.0|`MLflow/2.18.0-gfbf-2023b`|
+|1.36.0|`MLflow/2.22.4-gfbf-2024a`|
+
+### opentelemetry_semantic_conventions
+
+
+|`opentelemetry_semantic_conventions` version|MLflow modules that include it|
+| --- | --- |
+|0.48b0|`MLflow/2.18.0-gfbf-2023b`|
+|0.57b0|`MLflow/2.22.4-gfbf-2024a`|
+
+### pyasn1-modules
+
+
+|`pyasn1-modules` version|MLflow modules that include it|
+| --- | --- |
+|0.4.1|`MLflow/2.18.0-gfbf-2023b`|
+
+### querystring_parser
+
+
+|`querystring_parser` version|MLflow modules that include it|
+| --- | --- |
+|1.2.4|`MLflow/2.10.2-gfbf-2023a`|
+
+### rsa
+
+
+|`rsa` version|MLflow modules that include it|
+| --- | --- |
+|4.9|`MLflow/2.18.0-gfbf-2023b`|
+
+### sniffio
+
+
+|`sniffio` version|MLflow modules that include it|
+| --- | --- |
+|1.3.1|`MLflow/2.22.4-gfbf-2024a`|
+
+### sqlparse
+
+
+|`sqlparse` version|MLflow modules that include it|
+| --- | --- |
+|0.4.4|`MLflow/2.10.2-gfbf-2023a`|
+|0.5.1|`MLflow/2.18.0-gfbf-2023b`|
+|0.5.5|`MLflow/2.22.4-gfbf-2024a`|
+
+### starlette
+
+
+|`starlette` version|MLflow modules that include it|
+| --- | --- |
+|0.50.0|`MLflow/2.22.4-gfbf-2024a`|
+
+### uvicorn
+
+
+|`uvicorn` version|MLflow modules that include it|
+| --- | --- |
+|0.38.0|`MLflow/2.22.4-gfbf-2024a`|
