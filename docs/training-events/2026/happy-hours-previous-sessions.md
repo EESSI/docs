@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: EESSI Fundamentals Refresher
 
+### Monday 23 February 2026
+
+**Outline:** Have You Met the EESSI Command-Line Interface (CLI)?
+([Slides (PDF)](EESSI-happyhour-2026-007-EESSI-CLI.pdf), [Recording (YouTube)](https://youtu.be/4QpXe3JK0zI))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4QpXe3JK0zI?si=TqT5Pm5DrhcZNLuW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 16 February 2026
 
 **Outline:** EESSI Offline: Portable CVMFS Repositories
