@@ -1,3 +1,6 @@
+# stick to click < 8.3.0 to ensure live reload works,
+# see https://github.com/squidfunk/mkdocs-material/issues/8478
+click<8.3.0
 mkdocs<2.0
 mkdocs-material
 mkdocs-redirects
