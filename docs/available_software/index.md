@@ -19,7 +19,7 @@ Overview of software available in [EESSI's production repository `software.eessi
 {% if pkg.is_extension -%}
 - <span class="software-item software-card"
     data-search="name:{{ pkg.name }} extension ext_type:{{ pkg.type }}" >
-    <span class="software-name"><a href="detail/{{ pkg_slug }}" target="_blank">{{ pkg.name }}</a></span>
+    <span class="software-name">{{ pkg.name }}</span>
     <span class="software-more-info"><small>(extension)</small></span>
     <br/>
     <p class="software-description">
