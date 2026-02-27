@@ -7,6 +7,10 @@
  
     **See the [EESSI overview page](../overview.md) for a general introduction to EESSI.**
 
+!!! warn "This repository is deprecated"
+    The `riscv.eessi.io` repository is no longer maintained.
+    New RISC-V software stacks are being made available in [`dev.eessi.io/riscv`](dev.eessi.io-riscv.md).
+
 This repository contains development versions of an EESSI RISC-V software stack.
 Note that versions may be added, modified, or deleted at any time.
 
