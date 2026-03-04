@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: EESSI Fundamentals Refresher
 
+### Monday 02 March 2026
+
+**Outline:** EESSI on macOS: Bringing HPC Software to Your Mac
+([Slides (PDF)](EESSI-happyhour-2026-008-EESSI-on-macOS.pdf), [Recording (YouTube)](https://youtu.be/lt_Prcp2D0A))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lt_Prcp2D0A?si=OvOgpc9fhdad-VNv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 23 February 2026
 
 **Outline:** Have You Met the EESSI Command-Line Interface (CLI)?
