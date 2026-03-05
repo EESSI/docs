@@ -15,4 +15,4 @@ To unsubscribe from the mailing list, send an email (the subject does not matter
 ```
 UNSUBSCRIBE EESSI
 ```
-<a href="mailto:listserv@list.rug.nl?subject=subscribe&body=UNSUBSCRIBE EESSI">Or click here to start an email message to unsubscribe.</a>
+<a href="mailto:listserv@list.rug.nl?subject=unsubscribe&body=UNSUBSCRIBE EESSI">Or click here to start an email message to unsubscribe.</a>
