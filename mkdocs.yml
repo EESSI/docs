@@ -78,6 +78,7 @@ nav:
     - Meetings: meetings.md
     - Talks: talks.md
         # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
+    - Mailing list: mailing_list.md
     - Contact info: contact.md
   - Training & events: training-events/index.md
   - Systems where EESSI is available: systems.md
