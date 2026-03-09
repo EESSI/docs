@@ -6,7 +6,7 @@ slug: EESSI-in-EFP-update
 
 # Update on EESSI in EuroHPC Federation Platform
 
-Since our [blog post in Feb'25](../../2025/02/eessi-integration-in-efp.md) announcing that EESSI will be integrated in the [EuroHPC Federation Platform (EFP)](https://my-eurohpc.eu), we have been working hard on this.
+Since our [blog post in Feb'25](../../2025/02/eessi-integration-in-efp.md) announcing that EESSI will be integrated in the [EuroHPC Federation Platform (EFP)](https://my-eurohpc.eu), we have been working hard on making this a reality.
 
 <figure markdown="span">
 ![EFP Federated Software Catalog](EFP-FSC-202602.webp){width=70%}
