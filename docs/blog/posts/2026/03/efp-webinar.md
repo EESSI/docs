@@ -36,8 +36,13 @@ Not only will EESSI be available on all EuroHPC supercomputers, it lowers the ba
 because it is also available on [various other HPC systems](../../../../systems.md). This enables people to familiarize
 themselves with the software environment that will be available to them when they switch to a EuroHPC system.
 
-EESSI can also easily be installed in on-premise or commercial cloud environments.
-In addition, it can be used in [CI environments like GitHub Actions](../../../../using_eessi/eessi_in_ci.md),
+EESSI can also easily be installed in on-premise or commercial cloud environments. As we saw in a
+[recent blog post](../../2025/12/eessi-k8.md), EESSI can be used as a Kubernetes Container Storage Interface (CSI) plugin
+which makes it an excellent fit for some of the technologies we are likely to see in
+[EuroHPC AI Factories](https://www.eurohpc-ju.europa.eu/ai-factories_en).
+
+In addition, EESSI has further advantages from an end user perspective since it can also be used in
+[CI environments like GitHub Actions](../../../../using_eessi/eessi_in_ci.md),
 and on personal workstations running [Linux](../../../../getting_access/native_installation.md),
 or even in [Windows](../../../../getting_access/eessi_wsl.md) or [macOS](../../../../getting_access/eessi_limactl.md)
 by using a Linux virtual machine.
