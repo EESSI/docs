@@ -69,7 +69,7 @@ These workflows may be executed not just within a single system, but even across
 
 Much of this is facilitated by the central internal API that is provided by the *EFP Allocations* component (based
 on [Waldur](https://waldur.com/)), which allows other EFP components to query the contents of Federated Software Catalog
-by exposing the publicly available [EESSI data files](https://www.eessi.io/api_data/data/).
+by providing an API that exposes the publicly available [EESSI data files](https://www.eessi.io/api_data/data/).
 
 
 ## Current availability of EESSI on EuroHPC supercomputers
