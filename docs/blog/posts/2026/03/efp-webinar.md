@@ -14,7 +14,7 @@ Since our [blog post in Feb'25](../../2025/02/eessi-integration-in-efp.md) annou
 
 The **Federated Software Catalog** (FSC) component of EFP will use EESSI as a base. As a result, EESSI will soon be available on *all* [EuroHPC supercomputers](https://www.eurohpc-ju.europa.eu/supercomputers_en).
 
-In fact, EESSI is *already* available on the majority of them right now!
+In fact, EESSI is *already* available on the majority of them today!
 
 <!-- more -->
 
