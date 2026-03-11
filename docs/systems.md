@@ -83,6 +83,10 @@ MUSICA is currently (Jan’26) in an open test phase.
 
 * Hydra: [General documentation](https://hpc.vub.be/docs/) | [EESSI @ Hydra](https://hpc.vub.be/docs/software/modules/#european-environment-for-scientific-software-installations)
 
+#### KU Leuven/UHasselt
+
+* VSC Tier-2 clusters: [General documentation](https://docs.vscentrum.be//) | [EESSI @ KU Leuven/UHasselt](https://docs.vscentrum.be/leuven/leuven_module_system.html#using-modules-from-eessi)
+
 ### Cyprus
 
 #### The Cyprus Institute
