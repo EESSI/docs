@@ -6214,7 +6214,7 @@ Below is a simple ReFrame configuration file with minimal changes required for g
 <a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    <span class="s1">&#39;general&#39;</span><span class="p">:</span> <span class="p">[</span>
 <a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>        <span class="p">{</span>
 <a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>            <span class="c1"># Enable automatic detection of CPU architecture for each partition</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>            <span class="c1"># See https://reframe-hpc.readthedocs.io/en/stable/configure.html#auto-detecting-processor-information</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>            <span class="c1"># See https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.processor</span>
 <a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>            <span class="s1">&#39;remote_detect&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
 <a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>        <span class="p">}</span>
 <a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>    <span class="p">],</span>
@@ -6498,7 +6498,7 @@ regular ReFrame logs will all end up in the directory specified by <code>$RFM_PR
 the regular ReFrame log ends up. Note that the performance logs do <em>not</em> respect this prefix: they will still end up
 in the standard ReFrame prefix (by default the current directory, unless otherwise set with <code>$RFM_PREFIX</code> or <code>--prefix</code>).</p>
 <h3 id="cpu-auto-detection">Auto-detection of processor information<a class="headerlink" href="#cpu-auto-detection" title="Permanent link">&para;</a></h3>
-<p>You can let ReFrame <a href="https://reframe-hpc.readthedocs.io/en/stable/configure.html#proc-autodetection">auto-detect the processor information</a> for your system.</p>
+<p>You can let ReFrame <a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.processor">auto-detect the processor information</a> for your system.</p>
 <h4 id="creation-of-topology-file-by-reframe">Creation of topology file by ReFrame<a class="headerlink" href="#creation-of-topology-file-by-reframe" title="Permanent link">&para;</a></h4>
 <p>ReFrame will automatically use auto-detection when two conditions are met:</p>
 <ol>
@@ -6718,7 +6718,7 @@ let ReFrame list the available tests:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 9, 2025 08:36:53 UTC">October 9, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 4, 2026 16:37:29 UTC">March 4, 2026</span>
   </span>
 
     
