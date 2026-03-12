@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 # Topic series: EESSI Fundamentals Refresher
 
+### Monday 09 March 2026
+
+**Outline:** Yet another way to run EESSI: Docker Extensions
+([Slides (PDF)](EESSI-happyhour-2026-009-EESSI-Docker-extensions.pdf), [Recording (YouTube)](https://youtu.be/jC_clb7bLhM))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jC_clb7bLhM?si=7uPEpAWagYGQtWTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 02 March 2026
 
 **Outline:** EESSI on macOS: Bringing HPC Software to Your Mac
