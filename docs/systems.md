@@ -201,3 +201,9 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 ### LEXIS
 
 * LEXIS Platform: [General documentation](https://docs.lexis.tech/architecture/architecture.html) | [EESSI @ LEXIS](https://docs.lexis.tech/user_interfaces/howto.html#custom-hpc-jobs)
+
+### CANFAR Science Platform
+
+The Canadian Advanced Network for Astronomy Research (CANFAR) Science Platform is a scalable, cloud-native workspace for astronomy research that can run on Kubernetes clusters. CANFAR provides integrations so that CVMFS repositories available on the underlying Kubernetes client nodes are exposed to the end-user. The following CANFAR instances are know to have EESSI available:
+
+* OpenCADC, operated by the Canadian Astronomy Data Centre (CADC) & Digital Research Alliance of Canada: [General documentation](https://www.opencadc.org/canfar/latest/) | [EESSI @ OpenCADC](https://www.opencadc.org/canfar/latest/platform/cvmfs/#pointers-for-advanced-readers)
