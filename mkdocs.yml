@@ -37,6 +37,7 @@ nav:
     - Windows and macOS:
       - Windows with WSL: getting_access/eessi_wsl.md
       - macOS with Lima: getting_access/eessi_limactl.md
+      - macOS with container tool: getting_access/eessi_Apple_container_tool.md
     - Configuring EESSI:
       - How to configure EESSI: site_specific_config/host_injections.md
       - GPU support: site_specific_config/gpu.md
