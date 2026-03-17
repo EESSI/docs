@@ -33,6 +33,10 @@ jobs:
           # copy current JSON data, so we can compare after updating it
           json_file=docs/available_software/data/eessi_api_metadata_software.json
           json_file_orig=${json_file}.orig
+          # if the json file does not exist yet, create an empty JSON file
+          if [[ ! -f "${json_file}" ]]; then
+            echo "{}" > ${json_file}
+          fi
           cp ${json_file} ${json_file_orig}
 
           # download https://eessi.io/api_data/data/eessi_api_metadata_software.json
