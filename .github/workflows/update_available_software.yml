@@ -17,11 +17,6 @@ jobs:
           python-version: '3.10'
           architecture: x64
 
-      - name: Mount EESSI
-        uses: eessi/github-action-eessi@e1f8f20638ea417a18d23ab29443ee34794ff900 # v3.1.0
-        with:
-          eessi_stack_version: '2023.06'
-
       - name: update overview of available software
         id: update_available_software
         run: |
@@ -38,7 +33,6 @@ jobs:
           curl -OL https://eessi.io/api_data/data/eessi_api_metadata_software.json
           cd -
 
-          export TIME_GENERATED_TEMPLATE="{{ generated_time }}"
           python scripts/available_software/available_software.py
           ./scripts/update_generated_time.sh mkdocs.yml
 
@@ -54,8 +48,8 @@ jobs:
             echo "json_data_changed=no" >> $GITHUB_OUTPUT
           fi
 
-          # remove the data directory containing the original JSON file, or it'll end up in the PR being opened
-          rm -r ${data_dir}
+          # remove the JSON file in the data directory, or it'll end up in the PR being opened
+          rm -r ${data_dir}/*.json
 
       - name: create pull request
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8

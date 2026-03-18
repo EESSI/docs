@@ -1,4 +1,2 @@
 mdutils
-numpy
-natsort
 pyyaml

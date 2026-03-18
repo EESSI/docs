@@ -17,18 +17,12 @@ jobs:
           python-version: '3.10'
           architecture: x64
 
-      - name: Mount EESSI
-        uses: eessi/github-action-eessi@e1f8f20638ea417a18d23ab29443ee34794ff900 # v3.1.0
-        with:
-          eessi_stack_version: '2023.06'
-
       - name: test overview available software
         id: test_overview_available_software
         run: |
           # install required Python packages in virtual environment
           python -m venv venv
           . venv/bin/activate
-          pip install -r mkdocs-ldjson-plugin/requirements.txt
           pip install -r scripts/available_software/requirements.txt
 
           # download https://eessi.io/api_data/data/eessi_api_metadata_software.json
@@ -42,7 +36,7 @@ jobs:
           python scripts/available_software/available_software.py
           ./scripts/update_generated_time.sh mkdocs.yml
 
-          # determine whether pull request should be opened:
+          # determine whether pull request would need to be opened:
           # if detailed software pages in docs/available_software/detail have been updated, then a PR should be opened
           if [[ $(git status --porcelain ./docs/available_software/detail) ]]; then
             echo "Software pages have been changed, PR should be opened"
@@ -50,6 +44,3 @@ jobs:
           else
             echo "Software pages have not been changed, no need to open PR"
           fi
-
-          # remove the data directory containing the original JSON file, or it'll end up in the PR being opened
-          rm -r ${data_dir}
