@@ -279,8 +279,6 @@ def generate_software_page(software_name: str, software_data: dict, path: str) -
         ldjson_software_data["description"] = json.dumps(ldjson_software_data["description"])[1:-1]
         json_str = ldjson_template.substitute(ldjson_software_data)  # Replace placeholders
         json_topmatter = json.loads(json_str)
-        # Remove the TOC
-        json_topmatter["hide"] = ["toc"]
         yaml_topmatter = yaml.dump(json_topmatter)
         f.write("---\n" + yaml_topmatter + "---\n" + read_data)
 
