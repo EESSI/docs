@@ -1,8 +1,6 @@
-from mdutils.mdutils import MdUtils
 import available_software
 import os
 import filecmp
-import shutil
 
 
 class TestMarkdown:
@@ -21,7 +19,7 @@ class TestMarkdown:
         directory = os.path.join(cls.path, "detail")
         if os.path.exists(directory):
             for file in os.listdir(directory):
-                if file.endswith('.md'):
+                if file.endswith(".md"):
                     os.remove(os.path.join(directory, file))
 
     # ---------------------------
