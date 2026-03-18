@@ -24,6 +24,7 @@ jobs:
           python -m venv venv
           . venv/bin/activate
           pip install -r mkdocs-ldjson-plugin/requirements.txt
+          pip install -r scripts/available_software/requirements.txt
 
           # download https://eessi.io/api_data/data/eessi_api_metadata_software.json
           # to where it's expected by docs/available_software/macros.py and scripts/available_software/available_software.py
