@@ -1,4 +1,4 @@
-# Using EESSI with Apple container on macOS 26
+# Using EESSI with Apple Silicon on macOS 26
 
 > **Requirements**
 >
@@ -69,12 +69,25 @@ container run -it --rm --name eessi ghcr.io/eessi/client:ubuntu22.04-macOS-26
 
 ---
 
-## 5. Once inside the container shell, initialise the EESSI environment:
+## 5. Once inside the container shell
+
+Verify that the EESSI repository is accessible:
+
+```
+ls /cvmfs/software.eessi.io
+```
+
+You should see output similar to:
+
+```
+README.eessi  defaults  host_injections  init  versions
+```
+
+Initialize the EESSI environment:
 
 ```
 source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 ```
-
 Expected output:
 
 ```
@@ -83,17 +96,6 @@ EESSI has selected aarch64/neoverse_n1 as the compatible CPU target for EESSI/20
 EESSI did not identify an accelerator on the system
 (for debug information when loading the EESSI module, set the environment variable EESSI_MODULE_DEBUG_INIT)
 ```
-Verify that the EESSI repository is accessible
-
-```
-ls /cvmfs/software.eessi.io
-```
-You should see output similar to:
-
-```
-README.eessi  defaults  host_injections  init  versions
-```
-
 EESSI is now ready to use inside the container
 
 ---
@@ -102,19 +104,19 @@ EESSI is now ready to use inside the container
 
 List available modules:
 
-```bash
+```
 module avail
 ```
 
 Search for a specific package:
 
-```bash
+```
 module avail TensorFlow
 ```
 
 Load and use a module:
 
-```bash
+```
 module load TensorFlow/2.13.0-foss-2023a
 python3 -c "import tensorflow as tf; print(tf.__version__)"
 ```
@@ -125,12 +127,12 @@ python3 -c "import tensorflow as tf; print(tf.__version__)"
 
 Remove the pulled image:
 
-```bash
+```
 container image rm ghcr.io/eessi/client:ubuntu22.04-macOS-26
 ```
 Stop the `container` system service when it is no longer needed:
 
-```bash
+```
 container system stop
 ```
 
