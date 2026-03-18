@@ -52,4 +52,4 @@ jobs:
           fi
 
           # remove the data directory containing the original JSON file, or it'll end up in the PR being opened
-          rm -f ${data_dir}
+          rm -r ${data_dir}
