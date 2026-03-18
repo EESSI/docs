@@ -1,3 +1,41 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'GeoPandas is a project to add support for geographic data to pandas
+    objects.
+
+    It currently implements GeoSeries and GeoDataFrame types which are subclasses
+    of pandas.Series
+
+    and pandas.DataFrame respectively. GeoPandas objects can act on shapely geometry
+    objects and
+
+    perform geometric operations.'
+  license: Not confirmed
+  name: geopandas
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.14.2'']'
+  url: https://geopandas.org
+---
 # geopandas
 
 

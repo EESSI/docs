@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Common tool chain for working with molecular structure data in various
+
+    applications. This library provides a unified way to perform operations on
+
+    molecular structure data, like reading and writing to common geometry file
+
+    formats.'
+  license: Not confirmed
+  name: mctc-lib
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.3.1'']'
+  url: https://grimme-lab.github.io/mctc-lib
+---
 # mctc-lib
 
 

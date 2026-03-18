@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'TensorBoard is a suite of web applications for inspecting and
+
+    understanding your TensorFlow runs and graphs.'
+  license: Not confirmed
+  name: tensorboard
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.18.0'', ''2.15.1'']'
+  url: https://github.com/tensorflow/tensorboard
+---
 # tensorboard
 
 
@@ -96,7 +127,7 @@ Overview of extensions included in tensorboard installations
 
 |`rsa` version|tensorboard modules that include it|
 | --- | --- |
-|4.9|`tensorboard/2.18.0-gfbf-2024a`<br/>`tensorboard/2.15.1-gfbf-2023a`|
+|4.9|`tensorboard/2.15.1-gfbf-2023a`<br/>`tensorboard/2.18.0-gfbf-2024a`|
 
 ### tensorboard
 
@@ -118,7 +149,7 @@ Overview of extensions included in tensorboard installations
 
 |`tensorboard_data_server` version|tensorboard modules that include it|
 | --- | --- |
-|0.7.2|`tensorboard/2.18.0-gfbf-2024a`<br/>`tensorboard/2.15.1-gfbf-2023a`|
+|0.7.2|`tensorboard/2.15.1-gfbf-2023a`<br/>`tensorboard/2.18.0-gfbf-2024a`|
 
 ### Werkzeug
 

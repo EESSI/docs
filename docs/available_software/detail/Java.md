@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Java Platform, Standard Edition (Java SE) lets you develop and deploy
+
+    Java applications on desktops and servers.'
+  license: Not confirmed
+  name: Java
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''21.0.8'', ''21.0.7'', ''21.0.5'', ''17.0.6'', ''17.0.15'',
+    ''11.0.27'', ''11.0.20'']'
+  url: http://openjdk.java.net
+---
 # Java
 
 

@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Pyzstd module provides classes and functions for compressing and decompressing
+    data,
+
+    using Facebook''s Zstandard (or zstd as short name) algorithm.
+
+
+    The API style is similar to Python''s bz2/lzma/zlib modules.'
+  license: Not confirmed
+  name: pyzstd
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.16.2'']'
+  url: https://github.com/Rogdham/pyzstd
+---
 # pyzstd
 
 

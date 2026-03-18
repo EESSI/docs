@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "NetCDF (network Common Data Form) is a set of software libraries\n\
+    \ and machine-independent data formats that support the creation, access, and\
+    \ sharing of array-oriented\n scientific data."
+  license: Not confirmed
+  name: netCDF
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.9.3'', ''4.9.2'', ''4.9.0'']'
+  url: https://www.unidata.ucar.edu/software/netcdf/
+---
 # netCDF
 
 

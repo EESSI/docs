@@ -1,3 +1,40 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'VeloxChem [RLV+20] is a Python-based open source quantum chemistry
+    software for
+
+    contemporary and future hardware architectures. It features interactive program
+    access through
+
+    Jupyter notebooks as well as massively parallel calculations in high-performance
+
+    computing (HPC) environments.'
+  license: Not confirmed
+  name: VeloxChem
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.0-rc4'']'
+  url: https://veloxchem.org/docs/intro.html
+---
 # VeloxChem
 
 

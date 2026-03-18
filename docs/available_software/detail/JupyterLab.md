@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "JupyterLab is the next-generation user interface for Project Jupyter\
+    \ offering all the familiar\n building blocks of the classic Jupyter Notebook\
+    \ (notebook, terminal, text editor, file browser, rich outputs,\n etc.) in a flexible\
+    \ and powerful user interface. JupyterLab will eventually replace the classic\
+    \ Jupyter\n Notebook."
+  license: Not confirmed
+  name: JupyterLab
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.4.9'', ''4.4.4'', ''4.2.5'', ''4.0.5'']'
+  url: https://jupyter.org/
+---
 # JupyterLab
 
 
@@ -77,7 +110,7 @@ Overview of extensions included in JupyterLab installations
 |`jupyter-lsp` version|JupyterLab modules that include it|
 | --- | --- |
 |2.2.0|`JupyterLab/4.0.5-GCCcore-12.3.0`|
-|2.2.5|`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.2.5-GCCcore-13.3.0`|
+|2.2.5|`JupyterLab/4.2.5-GCCcore-13.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`|
 
 ### jupyter_lsp
 
@@ -102,4 +135,4 @@ Overview of extensions included in JupyterLab installations
 |`jupyterlab_server` version|JupyterLab modules that include it|
 | --- | --- |
 |2.24.0|`JupyterLab/4.0.5-GCCcore-12.3.0`|
-|2.27.3|`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.2.5-GCCcore-13.3.0`<br/>`JupyterLab/4.4.9-GCCcore-14.3.0`|
+|2.27.3|`JupyterLab/4.2.5-GCCcore-13.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.4.9-GCCcore-14.3.0`|

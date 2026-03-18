@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "NEST is a simulator for spiking neural network models that focuses\
+    \ on the\n dynamics, size and structure of neural systems rather than on the exact\
+    \ morphology of individual neurons."
+  license: Not confirmed
+  name: NEST
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.9'']'
+  url: https://www.nest-simulator.org/
+---
 # NEST
 
 

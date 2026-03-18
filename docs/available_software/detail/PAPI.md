@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n PAPI provides the tool designer and application engineer with a\
+    \ consistent\n interface and methodology for use of the performance counter hardware\
+    \ found\n in most major microprocessors. PAPI enables software engineers to see,\
+    \ in near\n real time, the relation between software performance and processor\
+    \ events.\n In addition Component PAPI provides access to a collection of components\n\
+    \ that expose performance measurement opportunites across the hardware and\n software\
+    \ stack.\n"
+  license: Not confirmed
+  name: PAPI
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''7.2.0'', ''7.1.0'']'
+  url: https://icl.cs.utk.edu/projects/papi/
+---
 # PAPI
 
 

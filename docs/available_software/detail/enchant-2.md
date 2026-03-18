@@ -1,3 +1,41 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Enchant aims to provide a simple but comprehensive abstraction for
+    dealing
+
+    with different spell checking libraries in a consistent way. A client, such
+
+    as a text editor or word processor, need not know anything about a specific
+
+    spell-checker, and since all back-ends are plugins, new spell-checkers can
+
+    be added without needing any change to the program using Enchant.'
+  license: Not confirmed
+  name: enchant-2
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.6.5'']'
+  url: http://rrthomas.github.io/enchant/
+---
 # enchant-2
 
 

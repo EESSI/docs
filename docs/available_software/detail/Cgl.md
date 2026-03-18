@@ -1,3 +1,41 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'The COIN-OR Cut Generation Library (Cgl) is a collection of cut generators
+    that
+
+    can be used with other COIN-OR packages that make use of cuts, such as, among
+
+    others, the linear solver Clp or the mixed integer linear programming solvers
+
+    Cbc or BCP. Cgl uses the abstract class OsiSolverInterface (see Osi) to use or
+
+    communicate with a solver. It does not directly call a solver.'
+  license: Not confirmed
+  name: Cgl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.60.8'']'
+  url: https://github.com/coin-or/Cgl
+---
 # Cgl
 
 

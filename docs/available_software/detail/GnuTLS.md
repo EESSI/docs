@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "GnuTLS is a secure communications library implementing the SSL, TLS\n\
+    \ and DTLS protocols and technologies around them. It provides a simple\n C language\
+    \ application programming interface (API) to access the secure\n communications\
+    \ protocols as well as APIs to parse and write X.509, PKCS #12,\n OpenPGP and\
+    \ other required structures. It is aimed to be portable\n and efficient with focus\
+    \ on security and interoperability."
+  license: Not confirmed
+  name: GnuTLS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.8.10'', ''3.7.8'']'
+  url: https://www.gnutls.org
+---
 # GnuTLS
 
 

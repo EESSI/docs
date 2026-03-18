@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'FFmpeg nvidia headers. Adds support for nvenc and nvdec. Requires
+    Nvidia GPU and drivers to be present
+
+    (picked up dynamically).'
+  license: Not confirmed
+  name: ffnvcodec
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''13.0.19.0'', ''12.2.72.0'', ''12.1.14.0'', ''12.0.16.0'', ''11.1.5.2'']'
+  url: https://git.videolan.org/?p=ffmpeg/nv-codec-headers.git
+---
 # ffnvcodec
 
 

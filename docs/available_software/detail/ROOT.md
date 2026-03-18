@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "The ROOT system provides a set of OO frameworks with all the functionality\n\
+    \    needed to handle and analyze large amounts of data in a very efficient way."
+  license: Not confirmed
+  name: ROOT
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''6.30.06'', ''6.26.10'']'
+  url: https://root.cern.ch/drupal/
+---
 # ROOT
 
 

@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n FreeType 2 is a software font engine that is designed to be small,\
+    \ efficient,\n highly customizable, and portable while capable of producing high-quality\n\
+    \ output (glyph images). It can be used in graphics libraries, display servers,\n\
+    \ font conversion tools, text image generation tools, and many other products\n\
+    \ as well.\n"
+  license: Not confirmed
+  name: freetype
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.13.3'', ''2.13.2'', ''2.13.0'', ''2.12.1'']'
+  url: https://www.freetype.org
+---
 # freetype
 
 

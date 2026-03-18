@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'The NVIDIA Collective Communications Library (NCCL) implements multi-GPU
+    and multi-node collective
+
+    communication primitives that are performance optimized for NVIDIA GPUs.'
+  license: Not confirmed
+  name: NCCL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.22.3'', ''2.20.5'', ''2.18.3'']'
+  url: https://developer.nvidia.com/nccl
+---
 # NCCL
 
 

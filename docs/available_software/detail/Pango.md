@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Pango is a library for laying out and rendering of text, with an emphasis
+    on internationalization.
+
+    Pango can be used anywhere that text layout is needed, though most of the work
+    on Pango so far has been done in the
+
+    context of the GTK+ widget toolkit. Pango forms the core of text and font handling
+    for GTK+-2.x.'
+  license: Not confirmed
+  name: Pango
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.57.0'', ''1.54.0'', ''1.51.0'', ''1.50.14'', ''1.50.12'']'
+  url: https://www.pango.org/
+---
 # Pango
 
 

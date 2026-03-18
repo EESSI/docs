@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "HDF5 for Python (h5py) is a general-purpose Python interface to the\
+    \ Hierarchical Data Format library,\n version 5. HDF5 is a versatile, mature scientific\
+    \ software library designed for the fast, flexible storage of enormous\n amounts\
+    \ of data."
+  license: Not confirmed
+  name: h5py
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.9.0'', ''3.8.0'', ''3.14.0'', ''3.11.0'']'
+  url: https://www.h5py.org/
+---
 # h5py
 
 

@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Xvfb is an X server that can run on machines with no display hardware\
+    \ and no physical input devices.\n It emulates a dumb framebuffer using virtual\
+    \ memory."
+  license: Not confirmed
+  name: Xvfb
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''21.1.9'', ''21.1.8'', ''21.1.6'', ''21.1.18'', ''21.1.14'']'
+  url: https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml
+---
 # Xvfb
 
 
@@ -27,7 +58,7 @@ Overview of extensions included in Xvfb installations
 
 |`bdftopcf` version|Xvfb modules that include it|
 | --- | --- |
-|1.1|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.1|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 
 ### font-misc-misc
 
@@ -35,7 +66,7 @@ Overview of extensions included in Xvfb installations
 |`font-misc-misc` version|Xvfb modules that include it|
 | --- | --- |
 |1.1.2|`Xvfb/21.1.6-GCCcore-12.2.0`|
-|1.1.3|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`|
+|1.1.3|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 
 ### font-util
 
@@ -44,14 +75,14 @@ Overview of extensions included in Xvfb installations
 | --- | --- |
 |1.3.3|`Xvfb/21.1.6-GCCcore-12.2.0`|
 |1.4.0|`Xvfb/21.1.8-GCCcore-12.3.0`|
-|1.4.1|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`|
+|1.4.1|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 
 ### libxcvt
 
 
 |`libxcvt` version|Xvfb modules that include it|
 | --- | --- |
-|0.1.2|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|0.1.2|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |0.1.3|`Xvfb/21.1.18-GCCcore-14.3.0`|
 
 ### mkfontdir
@@ -59,14 +90,14 @@ Overview of extensions included in Xvfb installations
 
 |`mkfontdir` version|Xvfb modules that include it|
 | --- | --- |
-|1.0.7|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.0.7|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 
 ### mkfontscale
 
 
 |`mkfontscale` version|Xvfb modules that include it|
 | --- | --- |
-|1.2.2|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.2.2|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |1.2.3|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`|
 
 ### xauth
@@ -74,7 +105,7 @@ Overview of extensions included in Xvfb installations
 
 |`xauth` version|Xvfb modules that include it|
 | --- | --- |
-|1.1.2|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.1.2|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |1.1.3|`Xvfb/21.1.14-GCCcore-13.3.0`|
 |1.1.4|`Xvfb/21.1.18-GCCcore-14.3.0`|
 
@@ -83,7 +114,7 @@ Overview of extensions included in Xvfb installations
 
 |`xkbcomp` version|Xvfb modules that include it|
 | --- | --- |
-|1.4.6|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.4.6|`Xvfb/21.1.6-GCCcore-12.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |1.4.7|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.18-GCCcore-14.3.0`|
 
 ### xkeyboard-config

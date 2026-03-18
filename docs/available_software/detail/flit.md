@@ -1,3 +1,32 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: A simple packaging tool for simple packages.
+  license: Not confirmed
+  name: flit
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.9.0'', ''3.12.0'', ''3.10.1'']'
+  url: https://github.com/pypa/flit
+---
 # flit
 
 
@@ -49,7 +78,7 @@ Overview of extensions included in flit installations
 |`docutils` version|flit modules that include it|
 | --- | --- |
 |0.20.1|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
-|0.21.2|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
+|0.21.2|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 
 ### flit
 
@@ -65,7 +94,7 @@ Overview of extensions included in flit installations
 
 |`flit-scm` version|flit modules that include it|
 | --- | --- |
-|1.7.0|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
+|1.7.0|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 
 ### flit_scm
 
@@ -79,7 +108,7 @@ Overview of extensions included in flit installations
 
 |`idna` version|flit modules that include it|
 | --- | --- |
-|3.10|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+|3.10|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.12.0-GCCcore-14.3.0`|
 |3.4|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
 |3.7|`flit/3.9.0-GCCcore-13.3.0`|
 
@@ -98,7 +127,7 @@ Overview of extensions included in flit installations
 |`requests` version|flit modules that include it|
 | --- | --- |
 |2.31.0|`flit/3.9.0-GCCcore-12.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`|
-|2.32.3|`flit/3.9.0-GCCcore-13.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+|2.32.3|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 |2.32.4|`flit/3.12.0-GCCcore-14.3.0`|
 
 ### setuptools-scm
@@ -122,7 +151,7 @@ Overview of extensions included in flit installations
 |`tomli-w` version|flit modules that include it|
 | --- | --- |
 |1.0.0|`flit/3.9.0-GCCcore-13.3.0`|
-|1.2.0|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+|1.2.0|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.12.0-GCCcore-14.3.0`|
 
 ### tomli_w
 

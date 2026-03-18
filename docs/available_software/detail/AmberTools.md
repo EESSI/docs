@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "AmberTools consists of several independently developed packages that\
+    \ work well by themselves,\n and with Amber itself. The suite can also be used\
+    \ to carry out complete molecular dynamics simulations,\n with either explicit\
+    \ water or generalized Born solvent models."
+  license: Not confirmed
+  name: AmberTools
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''23.6'']'
+  url: https://ambermd.org/
+---
 # AmberTools
 
 

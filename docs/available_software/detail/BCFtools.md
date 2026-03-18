@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Samtools is a suite of programs for interacting with high-throughput\
+    \ sequencing data.\n BCFtools - Reading/writing BCF2/VCF/gVCF files and calling/filtering/summarising\
+    \ SNP and short indel sequence\n variants"
+  license: Not confirmed
+  name: BCFtools
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.22'', ''1.18'', ''1.17'']'
+  url: https://www.htslib.org/
+---
 # BCFtools
 
 

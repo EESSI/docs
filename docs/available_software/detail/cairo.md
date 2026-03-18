@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Cairo is a 2D graphics library with support for multiple output devices.\n\
+    \ Currently supported output targets include the X Window System (via both Xlib\
+    \ and XCB), Quartz, Win32, image buffers,\n PostScript, PDF, and SVG file output.\
+    \ Experimental backends include OpenGL, BeOS, OS/2, and DirectFB"
+  license: Not confirmed
+  name: cairo
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.18.4'', ''1.18.0'', ''1.17.8'', ''1.17.4'']'
+  url: https://cairographics.org
+---
 # cairo
 
 

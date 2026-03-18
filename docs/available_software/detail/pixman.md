@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Pixman is a low-level software library for pixel manipulation,\
+    \ providing\n features such as image compositing and trapezoid rasterization.\
+    \ Important\n users of pixman are the cairo graphics library and the X server.\n"
+  license: Not confirmed
+  name: pixman
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.46.4'', ''0.46.2'', ''0.43.4'', ''0.42.2'']'
+  url: http://www.pixman.org/
+---
 # pixman
 
 

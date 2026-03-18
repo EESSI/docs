@@ -1,3 +1,57 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n The goal of the European Environment for Scientific Software Installations\n\
+    \ (EESSI, pronounced as \"easy\") is to build a common stack of scientific\n software\
+    \ installations for HPC systems and beyond, including laptops,\n personal workstations\
+    \ and cloud infrastructure.\n\n This module allows you to extend EESSI using the\
+    \ same configuration for\n EasyBuild as EESSI itself uses. A number of environment\
+    \ variables control the\n behaviour of the module:\n - EESSI_USER_INSTALL can\
+    \ be set to a location to install modules for use by\n   the user only. The location\
+    \ must already exist on the filesystem.\n - EESSI_PROJECT_INSTALL can be set to\
+    \ a location to install modules for use by\n   a project. The location must already\
+    \ exist on the filesystem and you should\n   ensure that the location has the\
+    \ correct Linux group and the SGID permission\n   is set on that directory (`chmod\
+    \ g+s $EESSI_PROJECT_INSTALL`) so that all\n   members of the group have permission\
+    \ to read and write installations.\n - EESSI_SITE_INSTALL is either defined or\
+    \ not and cannot be used with another\n   environment variable. A site installation\
+    \ is done in a defined location and\n   any installations there are (by default)\
+    \ world readable.\n - EESSI_CVMFS_INSTALL is either defined or not and cannot\
+    \ be used with another\n   environment variable. A CVMFS installation targets\
+    \ a defined location which\n   will be ingested into CVMFS and is only useful\
+    \ for CVMFS administrators.\n - If none of the environment variables above are\
+    \ defined, an EESSI_USER_INSTALL\n   is assumed with a value of $HOME/EESSI\n\
+    \ If both EESSI_USER_INSTALL and EESSI_PROJECT_INSTALL are defined, both sets\
+    \ of\n installations are exposed, but new installations are created as user\n\
+    \ installations.\n\n Strict installation path checking is enforced by EESSI for\
+    \ EESSI and site\n installations involving accelerators. In these cases, if you\
+    \ wish to create an\n accelerator installation you must set the environment variable\n\
+    \ EESSI_ACCELERATOR_INSTALL (and load/reload this module).\n"
+  license: Not confirmed
+  name: EESSI-extend
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2025.06'', ''2023.06'']'
+  url: https://eessi.io/docs/
+---
 # EESSI-extend
 
 

@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Larry Wall''s Practical Extraction and Report Language
+
+
+    This is a minimal build without any modules. Should only be used for build dependencies.
+
+    '
+  license: Not confirmed
+  name: Perl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''5.40.2'', ''5.40.0'', ''5.38.2'', ''5.38.0'', ''5.36.1'', ''5.36.0'']'
+  url: https://www.perl.org/
+---
 # Perl
 
 
@@ -172,7 +206,7 @@ Overview of extensions included in Perl installations
 
 |`Carp` version|Perl modules that include it|
 | --- | --- |
-|1.50|`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|1.50|`Perl/5.36.0-GCCcore-12.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`|
 
 ### Carp::Clan
 
@@ -326,7 +360,7 @@ Overview of extensions included in Perl installations
 
 |`constant` version|Perl modules that include it|
 | --- | --- |
-|1.33|`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|1.33|`Perl/5.36.0-GCCcore-12.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`|
 
 ### CPAN::Meta::Check
 
@@ -382,7 +416,7 @@ Overview of extensions included in Perl installations
 
 |`Data::Dumper` version|Perl modules that include it|
 | --- | --- |
-|2.183|`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|2.183|`Perl/5.36.0-GCCcore-12.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`|
 
 ### Data::Dumper::Concise
 
@@ -663,7 +697,7 @@ Overview of extensions included in Perl installations
 |`Exporter` version|Perl modules that include it|
 | --- | --- |
 |5.74|`Perl/5.36.0-GCCcore-12.2.0`|
-|5.77|`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`|
+|5.77|`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`|
 |5.78|`Perl/5.38.2-GCCcore-13.3.0`|
 
 ### Exporter::Declare
@@ -811,7 +845,7 @@ Overview of extensions included in Perl installations
 
 |`File::Path` version|Perl modules that include it|
 | --- | --- |
-|2.18|`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|2.18|`Perl/5.36.0-GCCcore-12.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`|
 
 ### File::pushd
 
@@ -867,7 +901,7 @@ Overview of extensions included in Perl installations
 
 |`File::Spec` version|Perl modules that include it|
 | --- | --- |
-|3.75|`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|3.75|`Perl/5.36.0-GCCcore-12.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`|
 
 ### File::Temp
 
@@ -896,7 +930,7 @@ Overview of extensions included in Perl installations
 |`Getopt::Long` version|Perl modules that include it|
 | --- | --- |
 |2.52|`Perl/5.36.0-GCCcore-12.2.0`|
-|2.54|`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`|
+|2.54|`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`|
 |2.57|`Perl/5.38.2-GCCcore-13.3.0`|
 |2.58|`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`|
 
@@ -1080,7 +1114,7 @@ Overview of extensions included in Perl installations
 
 |`IO::File` version|Perl modules that include it|
 | --- | --- |
-|1.51|`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`|
+|1.51|`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`|
 |1.55|`Perl/5.38.2-GCCcore-13.3.0`|
 
 ### IO::HTML
@@ -2432,7 +2466,7 @@ Overview of extensions included in Perl installations
 
 |`Text::ParseWords` version|Perl modules that include it|
 | --- | --- |
-|3.31|`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|3.31|`Perl/5.36.0-GCCcore-12.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`|
 
 ### Text::Soundex
 
@@ -2460,14 +2494,14 @@ Overview of extensions included in Perl installations
 
 |`Thread::Queue` version|Perl modules that include it|
 | --- | --- |
-|3.13|`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|3.13|`Perl/5.36.0-GCCcore-12.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`|
 
 ### threads
 
 
 |`threads` version|Perl modules that include it|
 | --- | --- |
-|2.21|`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`|
+|2.21|`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.38.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`|
 
 ### Throwable
 

@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Open Knowledgebase of Interatomic Models.\n\nKIM is an API and OpenKIM\
+    \ is a collection of interatomic models (potentials) for\natomistic simulations.\
+    \  This is a library that can be used by simulation programs\nto get access to\
+    \ the models in the OpenKIM database.\n\nThis EasyBuild only installs the API,\
+    \ the models can be installed with the\npackage openkim-models, or the user can\
+    \ install them manually by running\n    kim-api-collections-management install\
+    \ user MODELNAME\nor\n    kim-api-collections-management install user OpenKIM\n\
+    to install them all.\n "
+  license: Not confirmed
+  name: kim-api
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.3.0'']'
+  url: https://openkim.org/
+---
 # kim-api
 
 

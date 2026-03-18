@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "GObject introspection is a middleware layer between C libraries\n\
+    \ (using GObject) and language bindings. The C library can be scanned at\n compile\
+    \ time and generate a metadata file, in addition to the actual\n native C library.\
+    \ Then at runtime, language bindings can read this\n metadata and automatically\
+    \ provide bindings to call into the C library."
+  license: Not confirmed
+  name: GObject-Introspection
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.84.0'', ''1.80.1'', ''1.78.1'', ''1.76.1'', ''1.74.0'']'
+  url: https://gi.readthedocs.io/en/latest/
+---
 # GObject-Introspection
 
 

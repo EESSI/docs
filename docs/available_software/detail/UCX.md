@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Unified Communication X
+
+    An open-source production grade communication framework for data centric
+
+    and high-performance applications
+
+    '
+  license: Not confirmed
+  name: UCX
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.19.0'', ''1.18.0'', ''1.16.0'', ''1.15.0'', ''1.14.1'', ''1.13.1'']'
+  url: https://www.openucx.org/
+---
 # UCX
 
 

@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Netscape Portable Runtime (NSPR) provides a platform-neutral API for\
+    \ system level\n and libc-like functions."
+  license: Not confirmed
+  name: NSPR
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.36'', ''4.35'']'
+  url: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSPR
+---
 # NSPR
 
 

@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n HDF (also known as HDF4) is a library and multi-object file format\
+    \ for\n storing and managing data between machines.\n"
+  license: Not confirmed
+  name: HDF
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.3.0'', ''4.2.16-2'', ''4.2.15'']'
+  url: https://www.hdfgroup.org/products/hdf4/
+---
 # HDF
 
 

@@ -1,3 +1,40 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Flux is a flexible framework for resource management, built for\
+    \ your site. The\n framework consists of a suite of projects, tools, and libraries\
+    \ which may be\n used to build site-custom resource managers for High Performance\
+    \ Computing\n centers. Unlike traditional resource managers, Flux can run as a\
+    \ parallel job\n under most launchers that support MPI, including under Flux itself.\
+    \ This not\n only makes batch scripts and workflows for Flux portable to other\
+    \ resource\n managers (just launch Flux as a job), but it also means that batch\
+    \ jobs have\n all the features of a full resource manager at their disposal, as\
+    \ if they have\n an entire cluster to themselves.\n"
+  license: Not confirmed
+  name: Flux
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.80.0'']'
+  url: https://flux-framework.org/
+---
 # Flux
 
 

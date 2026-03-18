@@ -1,3 +1,42 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    Libfabric is a core component of OFI. It is the library that defines and exports
+
+    the user-space API of OFI, and is typically the only software that applications
+
+    deal with directly. It works in conjunction with provider libraries, which are
+
+    often integrated directly into libfabric.
+
+    '
+  license: Not confirmed
+  name: libfabric
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.1.0'', ''2.0.0'', ''1.21.0'', ''1.19.0'', ''1.18.0'', ''1.16.1'']'
+  url: https://ofiwg.github.io/libfabric/
+---
 # libfabric
 
 

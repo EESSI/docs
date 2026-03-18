@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'LERC is an open-source image or raster format which supports rapid
+    encoding and decoding
+
+    for any pixel type (not just RGB or Byte). Users set the maximum compression error
+    per pixel while encoding,
+
+    so the precision of the original input image is preserved (within user defined
+    error bounds).'
+  license: Not confirmed
+  name: LERC
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.0.0'']'
+  url: https://github.com/Esri/lerc
+---
 # LERC
 
 

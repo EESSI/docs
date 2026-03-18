@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "yelp-xsl is a collection of programs and data files to help you build,\
+    \ maintain,\n and distribute documentation. It provides XSLT stylesheets that\
+    \ can be built upon for help\n viewers and publishing systems. These stylesheets\
+    \ output JavaScript and CSS content,\n and reference images provided by yelp-xsl.\
+    \ This package also redistributes copies\n of the jQuery and jQuery.Syntax JavaScript\
+    \ libraries.\n"
+  license: Not confirmed
+  name: yelp-xsl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''42.1'']'
+  url: https://gitlab.gnome.org/GNOME/yelp-xslg
+---
 # yelp-xsl
 
 

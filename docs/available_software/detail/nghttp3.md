@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: ' nghttp3 is an implementation of RFC 9114 HTTP/3
+
+    mapping over QUIC and RFC 9204 QPACK in C.
+
+    It does not depend on any particular QUIC transport implementation.'
+  license: Not confirmed
+  name: nghttp3
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.3.0'']'
+  url: https://github.com/ngtcp2/nghttp3
+---
 # nghttp3
 
 

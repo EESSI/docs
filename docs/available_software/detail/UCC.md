@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "UCC (Unified Collective Communication) is a collective\ncommunication\
+    \ operations API and library that is flexible, complete, and \nfeature-rich for\
+    \ current and emerging programming models and runtimes.\n"
+  license: Not confirmed
+  name: UCC
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.4.4'', ''1.3.0'', ''1.2.0'', ''1.1.0'']'
+  url: https://www.openucx.org/
+---
 # UCC
 
 

@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Reimplementation of the D3 dispersion correction. The s-dftd3 project
+    aims to
+
+    provide a user-friendly and uniform interface to the D3 dispersion model and
+
+    for the calculation of DFT-D3 dispersion corrections.'
+  license: Not confirmed
+  name: Simple-DFTD3
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.2.1'']'
+  url: https://dftd3.readthedocs.io
+---
 # Simple-DFTD3
 
 

@@ -1,3 +1,41 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'The shared-mime-info package contains:
+
+    The core database of common MIME types, their file extensions and icon names.
+
+    The update-mime-database command, used to extend the DB and install a new MIME
+    data.
+
+    The freedesktop.org shared MIME database spec.
+
+    It is used by GLib, GNOME, KDE, XFCE and many others.'
+  license: Not confirmed
+  name: shared-mime-info
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.4'']'
+  url: https://gitlab.freedesktop.org/xdg/shared-mime-info
+---
 # shared-mime-info
 
 

@@ -1,3 +1,46 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the
+
+    Newtonian equations of motion for systems with hundreds to millions of
+
+    particles.
+
+
+    This is a GPU enabled build, containing both MPI and threadMPI binaries.
+
+
+    It also contains the gmxapi extension for the single precision MPI build.
+
+    '
+  license: Not confirmed
+  name: GROMACS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2025.2'', ''2024.4'', ''2024.3'', ''2024.1'']'
+  url: https://www.gromacs.org
+---
 # GROMACS
 
 
@@ -35,5 +78,5 @@ Overview of extensions included in GROMACS installations
 
 |`gmxapi` version|GROMACS modules that include it|
 | --- | --- |
-|0.4.2|`GROMACS/2024.3-foss-2023b`<br/>`GROMACS/2024.3-foss-2023b-PLUMED-2.9.2`<br/>`GROMACS/2025.2-foss-2025a`<br/>`GROMACS/2024.4-foss-2023b`<br/>`GROMACS/2024.4-foss-2023b-CUDA-12.4.0`|
+|0.4.2|`GROMACS/2024.3-foss-2023b`<br/>`GROMACS/2024.3-foss-2023b-PLUMED-2.9.2`<br/>`GROMACS/2024.4-foss-2023b`<br/>`GROMACS/2024.4-foss-2023b-CUDA-12.4.0`<br/>`GROMACS/2025.2-foss-2025a`|
 |0.5.0|`GROMACS/2024.1-foss-2023b`|

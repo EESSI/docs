@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'dm-tree provides tree, a library for working with nested data structures.
+    In a way,
+
+    tree generalizes the builtin map function which only supports flat sequences,
+    and
+
+    allows to apply a function to each "leaf" preserving the overall structure.'
+  license: Not confirmed
+  name: dm-tree
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.1.8'']'
+  url: https://github.com/deepmind/tree
+---
 # dm-tree
 
 

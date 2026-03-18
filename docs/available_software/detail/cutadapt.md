@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Cutadapt finds and removes adapter sequences, primers, poly-A tails\
+    \ and\n other types of unwanted sequence from your high-throughput sequencing\
+    \ reads."
+  license: Not confirmed
+  name: cutadapt
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''5.0'']'
+  url: https://opensource.scilifelab.se/projects/cutadapt/
+---
 # cutadapt
 
 

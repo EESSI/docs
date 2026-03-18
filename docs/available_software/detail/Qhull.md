@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Qhull computes the convex hull, Delaunay triangulation, Voronoi\
+    \ diagram,\n halfspace intersection about a point, furthest-site Delaunay triangulation,\n\
+    \ and furthest-site Voronoi diagram. The source code runs in 2-d, 3-d, 4-d, and\n\
+    \ higher dimensions. Qhull implements the Quickhull algorithm for computing the\n\
+    \ convex hull.\n"
+  license: Not confirmed
+  name: Qhull
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2020.2'']'
+  url: http://www.qhull.org
+---
 # Qhull
 
 

@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'CoinUtils (Coin-OR Utilities) is an open-source collection of classes
+    and
+
+    functions that are generally useful to more than one COIN-OR project.'
+  license: Not confirmed
+  name: CoinUtils
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.11.12'', ''2.11.10'']'
+  url: https://github.com/coin-or/CoinUtils
+---
 # CoinUtils
 
 

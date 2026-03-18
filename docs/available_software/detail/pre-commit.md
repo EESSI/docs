@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "A framework for managing and maintaining multi-language pre-commit\
+    \ hooks.\n\nGit hook scripts are useful for identifying simple issues before submission\
+    \ to code review.\n We run our hooks on every commit to automatically point out\
+    \ issues in code such as missing semicolons,\n trailing whitespace, and debug\
+    \ statements. By pointing these issues out before code review,\n this allows a\
+    \ code reviewer to focus on the architecture of a change while not wasting time\n\
+    \ with trivial style nitpicks."
+  license: Not confirmed
+  name: pre-commit
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.7.0'']'
+  url: https://pre-commit.com/
+---
 # pre-commit
 
 

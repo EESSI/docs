@@ -1,3 +1,41 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "PyTables is a package for managing hierarchical datasets and designed\
+    \ to efficiently and easily cope\n with extremely large amounts of data. PyTables\
+    \ is built on top of the HDF5 library, using the Python language and the\n NumPy\
+    \ package. It features an object-oriented interface that, combined with C extensions\
+    \ for the performance-critical\n parts of the code (generated using Cython), makes\
+    \ it a fast, yet extremely easy to use tool for interactively browsing,\n processing\
+    \ and searching very large amounts of data. One important feature of PyTables\
+    \ is that it optimizes memory and\n disk resources so that data takes much less\
+    \ space (specially if on-flight compression is used) than other solutions\n such\
+    \ as relational or object oriented databases."
+  license: Not confirmed
+  name: PyTables
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.9.2'']'
+  url: https://www.pytables.org
+---
 # PyTables
 
 

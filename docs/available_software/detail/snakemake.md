@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: The Snakemake workflow management system is a tool to create reproducible
+    and scalable data analyses.
+  license: Not confirmed
+  name: snakemake
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''8.4.2'', ''8.28.0'']'
+  url: https://snakemake.readthedocs.io
+---
 # snakemake
 
 
@@ -23,7 +53,7 @@ Overview of extensions included in snakemake installations
 
 |`argparse-dataclass` version|snakemake modules that include it|
 | --- | --- |
-|2.0.0|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|2.0.0|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### conda-inject
 
@@ -38,21 +68,21 @@ Overview of extensions included in snakemake installations
 
 |`ConfigArgParse` version|snakemake modules that include it|
 | --- | --- |
-|1.7|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|1.7|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### connection-pool
 
 
 |`connection-pool` version|snakemake modules that include it|
 | --- | --- |
-|0.0.3|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|0.0.3|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### datrie
 
 
 |`datrie` version|snakemake modules that include it|
 | --- | --- |
-|0.8.2|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|0.8.2|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### dpath
 
@@ -67,14 +97,14 @@ Overview of extensions included in snakemake installations
 
 |`fastjsonschema` version|snakemake modules that include it|
 | --- | --- |
-|2.19.1|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|2.19.1|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### humanfriendly
 
 
 |`humanfriendly` version|snakemake modules that include it|
 | --- | --- |
-|10.0|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|10.0|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### immutables
 
@@ -113,7 +143,7 @@ Overview of extensions included in snakemake installations
 
 |`reretry` version|snakemake modules that include it|
 | --- | --- |
-|0.11.8|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|0.11.8|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### smart-open
 
@@ -207,21 +237,21 @@ Overview of extensions included in snakemake installations
 
 |`stopit` version|snakemake modules that include it|
 | --- | --- |
-|1.1.2|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|1.1.2|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### throttler
 
 
 |`throttler` version|snakemake modules that include it|
 | --- | --- |
-|1.2.2|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|1.2.2|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### toposort
 
 
 |`toposort` version|snakemake modules that include it|
 | --- | --- |
-|1.10|`snakemake/8.4.2-foss-2023a`<br/>`snakemake/8.28.0-foss-2023b`|
+|1.10|`snakemake/8.28.0-foss-2023b`<br/>`snakemake/8.4.2-foss-2023a`|
 
 ### wrapt
 

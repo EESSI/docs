@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "SLEPc (Scalable Library for Eigenvalue Problem Computations) is a\
+    \ software library for the solution\n of large scale sparse eigenvalue problems\
+    \ on parallel computers. It is an extension of PETSc and can be used for\n either\
+    \ standard or generalized eigenproblems, with real or complex arithmetic. It can\
+    \ also be used for computing a\n partial SVD of a large, sparse, rectangular matrix,\
+    \ and to solve quadratic eigenvalue problems."
+  license: Not confirmed
+  name: SLEPc
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.23.3'', ''3.22.2'', ''3.20.1'']'
+  url: https://slepc.upv.es
+---
 # SLEPc
 
 

@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'GTS stands for the GNU Triangulated Surface Library.
+
+    It is an Open Source Free Software Library intended to provide a set of useful
+
+    functions to deal with 3D surfaces meshed with interconnected triangles.'
+  license: Not confirmed
+  name: GTS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.7.6'']'
+  url: http://gts.sourceforge.net/
+---
 # GTS
 
 

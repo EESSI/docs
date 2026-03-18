@@ -1,3 +1,40 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Bundle of Python packages required to run AiiDA.
+
+    An open-source Python infrastructure to help researchers with automating, managing,
+    persisting,
+
+    sharing and reproducing the complex workflows associated with modern computational
+    science and all associated data.
+
+    '
+  license: Not confirmed
+  name: aiida-core
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.7.2'']'
+  url: https://www.aiida.net/
+---
 # aiida-core
 
 

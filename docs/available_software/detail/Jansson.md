@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Jansson is a C library for encoding, decoding and manipulating JSON\
+    \ data.\n Its main features and design principles are:\n * Simple and intuitive\
+    \ API and data model\n * Comprehensive documentation\n * No dependencies on other\
+    \ libraries\n * Full Unicode support (UTF-8)\n * Extensive test suite"
+  license: Not confirmed
+  name: Jansson
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.14.1'', ''2.14'']'
+  url: https://www.digip.org/jansson/
+---
 # Jansson
 
 

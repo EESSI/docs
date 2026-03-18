@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Graphviz is open source graph visualization software. Graph visualization\n\
+    \ is a way of representing structural information as diagrams of\n abstract graphs\
+    \ and networks. It has important applications in networking,\n bioinformatics,\
+    \  software engineering, database and web design, machine learning,\n and in visual\
+    \ interfaces for other technical domains."
+  license: Not confirmed
+  name: Graphviz
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''8.1.0'', ''13.1.2'']'
+  url: https://www.graphviz.org/
+---
 # Graphviz
 
 

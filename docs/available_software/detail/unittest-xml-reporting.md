@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'A unittest test runner that can save test results to XML files in
+    xUnit format.
+
+    The files can be consumed by a wide range of tools, such as build systems, IDEs
+    and continuous integration servers.'
+  license: Not confirmed
+  name: unittest-xml-reporting
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.1.0'']'
+  url: http://github.com/xmlrunner/unittest-xml-reporting
+---
 # unittest-xml-reporting
 
 

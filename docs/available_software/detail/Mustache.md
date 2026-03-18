@@ -1,3 +1,43 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Mustache (Multi-scale Detection of Chromatin Loops from Hi-C and Micro-C
+    Maps using
+
+    Scale-Space Representation) is a tool for multi-scale detection of chromatin loops
+    from Hi-C and Micro-C
+
+    contact maps in high resolutions (10kbp all the way to 500bp and even more).
+
+    Mustache uses recent technical advances in scale-space theory in
+
+    Computer Vision to detect chromatin loops caused by interaction of DNA segments
+    with a variable size.'
+  license: Not confirmed
+  name: Mustache
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.3.3'']'
+  url: https://github.com/ay-lab/mustache
+---
 # Mustache
 
 

@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Snappy is a compression/decompression library. It does not aim
+
+    for maximum compression, or compatibility with any other compression library;
+
+    instead, it aims for very high speeds and reasonable compression.'
+  license: Not confirmed
+  name: snappy
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.2.2'', ''1.2.1'', ''1.1.9'', ''1.1.10'']'
+  url: https://github.com/google/snappy
+---
 # snappy
 
 

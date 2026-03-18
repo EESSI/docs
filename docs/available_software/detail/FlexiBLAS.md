@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'FlexiBLAS is a wrapper library that enables the exchange of the BLAS
+    and LAPACK implementation
+
+    used by a program without recompiling or relinking it.'
+  license: Not confirmed
+  name: FlexiBLAS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.4.5'', ''3.4.4'', ''3.3.1'', ''3.2.1'']'
+  url: https://gitlab.mpi-magdeburg.mpg.de/software/flexiblas-release
+---
 # FlexiBLAS
 
 
@@ -30,9 +62,9 @@ Overview of extensions included in FlexiBLAS installations
 |`FlexiBLAS` version|FlexiBLAS modules that include it|
 | --- | --- |
 |3.2.1|`FlexiBLAS/3.2.1-GCC-12.2.0`|
-|3.3.1|`FlexiBLAS/3.3.1-GCC-13.2.0`<br/>`FlexiBLAS/3.3.1-GCC-12.3.0`|
+|3.3.1|`FlexiBLAS/3.3.1-GCC-12.3.0`<br/>`FlexiBLAS/3.3.1-GCC-13.2.0`|
 |3.4.4|`FlexiBLAS/3.4.4-GCC-13.3.0`|
-|3.4.5|`FlexiBLAS/3.4.5-GCC-14.3.0`<br/>`FlexiBLAS/3.4.5-GCC-14.2.0`<br/>`FlexiBLAS/3.4.5-llvm-compilers-20.1.8`|
+|3.4.5|`FlexiBLAS/3.4.5-GCC-14.2.0`<br/>`FlexiBLAS/3.4.5-GCC-14.3.0`<br/>`FlexiBLAS/3.4.5-llvm-compilers-20.1.8`|
 
 ### LAPACK
 
@@ -40,6 +72,6 @@ Overview of extensions included in FlexiBLAS installations
 |`LAPACK` version|FlexiBLAS modules that include it|
 | --- | --- |
 |3.10.1|`FlexiBLAS/3.2.1-GCC-12.2.0`|
-|3.11.0|`FlexiBLAS/3.3.1-GCC-13.2.0`<br/>`FlexiBLAS/3.3.1-GCC-12.3.0`|
+|3.11.0|`FlexiBLAS/3.3.1-GCC-12.3.0`<br/>`FlexiBLAS/3.3.1-GCC-13.2.0`|
 |3.12.0|`FlexiBLAS/3.4.4-GCC-13.3.0`<br/>`FlexiBLAS/3.4.5-GCC-14.2.0`|
 |3.12.1|`FlexiBLAS/3.4.5-GCC-14.3.0`<br/>`FlexiBLAS/3.4.5-llvm-compilers-20.1.8`|

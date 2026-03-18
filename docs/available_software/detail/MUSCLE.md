@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "MUSCLE is one of the best-performing multiple alignment programs\n\
+    \ according to published benchmark tests, with accuracy and speed that are consistently\n\
+    \ better than CLUSTALW. MUSCLE can align hundreds of sequences in seconds. Most\
+    \ users\n learn everything they need to know about MUSCLE in a few minutes-only\
+    \ a handful of\n command-line options are needed to perform common alignment tasks."
+  license: Not confirmed
+  name: MUSCLE
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''5.1.0'']'
+  url: https://drive5.com/muscle/
+---
 # MUSCLE
 
 

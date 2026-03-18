@@ -1,3 +1,42 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Paramiko is a pure-Python (3.6+) implementation of the SSHv2 protocol,
+
+    providing both client and server functionality. It provides the foundation
+
+    for the high-level SSH library Fabric, which is what we recommend you use for
+
+    common client use-cases such as running remote shell commands or transferring
+
+    files.
+
+    '
+  license: Not confirmed
+  name: paramiko
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.2.0'']'
+  url: https://paramiko.org
+---
 # paramiko
 
 

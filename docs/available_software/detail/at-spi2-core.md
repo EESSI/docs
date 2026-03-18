@@ -1,3 +1,32 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Assistive Technology Service Provider Interface.\n"
+  license: Not confirmed
+  name: at-spi2-core
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.56.2'', ''2.54.0'', ''2.50.0'', ''2.49.91'', ''2.46.0'']'
+  url: https://wiki.gnome.org/Accessibility
+---
 # at-spi2-core
 
 

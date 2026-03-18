@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "matplotlib is a python 2D plotting library which produces publication\
+    \ quality figures in a variety of\n hardcopy formats and interactive environments\
+    \ across platforms. matplotlib can be used in python scripts, the python\n and\
+    \ ipython shell, web application servers, and six graphical user interface toolkits."
+  license: Not confirmed
+  name: matplotlib
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.9.2'', ''3.8.2'', ''3.7.2'', ''3.7.0'', ''3.10.3'']'
+  url: https://matplotlib.org
+---
 # matplotlib
 
 
@@ -39,7 +71,7 @@ Overview of extensions included in matplotlib installations
 
 |`Cycler` version|matplotlib modules that include it|
 | --- | --- |
-|0.11.0|`matplotlib/3.7.2-gfbf-2023a`<br/>`matplotlib/3.7.0-gfbf-2022b`|
+|0.11.0|`matplotlib/3.7.0-gfbf-2022b`<br/>`matplotlib/3.7.2-gfbf-2023a`|
 |0.12.1|`matplotlib/3.8.2-gfbf-2023b`<br/>`matplotlib/3.9.2-gfbf-2024a`|
 
 ### cycler
@@ -64,8 +96,8 @@ Overview of extensions included in matplotlib installations
 
 |`kiwisolver` version|matplotlib modules that include it|
 | --- | --- |
-|1.4.4|`matplotlib/3.7.2-gfbf-2023a`<br/>`matplotlib/3.7.0-gfbf-2022b`|
-|1.4.5|`matplotlib/3.9.2-gfbf-2024a`<br/>`matplotlib/3.8.2-gfbf-2023b`<br/>`matplotlib/3.10.3-gfbf-2025a`|
+|1.4.4|`matplotlib/3.7.0-gfbf-2022b`<br/>`matplotlib/3.7.2-gfbf-2023a`|
+|1.4.5|`matplotlib/3.10.3-gfbf-2025a`<br/>`matplotlib/3.8.2-gfbf-2023b`<br/>`matplotlib/3.9.2-gfbf-2024a`|
 
 ### matplotlib
 

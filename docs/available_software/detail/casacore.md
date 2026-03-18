@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'A suite of C++ libraries for radio astronomy data processing.
+
+    The ephemerides data needs to be in DATA_DIR and the location must be specified
+    at runtime.
+
+    Thus user''s can update them.
+
+    '
+  license: Not confirmed
+  name: casacore
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.5.0'']'
+  url: https://github.com/casacore/casacore
+---
 # casacore
 
 

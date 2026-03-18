@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Scikit-build-core is a complete ground-up rewrite of scikit-build
+    on top of
+
+    modern packaging APIs. It provides a bridge between CMake and the Python build
+
+    system, allowing you to make Python modules with CMake.'
+  license: Not confirmed
+  name: scikit-build-core
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.9.3'', ''0.5.0'', ''0.11.5'', ''0.11.1'', ''0.10.7'', ''0.10.6'']'
+  url: https://scikit-build.readthedocs.io/en/latest/
+---
 # scikit-build-core
 
 
@@ -37,7 +71,7 @@ Overview of extensions included in scikit-build-core installations
 
 |`pyproject-metadata` version|scikit-build-core modules that include it|
 | --- | --- |
-|0.8.0|`scikit-build-core/0.9.3-GCCcore-12.3.0`<br/>`scikit-build-core/0.10.7-GCCcore-13.2.0`<br/>`scikit-build-core/0.5.0-GCCcore-12.3.0`<br/>`scikit-build-core/0.9.3-GCCcore-13.2.0`|
+|0.8.0|`scikit-build-core/0.10.7-GCCcore-13.2.0`<br/>`scikit-build-core/0.5.0-GCCcore-12.3.0`<br/>`scikit-build-core/0.9.3-GCCcore-12.3.0`<br/>`scikit-build-core/0.9.3-GCCcore-13.2.0`|
 |0.9.1|`scikit-build-core/0.11.1-GCCcore-14.2.0`<br/>`scikit-build-core/0.11.5-GCCcore-14.3.0`|
 
 ### scikit_build_core

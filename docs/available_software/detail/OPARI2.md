@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n OPARI2, the successor of Forschungszentrum Juelich's OPARI, is\
+    \ a\n source-to-source instrumentation tool for OpenMP and hybrid codes.\n It\
+    \ surrounds OpenMP directives and runtime library calls with calls\n to the POMP2\
+    \ measurement interface.\n"
+  license: Not confirmed
+  name: OPARI2
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.0.9'', ''2.0.8'']'
+  url: https://www.score-p.org
+---
 # OPARI2
 
 

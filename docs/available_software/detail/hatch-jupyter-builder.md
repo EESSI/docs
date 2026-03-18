@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Hatch Jupyter Builder is a plugin for the hatchling Python build backend.
+    It is
+
+    primarily targeted for package authors who are providing JavaScript as part of
+
+    their Python packages.
+
+    Typical use cases are Jupyter Lab Extensions and Jupyter Widgets.'
+  license: Not confirmed
+  name: hatch-jupyter-builder
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.9.1'']'
+  url: https://hatch-jupyter-builder.readthedocs.io
+---
 # hatch-jupyter-builder
 
 
@@ -28,12 +64,12 @@ Overview of extensions included in hatch-jupyter-builder installations
 
 |`hatch_jupyter_builder` version|hatch-jupyter-builder modules that include it|
 | --- | --- |
-|0.9.1|`hatch-jupyter-builder/0.9.1-GCCcore-12.3.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-14.2.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-13.3.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-14.3.0`|
+|0.9.1|`hatch-jupyter-builder/0.9.1-GCCcore-12.3.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-13.3.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-14.2.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-14.3.0`|
 
 ### hatch_nodejs_version
 
 
 |`hatch_nodejs_version` version|hatch-jupyter-builder modules that include it|
 | --- | --- |
-|0.3.2|`hatch-jupyter-builder/0.9.1-GCCcore-12.3.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-14.2.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-13.3.0`|
+|0.3.2|`hatch-jupyter-builder/0.9.1-GCCcore-12.3.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-13.3.0`<br/>`hatch-jupyter-builder/0.9.1-GCCcore-14.2.0`|
 |0.4.0|`hatch-jupyter-builder/0.9.1-GCCcore-14.3.0`|

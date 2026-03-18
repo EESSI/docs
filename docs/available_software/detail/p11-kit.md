@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Provides a way to load and enumerate PKCS#11 modules.\n Provides a\
+    \ standard configuration setup for installing\n PKCS#11 modules in such a way\
+    \ that they're discoverable.\n Also solves problems with coordinating the use\
+    \ of PKCS#11\n by different components or libraries living in the same process."
+  license: Not confirmed
+  name: p11-kit
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.25.3'', ''0.25.10'']'
+  url: https://p11-glue.freedesktop.org/p11-kit.html
+---
 # p11-kit
 
 

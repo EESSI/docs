@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Transrate is software for de-novo transcriptome assembly quality analysis.\n\
+    \ It examines your assembly in detail and compares it to experimental evidence\
+    \ such as the sequencing reads,\n reporting quality scores for contigs and assemblies.\
+    \ This allows you to choose between assemblers and parameters,\n filter out the\
+    \ bad contigs from an assembly, and help decide when to stop trying to improve\
+    \ the assembly."
+  license: Not confirmed
+  name: Transrate
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.0.3'']'
+  url: https://hibberdlab.com/transrate
+---
 # Transrate
 
 

@@ -1,3 +1,42 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'wxWidgets is a C++ library that lets developers create
+
+    applications for Windows, Mac OS X, Linux and other platforms with a
+
+    single code base. It has popular language bindings for Python, Perl,
+
+    Ruby and many other languages, and unlike other cross-platform toolkits,
+
+    wxWidgets gives applications a truly native look and feel because it
+
+    uses the platform''s native API rather than emulating the GUI.'
+  license: Not confirmed
+  name: wxWidgets
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.2.6'', ''3.2.2.1'']'
+  url: https://www.wxwidgets.org
+---
 # wxWidgets
 
 

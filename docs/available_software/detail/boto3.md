@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Boto3 is the Amazon Web Services (AWS) Software Development Kit
+
+    (SDK) for Python, which allows Python developers to write software that makes
+
+    use of services like Amazon S3 and Amazon EC2.'
+  license: Not confirmed
+  name: boto3
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.28.70'']'
+  url: https://github.com/boto/boto3
+---
 # boto3
 
 

@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Network Security Services (NSS) is a set of libraries designed to\
+    \ support cross-platform development\n of security-enabled client and server applications."
+  license: Not confirmed
+  name: NSS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.94'', ''3.89.1'', ''3.85'', ''3.113'', ''3.104'']'
+  url: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
+---
 # NSS
 
 

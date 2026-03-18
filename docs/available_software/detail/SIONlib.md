@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n SIONlib is a scalable I/O library for parallel access to task-local\
+    \ files.\n The library not only supports writing and reading binary data to or\
+    \ from\n several thousands of processors into a single or a small number of physical\n\
+    \ files, but also provides global open and close functions to access SIONlib\n\
+    \ files in parallel. This package provides a stripped-down installation of\n SIONlib\
+    \ for use with performance tools (e.g., Score-P), with renamed symbols\n to avoid\
+    \ conflicts when an application using SIONlib itself is linked against\n a tool\
+    \ requiring a different SIONlib version.\n"
+  license: Not confirmed
+  name: SIONlib
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.7.7'']'
+  url: https://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/SIONlib/_node.html
+---
 # SIONlib
 
 

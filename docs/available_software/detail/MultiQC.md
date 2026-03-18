@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Aggregate results from bioinformatics analyses across many samples\
+    \ into a single report.\n\n MultiQC searches a given directory for analysis logs\
+    \ and compiles an HTML report. It's a general\n use tool, perfect for summarising\
+    \ the output from numerous bioinformatics tools."
+  license: Not confirmed
+  name: MultiQC
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.14'']'
+  url: https://multiqc.info
+---
 # MultiQC
 
 

@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Zstandard is a real-time compression algorithm, providing high compression\
+    \ ratios.\n It offers a very wide range of compression/speed trade-off, while\
+    \ being backed by a very fast decoder.\n It also offers a special mode for small\
+    \ data, called dictionary compression, and can create dictionaries\n from any\
+    \ sample set."
+  license: Not confirmed
+  name: zstd
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.5.7'', ''1.5.6'', ''1.5.5'', ''1.5.2'']'
+  url: https://facebook.github.io/zstd
+---
 # zstd
 
 

@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: " Coverage.py is a tool for measuring code coverage of Python programs.\n\
+    \ It monitors your program, noting which parts of the code have been executed,\n\
+    \ then analyzes the source to identify code that could have been executed but\
+    \ was not. "
+  license: Not confirmed
+  name: coverage
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''7.4.4'']'
+  url: https://coverage.readthedocs.io
+---
 # coverage
 
 

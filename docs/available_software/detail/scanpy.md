@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Scanpy is a scalable toolkit for analyzing single-cell gene expression\
+    \ data built\n jointly with anndata. It includes preprocessing, visualization,\
+    \ clustering, trajectory inference\n and differential expression testing. The\
+    \ Python-based implementation efficiently deals with\n datasets of more than one\
+    \ million cells.\n"
+  license: Not confirmed
+  name: scanpy
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.9.8'']'
+  url: https://scanpy.readthedocs.io/en/stable/
+---
 # scanpy
 
 

@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Basic Local Alignment Search Tool, or BLAST, is an algorithm\n for\
+    \ comparing primary biological sequence information, such as the amino-acid\n\
+    \ sequences of different proteins or the nucleotides of DNA sequences."
+  license: Not confirmed
+  name: BLAST+
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.17.0'', ''2.14.1'', ''2.14.0'']'
+  url: https://blast.ncbi.nlm.nih.gov/
+---
 # BLAST+
 
 

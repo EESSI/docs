@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "OpenEXR is a high dynamic-range (HDR) image file format developed\
+    \ by Industrial Light & Magic\n for use in computer imaging applications"
+  license: Not confirmed
+  name: OpenEXR
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.3.4'', ''3.2.4'', ''3.2.0'', ''3.1.7'', ''3.1.5'']'
+  url: https://www.openexr.com/
+---
 # OpenEXR
 
 

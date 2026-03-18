@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'CFITSIO is a library of C and Fortran subroutines for reading and
+    writing data files in
+
+    FITS (Flexible Image Transport System) data format.'
+  license: Not confirmed
+  name: CFITSIO
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.4.1'', ''4.3.1'', ''4.3.0'', ''4.2.0'']'
+  url: https://heasarc.gsfc.nasa.gov/fitsio/
+---
 # CFITSIO
 
 

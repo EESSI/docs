@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "The primary goal of libunwind is to define a portable and efficient\
+    \ C programming interface\n (API) to determine the call-chain of a program. The\
+    \ API additionally provides the means to manipulate the\n preserved (callee-saved)\
+    \ state of each call-frame and to resume execution at any point in the call-chain\n\
+    \ (non-local goto). The API supports both local (same-process) and remote (across-process)\
+    \ operation.\n As such, the API is useful in a number of applications"
+  license: Not confirmed
+  name: libunwind
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.8.2'', ''1.8.1'', ''1.6.2'']'
+  url: https://www.nongnu.org/libunwind/
+---
 # libunwind
 
 

@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'MLflow is a platform to streamline machine learning development, including
+    tracking experiments,
+
+    packaging code into reproducible runs, and sharing and deploying models.'
+  license: Not confirmed
+  name: MLflow
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.22.4'', ''2.18.0'', ''2.10.2'']'
+  url: https://mlflow.org
+---
 # MLflow
 
 

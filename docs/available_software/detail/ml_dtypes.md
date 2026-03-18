@@ -1,3 +1,53 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    ml_dtypes is a stand-alone implementation of several NumPy dtype extensions used
+
+    in machine learning libraries, including:
+
+
+    bfloat16: an alternative to the standard float16 format
+
+    float8_*: several experimental 8-bit floating point representations including:
+
+    float8_e4m3b11fnuz
+
+    float8_e4m3fn
+
+    float8_e4m3fnuz
+
+    float8_e5m2
+
+    float8_e5m2fnuz
+
+    '
+  license: Not confirmed
+  name: ml_dtypes
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.3.2'']'
+  url: https://github.com/jax-ml/ml_dtypes
+---
 # ml_dtypes
 
 

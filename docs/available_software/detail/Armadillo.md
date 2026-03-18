@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Armadillo is an open-source C++ linear algebra library (matrix maths)\
+    \ aiming towards\n a good balance between speed and ease of use. Integer, floating\
+    \ point and complex numbers are supported,\n as well as a subset of trigonometric\
+    \ and statistics functions."
+  license: Not confirmed
+  name: Armadillo
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''15.0.1'', ''14.0.3'', ''12.8.0'', ''12.6.2'', ''11.4.3'']'
+  url: https://arma.sourceforge.net/
+---
 # Armadillo
 
 

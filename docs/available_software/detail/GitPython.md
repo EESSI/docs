@@ -1,3 +1,32 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: ' GitPython is a python library used to interact with Git repositories '
+  license: Not confirmed
+  name: GitPython
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.1.43'', ''3.1.42'', ''3.1.40'']'
+  url: https://gitpython.readthedocs.org
+---
 # GitPython
 
 
@@ -24,7 +53,7 @@ Overview of extensions included in GitPython installations
 
 |`gitdb` version|GitPython modules that include it|
 | --- | --- |
-|4.0.11|`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`|
+|4.0.11|`GitPython/3.1.40-GCCcore-12.3.0`<br/>`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`|
 
 ### GitPython
 
@@ -40,4 +69,4 @@ Overview of extensions included in GitPython installations
 
 |`smmap` version|GitPython modules that include it|
 | --- | --- |
-|5.0.1|`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`<br/>`GitPython/3.1.40-GCCcore-12.3.0`|
+|5.0.1|`GitPython/3.1.40-GCCcore-12.3.0`<br/>`GitPython/3.1.42-GCCcore-13.2.0`<br/>`GitPython/3.1.43-GCCcore-13.3.0`|

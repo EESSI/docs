@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'The FITS "World Coordinate System" (WCS) standard defines keywords
+
+    and usage that provide for the description of astronomical coordinate systems
+    in a
+
+    FITS image header.'
+  license: Not confirmed
+  name: WCSLIB
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''7.11'']'
+  url: https://www.atnf.csiro.au/people/mcalabre/WCS/
+---
 # WCSLIB
 
 

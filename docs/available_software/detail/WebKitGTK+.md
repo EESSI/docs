@@ -1,3 +1,42 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'WebKitGTK+ is a full-featured port of the WebKit
+
+    rendering engine, suitable for projects requiring any kind of web
+
+    integration, from hybrid HTML/CSS applications to full-fledged web
+
+    browsers. It offers WebKit''s full functionality and is useful in a wide
+
+    range of systems from desktop computers to embedded systems like phones,
+
+    tablets, and televisions.'
+  license: Not confirmed
+  name: WebKitGTK+
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.41.4'']'
+  url: https://webkitgtk.org/
+---
 # WebKitGTK+
 
 

@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Jupyter interactive notebook server extension that allows users to
+    interact with
+
+    environment modules before launching kernels. The extension uses Lmod''s Python
+
+    interface to accomplish module-related tasks like loading, unloading, saving
+
+    collections, etc.'
+  license: Not confirmed
+  name: jupyterlmod
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''5.3.0'', ''5.2.2'', ''4.0.3'']'
+  url: https://github.com/cmd-ntrf/jupyter-lmod
+---
 # jupyterlmod
 
 
@@ -29,5 +65,5 @@ Overview of extensions included in jupyterlmod installations
 |`jupyterlmod` version|jupyterlmod modules that include it|
 | --- | --- |
 |4.0.3|`jupyterlmod/4.0.3-GCCcore-12.3.0`|
-|5.2.2|`jupyterlmod/5.2.2-GCCcore-14.2.0`<br/>`jupyterlmod/5.2.2-GCCcore-13.3.0`|
+|5.2.2|`jupyterlmod/5.2.2-GCCcore-13.3.0`<br/>`jupyterlmod/5.2.2-GCCcore-14.2.0`|
 |5.3.0|`jupyterlmod/5.3.0-GCCcore-14.3.0`|

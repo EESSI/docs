@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Python is a programming language that lets you work more quickly and\
+    \ integrate your systems\n more effectively."
+  license: Not confirmed
+  name: Python
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.13.5'', ''3.13.1'', ''3.12.3'', ''3.11.5'', ''3.11.3'', ''3.10.8'',
+    ''2.7.18'']'
+  url: https://python.org/
+---
 # Python
 
 
@@ -299,7 +330,7 @@ Overview of extensions included in Python installations
 |3.10.1|`Python/3.13.1-GCCcore-14.2.0`|
 |3.12.0|`Python/3.13.5-GCCcore-14.3.0`|
 |3.8.0|`Python/3.10.8-GCCcore-12.2.0`|
-|3.9.0|`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.11.3-GCCcore-12.3.0`<br/>`Python/3.11.5-GCCcore-13.2.0`|
+|3.9.0|`Python/3.11.3-GCCcore-12.3.0`<br/>`Python/3.11.5-GCCcore-13.2.0`<br/>`Python/3.12.3-GCCcore-13.3.0`|
 
 ### flit_scm
 
@@ -982,8 +1013,8 @@ Overview of extensions included in Python installations
 
 |`tomli` version|Python modules that include it|
 | --- | --- |
-|2.0.1|`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.11.3-GCCcore-12.3.0`<br/>`Python/3.10.8-GCCcore-12.2.0`<br/>`Python/3.11.5-GCCcore-13.2.0`|
-|2.2.1|`Python/3.13.5-GCCcore-14.3.0`<br/>`Python/3.13.1-GCCcore-14.2.0`|
+|2.0.1|`Python/3.10.8-GCCcore-12.2.0`<br/>`Python/3.11.3-GCCcore-12.3.0`<br/>`Python/3.11.5-GCCcore-13.2.0`<br/>`Python/3.12.3-GCCcore-13.3.0`|
+|2.2.1|`Python/3.13.1-GCCcore-14.2.0`<br/>`Python/3.13.5-GCCcore-14.3.0`|
 
 ### tomli_w
 
@@ -1055,7 +1086,7 @@ Overview of extensions included in Python installations
 |0.40.0|`Python/3.11.3-GCCcore-12.3.0`|
 |0.41.2|`Python/3.11.5-GCCcore-13.2.0`|
 |0.43.0|`Python/3.12.3-GCCcore-13.3.0`|
-|0.45.1|`Python/3.13.5-GCCcore-14.3.0`<br/>`Python/3.13.1-GCCcore-14.2.0`|
+|0.45.1|`Python/3.13.1-GCCcore-14.2.0`<br/>`Python/3.13.5-GCCcore-14.3.0`|
 
 ### xlrd
 
