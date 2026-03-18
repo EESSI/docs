@@ -46,6 +46,7 @@ jobs:
           # if detailed software pages in docs/available_software/detail have been updated, then a PR should be opened
           if [[ $(git status --porcelain ./docs/available_software/detail) ]]; then
             echo "Software pages have been changed, PR should be opened"
+            git diff ./docs/available_software/detail
           else
             echo "Software pages have not been changed, no need to open PR"
           fi
