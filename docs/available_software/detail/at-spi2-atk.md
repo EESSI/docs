@@ -1,6 +1,4 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
