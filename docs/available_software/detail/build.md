@@ -27,7 +27,7 @@ Overview of extensions included in build installations
 | --- | --- |
 |1.0.3|`build/1.0.3-GCCcore-12.3.0`|
 |1.2.2.post1|`build/1.2.2.post1-GCCcore-13.3.0`|
-|1.3.0|`build/1.3.0-GCCcore-14.3.0`<br/>`build/1.3.0-GCCcore-14.2.0`|
+|1.3.0|`build/1.3.0-GCCcore-14.2.0`<br/>`build/1.3.0-GCCcore-14.3.0`|
 
 ### packaging
 
@@ -35,12 +35,12 @@ Overview of extensions included in build installations
 |`packaging` version|build modules that include it|
 | --- | --- |
 |24.2|`build/1.2.2.post1-GCCcore-13.3.0`|
-|25.0|`build/1.3.0-GCCcore-14.3.0`<br/>`build/1.3.0-GCCcore-14.2.0`|
+|25.0|`build/1.3.0-GCCcore-14.2.0`<br/>`build/1.3.0-GCCcore-14.3.0`|
 
 ### pyproject_hooks
 
 
 |`pyproject_hooks` version|build modules that include it|
 | --- | --- |
-|1.0.0|`build/1.2.2.post1-GCCcore-13.3.0`<br/>`build/1.0.3-GCCcore-12.3.0`|
-|1.2.0|`build/1.3.0-GCCcore-14.3.0`<br/>`build/1.3.0-GCCcore-14.2.0`|
+|1.0.0|`build/1.0.3-GCCcore-12.3.0`<br/>`build/1.2.2.post1-GCCcore-13.3.0`|
+|1.2.0|`build/1.3.0-GCCcore-14.2.0`<br/>`build/1.3.0-GCCcore-14.3.0`|
