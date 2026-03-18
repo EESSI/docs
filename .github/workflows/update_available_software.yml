@@ -32,8 +32,9 @@ jobs:
 
           # download https://eessi.io/api_data/data/eessi_api_metadata_software.json
           # to where it's expected by docs/available_software/macros.py and scripts/available_software/available_software.py
-          mkdir -p docs/available_software/data
-          cd docs/available_software/data
+          data_dir="docs/available_software/data"
+          mkdir -p ${data_dir}
+          cd ${data_dir}
           curl -OL https://eessi.io/api_data/data/eessi_api_metadata_software.json
           cd -
 
@@ -54,7 +55,7 @@ jobs:
           fi
 
           # remove the data directory containing the original JSON file, or it'll end up in the PR being opened
-          rm -f docs/available_software/data
+          rm -f ${data_dir}
 
       - name: create pull request
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
