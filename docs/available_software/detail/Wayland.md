@@ -33,7 +33,7 @@ Overview of extensions included in Wayland installations
 
 |`wayland` version|Wayland modules that include it|
 | --- | --- |
-|1.22.0|`Wayland/1.22.0-GCCcore-12.3.0`<br/>`Wayland/1.22.0-GCCcore-13.2.0`|
+|1.22.0|`Wayland/1.22.0-GCCcore-13.2.0`<br/>`Wayland/1.22.0-GCCcore-12.3.0`|
 |1.23.0|`Wayland/1.23.0-GCCcore-13.3.0`|
 |1.23.92|`Wayland/1.23.92-GCCcore-14.2.0`|
 |1.24.0|`Wayland/1.24.0-GCCcore-14.3.0`|
@@ -43,7 +43,7 @@ Overview of extensions included in Wayland installations
 
 |`wayland-protocols` version|Wayland modules that include it|
 | --- | --- |
-|1.32|`Wayland/1.22.0-GCCcore-12.3.0`<br/>`Wayland/1.22.0-GCCcore-13.2.0`|
+|1.32|`Wayland/1.22.0-GCCcore-13.2.0`<br/>`Wayland/1.22.0-GCCcore-12.3.0`|
 |1.36|`Wayland/1.23.0-GCCcore-13.3.0`|
 |1.44|`Wayland/1.23.92-GCCcore-14.2.0`|
 |1.45|`Wayland/1.24.0-GCCcore-14.3.0`|
@@ -53,4 +53,4 @@ Overview of extensions included in Wayland installations
 
 |`wayland-utils` version|Wayland modules that include it|
 | --- | --- |
-|1.2.0|`Wayland/1.24.0-GCCcore-14.3.0`<br/>`Wayland/1.23.0-GCCcore-13.3.0`<br/>`Wayland/1.23.92-GCCcore-14.2.0`|
+|1.2.0|`Wayland/1.23.0-GCCcore-13.3.0`<br/>`Wayland/1.24.0-GCCcore-14.3.0`<br/>`Wayland/1.23.92-GCCcore-14.2.0`|
