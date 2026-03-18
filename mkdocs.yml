@@ -37,6 +37,7 @@ nav:
     - Windows and macOS:
       - Windows with WSL: getting_access/eessi_wsl.md
       - macOS with Lima: getting_access/eessi_limactl.md
+      - macOS with container tool: getting_access/eessi_Apple_container_tool.md
     - Configuring EESSI:
       - How to configure EESSI: site_specific_config/host_injections.md
       - GPU support: site_specific_config/gpu.md
@@ -211,7 +212,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Sat, 21 Feb 2026 at 13:03:00 UTC"
+  generated_time: "Wed, 18 Mar 2026 at 10:35:50 UTC"
   slack_invite_url: "https://join.slack.com/t/eessi-hpc/shared_invite/zt-2wg10p26d-m_CnRB89xQq3zk9qxf1k3g"
 extra_javascript:
   # mermaid diagram

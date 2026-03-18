@@ -28,7 +28,7 @@ Overview of extensions included in hatchling installations
 |`editables` version|hatchling modules that include it|
 | --- | --- |
 |0.3|`hatchling/1.18.0-GCCcore-12.3.0`|
-|0.5|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+|0.5|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
 
 ### hatch-docstring-description
 
@@ -50,7 +50,7 @@ Overview of extensions included in hatchling installations
 
 |`hatch-requirements-txt` version|hatchling modules that include it|
 | --- | --- |
-|0.4.1|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.4.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### hatch-vcs
 
@@ -65,23 +65,23 @@ Overview of extensions included in hatchling installations
 
 |`hatch_fancy_pypi_readme` version|hatchling modules that include it|
 | --- | --- |
-|23.1.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
+|23.1.0|`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
 
 ### hatch_vcs
 
 
 |`hatch_vcs` version|hatchling modules that include it|
 | --- | --- |
-|0.3.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
+|0.3.0|`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
 
 ### hatchling
 
 
 |`hatchling` version|hatchling modules that include it|
 | --- | --- |
-|1.18.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
+|1.18.0|`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
 |1.24.2|`hatchling/1.24.2-GCCcore-13.3.0`|
-|1.27.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.27.0|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### pathspec
 
@@ -90,7 +90,7 @@ Overview of extensions included in hatchling installations
 | --- | --- |
 |0.11.1|`hatchling/1.18.0-GCCcore-12.3.0`|
 |0.11.2|`hatchling/1.18.0-GCCcore-13.2.0`|
-|0.12.1|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+|0.12.1|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
 
 ### pluggy
 
