@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'tmux is a terminal multiplexer: it enables a number of
+
+    terminals to be created, accessed, and controlled from a single screen. tmux
+
+    may be detached from a screen and continue running in the background, then
+
+    later reattached.'
+  license: Not confirmed
+  name: tmux
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.4'', ''3.3a'']'
+  url: https://github.com/tmux/tmux/
+---
 # tmux
 
 

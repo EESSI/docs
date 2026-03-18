@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'scikit-bio is an open-source, BSD-licensed Python 3 package providing
+    data structures, algorithms
+
+    and educational resources for bioinformatics.'
+  license: Not confirmed
+  name: scikit-bio
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.6.0'']'
+  url: http://scikit-bio.org
+---
 # scikit-bio
 
 

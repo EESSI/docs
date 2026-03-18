@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'The LLVM Project is a collection of modular and reusable compiler
+
+    and toolchain technologies.'
+  license: Not confirmed
+  name: llvm-compilers
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''20.1.8'']'
+  url: https://llvm.org/
+---
 # llvm-compilers
 
 

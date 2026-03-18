@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'AI-TranspWood - AiiDA workchain to compute the shear viscosity of
+    molecular liquids,
+
+    starting from a SMILES string of a molecule and using GROMACS to perform the molecular
+    dynamics simulations.
+
+    '
+  license: Not confirmed
+  name: AITW-viscosity
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.0.0'']'
+  url: https://www.ai-transpwood-project.eu/
+---
 # AITW-viscosity
 
 

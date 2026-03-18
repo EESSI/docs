@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    PyVO lets you find and retrieve astronomical data available from archives that
+    support standard IVOA virtual
+
+    observatory service protocols.
+
+    '
+  license: Not confirmed
+  name: PyVO
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.7'']'
+  url: https://pyvo.readthedocs.io/
+---
 # PyVO
 
 

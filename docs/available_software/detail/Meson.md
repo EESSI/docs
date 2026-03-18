@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Meson is a cross-platform build system designed to be both as fast
+    and as user friendly as possible.
+  license: Not confirmed
+  name: Meson
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.8.2'', ''1.6.1'', ''1.4.0'', ''1.3.1'', ''1.2.3'', ''1.1.1'',
+    ''0.64.0'']'
+  url: https://mesonbuild.com
+---
 # Meson
 
 

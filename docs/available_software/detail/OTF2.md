@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n The Open Trace Format 2 is a highly scalable, memory efficient\
+    \ event trace\n data format plus support library. It is the new standard trace\
+    \ format for\n Scalasca, Vampir, and TAU and is open for other tools.\n\n"
+  license: Not confirmed
+  name: OTF2
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.1.1'', ''3.0.3'']'
+  url: https://www.score-p.org
+---
 # OTF2
 
 

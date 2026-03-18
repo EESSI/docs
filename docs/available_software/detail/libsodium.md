@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Sodium is a modern, easy-to-use software library for encryption,\
+    \ decryption,\n signatures, password hashing and more.\n"
+  license: Not confirmed
+  name: libsodium
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.0.20'', ''1.0.19'', ''1.0.18'']'
+  url: https://doc.libsodium.org/
+---
 # libsodium
 
 

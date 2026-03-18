@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Ruby is a dynamic, open source programming language with\n a focus\
+    \ on simplicity and productivity. It has an elegant syntax that is\n natural to\
+    \ read and easy to write."
+  license: Not confirmed
+  name: Ruby
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.4.2'', ''3.3.0'', ''3.2.2'']'
+  url: https://www.ruby-lang.org
+---
 # Ruby
 
 

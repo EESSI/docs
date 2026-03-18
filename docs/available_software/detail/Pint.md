@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Pint is a Python package to define, operate and
+
+    manipulate physical quantities: the product of a numerical value and a
+
+    unit of measurement. It allows arithmetic operations between them and
+
+    conversions from and to different units.'
+  license: Not confirmed
+  name: Pint
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.24.4'', ''0.24'', ''0.23'']'
+  url: https://github.com/hgrecco/pint
+---
 # Pint
 
 
@@ -34,7 +69,7 @@ Overview of extensions included in Pint installations
 
 |`flexcache` version|Pint modules that include it|
 | --- | --- |
-|0.3|`Pint/0.24.4-GCCcore-14.2.0`<br/>`Pint/0.24-GCCcore-13.2.0`|
+|0.3|`Pint/0.24-GCCcore-13.2.0`<br/>`Pint/0.24.4-GCCcore-14.2.0`|
 
 ### flexparser
 

@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'The Boehm-Demers-Weiser conservative garbage collector can be used
+    as a
+
+    garbage collecting replacement for C malloc or C++ new.
+
+    '
+  license: Not confirmed
+  name: gc
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''8.2.4'']'
+  url: https://hboehm.info/gc/
+---
 # gc
 
 

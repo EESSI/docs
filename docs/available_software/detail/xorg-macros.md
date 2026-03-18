@@ -1,3 +1,32 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: X.org macros utilities.
+  license: Not confirmed
+  name: xorg-macros
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.20.2'', ''1.20.1'', ''1.20.0'', ''1.19.3'']'
+  url: https://cgit.freedesktop.org/xorg/util/macros
+---
 # xorg-macros
 
 

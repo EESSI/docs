@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Acceptable password hashing for your software and your servers (but
+    you should
+
+    really use argon2id or scrypt)
+
+    '
+  license: Not confirmed
+  name: bcrypt
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.0.1'']'
+  url: https://github.com/pyca/bcrypt/
+---
 # bcrypt
 
 

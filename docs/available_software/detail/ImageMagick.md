@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: ImageMagick is a software suite to create, edit, compose, or convert
+    bitmap images
+  license: Not confirmed
+  name: ImageMagick
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''7.1.1-38'', ''7.1.1-34'', ''7.1.1-15'', ''7.1.0-53'']'
+  url: https://www.imagemagick.org/
+---
 # ImageMagick
 
 

@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'The awk utility interprets a special-purpose programming language
+    that makes it possible to handle
+
+    simple data-reformatting jobs with just a few lines of code.'
+  license: Not confirmed
+  name: gawk
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''5.3.0'']'
+  url: https://www.gnu.org/software/gawk
+---
 # gawk
 
 

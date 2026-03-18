@@ -1,3 +1,32 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: ruamel.yaml is a YAML 1.2 loader/dumper package for Python.
+  license: Not confirmed
+  name: ruamel.yaml
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.18.6'', ''0.17.32'']'
+  url: https://sourceforge.net/projects/ruamel-yaml
+---
 # ruamel.yaml
 
 

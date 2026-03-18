@@ -1,3 +1,42 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Gotcha is a library that wraps functions. Tools can use gotcha to
+    install hooks into other
+
+    libraries, for example putting a wrapper function around libc''s malloc. It is
+    similar to LD_PRELOAD, but
+
+    operates via a programmable API. This enables easy methods of accomplishing tasks
+    like code instrumentation
+
+    or wholesale replacement of mechanisms in programs without disrupting their source
+    code.'
+  license: Not confirmed
+  name: GOTCHA
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.0.8'']'
+  url: https://gotcha.readthedocs.io/en/latest/
+---
 # GOTCHA
 
 

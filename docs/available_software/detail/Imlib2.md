@@ -1,3 +1,44 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    This is the Imlib 2 library - a library that does image file loading and
+
+    saving as well as rendering, manipulation, arbitrary polygon support, etc.
+
+    It does ALL of these operations FAST. Imlib2 also tries to be highly
+
+    intelligent about doing them, so writing naive programs can be done
+
+    easily, without sacrificing speed.
+
+    '
+  license: Not confirmed
+  name: Imlib2
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.12.3'']'
+  url: https://docs.enlightenment.org/api/imlib2/html/
+---
 # Imlib2
 
 

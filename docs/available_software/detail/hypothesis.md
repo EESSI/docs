@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Hypothesis is an advanced testing library for Python. It lets you\
+    \ write tests which are parametrized\n by a source of examples, and then generates\
+    \ simple and comprehensible examples that make your tests fail. This lets\n you\
+    \ find more bugs in your code with less work."
+  license: Not confirmed
+  name: hypothesis
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''6.90.0'', ''6.82.0'', ''6.68.2'', ''6.133.2'', ''6.103.1'']'
+  url: https://github.com/HypothesisWorks/hypothesis
+---
 # hypothesis
 
 

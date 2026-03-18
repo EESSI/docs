@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'A small C++ header library which makes it easier to write
+
+    Python extension modules. The primary feature is a PyObject smart pointer
+
+    which automatically handles reference counting and provides convenience
+
+    methods for performing common object operations.'
+  license: Not confirmed
+  name: cppy
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.3.1'', ''1.2.1'']'
+  url: https://github.com/nucleic/cppy
+---
 # cppy
 
 

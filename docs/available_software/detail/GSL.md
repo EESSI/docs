@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "The GNU Scientific Library (GSL) is a numerical library for C and\
+    \ C++ programmers.\n The library provides a wide range of mathematical routines\
+    \ such as random number generators, special functions\n and least-squares fitting."
+  license: Not confirmed
+  name: GSL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.8'', ''2.7'']'
+  url: https://www.gnu.org/software/gsl/
+---
 # GSL
 
 

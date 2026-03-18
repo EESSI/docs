@@ -1,3 +1,44 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    Check is a unit testing framework for C. It features a simple interface for
+
+    defining unit tests, putting little in the way of the developer. Tests are
+
+    run in a separate address space, so both assertion failures and code errors
+
+    that cause segmentation faults or other signals can be caught. Test results
+
+    are reportable in the following: Subunit, TAP, XML, and a generic logging
+
+    format.'
+  license: Not confirmed
+  name: Check
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.15.2'']'
+  url: https://libcheck.github.io/check/
+---
 # Check
 
 

@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "pkgconf is a program which helps to configure compiler and linker\
+    \ flags for development libraries.\n It is similar to pkg-config from freedesktop.org."
+  license: Not confirmed
+  name: pkgconf
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.4.3'', ''2.3.0'', ''2.2.0'', ''2.0.3'', ''1.9.5'', ''1.9.3'',
+    ''1.8.0'']'
+  url: https://github.com/pkgconf/pkgconf
+---
 # pkgconf
 
 

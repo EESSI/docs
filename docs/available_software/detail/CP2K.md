@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "CP2K is a freely available (GPL) program, written in Fortran 95, to\
+    \ perform atomistic and molecular\n simulations of solid state, liquid, molecular\
+    \ and biological systems. It provides a general framework for different\n methods\
+    \ such as e.g. density functional theory (DFT) using a mixed Gaussian and plane\
+    \ waves approach (GPW), and\n classical pair and many-body potentials. "
+  license: Not confirmed
+  name: CP2K
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2023.1'']'
+  url: https://www.cp2k.org/
+---
 # CP2K
 
 

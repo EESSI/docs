@@ -1,3 +1,49 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    Open Graphics Library (OpenGL) is a cross-language, cross-platform application
+
+    programming interface (API) for rendering 2D and 3D vector graphics.
+
+
+    This module is a bundle of software required for OpenGL rendering.
+
+    It provides Mesa as an open-source implementation of the OpenGL specification
+
+    with software rendering and AMD GPU support, libglvnd for a vendor neutral
+
+    dispatch layer for rendering with both NVIDIA GPUs & Mesa, Mesa-demos for
+
+    sample applications, and GLU as an computer graphics library utilizing OpenGL.
+
+    '
+  license: Not confirmed
+  name: OpenGL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2025.09'']'
+  url: http://www.opengl.org/
+---
 # OpenGL
 
 

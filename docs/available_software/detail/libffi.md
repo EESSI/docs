@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "The libffi library provides a portable, high level programming interface\
+    \ to\n various calling conventions. This allows a programmer to call any function\n\
+    \ specified by a call interface description at run-time."
+  license: Not confirmed
+  name: libffi
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.5.1'', ''3.4.5'', ''3.4.4'']'
+  url: https://sourceware.org/libffi/
+---
 # libffi
 
 

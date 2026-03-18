@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "GTK+ is the primary library used to construct user interfaces in GNOME.\
+    \ It\n provides all the user interface controls, or widgets, used in a common\n\
+    \ graphical application. Its object-oriented API allows you to construct\n user\
+    \ interfaces without dealing with the low-level details of drawing and\n device\
+    \ interaction.\n"
+  license: Not confirmed
+  name: GTK3
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.24.43'', ''3.24.42'', ''3.24.39'', ''3.24.37'', ''3.24.35'']'
+  url: https://developer.gnome.org/gtk3/stable/
+---
 # GTK3
 
 
@@ -53,5 +86,5 @@ Overview of extensions included in GTK3 installations
 
 |`hicolor-icon-theme` version|GTK3 modules that include it|
 | --- | --- |
-|0.17|`GTK3/3.24.37-GCCcore-12.3.0`<br/>`GTK3/3.24.35-GCCcore-12.2.0`<br/>`GTK3/3.24.39-GCCcore-13.2.0`|
-|0.18|`GTK3/3.24.43-GCCcore-14.3.0`<br/>`GTK3/3.24.42-GCCcore-13.3.0`|
+|0.17|`GTK3/3.24.35-GCCcore-12.2.0`<br/>`GTK3/3.24.37-GCCcore-12.3.0`<br/>`GTK3/3.24.39-GCCcore-13.2.0`|
+|0.18|`GTK3/3.24.42-GCCcore-13.3.0`<br/>`GTK3/3.24.43-GCCcore-14.3.0`|

@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Doxygen is a documentation system for C++, C, Java, Objective-C,\
+    \ Python,\n IDL (Corba and Microsoft flavors), Fortran, VHDL, PHP, C#, and to\
+    \ some\n extent D.\n"
+  license: Not confirmed
+  name: Doxygen
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.9.8'', ''1.9.7'', ''1.9.5'', ''1.14.0'', ''1.11.0'']'
+  url: https://www.doxygen.org
+---
 # Doxygen
 
 

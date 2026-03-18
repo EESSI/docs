@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    A scalable, efficient, cross-platform (Linux/macOS) and easy-to-use workflow engine
+    in pure Python.
+
+    This installation contains toil, with the cwl extras.
+
+    '
+  license: Not confirmed
+  name: toil-cwl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''8.2.0'']'
+  url: https://github.com/DataBiosphere/toil
+---
 # toil-cwl
 
 

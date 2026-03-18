@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: " Little CMS intends to be an OPEN SOURCE small-footprint color management\
+    \ engine,\n with special focus on accuracy and performance. "
+  license: Not confirmed
+  name: LittleCMS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.17'', ''2.16'', ''2.15'', ''2.14'']'
+  url: https://www.littlecms.com/
+---
 # LittleCMS
 
 

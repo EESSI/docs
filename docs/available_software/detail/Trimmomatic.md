@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Trimmomatic performs a variety of useful trimming tasks for illumina\n\
+    \ paired-end and single ended data.The selection of trimming steps and their associated\n\
+    \ parameters are supplied on the command line. "
+  license: Not confirmed
+  name: Trimmomatic
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.39'']'
+  url: http://www.usadellab.org/cms/?page=trimmomatic
+---
 # Trimmomatic
 
 

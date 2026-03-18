@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'The aim of the wrapt module is to provide a transparent object
+
+    proxy for Python, which can be used as the basis for the construction of
+
+    function wrappers and decorator functions.'
+  license: Not confirmed
+  name: wrapt
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.16.0'', ''1.15.0'']'
+  url: https://pypi.org/project/wrapt/
+---
 # wrapt
 
 

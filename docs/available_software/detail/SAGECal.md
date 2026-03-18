@@ -1,3 +1,42 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    SAGECal is a fast, distributed and GPU accelerated radio astronomial
+
+    calibration package. The many optimization algorithms in SAGECal are
+
+    implemented in a computationally efficient way and can be used in many
+
+    other applications.
+
+    '
+  license: Not confirmed
+  name: SAGECal
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.8.4'']'
+  url: https://sagecal.sourceforge.net/
+---
 # SAGECal
 
 

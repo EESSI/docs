@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "A Load Balancing Library (ALL) aims to provide an easy way to include\
+    \ dynamic\ndomain-based load balancing into particle based simulation codes. The\
+    \ library\nis developed in the Simulation Laboratory Molecular Systems of the\
+    \ J\xFClich\nSupercomputing Centre at Forschungszentrum J\xFClich."
+  license: Not confirmed
+  name: ALL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.9.2'']'
+  url: https://gitlab.jsc.fz-juelich.de/SLMS/loadbalancing
+---
 # ALL
 
 

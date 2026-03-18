@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n pigz, which stands for parallel implementation of gzip, is a fully\n\
+    \ functional replacement for gzip that exploits multiple processors and multiple\n\
+    \ cores to the hilt when compressing data. pigz was written by Mark Adler, and\n\
+    \ uses the zlib and pthread libraries.\n"
+  license: Not confirmed
+  name: pigz
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.8'']'
+  url: https://zlib.net/pigz/
+---
 # pigz
 
 

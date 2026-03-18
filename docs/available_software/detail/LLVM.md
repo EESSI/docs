@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "The LLVM Core libraries provide a modern source- and target-independent\n\
+    \ optimizer, along with code generation support for many popular CPUs\n (as well\
+    \ as some less common ones!) These libraries are built around a well\n specified\
+    \ code representation known as the LLVM intermediate representation\n (\"LLVM\
+    \ IR\"). The LLVM Core libraries are well documented, and it is\n particularly\
+    \ easy to invent your own language (or port an existing compiler)\n to use LLVM\
+    \ as an optimizer and code generator."
+  license: Not confirmed
+  name: LLVM
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''20.1.8'', ''20.1.7'', ''18.1.8'', ''16.0.6'', ''15.0.5'', ''14.0.6'']'
+  url: https://llvm.org/
+---
 # LLVM
 
 

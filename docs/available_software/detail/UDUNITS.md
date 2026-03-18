@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "UDUNITS supports conversion of unit specifications between formatted\
+    \ and binary forms,\n arithmetic manipulation of units, and conversion of values\
+    \ between compatible scales of measurement."
+  license: Not confirmed
+  name: UDUNITS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.2.28'']'
+  url: https://www.unidata.ucar.edu/software/udunits/
+---
 # UDUNITS
 
 

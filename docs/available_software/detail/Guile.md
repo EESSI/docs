@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Guile is a programming language, designed to help programmers create\
+    \ flexible\n applications that can be extended by users or other programmers with\
+    \ plug-ins,\n modules, or scripts.\n"
+  license: Not confirmed
+  name: Guile
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.0.9'']'
+  url: https://www.gnu.org/software/guile/
+---
 # Guile
 
 

@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Gnu Mpc is a C library for the arithmetic of\n complex numbers with\
+    \ arbitrarily high precision and correct\n rounding of the result. It extends\
+    \ the principles of the IEEE-754\n standard for fixed precision real floating\
+    \ point numbers to\n complex numbers, providing well-defined semantics for every\n\
+    \ operation. At the same time, speed of operation at high precision\n is a major\
+    \ design goal."
+  license: Not confirmed
+  name: MPC
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.3.1'']'
+  url: http://www.multiprecision.org/
+---
 # MPC
 
 

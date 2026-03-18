@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Wraps the wxWidgets C++ toolkit and provides access to the user interface
+    portions of the wxWidgets
+
+    API, enabling Python applications to have a native GUI on Windows, Macs or Unix
+    systems, with a native look and feel
+
+    and requiring very little (if any) platform specific code.'
+  license: Not confirmed
+  name: wxPython
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.2.1'']'
+  url: https://www.wxpython.org/
+---
 # wxPython
 
 

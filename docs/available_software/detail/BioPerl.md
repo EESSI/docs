@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Bioperl is the product of a community effort to produce Perl code\
+    \ which is useful in biology.\n Examples include Sequence objects, Alignment objects\
+    \ and database searching objects."
+  license: Not confirmed
+  name: BioPerl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.7.8'']'
+  url: http://www.bioperl.org/
+---
 # BioPerl
 
 

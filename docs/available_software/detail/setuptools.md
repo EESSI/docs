@@ -1,3 +1,32 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Easily download, build, install, upgrade, and uninstall Python packages
+  license: Not confirmed
+  name: setuptools
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''80.9.0'', ''64.0.3'']'
+  url: https://pypi.org/project/setuptools
+---
 # setuptools
 
 
@@ -25,11 +54,11 @@ Overview of extensions included in setuptools installations
 
 |`packaging` version|setuptools modules that include it|
 | --- | --- |
-|25.0|`setuptools/80.9.0-GCCcore-14.2.0`<br/>`setuptools/80.9.0-GCCcore-12.3.0`<br/>`setuptools/80.9.0-GCCcore-13.2.0`|
+|25.0|`setuptools/80.9.0-GCCcore-12.3.0`<br/>`setuptools/80.9.0-GCCcore-13.2.0`<br/>`setuptools/80.9.0-GCCcore-14.2.0`|
 
 ### setuptools
 
 
 |`setuptools` version|setuptools modules that include it|
 | --- | --- |
-|80.9.0|`setuptools/80.9.0-GCCcore-14.2.0`<br/>`setuptools/80.9.0-GCCcore-12.3.0`<br/>`setuptools/80.9.0-GCCcore-13.2.0`|
+|80.9.0|`setuptools/80.9.0-GCCcore-12.3.0`<br/>`setuptools/80.9.0-GCCcore-13.2.0`<br/>`setuptools/80.9.0-GCCcore-14.2.0`|

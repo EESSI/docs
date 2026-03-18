@@ -1,3 +1,40 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'A full-featured and high-performance (see benchmark)
+
+    event loop that is loosely modelled after libevent, but without its
+
+    limitations and bugs. It is used in GNU Virtual Private Ethernet,
+
+    rxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many
+
+    other programs.'
+  license: Not confirmed
+  name: libev
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.33'']'
+  url: http://software.schmorp.de/pkg/libev.html
+---
 # libev
 
 

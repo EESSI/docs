@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Clp (Coin-or linear programming) is an open-source linear programming
+    solver.
+
+    It is primarily meant to be used as a callable library, but a basic,
+
+    stand-alone executable version is also available.'
+  license: Not confirmed
+  name: Clp
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.17.9'', ''1.17.10'']'
+  url: https://github.com/coin-or/Clp
+---
 # Clp
 
 

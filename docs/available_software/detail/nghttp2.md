@@ -1,3 +1,44 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    This is an implementation of the Hypertext Transfer Protocol version 2 in C.
+
+
+    The framing layer of HTTP/2 is implemented as a reusable C library.
+
+    On top of that, we have implemented an HTTP/2 client, server and proxy.
+
+    We have also developed load test and benchmarking tools for HTTP/2.
+
+
+    An HPACK encoder and decoder are available as a public API.'
+  license: Not confirmed
+  name: nghttp2
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.58.0'']'
+  url: https://github.com/nghttp2/nghttp2
+---
 # nghttp2
 
 

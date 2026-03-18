@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n libjpeg-turbo is a fork of the original IJG libjpeg which uses\
+    \ SIMD to\n accelerate baseline JPEG compression and decompression. libjpeg is\
+    \ a library\n that implements JPEG image encoding, decoding and transcoding.\n"
+  license: Not confirmed
+  name: libjpeg-turbo
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.1.1'', ''3.1.0'', ''3.0.1'', ''2.1.5.1'', ''2.1.4'']'
+  url: https://sourceforge.net/projects/libjpeg-turbo/
+---
 # libjpeg-turbo
 
 

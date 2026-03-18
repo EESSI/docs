@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Node.js is a platform built on Chrome's JavaScript runtime\n for easily\
+    \ building fast, scalable network applications. Node.js uses an\n event-driven,\
+    \ non-blocking I/O model that makes it lightweight and efficient,\n perfect for\
+    \ data-intensive real-time applications that run across distributed devices."
+  license: Not confirmed
+  name: nodejs
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''22.16.0'', ''20.9.0'', ''20.13.1'', ''18.17.1'', ''18.12.1'']'
+  url: https://nodejs.org
+---
 # nodejs
 
 

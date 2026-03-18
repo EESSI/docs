@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    Extract TEC, vTEC, Earthmagnetic field and Rotation Measures from GPS and WMM
+    data for radio interferometry observations
+
+    '
+  license: Not confirmed
+  name: RMextract
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.5.1'']'
+  url: https://github.com/lofar-astron/RMextract
+---
 # RMextract
 
 

@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "GDAL is a translator library for raster geospatial data formats that\
+    \ is released under an X/MIT style\n Open Source license by the Open Source Geospatial\
+    \ Foundation. As a library, it presents a single abstract data model\n to the\
+    \ calling application for all supported formats. It also comes with a variety\
+    \ of useful commandline utilities for\n data translation and processing."
+  license: Not confirmed
+  name: GDAL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.9.0'', ''3.7.1'', ''3.6.2'', ''3.10.0'']'
+  url: https://www.gdal.org
+---
 # GDAL
 
 

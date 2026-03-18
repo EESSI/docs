@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'p7zip is a quick port of 7z.exe and 7za.exe (CLI version of
+
+    7zip) for Unix. 7-Zip is a file archiver with highest compression ratio.'
+  license: Not confirmed
+  name: p7zip
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''17.05'']'
+  url: https://github.com/p7zip-project/p7zip/
+---
 # p7zip
 
 

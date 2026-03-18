@@ -1,3 +1,48 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Minimap2 is a fast sequence mapping and alignment
+
+    program that can find overlaps between long noisy reads, or map long
+
+    reads or their assemblies to a reference genome optionally with detailed
+
+    alignment (i.e. CIGAR). At present, it works efficiently with query
+
+    sequences from a few kilobases to ~100 megabases in length at an error
+
+    rate ~15%. Minimap2 outputs in the PAF or the SAM format. On limited
+
+    test data sets, minimap2 is over 20 times faster than most other
+
+    long-read aligners. It will replace BWA-MEM for long reads and contig
+
+    alignment.'
+  license: Not confirmed
+  name: minimap2
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.30'']'
+  url: https://github.com/lh3/minimap2
+---
 # minimap2
 
 

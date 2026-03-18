@@ -1,3 +1,42 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    This is the reference implementation of the Common Workflow Language open
+
+    standards. It is intended to be feature complete and provide comprehensive
+
+    validation of CWL files as well as provide other tools related to working with
+
+    CWL.
+
+    '
+  license: Not confirmed
+  name: cwltool
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.1.20250110105449'']'
+  url: https://cwltool.readthedocs.io/
+---
 # cwltool
 
 

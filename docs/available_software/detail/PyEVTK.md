@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'EVTK (Export VTK) package allows exporting data to binary VTK files
+    for visualization and
+
+    data analysis with any of the visualization packages that support VTK files'
+  license: Not confirmed
+  name: PyEVTK
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.6.0'']'
+  url: https://github.com/paulo-herrera/PyEVTK
+---
 # PyEVTK
 
 

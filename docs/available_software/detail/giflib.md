@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'giflib is a library for reading and writing gif images.
+
+    It is API and ABI compatible with libungif which was in wide use while
+
+    the LZW compression algorithm was patented.'
+  license: Not confirmed
+  name: giflib
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''5.2.2'', ''5.2.1'']'
+  url: http://giflib.sourceforge.net/
+---
 # giflib
 
 

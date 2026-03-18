@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "ZeroMQ looks like an embeddable networking library but acts like a\
+    \ concurrency framework.\n It gives you sockets that carry atomic messages across\
+    \ various transports like in-process,\n inter-process, TCP, and multicast. You\
+    \ can connect sockets N-to-N with patterns like fanout,\n pub-sub, task distribution,\
+    \ and request-reply. It's fast enough to be the fabric for clustered\n products.\
+    \ Its asynchronous I/O model gives you scalable multicore applications, built\
+    \ as asynchronous\n message-processing tasks. It has a score of language APIs\
+    \ and runs on most operating systems."
+  license: Not confirmed
+  name: ZeroMQ
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.3.5'', ''4.3.4'']'
+  url: https://www.zeromq.org/
+---
 # ZeroMQ
 
 

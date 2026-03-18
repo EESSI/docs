@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Applet for cargo to build and install C-ABI compatible dynamic and
+    static
+
+    libraries. It produces and installs a correct pkg-config file, a static library
+
+    and a dynamic library, and a C header to be used by any C (and C-compatible)
+
+    software.'
+  license: Not confirmed
+  name: cargo-c
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.9.32'', ''0.10.15'']'
+  url: https://github.com/lu-zero/cargo-c
+---
 # cargo-c
 
 

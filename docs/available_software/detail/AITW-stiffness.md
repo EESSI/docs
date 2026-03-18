@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'AI-TranspWood - Neural network surrogate model for computing macroscopic
+    stiffness parameters of
+
+    wood fibers from given microscopic parameters.
+
+    '
+  license: Not confirmed
+  name: AITW-stiffness
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.0.0'']'
+  url: https://www.ai-transpwood-project.eu/
+---
 # AITW-stiffness
 
 

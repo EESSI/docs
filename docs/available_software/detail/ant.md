@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Apache Ant is a Java library and command-line tool whose mission is\
+    \ to drive processes described in\n build files as targets and extension points\
+    \ dependent upon each other. The main known usage of Ant is the build of\n Java\
+    \ applications."
+  license: Not confirmed
+  name: ant
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.10.14'', ''1.10.12'']'
+  url: https://ant.apache.org/
+---
 # ant
 
 

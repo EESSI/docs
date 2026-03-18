@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "SuperLU is a general purpose library for the direct solution of large,\
+    \ sparse, nonsymmetric systems\n of linear equations on high performance machines."
+  license: Not confirmed
+  name: SuperLU_DIST
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''9.1.0'', ''8.2.1'', ''8.1.2'']'
+  url: https://crd-legacy.lbl.gov/~xiaoye/SuperLU/
+---
 # SuperLU_DIST
 
 

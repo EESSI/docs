@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "SAM Tools provide various utilities for manipulating alignments in\
+    \ the SAM format, \n including sorting, merging, indexing and generating alignments\
+    \ in a per-position format."
+  license: Not confirmed
+  name: SAMtools
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.18'', ''1.17'']'
+  url: https://www.htslib.org/
+---
 # SAMtools
 
 

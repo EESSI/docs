@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "The xprop utility is for displaying window and font properties in\
+    \ an X server.\n One window or font is selected using the command line arguments\
+    \ or possibly\n in the case of a window, by clicking on the desired window. A\
+    \ list of\n properties is then given, possibly with formatting information."
+  license: Not confirmed
+  name: xprop
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.2.8'', ''1.2.6'']'
+  url: https://www.x.org/wiki/
+---
 # xprop
 
 

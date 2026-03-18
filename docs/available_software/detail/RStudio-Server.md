@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "This is the RStudio Server version.\nRStudio is a set of integrated\
+    \ tools designed to help you be more productive with R.\n\nThe server can be started\
+    \ with:\n  rserver --server-daemonize=0 --www-port=8787\n\nIf you need a database\
+    \ config one can be created with:\n  MYTMP=`mktemp -d` && echo -e \"provider=sqlite\\\
+    ndirectory=${MYTMP}/sqlite\" > \"${MYTMP}/db.conf\"\nand then used with:\n  rserver\
+    \ ... --database-config-file=\"${MYTMP}/db.conf\"\n"
+  license: Not confirmed
+  name: RStudio-Server
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2024.12.0+467'', ''2024.09.0+375'']'
+  url: https://www.rstudio.com/
+---
 # RStudio-Server
 
 

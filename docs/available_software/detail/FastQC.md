@@ -1,3 +1,40 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'FastQC is a quality control application for high throughput
+
+    sequence data. It reads in sequence data in a variety of formats and can either
+
+    provide an interactive application to review the results of several different
+
+    QC checks, or create an HTML based report which can be integrated into a
+
+    pipeline.'
+  license: Not confirmed
+  name: FastQC
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.12.1'']'
+  url: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+---
 # FastQC
 
 

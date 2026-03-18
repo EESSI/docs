@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n CMake, the cross-platform, open-source build system.  CMake is\
+    \ a family of\n tools designed to build, test and package software.\n"
+  license: Not confirmed
+  name: CMake
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.0.3'', ''3.31.8'', ''3.31.3'', ''3.29.3'', ''3.27.6'', ''3.26.3'',
+    ''3.24.3'', ''3.18.4'']'
+  url: https://www.cmake.org
+---
 # CMake
 
 

@@ -1,3 +1,40 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    PDAL is Point Data Abstraction Library. It is a C/C++ open source library and
+    applications for
+
+    translating and processing point cloud data. It is not limited to LiDAR data,
+
+    although the focus and impetus for many of the tools in the library have their
+    origins in LiDAR.'
+  license: Not confirmed
+  name: PDAL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.8.2'']'
+  url: https://pdal.io/
+---
 # PDAL
 
 

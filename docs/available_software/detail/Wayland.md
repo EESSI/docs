@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\nWayland is a project to define a protocol for a compositor to talk\
+    \ to\n its clients as well as a library implementation of the protocol.  The\n\
+    \ compositor can be a standalone display server running on Linux kernel\n modesetting\
+    \ and evdev input devices, an X application, or a wayland\n client itself.  The\
+    \ clients can be traditional applications, X servers\n (rootless or fullscreen)\
+    \ or other display servers.\n"
+  license: Not confirmed
+  name: Wayland
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.24.0'', ''1.23.92'', ''1.23.0'', ''1.22.0'']'
+  url: https://wayland.freedesktop.org/
+---
 # Wayland
 
 
@@ -33,7 +67,7 @@ Overview of extensions included in Wayland installations
 
 |`wayland` version|Wayland modules that include it|
 | --- | --- |
-|1.22.0|`Wayland/1.22.0-GCCcore-13.2.0`<br/>`Wayland/1.22.0-GCCcore-12.3.0`|
+|1.22.0|`Wayland/1.22.0-GCCcore-12.3.0`<br/>`Wayland/1.22.0-GCCcore-13.2.0`|
 |1.23.0|`Wayland/1.23.0-GCCcore-13.3.0`|
 |1.23.92|`Wayland/1.23.92-GCCcore-14.2.0`|
 |1.24.0|`Wayland/1.24.0-GCCcore-14.3.0`|
@@ -43,7 +77,7 @@ Overview of extensions included in Wayland installations
 
 |`wayland-protocols` version|Wayland modules that include it|
 | --- | --- |
-|1.32|`Wayland/1.22.0-GCCcore-13.2.0`<br/>`Wayland/1.22.0-GCCcore-12.3.0`|
+|1.32|`Wayland/1.22.0-GCCcore-12.3.0`<br/>`Wayland/1.22.0-GCCcore-13.2.0`|
 |1.36|`Wayland/1.23.0-GCCcore-13.3.0`|
 |1.44|`Wayland/1.23.92-GCCcore-14.2.0`|
 |1.45|`Wayland/1.24.0-GCCcore-14.3.0`|
@@ -53,4 +87,4 @@ Overview of extensions included in Wayland installations
 
 |`wayland-utils` version|Wayland modules that include it|
 | --- | --- |
-|1.2.0|`Wayland/1.23.0-GCCcore-13.3.0`<br/>`Wayland/1.24.0-GCCcore-14.3.0`<br/>`Wayland/1.23.92-GCCcore-14.2.0`|
+|1.2.0|`Wayland/1.23.0-GCCcore-13.3.0`<br/>`Wayland/1.23.92-GCCcore-14.2.0`<br/>`Wayland/1.24.0-GCCcore-14.3.0`|

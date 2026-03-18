@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Xorg is a full featured X server that was originally designed for
+    UNIX and UNIX-like operating
+
+    systems'
+  license: Not confirmed
+  name: Xwayland
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''24.1.9'']'
+  url: https://www.x.org/releases/X11R7.6/doc/man/man1/Xorg.1.xhtml
+---
 # Xwayland
 
 

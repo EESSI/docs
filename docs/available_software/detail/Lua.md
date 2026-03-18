@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Lua is a powerful, fast, lightweight, embeddable scripting language.\n\
+    \ Lua combines simple procedural syntax with powerful data description constructs\
+    \ based\n on associative arrays and extensible semantics. Lua is dynamically typed,\n\
+    \ runs by interpreting bytecode for a register-based virtual machine,\n and has\
+    \ automatic memory management with incremental garbage collection,\n making it\
+    \ ideal for configuration, scripting, and rapid prototyping."
+  license: Not confirmed
+  name: Lua
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''5.4.7'', ''5.4.6'', ''5.4.4'']'
+  url: https://www.lua.org/
+---
 # Lua
 
 

@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'gRPC is a modern, open source, high-performance remote procedure call
+    (RPC)
+
+    framework that can run anywhere. gRPC enables client and server applications to
+
+    communicate transparently, and simplifies the building of connected systems.'
+  license: Not confirmed
+  name: grpcio
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.70.0'', ''1.57.0'']'
+  url: https://grpc.io/
+---
 # grpcio
 
 

@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\nThe BIOM file format (canonically pronounced biome) is designed\
+    \ to be\n a general-use format for representing biological sample by observation\n\
+    \ contingency tables. BIOM is a recognized standard for the Earth Microbiome\n\
+    \ Project and is a Genomics Standards Consortium supported project.\n"
+  license: Not confirmed
+  name: biom-format
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.1.15'']'
+  url: https://biom-format.org
+---
 # biom-format
 
 

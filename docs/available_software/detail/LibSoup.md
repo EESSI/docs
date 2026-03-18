@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'libsoup is an HTTP client/server library for GNOME. It
+
+    uses GObjects and the glib main loop, to integrate well with GNOME
+
+    applications, and also has a synchronous API, for use in threaded
+
+    applications.'
+  license: Not confirmed
+  name: LibSoup
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.6.1'']'
+  url: https://wiki.gnome.org/Projects/libsoup
+---
 # LibSoup
 
 

@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'FLAC stands for Free Lossless Audio Codec, an audio format similar
+    to MP3, but lossless, meaning
+
+    that audio is compressed in FLAC without any loss in quality.'
+  license: Not confirmed
+  name: FLAC
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.5.0'', ''1.4.3'', ''1.4.2'']'
+  url: https://xiph.org/flac/
+---
 # FLAC
 
 

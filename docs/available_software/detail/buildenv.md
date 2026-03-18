@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "This module sets a group of environment variables for compilers, linkers,\
+    \ maths libraries, etc., that\n you can use to easily transition between toolchains\
+    \ when building your software. To query the variables being set\n please use:\
+    \ module show <this module name>"
+  license: Not confirmed
+  name: buildenv
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''default'']'
+  url: None
+---
 # buildenv
 
 

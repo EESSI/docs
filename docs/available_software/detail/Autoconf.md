@@ -1,3 +1,37 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Autoconf is an extensible package of M4 macros that produce shell\
+    \ scripts\n to automatically configure software source code packages. These scripts\
+    \ can\n adapt the packages to many kinds of UNIX-like systems without manual user\n\
+    \ intervention. Autoconf creates a configuration script for a package from a\n\
+    \ template file that lists the operating system features that the package can\n\
+    \ use, in the form of M4 macro calls.\n"
+  license: Not confirmed
+  name: Autoconf
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.72'']'
+  url: https://www.gnu.org/software/autoconf/
+---
 # Autoconf
 
 

@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "GTK+ is the primary library used to construct user interfaces in GNOME.\
+    \ It\n provides all the user interface controls, or widgets, used in a common\n\
+    \ graphical application. Its object-oriented API allows you to construct\n user\
+    \ interfaces without dealing with the low-level details of drawing and\n device\
+    \ interaction.\n"
+  license: Not confirmed
+  name: GTK4
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.20.2'', ''4.13.1'']'
+  url: https://docs.gtk.org/gtk4/
+---
 # GTK4
 
 

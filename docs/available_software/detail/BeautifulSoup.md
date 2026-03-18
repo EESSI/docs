@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: Beautiful Soup is a Python library designed for quick turnaround projects
+    like screen-scraping.
+  license: Not confirmed
+  name: BeautifulSoup
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.14.2'', ''4.13.4'', ''4.12.3'', ''4.12.2'']'
+  url: https://www.crummy.com/software/BeautifulSoup
+---
 # BeautifulSoup
 
 

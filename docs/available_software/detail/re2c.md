@@ -1,3 +1,41 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 're2c is a free and open-source lexer generator for C and C++. Its
+    main goal is generating
+
+    fast lexers: at least as fast as their reasonably optimized hand-coded counterparts.
+    Instead of using
+
+    traditional table-driven approach, re2c encodes the generated finite state automata
+    directly in the form
+
+    of conditional jumps and comparisons.'
+  license: Not confirmed
+  name: re2c
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''4.2'', ''3.1'', ''3.0'']'
+  url: https://re2c.org
+---
 # re2c
 
 

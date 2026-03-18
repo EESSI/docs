@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'unifdef - selectively remove C preprocessor conditionals
+
+    The unifdef utility selectively processes conditional C preprocessor
+
+    and the additional text that they delimit, while otherwise leaving the
+
+    file alone.'
+  license: Not confirmed
+  name: unifdef
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.12'']'
+  url: https://github.com/fanf2/unifdef
+---
 # unifdef
 
 

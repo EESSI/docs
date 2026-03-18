@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n GNU libtool is a generic library support script. Libtool hides\
+    \ the complexity\n of using shared libraries behind a consistent, portable interface.\n"
+  license: Not confirmed
+  name: libtool
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.5.4'', ''2.4.7'']'
+  url: https://www.gnu.org/software/libtool
+---
 # libtool
 
 

@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'This Python module contains a pseudo-application that can be used
+    as a black
+
+    box to reproduce Amdahl''s Law. It does not do real calculations, nor any real
+
+    communication, so can easily be overloaded.
+
+    '
+  license: Not confirmed
+  name: amdahl
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.3.1'']'
+  url: https://github.com/hpc-carpentry/amdahl
+---
 # amdahl
 
 

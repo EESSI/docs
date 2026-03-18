@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "The GNU Compiler Collection includes front ends for C, C++, Objective-C,\
+    \ Fortran, Java, and Ada,\n as well as libraries for these languages (libstdc++,\
+    \ libgcj,...)."
+  license: Not confirmed
+  name: GCCcore
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''14.3.0'', ''14.2.0'', ''13.3.0'', ''13.2.0'', ''12.3.0'', ''12.2.0'']'
+  url: https://gcc.gnu.org/
+---
 # GCCcore
 
 

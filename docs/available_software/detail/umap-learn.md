@@ -1,3 +1,41 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    Uniform Manifold Approximation and Projection (UMAP) is a dimension reduction
+    technique
+
+    that can be used for visualisation similarly to t-SNE, but also for general non-linear
+
+    dimension reduction.
+
+    '
+  license: Not confirmed
+  name: umap-learn
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.5.5'']'
+  url: https://umap-learn.readthedocs.io/en/latest/
+---
 # umap-learn
 
 

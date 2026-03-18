@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "GNU Wget is a free software package for retrieving files using HTTP,\
+    \ HTTPS and FTP,\n the most widely-used Internet protocols. It is a non-interactive\
+    \ commandline tool,\n so it may easily be called from scripts, cron jobs, terminals\
+    \ without X-Windows support, etc."
+  license: Not confirmed
+  name: wget
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.24.5'', ''1.21.4'']'
+  url: https://www.gnu.org/software/wget
+---
 # wget
 
 

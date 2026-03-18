@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "ASE is a python package providing an open source Atomic Simulation\
+    \ Environment\n in the Python scripting language.\n\nFrom version 3.20.1 we also\
+    \ include the ase-ext package, it contains optional reimplementations\nin C of\
+    \ functions in ASE.  ASE uses it automatically when installed."
+  license: Not confirmed
+  name: ASE
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.25.0'', ''3.22.1'']'
+  url: https://wiki.fysik.dtu.dk/ase
+---
 # ASE
 
 
@@ -28,7 +60,7 @@ Overview of extensions included in ASE installations
 
 |`ase` version|ASE modules that include it|
 | --- | --- |
-|3.22.1|`ASE/3.22.1-gfbf-2023a`<br/>`ASE/3.22.1-gfbf-2022b`|
+|3.22.1|`ASE/3.22.1-gfbf-2022b`<br/>`ASE/3.22.1-gfbf-2023a`|
 |3.25.0|`ASE/3.25.0-gfbf-2025a`|
 
 ### ase-ext
@@ -36,7 +68,7 @@ Overview of extensions included in ASE installations
 
 |`ase-ext` version|ASE modules that include it|
 | --- | --- |
-|20.9.0|`ASE/3.25.0-gfbf-2025a`<br/>`ASE/3.22.1-gfbf-2023a`<br/>`ASE/3.22.1-gfbf-2022b`|
+|20.9.0|`ASE/3.22.1-gfbf-2022b`<br/>`ASE/3.22.1-gfbf-2023a`<br/>`ASE/3.25.0-gfbf-2025a`|
 
 ### pytest-mock
 

@@ -1,3 +1,34 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "JSON-C implements a reference counting object model that allows you\
+    \ to easily construct JSON objects\n in C, output them as JSON formatted strings\
+    \ and parse JSON formatted strings back into the C representation of JSON\nobjects."
+  license: Not confirmed
+  name: json-c
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.17'', ''0.16'']'
+  url: https://github.com/json-c/json-c
+---
 # json-c
 
 

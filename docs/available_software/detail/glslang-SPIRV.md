@@ -1,3 +1,42 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Glslang is the official reference compiler front end for the OpenGL
+    ES and OpenGL shading languages.
+
+    It implements a strict interpretation of the specifications for these languages.
+    It is open and free for anyone to use,
+
+    either from a command line or programmatically. The OpenGL and OpenGL ES working
+    groups are committed to maintaining
+
+    consistency between the reference compiler and the corresponding shading language
+    specifications.'
+  license: Not confirmed
+  name: glslang-SPIRV
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''15.4.0'', ''15.3.0'']'
+  url: https://www.khronos.org/opengles/sdk/tools/Reference-Compiler/
+---
 # glslang-SPIRV
 
 

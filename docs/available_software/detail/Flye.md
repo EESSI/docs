@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "Flye is a de novo assembler for long and noisy reads, such as those\
+    \ produced by PacBio\n and Oxford Nanopore Technologies."
+  license: Not confirmed
+  name: Flye
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.9.6'', ''2.9.5'', ''2.9.4'', ''2.9.3'']'
+  url: https://github.com/fenderglass/Flye
+---
 # Flye
 
 

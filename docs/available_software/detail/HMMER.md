@@ -1,3 +1,40 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "HMMER is used for searching sequence databases for homologs\n of protein\
+    \ sequences, and for making protein sequence alignments. It\n implements methods\
+    \ using probabilistic models called profile hidden Markov\n models (profile HMMs).\
+    \  Compared to BLAST, FASTA, and other sequence\n alignment and database search\
+    \ tools based on older scoring methodology,\n HMMER aims to be significantly more\
+    \ accurate and more able to detect remote\n homologs because of the strength of\
+    \ its underlying mathematical models. In the\n past, this strength came at significant\
+    \ computational expense, but in the new\n HMMER3 project, HMMER is now essentially\
+    \ as fast as BLAST."
+  license: Not confirmed
+  name: HMMER
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.4'']'
+  url: http://hmmer.org/
+---
 # HMMER
 
 

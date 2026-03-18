@@ -1,3 +1,33 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n Libxml2 is the XML C parser and toolchain developed for the Gnome\
+    \ project\n (but usable outside of the Gnome platform).\n"
+  license: Not confirmed
+  name: libxml2
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.14.3'', ''2.13.4'', ''2.12.7'', ''2.11.5'', ''2.11.4'', ''2.10.3'']'
+  url: http://xmlsoft.org/
+---
 # libxml2
 
 

@@ -1,3 +1,38 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'libnotify is a library for sending desktop notifications to a notification
+    daemon, as defined in the
+
+    org.freedesktop.Notifications Desktop Specification. These notifications can be
+    used to inform the user about an event
+
+    or display some form of information without getting in the user''s way.'
+  license: Not confirmed
+  name: libnotify
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.8.7'']'
+  url: https://gitlab.gnome.org/GNOME/libnotify
+---
 # libnotify
 
 

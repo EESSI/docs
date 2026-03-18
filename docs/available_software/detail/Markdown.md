@@ -1,3 +1,39 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'This is a Python implementation of John Gruber''s Markdown.
+
+    It is almost completely compliant with the reference implementation, though there
+    are a few known issues.
+
+    Additional features are supported by the Available Extensions.
+
+    '
+  license: Not confirmed
+  name: Markdown
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''3.7'', ''3.6'']'
+  url: https://python-markdown.github.io/
+---
 # Markdown
 
 

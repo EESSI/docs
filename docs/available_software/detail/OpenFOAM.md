@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "OpenFOAM is a free, open source CFD software package.\n OpenFOAM has\
+    \ an extensive range of features to solve anything from complex fluid flows\n\
+    \ involving chemical reactions, turbulence and heat transfer,\n to solid dynamics\
+    \ and electromagnetics."
+  license: Not confirmed
+  name: OpenFOAM
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''v2406'', ''v2312'', ''12'', ''11'', ''10'']'
+  url: https://www.openfoam.org/
+---
 # OpenFOAM
 
 

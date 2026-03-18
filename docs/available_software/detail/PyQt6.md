@@ -1,3 +1,35 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "PyQt6 is a comprehensive set of Python bindings for Qt v6. It is implemented\
+    \ as more than 35 extension\nmodules and enables Python to be used as an alternative\
+    \ application development language to C++.\nThis bundle includes PyQtWebEngine,\
+    \ a set of Python bindings for The Qt Company\u2019s Qt WebEngine framework."
+  license: Not confirmed
+  name: PyQt6
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''6.9.1'']'
+  url: https://www.riverbankcomputing.com/software/pyqt
+---
 # PyQt6
 
 

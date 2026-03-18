@@ -1,3 +1,36 @@
+---
+hide:
+- toc
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n pkg-config is a helper tool used when compiling applications and\
+    \ libraries.\n It helps you insert the correct compiler options on the command\
+    \ line so an\n application can use gcc -o test test.c `pkg-config --libs --cflags\
+    \ glib-2.0`\n for instance, rather than hard-coding values on where to find glib\
+    \ (or other\n libraries).\n"
+  license: Not confirmed
+  name: pkg-config
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.29.2'']'
+  url: https://www.freedesktop.org/wiki/Software/pkg-config/
+---
 # pkg-config
 
 
