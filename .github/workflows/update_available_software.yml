@@ -17,11 +17,6 @@ jobs:
           python-version: '3.10'
           architecture: x64
 
-      - name: Mount EESSI
-        uses: eessi/github-action-eessi@e1f8f20638ea417a18d23ab29443ee34794ff900 # v3.1.0
-        with:
-          eessi_stack_version: '2023.06'
-
       - name: update overview of available software
         id: update_available_software
         run: |
@@ -38,7 +33,6 @@ jobs:
           curl -OL https://eessi.io/api_data/data/eessi_api_metadata_software.json
           cd -
 
-          export TIME_GENERATED_TEMPLATE="{{ generated_time }}"
           python scripts/available_software/available_software.py
           ./scripts/update_generated_time.sh mkdocs.yml
 
