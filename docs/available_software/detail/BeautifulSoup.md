@@ -12,6 +12,8 @@ Beautiful Soup is a Python library designed for quick turnaround projects like s
 | --- | --- | --- | --- | --- |
 |4.12.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`BeautifulSoup/4.12.2-GCCcore-12.3.0`|
 |4.12.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`BeautifulSoup/4.12.3-GCCcore-13.3.0`|
+|4.13.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`BeautifulSoup/4.13.4-GCCcore-14.2.0`|
+|4.14.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`BeautifulSoup/4.14.2-GCCcore-14.3.0`|
 
 ## Extensions
 
@@ -25,6 +27,8 @@ Overview of extensions included in BeautifulSoup installations
 | --- | --- |
 |4.12.2|`BeautifulSoup/4.12.2-GCCcore-12.3.0`|
 |4.12.3|`BeautifulSoup/4.12.3-GCCcore-13.3.0`|
+|4.13.4|`BeautifulSoup/4.13.4-GCCcore-14.2.0`|
+|4.14.2|`BeautifulSoup/4.14.2-GCCcore-14.3.0`|
 
 ### soupsieve
 
@@ -33,3 +37,5 @@ Overview of extensions included in BeautifulSoup installations
 | --- | --- |
 |2.4.1|`BeautifulSoup/4.12.2-GCCcore-12.3.0`|
 |2.5|`BeautifulSoup/4.12.3-GCCcore-13.3.0`|
+|2.7|`BeautifulSoup/4.13.4-GCCcore-14.2.0`|
+|2.8|`BeautifulSoup/4.14.2-GCCcore-14.3.0`|

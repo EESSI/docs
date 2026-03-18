@@ -25,4 +25,4 @@ Overview of extensions included in psutil installations
 |`psutil` version|psutil modules that include it|
 | --- | --- |
 |6.1.0|`psutil/6.1.0-GCCcore-13.2.0`|
-|7.0.0|`psutil/7.0.0-GCCcore-14.3.0`<br/>`psutil/7.0.0-GCCcore-14.2.0`|
+|7.0.0|`psutil/7.0.0-GCCcore-14.2.0`<br/>`psutil/7.0.0-GCCcore-14.3.0`|

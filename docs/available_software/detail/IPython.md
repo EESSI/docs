@@ -19,6 +19,7 @@ IPython provides a rich architecture for interactive computing with:
 |8.17.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`IPython/8.17.2-GCCcore-13.2.0`|
 |8.28.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`IPython/8.28.0-GCCcore-13.3.0`|
 |9.3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`IPython/9.3.0-GCCcore-14.2.0`|
+|9.4.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`IPython/9.4.0-GCCcore-14.3.0`|
 
 ## Extensions
 
@@ -32,14 +33,14 @@ Overview of extensions included in IPython installations
 | --- | --- |
 |2.2.1|`IPython/8.14.0-GCCcore-12.3.0`|
 |2.4.1|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
-|3.0.0|`IPython/9.3.0-GCCcore-14.2.0`|
+|3.0.0|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`|
 
 ### backcall
 
 
 |`backcall` version|IPython modules that include it|
 | --- | --- |
-|0.2.0|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
+|0.2.0|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
 
 ### executing
 
@@ -48,7 +49,7 @@ Overview of extensions included in IPython installations
 | --- | --- |
 |1.2.0|`IPython/8.14.0-GCCcore-12.3.0`|
 |2.0.1|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
-|2.2.0|`IPython/9.3.0-GCCcore-14.2.0`|
+|2.2.0|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`|
 
 ### ipython
 
@@ -59,13 +60,14 @@ Overview of extensions included in IPython installations
 |8.17.2|`IPython/8.17.2-GCCcore-13.2.0`|
 |8.28.0|`IPython/8.28.0-GCCcore-13.3.0`|
 |9.3.0|`IPython/9.3.0-GCCcore-14.2.0`|
+|9.4.0|`IPython/9.4.0-GCCcore-14.3.0`|
 
 ### ipython_pygments_lexers
 
 
 |`ipython_pygments_lexers` version|IPython modules that include it|
 | --- | --- |
-|1.1.1|`IPython/9.3.0-GCCcore-14.2.0`|
+|1.1.1|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`|
 
 ### jedi
 
@@ -79,14 +81,14 @@ Overview of extensions included in IPython installations
 
 |`matplotlib-inline` version|IPython modules that include it|
 | --- | --- |
-|0.1.6|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
+|0.1.6|`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
 
 ### matplotlib_inline
 
 
 |`matplotlib_inline` version|IPython modules that include it|
 | --- | --- |
-|0.1.7|`IPython/9.3.0-GCCcore-14.2.0`|
+|0.1.7|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`|
 
 ### parso
 
@@ -100,7 +102,7 @@ Overview of extensions included in IPython installations
 
 |`pickleshare` version|IPython modules that include it|
 | --- | --- |
-|0.7.5|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
+|0.7.5|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
 
 ### prompt_toolkit
 
@@ -109,15 +111,15 @@ Overview of extensions included in IPython installations
 | --- | --- |
 |3.0.39|`IPython/8.14.0-GCCcore-12.3.0`|
 |3.0.41|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
-|3.0.51|`IPython/9.3.0-GCCcore-14.2.0`|
+|3.0.51|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`|
 
 ### pure_eval
 
 
 |`pure_eval` version|IPython modules that include it|
 | --- | --- |
-|0.2.2|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
-|0.2.3|`IPython/9.3.0-GCCcore-14.2.0`|
+|0.2.2|`IPython/8.14.0-GCCcore-12.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
+|0.2.3|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`|
 
 ### stack_data
 
@@ -125,7 +127,7 @@ Overview of extensions included in IPython installations
 |`stack_data` version|IPython modules that include it|
 | --- | --- |
 |0.6.2|`IPython/8.14.0-GCCcore-12.3.0`|
-|0.6.3|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
+|0.6.3|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
 
 ### traitlets
 
@@ -133,5 +135,5 @@ Overview of extensions included in IPython installations
 |`traitlets` version|IPython modules that include it|
 | --- | --- |
 |5.13.0|`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`|
-|5.14.3|`IPython/9.3.0-GCCcore-14.2.0`|
+|5.14.3|`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`|
 |5.9.0|`IPython/8.14.0-GCCcore-12.3.0`|

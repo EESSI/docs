@@ -46,7 +46,7 @@ Overview of extensions included in MLflow installations
 
 |`cachetools` version|MLflow modules that include it|
 | --- | --- |
-|5.5.0|`MLflow/2.22.4-gfbf-2024a`<br/>`MLflow/2.18.0-gfbf-2023b`|
+|5.5.0|`MLflow/2.18.0-gfbf-2023b`<br/>`MLflow/2.22.4-gfbf-2024a`|
 
 ### databricks_sdk
 
@@ -62,7 +62,7 @@ Overview of extensions included in MLflow installations
 |`docker` version|MLflow modules that include it|
 | --- | --- |
 |7.0.0|`MLflow/2.10.2-gfbf-2023a`|
-|7.1.0|`MLflow/2.22.4-gfbf-2024a`<br/>`MLflow/2.18.0-gfbf-2023b`|
+|7.1.0|`MLflow/2.18.0-gfbf-2023b`<br/>`MLflow/2.22.4-gfbf-2024a`|
 
 ### entrypoints
 
@@ -121,7 +121,7 @@ Overview of extensions included in MLflow installations
 |`gunicorn` version|MLflow modules that include it|
 | --- | --- |
 |21.2.0|`MLflow/2.10.2-gfbf-2023a`|
-|23.0.0|`MLflow/2.22.4-gfbf-2024a`<br/>`MLflow/2.18.0-gfbf-2023b`|
+|23.0.0|`MLflow/2.18.0-gfbf-2023b`<br/>`MLflow/2.22.4-gfbf-2024a`|
 
 ### h11
 

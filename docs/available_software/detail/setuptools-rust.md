@@ -27,7 +27,7 @@ Overview of extensions included in setuptools-rust installations
 
 |`semantic-version` version|setuptools-rust modules that include it|
 | --- | --- |
-|2.10.0|`setuptools-rust/1.9.0-GCCcore-13.3.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.3.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.2.0`|
+|2.10.0|`setuptools-rust/1.11.0-GCCcore-14.3.0`<br/>`setuptools-rust/1.11.0-GCCcore-14.2.0`<br/>`setuptools-rust/1.9.0-GCCcore-13.3.0`|
 
 ### semantic_version
 
