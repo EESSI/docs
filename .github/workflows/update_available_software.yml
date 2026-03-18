@@ -48,8 +48,8 @@ jobs:
             echo "json_data_changed=no" >> $GITHUB_OUTPUT
           fi
 
-          # remove the data directory containing the original JSON file, or it'll end up in the PR being opened
-          rm -r ${data_dir}
+          # remove the JSON file in the data directory, or it'll end up in the PR being opened
+          rm -r ${data_dir}/*.json
 
       - name: create pull request
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
