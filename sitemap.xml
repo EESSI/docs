@@ -649,6 +649,10 @@
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/GtkSourceView4/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Guile/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
@@ -818,6 +822,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/LZO/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/LibRaw/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
@@ -1201,6 +1209,10 @@
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/PyQt6/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/PyTables/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
@@ -1381,6 +1393,10 @@
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/STREAmS/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/SUNDIALS/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
@@ -1525,6 +1541,10 @@
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/VTE/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/VTK/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
@@ -1542,6 +1562,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Vim/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/VisPy/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
@@ -1590,6 +1614,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Xerces-C%2B%2B/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Xfce/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
@@ -1809,6 +1837,14 @@
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/dav1d/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/dbus-glib/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/dftd4/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
@@ -1898,6 +1934,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/flook/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/fmt/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
@@ -2089,6 +2129,10 @@
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/jxrlib/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/kim-api/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
@@ -2197,6 +2241,10 @@
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/libexif/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/libfabric/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
@@ -2254,6 +2302,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/libliftoff/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/libnotify/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
@@ -2906,6 +2958,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/uthash/</loc>
+         <lastmod>2026-03-18</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/uv/</loc>
          <lastmod>2026-03-18</lastmod>
     </url>
     <url>
