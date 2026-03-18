@@ -25,5 +25,24 @@ jobs:
           . venv/bin/activate
           pip install -r mkdocs-ldjson-plugin/requirements.txt
 
-          # disabled, this needs to be re-worked after the changes implemented in https://github.com/EESSI/docs/pull/677
-          # python .github/workflows/scripts/test_overview_available_software.py
+          # download https://eessi.io/api_data/data/eessi_api_metadata_software.json
+          # to where it's expected by docs/available_software/macros.py and scripts/available_software/available_software.py
+          data_dir="docs/available_software/data"
+          mkdir -p ${data_dir}
+          cd ${data_dir}
+          curl -OL https://eessi.io/api_data/data/eessi_api_metadata_software.json
+          cd -
+
+          python scripts/available_software/available_software.py
+          ./scripts/update_generated_time.sh mkdocs.yml
+
+          # determine whether pull request should be opened:
+          # if detailed software pages in docs/available_software/detail have been updated, then a PR should be opened
+          if [[ $(git status --porcelain ./docs/available_software/detail) ]]; then
+            echo "Software pages have been changed, PR should be opened"
+          else
+            echo "Software pages have not been changed, no need to open PR"
+          fi
+
+          # remove the data directory containing the original JSON file, or it'll end up in the PR being opened
+          rm -f ${data_dir}
