@@ -97,7 +97,7 @@ source /cvmfs/software.eessi.io/versions/2023.06/init/lmod/bash
 ```
 Expected output:
 
-**Note**: EESSI currenly supports NVIDIA GPUs, so the message **EESSI did not identify an accelerator on the system** is expected.
+**Note**: EESSI currently supports NVIDIA GPUs, so the message **EESSI did not identify an accelerator on the system** is expected.
 
 ```
 Module for EESSI/2023.06 loaded successfully
