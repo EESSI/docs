@@ -22,7 +22,6 @@ class TestMarkdown:
                 for file in os.listdir(directory):
                     if file.endswith(".md"):
                         os.remove(os.path.join(directory, file))
-        
 
     # ---------------------------
     # Markdown tests
