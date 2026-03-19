@@ -10,6 +10,7 @@ import urllib.request
 from pathlib import Path
 
 EESSI_API_SOFTWARE_JSON_URL = 'https://www.eessi.io/api_data/data/eessi_api_metadata_software.json'
+EESSI_API_SOFTWARE_RISCV_JSON_URL = 'https://www.eessi.io/api_data/data/eessi_api_metadata-riscv_software.json'
 
 CPU_ARCHS = {
     'x86_64': ['AMD', 'Intel'],
@@ -27,19 +28,27 @@ GPU_ARCHS = {
 def define_env(env):
 
     @env.macro
-    def load_json_eessi_software():
+    def load_json_eessi_software(riscv=False):
         """
         Load JSON with metadata for software.eessi.io repository,
         and return Python dictionary with relevant info to generate software overview in EESSI documentation.
         """
         # https://eessi.io/api_data/data/eessi_api_metadata_software.json is expected to be downloaded to docs/available_software/data/
         root_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-        json_path = os.path.join(root_dir, 'docs', 'available_software', 'data', 'eessi_api_metadata_software.json')
+        if riscv:
+            data_file='eessi_api_metadata-riscv_software.json'
+        else:
+            data_file='eessi_api_metadata_software.json'
+        json_path = os.path.join(root_dir, 'docs', 'available_software', 'data', data_file)
         if os.path.exists(json_path):
             with open(json_path) as fp:
                 data = json.loads(fp.read())
         else:
-            with urllib.request.urlopen(EESSI_API_SOFTWARE_JSON_URL) as response:
+            if riscv:
+                data_url = EESSI_API_SOFTWARE_RISCV_JSON_URL
+            else:
+                data_url = EESSI_API_SOFTWARE_JSON_URL
+            with urllib.request.urlopen(data_url) as response:
                 data = json.loads(response.read().decode('utf-8'))
 
         data_software = data['software']
