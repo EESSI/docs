@@ -31,17 +31,17 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: From x86 to RISC-V: Expanding EESSI’s Reach
-### Topic Series: EESSI Fundamentals Refresher
+### 💡 **Next session**: Exploring EESSI 2025.06
+### Topic Series: What’s New in EESSI 2025.06 ?
 🗓️ Schedule
-#### Monday 16 March 2026, 14:00-15:00 CE(S)T
+#### Monday 23 March 2026, 14:00-15:00 CE(S)T
 
 ---
 
-### Upcoming topic series: EESSI Fundamentals Refresher
+### Upcoming topic series: Revisiting Ways to Add Software to EESSI
 ###### Outline
 
-- 16 March 2026 - From x86 to RISC-V: Expanding EESSI’s Reach
+- 30 March 2026 - Local Builds and Contributions to EESSI
 
 ---
 
@@ -52,6 +52,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
 *Topic series: EESSI Fundamentals Refresher*
+
+- 16 March 2026 - [From x86 to RISC-V: Expanding EESSI’s Reach](https://youtu.be/B0GgFpBpAnc)
 
 - 09 March 2026 - [Yet another way to run EESSI: Docker Extensions](https://youtu.be/jC_clb7bLhM)
 
