@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''1.6.4'', ''1.6.3'']'
+  softwareVersion: '[''1.7.2'', ''1.6.4'', ''1.6.3'']'
   url: https://unidata.github.io/netcdf4-python/
 ---
 # netcdf4-python
@@ -39,6 +39,7 @@ Python/numpy interface to netCDF.
 | --- | --- | --- | --- | --- |
 |1.6.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`netcdf4-python/1.6.3-foss-2022b`|
 |1.6.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`netcdf4-python/1.6.4-foss-2023a`|
+|1.7.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`netcdf4-python/1.7.2-foss-2025a`|
 
 ## Extensions
 
@@ -51,6 +52,7 @@ Overview of extensions included in netcdf4-python installations
 |`cftime` version|netcdf4-python modules that include it|
 | --- | --- |
 |1.6.2|`netcdf4-python/1.6.3-foss-2022b`<br/>`netcdf4-python/1.6.4-foss-2023a`|
+|1.6.4.post1|`netcdf4-python/1.7.2-foss-2025a`|
 
 ### netcdf4-python
 
@@ -59,3 +61,4 @@ Overview of extensions included in netcdf4-python installations
 | --- | --- |
 |1.6.3|`netcdf4-python/1.6.3-foss-2022b`|
 |1.6.4|`netcdf4-python/1.6.4-foss-2023a`|
+|1.7.2|`netcdf4-python/1.7.2-foss-2025a`|
