@@ -1,4 +1,4 @@
-# EESSI webinar series (May-June 2025)
+# EESSI webinar series (April-May 2026)
 
 _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
