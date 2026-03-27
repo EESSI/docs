@@ -31,17 +31,17 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: Exploring EESSI 2025.06
-### Topic Series: What’s New in EESSI 2025.06 ?
+### 💡 **Next session**: Local Builds and Contributions to EESSI<sub><sup>`(part1)`</sup></sub>
+### Topic Series: Revisiting Ways to Add Software to EESSI
 🗓️ Schedule
-#### Monday 23 March 2026, 14:00-15:00 CE(S)T
+#### Monday 30 March 2026, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming topic series: Revisiting Ways to Add Software to EESSI
 ###### Outline
 
-- 30 March 2026 - Local Builds and Contributions to EESSI
+- 13 April 2026 - Local Builds and Contributions to EESSI<sub><sup>`(part2)`</sup></sub>
 
 ---
 
@@ -52,6 +52,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
 *Topic series: EESSI Fundamentals Refresher*
+
+- 23 March 2026 - [What’s New in EESSI 2025.06 ?](https://youtu.be/TftmYLkN5GI)
 
 - 16 March 2026 - [From x86 to RISC-V: Expanding EESSI’s Reach](https://youtu.be/B0GgFpBpAnc)
 
