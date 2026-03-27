@@ -4,6 +4,17 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: What’s New in EESSI 2025.06 ?
+
+### Monday 23 March 2026
+
+**Outline:** Exploring EESSI 2025.06
+([Slides (PDF)](EESSI-happyhour-2026-011-EESSI-2025.06.pdf), [Recording (YouTube)](https://youtu.be/TftmYLkN5GI))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TftmYLkN5GI?si=8pi6LqxIakk4vxtt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: EESSI Fundamentals Refresher
 
 ### Monday 16 March 2026
