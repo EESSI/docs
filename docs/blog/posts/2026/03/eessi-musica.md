@@ -1,24 +1,36 @@
 ---
 authors: [admccartney]
 date: 2026-03-27
-slug: EESSI-MUSICA
+slug: eessi-musica
 ---
 
+# Choosing EESSI as a base for MUSICA
 
-## Overview
+<figure markdown="span">
+    ![MUSICA](MUSICA-v2-32-Matthias_Heisler.jpg){width=75%}
+    <figcaption>(c) Matthias Heisler 2026</figcaption>
+</figure>
 
-We describe the process that led to the adoption of EESSI as a base for
-the software stack at the Austrian Scientific Computing (ASC) research
-center. The background section aims to provide a brief history of how
-cluster computing at ASC has evolved, with a particular focus on the
-various incarnations of the software stack. We outline our motivations
-for redesigning a system that delivers the software stack, for initial
+MUSICA (Multi-Site Computer Austria) is the latest addition to Austria's
+national supercomputing infrastructure. The system's compute resources
+are distributed across three locations in Austria: Vienna, Innsbruck,
+and Linz. We describe the process that led to the adoption of EESSI
+as a base for the software stack on the MUSICA system at the Austrian
+Scientific Computing (ASC) research center.
+
+<!-- more -->
+
+The background section aims to provide a brief history of how cluster
+computing at ASC has evolved, with a particular focus on the various
+incarnations of the software stack. We outline our motivations for
+redesigning a system that delivers the software stack, for initial
 use on the MUSICA HPC system. We describe the timeline of events that
 lead to the experiments with EESSI and EasyBuild, and offer details of
 the two complementary approaches of building a software stack that we
 compared. Finally, we offer a critical reflection on our experiments
 and outline our ultimate reason for choosing to use EESSI as a base and
 blueprint for the software stack.
+
 
 ## Background
 
