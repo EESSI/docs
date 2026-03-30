@@ -105,7 +105,7 @@ Coming soon!
 
 ### Using EESSI for Continuous Integration (CI)
 
-- Monday 11 May 2026, 14:00-16:00 CEST
+- Monday 11 May 2026, 14:00-16:00 CEST (Zoom webinar)
 - speakers:
     - Alan O'Cais (freelancer w/ Ghent University)
 - moderators:
@@ -125,7 +125,7 @@ Coming soon!
 
 ### Introduction to CernVM-FS
 
-- Monday 18 May 2026, 14:00-16:00 CEST
+- Monday 18 May 2026, 14:00-16:00 CEST (Zoom webinar)
 - speakers:
     - Valentin Volkl (CERN)
 - moderators:
