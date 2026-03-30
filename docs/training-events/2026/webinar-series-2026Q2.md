@@ -35,11 +35,11 @@ YouTube playlist with recordings coming soon!
 - Online webinars (via Zoom)
 - Mix of presentation & hands-on demos: ~1.5h of content, ~30min for Q&A
 
-## Registration
+## Registration {: #registration }
 
 Attendance is free of cost, but registration is required.
 
-**Register link coming soon**
+**Registration link coming soon**
 
 ## Q&A via Slack
 
