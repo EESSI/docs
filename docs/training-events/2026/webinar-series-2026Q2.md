@@ -39,7 +39,7 @@ YouTube playlist with recordings coming soon!
 
 Attendance is free of cost, but registration is required.
 
-**Registration link coming soon**
+**Registrater via https://event.ugent.be/registration/eessiwebinarsspring2026**
 
 ## Q&A via Slack
 
@@ -145,4 +145,4 @@ Coming soon!
 !!! tip
     Attending these sessions is free, but you must be registered to get an invitation to join the Zoom webinar sessions!
 
-    See also [Registration](#registration).
+    See also [](#registration).
