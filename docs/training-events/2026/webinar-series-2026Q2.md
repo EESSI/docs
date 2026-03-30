@@ -145,4 +145,4 @@ Coming soon!
 !!! tip
     Attending these sessions is free, but you must be registered to get an invitation to join the Zoom webinar sessions!
 
-    See also [](#registration).
+    See also [Registration](#registration).
