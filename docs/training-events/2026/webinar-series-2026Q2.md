@@ -39,7 +39,7 @@ YouTube playlist with recordings coming soon!
 
 Attendance is free of cost, but registration is required.
 
-**Registrater via https://event.ugent.be/registration/eessiwebinarsspring2026**
+**Register via [https://event.ugent.be/registration/eessiwebinarsspring2026](https://event.ugent.be/registration/eessiwebinarsspring2026)**
 
 ## Q&A via Slack
 
