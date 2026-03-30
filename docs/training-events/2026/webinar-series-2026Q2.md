@@ -25,8 +25,8 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 
 - Monday 27 April 2026 (14:00-16:00 CEST): **Introduction to EESSI**
 - Monday 4 May 2026 (14:00-16:00 CEST): **Building software on top of EESSI + contributing to EESSI**
-- Monday 11 May 2025 (14:00-16:00 CEST): **Using EESSI for Continuous Integration**
-- Monday 18 May 2025 (14:00-16:00 CEST): **Introduction to CernVM-FS**
+- Monday 11 May 2026 (14:00-16:00 CEST): **Using EESSI for Continuous Integration**
+- Monday 18 May 2026 (14:00-16:00 CEST): **Introduction to CernVM-FS**
 
 YouTube playlist with recordings coming soon!
 
