@@ -27,6 +27,7 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 - Monday 4 May 2026 (14:00-16:00 CEST): **Building software on top of EESSI + contributing to EESSI**
 - Monday 11 May 2026 (14:00-16:00 CEST): **Using EESSI for Continuous Integration**
 - Monday 18 May 2026 (14:00-16:00 CEST): **Introduction to CernVM-FS**
+- Monday 1 June 2026 (14:00-16:00 CEST): **Using EESSI as a base for a central software stack**
 
 YouTube playlist with recordings coming soon!
 
@@ -128,6 +129,27 @@ Coming soon!
 - Monday 18 May 2026, 14:00-16:00 CEST (Zoom webinar)
 - speakers:
     - Valentin Volkl (CERN)
+- moderators:
+    - TBD
+
+#### Outline
+
+Coming soon!
+
+#### Materials {: #materials-cvmfs }
+
+- slides (PDF) coming soon!
+- recording (YouTube) coming soon!
+
+---
+
+
+### Using EESSI as a base for a central software stack
+
+- Monday 1 June 2026, 14:00-16:00 CEST (Zoom webinar)
+- speakers:
+    - Caspar van Leeuwen (SURF)
+    - Bob Drõge (University of Groningen)
 - moderators:
     - TBD
 
