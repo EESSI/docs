@@ -38,10 +38,10 @@ The ASC (formerly VSC) is a national center for high performance
 computing and research powered by scientific software. The flagship
 cluster VSC-1 was in service from 2009-2015, succeeded by a series of
 clusters (2-5)[^1]. VSC 4 and 5 are the two clusters that remain in
-service as of 2025, they will be joined at the end of the year by a new
-cluster MUSICA, which stands for Multi-Site Compute Austria. MUSICA is
-a GPU centric cluster run on OpenStack and has so far been the main
-testing ground for our initial experiments with EasyBuild and EESSI.
+service as of 2026, they will be joined in April 2026 by a new cluster
+MUSICA, which stands for Multi-Site Compute Austria. MUSICA is a GPU
+centric cluster run on OpenStack and has so far been the main testing
+ground for our initial experiments with EasyBuild and EESSI.
 
 The management of the software stack at ASC evolved along the following
 lines:
@@ -136,23 +136,61 @@ have it up and running on the new MUSICA system towards the end of 2025.
   EESSI/EasyBuild as possible alternatives to Spack and Lmod as an alternative
   to Tcl Modules.
 
-+ Autumn 2024
++ *Autumn 2024*:
   Working group established and a broad set of tools and approaches were
-  compared. Guix/Nix, Spack, EasyBuild, EESSI, Lmod, and ReFrame These
-  tools were installed on a number of existing systems and briefly tried
-  out against a set of high level user requirements that we agreed.
-  Outcome was to focus on Easybuild and EESSI.
+  compared, namely:
+    + an installation of Spack with Environment modules
+    + an installation of Guix
+    + an installation of EESSI
+  These tools were evaluated against a set of high level user
+  requirements that we agreed. The outcome was to focus on Easybuild and
+  EESSI.
 
-+ Winter 2024 - Spring 2025
++ *Winter 2024 - Spring 2025*:
   Made the strategic decision to have EESSI installed on the MUSICA
   system. Decided to run a small experiment whereby a small software
   stack would be built and installed, in order to compare and contrast
   approaches - "EESSI on the side" vs. "EESSI as a base"
 
++ *Summer 2025*:
+  In June 2025, the system entered a closed test phase. In this phase
+  the system was open to a small number of power users. The core
+  software provided by EESSI. The custom stack is extended during this
+  phase, in response to user software requests that center mostly around
+  proprietary software.
 
-In June 2024, the system entered a closed test phase, with core software
-provided by EESSI. The custom stack will be extended during the course
-of the test phase.
++ *Autumn 2025 - Winter 2025/2026*:
+  In November 2025 the MUSICA open test phase began. At this stage
+  anyone with an existing account at ASC was granted access to the
+  system upon request. At the end of the open test phase, users
+  participated in a survey. Generally the response was quite positive
+  towards the setup of the system.
+
+  - Users categorized their usage according to scientific domain, the largest
+    groups were:
+    Physics (45), AI (41), Chemistry (24), Data Science (15), Bioinformatics (11)
+
+  - In response to a question as to whether the module system was used, or if
+    the user relied on individual installations: 32 used the module system; 24
+    preferred an individual installation; 43 used a mixture of both.
+
+  - What did users used to build, install or run their software? Of 99
+    respondents:
+    + 63 Conda/Pip
+    + 21 EESSI-extend
+    + 16 None of these
+    + 15 Containers
+    + 13 buildenv
+    +  5 Spack
+
+  - 5/77 comments on the experience of compiling software on the
+    system explicitly mention using `LD_LIBRARY_PATH`. Despite having
+    highlighting the recommendation to use the `buildenv` modules when
+    compiling, the users preferred their own approach.
+    Generally the `buildenv` modules and usage of rpath wrappers is not
+    that well understood on the SAM team, so it's hard to explain to
+    users *why* the should be using this approach.
+
 
 ## Experiments
 
