@@ -129,7 +129,7 @@ from different areas, notably from their work on the user-support,
 sysadmin and platform teams. The goal for the new software stack was to
 have it up and running on the new MUSICA system towards the end of 2025.
 
-+ Summer 2024
++ *Summer 2024*:
   Initial meetings that highlighted the need to reform the management
   of software so that it could be easy to use, transparent and logical,
   as well as tested and performant. This is the first mention of
