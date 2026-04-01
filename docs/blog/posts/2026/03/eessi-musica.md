@@ -236,6 +236,6 @@ our specific needs. Despite the initial learning curve, this approach
 provided long-term benefits in terms of maintainability and scalability.
 
 
-# Footnotes
+---
 
 [^1]: <https://docs.vsc.ac.at/systems/>
