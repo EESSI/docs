@@ -1,6 +1,6 @@
 ---
 authors: [admccartney]
-date: 2026-03-27
+date: 2026-04-02
 slug: eessi-musica
 ---
 
@@ -15,8 +15,8 @@ MUSICA (Multi-Site Computer Austria) is the latest addition to Austria's
 national supercomputing infrastructure. The system's compute resources
 are distributed across three locations in Austria: Vienna, Innsbruck,
 and Linz. We describe the process that led to the adoption of EESSI
-as a base for the software stack on the MUSICA system at the Austrian
-Scientific Computing (ASC) research center.
+as a base for the software stack on the MUSICA system at the [Austrian
+Scientific Computing (ASC) research center](https://asc.ac.at/home/).
 
 <!-- more -->
 
@@ -47,7 +47,7 @@ The management of the software stack at ASC evolved along the following
 lines:
 
 + VSC 1, 2: Initially catered to small groups of expert users, all
-  software was installed manually 
+  software was installed manually.
 
 + VSC 3, 4: Still partially managed by hand. A set of scripting tools for
   structuring software directory trees. These tools were initially copied
@@ -56,7 +56,7 @@ lines:
 
 + VSC 4, 5: Spack introduced (reduced the need for custom install
   scripts, install lots of software quickly, pull in dependencies
-  automatically)
+  automatically).
 
 ## Motivation
 
@@ -79,14 +79,14 @@ currently managed.
 
 ### Tooling & Presentation
 
-The way that we had been using Spack and Tcl Modules had lead to a
+The way that we had been using Spack and Tcl Modules had led to a
 fairly unmanageable situation on our clusters. To meet user requests
-for software, we adopted a pragmatic approach. This lead to a situation
+for software, we adopted a pragmatic approach. This led to a situation
 in which a myriad of software variants were installed into the shared
-file system hosting the systems' software. This quickly lead to a
+file system hosting the systems' software. This quickly led to a
 fairly overwhelming presentation of available modules to the user.
 Another major issue here was that there were significant issues around
-de duplication. We don't know the root cause of this, it may just have
+deduplication. We don't know the root cause of this, it may just have
 been a misconfigured Spack. In any case, we ended up in an untenable
 situation where certain dependencies would get installed many times
 over. For example, there were multiple installs of the same OpenMPI
@@ -138,10 +138,8 @@ have it up and running on the new MUSICA system towards the end of 2025.
 
 + *Autumn 2024*:
   Working group established and a broad set of tools and approaches were
-  compared, namely:
-    + an installation of Spack with Environment modules
-    + an installation of Guix
-    + an installation of EESSI
+  compared, namely an installation of Spack with Environment modules,
+  an installation of Guix, and an installation of EESSI.
   These tools were evaluated against a set of high level user
   requirements that we agreed. The outcome was to focus on Easybuild and
   EESSI.
@@ -150,12 +148,12 @@ have it up and running on the new MUSICA system towards the end of 2025.
   Made the strategic decision to have EESSI installed on the MUSICA
   system. Decided to run a small experiment whereby a small software
   stack would be built and installed, in order to compare and contrast
-  approaches - "EESSI on the side" vs. "EESSI as a base"
+  approaches - "EESSI on the side" vs. "EESSI as a base".
 
 + *Summer 2025*:
   In June 2025, the system entered a closed test phase. In this phase
   the system was open to a small number of power users. The core
-  software provided by EESSI. The custom stack is extended during this
+  software was provided by EESSI. The custom stack was extended during this
   phase, in response to user software requests that center mostly around
   proprietary software.
 
@@ -176,18 +174,18 @@ have it up and running on the new MUSICA system towards the end of 2025.
 
   - What did users used to build, install or run their software? Of 99
     respondents:
-    + 63 Conda/Pip
-    + 21 EESSI-extend
-    + 16 None of these
-    + 15 Containers
-    + 13 buildenv
-    +  5 Spack
+    + 63: Conda/Pip
+    + 21: `EESSI-extend`
+    + 16: None of these
+    + 15: Containers
+    + 13: buildenv
+    +  5: Spack
 
-  - 5/77 comments on the experience of compiling software on the
-    system explicitly mention using `LD_LIBRARY_PATH`. Despite having
-    highlighting the recommendation to use the `buildenv` modules when
+  - 5 out of 77 comments on the experience of compiling software on the
+    system explicitly mention using `$LD_LIBRARY_PATH`. Despite having
+    highlighted the recommendation to use the `buildenv` modules when
     compiling, the users preferred their own approach.
-    Generally the `buildenv` modules and usage of rpath wrappers is not
+    Generally the `buildenv` modules and usage of RPATH wrappers is not
     that well understood on the SAM team, so it's hard to explain to
     users *why* the should be using this approach.
 
@@ -212,25 +210,25 @@ specific application software.
 ### EESSI on the side
 
 This approach in a sense represents the traditional way to build a
-software stack, building everything directly on the host (Rocky9), and
+software stack, building everything directly on the host (Rocky Linux 9), and
 relying on system libraries. It used scripts and wrappers from the sse2
 toolkit from National Supercomputer Centre at Linköping University as
 a way to manage and structure the modules and software installations.
 The software builds were a mixture of EasyBuild scripts and makefiles.
 EESSI was offered as a module in its pure form and in general users were
-discouraged from using EESSI-extend, or at their own risk.
+discouraged from using `EESSI-extend`, or at their own risk.
 
 ### EESSI as a base
 
-With this approach, we leveraged EESSI-extend extensively and aimed to
+With this approach, we leveraged `EESSI-extend` extensively and aimed to
 build the whole stack with the compatibility layer from EESSI as a base.
 The learning curve for building software more or less moved back and
 forth between three distinct phases, leveraging the various possible
-settings for the EESSI-extend module.
+settings for the `EESSI-extend` module.
 
-+ Phase 0 -> EESSI_USER_INSTALL
-+ Phase 1 -> EESSI_SITE_INSTALL
-+ Phase 2 -> EESSI_PROJECT_INSTALL=/cvmfs/software.asc.ac.at
++ Phase 0 -> `$EESSI_USER_INSTALL`
++ Phase 1 -> `$EESSI_SITE_INSTALL`
++ Phase 2 -> `$EESSI_PROJECT_INSTALL` set to `/cvmfs/software.asc.ac.at`
 
 
 ## Reflections
@@ -243,7 +241,7 @@ sysadmin who builds the software and doing things like tweaking or
 modifying module files in place was possible. The downsides were
 reproducibility and portability, there would be obvious work involved
 with building the stack again upon the next OS upgrade. That said,
-everything worked much more smoothly than with EESSI-extend, it was
+everything worked much more smoothly than with `EESSI-extend`, it was
 possible to build all the software that was listed and run basic tests
 with Slurm. We had some open questions around interoperability between
 custom modules and EESSI, and whether it would be problematic to mix
@@ -259,11 +257,11 @@ introduced complexity into our build and installation workflows, it
 enabled us to meet certain key requirements for the MUSICA software
 infrastructure.
 
-Specifically, we leveraged CVMFS to distribute the software stack across
+Specifically, we leveraged CernVM-FS to distribute the software stack across
 the three sites - Vienna, Linz, and Innsbruck. EESSI offers access
 to approximately 1960 modules that are ready to load on the target
 architecture. Setting up EESSI was quite straight forward, and despite
-team members finding the many options of installing with EESSI-extend
+team members finding the many options of installing with `EESSI-extend`
 module too complex, adopting this method aligned with modern practices
 for managing HPC software. EESSI is open source, well documented, and
 maintained by colleagues within Europe's HPC ecosystem.
@@ -273,7 +271,5 @@ valuable. We identified a reusable blueprint that we could adapt to fit
 our specific needs. Despite the initial learning curve, this approach
 provided long-term benefits in terms of maintainability and scalability.
 
-
----
 
 [^1]: <https://docs.vsc.ac.at/systems/>
