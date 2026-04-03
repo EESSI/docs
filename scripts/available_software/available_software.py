@@ -45,6 +45,14 @@ def main():
     print("Generating software-specific pages... ", end="", flush=True)
     api_data_software_json = os.path.join(path_data_dir, "eessi_api_metadata_software.json")
     generate_software_pages(api_data_software_json, os.path.join(target_directory, "detail"))
+
+    print("Done!")
+
+    # Also handle RISC-V
+    print("Generating software-specific pages for RISC-V... ", end="", flush=True)
+    api_data_software_json = os.path.join(path_data_dir, "eessi_api_metadata-riscv_software.json")
+    generate_software_pages(api_data_software_json, os.path.join(target_directory + "_riscv", "detail"))
+
     print("Done!")
 
 
