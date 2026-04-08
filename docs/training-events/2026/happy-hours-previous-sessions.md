@@ -4,6 +4,17 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: Revisiting Ways to Add Software to EESSI
+
+### Monday 30 March 2026
+
+**Outline:** Local Builds and Contributions to EESSI<sub><sup>`(part1)`</sup></sub> 
+([Slides (PDF)](EESSI-happyhour-2026-012-Local-Builds&Contributions.pdf), [Recording (YouTube)](https://youtu.be/wUKuphSadis))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wUKuphSadis?si=qBJByPDdjyXTtPlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: What’s New in EESSI 2025.06 ?
 
 ### Monday 23 March 2026
