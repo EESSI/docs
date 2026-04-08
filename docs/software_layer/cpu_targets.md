@@ -11,6 +11,7 @@ In the 2023.06 version of the EESSI repository, the following CPU microarchitect
 * `x86_64/amd/zen2`: AMD Rome
 * `x86_64/amd/zen3`: AMD Milan, Milan-X
 * `x86_64/amd/zen4`: AMD Genoa, Genoa-X, Bergamo, Siena
+* `x86_64/amd/zen5`: AMD Turin
 * `x86_64/intel/haswell`: Intel Haswell, Broadwell
 * `x86_64/intel/skylake_avx512`: Intel Skylake
 * `x86_64/intel/cascadelake`: Intel Cascade Lake, Cooper Lake
