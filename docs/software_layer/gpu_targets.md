@@ -25,11 +25,11 @@ The combinations marked with an '`N`' are built natively; others are built on a 
 <table>
     <thead>
         <tr>
-            <th colspan=3></th>
+            <th></th>
             <th colspan=5><div align="center">CUDA compute capability</div></th>
         </tr>
         <tr>
-            <th colspan=3><div align="center">CPU microarchitecture</div></th>
+            <th><div align="center">CPU microarchitecture</div></th>
             <th>7.0</th>
             <th>8.0</th>
             <th>9.0</th>
@@ -39,8 +39,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
     </thead>
     <tbody>
         <tr>
-            <td rowspan=5>aarch64</td>
-            <td colspan=2>generic</td>
+            <td><code>aarch64/generic`</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -48,7 +47,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td colspan=2>a64fx</td>
+            <td><code>aarch64/a64fx</code></td>
             <td>-</td>
             <td>-</td>
             <td>-</td>
@@ -56,7 +55,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td>-</td>
         </tr>
         <tr>
-            <td colspan=2>neoverse_n1</td>
+            <td><code>aarch64/neoverse_n1</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -64,7 +63,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td colspan=2>neoverse_v1</td>
+            <td><code>aarch64/neoverse_v1</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -72,8 +71,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td>nvidia</td>
-            <td>grace</td>
+            <td><code>aarch64/nvidia/grace</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
@@ -81,20 +79,10 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td colspan=8></td>
+            <td colspan=6></td>
         </tr>
         <tr>
-            <td rowspan=10>x86_64</td>
-            <td colspan=2>generic</td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-        </tr>
-        <tr>
-            <td rowspan=5>intel</td>
-            <td>haswell</td>
+            <td><code>x86_64/generic</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -102,7 +90,15 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td>skylake_avx512</td>
+            <td><code>x86_64/intel/haswell</code></td>
+            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+        </tr>
+        <tr>
+            <td><code>x86_64/intel/skylake_avx512</code></td>
             <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -110,7 +106,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td>cascadelake</td>
+            <td><code>x86_64/intel/cascadelake</code></td>
             <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -118,7 +114,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td>icelake</td>
+            <td><code>x86_64/intel/icelake</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -126,7 +122,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td>sapphirerapids</td>
+            <td><code>x86_64/intel/sapphirerapids</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -134,8 +130,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td rowspan=4>amd</td>
-            <td>zen2</td>
+            <td><code>x86_64/amd/zen2</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -143,7 +138,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td>zen3</td>
+            <td><code>x86_64/amd/zen3</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
@@ -151,7 +146,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td>zen4</td>
+            <td><code>x86_64/amd/zen4</code></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
@@ -159,7 +154,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
         </tr>
         <tr>
-            <td>zen5</td>
+            <td><code>x86_64/amd/zen5</code></td>
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
             <td><span class="software-eessi-version-202506">2025.06: x</span></td>
