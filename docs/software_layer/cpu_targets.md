@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 {% set eessi_202306 = '<span class="software-eessi-version-202306">2023.06</span>' %}
 {% set eessi_202506 = '<span class="software-eessi-version-202506">2025.06</span>' %}
 
