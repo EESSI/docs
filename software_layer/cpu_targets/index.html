@@ -190,6 +190,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -5832,7 +5834,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -5856,6 +5860,8 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
@@ -5863,24 +5869,101 @@
 
 
 <h1 id="cpu-targets">CPU targets<a class="headerlink" href="#cpu-targets" title="Permanent link">&para;</a></h1>
-<p>In the 2023.06 version of the EESSI repository, the following CPU microarchitectures are supported.</p>
-<ul>
-<li><code>aarch64/generic</code>: fallback for Arm 64-bit CPUs (like Raspberri Pi, etc.)</li>
-<li><code>aarch64/a64fx</code>: Fujitsu A64FX</li>
-<li><code>aarch64/neoverse_n1</code>: AWS Graviton 2, Ampere Altra, ...</li>
-<li><code>aarch64/neoverse_v1</code>: AWS Graviton 3</li>
-<li><code>aarch64/nvidia/grace</code>: NVIDIA Grace</li>
-<li><code>x86_64/generic</code>: fallback for older Intel + AMD CPUs (like Intel Sandy Bridge, ...)</li>
-<li><code>x86_64/amd/zen2</code>: AMD Rome</li>
-<li><code>x86_64/amd/zen3</code>: AMD Milan, Milan-X</li>
-<li><code>x86_64/amd/zen4</code>: AMD Genoa, Genoa-X, Bergamo, Siena</li>
-<li><code>x86_64/intel/haswell</code>: Intel Haswell, Broadwell</li>
-<li><code>x86_64/intel/skylake_avx512</code>: Intel Skylake</li>
-<li><code>x86_64/intel/cascadelake</code>: Intel Cascade Lake, Cooper Lake</li>
-<li><code>x86_64/intel/icelake</code>: Intel Ice Lake</li>
-<li><code>x86_64/intel/sapphirerapids</code>: Intel Sapphire Rapids, Emerald Rapids</li>
-</ul>
+<p>The following table lists the CPU microarchitectures that are natively supported by the different versions of the EESSI repository.</p>
+<table>
+<thead>
+<tr>
+<th>CPU target</th>
+<th>Description</th>
+<th>Supported in EESSI version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aarch64/generic</code></td>
+<td>fallback for Arm 64-bit CPUs (like Raspberri Pi, etc.)</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>aarch64/a64fx</code></td>
+<td>Fujitsu A64FX</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>aarch64/neoverse_n1</code></td>
+<td>AWS Graviton 2, Ampere Altra, ...</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>aarch64/neoverse_v1</code></td>
+<td>AWS Graviton 3</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>aarch64/nvidia/grace</code></td>
+<td>NVIDIA Grace</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/generic</code></td>
+<td>fallback for older Intel + AMD CPUs (like Intel Sandy Bridge, ...)</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/amd/zen2</code></td>
+<td>AMD Rome</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/amd/zen3</code></td>
+<td>AMD Milan, Milan-X</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/amd/zen4</code></td>
+<td>AMD Genoa, Genoa-X, Bergamo, Siena</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/amd/zen5</code></td>
+<td>AMD Turin</td>
+<td><span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/intel/haswell</code></td>
+<td>Intel Haswell, Broadwell</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/intel/skylake_avx512</code></td>
+<td>Intel Skylake</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/intel/cascadelake</code></td>
+<td>Intel Cascade Lake, Cooper Lake</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/intel/icelake</code></td>
+<td>Intel Ice Lake</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+<tr>
+<td><code>x86_64/intel/sapphirerapids</code></td>
+<td>Intel Sapphire Rapids, Emerald Rapids</td>
+<td><span class="software-eessi-version-202306">2023.06</span> <span class="software-eessi-version-202506">2025.06</span></td>
+</tr>
+</tbody>
+</table>
 <p>The names of these CPU targets correspond to the names used by <a href="https://github.com/archspec/archspec">archspec</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">What does native support mean?</p>
+<p>Native support means that the software has been built on, and has been optimized for, this specific CPU type.
+That does not mean that CPUs that are not listed here are not supported:
+EESSI's CPU autodetection scripts will simply fall back to the stack of the best matching CPU type in terms of supported CPU instructions.
+For instance, on an Intel Broadwell CPU you will get the stack optimized for Intel Haswell, and for an AMD Zen 5 CPU you would get the Zen 4 stack in EESSI 2023.06.</p>
+</div>
 
 
 
@@ -5901,7 +5984,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 18, 2025 07:58:47 UTC">November 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 14, 2026 18:24:19 UTC">April 14, 2026</span>
   </span>
 
     
@@ -5911,6 +5994,8 @@
   </aside>
 
 
+
+  
 
 
 
