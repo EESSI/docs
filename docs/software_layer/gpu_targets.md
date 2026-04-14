@@ -2,6 +2,10 @@
 hide:
   - toc
 ---
+{% set eessi_202306_n = '<span class="software-eessi-version-202306">2023.06: N</span>' %}
+{% set eessi_202306_x = '<span class="software-eessi-version-202306">2023.06: x</span>' %}
+{% set eessi_202506_n = '<span class="software-eessi-version-202506">2025.06: N</span>' %}
+{% set eessi_202506_x = '<span class="software-eessi-version-202506">2025.06: x</span>' %}
 
 # GPU targets
 
@@ -40,11 +44,11 @@ The combinations marked with an '`N`' are built natively; others are built on a 
     <tbody>
         <tr>
             <td><code>aarch64/generic`</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>aarch64/a64fx</code></td>
@@ -56,110 +60,110 @@ The combinations marked with an '`N`' are built natively; others are built on a 
         </tr>
         <tr>
             <td><code>aarch64/neoverse_n1</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>aarch64/neoverse_v1</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>aarch64/nvidia/grace</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td colspan=6></td>
         </tr>
         <tr>
             <td><code>x86_64/generic</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/haswell</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/skylake_avx512</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/cascadelake</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/icelake</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/sapphirerapids</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/amd/zen2</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/amd/zen3</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/amd/zen4</code></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: x</span><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202306">2023.06: N</span><span class="software-eessi-version-202506">2025.06: N</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/amd/zen5</code></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: x</span></td>
-            <td><span class="software-eessi-version-202506">2025.06: N</span></td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202506_n }}</td>
         </tr>
     </tbody>
 </table>
