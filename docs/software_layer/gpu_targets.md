@@ -43,7 +43,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
     </thead>
     <tbody>
         <tr>
-            <td><code>aarch64/generic`</code></td>
+            <td><code>aarch64/generic</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
