@@ -19,7 +19,7 @@ This means that a given EESSI version supports all NVIDIA GPUs with Compute Capa
 On the [NVIDIA website](https://developer.nvidia.com/cuda/gpus) you can find the Compute Capability of your GPU.
 
 The decision to only ship code optimized for the major GPU architectures was made to keep the number of software builds that need to be done at a reasonable level.
-Even just building for three major CUDA Compute Capabilities for all CPU targets supported by EESSI version 2023.06 would require 39 builds in total (13 CPU targets times 3 GPU targets).
+Even just building a single application for five major CUDA Compute Capabilities for all CPU targets supported by EESSI version 2025.06 would require 75 builds in total (15 CPU targets times 5 GPU targets).
 
 Not all builds are done natively, i.e. on a system actually containing a CPU and GPU of the type that is being built for.
 
