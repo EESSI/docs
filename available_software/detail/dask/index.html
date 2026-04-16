@@ -43,7 +43,7 @@
     }
   },
   "softwareRequirements": "See https://www.eessi.io/docs/ for how to make EESSI available on your system",
-  "softwareVersion": "['2023.9.2', '2023.7.1']",
+  "softwareVersion": "['2025.5.1', '2023.9.2', '2023.7.1']",
   "url": "https://dask.org/"
 }</script></head>
 <body dir="ltr">
@@ -2755,6 +2755,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#dask_jobqueue">
+<span class="md-ellipsis">
+      
+        dask_jobqueue
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#distributed">
 <span class="md-ellipsis">
       
@@ -2875,6 +2884,13 @@
 <td><span class="software-eessi-version-202306">2023.06</span></td>
 <td><code>dask/2023.9.2-foss-2023a</code></td>
 </tr>
+<tr>
+<td>2025.5.1</td>
+<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
+<td><em>(none)</em></td>
+<td><span class="software-eessi-version-202506">2025.06</span></td>
+<td><code>dask/2025.5.1-gfbf-2025a</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¶</a></h2>
@@ -2895,6 +2911,10 @@
 <tr>
 <td>2023.9.2</td>
 <td><code>dask/2023.9.2-foss-2023a</code></td>
+</tr>
+<tr>
+<td>2025.5.1</td>
+<td><code>dask/2025.5.1-gfbf-2025a</code></td>
 </tr>
 </tbody>
 </table>
@@ -2928,6 +2948,21 @@
 </tr>
 </tbody>
 </table>
+<h3 id="dask_jobqueue">dask_jobqueue<a class="headerlink" href="#dask_jobqueue" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>dask_jobqueue</code> version</th>
+<th>dask modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.9.0</td>
+<td><code>dask/2025.5.1-gfbf-2025a</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="distributed">distributed<a class="headerlink" href="#distributed" title="Permanent link">¶</a></h3>
 <table>
 <thead>
@@ -2945,6 +2980,10 @@
 <td>2023.9.2</td>
 <td><code>dask/2023.9.2-foss-2023a</code></td>
 </tr>
+<tr>
+<td>2025.5.1</td>
+<td><code>dask/2025.5.1-gfbf-2025a</code></td>
+</tr>
 </tbody>
 </table>
 <h3 id="docrep">docrep<a class="headerlink" href="#docrep" title="Permanent link">¶</a></h3>
@@ -2958,7 +2997,7 @@
 <tbody>
 <tr>
 <td>0.3.2</td>
-<td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code></td>
+<td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code><br/><code>dask/2025.5.1-gfbf-2025a</code></td>
 </tr>
 </tbody>
 </table>
@@ -2973,7 +3012,7 @@
 <tbody>
 <tr>
 <td>1.0.1</td>
-<td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code></td>
+<td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code><br/><code>dask/2025.5.1-gfbf-2025a</code></td>
 </tr>
 </tbody>
 </table>
@@ -2988,7 +3027,7 @@
 <tbody>
 <tr>
 <td>1.0.0</td>
-<td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code></td>
+<td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code><br/><code>dask/2025.5.1-gfbf-2025a</code></td>
 </tr>
 </tbody>
 </table>
@@ -3005,6 +3044,10 @@
 <td>1.4.0</td>
 <td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code></td>
 </tr>
+<tr>
+<td>1.4.2</td>
+<td><code>dask/2025.5.1-gfbf-2025a</code></td>
+</tr>
 </tbody>
 </table>
 <h3 id="tblib">tblib<a class="headerlink" href="#tblib" title="Permanent link">¶</a></h3>
@@ -3020,6 +3063,10 @@
 <td>2.0.0</td>
 <td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code></td>
 </tr>
+<tr>
+<td>3.0.0</td>
+<td><code>dask/2025.5.1-gfbf-2025a</code></td>
+</tr>
 </tbody>
 </table>
 <h3 id="toolz">toolz<a class="headerlink" href="#toolz" title="Permanent link">¶</a></h3>
@@ -3034,6 +3081,10 @@
 <tr>
 <td>0.12.0</td>
 <td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code></td>
+</tr>
+<tr>
+<td>1.0.0</td>
+<td><code>dask/2025.5.1-gfbf-2025a</code></td>
 </tr>
 </tbody>
 </table>
@@ -3063,7 +3114,7 @@
 <tbody>
 <tr>
 <td>3.0.0</td>
-<td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code></td>
+<td><code>dask/2023.7.1-foss-2022b</code><br/><code>dask/2023.9.2-foss-2023a</code><br/><code>dask/2025.5.1-gfbf-2025a</code></td>
 </tr>
 </tbody>
 </table>
@@ -3072,7 +3123,7 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 18, 2026 13:48:33 UTC">March 18, 2026</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 16, 2026 03:20:40 UTC">April 16, 2026</span>
 </span>
 </aside>
 </article>
