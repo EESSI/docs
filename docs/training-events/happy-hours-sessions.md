@@ -31,17 +31,10 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: Local Builds and Contributions to EESSI<sub><sup>`(part2)`</sup></sub>
-### Topic Series: Revisiting Ways to Add Software to EESSI
+### 💡 **Next session**: CI/CD Workflows with EESSI 
+### Topic Series: CI/CD Workflows with EESSI 
 🗓️ Schedule
-#### Monday 13 April 2026, 14:00-15:00 CE(S)T
-
----
-
-### Upcoming topic series: CI/CD Workflows with EESSI
-###### Outline
-
-- 20 April 2026 - CI/CD Workflows with EESSI
+#### Monday 20 April 2026, 14:00-15:00 CE(S)T
 
 ---
 
@@ -52,6 +45,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
 *Topic series: Revisiting Ways to Add Software to EESSI*
+
+- 13 April 2026 - [Local Builds and Contributions to EESSI<sub><sup>`(part2)`</sup></sub>](https://youtu.be/iYU4l0JmcTQ)
 
 - 30 March 2026 - [Local Builds and Contributions to EESSI<sub><sup>`(part1)`</sup></sub>](https://youtu.be/wUKuphSadis)
 
