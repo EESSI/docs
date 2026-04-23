@@ -32,7 +32,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ---
 
 !!! note "Schedule update! :rotating_light:"  
-    Mondays between **April–June 2026** will be dedicated to the **EESSI webinar series**.
+    [Mondays between **April–June 2026** will be dedicated to the **EESSI webinar series**.](https://www.eessi.io/docs/training-events/2026/webinar-series-2026Q2/)
 
 <p align="center">
   <img width="40%" src="../../img/logos/EESSI_Webinar_2026_qrcode.png" alt="EESSI Webinar 2026">
