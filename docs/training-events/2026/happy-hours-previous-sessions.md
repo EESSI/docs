@@ -4,6 +4,17 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: CI/CD Workflows with EESSI
+
+### Monday 20 April 2026
+
+**Outline:** CI/CD Workflows with EESSI
+([Slides (PDF)](EESSI-happyhour-2026-014-Workflows.pdf), [Recording (YouTube)](https://youtu.be/1kcLQLHt21k))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1kcLQLHt21k?si=kqLyCD9JOB6BURIq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: Revisiting Ways to Add Software to EESSI
 
 ### Monday 13 April 2026
@@ -37,7 +48,7 @@ Find slides, and video recordings of earlier sessions below.
 
 ### Monday 16 March 2026
 
-**Outline:** Yet another way to run EESSI: Docker Extensions
+**Outline:** From x86 to RISC-V: Expanding EESSI’s Reach
 ([Slides (PDF)](EESSI-happyhour-2026-010-EESSI-on-RISC-V.pdf), [Recording (YouTube)](https://youtu.be/B0GgFpBpAnc))
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/B0GgFpBpAnc?si=6iLagWyFAXUt1Rqn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
