@@ -75,7 +75,11 @@ There will also be an opportunity at the end of the webinar to ask questions dir
 
 #### Outline
 
-Coming soon!
+The European Environment for Scientific Software Installation (EESSI) is a collaborative initiative aimed at streamlining how scientific software is deployed and shared across diverse infrastructures, from high-performance computing (HPC) clusters and cloud platforms to local workstations. By providing a fully pre-built, modular software environment, EESSI addresses the challenges of performance and reproducibility, allowing users to access the same optimized software regardless of their specific hardware.
+
+This session will provide an overview of the current status of EESSI and the progress made in expanding its capabilities. We will highlight broader support for modern computing technologies, including the addition of new CPU and GPU targets, as well as a significantly grown software ecosystem that now features over 1,000 unique software projects—or over 3,000 when including individual Python packages and R libraries.
+
+The presentation will cover EESSI's architecture, its integration with established tools like Spack and Open OnDemand, and how it has evolved into a key service for managing software across varied infrastructures. Through a live hands-on demo, we will showcase how EESSI is utilized in real-world HPC and cloud environments. Finally, we will discuss the future direction of the platform, outlining upcoming features and improvements designed to support scientific software management in Europe and beyond.
 
 #### Materials {: #materials-eessi-intro }
 
