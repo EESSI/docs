@@ -29,7 +29,7 @@ All sessions will be recorded. Recordings, slides, and materials used will be ma
 - Monday 18 May 2026 (14:00-16:00 CEST): **Introduction to CernVM-FS**
 - Monday 1 June 2026 (14:00-16:00 CEST): **Using EESSI as a base for a central software stack**
 
-YouTube playlist with recordings coming soon!
+[YouTube playlist with recordings](https://www.youtube.com/watch?v=I-KUy023I2Q&list=PL6_PkP_6pUtZu-Er2Xi2W2eJ-KugM-Btr)
 
 ## Format
 
@@ -68,10 +68,13 @@ There will also be an opportunity at the end of the webinar to ask questions dir
 ### Introduction to EESSI
 
 - Monday 27 April 2026, 14:00-16:00 CEST (Zoom webinar)
-- speakers:
-    - Helena Vela (Do IT Now)
-- moderators:
-    - TBD
+- speaker: Helena Vela (Do IT Now)
+- [slides (PDF)](EESSI-webinars-spring-2026-introduction-to-EESSI-2026-04-27.pdf)
+- [recording (YouTube)](https://www.youtube.com/watch?v=I-KUy023I2Q)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I-KUy023I2Q?si=KA5E12AB7pQwRtUD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 #### Outline
 
@@ -81,11 +84,6 @@ This session will provide an overview of the current status of EESSI and the pro
 
 The presentation will cover EESSI's architecture, its integration with established tools like Spack and Open OnDemand, and how it has evolved into a key service for managing software across varied infrastructures. Through a live hands-on demo, we will showcase how EESSI is utilized in real-world HPC and cloud environments. Finally, we will discuss the future direction of the platform, outlining upcoming features and improvements designed to support scientific software management in Europe and beyond.
 
-#### Materials {: #materials-eessi-intro }
-
-- slides (PDF) coming soon!
-- recording (YouTube) coming soon!
-
 ---
 
 ### Building software on top of EESSI + contributing to EESSI
@@ -94,8 +92,6 @@ The presentation will cover EESSI's architecture, its integration with establish
 - speakers:
     - Lara Peeters (Ghent University)
     - Kenneth Hoste (Ghent University)
-- moderators:
-    - TBD
 
 #### Outline
 
@@ -111,10 +107,7 @@ Coming soon!
 ### Using EESSI for Continuous Integration (CI)
 
 - Monday 11 May 2026, 14:00-16:00 CEST (Zoom webinar)
-- speakers:
-    - Alan O'Cais (freelancer w/ Ghent University)
-- moderators:
-    - TBD
+- speaker: Alan O'Cais (freelancer w/ Ghent University)
 
 #### Outline
 
@@ -131,10 +124,7 @@ Coming soon!
 ### Introduction to CernVM-FS
 
 - Monday 18 May 2026, 14:00-16:00 CEST (Zoom webinar)
-- speakers:
-    - Valentin Volkl (CERN)
-- moderators:
-    - TBD
+- speaker: Valentin Volkl (CERN)
 
 #### Outline
 
@@ -154,8 +144,6 @@ Coming soon!
 - speakers:
     - Caspar van Leeuwen (SURF)
     - Bob Drõge (University of Groningen)
-- moderators:
-    - TBD
 
 #### Outline
 
