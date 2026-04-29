@@ -143,7 +143,7 @@ Coming soon!
 - Monday 1 June 2026, 14:00-16:00 CEST (Zoom webinar)
 - speakers:
     - Caspar van Leeuwen (SURF)
-    - Bob Drõge (University of Groningen)
+    - Bob Dröge (University of Groningen)
 
 #### Outline
 
