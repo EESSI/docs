@@ -40,11 +40,11 @@ a modern, extensible Python project manager.
 
 |hatchling version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
-|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`hatchling/1.18.0-GCCcore-12.3.0`|
-|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`hatchling/1.18.0-GCCcore-13.2.0`|
-|1.24.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.24.2-GCCcore-13.3.0`|
-|1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.2.0`|
 |1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.2.0`|
+|1.24.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.24.2-GCCcore-13.3.0`|
+|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`hatchling/1.18.0-GCCcore-13.2.0`|
+|1.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`hatchling/1.18.0-GCCcore-12.3.0`|
 
 ## Extensions
 
@@ -56,8 +56,8 @@ Overview of extensions included in hatchling installations
 
 |`editables` version|hatchling modules that include it|
 | --- | --- |
+|0.5|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
 |0.3|`hatchling/1.18.0-GCCcore-12.3.0`|
-|0.5|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
 
 ### hatch-docstring-description
 
@@ -71,74 +71,74 @@ Overview of extensions included in hatchling installations
 
 |`hatch-fancy-pypi-readme` version|hatchling modules that include it|
 | --- | --- |
-|24.1.0|`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 |25.1.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|24.1.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 
 ### hatch-requirements-txt
 
 
 |`hatch-requirements-txt` version|hatchling modules that include it|
 | --- | --- |
-|0.4.1|`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.4.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
 
 ### hatch-vcs
 
 
 |`hatch-vcs` version|hatchling modules that include it|
 | --- | --- |
-|0.4.0|`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 |0.5.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.4.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 
 ### hatch_fancy_pypi_readme
 
 
 |`hatch_fancy_pypi_readme` version|hatchling modules that include it|
 | --- | --- |
-|23.1.0|`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
+|23.1.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
 
 ### hatch_vcs
 
 
 |`hatch_vcs` version|hatchling modules that include it|
 | --- | --- |
-|0.3.0|`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
+|0.3.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
 
 ### hatchling
 
 
 |`hatchling` version|hatchling modules that include it|
 | --- | --- |
-|1.18.0|`hatchling/1.18.0-GCCcore-12.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`|
+|1.27.0|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 |1.24.2|`hatchling/1.24.2-GCCcore-13.3.0`|
-|1.27.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.18.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
 
 ### pathspec
 
 
 |`pathspec` version|hatchling modules that include it|
 | --- | --- |
-|0.11.1|`hatchling/1.18.0-GCCcore-12.3.0`|
+|0.12.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 |0.11.2|`hatchling/1.18.0-GCCcore-13.2.0`|
-|0.12.1|`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.11.1|`hatchling/1.18.0-GCCcore-12.3.0`|
 
 ### pluggy
 
 
 |`pluggy` version|hatchling modules that include it|
 | --- | --- |
-|1.2.0|`hatchling/1.18.0-GCCcore-12.3.0`|
-|1.3.0|`hatchling/1.18.0-GCCcore-13.2.0`|
-|1.5.0|`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 |1.6.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.5.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
+|1.3.0|`hatchling/1.18.0-GCCcore-13.2.0`|
+|1.2.0|`hatchling/1.18.0-GCCcore-12.3.0`|
 
 ### trove-classifiers
 
 
 |`trove-classifiers` version|hatchling modules that include it|
 | --- | --- |
-|2024.5.22|`hatchling/1.24.2-GCCcore-13.3.0`|
-|2025.2.18.16|`hatchling/1.27.0-GCCcore-14.2.0`|
 |2025.5.9.12|`hatchling/1.27.0-GCCcore-14.3.0`|
+|2025.2.18.16|`hatchling/1.27.0-GCCcore-14.2.0`|
+|2024.5.22|`hatchling/1.24.2-GCCcore-13.3.0`|
 
 ### trove_classifiers
 
