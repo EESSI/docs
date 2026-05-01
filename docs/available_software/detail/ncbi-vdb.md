@@ -23,7 +23,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.0.5'', ''3.0.10'']'
+  softwareVersion: '[''3.0.10'', ''3.0.5'']'
   url: https://github.com/ncbi/ncbi-vdb
 ---
 # ncbi-vdb

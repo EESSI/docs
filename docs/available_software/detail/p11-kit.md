@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''0.25.3'', ''0.25.10'']'
+  softwareVersion: '[''0.25.10'', ''0.25.3'']'
   url: https://p11-glue.freedesktop.org/p11-kit.html
 ---
 # p11-kit

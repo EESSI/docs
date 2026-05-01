@@ -23,7 +23,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''6.8.1'', ''6.13.1'']'
+  softwareVersion: '[''6.13.1'', ''6.8.1'']'
   url: http://www.riverbankcomputing.com/software/sip/
 ---
 # SIP

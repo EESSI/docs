@@ -26,7 +26,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''8.1.0'', ''13.1.2'']'
+  softwareVersion: '[''13.1.2'', ''8.1.0'']'
   url: https://www.graphviz.org/
 ---
 # Graphviz

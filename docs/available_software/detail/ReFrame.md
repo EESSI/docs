@@ -37,9 +37,9 @@ ReFrame is a framework for writing regression tests for HPC systems.
 
 |ReFrame version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
-|4.3.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`ReFrame/4.3.3`|
-|4.6.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`ReFrame/4.6.2`|
 |4.7.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`ReFrame/4.7.4`|
+|4.6.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`ReFrame/4.6.2`|
+|4.3.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`ReFrame/4.3.3`|
 
 ## Extensions
 
@@ -51,29 +51,29 @@ Overview of extensions included in ReFrame installations
 
 |`pip` version|ReFrame modules that include it|
 | --- | --- |
+|24.0|`ReFrame/4.7.4`<br/>`ReFrame/4.6.2`|
 |21.3.1|`ReFrame/4.3.3`|
-|24.0|`ReFrame/4.6.2`<br/>`ReFrame/4.7.4`|
 
 ### reframe
 
 
 |`reframe` version|ReFrame modules that include it|
 | --- | --- |
-|4.3.3|`ReFrame/4.3.3`|
-|4.6.2|`ReFrame/4.6.2`|
 |4.7.4|`ReFrame/4.7.4`|
+|4.6.2|`ReFrame/4.6.2`|
+|4.3.3|`ReFrame/4.3.3`|
 
 ### setuptools
 
 
 |`setuptools` version|ReFrame modules that include it|
 | --- | --- |
-|68.0.0|`ReFrame/4.6.2`<br/>`ReFrame/4.7.4`|
+|68.0.0|`ReFrame/4.7.4`<br/>`ReFrame/4.6.2`|
 
 ### wheel
 
 
 |`wheel` version|ReFrame modules that include it|
 | --- | --- |
+|0.42.0|`ReFrame/4.7.4`<br/>`ReFrame/4.6.2`|
 |0.37.1|`ReFrame/4.3.3`|
-|0.42.0|`ReFrame/4.6.2`<br/>`ReFrame/4.7.4`|

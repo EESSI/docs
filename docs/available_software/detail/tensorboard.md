@@ -40,8 +40,8 @@ understanding your TensorFlow runs and graphs.
 
 |tensorboard version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
-|2.15.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`tensorboard/2.15.1-gfbf-2023a`|
 |2.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`tensorboard/2.18.0-gfbf-2024a`|
+|2.15.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`tensorboard/2.15.1-gfbf-2023a`|
 
 ## Extensions
 
@@ -60,8 +60,8 @@ Overview of extensions included in tensorboard installations
 
 |`cachetools` version|tensorboard modules that include it|
 | --- | --- |
-|5.3.2|`tensorboard/2.15.1-gfbf-2023a`|
 |5.5.0|`tensorboard/2.18.0-gfbf-2024a`|
+|5.3.2|`tensorboard/2.15.1-gfbf-2023a`|
 
 ### google-auth
 
@@ -110,8 +110,8 @@ Overview of extensions included in tensorboard installations
 
 |`pyasn1_modules` version|tensorboard modules that include it|
 | --- | --- |
-|0.3.0|`tensorboard/2.15.1-gfbf-2023a`|
 |0.4.1|`tensorboard/2.18.0-gfbf-2024a`|
+|0.3.0|`tensorboard/2.15.1-gfbf-2023a`|
 
 ### requests-oauthlib
 
@@ -125,15 +125,15 @@ Overview of extensions included in tensorboard installations
 
 |`rsa` version|tensorboard modules that include it|
 | --- | --- |
-|4.9|`tensorboard/2.15.1-gfbf-2023a`<br/>`tensorboard/2.18.0-gfbf-2024a`|
+|4.9|`tensorboard/2.18.0-gfbf-2024a`<br/>`tensorboard/2.15.1-gfbf-2023a`|
 
 ### tensorboard
 
 
 |`tensorboard` version|tensorboard modules that include it|
 | --- | --- |
-|2.15.1|`tensorboard/2.15.1-gfbf-2023a`|
 |2.18.0|`tensorboard/2.18.0-gfbf-2024a`|
+|2.15.1|`tensorboard/2.15.1-gfbf-2023a`|
 
 ### tensorboard-plugin-profile
 
@@ -147,12 +147,12 @@ Overview of extensions included in tensorboard installations
 
 |`tensorboard_data_server` version|tensorboard modules that include it|
 | --- | --- |
-|0.7.2|`tensorboard/2.15.1-gfbf-2023a`<br/>`tensorboard/2.18.0-gfbf-2024a`|
+|0.7.2|`tensorboard/2.18.0-gfbf-2024a`<br/>`tensorboard/2.15.1-gfbf-2023a`|
 
 ### Werkzeug
 
 
 |`Werkzeug` version|tensorboard modules that include it|
 | --- | --- |
-|3.0.1|`tensorboard/2.15.1-gfbf-2023a`|
 |3.1.3|`tensorboard/2.18.0-gfbf-2024a`|
+|3.0.1|`tensorboard/2.15.1-gfbf-2023a`|
