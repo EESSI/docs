@@ -244,7 +244,9 @@ def generate_software_page(software_name: str, software_data: dict, path: str) -
             table_data[0] = table_data[0] % ext_name
 
             n_rows = 1
-            for ext_version, ext_version_mods in sorted(ext_details.items(), key=lambda x: LooseVersion(x[0]), reverse=True):
+            for ext_version, ext_version_mods in sorted(
+               ext_details.items(), key=lambda x: LooseVersion(x[0]), reverse=True
+            ):
                 n_rows += 1
                 table_data.extend(
                     [
