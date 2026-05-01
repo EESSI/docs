@@ -57,4 +57,4 @@ Overview of extensions included in LightGBM installations
 
 |`lightgbm` version|LightGBM modules that include it|
 | --- | --- |
-|4.5.0|`LightGBM/4.5.0-foss-2023a`<br/>`LightGBM/4.5.0-foss-2023a-CUDA-12.1.1`|
+|4.5.0|`LightGBM/4.5.0-foss-2023a-CUDA-12.1.1`<br/>`LightGBM/4.5.0-foss-2023a`|

@@ -44,10 +44,10 @@ JupyterLab is the next-generation user interface for Project Jupyter offering al
 
 |JupyterLab version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
-|4.0.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`JupyterLab/4.0.5-GCCcore-12.3.0`|
-|4.2.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterLab/4.2.5-GCCcore-13.3.0`|
-|4.4.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterLab/4.4.4-GCCcore-14.2.0`|
 |4.4.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterLab/4.4.9-GCCcore-14.3.0`|
+|4.4.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterLab/4.4.4-GCCcore-14.2.0`|
+|4.2.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+|4.0.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`JupyterLab/4.0.5-GCCcore-12.3.0`|
 
 ## Extensions
 
@@ -59,56 +59,56 @@ Overview of extensions included in JupyterLab installations
 
 |`async-lru` version|JupyterLab modules that include it|
 | --- | --- |
-|2.0.4|`JupyterLab/4.0.5-GCCcore-12.3.0`<br/>`JupyterLab/4.2.5-GCCcore-13.3.0`|
+|2.0.4|`JupyterLab/4.2.5-GCCcore-13.3.0`<br/>`JupyterLab/4.0.5-GCCcore-12.3.0`|
 
 ### async_lru
 
 
 |`async_lru` version|JupyterLab modules that include it|
 | --- | --- |
-|2.0.5|`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.4.9-GCCcore-14.3.0`|
+|2.0.5|`JupyterLab/4.4.9-GCCcore-14.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`|
 
 ### h11
 
 
 |`h11` version|JupyterLab modules that include it|
 | --- | --- |
+|0.16.0|`JupyterLab/4.4.9-GCCcore-14.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`|
 |0.14.0|`JupyterLab/4.2.5-GCCcore-13.3.0`|
-|0.16.0|`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.4.9-GCCcore-14.3.0`|
 
 ### httpcore
 
 
 |`httpcore` version|JupyterLab modules that include it|
 | --- | --- |
+|1.0.9|`JupyterLab/4.4.9-GCCcore-14.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`|
 |1.0.6|`JupyterLab/4.2.5-GCCcore-13.3.0`|
-|1.0.9|`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.4.9-GCCcore-14.3.0`|
 
 ### httpx
 
 
 |`httpx` version|JupyterLab modules that include it|
 | --- | --- |
+|0.28.1|`JupyterLab/4.4.9-GCCcore-14.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`|
 |0.27.2|`JupyterLab/4.2.5-GCCcore-13.3.0`|
-|0.28.1|`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.4.9-GCCcore-14.3.0`|
 
 ### json5
 
 
 |`json5` version|JupyterLab modules that include it|
 | --- | --- |
-|0.12.0|`JupyterLab/4.4.4-GCCcore-14.2.0`|
 |0.12.1|`JupyterLab/4.4.9-GCCcore-14.3.0`|
-|0.9.14|`JupyterLab/4.0.5-GCCcore-12.3.0`|
+|0.12.0|`JupyterLab/4.4.4-GCCcore-14.2.0`|
 |0.9.25|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+|0.9.14|`JupyterLab/4.0.5-GCCcore-12.3.0`|
 
 ### jupyter-lsp
 
 
 |`jupyter-lsp` version|JupyterLab modules that include it|
 | --- | --- |
+|2.2.5|`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.2.5-GCCcore-13.3.0`|
 |2.2.0|`JupyterLab/4.0.5-GCCcore-12.3.0`|
-|2.2.5|`JupyterLab/4.2.5-GCCcore-13.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`|
 
 ### jupyter_lsp
 
@@ -122,15 +122,15 @@ Overview of extensions included in JupyterLab installations
 
 |`jupyterlab` version|JupyterLab modules that include it|
 | --- | --- |
-|4.0.5|`JupyterLab/4.0.5-GCCcore-12.3.0`|
-|4.2.5|`JupyterLab/4.2.5-GCCcore-13.3.0`|
-|4.4.4|`JupyterLab/4.4.4-GCCcore-14.2.0`|
 |4.4.9|`JupyterLab/4.4.9-GCCcore-14.3.0`|
+|4.4.4|`JupyterLab/4.4.4-GCCcore-14.2.0`|
+|4.2.5|`JupyterLab/4.2.5-GCCcore-13.3.0`|
+|4.0.5|`JupyterLab/4.0.5-GCCcore-12.3.0`|
 
 ### jupyterlab_server
 
 
 |`jupyterlab_server` version|JupyterLab modules that include it|
 | --- | --- |
+|2.27.3|`JupyterLab/4.4.9-GCCcore-14.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.2.5-GCCcore-13.3.0`|
 |2.24.0|`JupyterLab/4.0.5-GCCcore-12.3.0`|
-|2.27.3|`JupyterLab/4.2.5-GCCcore-13.3.0`<br/>`JupyterLab/4.4.4-GCCcore-14.2.0`<br/>`JupyterLab/4.4.9-GCCcore-14.3.0`|
