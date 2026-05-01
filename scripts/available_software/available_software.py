@@ -183,7 +183,9 @@ def generate_software_page(software_name: str, software_data: dict, path: str) -
     n_cols = len(table_data)
 
     n_rows = 1
-    for version in sorted(software_data["versions"], key=lambda x: LooseVersion(x["module"]["module_version"]), reverse=True):
+    for version in sorted(
+        software_data["versions"], key=lambda x: LooseVersion(x["module"]["module_version"]), reverse=True
+    ):
         cpu_targets = format_cpu_arch_list(version["cpu_arch"])
         gpu_targets = format_gpu_arch_list(version["gpu_arch"])
 
