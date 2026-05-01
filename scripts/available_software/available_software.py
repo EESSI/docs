@@ -272,7 +272,7 @@ def generate_software_page(software_name: str, software_data: dict, path: str) -
     with open(filename, "w") as f:
         # Add the software name
         ldjson_software_data["name"] = software_name
-        # Just output the supported versionsq
+        # Just output the supported versions
         ldjson_software_data["version"] = sorted(
             list(set([version["version"] for version in software_data["versions"]])), key=LooseVersion, reverse=True
         )
