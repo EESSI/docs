@@ -73,7 +73,7 @@ There will also be an opportunity at the end of the webinar to ask questions dir
 - [recording (YouTube)](https://www.youtube.com/watch?v=I-KUy023I2Q)
 
 <div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I-KUy023I2Q?si=KA5E12AB7pQwRtUD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I-KUy023I2Q?si=c4pGvPCMU-8QPLQX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 #### Outline
@@ -92,15 +92,21 @@ The presentation will cover EESSI's architecture, its integration with establish
 - speakers:
     - Lara Peeters (Ghent University)
     - Kenneth Hoste (Ghent University)
+- [slides (PDF)](EESSI-webinars-spring-2026-building-contributing-2026-05-04.pdf)
+- [recording (YouTube)](https://youtu.be/ZDzxDujSg0w)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZDzxDujSg0w?si=rBAk59xv-aSoIuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 #### Outline
 
-Coming soon!
-
-#### Materials {: #materials-contrib }
-
-- slides (PDF) coming soon!
-- recording (YouTube) coming soon!
+- A detailed look at the EESSI software layer
+- Building software on top of EESSI
+  - Using EasyBuild, via `EESSI-extend`
+  - Manually, with the help of `buildenv`
+  - Using Spack on top of EESSI
+- Contributing software to EESSI
 
 ---
 
