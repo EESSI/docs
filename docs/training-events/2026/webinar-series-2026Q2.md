@@ -69,11 +69,11 @@ There will also be an opportunity at the end of the webinar to ask questions dir
 
 - Monday 27 April 2026, 14:00-16:00 CEST (Zoom webinar)
 - speaker: Helena Vela (Do IT Now)
-- [slides (PDF)](EESSI-webinars-spring-2026-introduction-to-EESSI-2026-04-27.pdf)
-- [recording (YouTube)](https://www.youtube.com/watch?v=I-KUy023I2Q)
+- [slides (pdf)](eessi-webinars-spring-2026-introduction-to-eessi-2026-04-27.pdf)
+- [recording (youtube)](https://www.youtube.com/watch?v=i-kuy023i2q)
 
 <div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I-KUy023I2Q?si=KA5E12AB7pQwRtUD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/i-kuy023i2q?si=ka5e12ab7pqwrtud" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 #### Outline
@@ -92,15 +92,21 @@ The presentation will cover EESSI's architecture, its integration with establish
 - speakers:
     - Lara Peeters (Ghent University)
     - Kenneth Hoste (Ghent University)
+- [slides (pdf)](EESSI-webinars-spring-2026-building-contributing-2026-05-04.pdf)
+- [recording (youtube)](https://youtu.be/ZDzxDujSg0w)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZDzxDujSg0w?si=rBAk59xv-aSoIuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 #### Outline
 
-Coming soon!
-
-#### Materials {: #materials-contrib }
-
-- slides (PDF) coming soon!
-- recording (YouTube) coming soon!
+- A detailed look at the EESSI software layer
+- Building software on top of EESSI
+  - Using EasyBuild, via `EESSI-extend`
+  - Manually, with the help of `buildenv`
+  - Using Spack on top of EESSI
+- Contributing software to EESSI
 
 ---
 
