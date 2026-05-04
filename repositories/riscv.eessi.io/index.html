@@ -11,10 +11,6 @@
         <link rel="canonical" href="https://eessi.github.io/docs/repositories/riscv.eessi.io/">
       
       
-        <link rel="prev" href="../versions/">
-      
-      
-        <link rel="next" href="../dev.eessi.io/">
       
       
         
@@ -25,7 +21,7 @@
     
     
       
-        <title>RISC-V - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>EESSI RISC-V development repository (riscv.eessi.io) - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              RISC-V
+              EESSI RISC-V development repository (riscv.eessi.io)
             
           </span>
         </div>
@@ -501,20 +497,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -535,7 +529,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -661,37 +655,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    RISC-V
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dev.eessi.io-riscv/" class="md-nav__link">
         
   
   
@@ -707,59 +674,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-the-risc-v-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Accessing the RISC-V repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-riscveessiio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using riscv.eessi.io
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#infrastructure-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Infrastructure status
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -5981,6 +5895,11 @@ you may not know yet that this is not a URL/webpage but a <a href="../../filesys
 that EESSI uses to distribute software.</p>
 <p><strong>See the <a href="../../overview/">EESSI overview page</a> for a general introduction to EESSI.</strong></p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">This repository is deprecated</p>
+<p>The <code>riscv.eessi.io</code> repository is no longer maintained.
+New RISC-V software stacks are being made available in <a href="../dev.eessi.io-riscv/"><code>dev.eessi.io/riscv</code></a>.</p>
+</div>
 <p>This repository contains development versions of an EESSI RISC-V software stack.
 Note that versions may be added, modified, or deleted at any time.</p>
 <h2 id="accessing-the-risc-v-repository">Accessing the RISC-V repository<a class="headerlink" href="#accessing-the-risc-v-repository" title="Permanent link">&para;</a></h2>
@@ -6047,7 +5966,7 @@ Use <code>module avail</code> to get a full and up-to-date listing of available 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 1, 2025 11:52:06 UTC">July 1, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 27, 2026 08:15:28 UTC">February 27, 2026</span>
   </span>
 
     
