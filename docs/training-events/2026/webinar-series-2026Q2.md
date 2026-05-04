@@ -69,11 +69,11 @@ There will also be an opportunity at the end of the webinar to ask questions dir
 
 - Monday 27 April 2026, 14:00-16:00 CEST (Zoom webinar)
 - speaker: Helena Vela (Do IT Now)
-- [slides (pdf)](EESSI-webinars-spring-2026-introduction-to-eessi-2026-04-27.pdf)
-- [recording (youtube)](https://www.youtube.com/watch?v=i-kuy023i2q)
+- [slides (PDF)](EESSI-webinars-spring-2026-introduction-to-EESSI-2026-04-27.pdf)
+- [recording (YouTube)](https://www.youtube.com/watch?v=I-KUy023I2Q)
 
 <div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/i-kuy023i2q?si=ka5e12ab7pqwrtud" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I-KUy023I2Q?si=c4pGvPCMU-8QPLQX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 #### Outline
@@ -92,8 +92,8 @@ The presentation will cover EESSI's architecture, its integration with establish
 - speakers:
     - Lara Peeters (Ghent University)
     - Kenneth Hoste (Ghent University)
-- [slides (pdf)](EESSI-webinars-spring-2026-building-contributing-2026-05-04.pdf)
-- [recording (youtube)](https://youtu.be/ZDzxDujSg0w)
+- [slides (PDF)](EESSI-webinars-spring-2026-building-contributing-2026-05-04.pdf)
+- [recording (YouTube)](https://youtu.be/ZDzxDujSg0w)
 
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDzxDujSg0w?si=rBAk59xv-aSoIuL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
