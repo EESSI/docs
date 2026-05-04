@@ -69,7 +69,7 @@ There will also be an opportunity at the end of the webinar to ask questions dir
 
 - Monday 27 April 2026, 14:00-16:00 CEST (Zoom webinar)
 - speaker: Helena Vela (Do IT Now)
-- [slides (pdf)](eessi-webinars-spring-2026-introduction-to-eessi-2026-04-27.pdf)
+- [slides (pdf)](EESSI-webinars-spring-2026-introduction-to-eessi-2026-04-27.pdf)
 - [recording (youtube)](https://www.youtube.com/watch?v=i-kuy023i2q)
 
 <div align="center">
