@@ -18,7 +18,8 @@ To add software to EESSI, you should go through the semi-automatic software inst
 ### Preparation
 
 Before you can make a pull request to the [software-layer](https://github.com/EESSI/software-layer),
-you should [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the repository in your GitHub account.
+you should [fork](https://github.com/EESSI/software-layer/fork) the repository in your GitHub account.
+Please see [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo) for details. Once forked, you can proceed.
 
 For the remainder of these instructions, we assume that your GitHub account is `@koala` :koala:.
 

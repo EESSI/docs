@@ -16,6 +16,7 @@ import copy
 import json
 import os
 import yaml
+from easybuild.tools import LooseVersion
 from mdutils.tools.Table import Table
 from string import Template
 
@@ -190,7 +191,9 @@ def generate_software_page(software_name: str, software_data: dict, path: str) -
     n_cols = len(table_data)
 
     n_rows = 1
-    for version in sorted(software_data["versions"], key=lambda x: x["version"]):
+    for version in sorted(
+        software_data["versions"], key=lambda x: LooseVersion(x["module"]["module_version"]), reverse=True
+    ):
         cpu_targets = format_cpu_arch_list(version["cpu_arch"])
         gpu_targets = format_gpu_arch_list(version["gpu_arch"])
 
@@ -251,12 +254,14 @@ def generate_software_page(software_name: str, software_data: dict, path: str) -
             table_data[0] = table_data[0] % ext_name
 
             n_rows = 1
-            for ext_version, ext_version_mods in sorted(ext_details.items(), key=lambda x: x[0]):
+            for ext_version, ext_version_mods in sorted(
+               ext_details.items(), key=lambda x: LooseVersion(x[0]), reverse=True
+            ):
                 n_rows += 1
                 table_data.extend(
                     [
                         ext_version,
-                        "<br/>".join("`" + m + "`" for m in sorted(ext_version_mods)),
+                        "<br/>".join("`" + m + "`" for m in sorted(ext_version_mods, key=LooseVersion, reverse=True)),
                     ]
                 )
 
@@ -279,9 +284,9 @@ def generate_software_page(software_name: str, software_data: dict, path: str) -
     with open(filename, "w") as f:
         # Add the software name
         ldjson_software_data["name"] = software_name
-        # Just output the supported versionsq
+        # Just output the supported versions
         ldjson_software_data["version"] = sorted(
-            list(set([version["version"] for version in software_data["versions"]])), reverse=True
+            list(set([version["version"] for version in software_data["versions"]])), key=LooseVersion, reverse=True
         )
         # Make the description safe for json (and remove surrounding quotes)
         ldjson_software_data["description"] = json.dumps(ldjson_software_data["description"])[1:-1]

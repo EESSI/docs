@@ -29,7 +29,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''0.9.32'', ''0.10.15'']'
+  softwareVersion: '[''0.10.15'', ''0.9.32'']'
   url: https://github.com/lu-zero/cargo-c
 ---
 # cargo-c

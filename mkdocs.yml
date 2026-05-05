@@ -30,7 +30,7 @@ nav:
     - Production:
       - Software: repositories/software.eessi.io.md
       - Versions: repositories/versions.md
-    - RISC-V: repositories/riscv.eessi.io.md
+    - RISC-V: repositories/dev.eessi.io-riscv.md
     - Development repository: repositories/dev.eessi.io.md
   - Installation and configuration:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
@@ -214,7 +214,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Wed, 18 Mar 2026 at 13:48:31 UTC"
+  generated_time: "Tue, 05 May 2026 at 03:24:36 UTC"
   slack_invite_url: "https://join.slack.com/t/eessi-hpc/shared_invite/zt-2wg10p26d-m_CnRB89xQq3zk9qxf1k3g"
 extra_javascript:
   # mermaid diagram

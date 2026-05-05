@@ -31,17 +31,17 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: From x86 to RISC-V: Expanding EESSI’s Reach
-### Topic Series: EESSI Fundamentals Refresher
+!!! note "Schedule update! :rotating_light:"  
+    [Mondays between **April–June 2026** will be dedicated to the **EESSI webinar series**.](https://www.eessi.io/docs/training-events/2026/webinar-series-2026Q2/)
+
+<p align="center">
+  <img width="40%" src="../../img/logos/EESSI_Webinar_2026_qrcode.png" alt="EESSI Webinar 2026">
+</p>
+
+### 💡 **Next session**: TBD 
+### Topic Series: TBD 
 🗓️ Schedule
-#### Monday 16 March 2026, 14:00-15:00 CE(S)T
-
----
-
-### Upcoming topic series: EESSI Fundamentals Refresher
-###### Outline
-
-- 16 March 2026 - From x86 to RISC-V: Expanding EESSI’s Reach
+#### Monday 8 June 2026, 14:00-15:00 CE(S)T
 
 ---
 
@@ -51,7 +51,23 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
+*Topic series: CI/CD Workflows with EESSI*
+
+- 20 April 2026 - [CI/CD Workflows with EESSI](https://youtu.be/1kcLQLHt21k)
+
+*Topic series: Revisiting Ways to Add Software to EESSI*
+
+- 13 April 2026 - [Local Builds and Contributions to EESSI<sub><sup>`(part2)`</sup></sub>](https://youtu.be/iYU4l0JmcTQ)
+
+- 30 March 2026 - [Local Builds and Contributions to EESSI<sub><sup>`(part1)`</sup></sub>](https://youtu.be/wUKuphSadis)
+
+*Topic series: What’s New in EESSI 2025.06 ?*
+
+- 23 March 2026 - [What’s New in EESSI 2025.06 ?](https://youtu.be/TftmYLkN5GI)
+
 *Topic series: EESSI Fundamentals Refresher*
+
+- 16 March 2026 - [From x86 to RISC-V: Expanding EESSI’s Reach](https://youtu.be/B0GgFpBpAnc)
 
 - 09 March 2026 - [Yet another way to run EESSI: Docker Extensions](https://youtu.be/jC_clb7bLhM)
 
