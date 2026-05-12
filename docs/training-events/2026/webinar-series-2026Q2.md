@@ -114,15 +114,23 @@ The presentation will cover EESSI's architecture, its integration with establish
 
 - Monday 11 May 2026, 14:00-16:00 CEST (Zoom webinar)
 - speaker: Alan O'Cais (freelancer w/ Ghent University)
+- [slides (PDF)](EESSI-webinars-spring-2026-EESSI-CI-CD-2026-05-11.pdf)
+- [recording (YouTube)](https://youtu.be/Tcjubkc43Hg)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tcjubkc43Hg?si=lBsXfq6baR3MueAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 #### Outline
 
-Coming soon!
-
-#### Materials {: #materials-cicd }
-
-- slides (PDF) coming soon!
-- recording (YouTube) coming soon!
+- Introducing Continuous Integration (CI)
+- Navigating EESSI to build my project
+- Building my project with the EESSI GitHub Action
+- Navigating EasyBuild to build with EESSI-extend
+- Building with EESSI-extend and the EESSI GitHub Action
+- Building my project with the EESSI GitLab Component
+- CI with EESSI + Spack
+- Continuous Deployment and what EESSI can offer there
 
 ---
 
