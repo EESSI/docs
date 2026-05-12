@@ -24,7 +24,7 @@ support in EESSI.
 `lfoss` is the LLVM-based counterpart to the widely used `foss` toolchain in EESSI and 
 EasyBuild ecosystems.
 
-Where `foss` is centered aroung GCC, the `lfoss` family uses LLVM/Clang while still 
+Where `foss` is centered around GCC, the `lfoss` family uses LLVM/Clang while still 
 providing the familiar scientific software stack components such as MPI, BLAS/LAPACK, FFT 
 libraries, and related HPC tooling.
 
