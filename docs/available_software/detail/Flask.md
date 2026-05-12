@@ -30,7 +30,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.1.1'', ''3.0.3'', ''3.0.0'', ''2.3.3'', ''2.2.3'']'
+  softwareVersion: '[''3.1.1'', ''3.0.3'', ''3.0.0'', ''2.3.3'']'
   url: https://www.palletsprojects.com/p/flask/
 ---
 # Flask
@@ -53,7 +53,6 @@ This module includes the Flask extensions: Flask-Cors
 |3.0.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Flask/3.0.3-GCCcore-13.3.0`|
 |3.0.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Flask/3.0.0-GCCcore-13.2.0`|
 |2.3.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Flask/2.3.3-GCCcore-12.3.0`|
-|2.2.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Flask/2.2.3-GCCcore-12.2.0`|
 
 ## Extensions
 
@@ -67,7 +66,6 @@ Overview of extensions included in Flask installations
 | --- | --- |
 |3.9.1|`Flask/3.1.1-GCCcore-14.2.0`|
 |3.7.2|`Flask/3.0.3-GCCcore-13.3.0`<br/>`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`|
-|3.6.0|`Flask/2.2.3-GCCcore-12.2.0`|
 
 ### blinker
 
@@ -85,14 +83,7 @@ Overview of extensions included in Flask installations
 |`cachelib` version|Flask modules that include it|
 | --- | --- |
 |0.13.0|`Flask/3.1.1-GCCcore-14.2.0`<br/>`Flask/3.0.3-GCCcore-13.3.0`|
-|0.10.2|`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`<br/>`Flask/2.2.3-GCCcore-12.2.0`|
-
-### Flask
-
-
-|`Flask` version|Flask modules that include it|
-| --- | --- |
-|2.2.3|`Flask/2.2.3-GCCcore-12.2.0`|
+|0.10.2|`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`|
 
 ### flask
 
@@ -112,7 +103,6 @@ Overview of extensions included in Flask installations
 |6.0.1|`Flask/3.1.1-GCCcore-14.2.0`|
 |5.0.0|`Flask/3.0.3-GCCcore-13.3.0`|
 |4.0.0|`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`|
-|3.0.10|`Flask/2.2.3-GCCcore-12.2.0`|
 
 ### Flask-Session
 
@@ -121,7 +111,6 @@ Overview of extensions included in Flask installations
 | --- | --- |
 |0.8.0|`Flask/3.1.1-GCCcore-14.2.0`<br/>`Flask/3.0.3-GCCcore-13.3.0`|
 |0.5.0|`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`|
-|0.4.0|`Flask/2.2.3-GCCcore-12.2.0`|
 
 ### itsdangerous
 
@@ -129,7 +118,7 @@ Overview of extensions included in Flask installations
 |`itsdangerous` version|Flask modules that include it|
 | --- | --- |
 |2.2.0|`Flask/3.1.1-GCCcore-14.2.0`<br/>`Flask/3.0.3-GCCcore-13.3.0`|
-|2.1.2|`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`<br/>`Flask/2.2.3-GCCcore-12.2.0`|
+|2.1.2|`Flask/3.0.0-GCCcore-13.2.0`<br/>`Flask/2.3.3-GCCcore-12.3.0`|
 
 ### msgspec
 
@@ -138,13 +127,6 @@ Overview of extensions included in Flask installations
 | --- | --- |
 |0.19.0|`Flask/3.1.1-GCCcore-14.2.0`|
 |0.18.6|`Flask/3.0.3-GCCcore-13.3.0`|
-
-### Werkzeug
-
-
-|`Werkzeug` version|Flask modules that include it|
-| --- | --- |
-|2.2.3|`Flask/2.2.3-GCCcore-12.2.0`|
 
 ### werkzeug
 

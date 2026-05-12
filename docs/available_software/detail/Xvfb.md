@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''21.1.18'', ''21.1.14'', ''21.1.9'', ''21.1.8'', ''21.1.6'']'
+  softwareVersion: '[''21.1.18'', ''21.1.14'', ''21.1.9'', ''21.1.8'']'
   url: https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml
 ---
 # Xvfb
@@ -44,7 +44,6 @@ Xvfb is an X server that can run on machines with no display hardware and no phy
 |21.1.14|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Xvfb/21.1.14-GCCcore-13.3.0`|
 |21.1.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Xvfb/21.1.9-GCCcore-13.2.0`|
 |21.1.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Xvfb/21.1.8-GCCcore-12.3.0`|
-|21.1.6|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Xvfb/21.1.6-GCCcore-12.2.0`|
 
 ## Extensions
 
@@ -56,7 +55,7 @@ Overview of extensions included in Xvfb installations
 
 |`bdftopcf` version|Xvfb modules that include it|
 | --- | --- |
-|1.1|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.1|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`|
 
 ### font-misc-misc
 
@@ -64,7 +63,6 @@ Overview of extensions included in Xvfb installations
 |`font-misc-misc` version|Xvfb modules that include it|
 | --- | --- |
 |1.1.3|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`|
-|1.1.2|`Xvfb/21.1.6-GCCcore-12.2.0`|
 
 ### font-util
 
@@ -73,7 +71,6 @@ Overview of extensions included in Xvfb installations
 | --- | --- |
 |1.4.1|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`|
 |1.4.0|`Xvfb/21.1.8-GCCcore-12.3.0`|
-|1.3.3|`Xvfb/21.1.6-GCCcore-12.2.0`|
 
 ### libxcvt
 
@@ -81,14 +78,14 @@ Overview of extensions included in Xvfb installations
 |`libxcvt` version|Xvfb modules that include it|
 | --- | --- |
 |0.1.3|`Xvfb/21.1.18-GCCcore-14.3.0`|
-|0.1.2|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|0.1.2|`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`|
 
 ### mkfontdir
 
 
 |`mkfontdir` version|Xvfb modules that include it|
 | --- | --- |
-|1.0.7|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.0.7|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`<br/>`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`|
 
 ### mkfontscale
 
@@ -96,7 +93,7 @@ Overview of extensions included in Xvfb installations
 |`mkfontscale` version|Xvfb modules that include it|
 | --- | --- |
 |1.2.3|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
-|1.2.2|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.2.2|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`|
 
 ### xauth
 
@@ -105,7 +102,7 @@ Overview of extensions included in Xvfb installations
 | --- | --- |
 |1.1.4|`Xvfb/21.1.18-GCCcore-14.3.0`|
 |1.1.3|`Xvfb/21.1.14-GCCcore-13.3.0`|
-|1.1.2|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.1.2|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`|
 
 ### xkbcomp
 
@@ -113,7 +110,7 @@ Overview of extensions included in Xvfb installations
 |`xkbcomp` version|Xvfb modules that include it|
 | --- | --- |
 |1.4.7|`Xvfb/21.1.18-GCCcore-14.3.0`<br/>`Xvfb/21.1.14-GCCcore-13.3.0`|
-|1.4.6|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`<br/>`Xvfb/21.1.6-GCCcore-12.2.0`|
+|1.4.6|`Xvfb/21.1.9-GCCcore-13.2.0`<br/>`Xvfb/21.1.8-GCCcore-12.3.0`|
 
 ### xkeyboard-config
 
@@ -124,7 +121,6 @@ Overview of extensions included in Xvfb installations
 |2.43|`Xvfb/21.1.14-GCCcore-13.3.0`|
 |2.40|`Xvfb/21.1.9-GCCcore-13.2.0`|
 |2.39|`Xvfb/21.1.8-GCCcore-12.3.0`|
-|2.37|`Xvfb/21.1.6-GCCcore-12.2.0`|
 
 ### Xvfb
 
@@ -135,4 +131,3 @@ Overview of extensions included in Xvfb installations
 |21.1.14|`Xvfb/21.1.14-GCCcore-13.3.0`|
 |21.1.9|`Xvfb/21.1.9-GCCcore-13.2.0`|
 |21.1.8|`Xvfb/21.1.8-GCCcore-12.3.0`|
-|21.1.6|`Xvfb/21.1.6-GCCcore-12.2.0`|

@@ -23,7 +23,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''2025.5.1'', ''2023.9.2'', ''2023.7.1'']'
+  softwareVersion: '[''2025.5.1'', ''2023.9.2'']'
   url: https://dask.org/
 ---
 # dask
@@ -41,7 +41,6 @@ Dask natively scales Python. Dask provides advanced parallelism for analytics, e
 | --- | --- | --- | --- | --- |
 |2025.5.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`dask/2025.5.1-gfbf-2025a`|
 |2023.9.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`dask/2023.9.2-foss-2023a`|
-|2023.7.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`dask/2023.7.1-foss-2022b`|
 
 ## Extensions
 
@@ -55,21 +54,20 @@ Overview of extensions included in dask installations
 | --- | --- |
 |2025.5.1|`dask/2025.5.1-gfbf-2025a`|
 |2023.9.2|`dask/2023.9.2-foss-2023a`|
-|2023.7.1|`dask/2023.7.1-foss-2022b`|
 
 ### dask-jobqueue
 
 
 |`dask-jobqueue` version|dask modules that include it|
 | --- | --- |
-|0.8.2|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+|0.8.2|`dask/2023.9.2-foss-2023a`|
 
 ### dask-mpi
 
 
 |`dask-mpi` version|dask modules that include it|
 | --- | --- |
-|2022.4.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+|2022.4.0|`dask/2023.9.2-foss-2023a`|
 
 ### dask_jobqueue
 
@@ -85,28 +83,27 @@ Overview of extensions included in dask installations
 | --- | --- |
 |2025.5.1|`dask/2025.5.1-gfbf-2025a`|
 |2023.9.2|`dask/2023.9.2-foss-2023a`|
-|2023.7.1|`dask/2023.7.1-foss-2022b`|
 
 ### docrep
 
 
 |`docrep` version|dask modules that include it|
 | --- | --- |
-|0.3.2|`dask/2025.5.1-gfbf-2025a`<br/>`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+|0.3.2|`dask/2025.5.1-gfbf-2025a`<br/>`dask/2023.9.2-foss-2023a`|
 
 ### HeapDict
 
 
 |`HeapDict` version|dask modules that include it|
 | --- | --- |
-|1.0.1|`dask/2025.5.1-gfbf-2025a`<br/>`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+|1.0.1|`dask/2025.5.1-gfbf-2025a`<br/>`dask/2023.9.2-foss-2023a`|
 
 ### locket
 
 
 |`locket` version|dask modules that include it|
 | --- | --- |
-|1.0.0|`dask/2025.5.1-gfbf-2025a`<br/>`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+|1.0.0|`dask/2025.5.1-gfbf-2025a`<br/>`dask/2023.9.2-foss-2023a`|
 
 ### partd
 
@@ -114,7 +111,7 @@ Overview of extensions included in dask installations
 |`partd` version|dask modules that include it|
 | --- | --- |
 |1.4.2|`dask/2025.5.1-gfbf-2025a`|
-|1.4.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+|1.4.0|`dask/2023.9.2-foss-2023a`|
 
 ### tblib
 
@@ -122,7 +119,7 @@ Overview of extensions included in dask installations
 |`tblib` version|dask modules that include it|
 | --- | --- |
 |3.0.0|`dask/2025.5.1-gfbf-2025a`|
-|2.0.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+|2.0.0|`dask/2023.9.2-foss-2023a`|
 
 ### toolz
 
@@ -130,18 +127,11 @@ Overview of extensions included in dask installations
 |`toolz` version|dask modules that include it|
 | --- | --- |
 |1.0.0|`dask/2025.5.1-gfbf-2025a`|
-|0.12.0|`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
-
-### versioneer
-
-
-|`versioneer` version|dask modules that include it|
-| --- | --- |
-|0.29|`dask/2023.7.1-foss-2022b`|
+|0.12.0|`dask/2023.9.2-foss-2023a`|
 
 ### zict
 
 
 |`zict` version|dask modules that include it|
 | --- | --- |
-|3.0.0|`dask/2025.5.1-gfbf-2025a`<br/>`dask/2023.9.2-foss-2023a`<br/>`dask/2023.7.1-foss-2022b`|
+|3.0.0|`dask/2025.5.1-gfbf-2025a`<br/>`dask/2023.9.2-foss-2023a`|
