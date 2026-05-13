@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''2.17.0'', ''2.16.0'', ''2.14.2'', ''2.7.2'']'
+  softwareVersion: '[''2.17.0'', ''2.16.0'', ''2.14.2'', ''2.14.0'', ''2.7.2'']'
   url: https://jupyter.org/
 ---
 # jupyter-server
@@ -47,6 +47,7 @@ Voila.
 |2.17.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |2.16.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`jupyter-server/2.16.0-GCCcore-14.2.0`|
 |2.14.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|2.14.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |2.7.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ## Extensions
@@ -61,7 +62,7 @@ Overview of extensions included in jupyter-server installations
 | --- | --- |
 |4.11.0|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |4.9.0|`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|4.3.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|4.3.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |3.7.1|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### argon2-cffi-bindings
@@ -69,7 +70,7 @@ Overview of extensions included in jupyter-server installations
 
 |`argon2-cffi-bindings` version|jupyter-server modules that include it|
 | --- | --- |
-|21.2.0|`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
+|21.2.0|`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### argon2_cffi
 
@@ -77,7 +78,7 @@ Overview of extensions included in jupyter-server installations
 |`argon2_cffi` version|jupyter-server modules that include it|
 | --- | --- |
 |25.1.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|23.1.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
+|23.1.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### argon2_cffi_bindings
 
@@ -99,7 +100,7 @@ Overview of extensions included in jupyter-server installations
 |`bleach` version|jupyter-server modules that include it|
 | --- | --- |
 |6.2.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|6.1.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|6.1.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |6.0.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### comm
@@ -126,7 +127,7 @@ Overview of extensions included in jupyter-server installations
 
 |`defusedxml` version|jupyter-server modules that include it|
 | --- | --- |
-|0.7.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
+|0.7.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### deprecation
 
@@ -143,6 +144,7 @@ Overview of extensions included in jupyter-server installations
 |2.21.2|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |2.21.1|`jupyter-server/2.16.0-GCCcore-14.2.0`|
 |2.20.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|2.19.1|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |2.18.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### hatch_jupyter_builder
@@ -166,6 +168,7 @@ Overview of extensions included in jupyter-server installations
 | --- | --- |
 |6.30.1|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |6.29.5|`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|6.29.4|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |6.25.1|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### ipython_genutils
@@ -173,7 +176,7 @@ Overview of extensions included in jupyter-server installations
 
 |`ipython_genutils` version|jupyter-server modules that include it|
 | --- | --- |
-|0.2.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
+|0.2.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### ipywidgets
 
@@ -192,6 +195,7 @@ Overview of extensions included in jupyter-server installations
 |4.25.1|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |4.24.0|`jupyter-server/2.16.0-GCCcore-14.2.0`|
 |4.23.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|4.22.0|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |4.18.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jsonschema_specifications
@@ -202,6 +206,7 @@ Overview of extensions included in jupyter-server installations
 |2025.9.1|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |2025.4.1|`jupyter-server/2.16.0-GCCcore-14.2.0`|
 |2024.10.1|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|2023.12.1|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |2023.7.1|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jupyter_client
@@ -210,6 +215,7 @@ Overview of extensions included in jupyter-server installations
 |`jupyter_client` version|jupyter-server modules that include it|
 | --- | --- |
 |8.6.3|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|8.6.1|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |8.3.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jupyter_core
@@ -218,7 +224,7 @@ Overview of extensions included in jupyter-server installations
 |`jupyter_core` version|jupyter-server modules that include it|
 | --- | --- |
 |5.8.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|5.7.2|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|5.7.2|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |5.3.1|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jupyter_events
@@ -227,7 +233,7 @@ Overview of extensions included in jupyter-server installations
 |`jupyter_events` version|jupyter-server modules that include it|
 | --- | --- |
 |0.12.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|0.10.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.10.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.7.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jupyter_packaging
@@ -245,6 +251,7 @@ Overview of extensions included in jupyter-server installations
 |2.17.0|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |2.16.0|`jupyter-server/2.16.0-GCCcore-14.2.0`|
 |2.14.2|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|2.14.0|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |2.7.2|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jupyter_server_terminals
@@ -252,7 +259,7 @@ Overview of extensions included in jupyter-server installations
 
 |`jupyter_server_terminals` version|jupyter-server modules that include it|
 | --- | --- |
-|0.5.3|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.5.3|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.4.4|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jupyterlab_pygments
@@ -260,7 +267,7 @@ Overview of extensions included in jupyter-server installations
 
 |`jupyterlab_pygments` version|jupyter-server modules that include it|
 | --- | --- |
-|0.3.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.3.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.2.2|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### jupyterlab_widgets
@@ -279,7 +286,7 @@ Overview of extensions included in jupyter-server installations
 | --- | --- |
 |3.1.4|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |3.1.3|`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|3.0.2|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|3.0.2|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |3.0.1|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### nbclient
@@ -288,7 +295,7 @@ Overview of extensions included in jupyter-server installations
 |`nbclient` version|jupyter-server modules that include it|
 | --- | --- |
 |0.10.2|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|0.10.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.10.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.8.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### nbconvert
@@ -297,7 +304,7 @@ Overview of extensions included in jupyter-server installations
 |`nbconvert` version|jupyter-server modules that include it|
 | --- | --- |
 |7.16.6|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|7.16.4|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|7.16.4|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |7.7.4|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### nbformat
@@ -305,7 +312,7 @@ Overview of extensions included in jupyter-server installations
 
 |`nbformat` version|jupyter-server modules that include it|
 | --- | --- |
-|5.10.4|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|5.10.4|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |5.9.2|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### nest_asyncio
@@ -313,7 +320,7 @@ Overview of extensions included in jupyter-server installations
 
 |`nest_asyncio` version|jupyter-server modules that include it|
 | --- | --- |
-|1.6.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|1.6.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |1.5.7|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### notebook_shim
@@ -321,7 +328,7 @@ Overview of extensions included in jupyter-server installations
 
 |`notebook_shim` version|jupyter-server modules that include it|
 | --- | --- |
-|0.2.4|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.2.4|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.2.3|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### overrides
@@ -329,7 +336,7 @@ Overview of extensions included in jupyter-server installations
 
 |`overrides` version|jupyter-server modules that include it|
 | --- | --- |
-|7.7.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|7.7.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |7.4.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### pandocfilters
@@ -337,7 +344,7 @@ Overview of extensions included in jupyter-server installations
 
 |`pandocfilters` version|jupyter-server modules that include it|
 | --- | --- |
-|1.5.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|1.5.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |1.5.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### prometheus_client
@@ -348,6 +355,7 @@ Overview of extensions included in jupyter-server installations
 |0.23.1|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |0.22.1|`jupyter-server/2.16.0-GCCcore-14.2.0`|
 |0.21.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.20.0|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.17.1|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### python-json-logger
@@ -355,7 +363,7 @@ Overview of extensions included in jupyter-server installations
 
 |`python-json-logger` version|jupyter-server modules that include it|
 | --- | --- |
-|2.0.7|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
+|2.0.7|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### python_json_logger
 
@@ -370,7 +378,7 @@ Overview of extensions included in jupyter-server installations
 |`referencing` version|jupyter-server modules that include it|
 | --- | --- |
 |0.36.2|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|0.35.1|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.35.1|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.30.2|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### rfc3339_validator
@@ -378,14 +386,14 @@ Overview of extensions included in jupyter-server installations
 
 |`rfc3339_validator` version|jupyter-server modules that include it|
 | --- | --- |
-|0.1.4|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
+|0.1.4|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### rfc3986_validator
 
 
 |`rfc3986_validator` version|jupyter-server modules that include it|
 | --- | --- |
-|0.1.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
+|0.1.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`<br/>`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### rpds_py
 
@@ -395,6 +403,7 @@ Overview of extensions included in jupyter-server installations
 |0.27.1|`jupyter-server/2.17.0-GCCcore-14.3.0`|
 |0.25.1|`jupyter-server/2.16.0-GCCcore-14.2.0`|
 |0.20.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.18.1|`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.9.2|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### Send2Trash
@@ -402,7 +411,7 @@ Overview of extensions included in jupyter-server installations
 
 |`Send2Trash` version|jupyter-server modules that include it|
 | --- | --- |
-|1.8.3|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|1.8.3|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |1.8.2|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### sniffio
@@ -410,7 +419,7 @@ Overview of extensions included in jupyter-server installations
 
 |`sniffio` version|jupyter-server modules that include it|
 | --- | --- |
-|1.3.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|1.3.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |1.3.0|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### terminado
@@ -418,7 +427,7 @@ Overview of extensions included in jupyter-server installations
 
 |`terminado` version|jupyter-server modules that include it|
 | --- | --- |
-|0.18.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|0.18.1|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |0.17.1|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### tinycss2
@@ -427,7 +436,7 @@ Overview of extensions included in jupyter-server installations
 |`tinycss2` version|jupyter-server modules that include it|
 | --- | --- |
 |1.4.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`|
-|1.3.0|`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|1.3.0|`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 |1.2.1|`jupyter-server/2.7.2-GCCcore-12.3.0`|
 
 ### websocket-client
@@ -442,7 +451,7 @@ Overview of extensions included in jupyter-server installations
 
 |`websocket_client` version|jupyter-server modules that include it|
 | --- | --- |
-|1.8.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`|
+|1.8.0|`jupyter-server/2.17.0-GCCcore-14.3.0`<br/>`jupyter-server/2.16.0-GCCcore-14.2.0`<br/>`jupyter-server/2.14.2-GCCcore-13.3.0`<br/>`jupyter-server/2.14.0-GCCcore-13.2.0`|
 
 ### widgetsnbextension
 
