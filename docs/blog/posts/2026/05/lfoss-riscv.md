@@ -73,7 +73,7 @@ module avail lfoss
 and load it via:
 
 ```
-module load lfoss/2025
+module load lfoss/2025b
 ```
 
 ## Availability in `dev.eessi.io/riscv`
