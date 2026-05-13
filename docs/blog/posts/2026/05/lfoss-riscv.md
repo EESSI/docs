@@ -48,7 +48,7 @@ available on x86\_64 and AArch64 platforms in EESSI.
 ## Accessing the RISC-V stack
 
 The RISC-V stack is currently provided through the dedicated RISC-V development
-repository. To access it, just:
+repository. To access it, make sure that the `software.eessi.io` and `dev.eessi.io` CernVM-FS repositories  are available on your system, and then just run:
 
 ```
 $ export EESSI_VERSION_OVERRIDE=2025.06-001
