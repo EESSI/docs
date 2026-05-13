@@ -91,7 +91,7 @@ The RISC-V repository already contains a growing collection of scientific softwa
 
 ## Looking ahead
 
-The addition of `lfoss/2025b` in another step toward broader and more mature RISC-V 
+The addition of `lfoss/2025b` is another step toward broader and more mature RISC-V 
 support within EESSI.
 
 Future work will include:
