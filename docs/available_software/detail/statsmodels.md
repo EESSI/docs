@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''0.14.5'', ''0.14.1'']'
+  softwareVersion: '[''0.14.6'', ''0.14.5'', ''0.14.1'']'
   url: https://www.statsmodels.org/
 ---
 # statsmodels
@@ -41,6 +41,7 @@ and perform statistical tests.
 
 |statsmodels version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.14.6|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`statsmodels/0.14.6-gfbf-2025b`|
 |0.14.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`statsmodels/0.14.5-gfbf-2025a`|
 |0.14.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`statsmodels/0.14.1-gfbf-2023b`|
 |0.14.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`statsmodels/0.14.1-gfbf-2023a`|
@@ -55,7 +56,7 @@ Overview of extensions included in statsmodels installations
 
 |`patsy` version|statsmodels modules that include it|
 | --- | --- |
-|1.0.1|`statsmodels/0.14.5-gfbf-2025a`|
+|1.0.1|`statsmodels/0.14.6-gfbf-2025b`<br/>`statsmodels/0.14.5-gfbf-2025a`|
 |0.5.6|`statsmodels/0.14.1-gfbf-2023b`<br/>`statsmodels/0.14.1-gfbf-2023a`|
 
 ### statsmodels
@@ -63,5 +64,6 @@ Overview of extensions included in statsmodels installations
 
 |`statsmodels` version|statsmodels modules that include it|
 | --- | --- |
+|0.14.6|`statsmodels/0.14.6-gfbf-2025b`|
 |0.14.5|`statsmodels/0.14.5-gfbf-2025a`|
 |0.14.1|`statsmodels/0.14.1-gfbf-2023b`<br/>`statsmodels/0.14.1-gfbf-2023a`|
