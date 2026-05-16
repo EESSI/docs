@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''2.0209'', ''2.0208'']'
+  softwareVersion: '[''2.0210'', ''2.0209'', ''2.0208'']'
   url: https://metacpan.org/pod/distribution/XML-LibXML/LibXML.pod
 ---
 # XML-LibXML
@@ -37,6 +37,7 @@ Perl binding for libxml2
 
 |XML-LibXML version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|2.0210|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`XML-LibXML/2.0210-GCCcore-14.2.0`|
 |2.0209|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`XML-LibXML/2.0209-GCCcore-12.3.0`|
 |2.0208|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`XML-LibXML/2.0208-GCCcore-12.2.0`|
 
@@ -50,6 +51,7 @@ Overview of extensions included in XML-LibXML installations
 
 |`Alien::Base` version|XML-LibXML modules that include it|
 | --- | --- |
+|2.84|`XML-LibXML/2.0210-GCCcore-14.2.0`|
 |2.80|`XML-LibXML/2.0209-GCCcore-12.3.0`<br/>`XML-LibXML/2.0208-GCCcore-12.2.0`|
 
 ### Alien::Build::Plugin::Download::GitLab
@@ -57,26 +59,35 @@ Overview of extensions included in XML-LibXML installations
 
 |`Alien::Build::Plugin::Download::GitLab` version|XML-LibXML modules that include it|
 | --- | --- |
-|0.01|`XML-LibXML/2.0209-GCCcore-12.3.0`<br/>`XML-LibXML/2.0208-GCCcore-12.2.0`|
+|0.01|`XML-LibXML/2.0210-GCCcore-14.2.0`<br/>`XML-LibXML/2.0209-GCCcore-12.3.0`<br/>`XML-LibXML/2.0208-GCCcore-12.2.0`|
 
 ### Alien::Libxml2
 
 
 |`Alien::Libxml2` version|XML-LibXML modules that include it|
 | --- | --- |
+|0.20|`XML-LibXML/2.0210-GCCcore-14.2.0`|
 |0.19|`XML-LibXML/2.0209-GCCcore-12.3.0`<br/>`XML-LibXML/2.0208-GCCcore-12.2.0`|
+
+### FFI::CheckLib
+
+
+|`FFI::CheckLib` version|XML-LibXML modules that include it|
+| --- | --- |
+|0.31|`XML-LibXML/2.0210-GCCcore-14.2.0`|
 
 ### File::chdir
 
 
 |`File::chdir` version|XML-LibXML modules that include it|
 | --- | --- |
-|0.1011|`XML-LibXML/2.0209-GCCcore-12.3.0`<br/>`XML-LibXML/2.0208-GCCcore-12.2.0`|
+|0.1011|`XML-LibXML/2.0210-GCCcore-14.2.0`<br/>`XML-LibXML/2.0209-GCCcore-12.3.0`<br/>`XML-LibXML/2.0208-GCCcore-12.2.0`|
 
 ### XML::LibXML
 
 
 |`XML::LibXML` version|XML-LibXML modules that include it|
 | --- | --- |
+|2.0210|`XML-LibXML/2.0210-GCCcore-14.2.0`|
 |2.0209|`XML-LibXML/2.0209-GCCcore-12.3.0`|
 |2.0208|`XML-LibXML/2.0208-GCCcore-12.2.0`|
