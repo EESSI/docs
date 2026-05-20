@@ -1,52 +1,35 @@
-# Short-term roadmap for EESSI
+# Short-Term Roadmap for EESSI
 
-*(approved by EESSI steering committee: 19-02-2026; valid until: 18-02-2027; to be revised by: 18-12-2026; questions/suggestions: support@eessi.io)*
+*(approved by EESSI Steering Committee: 2026-05-xx; questions and suggestions: support@eessi.io)*
 
-The purpose of this roadmap is to focus the collective effort of the EESSI
-community on the specific goals we aim to achieve together in the coming year.
+The purpose of this roadmap is to focus the collective effort of the EESSI community on a set of priorities for the coming year. It describes areas where the community aims to make progress together and is reviewed regularly by the Steering Committee as priorities evolve.
 
-## Core Infrastructure, Operations & Policy
-### Lifecycle & Governance Policies
-- Version Lifecycle: Define clear policies for "Active" vs. "Archived" versions (e.g., how long to add software to EESSI/2023.06)
-- Development Policy: Establish lifetime policies for experimental installations on `dev.eessi.io`
-- Cadence: Formalise the yearly release cycle (targeting pre-summer releases)
-### Build System Modernisation
-- Diversify Build Sites: Enhance reliability by spreading build operations
-- Bot Modernisation: Upgrade infrastructure; implement tarball analysis to simplify ingestion and track differences
-- Maintainer Support: Leverage the EESSI bot to assist EasyBuild maintainers
-### Quality Assurance & Compliance
-- Automated License Checks: Towards automatic mandatory license checks for the next EESSI version (2026.x)
-- Monitoring: Establish regular use of regression tests & status dashboard
-- Performance: Assess performance of end-user applications
-### Compatibility Layer
-- Release the next EESSI version (2026.x): next version bundled with upcoming toolchains (update of Gentoo Prefix)
-## Software Stack & Hardware Targets
-### Hardware Enablement
-- NVIDIA: Support for Blackwell GPUs
-- AMD: Support for Zen5 and ROCm stack (AMD GPUs)
-- ARM: Support for AWS Graviton 4+5
-### Software Portfolio
-- AI/ML Focus: Extend GPU software (PyTorch, TensorFlow, AlphaFold)
-- Volume Goal: Reach 1,000 unique software packages
-- Toolchains: Integration of `lfoss/2025b` (in EESSI 2025.06) and `foss/2026*` (in EESSI 2026.x) toolchains
-## User Experience & Integration
-### Direct User Interaction
-- CLI: Prototype an EESSI Command Line Interface (CLI) to provide an interface beyondmodules
-- Discovery: Create a dynamic software overview
-### Feedback & Transparency
-- Software Wishlist: Implement mechanism (e.g., anonymous forms) for users to request software and trigger documentation PRs
-- Work-in-Progress (WIP) View: Create dashboard/overview of WIP PRs, so users can see upcoming software
-### Workflow Integration
-- Tools: Prototype Nextflow & Spack integration
-- CI/CD: Promote EESSI usage in CI/CD pipelines
-- Scientific Compliance: Enhance FAIRness of software installations
-## Community, Outreach & Sustainability
-### Governance & Future
-- Sustainability: Advance steps towards joining Linux Foundation (LF) & HPSF
-### Community Engagement
-- Events: Continue "Happy Hours", hackathons (focus on documentation/cleanup), and training
-- Feedback: Conduct an annual User Survey
-- Adoption: Track and map systems/sites that have adopted EESSI
-### Dissemination & Marketing
-- Content: Maintain a standard slide deck, elevator pitch, monthly blog/social updates
-- Conference: FOSDEM, EuroHPC Summit, ISC, EUM, and EuroHPC User Days, etc
+Most EESSI development currently happens within the scope of funded projects, but many of the goals outlined here benefit from broader community involvement and collaboration. If you are interested in contributing to one of these areas, or if you believe important topics are missing from the roadmap, please reach out to the EESSI community at support@eessi.io.
+
+# Core Infrastructure
+EESSI will continue improving the reliability and scalability of its build and deployment infrastructure. Particular attention will be given to distributing operational responsibilities across sites and contributors, improving build and testing workflows, and strengthening integration with EasyBuild.
+
+# Hardware Enablement
+EESSI will continue expanding support for emerging and widely requested hardware platforms, while growing the collection of GPU-enabled scientific and AI/ML software available through the project.
+
+Current areas of interest include newer generations of AWS Graviton systems and improved support for AMD GPU platforms through the ROCm software ecosystem.
+
+# Software Stack
+EESSI will continue improving software quality, reproducibility, and transparency across the software stack, with particular attention to software licensing and compliance.
+
+Current areas of interest include automated license compliance workflows and improved visibility of software licensing information.
+
+# User Experience
+EESSI aims to improve how users discover, access, and reuse software provided through the project, while strengthening support for reproducible research.
+
+Current areas of interest include development of a dedicated EESSI CLI and mechanisms for uniquely identifying and reusing software installations in support of FAIR research practices.
+
+# Community
+The EESSI community plays a central role in the development and adoption of the project. EESSI will continue its efforts to engage with users, contributors, and partner organisations through community events, training activities, and participation in relevant conferences and workshops.
+
+Current areas of interest include community events and hackathons, shared outreach and training materials, and continued collaboration with related open source and HPC communities.
+
+# Sustainability
+As EESSI continues to grow beyond the original project partners and is adopted by a broader range of sites and organisations, the project will continue strengthening the organisational structures needed to support long-term coordination, maintenance, and community ownership.
+
+Current areas of interest include continued evolution of the project's governance structures and collaboration with organisations such as the Linux Foundation and HPSF.
