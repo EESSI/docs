@@ -139,15 +139,24 @@ The presentation will cover EESSI's architecture, its integration with establish
 
 - Monday 18 May 2026, 14:00-16:00 CEST (Zoom webinar)
 - speaker: Valentin Volkl (CERN)
+- [slides (PDF)](EESSI-webinars-spring-2026-EESSI-CVMFS-2026-05-18.pdf)
+- [recording (YouTube)](https://youtu.be/jsnGDWkASnI)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jsnGDWkASnI?si=JGejcahXMq9mK-yd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 #### Outline
 
-Coming soon!
-
-#### Materials {: #materials-cvmfs }
-
-- slides (PDF) coming soon!
-- recording (YouTube) coming soon!
+- What is CernVM-FS?
+- Quick introduction to EESSI (example CernVM-FS repository)
+- CernVM-FS client installation + configuration
+- CernVM-FS on large-scale systems: proxy, Stratum 1
+- Alternative access mechanisms for CernVM-FS repos 
+- Monitoring CernVM-FS
+- Troubleshooting CernVM-FS
+- Creating your own CernVM-FS repository
+- Software startup performance
 
 ---
 
