@@ -6070,7 +6070,7 @@
 <p>The installation prefix is determined by <code>EESSI-extend</code> through the following logic:</p>
 <ol>
 <li>If <code>$EESSI_CVMFS_INSTALL</code> is set, software is installed in <code>$EESSI_SOFTWARE_PATH</code>. This variable shouldn't be used by users and would only be used by CVMFS administrators of the EESSI repository.</li>
-<li>If <code>$EESSI_SITE_INSTALL</code> is set, the EESSI site installation prefix (<code>$EESSI_SITE_SOFTWARE_PATH</code>) will be used. This is typically where sites hosting a system that has EESSI deployed would install additional software on top of EESSI and make it available to all their users.</li>
+<li>If <code>$EESSI_SITE_INSTALL</code> is set, the EESSI site installation prefix (<code>$EESSI_SITE_SOFTWARE_PATH</code>) will be used. This is typically where sites hosting a system that has EESSI deployed would install additional software on top of EESSI and make it available to all their users. Note that <code>$EESSI_SITE_SOFTWARE_PATH</code> is set by the <code>EESSI</code> module. The location it points to can be changed by setting the <code>$EESSI_SITE_SOFTWARE_PREFIX</code> <em>before</em> loading the <code>EESSI</code> module.</li>
 <li>If <code>$EESSI_PROJECT_INSTALL</code> is set (and <code>$EESSI_USER_INSTALL</code> is not set), this prefix will be used. You should use this if you want to install additional software on top of EESSI that should also be usable by your project partners on the same system. For example, if you have a project space at <code>/project/my_project</code> that all your project partners can access, you could set <code>export EESSI_PROJECT_INSTALL=/project/my_project/eessi</code>. Make sure that this directory has the SGID permission set (<code>chmod g+s $EESSI_PROJECT_INSTALL</code>). This way, all the additional installations done with <code>EESSI-extend</code> will be put in that prefix, and will get the correct UNIX file permissions so that all your project partners can access it.</li>
 <li>If <code>$EESSI_USER_INSTALL</code> is set, this prefix will be used. You should use this if you want to install additional software on top of EESSI just for your own user. For example, you could set <code>export EESSI_USER_INSTALL=$HOME/my/eessi/extend/prefix</code>, and <code>EESSI-extend</code> will install all software in this prefix. Unix file permissions will be set such that these installations will be readable only to the user.</li>
 </ol>
@@ -6233,7 +6233,7 @@ that is shipped with EESSI, which automatically searches these locations.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2025 07:22:35 UTC">June 20, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 21, 2026 14:15:34 UTC">May 21, 2026</span>
   </span>
 
     
