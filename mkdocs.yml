@@ -62,7 +62,7 @@ nav:
       # - Dashboard: test-suite/dashboard.md
     - Known issues and workarounds:
       - v2023.06: known_issues/eessi-2023.06.md
-  - Adding software to EESSI: 
+  - Adding software to EESSI:
     - Overview: adding_software/overview.md
     - For contributors:
       - Contribution policy: adding_software/contribution_policy.md
@@ -83,7 +83,7 @@ nav:
     - Contact info: contact.md
   - Training & events: training-events/index.md
   - Systems where EESSI is available: systems.md
-  - Roadmap (short-term): roadmap/short-term.md
+  - Roadmap: roadmap.md
   - Governance:
     - Overview: governance/index.md
     - Charter: governance/charter.md
@@ -157,12 +157,12 @@ plugins:
   - inject_ld_json
     # link to any Markdown heading
   - autorefs
-    # api automatics documentation 
+    # api automatics documentation
   - mkdocstrings:
       default_handler: python
       handlers:
         python:
-          paths: [test-suite/test-suite] 
+          paths: [test-suite/test-suite]
           options:
             docstring_style: sphinx
             docstring_section_style: spacy
