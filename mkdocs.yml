@@ -23,14 +23,13 @@ nav:
     - Software layer: software_layer.md
     - Supported CPU targets: software_layer/cpu_targets.md
     - Supported GPU targets: software_layer/gpu_targets.md
-  - Available software and repositories:
-      - Software: available_software/overview.md
-      - Repositories:
-        - Production:
-          - Software: repositories/software.eessi.io.md
-          - Versions: repositories/versions.md
-        - RISC-V: repositories/riscv.eessi.io.md
-        - Development repository: repositories/dev.eessi.io.md
+  - Available software: available_software/index.md
+  - Repositories:
+    - Production:
+      - Software: repositories/software.eessi.io.md
+      - Versions: repositories/versions.md
+    - RISC-V: repositories/dev.eessi.io-riscv.md
+    - Development repository: repositories/dev.eessi.io.md
   - Installation and configuration:
     - Is EESSI already installed?: getting_access/is_eessi_accessible.md
     - Native: getting_access/native_installation.md
@@ -38,6 +37,7 @@ nav:
     - Windows and macOS:
       - Windows with WSL: getting_access/eessi_wsl.md
       - macOS with Lima: getting_access/eessi_limactl.md
+      - macOS with container tool: getting_access/eessi_Apple_container_tool.md
     - Configuring EESSI:
       - How to configure EESSI: site_specific_config/host_injections.md
       - GPU support: site_specific_config/gpu.md
@@ -79,6 +79,7 @@ nav:
     - Meetings: meetings.md
     - Talks: talks.md
         # - Community meeting (Sept'22): meetings/2022-09-amsterdam.md
+    - Mailing list: mailing_list.md
     - Contact info: contact.md
   - Training & events: training-events/index.md
   - Systems where EESSI is available: systems.md
@@ -99,10 +100,16 @@ plugins:
   - git-revision-date-localized
   # necessary for search to work
   - search
-  # Enable macros so we can use global variables
-  - macros
+  # Enable macros so we can use global variables, and use Jinja2 templates
+  # see also https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/
+  - macros:
+      module_name: docs/available_software/macros
   - redirects:
       redirect_maps:
+        # useful easy-to-remember short URLs, don't remove these!
+        gpu.md: site_specific_config/gpu.md
+        rocm.md: site_specific_config/rocm.md
+        # redirects for pages that were moved at some point
         adding_software.md: adding_software/overview.md
         contributing_sw/building_software.md: adding_software/building_software.md
         contributing_sw/contribution_policy.md: adding_software/contribution_policy.md
@@ -112,8 +119,7 @@ plugins:
         contributing_sw/overview.md: adding_software/overview.md
         software_layer/adding_software.md: adding_software/overview.md
         pilot.md: repositories/pilot.md # https://www.eessi.io/docs/pilot is mentioned in the EESSI open access paper
-        gpu.md: site_specific_config/gpu.md
-        rocm.md: site_specific_config/rocm.md
+        available_software/overview.md: available_software/index.md
         # training/ was renamed to training-events/ + <year> subdirectory was removed for Happy Hour sessions
         training/index.md: training-events/index.md
         training/happy-hours-sessions.md: training-events/happy-hours-sessions.md
@@ -207,18 +213,15 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Wed, 11 Feb 2026 at 13:39:38 UTC"
+  generated_time: "Fri, 22 May 2026 at 14:46:54 UTC"
   slack_invite_url: "https://join.slack.com/t/eessi-hpc/shared_invite/zt-2wg10p26d-m_CnRB89xQq3zk9qxf1k3g"
 extra_javascript:
   # mermaid diagram
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
-  # javascript which generates overview of available software
-  - https://code.jquery.com/jquery-3.7.0.min.js
-  - https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js
-  - available_software/javascripts/populate_overview.js
-  - https://cdn.datatables.net/plug-ins/2.2.2/pagination/bootstrap_input.js
+  # javascript used in overview of available software
+  - available_software/javascripts/software-filter.js
 extra_css:
   # CSS for popultate_overview
   - https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css
-  - available_software/css/style_table.css
-  - https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.css
+  - available_software/css/software.css
+  - https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.cssoftwares

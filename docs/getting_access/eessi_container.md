@@ -11,7 +11,7 @@ illustrating the use of the script.
 
 - Apptainer 1.0.0 (_or newer_), or Singularity 3.7.x
     - Check with `apptainer --version` or `singularity --version`
-    - Support for the `--fusemount` option in the ``shell`` and ``run`` subcommands is required
+    - Support for the `--fusemount` option in the ``shell`` and ``exec`` subcommands is required
 - Git
     - Check with `git --version`
 
@@ -69,41 +69,55 @@ You should see the following output
 ```
 usage: ./eessi_container.sh [OPTIONS] [[--] SCRIPT or COMMAND]
  OPTIONS:
-  -a | --access {ro,rw}  - ro (read-only), rw (read & write) [default: ro]
-  -c | --container IMG   - image file or URL defining the container to use
-                           [default: docker://ghcr.io/eessi/build-node:debian11]
-  -g | --storage DIR     - directory space on host machine (used for
-                           temporary data) [default: 1. TMPDIR, 2. /tmp]
-  -h | --help            - display this usage information [default: false]
-  -i | --host-injections - directory to link to for host_injections 
-                           [default: /..storage../opt-eessi]
-  -l | --list-repos      - list available repository identifiers [default: false]
-  -m | --mode MODE       - with MODE==shell (launch interactive shell) or
-                           MODE==run (run a script or command) [default: shell]
-  -n | --nvidia MODE     - configure the container to work with NVIDIA GPUs,
-                           MODE==install for a CUDA installation, MODE==run to
-                           attach a GPU, MODE==all for both [default: false]
-  -r | --repository CFG  - configuration file or identifier defining the
-                           repository to use [default: EESSI via
-                           container configuration]
-  -u | --resume DIR/TGZ  - resume a previous run from a directory or tarball,
-                           where DIR points to a previously used tmp directory
-                           (check for output 'Using DIR as tmp ...' of a previous
-                           run) and TGZ is the path to a tarball which is
-                           unpacked the tmp dir stored on the local storage space
-                           (see option --storage above) [default: not set]
-  -s | --save DIR/TGZ    - save contents of tmp directory to a tarball in
-                           directory DIR or provided with the fixed full path TGZ
-                           when a directory is provided, the format of the
-                           tarball's name will be {REPO_ID}-{TIMESTAMP}.tgz
-                           [default: not set]
-  -v | --verbose         - display more information [default: false]
-  -x | --http-proxy URL  - provides URL for the env variable http_proxy
-                           [default: not set]; uses env var $http_proxy if set
-  -y | --https-proxy URL - provides URL for the env variable https_proxy
-                           [default: not set]; uses env var $https_proxy if set
+  -a | --access {ro,rw}   - sets access globally for all CVMFS repositories:
+                            ro (read-only), rw (read & write) [default: ro]
+  -b | --extra-bind-paths - specify extra paths to be bound into the container.
+                            To specify multiple bind paths, separate by comma.
+                            Example: '/src:/dest:ro,/src2:/dest2:rw'
+  -c | --container IMG    - image file or URL defining the container to use
+                            [default: docker://ghcr.io/eessi/build-node:debian12]
+  -f | --fakeroot         - run the container with --fakeroot [default: false]
+  -g | --storage DIR      - directory space on host machine (used for
+                            temporary data) [default: 1. TMPDIR, 2. /tmp]
+  -h | --help             - display this usage information [default: false]
+  -i | --host-injections  - directory to link to for host_injections 
+                            [default: /..storage../opt-eessi]
+  -l | --list-repos       - list available repository identifiers [default: false]
+  -m | --mode MODE        - with MODE==shell (launch interactive shell) or
+                            MODE==exec/run (run a script or command) [default: shell]
+  -n | --nvidia MODE      - configure the container to work with NVIDIA GPUs,
+                            MODE==install for a CUDA installation, MODE==run to
+                            attach a GPU, MODE==all for both [default: false]
+  -o | --overlay-tool ARG - tool to use to create (read-only or writable) overlay;
+                            selected tool *must* be available in container image being used;
+                            can be 'fuse-overlayfs' or 'unionfs' [default: unionfs]
+  -p | --pass-through ARG - argument to pass through to the launch of the
+                            container; can be given multiple times [default: not set]
+  -r | --repository CFG   - configuration file or identifier defining the
+                            repository to use; can be given multiple times;
+                            CFG may include suffixes ',access={ro,rw},mode={bind,fuse}' to
+                            overwrite the global access and/or mount mode for this repository;
+                            use 'None' to not mount any repositories
+                            [default: software.eessi.io via CVMFS config available
+                            via default container, see --container]
+  -u | --resume DIR/TGZ   - resume a previous run from a directory or tarball,
+                            where DIR points to a previously used tmp directory
+                            (check for output 'Using DIR as tmp ...' of a previous
+                            run) and TGZ is the path to a tarball which is
+                            unpacked the tmp dir stored on the local storage space
+                            (see option --storage above) [default: not set]
+  -s | --save DIR/TGZ     - save contents of tmp directory to a tarball in
+                            directory DIR or provided with the fixed full path TGZ
+                            when a directory is provided, the format of the
+                            tarball's name will be {REPO_ID}-{TIMESTAMP}.tgz
+                            [default: not set]
+  -v | --verbose          - display more information [default: false]
+  -x | --http-proxy URL   - provides URL for the env variable http_proxy
+                            [default: not set]; uses env var $http_proxy if set
+  -y | --https-proxy URL  - provides URL for the env variable https_proxy
+                            [default: not set]; uses env var $https_proxy if set
 
- If value for --mode is 'run', the SCRIPT/COMMAND provided is executed. If
+ If value for --mode is 'exec' or 'run', the SCRIPT/COMMAND provided is executed. If
  arguments to the script/command start with '-' or '--', use the flag terminator
  '--' to let eessi_container.sh stop parsing arguments.
 ```
@@ -158,7 +172,7 @@ Let's "`ls /cvmfs/software.eessi.io`" through the `eessi_container.sh` script
 to check if the CernVM-FS EESSI repository is accessible:
 
 ``` { .bash .copy }
-./eessi_container.sh --mode run ls /cvmfs/software.eessi.io
+./eessi_container.sh --mode exec ls /cvmfs/software.eessi.io
 ```
 
 You should see an output such as
@@ -177,7 +191,7 @@ Note that this time no interactive shell session is started in the container:
 only the provided command is run in the container, and when that finishes
 you are back in the shell session where you ran the `eessi_container.sh` script.
 
-This is because we used the `--mode run` command line option.
+This is because we used the `--mode exec` command line option.
 
 !!! Note
     The last line in the output is the output of the `ls` command,
@@ -194,7 +208,7 @@ CMD="ls -l /cvmfs/software.eessi.io"
 ```
 
 !!! Note
-    We changed the mode from `run` to `shell` because we use a different method
+    We changed the mode from `exec` to `shell` because we use a different method
     to let the script run _our_ command, by feeding it in via the `stdin` input channel using `<<<`.
 
 Because `shell` is the default value for `--mode` we can also omit this and
@@ -289,7 +303,7 @@ linux/x86_64/intel/skylake_avx512
 ```
 Lines 7 to 20 show the output of the script `eessi_architectures.sh`.
 
-If you want to use the mode `run`, you have to make the script's location
+If you want to use the mode `exec`, you have to make the script's location
 available inside the container.
 
 This can be done by mapping the current directory (`${PWD}`),
@@ -299,13 +313,13 @@ inside the container using the `$SINGULARITY_BIND` or
 
 For example:
 ``` { .bash .copy }
-SINGULARITY_BIND=${PWD}:/scripts ./eessi_container.sh --mode run /scripts/eessi_architectures.sh
+SINGULARITY_BIND=${PWD}:/scripts ./eessi_container.sh --mode exec /scripts/eessi_architectures.sh
 ```
 ## Running scripts or commands with parameters starting with `-` or `--`
 Let's assume we would like to get more information about the entries of
 `/cvmfs/software.eessi.io`. If we would just run
 ``` { .bash .copy }
-./eessi_container.sh --mode run ls -lH /cvmfs/software.eessi.io
+./eessi_container.sh --mode exec ls -lH /cvmfs/software.eessi.io
 ```
 we would get an error message such as
 ``` { .bash .no-copy }
@@ -335,7 +349,7 @@ We can resolve this in two ways:
 2. Using the flag terminator `--` which tells `eessi_container.sh` to stop
 parsing command line arguments. For example,
   ``` { .bash .copy }
-  ./eessi_container.sh --mode run -- ls -lH /cvmfs/software.eessi.io
+  ./eessi_container.sh --mode exec -- ls -lH /cvmfs/software.eessi.io
   ```
   which should result in the output similar to
   ``` { .yaml .no-copy }

@@ -83,6 +83,10 @@ MUSICA is currently (Jan’26) in an open test phase.
 
 * Hydra: [General documentation](https://hpc.vub.be/docs/) | [EESSI @ Hydra](https://hpc.vub.be/docs/software/modules/#european-environment-for-scientific-software-installations)
 
+#### KU Leuven/UHasselt
+
+* VSC Tier-2 clusters: [General documentation](https://docs.vscentrum.be//) | [EESSI @ KU Leuven/UHasselt](https://docs.vscentrum.be/leuven/leuven_module_system.html#using-modules-from-eessi)
+
 ### Cyprus
 
 #### The Cyprus Institute
@@ -197,3 +201,9 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 ### LEXIS
 
 * LEXIS Platform: [General documentation](https://docs.lexis.tech/architecture/architecture.html) | [EESSI @ LEXIS](https://docs.lexis.tech/user_interfaces/howto.html#custom-hpc-jobs)
+
+### CANFAR Science Platform
+
+The Canadian Advanced Network for Astronomy Research (CANFAR) Science Platform is a scalable, cloud-native workspace for astronomy research that can run on Kubernetes clusters. CANFAR provides integrations so that CVMFS repositories available on the underlying Kubernetes client nodes are exposed to the end-user. The following CANFAR instances are known to have EESSI available:
+
+* OpenCADC, operated by the Canadian Astronomy Data Centre (CADC) & Digital Research Alliance of Canada: [General documentation](https://www.opencadc.org/canfar/latest/) | [EESSI @ OpenCADC](https://www.opencadc.org/canfar/latest/platform/cvmfs/#pointers-for-advanced-readers)

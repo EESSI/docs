@@ -17,11 +17,6 @@ jobs:
           python-version: '3.10'
           architecture: x64
 
-      - name: Mount EESSI
-        uses: eessi/github-action-eessi@e1f8f20638ea417a18d23ab29443ee34794ff900 # v3.1.0
-        with:
-          eessi_stack_version: '2023.06'
-
       - name: update overview of available software
         id: update_available_software
         run: |
@@ -30,30 +25,31 @@ jobs:
           . venv/bin/activate
           pip install -r scripts/available_software/requirements.txt
 
-          # copy current JSON data, so we can compare after updating it
-          cp docs/available_software/data/json_data.json docs/available_software/data/json_data.json.orig
-          cp docs/available_software/data/json_data_detail.json docs/available_software/data/json_data_detail.json.orig
+          # download https://eessi.io/api_data/data/eessi_api_metadata_software.json
+          # to where it's expected by docs/available_software/macros.py and scripts/available_software/available_software.py
+          data_dir="docs/available_software/data"
+          mkdir -p ${data_dir}
+          cd ${data_dir}
+          curl -OL https://eessi.io/api_data/data/eessi_api_metadata_software.json
+          cd -
 
-          export TIME_GENERATED_TEMPLATE="{{ generated_time }}"
           python scripts/available_software/available_software.py
           ./scripts/update_generated_time.sh mkdocs.yml
-          
+
           git status
 
           # determine whether pull request should be opened:
-          # if JSON files in docs/available_software/data have been updated, then a PR should be opened
-          json_data_changed=$(python scripts/available_software/check_json_updates.py docs/available_software/data/json_data.json.orig docs/available_software/data/json_data.json)
-          json_data_detail_changed=$(python scripts/available_software/check_json_updates.py docs/available_software/data/json_data_detail.json.orig docs/available_software/data/json_data_detail.json)
-          if [[ ${json_data_changed} == "no changes" ]] && [[ ${json_data_detail_changed} == "no changes" ]]; then
-            echo "JSON files in docs/available_software/data have not been changed, no need to open PR"
-            echo "json_data_changed=no" >> $GITHUB_OUTPUT
-          else
-            echo "JSON files in docs/available_software/data have been changed, PR should be opened"
+          # if detailed software pages in docs/available_software/detail have been updated, then a PR should be opened
+          if [[ $(git status --porcelain ./docs/available_software/detail) ]]; then
+            echo "Software pages have been changed, PR should be opened"
             echo "json_data_changed=yes" >> $GITHUB_OUTPUT
+          else
+            echo "Software pages have not been changed, no need to open PR"
+            echo "json_data_changed=no" >> $GITHUB_OUTPUT
           fi
 
-          # remove original JSON files, or they'll end up in the PR being opened
-          rm -f docs/available_software/data/json_data.json.orig  docs/available_software/data/json_data_detail.json.orig
+          # remove the JSON file in the data directory, or it'll end up in the PR being opened
+          rm -r ${data_dir}/*.json
 
       - name: create pull request
         uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8

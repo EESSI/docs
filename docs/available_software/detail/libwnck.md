@@ -1,0 +1,44 @@
+---
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'libwnck is Window Navigator Construction Kit, i.e. a library to use
+    for writing pagers and taskslists
+
+    and stuff.'
+  license: Not confirmed
+  name: libwnck
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''43.3'']'
+  url: https://gitlab.gnome.org/GNOME/libwnck
+---
+# libwnck
+
+
+libwnck is Window Navigator Construction Kit, i.e. a library to use for writing pagers and taskslists
+and stuff.
+
+<small>homepage: </small><span class="software-link">[https://gitlab.gnome.org/GNOME/libwnck](https://gitlab.gnome.org/GNOME/libwnck)</span>
+
+## Available installations
+
+
+|libwnck version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|43.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`libwnck/43.3-GCCcore-14.3.0`|

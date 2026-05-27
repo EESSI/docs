@@ -1,12 +1,10 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: Boost.Python is a C++ library which enables seamless interoperability
-    between C++ and the Python programming language.
+  description: "Boost.Python is a C++ library which enables seamless interoperability\
+    \ between C++\n and the Python programming language."
   license: Not confirmed
   name: Boost.Python-NumPy
   offers:
@@ -25,30 +23,21 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''Boost.Python-NumPy/1.83.0-gfbf-2023b'']'
+  softwareVersion: '[''1.88.0'', ''1.83.0'']'
   url: https://boostorg.github.io/python
 ---
-
-Boost.Python-NumPy
-==================
+# Boost.Python-NumPy
 
 
-Boost.Python is a C++ library which enables seamless interoperability between C++ and the Python programming language.
+Boost.Python is a C++ library which enables seamless interoperability between C++
+ and the Python programming language.
 
-https://boostorg.github.io/python
-# Available modules
+<small>homepage: </small><span class="software-link">[https://boostorg.github.io/python](https://boostorg.github.io/python)</span>
+
+## Available installations
 
 
-The overview below shows which Boost.Python-NumPy installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using Boost.Python-NumPy, load one of these modules using a `module load` command like:
-
-```shell
-module load Boost.Python-NumPy/1.83.0-gfbf-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Boost.Python-NumPy/1.83.0-gfbf-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Boost.Python-NumPy version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.88.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Boost.Python-NumPy/1.88.0-gfbf-2025a`|
+|1.83.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Boost.Python-NumPy/1.83.0-gfbf-2023b`|

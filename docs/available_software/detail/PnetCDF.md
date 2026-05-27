@@ -1,6 +1,4 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
@@ -24,30 +22,21 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''PnetCDF/1.12.3-gompi-2023a'']'
+  softwareVersion: '[''1.14.0'', ''1.12.3'']'
   url: https://parallel-netcdf.github.io/
 ---
-
-PnetCDF
-=======
+# PnetCDF
 
 
 Parallel netCDF: A Parallel I/O Library for NetCDF File Access
 
-https://parallel-netcdf.github.io/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://parallel-netcdf.github.io/](https://parallel-netcdf.github.io/)</span>
+
+## Available installations
 
 
-The overview below shows which PnetCDF installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using PnetCDF, load one of these modules using a `module load` command like:
-
-```shell
-module load PnetCDF/1.12.3-gompi-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PnetCDF/1.12.3-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|PnetCDF version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.14.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`PnetCDF/1.14.0-gompi-2025a`|
+|1.14.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`PnetCDF/1.14.0-gompi-2024a`|
+|1.12.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`PnetCDF/1.12.3-gompi-2023a`|

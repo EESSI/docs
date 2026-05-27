@@ -1,6 +1,4 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
@@ -25,30 +23,20 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''gmsh/4.12.2-foss-2023a'']'
+  softwareVersion: '[''4.15.0'', ''4.12.2'']'
   url: https://gmsh.info/
 ---
-
-gmsh
-====
+# gmsh
 
 
 Gmsh is a 3D finite element grid generator with a build-in CAD engine and post-processor.
 
-https://gmsh.info/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://gmsh.info/](https://gmsh.info/)</span>
+
+## Available installations
 
 
-The overview below shows which gmsh installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using gmsh, load one of these modules using a `module load` command like:
-
-```shell
-module load gmsh/4.12.2-foss-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gmsh/4.12.2-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|gmsh version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|4.15.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`gmsh/4.15.0-foss-2025a`|
+|4.12.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`gmsh/4.12.2-foss-2023a`|

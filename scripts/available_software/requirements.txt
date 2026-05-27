@@ -1,4 +1,3 @@
+easybuild-framework
 mdutils
-numpy
-natsort
 pyyaml

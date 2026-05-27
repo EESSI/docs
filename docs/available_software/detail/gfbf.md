@@ -1,12 +1,10 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: GNU Compiler Collection (GCC) based compiler toolchain, including FlexiBLAS
-    (BLAS and LAPACK support) and (serial) FFTW.
+  description: "GNU Compiler Collection (GCC) based compiler toolchain, including\n\
+    \ FlexiBLAS (BLAS and LAPACK support) and (serial) FFTW."
   license: Not confirmed
   name: gfbf
   offers:
@@ -25,32 +23,25 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''gfbf/2022b'', ''gfbf/2023a'', ''gfbf/2023b'']'
+  softwareVersion: '[''2025b'', ''2025a'', ''2024a'', ''2023b'', ''2023a'', ''2022b'']'
   url: (none)
 ---
-
-gfbf
-====
+# gfbf
 
 
-GNU Compiler Collection (GCC) based compiler toolchain, including FlexiBLAS (BLAS and LAPACK support) and (serial) FFTW.
+GNU Compiler Collection (GCC) based compiler toolchain, including
+ FlexiBLAS (BLAS and LAPACK support) and (serial) FFTW.
 
-(none)
-# Available modules
+<small>homepage: </small><span class="software-link">[(none)]((none))</span>
+
+## Available installations
 
 
-The overview below shows which gfbf installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using gfbf, load one of these modules using a `module load` command like:
-
-```shell
-module load gfbf/2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|gfbf/2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|gfbf/2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|gfbf/2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|gfbf version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2025b|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`gfbf/2025b`|
+|2025a|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`gfbf/2025a`|
+|2024a|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`gfbf/2024a`|
+|2023b|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`gfbf/2023b`|
+|2023a|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`gfbf/2023a`|
+|2022b|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`gfbf/2022b`|

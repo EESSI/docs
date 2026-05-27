@@ -1,13 +1,11 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: PETSc, pronounced PET-see (the S is silent), is a suite of data structures
-    and routines for the scalable (parallel) solution of scientific applications modeled
-    by partial differential equations.
+  description: "PETSc, pronounced PET-see (the S is silent), is a suite of data structures\
+    \ and routines for the\n scalable (parallel) solution of scientific applications\
+    \ modeled by partial differential equations."
   license: Not confirmed
   name: PETSc
   offers:
@@ -26,31 +24,22 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''PETSc/3.20.3-foss-2023a'', ''PETSc/3.22.5-foss-2023b'']'
+  softwareVersion: '[''3.23.5'', ''3.22.5'', ''3.20.3'']'
   url: https://www.mcs.anl.gov/petsc
 ---
-
-PETSc
-=====
+# PETSc
 
 
-PETSc, pronounced PET-see (the S is silent), is a suite of data structures and routines for the scalable (parallel) solution of scientific applications modeled by partial differential equations.
+PETSc, pronounced PET-see (the S is silent), is a suite of data structures and routines for the
+ scalable (parallel) solution of scientific applications modeled by partial differential equations.
 
-https://www.mcs.anl.gov/petsc
-# Available modules
+<small>homepage: </small><span class="software-link">[https://www.mcs.anl.gov/petsc](https://www.mcs.anl.gov/petsc)</span>
+
+## Available installations
 
 
-The overview below shows which PETSc installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using PETSc, load one of these modules using a `module load` command like:
-
-```shell
-module load PETSc/3.22.5-foss-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|PETSc/3.22.5-foss-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|PETSc/3.20.3-foss-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|PETSc version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.23.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`PETSc/3.23.5-foss-2025a`|
+|3.22.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`PETSc/3.22.5-foss-2023b`|
+|3.20.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`PETSc/3.20.3-foss-2023a`|

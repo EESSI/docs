@@ -1,15 +1,14 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: yelp-xsl is a collection of programs and data files to help you build,
-    maintain, and distribute documentation. It provides XSLT stylesheets that can
-    be built upon for help viewers and publishing systems. These stylesheets output
-    JavaScript and CSS content, and reference images provided by yelp-xsl. This package
-    also redistributes copies of the jQuery and jQuery.Syntax JavaScript libraries.
+  description: "yelp-xsl is a collection of programs and data files to help you build,\
+    \ maintain,\n and distribute documentation. It provides XSLT stylesheets that\
+    \ can be built upon for help\n viewers and publishing systems. These stylesheets\
+    \ output JavaScript and CSS content,\n and reference images provided by yelp-xsl.\
+    \ This package also redistributes copies\n of the jQuery and jQuery.Syntax JavaScript\
+    \ libraries.\n"
   license: Not confirmed
   name: yelp-xsl
   offers:
@@ -28,30 +27,25 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''yelp-xsl/42.1-GCCcore-12.3.0'']'
+  softwareVersion: '[''42.1'']'
   url: https://gitlab.gnome.org/GNOME/yelp-xslg
 ---
-
-yelp-xsl
-========
+# yelp-xsl
 
 
-yelp-xsl is a collection of programs and data files to help you build, maintain, and distribute documentation. It provides XSLT stylesheets that can be built upon for help viewers and publishing systems. These stylesheets output JavaScript and CSS content, and reference images provided by yelp-xsl. This package also redistributes copies of the jQuery and jQuery.Syntax JavaScript libraries.
+yelp-xsl is a collection of programs and data files to help you build, maintain,
+ and distribute documentation. It provides XSLT stylesheets that can be built upon for help
+ viewers and publishing systems. These stylesheets output JavaScript and CSS content,
+ and reference images provided by yelp-xsl. This package also redistributes copies
+ of the jQuery and jQuery.Syntax JavaScript libraries.
 
-https://gitlab.gnome.org/GNOME/yelp-xslg
-# Available modules
+
+<small>homepage: </small><span class="software-link">[https://gitlab.gnome.org/GNOME/yelp-xslg](https://gitlab.gnome.org/GNOME/yelp-xslg)</span>
+
+## Available installations
 
 
-The overview below shows which yelp-xsl installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using yelp-xsl, load one of these modules using a `module load` command like:
-
-```shell
-module load yelp-xsl/42.1-GCCcore-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|yelp-xsl/42.1-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|yelp-xsl version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|42.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`yelp-xsl/42.1-GCCcore-14.3.0`|
+|42.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`yelp-xsl/42.1-GCCcore-12.3.0`|

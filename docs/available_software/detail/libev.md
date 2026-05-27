@@ -1,14 +1,17 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: A full-featured and high-performance (see benchmark)event loop that
-    is loosely modelled after libevent, but without itslimitations and bugs. It is
-    used in GNU Virtual Private Ethernet,rxvt-unicode, auditd, the Deliantra MORPG
-    Server and Client, and manyother programs.
+  description: 'A full-featured and high-performance (see benchmark)
+
+    event loop that is loosely modelled after libevent, but without its
+
+    limitations and bugs. It is used in GNU Virtual Private Ethernet,
+
+    rxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many
+
+    other programs.'
   license: Not confirmed
   name: libev
   offers:
@@ -27,30 +30,24 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''libev/4.33-GCC-12.3.0'']'
+  softwareVersion: '[''4.33'']'
   url: http://software.schmorp.de/pkg/libev.html
 ---
-
-libev
-=====
+# libev
 
 
-A full-featured and high-performance (see benchmark)event loop that is loosely modelled after libevent, but without itslimitations and bugs. It is used in GNU Virtual Private Ethernet,rxvt-unicode, auditd, the Deliantra MORPG Server and Client, and manyother programs.
+A full-featured and high-performance (see benchmark)
+event loop that is loosely modelled after libevent, but without its
+limitations and bugs. It is used in GNU Virtual Private Ethernet,
+rxvt-unicode, auditd, the Deliantra MORPG Server and Client, and many
+other programs.
 
-http://software.schmorp.de/pkg/libev.html
-# Available modules
+<small>homepage: </small><span class="software-link">[http://software.schmorp.de/pkg/libev.html](http://software.schmorp.de/pkg/libev.html)</span>
+
+## Available installations
 
 
-The overview below shows which libev installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using libev, load one of these modules using a `module load` command like:
-
-```shell
-module load libev/4.33-GCC-12.3.0
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|libev/4.33-GCC-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|libev version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|4.33|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`libev/4.33-GCC-12.3.0`|
+|4.33|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`libev/4.33-GCCcore-13.3.0`|

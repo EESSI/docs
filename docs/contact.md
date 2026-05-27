@@ -6,6 +6,7 @@ For more information:
 * Consult our [documentation](https://eessi.github.io/docs)
 * Ask for help at our [support portal](support.md)
 * Join our [Slack channel]({{ config.extra.slack_invite_url }})
+* Join our [mailing list](mailing_list.md)
 * Reach out to one of the [project partners](partners.md)
 * Check out our GitHub [repositories](https://github.com/EESSI)
 * Follow us on [Twitter](https://twitter.com/eessi_hpc)

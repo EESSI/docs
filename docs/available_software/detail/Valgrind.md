@@ -1,6 +1,4 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
@@ -24,33 +22,21 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''Valgrind/3.21.0-gompi-2022b'', ''Valgrind/3.21.0-gompi-2023a'',
-    ''Valgrind/3.23.0-gompi-2023b'']'
+  softwareVersion: '[''3.23.0'', ''3.21.0'']'
   url: https://valgrind.org
 ---
-
-Valgrind
-========
+# Valgrind
 
 
 Valgrind: Debugging and profiling tools
 
-https://valgrind.org
-# Available modules
+<small>homepage: </small><span class="software-link">[https://valgrind.org](https://valgrind.org)</span>
+
+## Available installations
 
 
-The overview below shows which Valgrind installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using Valgrind, load one of these modules using a `module load` command like:
-
-```shell
-module load Valgrind/3.23.0-gompi-2023b
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|Valgrind/3.23.0-gompi-2023b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Valgrind/3.21.0-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|Valgrind/3.21.0-gompi-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|Valgrind version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.23.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Valgrind/3.23.0-gompi-2023b`|
+|3.21.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Valgrind/3.21.0-gompi-2023a`|
+|3.21.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Valgrind/3.21.0-gompi-2022b`|
