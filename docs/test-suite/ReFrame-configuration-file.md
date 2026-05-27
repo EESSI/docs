@@ -73,7 +73,7 @@ site_configuration = {
     'general': [
         {
             # Enable automatic detection of CPU architecture for each partition
-            # See https://reframe-hpc.readthedocs.io/en/stable/configure.html#auto-detecting-processor-information
+            # See https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.processor
             'remote_detect': True,
         }
     ],
@@ -407,7 +407,7 @@ in the standard ReFrame prefix (by default the current directory, unless otherwi
 
 ### Auto-detection of processor information { #cpu-auto-detection }
 
-You can let ReFrame [auto-detect the processor information](https://reframe-hpc.readthedocs.io/en/stable/configure.html#proc-autodetection) for your system.
+You can let ReFrame [auto-detect the processor information](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.processor) for your system.
 
 #### Creation of topology file by ReFrame
 

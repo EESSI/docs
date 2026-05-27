@@ -1,6 +1,4 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
@@ -24,30 +22,19 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''FALL3D/9.0.1-gompi-2023a'']'
+  softwareVersion: '[''9.0.1'']'
   url: https://gitlab.com/fall3d-suite/fall3d
 ---
-
-FALL3D
-======
+# FALL3D
 
 
 FALL3D is an open-source volcanic ash dispersal model.
 
-https://gitlab.com/fall3d-suite/fall3d
-# Available modules
+<small>homepage: </small><span class="software-link">[https://gitlab.com/fall3d-suite/fall3d](https://gitlab.com/fall3d-suite/fall3d)</span>
+
+## Available installations
 
 
-The overview below shows which FALL3D installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using FALL3D, load one of these modules using a `module load` command like:
-
-```shell
-module load FALL3D/9.0.1-gompi-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|FALL3D/9.0.1-gompi-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|FALL3D version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|9.0.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`FALL3D/9.0.1-gompi-2023a`|

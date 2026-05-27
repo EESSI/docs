@@ -1,14 +1,12 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: ASE is a python package providing an open source Atomic Simulation
-    Environment in the Python scripting language.From version 3.20.1 we also include
-    the ase-ext package, it contains optional reimplementationsin C of functions in
-    ASE.  ASE uses it automatically when installed.
+  description: "ASE is a python package providing an open source Atomic Simulation\
+    \ Environment\n in the Python scripting language.\n\nFrom version 3.20.1 we also\
+    \ include the ase-ext package, it contains optional reimplementations\nin C of\
+    \ functions in ASE.  ASE uses it automatically when installed."
   license: Not confirmed
   name: ASE
   offers:
@@ -27,44 +25,60 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''ASE/3.22.1-gfbf-2022b'', ''ASE/3.22.1-gfbf-2023a'']'
+  softwareVersion: '[''3.25.0'', ''3.22.1'']'
   url: https://wiki.fysik.dtu.dk/ase
 ---
-
-ASE
-===
+# ASE
 
 
-ASE is a python package providing an open source Atomic Simulation Environment in the Python scripting language.From version 3.20.1 we also include the ase-ext package, it contains optional reimplementationsin C of functions in ASE.  ASE uses it automatically when installed.
+ASE is a python package providing an open source Atomic Simulation Environment
+ in the Python scripting language.
 
-https://wiki.fysik.dtu.dk/ase
-# Available modules
+From version 3.20.1 we also include the ase-ext package, it contains optional reimplementations
+in C of functions in ASE.  ASE uses it automatically when installed.
 
+<small>homepage: </small><span class="software-link">[https://wiki.fysik.dtu.dk/ase](https://wiki.fysik.dtu.dk/ase)</span>
 
-The overview below shows which ASE installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using ASE, load one of these modules using a `module load` command like:
-
-```shell
-module load ASE/3.22.1-gfbf-2023a
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|ASE/3.22.1-gfbf-2023a|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|ASE/3.22.1-gfbf-2022b|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+## Available installations
 
 
-### ASE/3.22.1-gfbf-2023a
+|ASE version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|3.25.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`ASE/3.25.0-gfbf-2025a`|
+|3.22.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`ASE/3.22.1-gfbf-2023a`|
+|3.22.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`ASE/3.22.1-gfbf-2022b`|
 
-This is a list of extensions included in the module:
+## Extensions
 
-ase-3.22.1, ase-ext-20.9.0, pytest-mock-3.11.1
+Overview of extensions included in ASE installations
 
-### ASE/3.22.1-gfbf-2022b
 
-This is a list of extensions included in the module:
+### ase
 
-ase-3.22.1, ase-ext-20.9.0, pytest-mock-3.8.2
+
+|`ase` version|ASE modules that include it|
+| --- | --- |
+|3.25.0|`ASE/3.25.0-gfbf-2025a`|
+|3.22.1|`ASE/3.22.1-gfbf-2023a`<br/>`ASE/3.22.1-gfbf-2022b`|
+
+### ase-ext
+
+
+|`ase-ext` version|ASE modules that include it|
+| --- | --- |
+|20.9.0|`ASE/3.25.0-gfbf-2025a`<br/>`ASE/3.22.1-gfbf-2023a`<br/>`ASE/3.22.1-gfbf-2022b`|
+
+### pytest-mock
+
+
+|`pytest-mock` version|ASE modules that include it|
+| --- | --- |
+|3.11.1|`ASE/3.22.1-gfbf-2023a`|
+|3.8.2|`ASE/3.22.1-gfbf-2022b`|
+
+### pytest_mock
+
+
+|`pytest_mock` version|ASE modules that include it|
+| --- | --- |
+|3.14.1|`ASE/3.25.0-gfbf-2025a`|

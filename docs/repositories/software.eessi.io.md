@@ -22,7 +22,7 @@ See [Using EESSI](../using_eessi/setting_up_environment.md).
 
 ## Available software
 
-See [Available software](../available_software/overview.md).
+See [Available software](../available_software/index.md).
 
 ### Architecture and micro-architecture support
 

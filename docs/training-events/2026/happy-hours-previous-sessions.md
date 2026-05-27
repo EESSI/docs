@@ -4,7 +4,82 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: CI/CD Workflows with EESSI
+
+### Monday 20 April 2026
+
+**Outline:** CI/CD Workflows with EESSI
+([Slides (PDF)](EESSI-happyhour-2026-014-Workflows.pdf), [Recording (YouTube)](https://youtu.be/1kcLQLHt21k))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1kcLQLHt21k?si=kqLyCD9JOB6BURIq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Topic series: Revisiting Ways to Add Software to EESSI
+
+### Monday 13 April 2026
+
+**Outline:** Local Builds and Contributions to EESSI<sub><sup>`(part2)`</sup></sub> 
+([Slides (PDF)](EESSI-happyhour-2026-013-Software-Contributions.pdf), [Recording (YouTube)](https://youtu.be/iYU4l0JmcTQ))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iYU4l0JmcTQ?si=7nbJco-zhPB1vOwH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Monday 30 March 2026
+
+**Outline:** Local Builds and Contributions to EESSI<sub><sup>`(part1)`</sup></sub> 
+([Slides (PDF)](EESSI-happyhour-2026-012-Local-Builds&Contributions.pdf), [Recording (YouTube)](https://youtu.be/wUKuphSadis))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wUKuphSadis?si=qBJByPDdjyXTtPlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
+# Topic series: What’s New in EESSI 2025.06 ?
+
+### Monday 23 March 2026
+
+**Outline:** Exploring EESSI 2025.06
+([Slides (PDF)](EESSI-happyhour-2026-011-EESSI-2025.06.pdf), [Recording (YouTube)](https://youtu.be/TftmYLkN5GI))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TftmYLkN5GI?si=8pi6LqxIakk4vxtt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 # Topic series: EESSI Fundamentals Refresher
+
+### Monday 16 March 2026
+
+**Outline:** From x86 to RISC-V: Expanding EESSI’s Reach
+([Slides (PDF)](EESSI-happyhour-2026-010-EESSI-on-RISC-V.pdf), [Recording (YouTube)](https://youtu.be/B0GgFpBpAnc))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/B0GgFpBpAnc?si=6iLagWyFAXUt1Rqn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Monday 09 March 2026
+
+**Outline:** Yet another way to run EESSI: Docker Extensions
+([Slides (PDF)](EESSI-happyhour-2026-009-EESSI-Docker-extensions.pdf), [Recording (YouTube)](https://youtu.be/jC_clb7bLhM))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jC_clb7bLhM?si=7uPEpAWagYGQtWTP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Monday 02 March 2026
+
+**Outline:** EESSI on macOS: Bringing HPC Software to Your Mac
+([Slides (PDF)](EESSI-happyhour-2026-008-EESSI-on-macOS.pdf), [Recording (YouTube)](https://youtu.be/lt_Prcp2D0A))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lt_Prcp2D0A?si=OvOgpc9fhdad-VNv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Monday 23 February 2026
+
+**Outline:** Have You Met the EESSI Command-Line Interface (CLI)?
+([Slides (PDF)](EESSI-happyhour-2026-007-EESSI-CLI.pdf), [Recording (YouTube)](https://youtu.be/4QpXe3JK0zI))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4QpXe3JK0zI?si=TqT5Pm5DrhcZNLuW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Monday 16 February 2026
+
+**Outline:** EESSI Offline: Portable CVMFS Repositories
+([Slides (PDF)](EESSI-happyhour-2026-006-Portable-CVMFS-Repositories.pdf), [Recording (YouTube)](https://youtu.be/vhTdU3MyIAw))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vhTdU3MyIAw?si=CPSrMdG9jifLxxSv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Monday 09 February 2026
 

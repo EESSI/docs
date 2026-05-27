@@ -1,1 +1,0 @@
-/cvmfs/software.eessi.io/versions/2023.06/software/linux/x86_64/amd/zen2

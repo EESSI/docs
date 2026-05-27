@@ -1,13 +1,11 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: The Jupyter Notebook is the original web application for creating and
-    sharing computational documents. It offers a simple, streamlined, document-centric
-    experience.
+  description: "The Jupyter Notebook is the original web application for creating\
+    \ and\n sharing computational documents. It offers a simple, streamlined, document-centric\
+    \ experience."
   license: Not confirmed
   name: JupyterNotebook
   offers:
@@ -26,30 +24,37 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''JupyterNotebook/7.0.2-GCCcore-12.3.0'']'
+  softwareVersion: '[''7.4.7'', ''7.4.4'', ''7.2.3'', ''7.0.2'']'
   url: https://jupyter.org/
 ---
-
-JupyterNotebook
-===============
+# JupyterNotebook
 
 
-The Jupyter Notebook is the original web application for creating and sharing computational documents. It offers a simple, streamlined, document-centric experience.
+The Jupyter Notebook is the original web application for creating and
+ sharing computational documents. It offers a simple, streamlined, document-centric experience.
 
-https://jupyter.org/
-# Available modules
+<small>homepage: </small><span class="software-link">[https://jupyter.org/](https://jupyter.org/)</span>
+
+## Available installations
 
 
-The overview below shows which JupyterNotebook installations are available per target architecture in EESSI, ordered based on software version (new to old).
+|JupyterNotebook version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|7.4.7|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterNotebook/7.4.7-GCCcore-14.3.0`|
+|7.4.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterNotebook/7.4.4-GCCcore-14.2.0`|
+|7.2.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterNotebook/7.2.3-GCCcore-13.3.0`|
+|7.0.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`JupyterNotebook/7.0.2-GCCcore-12.3.0`|
 
-To start using JupyterNotebook, load one of these modules using a `module load` command like:
+## Extensions
 
-```shell
-module load JupyterNotebook/7.0.2-GCCcore-12.3.0
-```
+Overview of extensions included in JupyterNotebook installations
 
-*(This data was automatically generated on {{ generated_time }})*
 
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|JupyterNotebook/7.0.2-GCCcore-12.3.0|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+### notebook
+
+
+|`notebook` version|JupyterNotebook modules that include it|
+| --- | --- |
+|7.4.7|`JupyterNotebook/7.4.7-GCCcore-14.3.0`|
+|7.4.4|`JupyterNotebook/7.4.4-GCCcore-14.2.0`|
+|7.2.3|`JupyterNotebook/7.2.3-GCCcore-13.3.0`|

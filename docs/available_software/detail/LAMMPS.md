@@ -1,18 +1,27 @@
 ---
-hide:
-- toc
 json_ld:
   '@context': https://schema.org
   '@type': SoftwareApplication
   applicationCategory: DeveloperApplication
-  description: LAMMPS is a classical molecular dynamics code, and an acronymfor Large-scale
-    Atomic/Molecular Massively Parallel Simulator. LAMMPS haspotentials for solid-state
-    materials (metals, semiconductors) and soft matter(biomolecules, polymers) and
-    coarse-grained or mesoscopic systems. It can beused to model atoms or, more generically,
-    as a parallel particle simulator atthe atomic, meso, or continuum scale. LAMMPS
-    runs on single processors or inparallel using message-passing techniques and a
-    spatial-decomposition of thesimulation domain. The code is designed to be easy
-    to modify or extend with newfunctionality.
+  description: 'LAMMPS is a classical molecular dynamics code, and an acronym
+
+    for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has
+
+    potentials for solid-state materials (metals, semiconductors) and soft matter
+
+    (biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be
+
+    used to model atoms or, more generically, as a parallel particle simulator at
+
+    the atomic, meso, or continuum scale. LAMMPS runs on single processors or in
+
+    parallel using message-passing techniques and a spatial-decomposition of the
+
+    simulation domain. The code is designed to be easy to modify or extend with new
+
+    functionality.
+
+    '
   license: Not confirmed
   name: LAMMPS
   offers:
@@ -31,31 +40,31 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''LAMMPS/2Aug2023_update2-foss-2023a-kokkos'', ''LAMMPS/29Aug2024-foss-2023b-kokkos'']'
+  softwareVersion: '[''29Aug2024'', ''22Jul2025'', ''2Aug2023_update2'']'
   url: https://www.lammps.org
 ---
-
-LAMMPS
-======
+# LAMMPS
 
 
-LAMMPS is a classical molecular dynamics code, and an acronymfor Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS haspotentials for solid-state materials (metals, semiconductors) and soft matter(biomolecules, polymers) and coarse-grained or mesoscopic systems. It can beused to model atoms or, more generically, as a parallel particle simulator atthe atomic, meso, or continuum scale. LAMMPS runs on single processors or inparallel using message-passing techniques and a spatial-decomposition of thesimulation domain. The code is designed to be easy to modify or extend with newfunctionality.
+LAMMPS is a classical molecular dynamics code, and an acronym
+for Large-scale Atomic/Molecular Massively Parallel Simulator. LAMMPS has
+potentials for solid-state materials (metals, semiconductors) and soft matter
+(biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be
+used to model atoms or, more generically, as a parallel particle simulator at
+the atomic, meso, or continuum scale. LAMMPS runs on single processors or in
+parallel using message-passing techniques and a spatial-decomposition of the
+simulation domain. The code is designed to be easy to modify or extend with new
+functionality.
 
-https://www.lammps.org
-# Available modules
+
+<small>homepage: </small><span class="software-link">[https://www.lammps.org](https://www.lammps.org)</span>
+
+## Available installations
 
 
-The overview below shows which LAMMPS installations are available per target architecture in EESSI, ordered based on software version (new to old).
-
-To start using LAMMPS, load one of these modules using a `module load` command like:
-
-```shell
-module load LAMMPS/29Aug2024-foss-2023b-kokkos
-```
-
-*(This data was automatically generated on {{ generated_time }})*
-
-| |aarch64/generic|aarch64/a64fx|aarch64/neoverse_n1|aarch64/neoverse_v1|aarch64/nvidia/grace|x86_64/generic|x86_64/amd/zen2|x86_64/amd/zen3|x86_64/amd/zen4|x86_64/intel/cascadelake|x86_64/intel/haswell|x86_64/intel/icelake|x86_64/intel/sapphirerapids|x86_64/intel/skylake_avx512|
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|LAMMPS/29Aug2024-foss-2023b-kokkos|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
-|LAMMPS/2Aug2023_update2-foss-2023a-kokkos|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+|LAMMPS version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|29Aug2024|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`LAMMPS/29Aug2024-foss-2023b-kokkos`|
+|22Jul2025|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`LAMMPS/22Jul2025-foss-2024a-kokkos`|
+|2Aug2023_update2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|<span class="software-gpu-nvidia">NVIDIA</span>: `cc70`, `cc80`, `cc90`<br/>|<span class="software-eessi-version-202306">2023.06</span>|`LAMMPS/2Aug2023_update2-foss-2023a-kokkos-CUDA-12.1.1`|
+|2Aug2023_update2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`LAMMPS/2Aug2023_update2-foss-2023a-kokkos`|
