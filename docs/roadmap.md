@@ -31,7 +31,7 @@ improving build and testing workflows, and strengthening integration with [EasyB
 We will continue expanding support in EESSI for additional hardware platforms,
 while growing the collection of available GPU-enabled scientific and AI/ML software.
 
-Current areas of interest include support newer generations of [AWS Graviton](https://aws.github.io/graviton/) CPUs (4 and 5),
+Current areas of interest include support for newer generations of [AWS Graviton](https://aws.github.io/graviton/) CPUs (4 and 5),
 and support for AMD GPUs through the [ROCm software ecosystem](https://www.amd.com/en/products/software/rocm.html).
 
 
@@ -41,7 +41,7 @@ EESSI will continue improving software quality, reproducibility, and transparenc
 
 Current areas of interest include automated license compliance workflows and improved visibility of software licensing information.
 
-In additional, we expect to provide installations for over 1,000 unique (non-extension) software projects soon --
+In addition, we expect to provide installations for over 1,000 unique (non-extension) software projects soon --
 see also [Overview of available software](available_software/index.md).
 
 
