@@ -41,6 +41,8 @@ EESSI will continue improving software quality, reproducibility, and transparenc
 
 Current areas of interest include automated license compliance workflows and improved visibility of software licensing information.
 
+We intend to create a new EESSI version every (calendar) year, by rebuilding the EESSI compatibility layer and gradually installing software on top of it in the software layer, using new compiler toolchains.
+
 In addition, we expect to provide installations for over 1,000 unique (non-extension) software projects soon --
 see also [Overview of available software](available_software/index.md).
 
