@@ -170,7 +170,13 @@ The presentation will cover EESSI's architecture, its integration with establish
 
 #### Outline
 
-Coming soon!
+- Building on top of EESSI overview and motivation
+- Site builds on top of EESSI in a shared file system
+- Leveraging all of EESSI for site-builds
+- Special cases: software rebuilds, licensed software
+- Site configuration
+- Discussion / Future work
+
 
 #### Materials {: #materials-cvmfs }
 
