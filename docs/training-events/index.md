@@ -3,6 +3,9 @@
 ## Upcoming events (2026)
 
 * [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** Monday, starting 12 January 2026)
+
+### Past events (2026)
+
 * [*EESSI webinar series (April-May 2026)*](2026/webinar-series-2026Q2.md) (online tutorials)
     * [**Introduction to EESSI** *(27 April 2026)*](2026/webinar-series-2026Q2.md#introduction-to-eessi)
     * [**Building software on top of EESSI + contributing to EESSI** *(4 May 2026)*](2026/webinar-series-2026Q2.md#building-software-on-top-of-eessi-contributing-to-eessi)
