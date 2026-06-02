@@ -160,13 +160,18 @@ The presentation will cover EESSI's architecture, its integration with establish
 
 ---
 
-
 ### Using EESSI as a base for a central software stack
 
 - Monday 1 June 2026, 14:00-16:00 CEST (Zoom webinar)
 - speakers:
     - Caspar van Leeuwen (SURF)
     - Bob Dröge (University of Groningen)
+- [slides (PDF)](EESSI-webinars-spring-2026-EESSI-as-a-base-stack-2026-06-01.pdf)
+- [recording (YouTube)](https://youtu.be/WCQ2vEnQon4)
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WCQ2vEnQon4?si=9I_s31nOD1s2jZE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 #### Outline
 
@@ -179,9 +184,6 @@ The presentation will cover EESSI's architecture, its integration with establish
 
 
 #### Materials {: #materials-cvmfs }
-
-- slides (PDF) coming soon!
-- recording (YouTube) coming soon!
 
 ---
 
