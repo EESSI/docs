@@ -41,7 +41,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ### Upcoming sessions:
 - 15 June 2026 - AMD ROCm support in EESSI
 - 22 June 2026 - revisit the EESSI bot 🤖  
-- 29 June 2026 - EESSI Chill & Chat 🏝️
+- 29 June 2026 - Report on EESSI activities @ ISC'26
 
 ---
 
