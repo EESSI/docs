@@ -1,5 +1,5 @@
 ---
-author: [Richard]
+authors: [TopRichard]
 date: 2025-11-14 
 slug: EESSI-on-Cray-Slingshot
 ---

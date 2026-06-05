@@ -1,47 +1,64 @@
 ---
-author: [Richard]
+authors: [TopRichard]
 date: 2026-05-11 
 slug: EESSI-on-Cray-Slingshot-part2
 ---
 
-# MPI at Warp Speed: EESSI Meets Slingshot-11<sub><sup>(part2)</sup></sub>
+# MPI at Warp Speed: EESSI Meets Slingshot-11<sub><sup>(bis)</sup></sub>
 
-Building on our initial HPE/Cray Slingshot‑11 results, we further refined MPI tuning and validated the setup using EESSI/2025.06. The outcome is a significant performance improvement, bringing EESSI MPI behavior much closer to vendor tuned Cray MPI environments.
-In our previous blog post, [MPI at Warp Speed: EESSI Meets Slingshot‑11](https://www.eessi.io/docs/blog/2025/11/14/EESSI-on-Cray-Slingshot/), we demonstrated that EESSI could successfully leverage the HPE Cray Slingshot‑11 interconnect via the [host_injections](https://www.eessi.io/docs/site_specific_config/host_injections/) mechanism. Even as a proof‑of‑concept, the results were promising especially for GPU aware MPI communication on NVIDIA Grace Hopper systems.
-We have continued to tune and refine MPI communication while using EESSI/2025.06 software stack. Through updates to several core components and improvements to library configuration, we significantly reduced latency overheads and improved bandwidth utilization across Slingshot‑11.
-In this follow up blog post, we present the results using OSU-Micro-Benchmarks/7.5 and show how close EESSI can now get to native, vendor‑optimized MPI performance on Slingshot‑11 systems. 
+Building on our initial HPE/Cray Slingshot‑11 results, we further refined MPI tuning and validated the setup using EESSI 2025.06.
+
+The outcome is a significant performance improvement, bringing MPI support in EESSI much closer to vendor tuned Cray MPI environments.
+
+<!-- more -->
+
+In our previous blog post, [MPI at Warp Speed: EESSI Meets Slingshot‑11](../../2025/09/eessi-cray-slingshot11.md),
+we demonstrated that EESSI could successfully leverage the HPE Cray Slingshot‑11 interconnect via the
+[host_injections](../../../../site_specific_config/host_injections.md) mechanism.
+
+Even as a proof‑of‑concept, the results were promising, especially for GPU aware MPI communication on NVIDIA Grace Hopper systems.
+
+We have continued to tune and refine MPI communication while using EESSI 2025.06 software stack. Through updates to several core components
+and improvements to library configuration, we significantly reduced latency overheads and improved bandwidth utilization across Slingshot‑11.
+
+In this follow-up blog post we present the results using OSU-Micro-Benchmarks 7.5, and show how close EESSI can now get to native,
+vendor-optimized MPI performance on Slingshot‑11 systems.
 
 ### System Architecture
 
-Our target system is [Olivia](https://documentation.sigma2.no/hpc_machines/olivia.html#olivia) which is based on HPE Cray EX platforms for compute and accelerator nodes, and HPE Cray ClusterStor for global storage, all
-connected via HPE Slingshot high-speed interconnect.
-It consists of two main distinct partitions:
+Our target system is [Olivia](https://documentation.sigma2.no/hpc_machines/olivia.html#olivia),
+which is based on HPE Cray EX platforms for compute and accelerator nodes, and HPE Cray ClusterStor for global storage,
+all connected via HPE Slingshot high-speed interconnect. It consists of two main distinct partitions:
 
 - **Partition 1**: x86_64 AMD CPUs without accelerators
 - **Partition 2**: NVIDIA Grace CPUs with Hopper accelerators
 
 ### Testing
 
-The following tests were conducted on Olivia accel partition (Grace nodes with Hopper GPUs), using two-node, two-GPU configuration with one MPI task per node. 
+The following tests were conducted on the `accel` partition of Olivia (Grace nodes with Hopper GPUs),
+using a 2-node 2-GPU configuration with one MPI task per node.
 
 We evaluated two OSU Micro-Benchmark builds:
 
-1- OSU-Micro-Benchmarks/7.5-gompi-2024a-CUDA-12.6.0 from EESSI
-
-2- OSU-Micro-Benchmarks/7.5 compiled with PrgEnv-cray.
+- `OSU-Micro-Benchmarks/7.5-gompi-2024a-CUDA-12.6.0` from EESSI;
+- `OSU-Micro-Benchmarks/7.5` compiled with `PrgEnv-cray`.
 
 The following commands were used to run the benchmarks:
 
-`srun -N 2 --ntasks-per-node=1 osu_bibw -i 10 D D`
+```{ .bash .copy }
+srun -N 2 --ntasks-per-node=1 osu_bibw -i 10 D D
+```
 
-`srun -N 2 --ntasks-per-node=1 osu_latency -i 10 D D`
+```{ .bash .copy }
+srun -N 2 --ntasks-per-node=1 osu_latency -i 10 D D
+```
 
 ![OSU CUDA Bi-bandwidth](OSU‑7.5-CUDA-bibw.png)  ![OSU CUDA Latency](OSU‑7.5-CUDA-Latency.png) 
 
 <details>
 <summary>See details</summary>
 
-<b>Test using OSU-Micro-Benchmarks/7.5-gompi-2024a-CUDA-12.6.0 from EESSI</b>:
+Test using `OSU-Micro-Benchmarks/7.5-gompi-2024a-CUDA-12.6.0` from EESSI:
 ```
 Environment set up to use EESSI (2025.06), have fun!
 
@@ -123,7 +140,7 @@ Currently Loaded Modules:
 4194304               179.65
 ```
 
-<b>Test using OSU-Micro-Benchmarks/7.5 with PrgEnv-cray</b>:
+Test using `OSU-Micro-Benchmarks/7.5` with `PrgEnv-cray`:
 ```
 
 hostname:
@@ -199,4 +216,7 @@ Currently Loaded Modules:
 </details>
 
 ## Conclusion
-There is a notable improvement in performance. While additional testing is still required, the current results are highly satisfactory.
+
+There is a notable improvement in performance compared to the [previous blog post](../../2025/09/eessi-cray-slingshot11.md).
+
+While additional testing is still required, the current results are highly satisfactory.
