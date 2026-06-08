@@ -40,8 +40,8 @@ a modern, extensible Python project manager.
 
 |hatchling version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
-|1.27.0|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.2.0`|
 |1.27.0|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.27.0|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ## Extensions
 
@@ -53,64 +53,64 @@ Overview of extensions included in hatchling installations
 
 |`editables` version|hatchling modules that include it|
 | --- | --- |
-|0.5|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.5|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### hatch-docstring-description
 
 
 |`hatch-docstring-description` version|hatchling modules that include it|
 | --- | --- |
-|1.1.1|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.1.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### hatch-fancy-pypi-readme
 
 
 |`hatch-fancy-pypi-readme` version|hatchling modules that include it|
 | --- | --- |
-|24.1.0|`hatchling/1.27.0-GCCcore-14.2.0`|
 |25.1.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|24.1.0|`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### hatch-requirements-txt
 
 
 |`hatch-requirements-txt` version|hatchling modules that include it|
 | --- | --- |
-|0.4.1|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.4.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### hatch-vcs
 
 
 |`hatch-vcs` version|hatchling modules that include it|
 | --- | --- |
-|0.4.0|`hatchling/1.27.0-GCCcore-14.2.0`|
 |0.5.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.4.0|`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### hatchling
 
 
 |`hatchling` version|hatchling modules that include it|
 | --- | --- |
-|1.27.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.27.0|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### pathspec
 
 
 |`pathspec` version|hatchling modules that include it|
 | --- | --- |
-|0.12.1|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.12.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### pluggy
 
 
 |`pluggy` version|hatchling modules that include it|
 | --- | --- |
-|1.5.0|`hatchling/1.27.0-GCCcore-14.2.0`|
 |1.6.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.5.0|`hatchling/1.27.0-GCCcore-14.2.0`|
 
 ### trove-classifiers
 
 
 |`trove-classifiers` version|hatchling modules that include it|
 | --- | --- |
-|2025.2.18.16|`hatchling/1.27.0-GCCcore-14.2.0`|
 |2025.5.9.12|`hatchling/1.27.0-GCCcore-14.3.0`|
+|2025.2.18.16|`hatchling/1.27.0-GCCcore-14.2.0`|
