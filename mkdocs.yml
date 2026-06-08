@@ -64,7 +64,7 @@ nav:
       # - Dashboard: test-suite/dashboard.md
     - Known issues and workarounds:
       - v2023.06: known_issues/eessi-2023.06.md
-  - Adding software to EESSI: 
+  - Adding software to EESSI:
     - Overview: adding_software/overview.md
     - For contributors:
       - Contribution policy: adding_software/contribution_policy.md
@@ -85,6 +85,7 @@ nav:
     - Contact info: contact.md
   - Training & events: training-events/index.md
   - Systems where EESSI is available: systems.md
+  - Roadmap: roadmap.md
   - Governance:
     - Overview: governance/index.md
     - Charter: governance/charter.md
@@ -158,12 +159,12 @@ plugins:
   - inject_ld_json
     # link to any Markdown heading
   - autorefs
-    # api automatics documentation 
+    # api automatics documentation
   - mkdocstrings:
       default_handler: python
       handlers:
         python:
-          paths: [test-suite/test-suite] 
+          paths: [test-suite/test-suite]
           options:
             docstring_style: sphinx
             docstring_section_style: spacy
@@ -214,7 +215,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Tue, 05 May 2026 at 03:24:36 UTC"
+  generated_time: "Wed, 03 Jun 2026 at 04:41:34 UTC"
   slack_invite_url: "https://join.slack.com/t/eessi-hpc/shared_invite/zt-2wg10p26d-m_CnRB89xQq3zk9qxf1k3g"
 extra_javascript:
   # mermaid diagram
