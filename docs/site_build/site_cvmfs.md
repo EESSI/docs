@@ -3,6 +3,7 @@ In this approach, you use the EESSI build bot (`EESSI/eessi-bot-software-layer`)
 
 ## Setup steps
 What we need:
+
 - Infrastructure for a site-specific CVMFS repository (Stratum 0, Stratum 1, proxies, client configuration)
 - An instance of the EESSI build bot
 - A bucket in an AWS S3-compatible object store (though you could work around this)
@@ -12,13 +13,15 @@ What we need:
 
 This documentation will go through the steps to set each of these up, in order. Since many of these individual steps are documented elsewhere, we will often reference that (and only list a very short summary here).
 
-### A site-specific CVMFS infrastructure
+## Site-specific CVMFS infrastructure
 The recommended CVMFS setup for a site-specific CVMFS repository is:
+
 - A Stratum 0 servers
 - Two (or more) Stratum 1 servers
 - Two (or more) proxies
 
 Main reason here is:
+
 - Having two Stratum 1's provides redundancy: if one dies, proxies seamlessly failover to the other one.
 - Having two proxies provides both redundancy _and_ load balancing. If one proxy dies, clients failover to the other one. If clients are configured to use the proxies in a [proxy group](https://cvmfs.readthedocs.io/en/2.8/cpt-configure.html#proxy-lists), each client selects a proxy randomly, thus providing load balancing.
 
@@ -28,21 +31,23 @@ Main reason here is:
 
 An extensive [tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/) is available that teaches how to setup each of these machines, and how to configure the clients to use the relevant Stratum 1's and proxies. Below, we will summarize some of the key steps, and point out things that are specifically relevant for this setup.
 
-#### Setting up the CVMFS Stratum 0
+### Setting up your Stratum 0
 
-For extensive instructions, see [the CVMFS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/02_stratum0_client/#21-setting-up-the-stratum-0) or the [upstream documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html).
+The documentation below provides you with the minimal steps required to set up a working Stratum 0 and is specifically aimed at setting up a Stratum 0 for hosting a site software stack on top of EESSI (which is why e.g. it makes the `software.eessi.io` repository available on this Stratum 0 as well). However, there is a vast amount of things you can configure for a CVMFS Stratum 0, and nothing beats the detail of the extensive [upstream documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html). The [CVMFS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/02_stratum0_client/#21-setting-up-the-stratum-0) may also be helpful.
 
-They key steps are:
+**1. Choose a repository name**
 
-1. Define a repository name, typically something like `software.<name_of_the_site>.tld`
+Define a repository name, typically something like `software.<name_of_the_site>.tld`
 
-```bash
+``` { .bash .copy }
 repo_name=name.sitename.tld
 ```
 Note that while this looks like a URL, it is not: it is simply a name for the CVMFS repository. If you set up any DNS though, it is conventional to use the same domain structure, to avoid confusion.
 
-2. Install the `cvmfs` and `cvmfs-server` packages. Typically:
-```bash
+**2. Install the `cvmfs` and `cvmfs-server` packages**
+
+Typically:
+``` { .bash .copy }
 wget https://cvmrepo.s3.cern.ch/cvmrepo/apt/cvmfs-release-latest_all.deb
 sudo dpkg -i cvmfs-release-latest_all.deb
 rm -f cvmfs-release-latest_all.deb
@@ -50,10 +55,14 @@ sudo apt-get -y update
 sudo apt-get -y install cvmfs cvmfs-server
 ```
 
-3. To facilitate ingestion later on, we make sure that the `software.eessi.io` repository is available on our Stratum 0 machine as well. Because the `cvmfs-server` cannot perform certain actions when `autofs` is enabled (which is usually how CVMFS repositories are mounted), we have to mount it manually. We also mount the `cvmfs-config.cern.ch` repository, as that provides the configuration for `software.eessi.io`
+**3. Make `software.eessi.io` available on your Stratum 0**
 
-```bash
+To facilitate ingestion later on, we make sure that the `software.eessi.io` repository is available on our Stratum 0 machine as well. This allows us to leverage e.g. the Lmod installation from there to build the Lmod cache. Because the `cvmfs-server` cannot perform certain actions when `autofs` is enabled (which is usually how CVMFS repositories are mounted), we have to mount it manually. We also mount the `cvmfs-config.cern.ch` repository, as that provides the configuration for `software.eessi.io`
+
+``` { .bash .copy }
 sudo mkdir -p /cvmfs/{cvmfs-config.cern.ch,software.eessi.io}
+sudo bash -c "echo 'CVMFS_CLIENT_PROFILE="single"' > /etc/cvmfs/default.local"
+sudo bash -c "echo 'CVMFS_QUOTA_LIMIT=10000' >> /etc/cvmfs/default.local"
 sudo bash -c "echo 'cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch cvmfs defaults 0 0' >> /etc/fstab"
 sudo bash -c "echo 'software.eessi.io /cvmfs/software.eessi.io cvmfs defaults 0 0' >> /etc/fstab"
 sudo systemctl daemon-reload
@@ -61,43 +70,60 @@ sudo mount -a
 ```
 
 You should now be able to see the `cvmfs-config.cern.ch` and `software.eessi.io` repositories:
-```bash
+``` { .bash .copy }
 ls -al /cvmfs/cvmfs-config.cern.ch
 ls -al /cvmfs/software.eessi.io
 ```
 
-4. By default, CVMFS will store data for repositories in `/srv/cvmfs`. If you want to store this elsewhere, create a link `/srv/cvmfs` that points to where you want to store the repository data.
-```bash
+**4. (Optional) Change location to store Stratum 0 data**
+
+By default, CVMFS will store data for repositories in `/srv/cvmfs`. If you want to store this elsewhere, create a link `/srv/cvmfs` that points to where you want to store the repository data.
+
+``` { .bash .copy }
 sudo ln -s /my/desired/data/prefix /srv/cvmfs
 ```
 
-5. Create the repository owned by `root`:
-```bash
+**5. Create a new CVMFS repository**
+
+To create a new CVMFS repository on the Stratum 0, run
+
+``` { .bash .copy }
 sudo cvmfs_server mkfs -o root $repo_name
 ```
+
+The `-o root` tells CVMFS that this repository should be owned by root.
 
 !!! note
 
     The reason we configure `root` to be the owner of the CVMFS repository is that EasyBuild, when configured through `EESSI-extend`, by default creates read-only installations. This causes issues if CVMFS has to put catalog files (`.cvmfscatalog`) files in these directories, which are metadata files that CVMFS uses to list the files/directories present in the repository. While it is technically possible to use a regular user, this would require making all directories in which CVMFS would create a `.cvmfscatalog` file writeable in a transaction, then create the catalog files, then remove the write permissions again. The same approach would need to be taken to reinstall software that was already installed. We consider this unnecessarily complex, and instead prefer to have the repository owned by root.
 
+**6. Configure CVMFS catalog creation**
 
-Then, we create a `.cvmfsdirtab` file, that will tell CVMFS in at which directory levels to create [catalog files](https://cvmfs.readthedocs.io/en/stable/cpt-details.html#nested-catalogs). We advise that you simply use the latest `.cvmfsdirtab` that is used for the upstream EESSI repository as well. You can get it from [the `EESSI/filesystem-layer` repository](https://github.com/EESSI/filesystem-layer/blob/main/roles/create_cvmfs_content_structure/files/.cvmfsdirtab) or simply copy it from `/cvmfs/software.eessi.io/.cvmfsdirtab` on a system where `EESSI` is available. Alternatively, you can configure your CVMFS server to do [automatic catalog creation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#automatic-management-of-nested-catalogs) by setting `CVMFS_AUTOCATALOGS=true` in the server configuration file (`/etc/cvmfs/repositories.d/$repo_name/server.conf`).
+Here, we have two options. 
 
-To get the `.cvmfsdirtab` in our repository, we have to open a transaction, move the file into the repository, and publish the transaction. In the same transaction, we can remove the `new_repository` file that is present by default in any newly created repository
+**Option 1:** we create a `.cvmfsdirtab` file in the root of the repository. This will tell CVMFS at which directory levels to create [catalog files](https://cvmfs.readthedocs.io/en/stable/cpt-details.html#nested-catalogs). We advise that you simply use the latest `.cvmfsdirtab` that is used for the upstream EESSI repository as well. You can get it from [the `EESSI/filesystem-layer` repository](https://github.com/EESSI/filesystem-layer/blob/main/roles/create_cvmfs_content_structure/files/.cvmfsdirtab) or simply copy it from `/cvmfs/software.eessi.io/.cvmfsdirtab` on a system where `EESSI` is available. The upside of this approach is that it creates catalogue files at the root of each EasyBuild installation prefix. This causes files that are typically accessed together (namely: that belong to the same software installation) to be indexed within the same catalog, which is typically good for performance. The downside is that if installations are extremely big, the catalog may exceed the largest size that CVMFS recommends (upto 200k files/dirs per catalog).
 
-```bash
-wget https://raw.githubusercontent.com/EESSI/filesystem-layer/refs/heads/main/roles/create_cvmfs_content_structure/files/.cvmfsdirtab
+**Option 2:** you can configure your CVMFS server to do [automatic catalog creation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#automatic-management-of-nested-catalogs) by setting `CVMFS_AUTOCATALOGS=true` in the server configuration file (`/etc/cvmfs/repositories.d/$repo_name/server.conf`). The upside is that this option will ensure that the number of files per catalog stays within the recommended limits. The downside is that CVMFS does not know which files are commonly accessed together (e.g. because they belong to the same software installation) and might spread them over multiple catalogues - even when that's not strictly needed in terms of catalog size.
+
+Here, we follow **Option 1**.
+
+To get the `.cvmfsdirtab` in your repository, you have to open a transaction, move the file into the repository, and publish the transaction. In the same transaction, we can immediately remove the `new_repository` file that is present by default in any newly created repository
+
+``` { .bash .copy }
 sudo cvmfs_server transaction $repo_name
-mv .cvmfsdirtab /cvmfs/$repo_name/
-rm /cvmfs/$repo_name/new_repository
+# Essentially copy the .cvmfsdirtab from EESSI, but strip every pattern related to the compatibility layer 
+sudo bash -c "cat /cvmfs/software.eessi.io/.cvmfsdirtab | grep -v '^/versions/\*/compat' > /cvmfs/$repo_name/.cvmfsdirtab"
+sudo rm /cvmfs/$repo_name/new_repository
 sudo cvmfs_server publish -m "Add .cvfmsdirtab file and remove new_repository file"
 ```
 
-As we already have a `.cvmfsdirtab` file in place, you should see CVMFS going through the logic of creating catalogs. None will be created at this point, as none of the directory structures listed in the `.cvmfsdirtab` file match existing directories in your repository (since it is still empty). CVMFS will warn you about the patterns that don't have any match (these are harmless).
+As you now have a `.cvmfsdirtab` file in place, you should see CVMFS going through the logic of creating catalogs as soon as you run the `cvmfs_server publish` command. No catalogs will be created at this point, as none of the directory structures listed in the `.cvmfsdirtab` file match existing directories in your repository (since it is still empty). CVMFS will warn you about the patterns that don't have any match ('WARNING: cannot apply pathspec') - these warnings are harmless and only serve as an indication that not all pathspecs in your `.cvmfsdirtab` file seem to actually exit (yet) in your repository.
 
-For convenience, we list all the commands here together:
+**Scripted summary of steps**
 
-```bash
+For convenience, we list all the commands from the prior steps together:
+
+``` { .bash .copy }
 # Define CVMFS repository name
 repo_name=name.sitename.tld
 echo "Defined CVMFS repository name as $repo_name"
@@ -113,9 +139,15 @@ sudo apt-get -y install cvmfs cvmfs-server
 # Manually mount cvmfs-config.cern.ch and software.eessi.io repositories
 echo "Manually mounting cvmfs-config.cern.ch and software.eessi.io repositories"
 sudo mkdir -p /cvmfs/{cvmfs-config.cern.ch,software.eessi.io}
+# Creating minimal client config
+sudo bash -c "echo 'CVMFS_CLIENT_PROFILE="single"' > /etc/cvmfs/default.local"
+sudo bash -c "echo 'CVMFS_QUOTA_LIMIT=10000' >> /etc/cvmfs/default.local"
+# Adding the cvmfs mounts to fstab
 sudo bash -c "echo 'cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch cvmfs defaults 0 0' >> /etc/fstab"
 sudo bash -c "echo 'software.eessi.io /cvmfs/software.eessi.io cvmfs defaults 0 0' >> /etc/fstab"
+# Rerun the fstab generator to create the .mount files
 sudo systemctl daemon-reload
+# Actually trigger mounting the cvmfs filesystems
 sudo mount -a
 
 # Check that manually mounted repositories are available
@@ -131,18 +163,19 @@ sudo cvmfs_server mkfs -o root $repo_name
 # Create the .cvmfsdirtab file in the root of the repository
 echo "Opening transaction, adding .cvmfsdirtab file to the root of $repo_name, and then publish the transaction"
 sudo cvmfs_server transaction $repo_name
-cp /cvmfs/software.eessi.io/.cvmfsdirtab /cvmfs/$repo_name/
-rm /cvmfs/$repo_name/new_repository
+# Essentially copy the .cvmfsdirtab from EESSI, but strip every pattern related to the compatibility layer 
+sudo bash -c "cat /cvmfs/software.eessi.io/.cvmfsdirtab | grep -v '^/versions/\*/compat' > /cvmfs/$repo_name/.cvmfsdirtab"
+sudo rm /cvmfs/$repo_name/new_repository
 sudo cvmfs_server publish -m "Add .cvfmsdirtab file and remove new_repository file"
 ```
 
-#### Sanity checking your Stratum 0 setup
+### Sanity checking your Stratum 0 setup
 
 On the machine where you've set up your CVMFS stratum 0, you can perform some checks to see if things where set up correctly:
 
 1. Check that the repository was created correctly:
 
-```bash
+``` { .bash .copy }
 cvmfs_server list
 ```
 
@@ -150,7 +183,7 @@ lists all the Stratum servers installed on this machine and should report someth
 
 2. Check that two mount points are now present related to your repository:
 
-```bash
+``` { .bash .copy }
 mount
 ```
 
@@ -165,7 +198,7 @@ The first is a read-only mount of the current state of your repository. The seco
 
 3. The directory
 
-```bash
+``` { .bash .copy }
 ls /srv/cvmfs/$repo_name
 ```
 
@@ -173,46 +206,46 @@ should now contain some hidden `.cvmfs<...>` files and a `data` directory. The l
 
 4. The directory
 
-```bash
+``` { .bash .copy }
 ls -al /cvmfs/$repo_name
 ```
 
 should now show you the `.cvmfsdirtab` file we added in our transaction.
 
-#### Setting up a CVMFS Stratum 1
+### Setting up a CVMFS Stratum 1
 
-#### Setting up proxies
+### Setting up proxies
 
-#### Configuring your CVMFS clients
+### Configuring your CVMFS clients
 
-### Setting up an object store to stage build tarballs
+## Setting up an object store to stage build tarballs
 
-#### Creating a bucket
+### Creating a bucket
 - create bucket
 - set policies
 
-#### Create tokens to access bucket
+### Create tokens to access bucket
 - consider creating seperate IAM identities with separate permissions for your build bot and Stratum 0
 
-### Setting up the EESSI build bot
+## Setting up the EESSI build bot
 
-#### Creating a SMEE channel
+### Creating a SMEE channel
 
-#### Registering a GitHub App for the bot
+### Registering a GitHub App for the bot
 
-#### Installing the GitHub App onto a repository
+### Installing the GitHub App onto a repository
 - create new repo to hold easystacks
 - install GH app on new repo
 
-#### Install EESSI build bot on a machine
+### Install EESSI build bot on a machine
 - app.cfg
 - set up an environment for the bot to run in
 - run the necessary scripts
 
-### Set up automatic ingestion on CVMFS Stratum 0 (optional)
+## Set up automatic ingestion on CVMFS Stratum 0 (optional)
 - list steps this needs to do
 
-### Add your first software
+## Add your first software
 - add easystack
 - create PR
 - bot:show_config first!
