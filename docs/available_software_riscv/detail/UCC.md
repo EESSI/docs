@@ -1,0 +1,50 @@
+---
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'UCC (Unified Collective Communication) is a collective
+
+    communication operations API and library that is flexible, complete, and
+
+    feature-rich for current and emerging programming models and runtimes.
+
+    '
+  license: Not confirmed
+  name: UCC
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''1.4.4'', ''1.3.0'']'
+  url: https://www.openucx.org/
+---
+# UCC
+
+
+UCC (Unified Collective Communication) is a collective
+communication operations API and library that is flexible, complete, and
+feature-rich for current and emerging programming models and runtimes.
+
+
+<small>homepage: </small><span class="software-link">[https://www.openucx.org/](https://www.openucx.org/)</span>
+
+## Available installations
+
+
+|UCC version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|1.4.4|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`UCC/1.4.4-GCCcore-14.3.0`|
+|1.3.0|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`UCC/1.3.0-GCCcore-14.2.0`|
