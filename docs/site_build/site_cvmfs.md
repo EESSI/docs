@@ -57,7 +57,7 @@ sudo apt-get -y install cvmfs cvmfs-server
 
 **3. Make `software.eessi.io` available on your Stratum 0**
 
-To facilitate ingestion later on, we make sure that the `software.eessi.io` repository is available on our Stratum 0 machine as well. This allows us to leverage e.g. the Lmod installation from there to build the Lmod cache. Because the `cvmfs-server` cannot perform certain actions when `autofs` is enabled (which is usually how CVMFS repositories are mounted), we have to mount it manually. We also mount the `cvmfs-config.cern.ch` repository, as that provides the configuration for `software.eessi.io`
+To facilitate ingestion later on, we make sure that the `software.eessi.io` repository is available on our Stratum 0 machine as well. This allows us to leverage e.g. the Lmod installation from there to build the Lmod cache. Because the `cvmfs-server` cannot perform certain actions when `autofs` is enabled (which is usually how CVMFS repositories are mounted), we have to mount `software.eessi.io` manually. We also mount the `cvmfs-config.cern.ch` repository, as that provides the configuration for `software.eessi.io`
 
 ``` { .bash .copy }
 sudo mkdir -p /cvmfs/{cvmfs-config.cern.ch,software.eessi.io}
@@ -101,9 +101,9 @@ The `-o root` tells CVMFS that this repository should be owned by root.
 
 Here, we have two options. 
 
-**Option 1:** we create a `.cvmfsdirtab` file in the root of the repository. This will tell CVMFS at which directory levels to create [catalog files](https://cvmfs.readthedocs.io/en/stable/cpt-details.html#nested-catalogs). We advise that you simply use the latest `.cvmfsdirtab` that is used for the upstream EESSI repository as well. You can get it from [the `EESSI/filesystem-layer` repository](https://github.com/EESSI/filesystem-layer/blob/main/roles/create_cvmfs_content_structure/files/.cvmfsdirtab) or simply copy it from `/cvmfs/software.eessi.io/.cvmfsdirtab` on a system where `EESSI` is available. The upside of this approach is that it creates catalogue files at the root of each EasyBuild installation prefix. This causes files that are typically accessed together (namely: that belong to the same software installation) to be indexed within the same catalog, which is typically good for performance. The downside is that if installations are extremely big, the catalog may exceed the largest size that CVMFS recommends (upto 200k files/dirs per catalog).
+**Option 1:** we create a `.cvmfsdirtab` file in the root of the repository. This will tell CVMFS at which directory levels to create [catalog files](https://cvmfs.readthedocs.io/en/stable/cpt-details.html#nested-catalogs). We advise that you simply use the latest `.cvmfsdirtab` that is used for the upstream EESSI repository as well. You can get it from [the EESSI/filesystem-layer repository](https://github.com/EESSI/filesystem-layer/blob/main/roles/create_cvmfs_content_structure/files/.cvmfsdirtab) or simply copy it from `/cvmfs/software.eessi.io/.cvmfsdirtab` on a system where `EESSI` is available. The upside of Option 1 is that it creates catalogue files at the root of each EasyBuild installation prefix. This causes files that are typically accessed together (namely: that belong to the same software installation) to be indexed within the same catalog, which is typically good for performance. The downside is that if installations are extremely big, the catalog may exceed the largest size that CVMFS recommends (upto 200k files/dirs per catalog).
 
-**Option 2:** you can configure your CVMFS server to do [automatic catalog creation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#automatic-management-of-nested-catalogs) by setting `CVMFS_AUTOCATALOGS=true` in the server configuration file (`/etc/cvmfs/repositories.d/$repo_name/server.conf`). The upside is that this option will ensure that the number of files per catalog stays within the recommended limits. The downside is that CVMFS does not know which files are commonly accessed together (e.g. because they belong to the same software installation) and might spread them over multiple catalogues - even when that's not strictly needed in terms of catalog size.
+**Option 2:** you can configure your CVMFS server to do [automatic catalog creation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#automatic-management-of-nested-catalogs) by setting `CVMFS_AUTOCATALOGS=true` in the server configuration file (`/etc/cvmfs/repositories.d/$repo_name/server.conf`). The upside of Option 2 is that it will ensure that the number of files per catalog stays within the recommended limits. The downside is that CVMFS does not know which files are commonly accessed together (e.g. because they belong to the same software installation) and might spread them over multiple catalogues - even when that's not strictly needed in terms of catalog size.
 
 Here, we follow **Option 1**.
 
@@ -118,6 +118,25 @@ sudo cvmfs_server publish -m "Add .cvfmsdirtab file and remove new_repository fi
 ```
 
 As you now have a `.cvmfsdirtab` file in place, you should see CVMFS going through the logic of creating catalogs as soon as you run the `cvmfs_server publish` command. No catalogs will be created at this point, as none of the directory structures listed in the `.cvmfsdirtab` file match existing directories in your repository (since it is still empty). CVMFS will warn you about the patterns that don't have any match ('WARNING: cannot apply pathspec') - these warnings are harmless and only serve as an indication that not all pathspecs in your `.cvmfsdirtab` file seem to actually exit (yet) in your repository.
+
+**7. Setup automatic whitelist resigning"
+Each CVMFS repository has a whitelist (`.cvmfswhitelist`) with fingerprints of certificates that are allowed to sign a repository manifest (`.cvmfspublished`) (see [signature details](https://cvmfs.readthedocs.io/en/stable/apx-security.html#signature-details)). This whitelist has to be resigned with the repository master key every 30 days (or every 7 days if using a smartcard, like a Yubikey, to store the master key) (see [master keys](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#master-keys)). You can check the current validity of the signature using
+
+``` { .bash .copy }
+sudo cvmfs_server info $repo_name
+```
+
+Which will print something like:
+
+```
+Whitelist is valid for another X days
+```
+
+We recommend that you set up automatic resigning in a daily cronjob, e.g.
+
+``` { .bash .copy }
+sudo bash -c "echo '0 11 * * * root /usr/bin/cvmfs_server resign $repo_name' > /etc/cron.d/cvmfs_resign"
+```
 
 **Scripted summary of steps**
 
@@ -167,13 +186,17 @@ sudo cvmfs_server transaction $repo_name
 sudo bash -c "cat /cvmfs/software.eessi.io/.cvmfsdirtab | grep -v '^/versions/\*/compat' > /cvmfs/$repo_name/.cvmfsdirtab"
 sudo rm /cvmfs/$repo_name/new_repository
 sudo cvmfs_server publish -m "Add .cvfmsdirtab file and remove new_repository file"
+
+# Set up a daily cronjob to sign the .cvmfswhitelist
+echo "Setting up a cronjob for daily whitelist signing"
+sudo bash -c "echo '0 11 * * * root /usr/bin/cvmfs_server resign $repo_name' > /etc/cron.d/cvmfs_resign"
 ```
 
 ### Sanity checking your Stratum 0 setup
 
 On the machine where you've set up your CVMFS stratum 0, you can perform some checks to see if things where set up correctly:
 
-1. Check that the repository was created correctly:
+**1. Check that the repository was created correctly**
 
 ``` { .bash .copy }
 cvmfs_server list
@@ -181,10 +204,10 @@ cvmfs_server list
 
 lists all the Stratum servers installed on this machine and should report something like `$repo_name (stratum0 / local)`.
 
-2. Check that two mount points are now present related to your repository:
+**2. Check mount points for your repository**
 
 ``` { .bash .copy }
-mount
+mount | grep "$repo_name"
 ```
 
 Should print something like
@@ -196,15 +219,17 @@ overlay_$repo_name on /cvmfs/$repo_name type overlay (...)
 
 The first is a read-only mount of the current state of your repository. The second is an overlay filesystem that shows the current state of your repositories (as `lowerdir`) with any changes done in a currently open transaction (if any) overlayed on top (as `upperdir`, for which it uses `/var/spool/cvmfs/$repo_name/scratch/current`). I.e. it displays the state of your repository under `/cvmfs/$repo_name` as it will be once you publish any open transactions.
 
-3. The directory
+**3. Check the repository storage backend**
+
+The directory
 
 ``` { .bash .copy }
-ls /srv/cvmfs/$repo_name
+ls -al /srv/cvmfs/$repo_name
 ```
 
 should now contain some hidden `.cvmfs<...>` files and a `data` directory. The latter is where the data in your repository will actually be stored.
 
-4. The directory
+**4. Check the repository contents**
 
 ``` { .bash .copy }
 ls -al /cvmfs/$repo_name
@@ -212,7 +237,148 @@ ls -al /cvmfs/$repo_name
 
 should now show you the `.cvmfsdirtab` file we added in our transaction.
 
+**5. Checking the repository info**
+
+``` { .bash .copy }
+sudo cvmfs_server info $repo_name
+```
+
 ### Setting up a CVMFS Stratum 1
+
+Again, the documentation below provides you with the minimal steps to set up a working Stratum 1 specifically aimed at hosting a site software stack on top of EESSI. There are a lot of things you can configure here, which are described in detail in the [upstream documentation](https://cvmfs.readthedocs.io/en/stable/cpt-replica.html). Also, the [CVMFS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/03_stratum1_proxies/) may be helpful.
+
+**1. Set up your environment**
+
+For convencience, let's start by redefining the repository name in an environment variable on our Stratum 1 machine, as well as our Stratum 0's IP (or DNS name):
+
+``` { .bash .copy}
+site_tld=sitename.tld
+repo_name="name.${site_tld}"
+stratum0_ip=<IP_OR_DNS_NAME_OF_S0>
+```
+
+**2. Install the `cvmfs-server` and `mod-wsgi` package**
+
+Note that although we will not use the `mod-wsgi` functionality (which is required for GEO-API lookups), we still need to install it.
+
+Typically:
+
+``` { .bash .copy}
+wget https://cvmrepo.s3.cern.ch/cvmrepo/apt/cvmfs-release-latest_all.deb
+sudo dpkg -i cvmfs-release-latest_all.deb
+rm -f cvmfs-release-latest_all.deb
+sudo apt-get -y update
+sudo apt-get -y install cvmfs-server
+sudo apt install -y libapache2-mod-wsgi-py3
+```
+
+Note that the client package (`cvmfs`) is not needed on Stratum 1's.
+
+**3. Add repository master public key**
+
+On your CVMFS **Stratum 0**, check the contents of your master key:
+
+``` { .bash .copy}
+cat "/etc/cvmfs/keys/${repo_name}.pub"
+```
+
+and copy that to `/etc/cvmfs/keys/${site_tld}/${repo_name}.pub` on your CVMFS **Stratum 1** (note that this is one level deeper than it was on the CVMFS Stratum 0).
+
+**4. Disable use of the Geo-API**
+
+The Geo API is an API that clients normally use to figure out which Stratum 1 is closest to them. This is useful for CVMFS repositories have Stratum 1's all over the world, but for a site repository, where all Stratum 1's are typically very close to the clients that use them anyway, it adds complexity we don't need, so we disable it. Note that if you want, you can keep it enabled and set it up [as documented upstream](https://cvmfs.readthedocs.io/en/stable/cpt-replica.html#geo-api-setup).
+
+``` { .bash .copy }
+sudo bash -c "echo 'CVMFS_GEO_DB_FILE=NONE' > /etc/cvmfs/server.local"
+```
+
+**5. Create a replica**
+
+Now, we create a replica of the Stratum 0, owned by the current user `$USER` (no need for it to be owned by `root` here, as we will never want to overwrite anything here):
+
+``` { .bash .copy }
+sudo cvmfs_server add-replica -o $USER http://${stratum0_ip}/cvmfs/${repo_name} /etc/cvmfs/keys/${site_tld}/
+```
+
+Note that this command creates two configuration files for the replication:
+
+```
+/etc/cvmfs/repositories.d/$repo_name/server.conf
+/etc/cvmfs/repositories.d/$repo_name/replica.conf
+```
+
+**6. Initiate first sychronization**
+
+We initialize the first synchronization manually:
+
+``` { .bash .copy }
+sudo cvmfs_server snapshot ${repo_name}
+```
+
+**7. Set up a cronjob for synchronization**
+
+We create a cronjob that synchronizes your Stratum 1 to the Stratum 0 every 5 minutes. Note that if a previous `cvmfs_server snapshot` command is still running, it'll just skip the new invocation, so a short interval should not cause trouble. You can pick a different sychronization frequency if you like - just realize that this affects the delay with which new software will be visible on your clients.
+
+``` { .bash .copy }
+sudo bash -c "echo '*/5 * * * * root output=\$(/usr/bin/cvmfs_server snapshot -a -i 2>&1) || echo \"\$output\"' > /etc/cron.d/cvmfs_stratum1_snapshot"
+```
+
+**8. Confirm the synchronization is working**
+
+While it is not easily possible to check which files are hosted on a Stratum 1, you can check the synchronization log at `/var/log/cvmfs/snapshots.log` to see if the synchronization process finshes correctly. The report also stathes the revision the Stratum 1 is serving ('Serving revision X'). You can cross-check that this is the latest revision by running on the **Stratum 0**:
+
+``` { .bash .copy }
+sudo cvmfs_server tag "$repo_name"
+```
+
+**Scripted summary of steps**
+
+For convenience, we list all the commands from the prior steps together. Note that you'll manually have to copy in the CVMFS Stratum 0's public key.
+
+``` { .bash .copy }
+# Define environment variables
+site_tld=sitename.tld
+repo_name="name.${site_tld}"
+stratum0_ip=<IP_OR_DNS_NAME_OF_S0>
+echo "Setting up Stratum 1 for CVMFS repository: ${repo_name}, which is hosted on ${stratum0_ip}"
+
+# Install cvmfs-server and mod-wsgi
+echo "Installing cvmfs-server and mod-wsgi"
+wget https://cvmrepo.s3.cern.ch/cvmrepo/apt/cvmfs-release-latest_all.deb
+sudo dpkg -i cvmfs-release-latest_all.deb
+rm -f cvmfs-release-latest_all.deb
+sudo apt-get -y update
+sudo apt-get -y install cvmfs-server
+sudo apt install -y libapache2-mod-wsgi-py3
+
+# Add repository master public key
+echo "You'll need to add the CVMFS Stratum 0 mast key before this step"
+echo "Checking that it exists by printing the content of the public key file..."
+cat /etc/cvmfs/keys/${site_tld}/${repo_name}.pub
+
+# Disable geo-api
+echo "Disabling Geo-API"
+sudo bash -c "echo 'CVMFS_GEO_DB_FILE=NONE' > /etc/cvmfs/server.local"
+
+# Create replica
+echo "Creating replica from Stratum 0 at 'http://${stratum0_ip}/cvmfs/${repo_name}', using public key from directory '/etc/cvmfs/keys/${site_tld}/'. Replica will be owned by $USER."
+sudo cvmfs_server add-replica -o $USER http://${stratum0_ip}/cvmfs/${repo_name} /etc/cvmfs/keys/${site_tld}/
+
+# Creating first snapshot
+echo "Creating first snapshot for $repo_name"
+sudo cvmfs_server snapshot ${repo_name}
+
+# Setting up synchronization cronjob
+echo "Setting up cronjob for synchronization"
+sudo bash -c "echo '*/5 * * * * root output=\$(/usr/bin/cvmfs_server snapshot -a -i 2>&1) || echo \"\$output\"' > /etc/cron.d/cvmfs_stratum1_snapshot"
+echo "Content of cronjob:"
+cat /etc/cron.d/cvmfs_stratum1_snapshot
+
+# Checking that synchronization we are running the latest revision
+echo "Checking that we are running the latest revision by checking the snapshot.log:"
+tail /var/log/cvmfs/snapshots.log
+```
+
 
 ### Setting up proxies
 
