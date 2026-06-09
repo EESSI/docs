@@ -1,0 +1,75 @@
+---
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Scikit-build-core is a complete ground-up rewrite of scikit-build
+    on top of
+
+    modern packaging APIs. It provides a bridge between CMake and the Python build
+
+    system, allowing you to make Python modules with CMake.'
+  license: Not confirmed
+  name: scikit-build-core
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''0.11.5'', ''0.11.1'']'
+  url: https://scikit-build.readthedocs.io/en/latest/
+---
+# scikit-build-core
+
+
+Scikit-build-core is a complete ground-up rewrite of scikit-build on top of
+modern packaging APIs. It provides a bridge between CMake and the Python build
+system, allowing you to make Python modules with CMake.
+
+<small>homepage: </small><span class="software-link">[https://scikit-build.readthedocs.io/en/latest/](https://scikit-build.readthedocs.io/en/latest/)</span>
+
+## Available installations
+
+
+|scikit-build-core version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|0.11.5|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`scikit-build-core/0.11.5-GCCcore-14.3.0`|
+|0.11.1|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`scikit-build-core/0.11.1-GCCcore-14.2.0`|
+
+## Extensions
+
+Overview of extensions included in scikit-build-core installations
+
+
+### pathspec
+
+
+|`pathspec` version|scikit-build-core modules that include it|
+| --- | --- |
+|0.12.1|`scikit-build-core/0.11.5-GCCcore-14.3.0`<br/>`scikit-build-core/0.11.1-GCCcore-14.2.0`|
+
+### pyproject-metadata
+
+
+|`pyproject-metadata` version|scikit-build-core modules that include it|
+| --- | --- |
+|0.9.1|`scikit-build-core/0.11.5-GCCcore-14.3.0`<br/>`scikit-build-core/0.11.1-GCCcore-14.2.0`|
+
+### scikit_build_core
+
+
+|`scikit_build_core` version|scikit-build-core modules that include it|
+| --- | --- |
+|0.11.5|`scikit-build-core/0.11.5-GCCcore-14.3.0`|
+|0.11.1|`scikit-build-core/0.11.1-GCCcore-14.2.0`|

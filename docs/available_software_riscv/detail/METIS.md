@@ -1,0 +1,49 @@
+---
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: "\n METIS is a set of serial programs for partitioning graphs, partitioning\n\
+    \ finite element meshes, and producing fill reducing orderings for sparse\n matrices.\
+    \ The algorithms implemented in METIS are based on the multilevel\n recursive-bisection,\
+    \ multilevel k-way, and multi-constraint partitioning\n schemes.\n"
+  license: Not confirmed
+  name: METIS
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''5.1.0'']'
+  url: https://karypis.github.io/glaros/projects/gp.html
+---
+# METIS
+
+
+
+ METIS is a set of serial programs for partitioning graphs, partitioning
+ finite element meshes, and producing fill reducing orderings for sparse
+ matrices. The algorithms implemented in METIS are based on the multilevel
+ recursive-bisection, multilevel k-way, and multi-constraint partitioning
+ schemes.
+
+
+<small>homepage: </small><span class="software-link">[https://karypis.github.io/glaros/projects/gp.html](https://karypis.github.io/glaros/projects/gp.html)</span>
+
+## Available installations
+
+
+|METIS version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|5.1.0|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`METIS/5.1.0-GCCcore-14.3.0`|

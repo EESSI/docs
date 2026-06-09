@@ -1,0 +1,99 @@
+---
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: '
+
+    Open Graphics Library (OpenGL) is a cross-language, cross-platform application
+
+    programming interface (API) for rendering 2D and 3D vector graphics.
+
+
+    This module is a bundle of software required for OpenGL rendering.
+
+    It provides Mesa as an open-source implementation of the OpenGL specification
+
+    with software rendering and AMD GPU support, libglvnd for a vendor neutral
+
+    dispatch layer for rendering with both NVIDIA GPUs & Mesa, Mesa-demos for
+
+    sample applications, and GLU as an computer graphics library utilizing OpenGL.
+
+    '
+  license: Not confirmed
+  name: OpenGL
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2025.09'']'
+  url: http://www.opengl.org/
+---
+# OpenGL
+
+
+
+Open Graphics Library (OpenGL) is a cross-language, cross-platform application
+programming interface (API) for rendering 2D and 3D vector graphics.
+
+This module is a bundle of software required for OpenGL rendering.
+It provides Mesa as an open-source implementation of the OpenGL specification
+with software rendering and AMD GPU support, libglvnd for a vendor neutral
+dispatch layer for rendering with both NVIDIA GPUs & Mesa, Mesa-demos for
+sample applications, and GLU as an computer graphics library utilizing OpenGL.
+
+
+<small>homepage: </small><span class="software-link">[http://www.opengl.org/](http://www.opengl.org/)</span>
+
+## Available installations
+
+
+|OpenGL version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2025.09|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`OpenGL/2025.09-GCCcore-14.3.0`|
+
+## Extensions
+
+Overview of extensions included in OpenGL installations
+
+
+### libGLU
+
+
+|`libGLU` version|OpenGL modules that include it|
+| --- | --- |
+|9.0.3|`OpenGL/2025.09-GCCcore-14.3.0`|
+
+### libglvnd
+
+
+|`libglvnd` version|OpenGL modules that include it|
+| --- | --- |
+|1.7.0|`OpenGL/2025.09-GCCcore-14.3.0`|
+
+### Mesa
+
+
+|`Mesa` version|OpenGL modules that include it|
+| --- | --- |
+|25.2.2|`OpenGL/2025.09-GCCcore-14.3.0`|
+
+### Mesa-demos
+
+
+|`Mesa-demos` version|OpenGL modules that include it|
+| --- | --- |
+|9.0.0|`OpenGL/2025.09-GCCcore-14.3.0`|
