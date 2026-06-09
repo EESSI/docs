@@ -2,10 +2,13 @@
 
 _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
-!!! tip
-    Attending these sessions is free, but you must be registered to get an invitation to join the Zoom webinar sessions!
+!!! tip "Please fill out the quick evaluation survey!"
+    If you attended or watched the recording of one or more of these webinars,
+    please take a minute to fill out the quick evaluation survey:
 
-    See also [Registration](#registration).
+    [**Click here to give your feedback!**](https://ugent.qualtrics.com/jfe/form/SV_cBgrhSgECgxShmK)
+
+    Your feedback is important, it will help us to improve future webinars. 
 
 **What if you no longer have to install a broad range of scientific software from
 scratch on every laptop, HPC cluster, or cloud instance you use or maintain,
