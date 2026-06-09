@@ -1,0 +1,47 @@
+---
+json_ld:
+  '@context': https://schema.org
+  '@type': SoftwareApplication
+  applicationCategory: DeveloperApplication
+  description: 'Cbc (Coin-or branch and cut) is an open-source mixed integer linear
+    programming
+
+    solver written in C++. It can be used as a callable library or using a
+
+    stand-alone executable.'
+  license: Not confirmed
+  name: Cbc
+  offers:
+    '@type': Offer
+    price: 0
+  operatingSystem: LINUX
+  review:
+    '@type': Review
+    author:
+      '@type': Organization
+      name: EESSI
+    reviewBody: Application has been successfully made available on all architectures
+      supported by EESSI
+    reviewRating:
+      '@type': Rating
+      ratingValue: 5
+  softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
+    on your system
+  softwareVersion: '[''2.10.12'']'
+  url: https://github.com/coin-or/Cbc
+---
+# Cbc
+
+
+Cbc (Coin-or branch and cut) is an open-source mixed integer linear programming
+solver written in C++. It can be used as a callable library or using a
+stand-alone executable.
+
+<small>homepage: </small><span class="software-link">[https://github.com/coin-or/Cbc](https://github.com/coin-or/Cbc)</span>
+
+## Available installations
+
+
+|Cbc version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
+| --- | --- | --- | --- | --- |
+|2.10.12|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Cbc/2.10.12-foss-2025b`|
