@@ -50,6 +50,10 @@ nav:
   - Advanced usage:
     - Setting up your Stratum: filesystem_layer/stratum1.md
     - Building software with EESSI: using_eessi/building_on_eessi.md
+    - Build a site software stack on EESSI:
+      - Introduction: site_builds/overview.md
+      - EESSI-extend on shared FS: site_build/shared_fs.md
+      - EESSI build infra on site CVMFS: site_build/site_cvmfs.md
     - Test suite:
       - Overview: test-suite/index.md
       - Installation & configuration: test-suite/installation-configuration.md

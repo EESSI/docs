@@ -11,8 +11,8 @@ While all of these are valid arguments, note that there is also one major downsi
 # Choosing your approach
 There are two approaches to doing site builds, each with their own advantages and disadvantages.
 
-1. Performing site builds using EESSI-extend on a shared filesystem.
-2. Leveraging all of EESSI's tooling for site builds. In this approach, you use the EESSI build bot (`EESSI/eessi-bot-software-layer`), together with the EESSI build scripts (`EESSI/software-layer-scripts`) to build and deploy software into a CernVM-FS repository of your own. Essentially, this means you'll build in a way that is essentially identical to how it is done for upstream EESSI - with the only major difference being the target CernVM-FS repository.
+1. Perform site builds using EESSI-extend on a shared filesystem.
+2. Leverage EESSI's build procedure for site builds. In this approach, you use the EESSI build bot (`EESSI/eessi-bot-software-layer`), together with the EESSI build scripts (`EESSI/software-layer-scripts`) to build and deploy software into a CernVM-FS repository of your own. Essentially, this means you'll build in a way that is essentially identical to how it is done for upstream EESSI - with the only major difference being the target CernVM-FS repository.
 
 In both cases, you build 'on top' of EESSI, meaning that dependencies that are already provided by EESSI will not be reinstalled: they will simply be loaded from EESSI.
 
