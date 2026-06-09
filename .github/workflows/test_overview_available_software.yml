@@ -31,6 +31,7 @@ jobs:
           mkdir -p ${data_dir}
           cd ${data_dir}
           curl -OL https://eessi.io/api_data/data/eessi_api_metadata_software.json
+          curl -OL https://eessi.io/api_data/data/eessi_api_metadata-riscv_software.json
           cd -
 
           python scripts/available_software/available_software.py
@@ -38,7 +39,7 @@ jobs:
 
           # determine whether pull request would need to be opened:
           # if detailed software pages in docs/available_software/detail have been updated, then a PR should be opened
-          if [[ $(git status --porcelain ./docs/available_software/detail) ]]; then
+          if [[ -n "$(git status --porcelain ./docs/available_software/detail ./docs/available_software_riscv/detail)" ]]; then
             echo "Software pages have been changed, PR should be opened"
             git diff ./docs/available_software/detail
           else

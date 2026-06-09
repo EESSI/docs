@@ -23,7 +23,9 @@ nav:
     - Software layer: software_layer.md
     - Supported CPU targets: software_layer/cpu_targets.md
     - Supported GPU targets: software_layer/gpu_targets.md
-  - Available software: available_software/index.md
+  - Available software:
+    - Production: available_software/index.md
+    - RISC-V: available_software_riscv/index.md
   - Repositories:
     - Production:
       - Software: repositories/software.eessi.io.md

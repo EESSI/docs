@@ -31,6 +31,8 @@ jobs:
           mkdir -p ${data_dir}
           cd ${data_dir}
           curl -OL https://eessi.io/api_data/data/eessi_api_metadata_software.json
+          # Also download RISC-V data
+          curl -OL https://eessi.io/api_data/data/eessi_api_metadata-riscv_software.json
           cd -
 
           python scripts/available_software/available_software.py
@@ -40,7 +42,7 @@ jobs:
 
           # determine whether pull request should be opened:
           # if detailed software pages in docs/available_software/detail have been updated, then a PR should be opened
-          if [[ $(git status --porcelain ./docs/available_software/detail) ]]; then
+          if [[ -n "$(git status --porcelain ./docs/available_software/detail ./docs/available_software_riscv/detail)" ]]; then
             echo "Software pages have been changed, PR should be opened"
             echo "json_data_changed=yes" >> $GITHUB_OUTPUT
           else
@@ -57,6 +59,7 @@ jobs:
         with:
           add-paths: |
             docs/available_software
+            docs/available_software_riscv
             mkdocs.yml
           branch: update-software-overview
           branch-suffix: timestamp

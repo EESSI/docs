@@ -1,11 +1,9 @@
-{% set data = load_json_eessi_software() %}
+{% set data = load_json_eessi_software(riscv=True) %}
 {% set software = data.software %}
 
-# Software available in EESSI
+# Software available for RISC-V in EESSI
 
-Overview of software available in [EESSI's production repository `software.eessi.io`](../repositories/software.eessi.io.md).
-
-(For an overview of the currently available RISC-V software see the [RISC-V specific available software page](../available_software_riscv/index.md))
+Overview of software available in [EESSI's development repository for RISC-V `dev.eessi.io/riscv`](../repositories/dev.eessi.io.md).
 
 <em>{{ data.n_software }} unique software projects (+ {{ data.n_extensions }} unique extensions)</em>
 
