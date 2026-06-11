@@ -214,7 +214,7 @@ $ module av
     |-----------------------|------------------------|
     | `EESSI_CVMFS_REPO_OVERRIDE` | Overrides the default CVMFS repository path (e.g. /cvmfs/software.eessi.io) used by init. |
     | `EESSI_VERSION_OVERRIDE` | Overrides the default EESSI version subdirectory (e.g. 2023.06) selected by init. |
-    | `EESSI_SOFTWARE_SUBDIR_OVERRIDE` | Overrides detected CPU software subdir (e.g. linux/x86_64/intel/icelake) for the main stack. |
+    | `EESSI_SOFTWARE_SUBDIR_OVERRIDE` | Overrides detected CPU software subdir (e.g. x86_64/intel/icelake) for the main stack. |
     | `EESSI_ACCELERATOR_TARGET_OVERRIDE` | Overrides detected accelerator target (e.g. accel/nvidia/cc70) regardless of local hardware. |
     | `EESSI_ARCHDETECT_OPTIONS_OVERRIDE` | Replaces any built-in archdetect options with the provided value. |
 
