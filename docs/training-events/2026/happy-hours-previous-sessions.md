@@ -4,6 +4,18 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+# Topic series: EESSI Mix and Match
+
+### Monday 08 June 2026
+
+**Outline:** Site- Specific Tweaks with `host_injections`
+([Slides (PDF)](EESSI-happyhour-2026-015-host_injections.pdf), [Recording (YouTube)](https://youtu.be/0vD0_nJsLBo))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0vD0_nJsLBo?si=kbNYyvO-SiOFtQQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+---
+
 # Topic series: CI/CD Workflows with EESSI
 
 ### Monday 20 April 2026
