@@ -27,9 +27,13 @@ Main reason here is:
 
 !!! note
 
-    The recommended CVMFS setup requires a fair amount of machines. If this is more than you can afford, there are some tricks you can pull. First, you can combine each proxy with a Stratum 1 on the same machine, only use the proxies for proxy-ing upstream EESSI, and simply have your clients contact your site-specific Stratum 1's directly (without proxy). In this scenario, you can achieve load-balancing by configuring half your clients with `CVMFS_SERVER_URL="<instance_1>;<instance_2>"` and half with `CVMFS_SERVER_URL="<instance_2>;<instance_1>"`, where `instance_1` and `instance_2` are the IPs of your Stratum 1's. Finally, you can even use the Stratum 0 instead of a second Stratum 1. Note that this has security implications, as it means your Stratum 0 needs to be directly accessible to your clients. This is a potential concern: if there are vulnarebilities in the Stratum 0 software, end-users may be able to push (malicious) software in there.
+    The recommended CVMFS setup requires a fair amount of machines. If this is more than you can afford, there are some tricks you can pull.
 
-An extensive [tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/) is available that teaches how to setup each of these machines, and how to configure the clients to use the relevant Stratum 1's and proxies. Below, we will summarize some of the key steps, and point out things that are specifically relevant for this setup.
+    1. Reuse the same proxies you set up to proxy upstream EESSI to also proxy your local site-specific CVMFS repository.
+    2. Deploy your site-specific Stratum 1's on the same machines that proxy upstream EESSI. Don't configure the proxies to proxy your site-specific CVMFS repository, but simply have your clients contact your site-specific Stratum 1's directly (without proxy). In this scenario, you can achieve load-balancing by configuring half your clients with `CVMFS_SERVER_URL="<instance_1>;<instance_2>"` and half with `CVMFS_SERVER_URL="<instance_2>;<instance_1>"`, where `instance_1` and `instance_2` are the IPs of your Stratum 1's.
+    3. You can even use the Stratum 0 instead of a second Stratum 1 (even in addition to (1) or (2)). Note that this has security implications, as it means your Stratum 0 needs to be directly accessible to your clients. This is a potential concern: if there are vulnarebilities in the Stratum 0 software, end-users may be able to push (malicious) software in there.
+
+An extensive [tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/) is available that teaches how to setup each of these machines, and how to configure the clients to use the relevant Stratum 1's and proxies. Below, we will summarize some of the key steps, and point out things that are specifically relevant for the site-specific CVMFS setup.
 
 ### Setting up your Stratum 0
 
@@ -119,7 +123,8 @@ sudo cvmfs_server publish -m "Add .cvfmsdirtab file and remove new_repository fi
 
 As you now have a `.cvmfsdirtab` file in place, you should see CVMFS going through the logic of creating catalogs as soon as you run the `cvmfs_server publish` command. No catalogs will be created at this point, as none of the directory structures listed in the `.cvmfsdirtab` file match existing directories in your repository (since it is still empty). CVMFS will warn you about the patterns that don't have any match ('WARNING: cannot apply pathspec') - these warnings are harmless and only serve as an indication that not all pathspecs in your `.cvmfsdirtab` file seem to actually exit (yet) in your repository.
 
-**7. Setup automatic whitelist resigning"
+**7. Setup automatic whitelist resigning**
+
 Each CVMFS repository has a whitelist (`.cvmfswhitelist`) with fingerprints of certificates that are allowed to sign a repository manifest (`.cvmfspublished`) (see [signature details](https://cvmfs.readthedocs.io/en/stable/apx-security.html#signature-details)). This whitelist has to be resigned with the repository master key every 30 days (or every 7 days if using a smartcard, like a Yubikey, to store the master key) (see [master keys](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#master-keys)). You can check the current validity of the signature using
 
 ``` { .bash .copy }
@@ -379,29 +384,504 @@ echo "Checking that we are running the latest revision by checking the snapshot.
 tail /var/log/cvmfs/snapshots.log
 ```
 
-
 ### Setting up proxies
 
-### Configuring your CVMFS clients
+For more info, see [this tutorial](https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices/access/proxy/#proxy-server-setup) on setting up a proxy for EESSI or [this generic tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/03_stratum1_proxies/#32-setting-up-a-proxy) on setting up a proxy for CVMFS repositories.
+
+**1. Set up your environment**
+
+First, let's define some environment variables for later use:
+``` { .bash .copy }
+# IP range (in CIDR notation) of the clients that should be allowed to use to use the proxy
+client_ip_range_CIDR=<some_range>
+# Proxy port number you want to use
+proxy_port=<PORT>
+# Memory / Disk cache size (in MB) that the squid is allowed to use
+memory_cache_mb=<cache_size>
+disk_cache_mb=<cache_size>
+# Define either
+stratum1_ip1=<IP_OF_STRATUM1_INSTANCE1>
+stratum1_ip2=<IP_OF_STRATUM1_INSTANCE2>
+# Or define the domain of your stratum 1's, including leading dot (e.g. '.sitename.tld'
+stratum1_dns_domain=<DOMAIN_OF_STRATUM_1S>
+```
+
+**2. Install squid**
+
+``` { .bash .copy }
+sudo apt-get update
+sudo apt-get install -y squid
+```
+
+**3. Configure squid**
+
+WARNING: this will overwrite any existing squid config, so only execute this literally if you are on a fresh machine
+``` { .bash .copy }
+sudo bash -c "cat > /etc/squid/squid.conf" <<EOF
+# List of local IP addresses (separate IPs and/or CIDR notation) allowed to access your local proxy
+acl local_nodes src $client_ip_range_CIDR
+
+EOF
+```
+
+Now, we configure which destination domains are allowed to be proxied for. Here, we assume you have a setup in which you use a single proxy machine to proxy both EESSI and your site repository, so we also add all the EESSI domains as allowed (this includes `.cern.ch` and `.opensciencegrid.org` since those are needed by `cvmfs-config.cern.ch`). If you have a separate proxy for EESSI, you can ommit those domains below
+``` { .bash .copy }
+# If you specified a DNS domain for your stratum 1's, we use that as an allowed destination domain
+if [ -n "${stratum1_dns_domain}" ]; then
+    sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
+# Destination domains that are allowed
+# cern.ch + opensciencegrid.org domains because of cvmfs-config.cern.ch repository,
+# which are provided via Stratum-1 mirror servers hosted by CERN and OSG
+acl stratum_ones dstdomain .cern.ch .opensciencegrid.org .eessi.science $stratum1_dns_domain
+
+# Deny access to anything which is not part of our stratum_ones ACL.
+http_access deny !stratum_ones
+
+EOF
+else  # We use the individual stratum 1 IPs as allowed destinations, in addition to the domains required for the EESSI stratum 1's
+    sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
+# Destination domains that are allowed
+# cern.ch + opensciencegrid.org domains because of cvmfs-config.cern.ch repository,
+# which are provided via Stratum-1 mirror servers hosted by CERN and OSG
+acl stratum_ones dstdomain .cern.ch .opensciencegrid.org .eessi.science
+
+# Add destination IPs that are allowed for your site Stratum 1s
+acl site_stratum_ones dst $stratum1_ip1 $stratum1_ip2
+
+# Deny access to anything which is not part of our stratum_ones or site_stratum_ones ACL.
+http_access deny !stratum_ones !site_stratum_ones
+
+EOF
+fi
+
+sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
+# Squid port
+http_port $proxy_port
+
+# Only allow access from our local machines
+http_access allow local_nodes
+http_access allow localhost
+
+# Finally, deny all other access to this proxy
+http_access deny all
+
+minimum_expiry_time 0
+maximum_object_size 1024 MB
+
+# proxy memory cache of $memory_cache_mb MB
+cache_mem $memory_cache_mb MB
+maximum_object_size_in_memory 128 KB
+# $disk_cache_mb MB disk cache
+cache_dir ufs /var/spool/squid $disk_cache_mb 16 256
+EOF
+```
+
+**4. Validate the squid config and reload the service**
+
+To validate the correctness of your config file, run
+
+```
+sudo squid -k parse
+```
+
+If all looks ok, restart the squid service:
+
+```
+sudo systemctl start squid
+sudo systemctl enable squid
+```
+
+**Scripted summary of steps**
+``` { .bash .copy }
+# IP range (in CIDR notation) of the clients that should be allowed to use to use the proxy
+client_ip_range_CIDR=<some_range>
+# Proxy port number you want to use
+proxy_port=<PORT>
+# Memory / Disk cache size (in MB) that the squid is allowed to use
+memory_cache_mb=<cache_size>
+disk_cache_mb=<cache_size>
+# Define either
+stratum1_ip1=<IP_OF_STRATUM1_INSTANCE1>
+stratum1_ip2=<IP_OF_STRATUM1_INSTANCE2>
+# Or define the domain of your stratum 1's, including leading dot (e.g. '.sitename.tld'
+stratum1_dns_domain=<DOMAIN_OF_STRATUM_1S>
+
+echo "Installing squid"
+sudo apt-get update
+sudo apt-get install -y squid
+
+echo "Creating squid config"
+``` { .bash .copy }
+sudo bash -c "cat > /etc/squid/squid.conf" <<EOF
+# List of local IP addresses (separate IPs and/or CIDR notation) allowed to access your local proxy
+acl local_nodes src $client_ip_range_CIDR
+
+EOF
+# If you specified a DNS domain for your stratum 1's, we use that as an allowed destination domain
+if [ -n "${stratum1_dns_domain}" ]; then
+    sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
+# Destination domains that are allowed
+# cern.ch + opensciencegrid.org domains because of cvmfs-config.cern.ch repository,
+# which are provided via Stratum-1 mirror servers hosted by CERN and OSG
+acl stratum_ones dstdomain .cern.ch .opensciencegrid.org .eessi.science $stratum1_dns_domain
+
+# Deny access to anything which is not part of our stratum_ones ACL.
+http_access deny !stratum_ones
+
+EOF
+else  # We use the individual stratum 1 IPs as allowed destinations, in addition to the domains required for the EESSI stratum 1's
+    sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
+# Destination domains that are allowed
+# cern.ch + opensciencegrid.org domains because of cvmfs-config.cern.ch repository,
+# which are provided via Stratum-1 mirror servers hosted by CERN and OSG
+acl stratum_ones dstdomain .cern.ch .opensciencegrid.org .eessi.science
+
+# Add destination IPs that are allowed for your site Stratum 1s
+acl site_stratum_ones dst $stratum1_ip1 $stratum1_ip2
+
+# Deny access to anything which is not part of our stratum_ones or site_stratum_ones ACL.
+http_access deny !stratum_ones !site_stratum_ones
+
+EOF
+fi
+
+sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
+# Squid port
+http_port $proxy_port
+
+# Only allow access from our local machines
+http_access allow local_nodes
+http_access allow localhost
+
+# Finally, deny all other access to this proxy
+http_access deny all
+
+minimum_expiry_time 0
+maximum_object_size 1024 MB
+
+# proxy memory cache of $memory_cache_mb MB
+cache_mem $memory_cache_mb MB
+maximum_object_size_in_memory 128 KB
+# $disk_cache_mb MB disk cache
+cache_dir ufs /var/spool/squid $disk_cache_mb 16 256
+EOF
+
+echo "Validating squid config"
+sudo squid -k parse
+
+echo "Starting squid service"
+sudo systemctl start squid
+sudo systemctl enable squid
+```
+
+### (Re)configuring your CVMFS clients
+
+**1. Set up your environment**
+
+First, let's define some environment variables for later use
+``` { .bash .copy }
+site_tld=sitename.tld
+repo_name="name.${site_tld}"
+stratum1_ip1=<IP_OR_DNS_NAME_OF_STRATUM1_INSTANCE1>
+stratum1_ip2=<IP_OR_DNS_NAME_OF_STRATUM1_INSTANCE2>
+proxy_ip1=<IP_OR_DNS_NAME_OF_PROXY1>
+proxy_port1=<PORT_NR_FOR_PROXY1>
+proxy_ip2=<IP_OR_DNS_NAME_OF_PROXY2>
+proxy_port2=<PORT_NR_FOR_PROXY2>
+```
+
+**2. Install CVMFS client**
+
+Typically, the machines on which you want to offer your own software stack on top of EESSI already have the CVMFS client installed, otherwise you wouldn't be able to serve EESSI there. If you haven't done so, please follow the instructions [here](../../getting_access/native_installation#native-install-on-clusters).
+
+**3. Add the repository master public key**
+On your CVMFS **Stratum 0**, check the contents of your master key:
+```
+cat "/etc/cvmfs/keys/${repo_name}.pub"
+```
+and copy that to /etc/cvmfs/keys/${site_tld}/${repo_name}.pub on your client machines.
+
+**4. Configure CVMFS client for site-repository**
+
+Here, we will assume that you're using the same two proxies for all CVMFS repositories, so we put `CVMFS_HTTP_PROXY` within the `/etc/cvmfs/default.local`. If you still had a `CVMFS_CLIENT_PROFILE=single` in your `/etc/cvmfs/default.local` you should remove it first:
+
+``` { .bash .copy }
+sudo sed -i '/^CVMFS_CLIENT_PROFILE=single$/d' /etc/cvmfs/default.local
+```
+
+Then, we add the proxy configuration:
+
+``` { .bash .copy }
+sudo bash -c "echo 'CVMFS_HTTP_PROXY=\"http://${proxy_ip1}:${proxy_port1}|http://${proxy_ip2}:${proxy_port2}\"' >> /etc/cvmfs/default.local"
+```
+
+Then, we add your site repository to `CVMFS_REPOSITORIES` in `/etc/cvmfs/default.local`
+
+``` { .bash .copy }
+sudo bash -c "echo 'CVMFS_REPOSITORIES=\"$repo_name\"' >> /etc/cvmfs/default.local"
+```
+
+Then, we create the repository configuration file
+
+``` { .bash .copy }
+sudo bash -c "cat > /etc/cvmfs/config.d/${repo_name}.conf" <<EOF
+CVMFS_SERVER_URL="http://${stratum1_ip1}/cvmfs/@fqrn@;http://${stratum1_ip2}/cvmfs/@fqrn@"
+CVMFS_USE_GEOAPI="no"
+CVMFS_KEYS_DIR=/etc/cvmfs/keys/${site_tld}
+EOF
+```
+
+!!! note
+    If you want to use different proxy servers for EESSI vs your site CVMFS repository, you can add a site-specific `CVMFS_HTTP_PROXY` configuration in this file (`/etc/cvmfs/config.d/${repo_name}.conf`) as well, with your site specific setting. For EESSI, you could add it to `/etc/cvmfs/domain.d/eessi.io.local`
+
+!!! note
+    You could have done the configuration at the domain level, i.e. in `/etc/cvmfs/domain.d/${site_tld}.conf`. This only makes a difference if you host _multiple_ repositories under a single ${site_tld} domain, in which case this configuration would apply to _all_ of those repositories. In that case, you'd have to think about which level to specify what configuration at, e.g. specifying the `CVMFS_SERVER_URL` at the `domain.d` level if all of those repositories are hosted on the same server URL.
+
+Finally, we call `cvmfs_config setup` which will load the configuration for the newly configured repository.
+
+``` { .bash .copy }
+sudo cvmfs_config setup
+```
+
+**5. Check setup**
+
+If all went well, you should now have both `software.eessi.io` as well as your site repository available. You can check this with:
+
+``` { .bash .copy }
+cvmfs_config probe software.eessi.io ${repo_name}
+```
+
+and/or
+
+``` { .bash .copy }
+sudo cvmfs_config chksetup
+```
+
+Another useful check is to see which proxy and which Stratum 1 the client actually connected to - and if this is indeed as you intended:
+
+``` { .bash .copy }
+sudo cvmfs_config stat -v software.eessi.io
+sudo cvmfs_config stat -v ${repo_name}
+```
+
+This should report a line like
+
+```
+Connection: http://${stratum1_ipX}/cvmfs/${repo_name} through proxy http://${proxy_ipX}:${proxy_portX} (online)
+```
+
+**Scripted summary of steps**
+
+Don't forget to add the master repository key to `/etc/cvmfs/keys/${site_tld}/${repo_name}.pub` first.
+
+``` { .bash .copy }
+site_tld=sitename.tld
+repo_name="name.${site_tld}"
+stratum1_ip1=<IP_OR_DNS_NAME_OF_STRATUM1_INSTANCE1>
+stratum1_ip2=<IP_OR_DNS_NAME_OF_STRATUM1_INSTANCE2>
+proxy_ip1=<IP_OR_DNS_NAME_OF_PROXY1>
+proxy_port1=<PORT_NR_FOR_PROXY1>
+proxy_ip2=<IP_OR_DNS_NAME_OF_PROXY2>
+proxy_port2=<PORT_NR_FOR_PROXY2>
+
+echo "Remove 'CVMFS_CLIENT_PROFILE=single' from /etc/cvmfs/default.local (if any)"
+sudo sed -i '/^CVMFS_CLIENT_PROFILE=single$/d' /etc/cvmfs/default.local
+echo "Add CVMFS_HTTP_PROXY and CVMFS_REPOSITORIES settings to /etc/cvmfs/default.local"
+sudo bash -c "echo 'CVMFS_HTTP_PROXY=\"http://${proxy_ip1}:${proxy_port1}|http://${proxy_ip2}:${proxy_port2}\"' >> /etc/cvmfs/default.local"
+sudo bash -c "echo 'CVMFS_REPOSITORIES=\"$repo_name\"' >> /etc/cvmfs/default.local"
+echo "Contents of /etc/cvmfs/default.local:"
+cat /etc/cvmfs/default.local
+
+echo "Create repository configuration at /etc/cvmfs/config.d/${repo_name}.conf"
+sudo bash -c "cat > /etc/cvmfs/config.d/${repo_name}.conf" <<EOF
+CVMFS_SERVER_URL="http://${stratum1_ip1}/cvmfs/@fqrn@;http://${stratum1_ip2}/cvmfs/@fqrn@"
+CVMFS_USE_GEOAPI="no"
+CVMFS_KEYS_DIR=/etc/cvmfs/keys/${site_tld}
+EOF
+echo "Contents of /etc/cvmfs/config.d/${repo_name}.conf:"
+cat /etc/cvmfs/config.d/${repo_name}.conf
+
+echo "Checking CVMFS setup"
+sudo cvmfs_config chksetup
+echo "Checking setup for software.eessi.io"
+cvmfs_config probe software.eessi.io
+sudo cvmfs_config stat -v software.eessi.io
+echo "Checking setup for ${repo_name}"
+cvmfs_config probe ${repo_name}
+sudo cvmfs_config stat -v ${repo_name}
+```
+
+### Debugging issues with a site CVMFS setup
+
+If the above did _not_ give you a working repository on the client, the best way to debug things is probably to first isolate _where_ the problem is: Stratum 0, Stratum 1, proxy or client. [This troubleshooting guide](https://multixscale.github.io/cvmfs-tutorial-hpc-best-practices/troubleshooting/) may also be helpful. 
+
+**1. Connect your client directly to the Stratum 1**
+
+To make your client connect directly to your Stratum 1, configuring it with the `CVMFS_HTTP_PROXY=DIRECT` setting. Then, run
+
+``` { .bash .copy }
+cvmfs_config probe ${repo_name}
+sudo cvmfs_config stat -v ${repo_name}
+```
+
+again. The second command should now print something like
+
+```
+Connection: http://${stratum1_ipX}/cvmfs/${repo_name} through proxy DIRECT
+```
+
+If this does _not_ work, proceed to step 2.
+
+If this _does_ work, the issue is with your proxy. Some things to check
+
+- Is the proxy service running? (`systemctl status squid`)
+- Is there a firewall blocking traffic to the proxy port?
+- Is there a mistake in the squid configuration? You can try to remove restrictions (e.g. the destination or source restrictions) one by one, to see if this fixes things to find the offending restriction.
+
+**2. Connect your client directly to the Stratum 0**
+
+To make your client connect directly to your Stratum 0, _in addition_ to configuring it with `CVMFS_HTTP_PROXY=DIRECT`, set `CVMFS_SERVER_URL="http://${stratum0_ip}/cvmfs/@fqrn#"`. Also, make sure your Stratum 0 is accessible from your clients: you may not want this in a production environment, but you may want to open it up temporarily. Then, run
+
+``` { .bash .copy }
+cvmfs_config probe ${repo_name}
+sudo cvmfs_config stat -v ${repo_name}
+```
+
+again. The second command should now print something like
+
+```
+Connection: http://${stratum0_ip}/cvmfs/${repo_name} through proxy DIRECT
+```
+
+If this _does_ work, something is wrong with your Stratum 1. Some things to check
+
+- Is there a firewall blocking traffic?
+- Do the snapshot logs on the Stratum 1 look sane, i.e. is the Stratum 1 at least succesful in mirroring the Stratum 0?
+
+If this does _not_ work, the issue is with your Stratum 0. Go through the [sanity check](#sanity-checking-your-stratum-0-setup) steps again to be sure. Also here, think if there's a firewall that's blocking traffic to the client.
 
 ## Setting up an object store to stage build tarballs
 
-### Creating a bucket
-- create bucket
-- set policies
+The standard deployment method for the EESSI build bot is to stage tarballs in an S3 bucket. While the bot's functionality may be extended in the future (the [function](https://github.com/EESSI/eessi-bot-software-layer/blob/29dc5e9aa339c323a900dc1454d39246def73984/tasks/deploy.py#L689) actually uploading the tarballs could easily be altered to deploy to a central directory on a local filesystem, for example), for now this means we need an S3 bucket if we want to use the bot's deployment functionality.
 
-### Create tokens to access bucket
-- consider creating seperate IAM identities with separate permissions for your build bot and Stratum 0
+There is extensive documentation on how to interact with S3 buckets available online - here we only list the few commands that you would commonly need to set up a staging bucket.
+
+### Installing the AWS CLI commands
+
+Today, this can be done with:
+
+``` { .bash .copy }
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+But see the [upstream documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) for up to date instructions.
+
+### Configuring AWS CLI
+
+Create a `.aws` folder in your homedir:
+
+``` { .bash .copy }
+mkdir -p ~/.aws
+```
+
+and create a configuration file `~/.aws/config` and `~/.aws/credentials`. The content of the configuration file are typically specific for the S3-compatible service you are using. The credentials file typically looks something like:
+
+```
+[default]
+aws_access_key_id = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_KEY
+```
+
+To test if your setup works, run
+
+``` { .bash .copy }
+aws s3 ls
+```
+
+If you don't have any buckets, this won't actually list anything - but the command should complete succesfully.
+
+### Creating a bucket
+
+To create a bucket, run:
+
+```
+aws s3 mb s3://<bucket_name>
+```
+
+### Security considerations
+
+There are many policies you can attach to a bucket to increase security. At the _very_ least, consider setting a bucket policy that restricts IP access to a whitelisted range (i.e. only the nodes where your build bot(s) run, and your Stratum 0 need access). The [AWS policy generator](https://awspolicygen.s3.amazonaws.com/policygen.html) can be a helpful tool in generating such a policy.
+
+Another thing to consider is to create a secondary user with `aws iam create-user --user-name <name>` and attach a very limited policy to it (e.g. only read/write/list on buckets, nothing else). Then, create credentials for this user with `aws iam create-access-key --user-name <name>` and provide those credentials to the EESSI build bot and Stratum 0 machines. That way, if that token is compromized, the impact is minimized (e.g. the token can at least not be used to create new IAM idententies, etc).
 
 ## Setting up the EESSI build bot
 
+### What is the EESSI build bot?
+
+The [EESSI build bot](https://github.com/EESSI/eessi-bot-software-layer) is designed to start Slurm jobs and run scripts when triggered by certain GitHub events. The job script that is used can be configured, and while it goes through some fixed steps (e.g. build, check-build, test, check-test), the steps themselves are fully defined by the scripts provided in the `bot` folder of the respective repository from which it was triggered. See for example the scripts defined for the [EESSI/software-layer-scripts](https://github.com/EESSI/software-layer-scripts/tree/main/bot) repository.
+
+The goal of the bot is to make the build process scalable: software in EESSI is build for many different architectures, and (for CPU targets) these build are done natively (i.e. the target architecture is the same as the architecture of the node one which the build was done). This means that for every software installation, the amount of build jobs that needs to be run is equal to the amount of architectures EESSI supports. For the large amount of supported architectures and software installations in EESSI, it is infeasible to start all of those build jobs manually - that's where the bot comes in.
+
+While running build jobs manually may be sufficient for your site, sites that offer very heterogenous clusters or that plan to deploy a fair amount of software in their site-specific repository can benefit from the scalability of the bot.
+
+The build bot has two main processes:
+
+- [an event handler](https://github.com/EESSI/eessi-bot-software-layer/blob/develop/eessi_bot_event_handler.py) which receives events from GitHub and acts on them
+- [a job manager](https://github.com/EESSI/eessi-bot-software-layer/blob/develop/eessi_bot_job_manager.py), which monitors the Slurm job queue and acts on state changes of the jobs submitted by the event handler.
+
+### Requirements
+
+In order to run the build bot, a few things are required:
+
+1. An organization in GitHub. While not _strictly_ required, this means you can share management of the bot with others in your organization. For the rest of these docs, we will assume you already have a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) and refer to it as GH_ORG.
+2. A GitHub account, with 'Owner' rights within your organization.
+3. A GitHub App, created within your organization.
+4. A GitHub repository within your organization on which the GitHub App can be installed
+5. A SMEE channel to relay github events to the running bot instance
+6. A node that can host the bot process, and from where the bot can start jobs on a SLURM cluster
+7. A shared filesystem that the bot process has access to where it can stage jobs directories
+
+Note that the bot process itself is _relatively_ lightweight, since the builds are performed in jobs. Thus, running the bot process on a login node is probably feasible.
+
 ### Creating a SMEE channel
+
+Go to [https://smee.io/new](https://smee.io/new) in order to create a new SMEE channel. **Write down the URL!**
 
 ### Registering a GitHub App for the bot
 
+- Go to https://github.com/organizations/GH_ORG/settings/apps.
+- Click "New GitHub App"
+- Pick a descriptive name. We'll refer to it as APP_NAME
+- Under "Homepage URL", we suggest you fill in the URL of the SMEE channel you just created (but unimportant for how the bot functions)
+- Under "Webhook URL", fill in the URL of the SMEE channel you just created
+- Generate a Webhook secret. This secret will be used by the bot's event handler to verify that the event was really sent from your GitHub app.
+  - Run `python3 -c 'import secrets; print(secrets.token_hex(64))'` on any machine
+  - Past the result in the 'Secret' box underneath the Webhook URL
+- Under "Repository Permissions":
+  - Set "Issues" to "Access: Read and Write"
+  - Set "Pull requests" to "Access: Read and Write"
+- Under "Subscribe to events", tick the "Issue comment" and "Pull request" boxes (note: these only appear once you've set the Repository Permissions above)
+- Select "Only allow this GitHub App to be installed on the GH_ORG account
+- Click "Create GitHub App"
+- Scroll down to the "Private keys" section and click "Generate a private key". This key will be uesd by the bot event handler in order to be able to interact with GitHub (and e.g. post responses in your PRs).
+
+### Create a GitHub repository
+
+- Go to https://github.com/organizations/GH_ORG/repositories/new
+- Pick a descriptive name. We'll refer to it as GH_REPO
+- Add the `bot/build.sh` from [EESSI/software-layer](https://github.com/EESSI/software-layer) to your repository (under the exact same name)
+
+Note that you may regularly want to pull in the `bot/build.sh` from the upstream `EESSI/software-layer` in case changes are made to it upstream.
+
 ### Installing the GitHub App onto a repository
-- create new repo to hold easystacks
-- install GH app on new repo
+
+- Go to https://github.com/organizations/GH_ORG/settings/apps/APP_NAME
+- On the left, go to "Install App"
+- Click "Install" next to your organizations' account
+- Select "Only select repositories" and select the GH_REPO from the dropdown menu
+- Click "Install"
 
 ### Install EESSI build bot on a machine
 - app.cfg
