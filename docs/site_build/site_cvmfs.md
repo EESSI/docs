@@ -415,20 +415,12 @@ sudo apt-get install -y squid
 
 **3. Configure squid**
 
-WARNING: this will overwrite any existing squid config, so only execute this literally if you are on a fresh machine
+The next step is to create a configuration file for the Squid proxy in `/etc/squid/squid.conf`. The template below allows your squid to proxy both your local site's CVMFS Stratum 1's, as well as the EESSI Stratum 1's. If you only want to proxy your site Stratum 1's, simply remove the `.cern.ch`, `.opensciencegrid.org` and `.eessi.science` from the list of `dstdomain`'s in the template.
+
 ``` { .bash .copy }
-sudo bash -c "cat > /etc/squid/squid.conf" <<EOF
 # List of local IP addresses (separate IPs and/or CIDR notation) allowed to access your local proxy
 acl local_nodes src $client_ip_range_CIDR
 
-EOF
-```
-
-Now, we configure which destination domains are allowed to be proxied for. Here, we assume you have a setup in which you use a single proxy machine to proxy both EESSI and your site repository, so we also add all the EESSI domains as allowed (this includes `.cern.ch` and `.opensciencegrid.org` since those are needed by `cvmfs-config.cern.ch`). If you have a separate proxy for EESSI, you can ommit those domains below
-``` { .bash .copy }
-# If you specified a DNS domain for your stratum 1's, we use that as an allowed destination domain
-if [ -n "${stratum1_dns_domain}" ]; then
-    sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
 # Destination domains that are allowed
 # cern.ch + opensciencegrid.org domains because of cvmfs-config.cern.ch repository,
 # which are provided via Stratum-1 mirror servers hosted by CERN and OSG
@@ -437,13 +429,11 @@ acl stratum_ones dstdomain .cern.ch .opensciencegrid.org .eessi.science $stratum
 # Deny access to anything which is not part of our stratum_ones ACL.
 http_access deny !stratum_ones
 
-EOF
-else  # We use the individual stratum 1 IPs as allowed destinations, in addition to the domains required for the EESSI stratum 1's
-    sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
-# Destination domains that are allowed
-# cern.ch + opensciencegrid.org domains because of cvmfs-config.cern.ch repository,
-# which are provided via Stratum-1 mirror servers hosted by CERN and OSG
-acl stratum_ones dstdomain .cern.ch .opensciencegrid.org .eessi.science
+# Alternatively, you can create an ACL for a particular destination based on IP, if you don't have DNS set up for your Stratum 1s:
+# acl site_stratum_ones dst $stratum1_ip1 $stratum1_ip2
+
+# And then deny access based on either domain or IP:
+# http_access deny !stratum_ones !site_stratum_ones
 
 # Add destination IPs that are allowed for your site Stratum 1s
 acl site_stratum_ones dst $stratum1_ip1 $stratum1_ip2
@@ -451,10 +441,6 @@ acl site_stratum_ones dst $stratum1_ip1 $stratum1_ip2
 # Deny access to anything which is not part of our stratum_ones or site_stratum_ones ACL.
 http_access deny !stratum_ones !site_stratum_ones
 
-EOF
-fi
-
-sudo bash -c "cat >> /etc/squid/squid.conf" <<EOF
 # Squid port
 http_port $proxy_port
 
@@ -473,7 +459,6 @@ cache_mem $memory_cache_mb MB
 maximum_object_size_in_memory 128 KB
 # $disk_cache_mb MB disk cache
 cache_dir ufs /var/spool/squid $disk_cache_mb 16 256
-EOF
 ```
 
 **4. Validate the squid config and reload the service**
@@ -492,6 +477,8 @@ sudo systemctl enable squid
 ```
 
 **Scripted summary of steps**
+
+WARNING: this will overwrite any existing squid config, so only execute this literally if you are on a fresh machine
 ``` { .bash .copy }
 # IP range (in CIDR notation) of the clients that should be allowed to use to use the proxy
 client_ip_range_CIDR=<some_range>
@@ -740,7 +727,7 @@ If this _does_ work, the issue is with your proxy. Some things to check
 
 **2. Connect your client directly to the Stratum 0**
 
-To make your client connect directly to your Stratum 0, _in addition_ to configuring it with `CVMFS_HTTP_PROXY=DIRECT`, set `CVMFS_SERVER_URL="http://${stratum0_ip}/cvmfs/@fqrn#"`. Also, make sure your Stratum 0 is accessible from your clients: you may not want this in a production environment, but you may want to open it up temporarily. Then, run
+To make your client connect directly to your Stratum 0, _in addition_ to configuring it with `CVMFS_HTTP_PROXY=DIRECT`, set `CVMFS_SERVER_URL="http://${stratum0_ip}/cvmfs/@fqrn@"`. Also, make sure your Stratum 0 is accessible from your clients: you may not want this in a production environment, but you may want to open it up temporarily. Then, run
 
 ``` { .bash .copy }
 cvmfs_config probe ${repo_name}
