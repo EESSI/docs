@@ -4,7 +4,7 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
-# Topic series: EESSI Mix and Match
+## Topic series: EESSI Mix and Match
 
 ### Monday 08 June 2026
 
@@ -13,10 +13,9 @@ Find slides, and video recordings of earlier sessions below.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0vD0_nJsLBo?si=kbNYyvO-SiOFtQQq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
 ---
 
-# Topic series: CI/CD Workflows with EESSI
+## Topic series: CI/CD Workflows with EESSI
 
 ### Monday 20 April 2026
 
@@ -27,7 +26,7 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
-# Topic series: Revisiting Ways to Add Software to EESSI
+## Topic series: Revisiting Ways to Add Software to EESSI
 
 ### Monday 13 April 2026
 
@@ -38,14 +37,14 @@ Find slides, and video recordings of earlier sessions below.
 
 ### Monday 30 March 2026
 
-**Outline:** Local Builds and Contributions to EESSI<sub><sup>`(part1)`</sup></sub> 
+**Outline:** Local Builds and Contributions to EESSI<sub><sup>`(part1)`</sup></sub>
 ([Slides (PDF)](EESSI-happyhour-2026-012-Local-Builds&Contributions.pdf), [Recording (YouTube)](https://youtu.be/wUKuphSadis))
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wUKuphSadis?si=qBJByPDdjyXTtPlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
-# Topic series: What’s New in EESSI 2025.06 ?
+## Topic series: What’s New in EESSI 2025.06 ?
 
 ### Monday 23 March 2026
 
@@ -56,7 +55,7 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
-# Topic series: EESSI Fundamentals Refresher
+## Topic series: EESSI Fundamentals Refresher
 
 ### Monday 16 March 2026
 
@@ -123,7 +122,7 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
-# Topic series: EESSI Roadmap 2026
+## Topic series: EESSI Roadmap 2026
 
 ### Monday 12 January 2026
 
