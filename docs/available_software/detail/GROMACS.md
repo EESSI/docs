@@ -60,6 +60,7 @@ It also contains the gmxapi extension for the single precision MPI build.
 |GROMACS version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
 |2026.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GROMACS/2026.2-foss-2025b`|
+|2025.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|<span class="software-gpu-nvidia">NVIDIA</span>: `cc100`, `cc120`, `cc70`, `cc80`, `cc90`<br/>|<span class="software-eessi-version-202506">2025.06</span>|`GROMACS/2025.4-foss-2025b-CUDA-12.9.1`|
 |2025.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GROMACS/2025.4-foss-2025b`|
 |2025.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GROMACS/2025.2-foss-2025a`|
 |2024.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|<span class="software-gpu-nvidia">NVIDIA</span>: `cc70`, `cc80`, `cc90`<br/>|<span class="software-eessi-version-202306">2023.06</span>|`GROMACS/2024.4-foss-2023b-CUDA-12.4.0`|
@@ -78,6 +79,6 @@ Overview of extensions included in GROMACS installations
 
 |`gmxapi` version|GROMACS modules that include it|
 | --- | --- |
-|0.5.0a1|`GROMACS/2026.2-foss-2025b`<br/>`GROMACS/2025.4-foss-2025b`|
+|0.5.0a1|`GROMACS/2026.2-foss-2025b`<br/>`GROMACS/2025.4-foss-2025b-CUDA-12.9.1`<br/>`GROMACS/2025.4-foss-2025b`|
 |0.5.0|`GROMACS/2024.1-foss-2023b`|
 |0.4.2|`GROMACS/2025.2-foss-2025a`<br/>`GROMACS/2024.4-foss-2023b-CUDA-12.4.0`<br/>`GROMACS/2024.4-foss-2023b`<br/>`GROMACS/2024.3-foss-2023b-PLUMED-2.9.2`<br/>`GROMACS/2024.3-foss-2023b`|
