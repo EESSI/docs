@@ -561,7 +561,7 @@ sudo systemctl start squid
 sudo systemctl enable squid
 ```
 
-### (Re)configuring your CVMFS clients { #reconf_cvmfs_client }
+### (Re)configuring your CVMFS clients
 
 **1. Set up your environment**
 
@@ -832,7 +832,7 @@ In order to run the build bot, a few things are required:
 
 Note that the bot process itself is _relatively_ lightweight, since the builds are performed in jobs. Thus, running the bot process on a login node is probably feasible.
 
-### Creating a SMEE channel
+### Creating a SMEE channel { #creating_smee_channel }
 
 Go to [https://smee.io/new](https://smee.io/new) in order to create a new SMEE channel. **Write down the URL!**
 
@@ -874,13 +874,17 @@ Note that you may regularly want to pull in the `bot/build.sh` from the upstream
 
 The next step is to actually deploy the bot processes on a machine from where it can submit build jobs to your Slurm cluster.
 
-**1. Prepare the environment**
+**1. Set up your environment**
 
-First, let's set an environment variable for the prefix in which we will store all the files that we will use for this bot installation:
+Below, we pick one prefix to put all the files related to this bot instance on the machine in (`bot_prefix`). We also set the the `smee_channel_id` to the ID of the channel we [created before](#creating_smee_channel).
 
 ``` { .bash .copy }
-export bot_prefix=$HOME/bot-instance
-export site_tld=sitename.tld
+bot_prefix=$HOME/bot-instance
+site_tld=sitename.tld
+repo_name=name.${site_tld}
+smee_channel_id=channel_id
+mkdir -p "$bot_prefix"
+cd $bot_prefix
 ```
 
 First, clone the EESSI bot repository and check out a releaese
@@ -909,7 +913,6 @@ GITHUB_APP_SECRET_TOKEN='<some_64_hexadecimal_secret'
 **2. Create a bot configuration file**
 
 The bot configuration file holds configuration items like:
-
 - The app & installation IDs of the GitHub App you [registered](#register_gh_app) and [installed](#install_gh_app) in previous steps
 - Location of the private key you generated when [registering](#register_gh_app) the GitHub App
 - Which partitions your bot can submit to (and how)
@@ -921,7 +924,7 @@ The bot configuration file holds configuration items like:
 All of this is configured in an `app.cfg` file located in the root of your `eessi-bot-software-layer` checkout. Typically, you copy the `app.cfg.example` from there to use as a template:
 
 ``` { .bash .copy }
-cp $bot_prefix/eessi-bot-software-layer/app.cfg.example $bot_prefix/eessi-bot-software-layerapp.cfg
+cp $bot_prefix/eessi-bot-software-layer/app.cfg.example $bot_prefix/eessi-bot-software-layer/app.cfg
 ```
 
 And then modify it according to your needs. The meaning of each individual config item is described in the example config file. A more extensive description is given in the `eessi-bot-software-layer` [README](https://github.com/EESSI/eessi-bot-software-layer#step-54-create-the-configuration-file-appcfg). We won't go into the details here, as everything is described in detail on the linked page. However, two things are specific to the site-building setup, since the bot needs to be able to mount your site repository in the container that is used for building software.
@@ -935,7 +938,7 @@ repos_cfg_dir = $bot_prefix/repos
 for consistentcy with the next step, in which we will set up the contents of this directory.
 
 !!! Warning
-    You can not ACTUALLY use environment variable in the `app.cfg`, as this file is not interpreted by your shell. What we mean is that you should use the expanded form of where-ever the environment variable `$bot_prefix` points.
+    You can not ACTUALLY use environment variables like $bot_prefix in the `app.cfg`, as this file is not interpreted by your shell. What we mean is that you should use the expanded form of where-ever the environment variable `$bot_prefix` points.
 
 Second, the bot uses names for repositories in it's internal configuration, and these should be used consistently. These are used in the `bucket_name` (as keys in that dictionary), `signing` (as keys in that dictionary) and `node_type_map` (as item in the `repo_targets` list). Let's assume we refer to your site repository as `SITE_REPO` for the remainder as this section. The `app.cfg` should then contain snippets like like:
 
@@ -953,9 +956,6 @@ signing =
 node_type_map = {"<node_type_name>":{ ..., 'repo_targets':['SITE_REPO']}}
 ```
 
-!!! Note
-    You can use any keypair for the signing. If you don't want to manage an extra key-pair, you could re-use the key-pair created as part of [registering](#register_gh_app) the GitHub app
-
 **3. Provide your CVMFS configuration repository**
 
 First, we create a directory to hold the CVMFS repositories, that matches with how we configured `repos_cfg_dir` above:
@@ -966,20 +966,21 @@ mkdir -p $bot_prefix/repos
 
 Then, we create a `repos.cfg` configuration file like this:
 
-```
+``` { .bash .copy }
+cat > $bot_prefix/repos/repos.cfg <<EOF
 [SITE_REPO]
-repo_name = name.sitename.tld
+repo_name = ${repo_name}
 repo_version = <eessi_version>
-config_bundle = sitename.tld-cfg_files.tgz
-config_map = { "sitename.tld/sitename.tld.pub":"/etc/cvmfs/keys/sitename.tld/sitename.tld.pub", "default.local":"/etc/cvmfs/default.local", "repo_name.conf":"/etc/cvmfs/config.d/repo_name.conf"}
+config_bundle = ${site_tld}-cfg_files.tgz
+config_map = { "${site_tld}/${site_tld}.pub":"/etc/cvmfs/keys/${site_tld}/${site_tld}.pub", "default.local":"/etc/cvmfs/default.local", "${repo_name}.conf":"/etc/cvmfs/config.d/${repo_name}.conf"}
 container = docker://ghcr.io/eessi/build-node:debian-12
+EOF
 ```
 
 - `repo_name` should match the name of your CVMFS repository
 - `repo_version` should match the EESSI version on top of which you intend to build
 - `config_bundle` is a tarball under `repos_cfg_dir` that contains the required CVMFS configuration files for this repository (instructions to create those are below)
-- `config_map` determines where the files found in the `config_bundle` will be bound into the container. For example, `sitename.tld/sitename.tld.pub` file in `sitename.tld-cfg_files.tgz` will be mounted in the container at `/etc/cvmfs/keys/sitename.tld/sitename.tld.pub`.
-- `container` is the build container to be used for this repository - we recommend using the [latest build container](https://github.com/EESSI/filesystem-layer/pkgs/container/build-node) that we use for EESSI.
+- `container` is the build container to be used for this repository - we recommend using the latest build container that we use for EESSI.
 
 !!! note
 
@@ -1003,7 +1004,7 @@ mkdir -p $bot_prefix/repos/$site_tld/
 
 In there, you need to put all the files you've specified in your `config_map` that are required to do your CVMFS client configuration. The content would be identical to what you've configured for your [regular CVMFS clients](#reconf_cvmfs_client). The original filenames in fact should not matter, as long as the target locations defined in the `config_map` match the locations where the CVMFS client expects these configuration files. Then, you `tar` them up using:
 
-``` { .bash .copy }
+``` { .bash .copy}
 cd $bot_prefix/repos/$site_tld
 tar -czf ../${site_tld}-cfg_files.tgz *
 ```
@@ -1012,6 +1013,24 @@ This tarball's name should now match the `config_bundle` as you specified it in 
 
 **4. Start the SMEE client**
 
+We need to start a SMEE client that listens to the SMEE channel you [created before](#creating_smee_channel). Assuming you have singularity available, the easiest is to use a container for this. 
+
+First, let's set up a small script (`$bot_prefix/start_smee_client.sh`) that you can source, which starts the SMEE client. This way, you don't have to remember the docker URI or your unique channel link:
+
+``` { .bash .copy }
+cat > $bot_prefix/start_smee_client.sh <<EOF
+#!/bin/bash
+# start_smee_client.sh
+singularity pull docker://deltaprojects/smee-client
+singularity run smee-client_latest.sif --url http://smee.io/$smee_channel_id
+EOF
+```
+
+Then, start it using 
+
+``` { .bash .copy }
+source $bot_prefix/start_smee_client.sh
+```
 
 
 **5. Start the event handler & job handler**
