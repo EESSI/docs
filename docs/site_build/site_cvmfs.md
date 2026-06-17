@@ -1315,11 +1315,137 @@ done
 echo "All done."
 ```
 
-
 ## Add your first software
-- add easystack
-- create PR
-- bot:show_config first!
-- bot:build
-- Add deploy label
-- See deployment happening in real-time :)
+
+**1. Environment setup**
+
+Let's define the name of our GitHub organization and GitHub repository (as created in [this previous step](#create-a-github-repository)) in our environment, as well as our repo-name:
+
+``` { .bash .copy}
+gh_repo=GH_REPO
+gh_org=GH_ORG
+repo_name=name.sitename.tld
+```
+
+**2. Clone your GitHub repository**
+
+``` { .bash .copy }
+git clone git@github.com:${GH_ORG}/${GH_REPO}.git
+```
+
+**3. Create an easystack file**
+
+At the time of writing, `Biopython-1.86-gfbf-2025b.eb` was not yet in upsteam EESSI and is quick to install, so this makes for a nice test case for building on top of `EESSI/2025.06` - but feel free to pick anything as a test.
+
+First, we create the directory `${GH_REPO}/easystacks/${repo_name}`. This is a fixed structure expected by the EESSI build scripts, so you have to stick to it.
+
+``` { .bash .copy }
+mkdir -p ${GH_REPO}/easystacks/${repo_name}/
+```
+
+Then, because we want to build on top of EESSI version `2025.06`, we create a subdir:
+
+``` { .bash .copy }
+mkdir -p ${GH_REPO}/easystacks/${repo_name}/2025.06
+```
+
+Finally, we create an easystack file that would add `Biopython-1.86-gfbf-2025b.eb`:
+
+``` { .bash .copy }
+cat > ${GH_REPO}/easystacks/${repo_name}/2025.06/eessi-2025.06-eb-5.3.0-2025b.yml <EOF
+easyconfigs:
+  - Biopython-1.86-gfbf-2025b.eb
+EOF
+```
+
+Note that the EESSI build scripts also expect a standardized naming scheme: `eessi-<eessi_version>-eb-<easybuild_version>-<suffix>.yml`. The suffix can be anything - in upstream EESSI we stick to the convention of specifying the toolchain generation (`2025a`, `2025b`, etc, as they are used in EasyBuild) of the toolchains that the easyconfigs in this easystack use, but that is not a hard requirement.
+
+Now, add the new easystack file to a feature branch:
+
+``` { .bash .copy }
+git checkout -b my_feature_branch
+git add ${GH_REPO}/easystacks/${repo_name}/2025.06/eessi-2025.06-eb-5.3.0-2025b.yml
+git commit -m "Add Biopython"
+git push
+```
+
+**4. Create a pull request**
+
+In your browser, browse to the main page of your repository at https://github.com/GH_ORG/GH_repo . You should immediately see a notification that one of your branches had new pushes, you can click the "Compare & pull request" button from there. Alternatively, go to the "Pull requests" menu, click "New pull reqeust" and select `my_feature_branch` in the `compare` dropdown menu. Then, click "Create pull request"
+
+In the PR you just created, you can now give commands to the bot. Post a message with
+
+``` { .copy }
+bot:show_config
+```
+
+If all went well in setting up your bot, the bot should now post a message with (some of) it's configuration, such as the instance name, node types, and what architectures, repositories and accelerators are configured for each of those node types. If it didn't, please refer to the section on [debugging your bot setup](#debugging-your-bot-setup)
+
+If that worked, we can now give the bot the order to start building our software. E.g. if we want to build for a `zen5` CPU target:
+
+``` { .copy }
+bot:build repo:SITE_REPO instance:<bot_instance_name> for:arch=x86_64/amd/zen5
+```
+
+If all goes well, the bot will report back that it started a build job, and keeps updating that comment as it progresses. Once it reports `finished` in the `job status` column, the build is done (and was hopefully successful).
+
+For the full syntax supported by the bot, including how to build for accelerators, see [this documentation](../bot.md).
+
+**5. Deploying the build**
+
+First, go to the gear icon next to "Labels" in the PR. Type `bot:deploy`. If this is the first time you deploy something from this repository, click 'Create new label "bot:deploy"'. Otherwise, just click on the existing label to set the label on this PR.
+
+The bot will now upload the build tarball to your S3 bucket. It will add another line to the report of the build job stating if the transfer of the tarball to the S3 bucket succeeded.
+
+**6. Wait for the Stratum 0 to ingest the new tarball**
+
+Assuming you've [set up automatic ingestion](#set-up-automatic-ingestion-on-cvmfs-stratum-0-optional) on your Stratum 0, you can now simply wait for the cronjob that triggers the automatic ingestion. Be aware that it may take some time for the software to show up on the CVMFS clients, since:
+
+- The cronjob for the automatic ingestion needs to run
+- The CVMFS Stratum 1's need to syncronize (with `cvmfs_server snapshot`)
+- The file catalogs on the clients need to expire (default is every 4 minutes), after which the cache needs to expire.
+
+If you are in a very big rush, you can run the ingestion on the Stratum 0 manually, run the `cvmfs_server snapshot -a -i` command on the Stratum 1 manually and run a `sudo cvmfs_config wipecache` command on the client.
+
+## Debugging your bot setup
+
+If your bot doesn't respond in your PRs, there are a few things you can check for debugging purposes. In general, it makes sense to follow the expected actions in sequential order - from the events sent by GitHub, to the bot process acting on it.
+
+**Is GitHub sending events?**
+
+Go to https://github.com/organizations/GH_ORG/settings/apps/APP_NAME/advanced. Under 'Recent Deliveries' you can check the recent events that GitHub has sent. If nothing shows up, you may have misconfigured you "Permissions & events".
+
+**Is Smee receiving events?**
+
+Go to https://smee.io/CHANNEL_ID (replace `CHANNEL_ID` with [your unique channel ID](#creating_smee_channel). This should display the events that were sent by GitHub.
+
+**Is the Smee client receiving events?**
+
+While there is no logfile for the Smee client, you will see things like:
+
+```
+POST http://127.0.0.1:3000/ - 200
+```
+
+when the client succesfully receives events. If you do not see these, check that you've used the correct channel ID when you started the client, and that nothing is blocking the traffic.
+
+**Is the event handler receiving events - and how does it act on them?**
+
+There are two log files that contain actions logged by the event handler: the `pyghee.log` and the `eessi_bot_event_handler.log`. Both are in the `eessi-bot-software-layer` directory from which you started the event handler.
+
+On thing that you can find here is e.g. issues related to which users have command/build/deploy permissions (in the `app.cfg`), which will cause the bot to just ignore their commands. 
+
+Another thing is issues with incorrectly specified instance names, repository names, or architectures. You may see output like:
+
+```
+[20260518-T17:35:25] prepare_jobs(): context does NOT satisfy filter(s), skipping
+[20260518-T17:35:25] prepare_jobs(): checking filter architecture:x86_64/amd/zen2 repository:REPO_NAME1 instance:APP_NAME
+[20260518-T17:35:25] prepare_jobs(): context is '{
+    "architecture": "x86_64/amd/zen2",
+    "repository": "REPO_NAME2",
+    "instance": "APP_NAME",
+}'
+
+```
+The 'filter' is essentially the arguments to the build command the bot received. The 'context' is what the bot is configured for. In this example, the build command is ignored because the repository passed in the bot command doesn't match the repository name the bot was configured for. Note that it is **normal** to see a lot of this output: the bot loops through all the possible combinations it can build for, and typically only one matches. However, if _none_ match (while you did _expect_ one to match), a good look at this output may help you figure out what's wrong.
+
