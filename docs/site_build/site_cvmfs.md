@@ -89,6 +89,13 @@ sudo ln -s /my/desired/data/prefix /srv/cvmfs
 
 **5. Create a new CVMFS repository**
 
+Before creating a new CVMFS repository, we must stop and disable `autofs`.
+
+``` { .bash .copy }
+sudo systemctl stop autofs
+sudo systemctl disable autofs
+```
+
 To create a new CVMFS repository on the Stratum 0, run
 
 ``` { .bash .copy }
@@ -179,6 +186,10 @@ echo "Check that we can access manually mounted cvmfs-config.cern.ch"
 ls -al /cvmfs/cvmfs-config.cern.ch/
 echo "Check that we can access manually mounted software.eessi.io"
 ls -al /cvmfs/software.eessi.io/
+
+# Stop and disable autofs
+sudo systemctl stop autofs
+sudo systemctl disable autofs
 
 # Create the cvmfs repository, owned by root
 echo "Creating new CVMFS repository $repo_name"
@@ -751,7 +762,7 @@ If this does _not_ work, the issue is with your Stratum 0. Go through the [sanit
 
 The standard deployment method for the EESSI build bot is to stage tarballs in an S3 bucket. While the bot's functionality may be extended in the future (the [function](https://github.com/EESSI/eessi-bot-software-layer/blob/29dc5e9aa339c323a900dc1454d39246def73984/tasks/deploy.py#L689) actually uploading the tarballs could easily be altered to deploy to a central directory on a local filesystem, for example), for now this means we need an S3 bucket if we want to use the bot's deployment functionality.
 
-There is extensive documentation on how to interact with S3 buckets available online - here we only list the few commands that you would commonly need to set up a staging bucket.
+There is extensive documentation on how to interact with S3 buckets available online - here we only list the few commands that you would commonly need to set up a staging bucket. Note that you can create the bucket from anywhere - but you'll need the AWS commands to be available on the machine where you [install the EESSI build bot](#install-eessi-build-bot-on-a-machine), so you might as well set it up there directly.
 
 ### Installing the AWS CLI commands
 
@@ -773,13 +784,28 @@ Create a `.aws` folder in your homedir:
 mkdir -p ~/.aws
 ```
 
-and create a configuration file `~/.aws/config` and `~/.aws/credentials`. The content of the configuration file are typically specific for the S3-compatible service you are using. The credentials file typically looks something like:
+and create a configuration file `~/.aws/config`. The content of the configuration file are typically specific for the S3-compatible service you are using - consult the documentation of that service to learn how to set it up.
+
+To provide your credentials, you have two options:
+
+1. Store your credentials in a `~/.aws/credentials` file.
+2. Store your credentials in your environment.
+
+For the first option, the content of `~/.aws/credentials` typically looks something like:
 
 ```
 [default]
 aws_access_key_id = YOUR_ACCESS_KEY
 aws_secret_access_key = YOUR_SECRET_KEY
 ```
+
+For the second option you set:
+``` { .bash }
+export AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
+export AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
+```
+
+Since the first option stores unencrypted secrets in a file, the second option is generally preferred from a security perspective.
 
 To test if your setup works, run
 
@@ -815,7 +841,7 @@ While running build jobs manually may be sufficient for your site, sites that of
 
 The build bot has two main processes:
 
-- [an event handler](https://github.com/EESSI/eessi-bot-software-layer/blob/develop/eessi_bot_event_handler.py) which receives events from GitHub and acts on them
+- [an event handler](https://github.com/EESSI/eessi-bot-software-layer/blob/develop/eessi_bot_event_handler.py) which receives events from GitHub and acts on them (e.g. by submitting a build job)
 - [a job manager](https://github.com/EESSI/eessi-bot-software-layer/blob/develop/eessi_bot_job_manager.py), which monitors the Slurm job queue and acts on state changes of the jobs submitted by the event handler.
 
 ### Requirements
@@ -907,7 +933,7 @@ pip install -r eessi-bot-software-layer/requirements.txt
 Finally, you have to set `$GITHUB_APP_SECRET_TOKEN` to the value of the Webhook secret you generated in the [registration step](#register_gh_app).
 
 ```
-GITHUB_APP_SECRET_TOKEN='<some_64_hexadecimal_secret'
+GITHUB_APP_SECRET_TOKEN='<some_64_hexadecimal_secret>'
 ```
 
 **2. Create a bot configuration file**
@@ -1022,9 +1048,12 @@ cat > $bot_prefix/start_smee_client.sh <<EOF
 #!/bin/bash
 # start_smee_client.sh
 singularity pull docker://deltaprojects/smee-client
-singularity run smee-client_latest.sif --url http://smee.io/$smee_channel_id
+singularity run smee-client_latest.sif --url https://smee.io/$smee_channel_id
 EOF
 ```
+
+!!! Note 
+    You can (optionally) configure the port for the local HTTP server by passing a `-p <port_nr>` argument the the `singularity run` command (default: port 3000).
 
 Then, start it using 
 
@@ -1032,14 +1061,260 @@ Then, start it using
 source $bot_prefix/start_smee_client.sh
 ```
 
+!!! Note
+    The `singularity run smee-client_latest.sif` command doesn't return (since it'll keep listening to events) until you kill the client - you may want to run this in a `screen` session or something similar that you can easily attach/detach from.
 
-**5. Start the event handler & job handler**
+Next time you need to start the bot, you only need to source this script.
 
+For more details on running the smee client see the [relevant section](https://github.com/EESSI/eessi-bot-software-layer?tab=readme-ov-file#step-1b-install-smee-client-on-bot-machine) in `eessi-bot-software-layer/README.md`.
 
-- run the necessary scripts
+**5. Start the event handler & job manager**
+
+Before starting the event handler or job manager, make sure you've [configured the AWS CLI](#configuring-aws-cli) on the current machine.
+
+To start the event handler, run:
+
+``` { .bash .copy }
+cd $bot_prefix/eessi-bot-software-layer
+source $bot_prefix/eessi_bot_venv/bin/activate
+./event_handler.sh
+```
+
+!!! Note 
+    The working directory is important - the event handler assumes it's in the `eessi-bot-software-layer` root.
+
+!!! Note
+    If you changed the default port on which the smee client runs, you can pass `-p <port_nr>` to `event_handler.sh` as well in order to change the port on which the event handler listens.
+
+!!! Note
+    Like the smee client, the `event_handler.sh` command doesn't return (since it'll keep listening to events) until you kill it - you may want to run this in a `screen` session or something similar that you can easily attach/detach from.
+
+To start the job handler, run:
+
+``` { .bash .copy }
+cd $bot_prefix/eessi-bot-software-layer
+source $bot_prefix/eessi_bot_venv/bin/activate
+./job_manager.sh
+```
+
+!!! Note
+    Like the `event_handler.sh`, the `job_manager.sh` command doesn't return (since it'll keep monitoring the job queue) until you kill it - you may want to run this in a `screen` session or something similar that you can easily attach/detach from.
+
+For more details on running the event handler and job manager, see the [relevant section](https://github.com/EESSI/eessi-bot-software-layer?tab=readme-ov-file#step-7-instructions-to-run-the-bot-components) in `eessi-bot-software-layer/README.md`.
 
 ## Set up automatic ingestion on CVMFS Stratum 0 (optional)
-- list steps this needs to do
+
+For upstream EESSI, a rather complex setup is used to do semi-automatic ingestion of build tarballs on the CVMFS Stratum 0. It creates a staging PR in a special staging repository, which allows for a final review of all the tarball contents. The ingestion setup is desribed [here](https://github.com/EESSI/filesystem-layer/tree/main/scripts/automated_ingestion). 
+
+However, this is unnecessarily complex for site builds. Instead, we suggest that you write your own script that can be run in a cronjob to take care of ingesting the tarballs. Below, we describe the steps and a possible implementation for each step - but you can easily create your own. Things your script should cover are:
+
+1. Query the bucket for new tarballs
+2. Download the new tarballs to the Stratum 0
+3. Download the tarball metadata file to the Stratum 0 (optional, only if you want to do signature verification)
+4. Verify the signature (optional)
+5. Ingest the tarball into the repository (using `cvmfs_server ingest`)
+6. Regenerate the `.cvmfscatalog` files by publishing an empty transaction (`cvmfs_server transaction && cvmfs_server -m "<commit_msg>"`)
+7. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction
+8. Cleanup local files (downloaded tarball & metadata file)
+9. Archive/move/remove the tarballs in the upstream bucket, so they don't get picked up on a subsequent iteration
+
+**Environment setup**
+
+In the example commands below, we assume that the current environment is set up:
+
+``` { .bash .copy }
+IFS=$'\n\t'         # sane field splitting
+BUCKET="<bucket_name>"
+DOWNLOAD_DIR=/prefix/for/tarball/staging
+ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
+REPO_NAME="<repo_name>"
+# a name for a dir in the bucket in which to archive tarballs, so that a subsequent run doesn't re-ingest them
+ARCHIVE_PREFIX="archive"
+# Ensure the download directory exists
+mkdir -p "${DOWNLOAD_DIR}"
+
+# We will leverage a script from eessi-bot-software-layer (for signature verification - optional)
+git clone https://github.com/EESSI/eessi-bot-software-layer.git
+
+# We will leverage a script from filesystem-layer (for tarball ingestion)
+git clone https://github.com/EESSI/filesystem-layer.git
+
+# The script referenced here does three things
+# 1. Ingest the tarball (cvmfs_server ingest <tarball>)
+# 2. Regenerate the `.cvmfscatalog` files by publishing an empty transaction (`cvmfs_server transaction && cvmfs_server -m "<commitg_msg>"`)
+# 3. Update the lmod caches for your site installation prefix
+INGEST_SCRIPT="$PWD/filesystem-layer/scripts/ingest-tarball.sh"
+```
+
+Also, make sure that you've [installed](#installing-the-aws-cli-commands) and [configured](http://localhost:5432/docs/site_build/site_cvmfs/#configuring-aws-cli) the AWS CLI on the Stratum 0, so that it can fetch tarballs from your bucket.
+
+
+**1. Query the bucket for new tarballs**
+
+This can be done using a command like
+
+{% raw %}
+``` { .bash .copy }
+
+mapfile -t tar_keys < <(
+    aws s3api list-objects-v2 \
+        --bucket "${BUCKET}" \
+        --query 'Contents[?ends_with(Key, `.tar.zst`) && !contains(Key, `archive/`)].Key' \
+        --output text
+)
+
+# If no keys were found, exit early
+if [[ ${#tar_keys[@]} -eq 0 ]]; then
+    echo "No tarballs found in bucket '${BUCKET}' (excluding archive/)."
+    exit 0
+fi
+
+echo "Found ${#tar_keys[@]} tarball(s) to process."
+```
+{% endraw %}
+
+**2. Download the new tarballs to the Stratum 0**
+
+Here, one would typically start a loop, of which the first step is to download the tarballs:
+
+``` { .bash .copy }
+
+for key in "${tar_keys[@]}"; do
+    # Extract the base filename (e.g. 17798741550.tar.zst)
+    filename=$(basename "${key}")
+
+    # Derive the meta‑file name (same basename with .meta.txt suffix)
+    meta_file="${filename}.meta.txt"
+
+    # Full local paths
+    local_tar="${DOWNLOAD_DIR}/${filename}"
+    local_meta="${DOWNLOAD_DIR}/${meta_file}"
+
+    echo "=== Processing ${filename} ==="
+
+    # ---- Download tarball ----
+    echo "Downloading tarball..."
+    aws s3 cp "s3://${BUCKET}/${key}" "${local_tar}" || {
+        echo "ERROR: Failed to download ${key}" >&2
+        continue
+    }
+```
+
+**3. Download the tarball metadata file to the Stratum 0 (optional)**
+
+Here, we are assuming you're inside the loop we opened in the previous step:
+
+``` { .bash .copy }
+    # ---- Download meta file (if it exists) ----
+    # The meta file is expected to sit next to the tarball in S3
+    echo "Downloading meta file..."
+    if aws s3 cp "s3://${BUCKET}/${key}.meta.txt" "${local_meta}" 2>/dev/null; then
+        echo "Meta file downloaded."
+    else
+        echo "WARNING: No meta file found for ${filename}. Continuing without it."
+        # Remove the variable so we don't pass a non‑existent file later
+        local_meta=""
+    fi
+```
+
+**4. Verify the signature (optional)**
+
+First, you'll need to create a file listing the public keys for keypairs that are allowed to sign the tarballs. You've specified the private key in the `signing` config item in the bot's `app.cfg`.
+
+Assuming you're using the private key generated in the [GitHub app registration step](#register_gh_app), you'll first have to generate the public key **on the machine hosting the bot instance**, by running
+
+``` { .bash .copy }
+ssh-keygen -y -f KEY.pem
+```
+
+where `KEY.pem` is the private key (if you used a separate, manually created key-pair, you should already have a public key).
+
+On the Stratum 0, create the allowed signers file `$ALLOWED_SIGNERS` with the following content:
+
+```
+<identity> namespaces="<namespace>,valid-before="YYYYMMDD" ssh-rsa <pubkey>
+```
+
+Where `<identity>` can be any string (useful for yourself to identify the key), `<namespace>` should match the `app_name` you configured for the bot in `app.cfg`, and `<pubkey>` is the public key you just generated.
+
+We leverage a script from the `eessi-bot-software-layer` to do the actual verification - though you could make your own:
+
+``` { .bash .copy }
+    # ---- Verify signature ----
+    echo "Running check_signature..."
+    if eessi-bot-software-layer/scripts/sign_verify_file_ssh.sh --verify --allowed-signers-file $ALLOWED_SIGNERS --file $local_tar; then
+        echo "Signature OK."
+    else
+        echo "ERROR: Signature verification failed for ${filename}. Skipping ingest." >&2
+        # Optionally clean up the bad files
+        rm -f "${local_tar}" "${local_meta}"
+        continue
+    fi
+```
+
+5. Ingest the tarball into the repository
+
+Here, we leverage a script from `EESSI/filesystem-layer` that ingests tarballs, but also takes care of regenerating the `.cvmfscatalog` files _and_ updates the `Lmod` cache. To update the `Lmod` cache, the script uses the Lmod installation provided by `software.eessi.io`, which is why we explicitely this available as one of the steps [when we set up our Stratum 0](#setting-up-your-stratum-0)
+
+``` { .bash .copy }
+    # ---- Ingest into CVMFS ----
+    echo "Ingesting into CVMFS (${REPO_NAME})..."
+    if $INGEST_SCRIPT "${REPO_NAME}" "${local_tar}"; then
+        echo "Ingest succeeded for ${filename}."
+    else
+        echo "ERROR: cvmfs_server ingest failed for ${filename}." >&2
+        # Keep the files for troubleshooting
+        continue
+    fi
+```
+
+6. Regenerate the `.cvmfscatalog` files by publishing an empty transaction
+
+This is already taken care of by the `$INGEST_SCRIPT` in the step above. If you don't want to use that scrip0t, you'll have to implement this step yourself.
+
+7. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction
+
+This is already taken care of by the `$INGEST_SCRIPT` in step 5 above. If you don't want to use that script, you'll have to implement this step yourself.
+
+8. Cleanup local files
+
+``` { .bash .copy }
+    # ---- Clean up local copies ----
+    echo "Removing local files..."
+    rm -f "${local_tar}" "${local_meta}"
+```
+
+9. Archive/move/remove the tarballs in the bucket
+
+Here, we archive the tarballs in the bucket within an subdir `$ARCHIVE_PREFIX`. It is crucial that we do NOT search this subdir in step 1, that way we make sure we only pick up new tarballs. 
+
+``` { .bash .copy }
+    # ---- Archive the objects in S3 ----
+    # Destination key = archive/<original‑key>
+    archive_key="${ARCHIVE_PREFIX}/${key}"
+    echo "Archiving S3 object to s3://${BUCKET}/${archive_key} ..."
+    if ! aws s3 mv "s3://${BUCKET}/${key}" "s3://${BUCKET}/${archive_key}"; then
+        echo "ERROR: Failed to move tarball to archive." >&2
+    else
+        echo "Tarball archived."
+    fi
+
+    # Archive the metadata file (if it existed)
+    if [[ -n "${meta_file}" && -n "${local_meta}" ]]; then
+        archive_meta_key="${ARCHIVE_PREFIX}/${key}.meta.txt"
+        echo "Archiving metadata to s3://${BUCKET}/${archive_meta_key} ..."
+        if ! aws s3 mv "s3://${BUCKET}/${key}.meta.txt" "s3://${BUCKET}/${archive_meta_key}"; then
+            echo "ERROR: Failed to move metadata to archive." >&2
+        else
+            echo "Metadata archived."
+        fi
+    fi
+
+done
+
+echo "All done."
+```
+
 
 ## Add your first software
 - add easystack
