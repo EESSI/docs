@@ -31,15 +31,14 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: AMD ROCm support in EESSI
+### 💡 **Next session**: Revisit the EESSI bot 🤖
 ### Topic Series: EESSI Mix and Match 
 🗓️ Schedule
-#### Monday 15 June 2026, 14:00-15:00 CE(S)T
+#### Monday 22 June 2026, 14:00-15:00 CE(S)T
 
 ---
 
 ### Upcoming sessions:
-- 22 June 2026 - revisit the EESSI bot 🤖  
 - 29 June 2026 - Report on EESSI activities @ ISC'26
 
 ---
@@ -51,6 +50,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
 *Topic series: EESSI Mix and Match*
+
+- 15 June 2026 - [AMD ROCm support in EESSI](https://youtu.be/lwJItvqgMoY)
 
 - 08 June 2026 - [Site-Specific Tweaks with `host_injections`](https://youtu.be/0vD0_nJsLBo)
 
