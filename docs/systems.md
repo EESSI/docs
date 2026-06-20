@@ -22,42 +22,93 @@ and you can try [running our demos](using_eessi/eessi_demos.md).
     If they have any questions, please suggest to [**contact the EESSI support team**](support.md).
 
     In the meantime, you can try using one of the alternative ways of accessing EESSI,
-    like [using a container](getting_access/eessi_container.md).
+    like [using a container](getting_access/eessi_container.md),
+    or using [`cvmfsexec`](https://github.com/cvmfs/cvmfsexec).
 
 ---
 
 ## EuroHPC JU systems
 
-EESSI is available on several of the [EuroHPC JU supercomputers](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
+EESSI is available on *all* of the [EuroHPC JU supercomputers](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
+It serves as the base for the [Federated Software Catalog](https://docs.my-eurohpc.eu/software-catalog/overview/) of the
+[EuroHPC Federation Platform (EFP)](https://my-eurohpc.eu).
+
+### Deucalion (Portugal)
+
+Deucalion is the EuroHPC JU supercomputer hosted by the [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
+
+* [Website](https://deucalion.acnca.pt/)
+* [General documentation](https://docs.deucalion.macc.fccn.pt/)
+* [EESSI @ Deucalion](https://docs.deucalion.macc.fccn.pt/jobs/eessi/)
+* [EFP Federated Software Catalog @ Deucalion](https://docs.my-eurohpc.eu/software-catalog/system-specific/deucalion/)
+
+### Discoverer (Bulgaria)
+
+Discoverer is the EuroHPC JU supercomputer hosted in Sofia, Bulgaria.
+
+* [Website](https://discoverer.bg/)
+* [General documentation](https://docs.discoverer.bg)
+* [EFP Federated Software Catalog @ Discoverer](https://docs.my-eurohpc.eu/software-catalog/system-specific/discoverer/)
+
+### JUPITER (Germany)
+
+JUPITER is the first exascale EuroHPC JU supercomputer hosted by the [Jülich Supercomputing Centre (JSC)](https://www.fz-juelich.de/en/jsc).
+
+* [Website](https://www.fz-juelich.de/en/jsc/jupiter)
+* [General documentation](https://apps.fz-juelich.de/jsc/hps/jupiter/)
+* [EFP Federated Software Catalog @ JUPITER](https://docs.my-eurohpc.eu/software-catalog/system-specific/jupiter/)
 
 ### Karolina (Czech Republic)
 
 Karolina is the EuroHPC JU supercomputer hosted by [IT4Innovations](https://www.it4i.cz/en).
 
+* [Website](https://www.it4i.cz/en/infrastructure/karolina)
 * [General documentation](https://docs.it4i.cz/en/docs/clusters/karolina/introduction)
 * [EESSI @ Karolina](https://docs.it4i.cz/en/docs/software/eessi)
+* [EFP Federated Software Catalog @ Karolina](https://docs.my-eurohpc.eu/software-catalog/system-specific/karolina/)
 
-### Vega (Slovenia)
+### Leonardo (Italy)
 
-Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Science (IZUM)](https://izum.si/en/home).
+Leonardo is the EuroHPC supercomputer hosted by [CINECA](https://www.cineca.it/en).
 
-* [General documentation](https://doc.vega.izum.si)
-* [EESSI @ Vega](https://doc.vega.izum.si/eessi)
+* [Website](https://leonardo-supercomputer.cineca.eu/)
+* [General documentation](https://docs.hpc.cineca.it/hpc/leonardo.html)
+* [EFP Federated Software Catalog @ Leonardo](https://docs.my-eurohpc.eu/software-catalog/system-specific/leonardo/)
 
-### Deucalion (Portugal)
+### LUMI (Finland)
 
-Deucalion is the EuroHPC JU supercomputer hosted by the [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
-EESSI is supported in the ARM and GPU-accelerated partitions of Deucalion with plans to expand to the non-accelerated x86 partition soon.
+LUMI is the EuroHPC supercomputer hosted by [CSC - IT Center for Science](https://csc.fi/en/).
 
-* [General documentation](https://docs.deucalion.macc.fccn.pt/)
-* [EESSI @ Deucalion](https://docs.deucalion.macc.fccn.pt/jobs/eessi/)
+* [Website](https://lumi-supercomputer.eu/)
+* [General documentation](https://docs.lumi-supercomputer.eu/)
+* [EESSI @ LUMI](https://docs.lumi-supercomputer.eu/software/local/EESSI/)
+* [EFP Federated Software Catalog @ LUMI](https://docs.my-eurohpc.eu/software-catalog/system-specific/lumi/)
 
 ### MareNostrum 5 (Spain)
 
 MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/).
 
+* [Website](https://bsc.es/marenostrum/marenostrum-5)
 * [General documentation](https://www.bsc.es/supportkc/)
 * [EESSI @ MareNostrum 5](https://www.bsc.es/supportkc/docs/MareNostrum5/Package%20Managers/EESSI)
+* [EFP Federated Software Catalog @ MareNostrum 5](https://docs.my-eurohpc.eu/software-catalog/system-specific/marenostrum5/)
+
+### MeluXina (Luxembourg)
+
+MeluXina is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/).
+
+* [Website](https://www.luxprovide.lu/meluxina/)
+* [General documentation](https://docs.lxp.lu/)
+* [EFP Federated Software Catalog @ MeluXina](https://docs.my-eurohpc.eu/software-catalog/system-specific/meluxina/)
+
+### Vega (Slovenia)
+
+Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Science (IZUM)](https://izum.si/en/home).
+
+* [Website](https://izum.si/en/vega-en/)
+* [General documentation](https://doc.vega.izum.si)
+* [EESSI @ Vega](https://doc.vega.izum.si/eessi)
+* [EFP Federated Software Catalog @ Vega](https://docs.my-eurohpc.eu/software-catalog/system-specific/vega/)
 
 ---
 
