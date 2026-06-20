@@ -22,13 +22,16 @@ and you can try [running our demos](using_eessi/eessi_demos.md).
     If they have any questions, please suggest to [**contact the EESSI support team**](support.md).
 
     In the meantime, you can try using one of the alternative ways of accessing EESSI,
-    like [using a container](getting_access/eessi_container.md).
+    like [using a container](getting_access/eessi_container.md),
+    or using [`cvmfsexec`](https://github.com/cvmfs/cvmfsexec).
 
 ---
 
 ## EuroHPC JU systems
 
-EESSI is available on several of the [EuroHPC JU supercomputers](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
+EESSI is available on *all* of the [EuroHPC JU supercomputers](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
+It serves as the base for the [Federated Software Catalog](https://docs.my-eurohpc.eu/software-catalog/overview/) of the
+[EuroHPC Federation Platform (EFP)](https://my-eurohpc.eu).
 
 ### Deucalion (Portugal)
 
