@@ -6,13 +6,19 @@ Find slides, and video recordings of earlier sessions below.
 
 ## Topic series: EESSI Mix and Match
 
+### Monday 22 June 2026
+
+**Outline:** Revisit the EESSI bot 🤖
+([Slides (PDF)](EESSI-happyhour-2026-017-EESSI-bot.pdf), [Recording (YouTube)](https://youtu.be/P-deEw4ug2U))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P-deEw4ug2U?si=Ve-IpxD5pNCWryq5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 15 June 2026
 
 **Outline:** AMD ROCm support in EESSI
 ([Slides (PDF)](EESSI-happyhour-2026-016-ROCm-support.pdf), [Recording (YouTube)](https://youtu.be/lwJItvqgMoY))
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lwJItvqgMoY?si=i43dinCXP86rEhIl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
 ### Monday 08 June 2026
 
