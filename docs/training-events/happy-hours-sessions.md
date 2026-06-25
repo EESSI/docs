@@ -31,15 +31,13 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 
 ---
 
-### 💡 **Next session**: Revisit the EESSI bot 🤖
+!!! note "Schedule update! :rotating_light:"  
+    Monday, 29 June 2026 will be the final EESSI Happy Hour before the summer break.
+
+### 💡 **Next session**: Report on EESSI activities @ ISC'26
 ### Topic Series: EESSI Mix and Match 
 🗓️ Schedule
-#### Monday 22 June 2026, 14:00-15:00 CE(S)T
-
----
-
-### Upcoming sessions:
-- 29 June 2026 - Report on EESSI activities @ ISC'26
+#### Monday 29 June 2026, 14:00-15:00 CE(S)T
 
 ---
 
@@ -50,6 +48,8 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
 
 *Topic series: EESSI Mix and Match*
+
+- 22 June 2026 - [Revisit the EESSI bot 🤖](https://youtu.be/P-deEw4ug2U)
 
 - 15 June 2026 - [AMD ROCm support in EESSI](https://youtu.be/lwJItvqgMoY)
 
