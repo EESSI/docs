@@ -29,7 +29,7 @@ The CVMFS setup requires a fair amount of machines: 1x Stratum 0, 2x Stratum 1, 
 
 1. **Recommended**: Reuse the same proxies you set up to proxy upstream EESSI to also proxy your local site-specific CVMFS repository. This approach is more efficient in terms of required hardware and maintenance, and there is little to no downside (you may want to increase the size of the caches on your proxies). This would reduce the required machines to 5 (1x Stratum 0, 2x Stratum 1, 2x EESSI+site proxy).
 2. Deploy your site-specific Stratum 1's on the same machines that proxy upstream EESSI. Don't configure the proxies to proxy your site-specific CVMFS repository, but simply have your clients contact your site-specific Stratum 1's directly (without proxy). In this scenario, you can achieve load-balancing by configuring half your clients with `CVMFS_SERVER_URL="<instance_1>;<instance_2>"` and half with `CVMFS_SERVER_URL="<instance_2>;<instance_1>"`, where `instance_1` and `instance_2` are the IPs of your Stratum 1's. This would reduce the required machines to 3 (1x Stratum 0, 2x combined Stratum 1 + EESSI proxy).
-3. You can even use the Stratum 0 instead of a second Stratum 1 (even in addition to (1) or (2)). Note that this has security implications, as it means your Stratum 0 needs to be directly accessible to your clients. This is a potential concern: if there are vulnarebilities in the Stratum 0 software, end-users may be able to push (malicious) software in there. This would reduce the required machines to 2 (1x Stratum 0 + EESSI proxy, 1x Stratum 1 + EESSI proxy).
+3. You can even use the Stratum 0 instead of a second Stratum 1 (even in addition to (1) or (2)). Note that this has security implications, as it means your Stratum 0 needs to be directly accessible to your clients. This is a potential concern: if there are vulnerabilities in the Stratum 0 software, end-users may be able to push (malicious) software in there. This would reduce the required machines to 2 (1x Stratum 0 + EESSI proxy, 1x Stratum 1 + EESSI proxy).
 
 ![Site CVMFS setup](img/site_cvmfs_setup.png){ align=left, loading=lazy }
 /// caption
@@ -246,7 +246,7 @@ $repo_name on /var/spool/cvmfs/$repo_name/rdonly type fuse (...)
 overlay_$repo_name on /cvmfs/$repo_name type overlay (...)
 ```
 
-The first is a read-only mount of the current state of your repository. The second is an overlay filesystem that shows the current state of your repositories (as `lowerdir`) with any changes done in a currently open transaction (if any) overlayed on top (as `upperdir`, for which it uses `/var/spool/cvmfs/$repo_name/scratch/current`). I.e. it displays the state of your repository under `/cvmfs/$repo_name` as it will be once you publish any open transactions.
+The first is a read-only mount of the current state of your repository. The second is an overlay filesystem that shows the current state of your repositories (as `lowerdir`) with any changes done in a currently open transaction (if any) overlaid on top (as `upperdir`, for which it uses `/var/spool/cvmfs/$repo_name/scratch/current`). I.e. it displays the state of your repository under `/cvmfs/$repo_name` as it will be once you publish any open transactions.
 
 **3. Check the repository storage backend**
 
@@ -278,7 +278,7 @@ Again, the documentation below provides you with the minimal steps to set up a w
 
 **1. Set up your environment**
 
-For convencience, let's start by redefining the repository name in an environment variable on our Stratum 1 machine, as well as our Stratum 0's IP (or DNS name):
+For convenience, let's start by redefining the repository name in an environment variable on our Stratum 1 machine, as well as our Stratum 0's IP (or DNS name):
 
 ``` { .bash .copy}
 site_tld=sitename.tld
@@ -336,7 +336,7 @@ Note that this command creates two configuration files for the replication:
 /etc/cvmfs/repositories.d/$repo_name/replica.conf
 ```
 
-**6. Initiate first sychronization**
+**6. Initiate first synchronization**
 
 We initialize the first synchronization manually:
 
@@ -346,7 +346,7 @@ sudo cvmfs_server snapshot ${repo_name}
 
 **7. Set up a cronjob for synchronization**
 
-We create a cronjob that synchronizes your Stratum 1 to the Stratum 0 every 5 minutes. Note that if a previous `cvmfs_server snapshot` command is still running, it'll just skip the new invocation, so a short interval should not cause trouble. You can pick a different sychronization frequency if you like - just realize that this affects the delay with which new software will be visible on your clients.
+We create a cronjob that synchronizes your Stratum 1 to the Stratum 0 every 5 minutes. Note that if a previous `cvmfs_server snapshot` command is still running, it'll just skip the new invocation, so a short interval should not cause trouble. You can pick a different synchronization frequency if you like - just realize that this affects the delay with which new software will be visible on your clients.
 
 ``` { .bash .copy }
 sudo bash -c "echo '*/5 * * * * root output=\$(/usr/bin/cvmfs_server snapshot -a -i 2>&1) || echo \"\$output\"' > /etc/cron.d/cvmfs_stratum1_snapshot"
@@ -354,7 +354,7 @@ sudo bash -c "echo '*/5 * * * * root output=\$(/usr/bin/cvmfs_server snapshot -a
 
 **8. Confirm the synchronization is working**
 
-While it is not easily possible to check which files are hosted on a Stratum 1, you can check the synchronization log at `/var/log/cvmfs/snapshots.log` to see if the synchronization process finshes correctly. The report also states the revision the Stratum 1 is serving ('Serving revision X'). You can cross-check that this is the latest revision by running on the **Stratum 0**:
+While it is not easily possible to check which files are hosted on a Stratum 1, you can check the synchronization log at `/var/log/cvmfs/snapshots.log` to see if the synchronization process finishes correctly. The report also states the revision the Stratum 1 is serving ('Serving revision X'). You can cross-check that this is the latest revision by running on the **Stratum 0**:
 
 ``` { .bash .copy }
 sudo cvmfs_server tag "$repo_name"
@@ -770,7 +770,7 @@ Connection: http://${stratum0_ip}/cvmfs/${repo_name} through proxy DIRECT
 If this _does_ work, something is wrong with your Stratum 1. Some things to check
 
 - Is there a firewall blocking traffic?
-- Do the snapshot logs on the Stratum 1 look sane, i.e. is the Stratum 1 at least succesful in mirroring the Stratum 0?
+- Do the snapshot logs on the Stratum 1 look sane, i.e. is the Stratum 1 at least successful in mirroring the Stratum 0?
 - Was your client using the correct `CVMFS_SERVER_URL` in the previous step? (restore that configuration and run  `cvmfs_config showconfig ${repo_name}` to see what value is effectively used, and in which config file it is set)
 
 If this does _not_ work, the issue is with your Stratum 0. Go through the [sanity check](#sanity-checking-your-stratum-0-setup) steps again to be sure. Also here, think if there's a firewall that's blocking traffic to the client.
@@ -830,7 +830,7 @@ To test if your setup works, run
 aws s3 ls
 ```
 
-If you don't have any buckets, this won't actually list anything - but the command should complete succesfully.
+If you don't have any buckets, this won't actually list anything - but the command should complete successfully.
 
 ### Creating a bucket
 
@@ -844,7 +844,7 @@ aws s3 mb s3://<bucket_name>
 
 There are many policies you can attach to a bucket to increase security. At the _very_ least, consider setting a bucket policy that restricts IP access to a whitelisted range (i.e. only the nodes where your build bot(s) run and your Stratum 0 need access). The [AWS policy generator](https://awspolicygen.s3.amazonaws.com/policygen.html) can be a helpful tool in generating such a policy.
 
-Another thing to consider is to create a secondary user with `aws iam create-user --user-name <name>` and attach a very limited policy to it (e.g. only read/write/list on buckets, nothing else). Then, create credentials for this user with `aws iam create-access-key --user-name <name>` and provide those credentials to the EESSI build bot and Stratum 0 machines. That way, if that token is compromized, the impact is minimized (e.g. the token can at least not be used to create new IAM idententies, etc).
+Another thing to consider is to create a secondary user with `aws iam create-user --user-name <name>` and attach a very limited policy to it (e.g. only read/write/list on buckets, nothing else). Then, create credentials for this user with `aws iam create-access-key --user-name <name>` and provide those credentials to the EESSI build bot and Stratum 0 machines. That way, if that token is compromised, the impact is minimized (e.g. the token can at least not be used to create new IAM idententies, etc).
 
 ## Setting up the EESSI build bot
 
@@ -854,7 +854,7 @@ The [EESSI build bot](https://github.com/EESSI/eessi-bot-software-layer) is desi
 
 The goal of the bot is to make the build process scalable: software in EESSI is build for many different architectures, and (for CPU targets) these build are done natively (i.e. the target architecture is the same as the architecture of the node one which the build was done). This means that for every software installation, the amount of build jobs that needs to be run is equal to the amount of architectures EESSI supports. For the large amount of supported architectures and software installations in EESSI, it is infeasible to start all of those build jobs manually - that's where the bot comes in.
 
-While running build jobs manually may be sufficient for your site, sites that offer very heterogenous clusters or that plan to deploy a fair amount of software in their site-specific repository can benefit from the scalability of the bot.
+While running build jobs manually may be sufficient for your site, sites that offer very heterogeneous clusters or that plan to deploy a fair amount of software in their site-specific repository can benefit from the scalability of the bot.
 
 The build bot has two main processes:
 
@@ -895,7 +895,7 @@ Go to [https://smee.io/new](https://smee.io/new) in order to create a new SMEE c
 - Under "Subscribe to events", tick the "Issue comment" and "Pull request" boxes (note: these only appear once you've set the Repository Permissions above)
 - Select "Only allow this GitHub App to be installed on the GH_ORG account
 - Click "Create GitHub App"
-- Scroll down to the "Private keys" section and click "Generate a private key". This key will be uesd by the bot event handler in order to be able to interact with GitHub (and e.g. post responses in your PRs).
+- Scroll down to the "Private keys" section and click "Generate a private key". This key will be used by the bot event handler in order to be able to interact with GitHub (and e.g. post responses in your PRs).
 
 ### Create a GitHub repository
 
