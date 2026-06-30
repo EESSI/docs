@@ -1,8 +1,8 @@
 # Leverage EESSI's build procedure for site builds
-In this approach, you use the EESSI build bot (`EESSI/eessi-bot-software-layer`), together with the EESSI build scripts (`EESSI/software-layer-scripts`) to build and deploy software into a CernVM-FS repository of your own. Essentially, this means you'll build in a way that is essentially identical to how it is done for upstream EESSI - with the only major difference being the target CernVM-FS repository.
+In this approach, you use the EESSI build bot (`EESSI/eessi-bot-software-layer`), together with the EESSI build scripts (`EESSI/software-layer-scripts`) to build and deploy software into a CernVM-FS repository of your own. This way, your build workflow is virtually identical to how it is done for upstream EESSI - with the only major difference being the target CernVM-FS repository.
 
-## Setup steps
-What we need:
+## Requirements
+In order to have an EESSI-like build workflow, we need:
 
 - Infrastructure for a site-specific CVMFS repository (Stratum 0, Stratum 1, proxies, client configuration)
 - An instance of the EESSI build bot
@@ -16,7 +16,7 @@ This documentation will go through the steps to set each of these up, in order. 
 ## Site-specific CVMFS infrastructure
 The recommended CVMFS setup for a site-specific CVMFS repository is:
 
-- A Stratum 0 servers
+- A Stratum 0 server
 - Two (or more) Stratum 1 servers
 - Two (or more) proxies
 
@@ -25,23 +25,26 @@ Main reason here is:
 - Having two Stratum 1's provides redundancy: if one dies, proxies seamlessly failover to the other one.
 - Having two proxies provides both redundancy _and_ load balancing. If one proxy dies, clients failover to the other one. If clients are configured to use the proxies in a [proxy group](https://cvmfs.readthedocs.io/en/2.8/cpt-configure.html#proxy-lists), each client selects a proxy randomly, thus providing load balancing.
 
-!!! note
+The CVMFS setup requires a fair amount of machines: 1x Stratum 0, 2x Stratum 1, 2x proxy for local site, and likely you already have 2x proxy for upstream EESSI - a total of 7 machines. If this is more than you can afford, there are some tricks you can pull.
 
-    The recommended CVMFS setup requires a fair amount of machines. If this is more than you can afford, there are some tricks you can pull.
+1. **Recommended**: Reuse the same proxies you set up to proxy upstream EESSI to also proxy your local site-specific CVMFS repository. This approach is more efficient in terms of required hardware and maintenance, and there is little to no downside (you may want to increase the size of the caches on your proxies). This would reduce the required machines to 5 (1x Stratum 0, 2x Stratum 1, 2x EESSI+site proxy).
+2. Deploy your site-specific Stratum 1's on the same machines that proxy upstream EESSI. Don't configure the proxies to proxy your site-specific CVMFS repository, but simply have your clients contact your site-specific Stratum 1's directly (without proxy). In this scenario, you can achieve load-balancing by configuring half your clients with `CVMFS_SERVER_URL="<instance_1>;<instance_2>"` and half with `CVMFS_SERVER_URL="<instance_2>;<instance_1>"`, where `instance_1` and `instance_2` are the IPs of your Stratum 1's. This would reduce the required machines to 3 (1x Stratum 0, 2x combined Stratum 1 + EESSI proxy).
+3. You can even use the Stratum 0 instead of a second Stratum 1 (even in addition to (1) or (2)). Note that this has security implications, as it means your Stratum 0 needs to be directly accessible to your clients. This is a potential concern: if there are vulnarebilities in the Stratum 0 software, end-users may be able to push (malicious) software in there. This would reduce the required machines to 2 (1x Stratum 0 + EESSI proxy, 1x Stratum 1 + EESSI proxy).
 
-    1. Reuse the same proxies you set up to proxy upstream EESSI to also proxy your local site-specific CVMFS repository.
-    2. Deploy your site-specific Stratum 1's on the same machines that proxy upstream EESSI. Don't configure the proxies to proxy your site-specific CVMFS repository, but simply have your clients contact your site-specific Stratum 1's directly (without proxy). In this scenario, you can achieve load-balancing by configuring half your clients with `CVMFS_SERVER_URL="<instance_1>;<instance_2>"` and half with `CVMFS_SERVER_URL="<instance_2>;<instance_1>"`, where `instance_1` and `instance_2` are the IPs of your Stratum 1's.
-    3. You can even use the Stratum 0 instead of a second Stratum 1 (even in addition to (1) or (2)). Note that this has security implications, as it means your Stratum 0 needs to be directly accessible to your clients. This is a potential concern: if there are vulnarebilities in the Stratum 0 software, end-users may be able to push (malicious) software in there.
+![Site CVMFS setup](img/site_cvmfs_setup.png){ align=left, loading=lazy }
+/// caption
+Site CVMFS setup, using the (recommended) option 1 above
+///
 
 An extensive [tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/) is available that teaches how to setup each of these machines, and how to configure the clients to use the relevant Stratum 1's and proxies. Below, we will summarize some of the key steps, and point out things that are specifically relevant for the site-specific CVMFS setup.
 
 ### Setting up your Stratum 0
 
-The documentation below provides you with the minimal steps required to set up a working Stratum 0 and is specifically aimed at setting up a Stratum 0 for hosting a site software stack on top of EESSI (which is why e.g. it makes the `software.eessi.io` repository available on this Stratum 0 as well). However, there is a vast amount of things you can configure for a CVMFS Stratum 0, and nothing beats the detail of the extensive [upstream documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html). The [CVMFS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/02_stratum0_client/#21-setting-up-the-stratum-0) may also be helpful.
+The documentation below provides you with the minimal steps required to set up a working Stratum 0 and is specifically aimed at setting up a Stratum 0 for hosting a site software stack on top of EESSI. However, there is a vast amount of things you can configure for a CVMFS Stratum 0, and nothing beats the detail of the extensive [upstream documentation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html). The [CVMFS tutorial](https://cvmfs-contrib.github.io/cvmfs-tutorial-2021/02_stratum0_client/#21-setting-up-the-stratum-0) may also be helpful.
 
-**1. Choose a repository name**
+**1. Setting up your environment**
 
-Define a repository name, typically something like `software.<name_of_the_site>.tld`
+Define a repository name in the environment CVMFS Stratum 0 machine, for later use. Typically you pick something like `software.<name_of_the_site>.tld`
 
 ``` { .bash .copy }
 repo_name=name.sitename.tld
@@ -61,7 +64,7 @@ sudo apt-get -y install cvmfs cvmfs-server
 
 **3. Make `software.eessi.io` available on your Stratum 0**
 
-To facilitate ingestion later on, we make sure that the `software.eessi.io` repository is available on our Stratum 0 machine as well. This allows us to leverage e.g. the Lmod installation from there to build the Lmod cache. Because the `cvmfs-server` cannot perform certain actions when `autofs` is enabled (which is usually how CVMFS repositories are mounted), we have to mount `software.eessi.io` manually. We also mount the `cvmfs-config.cern.ch` repository, as that provides the configuration for `software.eessi.io`
+To facilitate ingestion later on, we make sure that the `software.eessi.io` repository is available on our Stratum 0 machine as well. This allows us to leverage e.g. the Lmod installation provided by EESSI to (re)build the Lmod cache. Because the `cvmfs-server` cannot perform certain actions when `autofs` is enabled (which is usually how CVMFS repositories are mounted), we have to mount `software.eessi.io` manually. We also mount the `cvmfs-config.cern.ch` repository, as that provides the configuration for `software.eessi.io`
 
 ``` { .bash .copy }
 sudo mkdir -p /cvmfs/{cvmfs-config.cern.ch,software.eessi.io}
@@ -106,15 +109,25 @@ The `-o root` tells CVMFS that this repository should be owned by root.
 
 !!! note
 
-    The reason we configure `root` to be the owner of the CVMFS repository is that EasyBuild, when configured through `EESSI-extend`, by default creates read-only installations. This causes issues if CVMFS has to put catalog files (`.cvmfscatalog`) files in these directories, which are metadata files that CVMFS uses to list the files/directories present in the repository. While it is technically possible to use a regular user, this would require making all directories in which CVMFS would create a `.cvmfscatalog` file writeable in a transaction, then create the catalog files, then remove the write permissions again. The same approach would need to be taken to reinstall software that was already installed. We consider this unnecessarily complex, and instead prefer to have the repository owned by root.
+    The reason we configure `root` to be the owner of the CVMFS repository is that EasyBuild, when configured through `EESSI-extend`, by default creates read-only installations. This causes issues if CVMFS has to put catalog files (`.cvmfscatalog`) files in these directories. CVMFS catalog files are metadata files that CVMFS uses to list the files/directories present in the repository. While it is technically possible to use a regular user, this would require making all directories in which CVMFS would create a `.cvmfscatalog` file writeable in a transaction, then create the catalog files, then remove the write permissions again. The same approach would need to be taken to reinstall software that was already installed. We consider this unnecessarily complex, and instead prefer to have the repository owned by root.
 
 **6. Configure CVMFS catalog creation**
 
 Here, we have two options. 
 
-**Option 1:** we create a `.cvmfsdirtab` file in the root of the repository. This will tell CVMFS at which directory levels to create [catalog files](https://cvmfs.readthedocs.io/en/stable/cpt-details.html#nested-catalogs). We advise that you simply use the latest `.cvmfsdirtab` that is used for the upstream EESSI repository as well. You can get it from [the EESSI/filesystem-layer repository](https://github.com/EESSI/filesystem-layer/blob/main/roles/create_cvmfs_content_structure/files/.cvmfsdirtab) or simply copy it from `/cvmfs/software.eessi.io/.cvmfsdirtab` on a system where `EESSI` is available. The upside of Option 1 is that it creates catalogue files at the root of each EasyBuild installation prefix. This causes files that are typically accessed together (namely: that belong to the same software installation) to be indexed within the same catalog, which is typically good for performance. The downside is that if installations are extremely big, the catalog may exceed the largest size that CVMFS recommends (upto 200k files/dirs per catalog).
+**Option 1**
 
-**Option 2:** you can configure your CVMFS server to do [automatic catalog creation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#automatic-management-of-nested-catalogs) by setting `CVMFS_AUTOCATALOGS=true` in the server configuration file (`/etc/cvmfs/repositories.d/$repo_name/server.conf`). The upside of Option 2 is that it will ensure that the number of files per catalog stays within the recommended limits. The downside is that CVMFS does not know which files are commonly accessed together (e.g. because they belong to the same software installation) and might spread them over multiple catalogues - even when that's not strictly needed in terms of catalog size.
+We create a `.cvmfsdirtab` file in the root of the repository. This will tell CVMFS at which directory levels to create [catalog files](https://cvmfs.readthedocs.io/en/stable/cpt-details.html#nested-catalogs). We advise that you simply use the latest `.cvmfsdirtab` that is used for the upstream EESSI repository as well. You can get it from [the EESSI/filesystem-layer repository](https://github.com/EESSI/filesystem-layer/blob/main/roles/create_cvmfs_content_structure/files/.cvmfsdirtab) or simply copy it from `/cvmfs/software.eessi.io/.cvmfsdirtab` on a system where `EESSI` is available.
+
+!!! note
+    The upside of this option is that it creates catalogue files at the root of each EasyBuild installation prefix. This causes files that are typically accessed together (namely: that belong to the same software installation) to be indexed within the same catalog, which is typically good for performance. The downside is that if installations are extremely big, the catalog may exceed the largest size that CVMFS recommends (upto 200k files/dirs per catalog).
+
+**Option 2**
+
+You can configure your CVMFS server to do [automatic catalog creation](https://cvmfs.readthedocs.io/en/stable/cpt-repo.html#automatic-management-of-nested-catalogs) by setting `CVMFS_AUTOCATALOGS=true` in the server configuration file (`/etc/cvmfs/repositories.d/$repo_name/server.conf`).
+
+!!! note
+    The upside of Option 2 is that it will ensure that the number of files per catalog stays within the recommended limits, even when you have an installation with an excessive amount of files. The downside is that CVMFS does not know which files are commonly accessed together (e.g. because they belong to the same software installation) and might spread them over multiple catalogues - even when that's not strictly needed in terms of catalog size.
 
 Here, we follow **Option 1**.
 
@@ -341,7 +354,7 @@ sudo bash -c "echo '*/5 * * * * root output=\$(/usr/bin/cvmfs_server snapshot -a
 
 **8. Confirm the synchronization is working**
 
-While it is not easily possible to check which files are hosted on a Stratum 1, you can check the synchronization log at `/var/log/cvmfs/snapshots.log` to see if the synchronization process finshes correctly. The report also stathes the revision the Stratum 1 is serving ('Serving revision X'). You can cross-check that this is the latest revision by running on the **Stratum 0**:
+While it is not easily possible to check which files are hosted on a Stratum 1, you can check the synchronization log at `/var/log/cvmfs/snapshots.log` to see if the synchronization process finshes correctly. The report also states the revision the Stratum 1 is serving ('Serving revision X'). You can cross-check that this is the latest revision by running on the **Stratum 0**:
 
 ``` { .bash .copy }
 sudo cvmfs_server tag "$repo_name"
@@ -480,7 +493,7 @@ To validate the correctness of your config file, run
 sudo squid -k parse
 ```
 
-If all looks ok, restart the squid service:
+If all looks ok, (re)start the squid service:
 
 ```
 sudo systemctl start squid
@@ -489,7 +502,9 @@ sudo systemctl enable squid
 
 **Scripted summary of steps**
 
-WARNING: this will overwrite any existing squid config, so only execute this literally if you are on a fresh machine
+!!! warning
+    This will overwrite any existing squid config, so only execute this literally if you are on a fresh machine
+
 ``` { .bash .copy }
 # IP range (in CIDR notation) of the clients that should be allowed to use to use the proxy
 client_ip_range_CIDR=<some_range>
@@ -633,7 +648,7 @@ EOF
     If you want to use different proxy servers for EESSI vs your site CVMFS repository, you can add a site-specific `CVMFS_HTTP_PROXY` configuration in this file (`/etc/cvmfs/config.d/${repo_name}.conf`) as well, with your site specific setting. For EESSI, you could add it to `/etc/cvmfs/domain.d/eessi.io.local`
 
 !!! note
-    You could have done the configuration at the domain level, i.e. in `/etc/cvmfs/domain.d/${site_tld}.conf`. This only makes a difference if you host _multiple_ repositories under a single ${site_tld} domain, in which case this configuration would apply to _all_ of those repositories. In that case, you'd have to think about which level to specify what configuration at, e.g. specifying the `CVMFS_SERVER_URL` at the `domain.d` level if all of those repositories are hosted on the same server URL.
+    You can also do the above configuration at the domain level instead of the repository level, i.e. in `/etc/cvmfs/domain.d/${site_tld}.conf` instead of `/etc/cvmfs/config.d/${repo_name}.conf`. This only makes a difference if you host _multiple_ repositories under a single ${site_tld} domain, in which case this configuration would apply to _all_ of those repositories. In that case, you'd have to think about which level to specify what configuration at, e.g. specifying the `CVMFS_SERVER_URL` at the `domain.d` level if all of those repositories are hosted on the same server URL.
 
 Finally, we call `cvmfs_config setup` which will load the configuration for the newly configured repository.
 
@@ -735,6 +750,7 @@ If this _does_ work, the issue is with your proxy. Some things to check
 - Is the proxy service running? (`systemctl status squid`)
 - Is there a firewall blocking traffic to the proxy port?
 - Is there a mistake in the squid configuration? You can try to remove restrictions (e.g. the destination or source restrictions) one by one, to see if this fixes things to find the offending restriction.
+- Was your CVMFS client using the correct `CVMFS_HTTP_PROXY` in the previous step? (restore that configuration and run `cvmfs_config showconfig ${repo_name}` to see what value is effectively used, and in which config file it is set)
 
 **2. Connect your client directly to the Stratum 0**
 
@@ -755,6 +771,7 @@ If this _does_ work, something is wrong with your Stratum 1. Some things to chec
 
 - Is there a firewall blocking traffic?
 - Do the snapshot logs on the Stratum 1 look sane, i.e. is the Stratum 1 at least succesful in mirroring the Stratum 0?
+- Was your client using the correct `CVMFS_SERVER_URL` in the previous step? (restore that configuration and run  `cvmfs_config showconfig ${repo_name}` to see what value is effectively used, and in which config file it is set)
 
 If this does _not_ work, the issue is with your Stratum 0. Go through the [sanity check](#sanity-checking-your-stratum-0-setup) steps again to be sure. Also here, think if there's a firewall that's blocking traffic to the client.
 
@@ -825,7 +842,7 @@ aws s3 mb s3://<bucket_name>
 
 ### Security considerations
 
-There are many policies you can attach to a bucket to increase security. At the _very_ least, consider setting a bucket policy that restricts IP access to a whitelisted range (i.e. only the nodes where your build bot(s) run, and your Stratum 0 need access). The [AWS policy generator](https://awspolicygen.s3.amazonaws.com/policygen.html) can be a helpful tool in generating such a policy.
+There are many policies you can attach to a bucket to increase security. At the _very_ least, consider setting a bucket policy that restricts IP access to a whitelisted range (i.e. only the nodes where your build bot(s) run and your Stratum 0 need access). The [AWS policy generator](https://awspolicygen.s3.amazonaws.com/policygen.html) can be a helpful tool in generating such a policy.
 
 Another thing to consider is to create a secondary user with `aws iam create-user --user-name <name>` and attach a very limited policy to it (e.g. only read/write/list on buckets, nothing else). Then, create credentials for this user with `aws iam create-access-key --user-name <name>` and provide those credentials to the EESSI build bot and Stratum 0 machines. That way, if that token is compromized, the impact is minimized (e.g. the token can at least not be used to create new IAM idententies, etc).
 
@@ -1070,7 +1087,7 @@ For more details on running the smee client see the [relevant section](https://g
 
 **5. Start the event handler & job manager**
 
-Before starting the event handler or job manager, make sure you've [configured the AWS CLI](#configuring-aws-cli) on the current machine.
+Before starting the event handler or job manager, make sure you've [configured the AWS CLI](#configuring-aws-cli) on the current machine. The event handler needs this to be able to deploy tarballs to your object store bucket.
 
 To start the event handler, run:
 
@@ -1081,7 +1098,7 @@ source $bot_prefix/eessi_bot_venv/bin/activate
 ```
 
 !!! Note 
-    The working directory is important - the event handler assumes it's in the `eessi-bot-software-layer` root.
+    The working directory in which you start the `event_handler.sh` process is important - the event handler assumes it's in the `eessi-bot-software-layer` root.
 
 !!! Note
     If you changed the default port on which the smee client runs, you can pass `-p <port_nr>` to `event_handler.sh` as well in order to change the port on which the event handler listens.
@@ -1125,7 +1142,7 @@ In the example commands below, we assume that the current environment is set up:
 ``` { .bash .copy }
 IFS=$'\n\t'         # sane field splitting
 BUCKET="<bucket_name>"
-DOWNLOAD_DIR=/prefix/for/tarball/staging
+DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store tarballs on the Stratum 0
 ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
 REPO_NAME="<repo_name>"
 # a name for a dir in the bucket in which to archive tarballs, so that a subsequent run doesn't re-ingest them
@@ -1173,6 +1190,8 @@ echo "Found ${#tar_keys[@]} tarball(s) to process."
 ```
 {% endraw %}
 
+This command will query the bucket for any file ending in `.tar.zst` that is NOT in the `${BUCKET}/archive` directory (we'll move tarballs there later after they are ingested, so that they will not be re-ingested when this script runs a second time).
+
 **2. Download the new tarballs to the Stratum 0**
 
 Here, one would typically start a loop, of which the first step is to download the tarballs:
@@ -1200,7 +1219,7 @@ for key in "${tar_keys[@]}"; do
     }
 ```
 
-**3. Download the tarball metadata file to the Stratum 0 (optional)**
+**3. Download the tarball metadata and signature files to the Stratum 0 (optional)**
 
 Here, we are assuming you're inside the loop we opened in the previous step:
 
@@ -1216,12 +1235,16 @@ Here, we are assuming you're inside the loop we opened in the previous step:
         local_meta=""
     fi
 ```
+<!--
+
+TODO: STILL NEED TO ADD LOGIC TO DOWNLOAD THE SIGNATURE FILES HERE, but since my bot is currently not signing anything, I'm not sure what they look like :)
+-->
 
 **4. Verify the signature (optional)**
 
 First, you'll need to create a file listing the public keys for keypairs that are allowed to sign the tarballs. You've specified the private key in the `signing` config item in the bot's `app.cfg`.
 
-Assuming you're using the private key generated in the [GitHub app registration step](#register_gh_app), you'll first have to generate the public key **on the machine hosting the bot instance**, by running
+Assuming you're using the private key generated in the [GitHub app registration step](#register_gh_app), you don't have a public key yet. You'll have to generate that first **on the machine hosting the bot instance**, by running
 
 ``` { .bash .copy }
 ssh-keygen -y -f KEY.pem
@@ -1237,7 +1260,7 @@ On the Stratum 0, create the allowed signers file `$ALLOWED_SIGNERS` with the fo
 
 Where `<identity>` can be any string (useful for yourself to identify the key), `<namespace>` should match the `app_name` you configured for the bot in `app.cfg`, and `<pubkey>` is the public key you just generated.
 
-We leverage a script from the `eessi-bot-software-layer` to do the actual verification - though you could make your own:
+We suggest leveraging a script from the `eessi-bot-software-layer` to do the actual verification (though you could make your own verification script):
 
 ``` { .bash .copy }
     # ---- Verify signature ----
@@ -1252,9 +1275,9 @@ We leverage a script from the `eessi-bot-software-layer` to do the actual verifi
     fi
 ```
 
-5. Ingest the tarball into the repository
+**5. Ingest the tarball into the repository**
 
-Here, we leverage a script from `EESSI/filesystem-layer` that ingests tarballs, but also takes care of regenerating the `.cvmfscatalog` files _and_ updates the `Lmod` cache. To update the `Lmod` cache, the script uses the Lmod installation provided by `software.eessi.io`, which is why we explicitely this available as one of the steps [when we set up our Stratum 0](#setting-up-your-stratum-0)
+Here, we leverage a script from `EESSI/filesystem-layer` that ingests tarballs, but also takes care of regenerating the `.cvmfscatalog` files _and_ updates the `Lmod` cache. To update the `Lmod` cache, the script uses the Lmod installation provided by `software.eessi.io`, which is why we explicitely made this available as one of the steps [when we set up our Stratum 0](#setting-up-your-stratum-0)
 
 ``` { .bash .copy }
     # ---- Ingest into CVMFS ----
@@ -1268,15 +1291,15 @@ Here, we leverage a script from `EESSI/filesystem-layer` that ingests tarballs, 
     fi
 ```
 
-6. Regenerate the `.cvmfscatalog` files by publishing an empty transaction
+**6. Regenerate the `.cvmfscatalog` files by publishing an empty transaction**
 
-This is already taken care of by the `$INGEST_SCRIPT` in the step above. If you don't want to use that scrip0t, you'll have to implement this step yourself.
+This is already taken care of by the `$INGEST_SCRIPT` in the step above. If you don't want to use that script, you'll have to implement this step yourself.
 
-7. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction
+**7. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction**
 
 This is already taken care of by the `$INGEST_SCRIPT` in step 5 above. If you don't want to use that script, you'll have to implement this step yourself.
 
-8. Cleanup local files
+**8. Cleanup local files**
 
 ``` { .bash .copy }
     # ---- Clean up local copies ----
@@ -1284,7 +1307,7 @@ This is already taken care of by the `$INGEST_SCRIPT` in step 5 above. If you do
     rm -f "${local_tar}" "${local_meta}"
 ```
 
-9. Archive/move/remove the tarballs in the bucket
+**9. Archive/move/remove the tarballs in the bucket**
 
 Here, we archive the tarballs in the bucket within an subdir `$ARCHIVE_PREFIX`. It is crucial that we do NOT search this subdir in step 1, that way we make sure we only pick up new tarballs. 
 
@@ -1337,7 +1360,7 @@ git clone git@github.com:${GH_ORG}/${GH_REPO}.git
 
 At the time of writing, `Biopython-1.86-gfbf-2025b.eb` was not yet in upsteam EESSI and is quick to install, so this makes for a nice test case for building on top of `EESSI/2025.06` - but feel free to pick anything as a test.
 
-First, we create the directory `${GH_REPO}/easystacks/${repo_name}`. This is a fixed structure expected by the EESSI build scripts, so you have to stick to it.
+First, we create the directory `${GH_REPO}/easystacks/${repo_name}`. This is a fixed directory naming scheme expected by the EESSI build scripts, so you have to stick to it.
 
 ``` { .bash .copy }
 mkdir -p ${GH_REPO}/easystacks/${repo_name}/
@@ -1358,7 +1381,7 @@ easyconfigs:
 EOF
 ```
 
-Note that the EESSI build scripts also expect a standardized naming scheme: `eessi-<eessi_version>-eb-<easybuild_version>-<suffix>.yml`. The suffix can be anything - in upstream EESSI we stick to the convention of specifying the toolchain generation (`2025a`, `2025b`, etc, as they are used in EasyBuild) of the toolchains that the easyconfigs in this easystack use, but that is not a hard requirement.
+Note that the EESSI build scripts also expect a standardized naming scheme for the easystack file itself: `eessi-<eessi_version>-eb-<easybuild_version>-<suffix>.yml`. The suffix can be anything - in upstream EESSI we stick to the convention of specifying the toolchain generation (`2025a`, `2025b`, etc, as they are used in EasyBuild) of the toolchains that the easyconfigs in this easystack use, but that is not a hard requirement.
 
 Now, add the new easystack file to a feature branch:
 
@@ -1427,7 +1450,7 @@ While there is no logfile for the Smee client, you will see things like:
 POST http://127.0.0.1:3000/ - 200
 ```
 
-when the client succesfully receives events. If you do not see these, check that you've used the correct channel ID when you started the client, and that nothing is blocking the traffic.
+when the client succesfully received events (and relays them to the `event_handler`). If you do not see these, check that you've used the correct channel ID when you started the client, and that nothing is blocking the traffic.
 
 **Is the event handler receiving events - and how does it act on them?**
 
@@ -1447,5 +1470,4 @@ Another thing is issues with incorrectly specified instance names, repository na
 }'
 
 ```
-The 'filter' is essentially the arguments to the build command the bot received. The 'context' is what the bot is configured for. In this example, the build command is ignored because the repository passed in the bot command doesn't match the repository name the bot was configured for. Note that it is **normal** to see a lot of this output: the bot loops through all the possible combinations it can build for, and typically only one matches. However, if _none_ match (while you did _expect_ one to match), a good look at this output may help you figure out what's wrong.
-
+The 'filter' is essentially the arguments to the build command the bot received. The 'context' is what the bot is configured for. In this example, the build command is ignored because the repository passed in the bot command doesn't match the repository name the bot was configured for. Note that it is **normal** to see a lot of this output: the bot loops through all the possible combinations it can build for, and typically only one matches. However, if _none_ match (while you did _expect_ one to match), a good look at this output may help you figure out what's wrong (i.e. why the 'context' you expected to match, does not match after all).
