@@ -1126,8 +1126,8 @@ For upstream EESSI, a rather complex setup is used to do semi-automatic ingestio
 However, this is unnecessarily complex for site builds. Instead, we suggest that you write your own script that can be run in a cronjob to take care of ingesting the tarballs. Below, we describe the steps and a possible implementation for each step - but you can easily create your own. Things your script should cover are:
 
 1. Query the bucket for new tarballs
-2. Download the new tarballs to the Stratum 0
-3. Download the tarball metadata file to the Stratum 0 (optional, only if you want to do signature verification)
+2. Download the new tarballs & metadata files to the Stratum 0
+3. Download the signature files to the Stratum 0 (optional, only if you want to do signature verification)
 4. Verify the signature (optional)
 5. Ingest the tarball into the repository (using `cvmfs_server ingest`)
 6. Regenerate the `.cvmfscatalog` files by publishing an empty transaction (`cvmfs_server transaction && cvmfs_server -m "<commit_msg>"`)
@@ -1140,6 +1140,8 @@ However, this is unnecessarily complex for site builds. Instead, we suggest that
 In the example commands below, we assume that the current environment is set up:
 
 ``` { .bash .copy }
+#!/bin/bash
+
 IFS=$'\n\t'         # sane field splitting
 BUCKET="<bucket_name>"
 DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store tarballs on the Stratum 0
@@ -1177,7 +1179,7 @@ mapfile -t tar_keys < <(
     aws s3api list-objects-v2 \
         --bucket "${BUCKET}" \
         --query 'Contents[?ends_with(Key, `.tar.zst`) && !contains(Key, `archive/`)].Key' \
-        --output text
+        --output text | tr '\t' '\n'
 )
 
 # If no keys were found, exit early
@@ -1192,12 +1194,11 @@ echo "Found ${#tar_keys[@]} tarball(s) to process."
 
 This command will query the bucket for any file ending in `.tar.zst` that is NOT in the `${BUCKET}/archive` directory (we'll move tarballs there later after they are ingested, so that they will not be re-ingested when this script runs a second time).
 
-**2. Download the new tarballs to the Stratum 0**
+**2. Download the new tarballs & metadata files to the Stratum 0**
 
 Here, one would typically start a loop, of which the first step is to download the tarballs:
 
 ``` { .bash .copy }
-
 for key in "${tar_keys[@]}"; do
     # Extract the base filename (e.g. 17798741550.tar.zst)
     filename=$(basename "${key}")
@@ -1209,6 +1210,9 @@ for key in "${tar_keys[@]}"; do
     local_tar="${DOWNLOAD_DIR}/${filename}"
     local_meta="${DOWNLOAD_DIR}/${meta_file}"
 
+    # Remote paths
+    meta_key=${key}.meta.txt
+
     echo "=== Processing ${filename} ==="
 
     # ---- Download tarball ----
@@ -1217,6 +1221,17 @@ for key in "${tar_keys[@]}"; do
         echo "ERROR: Failed to download ${key}" >&2
         continue
     }
+
+    # ---- Download metadata file ----
+    # The metadata file is expected to sit next to the tarball in S3
+    echo "Downloading metadata file..."
+    aws s3 cp "s3://${BUCKET}/${meta_key}" "${local_meta}" 2>/dev/null
+    if [ $? -eq 0 ]; then
+        echo "Metadata file downloaded."
+    else
+        echo "WARNING: No metadata file found for ${filename}. Continuing to next tarball (not ingesting ${filename})."
+        continue
+    fi
 ```
 
 **3. Download the tarball metadata and signature files to the Stratum 0 (optional)**
@@ -1224,21 +1239,36 @@ for key in "${tar_keys[@]}"; do
 Here, we are assuming you're inside the loop we opened in the previous step:
 
 ``` { .bash .copy }
-    # ---- Download meta file (if it exists) ----
-    # The meta file is expected to sit next to the tarball in S3
-    echo "Downloading meta file..."
-    if aws s3 cp "s3://${BUCKET}/${key}.meta.txt" "${local_meta}" 2>/dev/null; then
-        echo "Meta file downloaded."
-    else
-        echo "WARNING: No meta file found for ${filename}. Continuing without it."
-        # Remove the variable so we don't pass a non‑existent file later
-        local_meta=""
-    fi
-```
-<!--
+    # Full local paths
+    local_tar_sig="${DOWNLOAD_DIR}/${sig_file}"
+    local_meta_sig="${DOWNLOAD_DIR}/${meta_sig_file}"
 
-TODO: STILL NEED TO ADD LOGIC TO DOWNLOAD THE SIGNATURE FILES HERE, but since my bot is currently not signing anything, I'm not sure what they look like :)
--->
+    # Remote paths
+    sig_key=${key}.sig
+    meta_sig_key=${key}.meta.txt.sig
+
+    # ---- Download tarball signature file ----
+    echo "Downloading tarball signature file... s3://${BUCKET}/${sig_key} to ${local_tar_sig}"
+    aws s3 cp "s3://${BUCKET}/${sig_key}" "${local_tar_sig}"
+
+    if [ $? -eq 0 ]; then
+        echo "Tarball signature file downloaded."
+    else
+        echo "WARNING: Failed to download tarball signature file. Continuing to next tarball (not ingesting ${filename})."
+        # No point in continuing this loop iteration, we'll fail the signature verification check anyway
+        continue
+    fi
+
+    # ---- Download metadata signature file ----
+    echo "Downloading metadata signature file... s3://${BUCKET}/${meta_sig_key} to ${local_meta_sig}"
+    aws s3 cp "s3://${BUCKET}/${meta_sig_key}" "${local_meta_sig}"
+    if [ $? -eq 0 ]; then
+        echo "Metadata signature file downloaded."
+    else
+        echo "WARNING. Failed to download metadata signature file. Continuing to next tarball (not ingesting ${filename})."
+        continue
+    fi    
+```
 
 **4. Verify the signature (optional)**
 
@@ -1270,10 +1300,12 @@ We suggest leveraging a script from the `eessi-bot-software-layer` to do the act
     else
         echo "ERROR: Signature verification failed for ${filename}. Skipping ingest." >&2
         # Optionally clean up the bad files
-        rm -f "${local_tar}" "${local_meta}"
+        rm -f "${local_tar}" "${local_meta}" "${local_tar_sig}" "${local_meta_sig}"
         continue
     fi
 ```
+
+Note that our `rm -f` assumes you downloaded signature files (`${local_tar_sig}` and `${local_meta_sig}`) as well - if not, you'll have to strip that from the command.
 
 **5. Ingest the tarball into the repository**
 
@@ -1307,11 +1339,193 @@ This is already taken care of by the `$INGEST_SCRIPT` in step 5 above. If you do
     rm -f "${local_tar}" "${local_meta}"
 ```
 
+Note that our `rm -f` assumes you downloaded signature files (`${local_tar_sig}` and `${local_meta_sig}`) as well - if not, you'll have to strip that from the command.
+
 **9. Archive/move/remove the tarballs in the bucket**
 
 Here, we archive the tarballs in the bucket within an subdir `$ARCHIVE_PREFIX`. It is crucial that we do NOT search this subdir in step 1, that way we make sure we only pick up new tarballs. 
 
 ``` { .bash .copy }
+    # ---- Archive the objects in S3 ----
+    # Destination key = archive/<original‑key>
+    archive_key="${ARCHIVE_PREFIX}/${key}"
+    echo "Archiving S3 object to s3://${BUCKET}/${archive_key} ..."
+    if ! aws s3 mv "s3://${BUCKET}/${key}" "s3://${BUCKET}/${archive_key}"; then
+        echo "ERROR: Failed to move tarball to archive." >&2
+    else
+        echo "Tarball archived."
+    fi
+
+    # Archive the metadata file (if it existed)
+    archive_meta_key="${ARCHIVE_PREFIX}/${key}.meta.txt"
+    echo "Archiving metadata to s3://${BUCKET}/${archive_meta_key} ..."
+    if ! aws s3 mv "s3://${BUCKET}/${key}.meta.txt" "s3://${BUCKET}/${archive_meta_key}"; then
+        echo "ERROR: Failed to move metadata to archive." >&2
+    else
+        echo "Metadata archived."
+    fi
+
+    # Archive the signature file
+    archive_sig_key="${ARCHIVE_PREFIX}/${key}.sig"
+    echo "Archiving signature file ${sig_key} to s3://${BUCKET}/${archive_sig_key}"
+    aws s3 mv "s3://${BUCKET}/${sig_key}" "s3://${BUCKET}/${archive_sig_key}"
+    if [ $? -eq 0 ]; then
+        echo "Tarball signature file archived."
+    else
+        echo "ERROR: Failed to move tarball signature file to archive." >&2
+    fi
+
+    # Archive the metadata signature file
+    archive_meta_sig_key="${ARCHIVE_PREFIX}/${key}.meta.txt.sig"
+    echo "Archiving metadata signature file ${meta_sig_key} to s3://${BUCKET}/${archive_meta_sig_key}"
+    aws s3 mv "s3://${BUCKET}/${meta_sig_key}" "s3://${BUCKET}/${archive_meta_sig_key}"
+    if [ $? -eq 0 ]; then
+        echo "Metadata signature file archived."
+    else
+        echo "ERROR: Failed to move metadata signature file to archive." >&2
+    fi
+
+done
+
+echo "All done."
+```
+
+Note that we assumed you have signature files as well. If not, remove those sections from the code above.
+
+**Full script**
+
+Composing all of the above (including signature verification), we get the following script for automatic ingestion:
+
+{% raw %}
+```
+#!/bin/bash
+
+IFS=$'\n\t'         # sane field splitting
+BUCKET="<bucket_name>"
+DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store tarballs on the Stratum 0
+ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
+REPO_NAME="<repo_name>"
+# a name for a dir in the bucket in which to archive tarballs, so that a subsequent run doesn't re-ingest them
+ARCHIVE_PREFIX="archive"
+# Ensure the download directory exists
+mkdir -p "${DOWNLOAD_DIR}"
+
+# We will leverage a script from eessi-bot-software-layer (for signature verification - optional)
+git clone https://github.com/EESSI/eessi-bot-software-layer.git
+
+# We will leverage a script from filesystem-layer (for tarball ingestion)
+git clone https://github.com/EESSI/filesystem-layer.git
+
+# The script referenced here does three things
+# 1. Ingest the tarball (cvmfs_server ingest <tarball>)
+# 2. Regenerate the `.cvmfscatalog` files by publishing an empty transaction (`cvmfs_server transaction && cvmfs_server -m "<commitg_msg>"`)
+# 3. Update the lmod caches for your site installation prefix
+INGEST_SCRIPT="$PWD/filesystem-layer/scripts/ingest-tarball.sh"
+
+mapfile -t tar_keys < <(
+    aws s3api list-objects-v2 \
+        --bucket "${BUCKET}" \
+        --query 'Contents[?ends_with(Key, `.tar.zst`) && !contains(Key, `archive/`)].Key' \
+        --output text | tr '\t' '\n'
+)
+
+# If no keys were found, exit early
+if [[ ${#tar_keys[@]} -eq 0 ]]; then
+    echo "No tarballs found in bucket '${BUCKET}' (excluding archive/)."
+    exit 0
+fi
+
+echo "Found ${#tar_keys[@]} tarball(s) to process."
+
+for key in "${tar_keys[@]}"; do
+    # Extract the base filename (e.g. 17798741550.tar.zst)
+    filename=$(basename "${key}")
+
+    # Derive the meta‑file name (same basename with .meta.txt suffix)
+    meta_file="${filename}.meta.txt"
+
+    # Full local paths
+    local_tar="${DOWNLOAD_DIR}/${filename}"
+    local_meta="${DOWNLOAD_DIR}/${meta_file}"
+
+    # Remote paths
+    meta_key=${key}.meta.txt
+
+    echo "=== Processing ${filename} ==="
+
+    # ---- Download tarball ----
+    echo "Downloading tarball..."
+    aws s3 cp "s3://${BUCKET}/${key}" "${local_tar}" || {
+        echo "ERROR: Failed to download ${key}" >&2
+        continue
+    }
+
+    # ---- Download metadata file ----
+    # The metadata file is expected to sit next to the tarball in S3
+    echo "Downloading metadata file..."
+    aws s3 cp "s3://${BUCKET}/${meta_key}" "${local_meta}" 2>/dev/null
+    if [ $? -eq 0 ]; then
+        echo "Metadata file downloaded."
+    else
+        echo "WARNING: No metadata file found for ${filename}. Continuing to next tarball (not ingesting ${filename})."
+        continue
+    fi
+
+    # Full local paths
+    local_tar_sig="${DOWNLOAD_DIR}/${sig_file}"
+    local_meta_sig="${DOWNLOAD_DIR}/${meta_sig_file}"
+
+    # Remote paths
+    sig_key=${key}.sig
+    meta_sig_key=${key}.meta.txt.sig
+
+    # ---- Download tarball signature file ----
+    echo "Downloading tarball signature file... s3://${BUCKET}/${sig_key} to ${local_tar_sig}"
+    aws s3 cp "s3://${BUCKET}/${sig_key}" "${local_tar_sig}"
+
+    if [ $? -eq 0 ]; then
+        echo "Tarball signature file downloaded."
+    else
+        echo "WARNING: Failed to download tarball signature file. Continuing to next tarball (not ingesting ${filename})."
+        # No point in continuing this loop iteration, we'll fail the signature verification check anyway
+        continue
+    fi
+
+    # ---- Download metadata signature file ----
+    echo "Downloading metadata signature file... s3://${BUCKET}/${meta_sig_key} to ${local_meta_sig}"
+    aws s3 cp "s3://${BUCKET}/${meta_sig_key}" "${local_meta_sig}"
+    if [ $? -eq 0 ]; then
+        echo "Metadata signature file downloaded."
+    else
+        echo "WARNING. Failed to download metadata signature file. Continuing to next tarball (not ingesting ${filename})."
+        continue
+    fi
+
+    # ---- Verify signature ----
+    echo "Running check_signature..."
+    if eessi-bot-software-layer/scripts/sign_verify_file_ssh.sh --verify --allowed-signers-file $ALLOWED_SIGNERS --file $local_tar; then
+        echo "Signature OK."
+    else
+        echo "ERROR: Signature verification failed for ${filename}. Skipping ingest." >&2
+        # Optionally clean up the bad files
+        rm -f "${local_tar}" "${local_meta}"
+        continue
+    fi
+
+    # ---- Ingest into CVMFS ----
+    echo "Ingesting into CVMFS (${REPO_NAME})..."
+    if $INGEST_SCRIPT "${REPO_NAME}" "${local_tar}"; then
+        echo "Ingest succeeded for ${filename}."
+    else
+        echo "ERROR: cvmfs_server ingest failed for ${filename}." >&2
+        # Keep the files for troubleshooting
+        continue
+    fi
+
+    # ---- Clean up local copies ----
+    echo "Removing local files..."
+    rm -f "${local_tar}" "${local_meta}" "${local_tar_sig}" "${local_meta_sig}"
+
     # ---- Archive the objects in S3 ----
     # Destination key = archive/<original‑key>
     archive_key="${ARCHIVE_PREFIX}/${key}"
@@ -1333,10 +1547,31 @@ Here, we archive the tarballs in the bucket within an subdir `$ARCHIVE_PREFIX`. 
         fi
     fi
 
+    # Archive the signature file
+    archive_sig_key="${ARCHIVE_PREFIX}/${key}.sig"
+    echo "Archiving signature file ${sig_key} to s3://${BUCKET}/${archive_sig_key}"
+    aws s3 mv "s3://${BUCKET}/${sig_key}" "s3://${BUCKET}/${archive_sig_key}"
+    if [ $? -eq 0 ]; then
+        echo "Tarball signature file archived."
+    else
+        echo "ERROR: Failed to move tarball signature file to archive." >&2
+    fi
+
+    # Archive the metadata signature file
+    archive_meta_sig_key="${ARCHIVE_PREFIX}/${key}.meta.txt.sig"
+    echo "Archiving metadata signature file ${meta_sig_key} to s3://${BUCKET}/${archive_meta_sig_key}"
+    aws s3 mv "s3://${BUCKET}/${meta_sig_key}" "s3://${BUCKET}/${archive_meta_sig_key}"
+    if [ $? -eq 0 ]; then
+        echo "Metadata signature file archived."
+    else
+        echo "ERROR: Failed to move metadata signature file to archive." >&2
+    fi
+
 done
 
 echo "All done."
 ```
+{% endraw %}
 
 ## Add your first software
 
