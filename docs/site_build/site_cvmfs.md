@@ -1121,7 +1121,7 @@ For more details on running the event handler and job manager, see the [relevant
 
 ## Set up automatic ingestion on CVMFS Stratum 0 (optional)
 
-For upstream EESSI, a rather complex setup is used to do semi-automatic ingestion of build tarballs on the CVMFS Stratum 0. It creates a staging PR in a special staging repository, which allows for a final review of all the tarball contents. The ingestion setup is desribed [here](https://github.com/EESSI/filesystem-layer/tree/main/scripts/automated_ingestion). 
+For upstream EESSI, a rather complex setup is used to do semi-automatic ingestion of build tarballs on the CVMFS Stratum 0. It creates a staging PR in a special staging repository, which allows for a final review of all the tarball contents. The ingestion setup is described [here](https://github.com/EESSI/filesystem-layer/tree/main/scripts/automated_ingestion). 
 
 However, this is unnecessarily complex for site builds. Instead, we suggest that you write your own script that can be run in a cronjob to take care of ingesting the tarballs. Below, we describe the steps and a possible implementation for each step - but you can easily create your own. Things your script should cover are:
 
@@ -1309,7 +1309,7 @@ Note that our `rm -f` assumes you downloaded signature files (`${local_tar_sig}`
 
 **5. Ingest the tarball into the repository**
 
-Here, we leverage a script from `EESSI/filesystem-layer` that ingests tarballs, but also takes care of regenerating the `.cvmfscatalog` files _and_ updates the `Lmod` cache. To update the `Lmod` cache, the script uses the Lmod installation provided by `software.eessi.io`, which is why we explicitely made this available as one of the steps [when we set up our Stratum 0](#setting-up-your-stratum-0)
+Here, we leverage a script from `EESSI/filesystem-layer` that ingests tarballs, but also takes care of regenerating the `.cvmfscatalog` files _and_ updates the `Lmod` cache. To update the `Lmod` cache, the script uses the Lmod installation provided by `software.eessi.io`, which is why we explicitly made this available as one of the steps [when we set up our Stratum 0](#setting-up-your-stratum-0)
 
 ``` { .bash .copy }
     # ---- Ingest into CVMFS ----
@@ -1593,7 +1593,7 @@ git clone git@github.com:${GH_ORG}/${GH_REPO}.git
 
 **3. Create an easystack file**
 
-At the time of writing, `Biopython-1.86-gfbf-2025b.eb` was not yet in upsteam EESSI and is quick to install, so this makes for a nice test case for building on top of `EESSI/2025.06` - but feel free to pick anything as a test.
+At the time of writing, `Biopython-1.86-gfbf-2025b.eb` was not yet in upstream EESSI and is quick to install, so this makes for a nice test case for building on top of `EESSI/2025.06` - but feel free to pick anything as a test.
 
 First, we create the directory `${GH_REPO}/easystacks/${repo_name}`. This is a fixed directory naming scheme expected by the EESSI build scripts, so you have to stick to it.
 
@@ -1629,7 +1629,7 @@ git push
 
 **4. Create a pull request**
 
-In your browser, browse to the main page of your repository at https://github.com/GH_ORG/GH_repo . You should immediately see a notification that one of your branches had new pushes, you can click the "Compare & pull request" button from there. Alternatively, go to the "Pull requests" menu, click "New pull reqeust" and select `my_feature_branch` in the `compare` dropdown menu. Then, click "Create pull request"
+In your browser, browse to the main page of your repository at https://github.com/GH_ORG/GH_repo . You should immediately see a notification that one of your branches had new pushes, you can click the "Compare & pull request" button from there. Alternatively, go to the "Pull requests" menu, click "New pull request" and select `my_feature_branch` in the `compare` dropdown menu. Then, click "Create pull request"
 
 In the PR you just created, you can now give commands to the bot. Post a message with
 
@@ -1660,7 +1660,7 @@ The bot will now upload the build tarball to your S3 bucket. It will add another
 Assuming you've [set up automatic ingestion](#set-up-automatic-ingestion-on-cvmfs-stratum-0-optional) on your Stratum 0, you can now simply wait for the cronjob that triggers the automatic ingestion. Be aware that it may take some time for the software to show up on the CVMFS clients, since:
 
 - The cronjob for the automatic ingestion needs to run
-- The CVMFS Stratum 1's need to syncronize (with `cvmfs_server snapshot`)
+- The CVMFS Stratum 1's need to synchronize (with `cvmfs_server snapshot`)
 - The file catalogs on the clients need to expire (default is every 4 minutes), after which the cache needs to expire.
 
 If you are in a very big rush, you can run the ingestion on the Stratum 0 manually, run the `cvmfs_server snapshot -a -i` command on the Stratum 1 manually and run a `sudo cvmfs_config wipecache` command on the client.
@@ -1685,7 +1685,7 @@ While there is no logfile for the Smee client, you will see things like:
 POST http://127.0.0.1:3000/ - 200
 ```
 
-when the client succesfully received events (and relays them to the `event_handler`). If you do not see these, check that you've used the correct channel ID when you started the client, and that nothing is blocking the traffic.
+when the client successfully received events (and relays them to the `event_handler`). If you do not see these, check that you've used the correct channel ID when you started the client, and that nothing is blocking the traffic.
 
 **Is the event handler receiving events - and how does it act on them?**
 
