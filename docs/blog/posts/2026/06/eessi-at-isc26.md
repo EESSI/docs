@@ -67,7 +67,7 @@ We brainstormed ideas on integrating EESSI with Open OnDemand, and discussed upd
 Interactive component of the [EuroHPC Federation Platform](https://my-eurohpc.eu) that consists
 of a *federated* Open OnDemand instance that leverages EESSI as the backend for several interactive apps.
 
-Furtermore, we exchanged thoughts on using EESSI as a backend for interactive "community" apps
+Furthermore, we exchanged thoughts on using EESSI as a backend for interactive "community" apps
 in Open Demand that could be shared with and easily used by sites using Open OnDemand, and how
 EESSI fits in with the [Open OnDemand Appverse project](https://openondemand.connectci.org/appverse).
 
@@ -103,6 +103,7 @@ Birds-of-a-Feather session.
 During the session, different aspects of federating compute infrastructure were discussed. EESSI was pitched by Alan as a solution to provide
 a uniform software stack across different infrastructures, which also clear from the short presentation showcasing the *EuroHPC Federation Platform*,
 where EESSI is the base for the *Federated Software Catalog* component (see also our [previous blog post](../../2026/03/efp-webinar.md).
+
 
 ## EuroHPC Federation Platform BoF
 
