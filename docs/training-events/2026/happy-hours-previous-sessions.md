@@ -6,6 +6,13 @@ Find slides, and video recordings of earlier sessions below.
 
 ## Topic series: EESSI Mix and Match
 
+### Monday 29 June 2026
+
+**Outline:** Report on EESSI activities @ ISC'26
+([Slides (PDF)](EESSI-happyhour-2026-018-EESSI@ISC26.pdf), [Recording (YouTube)](https://youtu.be/fnFHRwwkPsM))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fnFHRwwkPsM?si=ywMkOoTOqOPOUWKR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Monday 22 June 2026
 
 **Outline:** Revisit the EESSI bot 🤖
