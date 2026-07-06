@@ -101,7 +101,7 @@ Birds-of-a-Feather session.
 </figure>
 
 During the session, different aspects of federating compute infrastructure were discussed. EESSI was pitched by Alan as a solution to provide
-a uniform software stack across different infrastructures, which also clear from the short presentation showcasing the *EuroHPC Federation Platform*,
+a uniform software stack across different infrastructures, which was also clear from the short presentation showcasing the *EuroHPC Federation Platform*,
 where EESSI is the base for the *Federated Software Catalog* component (see also our [previous blog post](../../2026/03/efp-webinar.md).
 
 
