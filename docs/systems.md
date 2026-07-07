@@ -121,8 +121,6 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 * VSC-5: [General documentation](https://docs.asc.ac.at/systems/vsc5.html) | [EESSI @ VSC-5](https://docs.asc.ac.at/software/eessi.html)
 * MUSICA: [General documentation](https://docs.asc.ac.at/systems/musica.html) | [EESSI @ MUSICA](https://docs.asc.ac.at/software/eessi.html)
 
-MUSICA is currently (Jan’26) in an open test phase.
-
 ### Belgium
 
 #### Ghent University
