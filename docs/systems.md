@@ -199,6 +199,9 @@ MUSICA is currently (Jan’26) in an open test phase.
 * Hábrók: [General documentation](https://wiki.hpc.rug.nl/habrok/introduction/cluster_description) | [EESSI @ Hábrók](https://wiki.hpc.rug.nl/habrok/software_environment/eessi)
 * Managed Linux workspace (LWP): [General documentation](https://lwpwiki.webhosting.rug.nl/) | [EESSI @ LWP](https://lwpwiki.webhosting.rug.nl/index.php/EESSI)
 
+#### Vrije Universiteit Amsterdam
+* ADA: [General documentation](https://rdm.vu.nl/tools/ada/) | [EESSI @ ADA](https://rdm.vu.nl/tools/ada/software.html#european-environment-for-scientific-software-installations-eessi)
+
 ### Norway
 
 #### Sigma2 AS / Norwegian Research Infrastructure Services
