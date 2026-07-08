@@ -25,15 +25,6 @@ More details on the program will be shared later.
 
 **If you have any questions regarding this event, please send an email to `support@eessi.io`.**
 
-<!--
-!!! danger "Raspberry Pi Starter Kit prize!"
-    For the on-site participants of the hackathon, a **Raspberry Pi 5 Starter Kit prize** will be awarded to the most impressive project!
-
-    <p align="center">
-        <img width="40%" src="../../../img/raspi.png" alt="Prize">
-    </p>
--->
-
 ## Presentation materials
 
 *(will be made available shortly before the event)*
