@@ -3,6 +3,7 @@
 ## Upcoming events (2026)
 
 * [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** Monday, starting 12 January 2026)
+* [*EESSI Hackathon*](2026/hackathon-eurohpc-user-days.md) (hybrid event, 25 September 2026)
 
 ### Past events (2026)
 
