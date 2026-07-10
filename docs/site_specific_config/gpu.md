@@ -141,12 +141,13 @@ sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/my/custom/prefix' >> /etc/cvmfs/defau
 Third, run the helper script to install the CUDA and cuDNN versions that are used _in that version of EESSI_.
 
 ```{ .bash .copy }
-/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh --accept-cuda-eula --accept-cudnn-eula
+/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh
 ```
 
+The script may ask for additional command line options, e.g. to accept the terms of the EULA.
 Be sure to work in a clean environment and outside your local EasyBuild configuration.
 If the installation is interrupted by the error message "Files missing CUDA PTX code",
-re-run the command with environment variable `EASYBUILD_CUDA_SANITY_CHECK_ACCEPT_MISSING_PTX=1`.
+re-run the command with environment variable `EASYBUILD_CUDA_SANITY_CHECK_ACCEPT_MISSING_PTX=1` set.
 
 Note that this script uses EasyBuild in order to install CUDA and cuDNN - and EasyBuild does not allow running as root by default. 
 The recommended approach is to change ownership of the `host_injections` directory to a non-root user, and perform the installation with
