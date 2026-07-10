@@ -43,14 +43,18 @@ to store the symlinks to the drivers. For example, to store these under `/opt/ee
 sudo bash -c "echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' >> /etc/cvmfs/default.local"
 ```
 
+Keep in mind that values stored in `/etc/cvmfs/default.local` can be overridden by values stored in `/etc/cvmfs/domain.d/eessi.io.local`.
+
 *Step 2 (EESSI 2023.06, optional):* Change the location in which the symlinks will end up by configuring `EESSI_HOST_INJECTIONS` explicitly (default: `/opt/eessi`):
 
-```{ .bash copy }
+```{ .bash .copy }
 sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' >> /etc/cvmfs/default.local"
 ```
 
+Keep in mind that values stored in `/etc/cvmfs/default.local` can be overridden by values stored in `/etc/cvmfs/domain.d/eessi.io.local`.
+
 *Step 3:* To actually reconfigure the variant symlinks, reload the updated CernVM-FS configuration using:
-```{ .bash copy }
+```{ .bash .copy }
 sudo cvmfs_config reload software.eessi.io
 ```
 
@@ -66,7 +70,7 @@ sudo cvmfs_config reload software.eessi.io
 
 !!! tip "Maintaining different driver versions for each EESSI version"
     The standard approach for EESSI >= 2025.06 means that the drivers may be found by any EESSI version. If you prefer to create one set of symlinks per EESSI
-    version, instead of defining a single location through EESSI_NVIDIA_OVERRIDE_DEFAULT, you can define one per EESSI version, by setting EESSI_<VERSION>_NVIDIA_OVERRIDE.
+    version, instead of defining a single location through `EESSI_NVIDIA_OVERRIDE_DEFAULT`, you can define one per EESSI version, by setting `EESSI_<VERSION>_NVIDIA_OVERRIDE`.
     For example:
     ```{ .bash .copy}
     sudo bash -c "echo 'EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia' >> /etc/cvmfs/default.local"
@@ -96,6 +100,10 @@ Then, change to the correct directory:
 - For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib`
 
 Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
+You can use the command `locate libcuda.so` to determine the absolute path of the libraries on your system.
+Sometimes, these libraries have versioned variants (e.g. with extension `.so.1`), which need to be linked as well.
+If a CUDA application fails at runtime due to a missing shared library, you can determine which one
+is missing with `compute-sanitizer --tool memcheck ./myapp` (requires `module load CUDA/<cuda_version>`).
 
 #### Runtime support when using EESSI in a container {: #nvidia_eessi_container } 
 
@@ -133,8 +141,12 @@ sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/my/custom/prefix' >> /etc/cvmfs/defau
 Third, run the helper script to install the CUDA and cuDNN versions that are used _in that version of EESSI_.
 
 ```{ .bash .copy }
-/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh
+/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh --accept-cuda-eula --accept-cudnn-eula
 ```
+
+Be sure to work in a clean environment and outside your local EasyBuild configuration.
+If the installation is interrupted by the error message "Files missing CUDA PTX code",
+re-run the command with environment variable `EASYBUILD_CUDA_SANITY_CHECK_ACCEPT_MISSING_PTX=1`.
 
 Note that this script uses EasyBuild in order to install CUDA and cuDNN - and EasyBuild does not allow running as root by default. 
 The recommended approach is to change ownership of the `host_injections` directory to a non-root user, and perform the installation with
@@ -166,11 +178,13 @@ Thus, you may want to periodically run this script to pick up on new CUDA and cu
 
 The quickest way to test if software installations included in EESSI can access and use your GPU is to run the
 `deviceQuery` executable that is part of the `CUDA-Samples` module:
-```
+```{ .bash .copy }
 module load CUDA-Samples
 deviceQuery
 ```
 If both are successful, you should see information about your GPU printed to your terminal.
+If the symlinks are not properly set up, Lmod will fail to find the CUDA runtime environment.
+If `libcuda.so` and its versioned variants are missing, `deviceQuery` will print `cudaGetDeviceCount returned 35`.
 
 ## Support for using AMD GPUs {: #amd }
 
