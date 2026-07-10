@@ -20,7 +20,7 @@ An expected general outline of the program is:
 
 - What is EESSI?
 - How do I build my own software on top?
-- How do I tweak for my site?
+- How do I tweak EESSI for my site?
 - How do I contribute to it?
 
 Ample time will be provided for participants to follow prepared examples (where they are feasible).
