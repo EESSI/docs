@@ -1,10 +1,10 @@
-# EESSI hackathon (25 Sept 2026, Dublin)
+# EESSI hackathon (25 Sept. 2026, Dublin)
 
-On Friday 25 September 2026, an EESSI hackathon will be organised in the wake of the
-[EuroHPC User Days 2026](https://userdays2026.eurohpc-ju.europa.eu)
-which takes place 22-24 September 2026 in Dublin (Ireland).
+On Friday 25 September 2026 (09:30-16:30 local time, UTC+1), an EESSI hackathon will be organised in the wake of the
+[EuroHPC User Days](https://userdays2026.eurohpc-ju.europa.eu/)
+which takes place 22-24 September 2026 in Dublin. 
 
-*organised by [EuroHPC Centre-of-Excellence MultiXscale](https://www.multixscale.eu)*
+_Provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu) in collaboration with the [EuroHPC Federation Platform](https://my-eurohpc.eu/)_
 
 !!! tip
     **This is primarily an in-person event, with space for about 25 on-site participants.**
@@ -13,15 +13,19 @@ which takes place 22-24 September 2026 in Dublin (Ireland).
 
     See also [Registration](#registration).
 
-The main topic of this hackathon will be *onboarding software into
-the European Environment for Scientific Software Installations (EESSI, [https://eessi.io](https://eessi.io))*.
+The hackathon will be general in nature, but centred primarily on the needs of in-person participants. A detailed program will be added after
+initial registrations have taken place and discussions with those registrants.
 
-Ample time will be provided for participants to follow prepared examples, as well as time to work on onboarding their own application codes into EESSI.
+An expected general outline of the program is:
 
-We intend to record this event, and the make recordings, slides, and materials
-publicly available shortly after the event via this page.
+- What is EESSI?
+- How do I build my own software on top?
+- How do I tweak EESSI for my site?
+- How do I contribute to it?
 
-More details on the program will be shared later.
+Ample time will be provided for participants to follow prepared examples (where they are feasible).
+
+The session will be recorded. Recordings, slides, and materials used will be made publicly available shortly after the event via this page.
 
 **If you have any questions regarding this event, please send an email to `support@eessi.io`.**
 
@@ -31,13 +35,11 @@ More details on the program will be shared later.
 
 ## Venue
 
-The event will take place at Trinity College in Dublin.
-
-*(more details will be available soon)*
+The event will take place at Trinity College Dublin, in the [Lloyd Institute](https://www.tcd.ie/Maps/map.php?b=249) building.
 
 ## Online
 
-Online participation is available via Zoom *(practical information to join will be shared with registered participants)*.
+Online participation is available via Zoom *(practical information to join will be shared only with registered participants)*.
 
 ## Format
 
@@ -86,10 +88,12 @@ Both in person and online attendance is free of charge, but registration is requ
 
 While most of the content will be introduced on the day, it is likely very beneficial to follow some topics from the recent EESSI webinar series relevant to the hackathon:
 
-- [Introduction to EESSI (April 2026)](webinar-series-2026Q2.md#introduction-to-eessi)
-- Introduction to EasyBuild (May 2026): [slides](https://users.ugent.be/~kehoste/Introduction-to-EasyBuild-20260519.pdf) - [recording](https://youtu.be/1sfw8a64wFg?si=Z3ebqgKvjkdlTM7N)
+- [Introduction to EESSI](https://www.eessi.io/docs/training-events/2026/webinar-series-2026Q2/#introduction-to-eessi)
+- [Introduction to EasyBuild](https://www.eessi.io/docs/training/2025/webinar-series-2025Q2/#introduction-to-easybuild) (2025)
+- [Building software on top of EESSI + contributing to EESSI](https://www.eessi.io/docs/training-events/2026/webinar-series-2026Q2/#building-software-on-top-of-eessi-contributing-to-eessi)
+- [Using EESSI as a base for a central software stack](https://www.eessi.io/docs/training-events/2026/webinar-series-2026Q2/#using-eessi-as-a-base-for-a-central-software-stack)
 
-Some familiarity with [Git](https://swcarpentry.github.io/git-novice/) is useful, as is some experience with building and/or installing software packages.
+Familiarity with [Git](https://swcarpentry.github.io/git-novice/) is also useful, as is some experience with building and/or installing software packages.
 
 ## Q&A via Slack
 
@@ -107,6 +111,7 @@ There will also be an opportunity to ask questions directly to the speakers, sho
 - EasyBuild website: [https://easybuild.io](https://easybuild.io)
 - EasyBuild documentation: [https://docs.easybuild.io](https://docs.easybuild.io)
 - MultiXscale website: [https://www.multixscale.eu](https://www.multixscale.eu)
+- EuroHPC Federation Platform website: [https://my-eurohpc.eu/](https://my-eurohpc.eu/)
 
 ## Organisers
 
