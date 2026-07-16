@@ -7,6 +7,7 @@
 
 ### Past events (2026)
 
+* EESSI tutorial @ ISC'26 (22 June 2026) - see [tutorial website](https://eessi.io/isc26-tutorial/)
 * [*EESSI webinar series (April-May 2026)*](2026/webinar-series-2026Q2.md) (online tutorials)
     * [**Introduction to EESSI** *(27 April 2026)*](2026/webinar-series-2026Q2.md#introduction-to-eessi)
     * [**Building software on top of EESSI + contributing to EESSI** *(4 May 2026)*](2026/webinar-series-2026Q2.md#building-software-on-top-of-eessi-contributing-to-eessi)
