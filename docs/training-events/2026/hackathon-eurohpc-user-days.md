@@ -7,7 +7,7 @@ which takes place 22-24 September 2026 in Dublin.
 _Provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu) in collaboration with the [EuroHPC Federation Platform](https://my-eurohpc.eu/)_
 
 !!! tip
-    **The hackathon is a hybrid event with space for about 25 in-person participants.**
+    **This is primarily an in-person event, with space for about 25 on-site participants.**
     
     Attending the sessions is free, but you must be registered to attend in person or to join the Zoom webinar session for online participation!
 
@@ -29,11 +29,9 @@ The session will be recorded. Recordings, slides, and materials used will be mad
 
 **If you have any questions regarding this event, please send an email to `support@eessi.io`.**
 
-<!--
 ## Presentation materials
 
-[Slides (PDF)](EESSI-CI-CD-hackathon-20251002.pdf)
--->
+*(will be made available shortly before the event)*
 
 ## Venue
 
@@ -61,7 +59,7 @@ Both in person and online attendance is free of charge, but registration is requ
 
 ## Agenda
 
-**TBC**
+*(more info soon)*
 
 <!--
 * `[09:00-09:15]` Informal welcome + practical info
@@ -100,7 +98,7 @@ Familiarity with [Git](https://swcarpentry.github.io/git-novice/) is also useful
 ## Q&A via Slack
 
 For posting questions or comments during the event, we strongly prefer that you post them
-in the **`#hackathon` channel in the EESSI Slack** ([direct link to that channel](https://eessi-hpc.slack.com/archives/C02NB46EK9P).
+in the **`#hackathon` channel in the EESSI Slack** ([direct link to that channel](https://eessi-hpc.slack.com/archives/C02NB46EK9P)).
 
 If you haven't joined the EESSI Slack yet, first use the "`Slack channel`" link on the [EESSI website (https://eessi.io)](https://eessi.io).
 
@@ -118,10 +116,5 @@ There will also be an opportunity to ask questions directly to the speakers, sho
 ## Organisers
 
 - Kenneth Hoste (Ghent University)
-- Alan O'Cais (freelancer of EuroHPC projects for Ghent University)
+- Alan O'Cais (freelancer EuroHPC projects for Ghent University)
 - Lara Peeters (Ghent University)
-- Bob Dröge (Univ. of Groningen) *[remote]*
-- Thomas Röblitz (Univ. of Bergen)
-- Pedro Santos Neves (Univ. of Groningen) *[remote]*
-- Richard Topouchian (Univ. of Bergen) *[remote]*
-- Helena Vela Belrtran (Do IT Now)
