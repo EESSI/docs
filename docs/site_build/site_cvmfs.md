@@ -1398,7 +1398,7 @@ Note that we assumed you have signature files as well. If not, remove those sect
 Composing all of the above (including signature verification), we get the following script for automatic ingestion:
 
 {% raw %}
-```
+``` { .bash .copy }
 #!/bin/bash
 
 IFS=$'\n\t'         # sane field splitting
