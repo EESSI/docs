@@ -608,6 +608,7 @@ proxy_port2=<PORT_NR_FOR_PROXY2>
 Typically, the machines on which you want to offer your own software stack on top of EESSI already have the CVMFS client installed, otherwise you wouldn't be able to serve EESSI there. If you haven't done so, please follow the instructions [here](../../getting_access/native_installation#native-install-on-clusters).
 
 **3. Add the repository master public key**
+
 On your CVMFS **Stratum 0**, check the contents of your master key:
 ```
 cat "/etc/cvmfs/keys/${repo_name}.pub"
