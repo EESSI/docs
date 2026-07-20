@@ -67,7 +67,7 @@ installpath                              (E) = /sharedfs/eessi/versions/2025.06/
 ...
 ```
 
-Nowm, we can start building, e.g.:
+Now, we can start building, e.g.:
 
 ``` { .bash .copy }
 eb -r attr-2.5.2-GCCcore-14.3.0.eb
