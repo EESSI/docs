@@ -82,7 +82,7 @@ Instead of doing the builds on the host system itself, you could consider doing 
 Using a minimal build container minimizes the risk of accidentally picking up host libraries (instead of the ones provided by EESSI),
 and a container also provides a controlled and isolated environment.
 
-In principle you could any container, as long as you make sure that both the EESSI CVMFS repository and your shared file system are available in the container.
+In principle you could use any container, as long as you make sure that both the EESSI CVMFS repository and your shared file system are available in the container.
 Assuming both are available on the build host, you can simply bind mount both of them into the container.
 
 You can also use the (`eessi_container.sh` script)[https://github.com/EESSI/software-layer-scripts/blob/main/eessi_container.sh], provided by EESSI,
