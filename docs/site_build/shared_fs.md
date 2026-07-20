@@ -85,7 +85,7 @@ and a container also provides a controlled and isolated environment.
 In principle you could use any container, as long as you make sure that both the EESSI CVMFS repository and your shared file system are available in the container.
 Assuming both are available on the build host, you can simply bind mount both of them into the container.
 
-You can also use the (`eessi_container.sh` script)[https://github.com/EESSI/software-layer-scripts/blob/main/eessi_container.sh], provided by EESSI,
+You can also use the [`eessi_container.sh` script](https://github.com/EESSI/software-layer-scripts/blob/main/eessi_container.sh), provided by EESSI,
 which mounts the EESSI CVMFS repository inside the EESSI build container. In order to also bind mount your shared file system, you can use:
 ``` { .bash .copy }
 eessi_container.sh -b $EESSI_SITE_SOFTWARE_PREFIX
