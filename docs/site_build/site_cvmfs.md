@@ -613,7 +613,7 @@ On your CVMFS **Stratum 0**, check the contents of your master key:
 ```
 cat "/etc/cvmfs/keys/${repo_name}.pub"
 ```
-and copy that to /etc/cvmfs/keys/${site_tld}/${repo_name}.pub on your client machines.
+and copy that to `/etc/cvmfs/keys/${site_tld}/${repo_name}.pub` on your client machines.
 
 **4. Configure CVMFS client for site-repository**
 
