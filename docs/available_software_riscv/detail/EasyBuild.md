@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''5.3.0'', ''5.2.1'', ''5.2.0'', ''5.1.2'', ''5.1.1'']'
+  softwareVersion: '[''5.3.1'', ''5.3.0'', ''5.2.1'', ''5.2.0'', ''5.1.2'', ''5.1.1'']'
   url: https://easybuilders.github.io/easybuild
 ---
 # EasyBuild
@@ -41,6 +41,7 @@ EasyBuild is a software build and installation framework
 
 |EasyBuild version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|5.3.1|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`EasyBuild/5.3.1`|
 |5.3.0|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`EasyBuild/5.3.0`|
 |5.2.1|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`EasyBuild/5.2.1`|
 |5.2.0|`generic`: `riscv64`<br/><span class="software-cpu-arm">Arm</span>: <br/><span class="software-cpu-amd">AMD</span>: <br/><span class="software-cpu-intel">Intel</span>: <br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`EasyBuild/5.2.0`|
