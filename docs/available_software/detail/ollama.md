@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''0.6.0'']'
+  softwareVersion: '[''0.24.0'', ''0.6.0'']'
   url: https://ollama.com/
 ---
 # ollama
@@ -37,6 +37,7 @@ Get up and running with large language models.
 
 |ollama version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.24.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|<span class="software-gpu-nvidia">NVIDIA</span>: `cc100`, `cc120`, `cc70`, `cc80`, `cc90`<br/>|<span class="software-eessi-version-202506">2025.06</span>|`ollama/0.24.0-GCCcore-14.2.0-CUDA-12.8.0`|
 |0.6.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`ollama/0.6.0-GCCcore-13.3.0`|
 
 ## Extensions
@@ -51,9 +52,17 @@ Overview of extensions included in ollama installations
 | --- | --- |
 |0.6.0|`ollama/0.6.0-GCCcore-13.3.0`|
 
+### ggml-cpu-cuda
+
+
+|`ggml-cpu-cuda` version|ollama modules that include it|
+| --- | --- |
+|0.24.0|`ollama/0.24.0-GCCcore-14.2.0-CUDA-12.8.0`|
+
 ### ollama
 
 
 |`ollama` version|ollama modules that include it|
 | --- | --- |
+|0.24.0|`ollama/0.24.0-GCCcore-14.2.0-CUDA-12.8.0`|
 |0.6.0|`ollama/0.6.0-GCCcore-13.3.0`|
