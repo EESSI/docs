@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://eessi.github.io/docs/available_software/detail/libgit2/" rel="canonical"/>
+<link href="https://eessi.github.io/docs/available_software/detail/octave-kernel/" rel="canonical"/>
 <link href="../../../img/logos/EESSI.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>libgit2 - European Environment for Scientific Software Installations (EESSI)</title>
+<title>octave-kernel - European Environment for Scientific Software Installations (EESSI)</title>
 <link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,9 +22,9 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "applicationCategory": "DeveloperApplication",
-  "description": "libgit2 is a portable, pure C implementation of the Git core methods provided as a re-entrant\nlinkable library with a solid API, allowing you to write native speed custom Git applications in any language\nwhich supports C bindings.",
+  "description": "An Octave kernel for IPython.",
   "license": "Not confirmed",
-  "name": "libgit2",
+  "name": "octave-kernel",
   "offers": {
     "@type": "Offer",
     "price": 0
@@ -43,15 +43,15 @@
     }
   },
   "softwareRequirements": "See https://www.eessi.io/docs/ for how to make EESSI available on your system",
-  "softwareVersion": "['1.9.1', '1.8.1', '1.7.2', '1.7.1', '1.5.0']",
-  "url": "https://libgit2.org/"
+  "softwareVersion": "['1.1.0', '0.36.0']",
+  "url": "https://github.com/Calysto/octave_kernel"
 }</script></head>
 <body dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#libgit2">
+<a class="md-skip" href="#octave-kernel">
           Skip to content
         </a>
 </div>
@@ -75,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              libgit2
+              octave-kernel
             
           </span>
 </div>
@@ -2767,6 +2767,28 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extensions">
+<span class="md-ellipsis">
+      
+        Extensions
+      
+    </span>
+</a>
+<nav aria-label="Extensions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#octave-kernel_1">
+<span class="md-ellipsis">
+      
+        octave-kernel
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -2774,16 +2796,14 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="libgit2">libgit2<a class="headerlink" href="#libgit2" title="Permanent link">¶</a></h1>
-<p>libgit2 is a portable, pure C implementation of the Git core methods provided as a re-entrant
-linkable library with a solid API, allowing you to write native speed custom Git applications in any language
-which supports C bindings.</p>
-<p><small>homepage: </small><span class="software-link"><a href="https://libgit2.org/">https://libgit2.org/</a></span></p>
+<h1 id="octave-kernel">octave-kernel<a class="headerlink" href="#octave-kernel" title="Permanent link">¶</a></h1>
+<p>An Octave kernel for IPython.</p>
+<p><small>homepage: </small><span class="software-link"><a href="https://github.com/Calysto/octave_kernel">https://github.com/Calysto/octave_kernel</a></span></p>
 <h2 id="available-installations">Available installations<a class="headerlink" href="#available-installations" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>libgit2 version</th>
+<th>octave-kernel version</th>
 <th>Supported CPU targets</th>
 <th>Supported GPU targets</th>
 <th>EESSI version</th>
@@ -2792,46 +2812,39 @@ which supports C bindings.</p>
 </thead>
 <tbody>
 <tr>
-<td>1.9.1</td>
+<td>1.1.0</td>
 <td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
 <td><em>(none)</em></td>
 <td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>libgit2/1.9.1-GCCcore-14.3.0</code></td>
+<td><code>octave-kernel/1.1.0-foss-2025b</code></td>
 </tr>
 <tr>
-<td>1.9.1</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>libgit2/1.9.1-GCCcore-14.2.0</code></td>
-</tr>
-<tr>
-<td>1.8.1</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>libgit2/1.8.1-GCCcore-13.3.0</code></td>
-</tr>
-<tr>
-<td>1.7.2</td>
+<td>0.36.0</td>
 <td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
 <td><em>(none)</em></td>
 <td><span class="software-eessi-version-202306">2023.06</span></td>
-<td><code>libgit2/1.7.2-GCCcore-13.2.0</code></td>
+<td><code>octave-kernel/0.36.0-foss-2023a</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¶</a></h2>
+<p>Overview of extensions included in octave-kernel installations</p>
+<h3 id="octave-kernel_1">octave-kernel<a class="headerlink" href="#octave-kernel_1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>octave-kernel</code> version</th>
+<th>octave-kernel modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.0</td>
+<td><code>octave-kernel/1.1.0-foss-2025b</code></td>
 </tr>
 <tr>
-<td>1.7.1</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202306">2023.06</span></td>
-<td><code>libgit2/1.7.1-GCCcore-12.3.0</code></td>
-</tr>
-<tr>
-<td>1.5.0</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202306">2023.06</span></td>
-<td><code>libgit2/1.5.0-GCCcore-12.2.0</code></td>
+<td>0.36.0</td>
+<td><code>octave-kernel/0.36.0-foss-2023a</code></td>
 </tr>
 </tbody>
 </table>
