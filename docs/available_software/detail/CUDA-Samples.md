@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''12.1'']'
+  softwareVersion: '[''12.9'', ''12.1'']'
   url: https://github.com/NVIDIA/cuda-samples
 ---
 # CUDA-Samples
@@ -37,4 +37,5 @@ Samples for CUDA Developers which demonstrates features in CUDA Toolkit
 
 |CUDA-Samples version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|12.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|<span class="software-gpu-nvidia">NVIDIA</span>: `cc100`, `cc120`, `cc70`, `cc80`, `cc90`<br/>|<span class="software-eessi-version-202506">2025.06</span>|`CUDA-Samples/12.9-GCC-14.3.0-CUDA-12.9.1`|
 |12.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|<span class="software-gpu-nvidia">NVIDIA</span>: `cc70`, `cc80`, `cc90`<br/>|<span class="software-eessi-version-202306">2023.06</span>|`CUDA-Samples/12.1-GCC-12.3.0-CUDA-12.1.1`|
