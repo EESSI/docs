@@ -15,85 +15,13 @@ This page is organized as follows:
 ## Available ReFrame configuration files
 
 There are some available ReFrame configuration files for HPC systems and public cloud in the [config directory](https://github.com/EESSI/test-suite/tree/main/config/) for more inspiration.
-Below is a simple ReFrame configuration file with minimal changes required for getting you started on using the test suite for a CPU partition. Please check that `stagedir` is set to a path on a (shared) scratch filesystem for storing (temporary) files related to the tests, and `access` is set to a list of arguments that you would normally pass to the scheduler when submitting to this partition (for example '-p cpu' for submitting to a Slurm partition called cpu).
+In the config directory, [`settings_example.py`](https://github.com/EESSI/test-suite/blob/main/config/settings_example.py) is a simple ReFrame configuration file with minimal changes required for getting you started on using the test suite for a CPU partition. Please check that `stagedir` is set to a path on a (shared) scratch filesystem for storing (temporary) files related to the tests, and `access` is set to a list of arguments that you would normally pass to the scheduler when submitting to this partition (for example '-p cpu' for submitting to a Slurm partition called cpu).
   
 To write a ReFrame configuration file for your system, check the section [How to write a ReFrame configuration file](#write-reframe-config).
 
-
-```python
-"""
-simple ReFrame configuration file
-"""
-import os
-
-from eessi.testsuite.common_config import common_logging_config, common_eessi_init, format_perfvars, perflog_format
-from eessi.testsuite.constants import *  
-
-site_configuration = {
-    'systems': [
-        {
-            'name': 'cpu_partition',
-            'descr': 'CPU partition',
-            'modules_system': 'lmod',
-            'hostnames': ['*'],
-            # Note that the stagedir should be a shared directory available on all nodes running ReFrame tests
-            'stagedir': f'/some/shared/dir/{os.environ.get("USER")}/reframe_output/staging',
-            'partitions': [
-                {
-                    'name': 'cpu_partition',
-                    'descr': 'CPU partition',
-                    'scheduler': 'slurm',
-                    'launcher': 'mpirun',
-                    'access':  ['-p cpu', '--export=None'],
-                    'prepare_cmds': ['source %s' % common_eessi_init()],
-                    'environs': ['default'],
-                    'max_jobs': 4,
-                    'resources': [
-                        {
-                            'name': 'memory',
-                            'options': ['--mem={size}'],
-                        }
-                    ],
-                    'features': [
-                        FEATURES.CPU
-                    ] + list(SCALES.keys()),
-                }
-            ]
-        },
-    ],
-    'environments': [
-        {
-            'name': 'default',
-            'cc': 'cc',
-            'cxx': '',
-            'ftn': '',
-        },
-    ],
-    'logging': common_logging_config(),
-    'general': [
-        {
-            # Enable automatic detection of CPU architecture for each partition
-            # See https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.processor
-            'remote_detect': True,
-        }
-    ],
-}
-
-# optional logging to syslog
-site_configuration['logging'][0]['handlers_perflog'].append({
-    'type': 'syslog',
-    'address': '/dev/log',
-    'level': 'info',
-    'format': f'reframe: {perflog_format}',
-    'format_perfvars': format_perfvars,
-    'append': True,
-})
-```
-
-
 ## Verifying your ReFrame configuration
 
-To verify the ReFrame configuration, you can [query the configuration using `--show-config`](https://reframe-hpc.readthedocs.io/en/stable/configure.html#querying-configuration-options).
+To verify the ReFrame configuration, you can [query the configuration](https://reframe-hpc.readthedocs.io/en/stable/configure.html#querying-configuration-options) using `--show-config`.
 
 To see the full configuration, use:
 
@@ -101,7 +29,7 @@ To see the full configuration, use:
 reframe --show-config
 ```
 
-To only show the configuration of a particular system partition, you can use the [`--system` option](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-system).
+To only show the configuration of a particular system partition, you can use the [`--system`](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-system) option.
 To query a specific setting, you can pass an argument to `--show-config`.
 
 For example, to show the configuration of the `gpu` partition of the `example` system:
@@ -135,8 +63,9 @@ The EESSI test suite standardizes a few string-based values as constants, as wel
 Every ReFrame configuration file used for running the EESSI test suite should therefore start with the following import statements:
 
 ```python
-from eessi.testsuite.common_config import common_logging_config, common_eessi_init
-from eessi.testsuite.constants import *
+from eessi.testsuite.common_config import (common_eessi_init, common_general_config, common_logging_config,
+                                           set_common_required_config)
+from eessi.testsuite.constants import EXTRAS, FEATURES, SCALES, DEVICE_TYPES, GPU_VENDORS
 ```
 
 ### High-level system info (`systems`)
@@ -209,10 +138,17 @@ site_configuration = {
                     'name': 'cpu_partition',
                     'descr': 'CPU partition'
                     'scheduler': 'slurm',
-                    'prepare_cmds': ['source %s' % common_eessi_init()],
+                    'prepare_cmds': [
+                        # Pass job environment variables like $PATH, etc., into job steps
+                        'export SLURM_EXPORT_ENV=ALL',
+                        # If your system doesn't have an Lmod installation by default on the batch nodes,
+                        # uncommenting the following two lines will use one from EESSI.
+                        # 'source /cvmfs/software.eessi.io/2025.06/init/lmod/bash',
+                        # 'module unload EESSI',
+                    ],
                     'launcher': 'mpirun',
                     'access':  ['-p cpu'],
-                    'environs': ['default'],
+                    # 'environs': ['local_environ'],
                     'max_jobs': 4,
                     'features': [
                         FEATURES.CPU
@@ -222,17 +158,18 @@ site_configuration = {
                     'name': 'gpu_partition',
                     'descr': 'GPU partition'
                     'scheduler': 'slurm',
-                    'prepare_cmds': ['source %s' % common_eessi_init()],
+                    'prepare_cmds': [
+                        # Pass job environment variables like $PATH, etc., into job steps
+                        'export SLURM_EXPORT_ENV=ALL',
+                        # If your system doesn't have an Lmod installation by default on the batch nodes,
+                        # Uncommenting the following two lines will use one from EESSI.
+                        # 'source /cvmfs/software.eessi.io/2025.06/init/lmod/bash',
+                        # 'module unload EESSI',
+                    ],
                     'launcher': 'mpirun',
                     'access':  ['-p gpu'],
-                    'environs': ['default'],
+                    # 'environs': ['local_environ'],
                     'max_jobs': 4,
-                    'resources': [
-                        {
-                            'name': '_rfm_gpu',
-                            'options': ['--gpus-per-node={num_gpus_per_node}'],
-                        }
-                    ],
                     'devices': [
                         {
                             'type': DEVICE_TYPES.GPU,
@@ -272,30 +209,18 @@ The most common configuration items defined at this level are:
   (for example by using '`--export=None`' with Slurm). This avoids test failures due to environment variables set
   in the submission environment that are passed down to submitted jobs.
 - [`prepare_cmds`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.prepare_cmds):
-  Commands to execute at the start of every job that runs a test. If your batch scheduler does not export
-  the environment of the submit host, this is typically where you can initialize the EESSI environment.
+  Commands to execute at the start of every job that runs a test, such as making the EESSI-installed version of Lmod available.
 - [`environs`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.environs):
-  The names of the *programming environments* (to be defined later in the configuration file via [`environments`](#environments))
-  that may be used on this partition. A programming environment is required for tests that are compiled first,
-  before they can run. The EESSI test suite however only tests existing software installations, so no compilation
-  (or specific programming environment) is needed. Simply specify `'environs': ['default']`,
-  since ReFrame requires that *a* default environment is defined. 
+  A programming environment is always required, even if no no compilation
+  (or specific programming environment) is needed, as is the case for the EESSI test suite which only tests existing software installations.
+  By default, the EESSI test suite adds the available EESSI modules (e.g. `EESSI/2025.6`) as environments.
+  To test a local software stack, we can add the names of local *programming environments* (to be defined
+  later in the configuration file via [`environments`](#environments)) that may be used on this partition. 
 - [`max_jobs`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.max_jobs):
   The maximum amount of jobs ReFrame is allowed to submit in parallel. Some batch systems limit how many jobs users
   are allowed to have in the queue. You can use this to make sure ReFrame doesn't exceed that limit.
 - [`resources`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#custom-job-scheduler-resources):
-  This field defines how additional resources can be requested in a batch job. Specifically, on a GPU partition,
-  you have to define a resource with the name '`_rfm_gpu`'. The `options` field should then contain the argument to be
-  passed to the batch scheduler in order to request a certain number of GPUs _per node_, which could be different for
-  different batch schedulers. For example, when using Slurm you would specify:
-  ```python
-  'resources': [
-    {
-        'name': '_rfm_gpu',
-        'options': ['--gpus-per-node={num_gpus_per_node}'],
-    },
-  ],
-  ```
+  This field should *NOT* be defined, as it is already defined by the `set_common_required_config` function of the EESSI test suite, see below.
 - [`processor`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.processor):
   We recommend to *NOT* define this field, unless [CPU autodetection](#cpu-auto-detection) is not working for you.
   The EESSI test suite relies on information about your processor topology to run. Using CPU autodetection is the
@@ -309,7 +234,7 @@ The most common configuration items defined at this level are:
       'num_sockets': 2,  # Number of sockets in a node
       'num_cpus_per_socket': 32,  # Number of CPU cores per socket
       'num_cpus_per_core': 1,  # Number of hardware threads per CPU core
-  }                 
+  }
   ```
 - [`features`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.features):
   The `features` field is used by the EESSI test suite to run tests _only_ on a partition if it supports a certain
@@ -343,10 +268,11 @@ The most common configuration items defined at this level are:
   }
   ```
 - [`extras`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.extras): This field specifies extra information on the partition, such as the GPU vendor. Valid fields for `extras` are standardized as constants in [`eessi.testsuite.constants`](https://github.com/EESSI/test-suite/blob/main/eessi/testsuite/constants.py) (for example `EXTRAS.GPU_VENDOR`). This is used by the EESSI test suite to decide if a partition can run a test that _specifically_ requires a certain brand of GPU.
-  Typically, there is no need to define `extras` for CPU partitions.
+  `EXTRAS.MEM_PER_NODE` is a required field for `extras`. It specifies the maximum amount of memory per node that can be requested for any test job on the partition.
   For GPU partitions, you typically want to specify the GPU vendor, for example:
   ```python
   'extras': {
+      EXTRAS.MEM_PER_NODE: 229376  # in MiB
       EXTRAS.GPU_VENDOR: GPU_VENDORS.NVIDIA
   }
   ```
@@ -364,14 +290,14 @@ Note that as more tests are added to the EESSI test suite, the use of `features`
 
 ### Environments { #environments }
 
-ReFrame needs a programming environment to be defined in its configuration file for tests that need to be compiled before they are run. While we don't have such tests in the EESSI test suite, ReFrame requires _some_ programming environment to be defined:
+ReFrame needs a programming environment to be defined in its configuration file for tests that need to be compiled before they are run. While we currently don't have such tests in the EESSI test suite, ReFrame requires _some_ programming environment to be defined. By default, the EESSI modules are added as environments for testing the EESSI stack. If additional `environs` are set for a partition, they must be defined here, for example:
 
 ```python
 site_configuration = {
     ...
     'environments': [
         {
-            'name': 'default',  # Note: needs to match whatever we set for 'environs' in the partition
+            'name': 'local_environ',  # Note: needs to match whatever we set for 'environs' in the partition
             'cc': 'cc',
             'cxx': '',
             'ftn': '',
@@ -404,6 +330,15 @@ regular ReFrame logs will all end up in the directory specified by `$RFM_PREFIX`
 Alternatively, a prefix can be passed as an argument like `common_logging_config(prefix)`, which will control where
 the regular ReFrame log ends up. Note that the performance logs do *not* respect this prefix: they will still end up
 in the standard ReFrame prefix (by default the current directory, unless otherwise set with `$RFM_PREFIX` or `--prefix`).
+
+### Common required configuration
+
+After defining the `site_configuration` dictionary, we run the `set_common_required_config` function to update the
+dictionary with required configuration options:
+
+```python
+set_common_required_config(site_configuration)
+```
 
 ### Auto-detection of processor information { #cpu-auto-detection }
 

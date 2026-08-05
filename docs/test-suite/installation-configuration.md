@@ -9,24 +9,29 @@ This page covers the requirements, installation and configuration of the [EESSI 
 The EESSI test suite requires 
 
 * Python >= 3.7
-* [ReFrame](https://reframe-hpc.readthedocs.io) v4.3.3 (or newer)
-* [ReFrame test library (`hpctestlib`)](https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html)
+* [ReFrame](https://reframe-hpc.readthedocs.io) v4.3.3 or newer (ReFrame v4.10 requires Python >= 3.10)
 * (optionally) [EasyBuild](https://easybuild.io/)
 
 ??? note "(If your system Python version is lower than the minimum required version, click here for some tips)"
 
-    * You can upgrade and manage python versions using `pyenv`. [Link](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+    * You can upgrade and manage Python versions using [`pyenv`](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation).
         * For installation follow the documentation in the repository using the link above.
         * Then follow the steps to install a new Python version and further change local paths to the new Python:
 
                 pyenv install <python version number>
                 pyenv local <python version number>
 
+    * You can upgrade and manage Python versions using [`uv`](https://docs.astral.sh/uv/guides/install-python/).
     * You can install a more recent version of Python on top of the GCC/GCCcore compiler.
     * You can install a ReFrame module with EasyBuild and a [ReFrame easyconfig](https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/r/ReFrame) containing a more recent Python version.
     * Set RFM_PURGE_ENVIRONMENT=1 if you use Python from a module. The ReFrame easyconfigs automatically do that for you.
 
-??? note EasyBuild is needed for certain tests (e.g. BLAS) that need to load multiple modules together. EasyBuilds functionality is used in these cases to finding matching-pairs of modules. If EasyBuild is not available, a warning will be printed and the tests requiring this functionality will be skipped.
+??? note "(For more info about the optional EasyBuild requirement, click here)"
+
+    EasyBuild is needed for certain tests (e.g. BLAS) that need to load
+    multiple modules together. EasyBuild’s functionality is used in these cases
+    to find matching-pairs of modules. If EasyBuild is not available, a warning
+    will be printed and the tests requiring this functionality will be skipped.
 
 #### Installing Reframe
 
@@ -51,25 +56,6 @@ reframe --version
       with `pip` or `EasyBuild` (as is also the case for the ReFrame shipped with EESSI)
       (see [ReFrame issue #2914](https://github.com/reframe-hpc/reframe/issues/2914)).
   
-
-#### Installing ReFrame test library (`hpctestlib`)
-
-The EESSI test suite requires that the ReFrame test library (`hpctestlib`) is available, which is currently not included in a standard installation of ReFrame.
-
-We recommend installing ReFrame using [EasyBuild](https://easybuild.io/) (version 4.8.1, or newer), or using a ReFrame installation that is available in the EESSI repository (version 2023.06, or newer).
-
-For example (using EESSI):
-
-```bash
-source /cvmfs/software.eessi.io/versions/2023.06/init/bash
-module load ReFrame/4.3.3
-```
-
-To check whether the ReFrame test library is available, try importing a submodule of the `hpctestlib` Python package:
-
-```bash
-python3 -c 'import hpctestlib.sciapps.gromacs'
-```
 
 ## Installation { #installation }
 
