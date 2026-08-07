@@ -106,6 +106,7 @@ plugins:
   # see also https://mkdocs-macros-plugin.readthedocs.io/en/latest/macros/
   - macros:
       module_name: docs/available_software/macros
+      enabled: !ENV [CI, false]
   - redirects:
       redirect_maps:
         # useful easy-to-remember short URLs, don't remove these!
@@ -156,7 +157,8 @@ plugins:
         tutorial/configuration_hpc.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/configuration_hpc.md
         tutorial/creating-repo.md: training-events/2025/tutorial-best-practices-cvmfs-hpc/creating-repo.md
   # Enable our custom plugin for json-ld metadata
-  - inject_ld_json
+  - inject_ld_json:
+      enabled: !ENV [CI, false]
     # link to any Markdown heading
   - autorefs
     # api automatics documentation
