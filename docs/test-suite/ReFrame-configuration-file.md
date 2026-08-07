@@ -290,7 +290,7 @@ Note that as more tests are added to the EESSI test suite, the use of `features`
 
 ### Environments { #environments }
 
-ReFrame needs a programming environment to be defined in its configuration file for tests that need to be compiled before they are run. While we currently don't have such tests in the EESSI test suite, ReFrame requires _some_ programming environment to be defined. By default, the EESSI modules are added as environments for testing the EESSI stack. If additional `environs` are set for a partition, they must be defined here, for example:
+ReFrame needs a programming environment to be defined in its configuration file for tests that need to be compiled before they are run. While we currently don't have such tests in the EESSI test suite, ReFrame requires _some_ programming environment to be defined. The EESSI modules are already added by default as environments for testing the EESSI stack. If additional `environs` are added to any partition, they must be defined in the `environments` section, for example:
 
 ```python
 site_configuration = {
