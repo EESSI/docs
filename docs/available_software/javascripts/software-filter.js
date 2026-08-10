@@ -6,12 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".software-card");
 
   input.addEventListener("input", () => {
-    const q = input.value.toLowerCase();
+    const q = [...input.value.matchAll(/"([^"]+)"|(\S+)/g)]
+      .map(m => (m[1] || m[2]).toLowerCase());
 
     cards.forEach(card => {
       const li = card.closest("li");
       const text = card.dataset.search.toLowerCase();
-      li.style.display = text.includes(q) ? "" : "none";
+      li.style.display = q.every(term => text.includes(term)) ? "" : "none";
     });
 
     const url = new URL(window.location);
