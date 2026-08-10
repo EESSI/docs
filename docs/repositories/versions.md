@@ -8,8 +8,8 @@ Going forward, EESSI aims to have yearly version releases, which will target a m
 
 ## Current EESSI versions
 
-| EESSI Version       | Included toolchains                    | Software list                                                           |
-| ------------------- | -------------------------------------- | ----------------------------------------------------------------------- |
+| EESSI Version       | Included toolchains                    | Software list                                       |
+| ------------------- | -------------------------------------- | --------------------------------------------------- |
 | 2023.06 (default)   | `foss/2022b` `foss/2023a` `foss/2023b` | [2023.06](../../available_software/?search=2023.06) |
 | 2025.06             | `foss/2024a` `foss/2025a` `foss/2025b` | [2025.06](../../available_software/?search=2025.06) |
 
