@@ -13,6 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const text = card.dataset.search.toLowerCase();
       li.style.display = text.includes(q) ? "" : "none";
     });
-  });
-});
 
+    const url = new URL(window.location);
+    if (input.value) {
+      url.searchParams.set("search", input.value);
+    } else {
+      url.searchParams.delete("search");
+    }
+    history.replaceState(null, "", url);
+  });
+
+  const search = new URLSearchParams(window.location.search).get("search");
+  if (search) {
+    input.value = search;
+    input.dispatchEvent(new Event("input"));
+  }
+});
