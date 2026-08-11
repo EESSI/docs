@@ -148,6 +148,7 @@ site_configuration = {
                     ],
                     'launcher': 'mpirun',
                     'access':  ['-p cpu'],
+                    # Optionally specify additional (local) environments here
                     # 'environs': ['local_environ'],
                     'max_jobs': 4,
                     'features': [
@@ -168,6 +169,7 @@ site_configuration = {
                     ],
                     'launcher': 'mpirun',
                     'access':  ['-p gpu'],
+                    # Optionally specify additional (local) environments here
                     # 'environs': ['local_environ'],
                     'max_jobs': 4,
                     'devices': [
@@ -211,11 +213,10 @@ The most common configuration items defined at this level are:
 - [`prepare_cmds`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.prepare_cmds):
   Commands to execute at the start of every job that runs a test, such as making the EESSI-installed version of Lmod available.
 - [`environs`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.environs):
-  A programming environment is always required, even if no no compilation
-  (or specific programming environment) is needed, as is the case for the EESSI test suite which only tests existing software installations.
-  By default, the EESSI test suite adds the available EESSI modules (e.g. `EESSI/2025.6`) as environments.
-  To test a local software stack, we can add the names of local *programming environments* (to be defined
-  later in the configuration file via [`environments`](#environments)) that may be used on this partition. 
+  The names of optional additional environments (to be defined later in the configuration file via [`environments`](#environments))
+  ReFrame requires each test to run in a specific environment. The EESSI test suite automatically adds the available
+  EESSI modules as environments (e.g. `EESSI-2025.6`) to each partition. We can also add custom environments (e.g. a local
+  environment for testing a locally installed software stack).
 - [`max_jobs`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.max_jobs):
   The maximum amount of jobs ReFrame is allowed to submit in parallel. Some batch systems limit how many jobs users
   are allowed to have in the queue. You can use this to make sure ReFrame doesn't exceed that limit.
@@ -297,7 +298,7 @@ site_configuration = {
     ...
     'environments': [
         {
-            'name': 'local_environ',  # Note: needs to match whatever we set for 'environs' in the partition
+            'name': 'local_environ',  # Note: needs to be listed in the partition's `environs` section
             'cc': 'cc',
             'cxx': '',
             'ftn': '',
