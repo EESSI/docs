@@ -235,6 +235,13 @@ $ module av
     | `EESSI_MODULE_FAMILY_NAME` | Name of the family applied to the EESSI module (default EESSI); affects family conflicts. |
     | `EESSI_MODULE_STICKY` | When set to 1, enables sticky behavior of the EESSI module. |
 
+    ### EESSI-extend
+
+    | Environment variable | Description |
+    |-----------------------|------------------------|
+    | `EESSI_EASYBUILD_HOOKS_OVERRIDE` | By default, EESSI-extend uses the same EasyBuild hooks that are used by EESSI for upstream builds. Setting this override will configure EasyBuild to use the hooks at `EESSI_EASYBUILD_HOOKS_OVERRIDE` instead. Can e.g. be used to prepend to the default EESSI hooks. |
+
+
 
 ??? tip "The accelerator modules are visible but I can't load them"
 
