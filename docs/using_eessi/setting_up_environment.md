@@ -239,7 +239,7 @@ $ module av
 
     | Environment variable | Description |
     |-----------------------|------------------------|
-    | `EESSI_EASYBUILD_HOOKS_OVERRIDE` | By default, EESSI-extend uses the same EasyBuild hooks that are used by EESSI for upstream builds. Setting this override will configure EasyBuild to use the hooks at `EESSI_EASYBUILD_HOOKS_OVERRIDE` instead. Can e.g. be used to prepend to the default EESSI's default hooks. |
+    | `EESSI_EASYBUILD_HOOKS_OVERRIDE` | By default, EESSI-extend uses the same EasyBuild hooks that are used by EESSI for upstream builds. Setting this override will configure EasyBuild to use the hooks at `EESSI_EASYBUILD_HOOKS_OVERRIDE` instead. Can e.g. be used to prepend to the default EESSI hooks. |
 
 
 
