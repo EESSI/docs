@@ -57,3 +57,15 @@ jobs:
 
     - name: build tutorial
       run: make test
+
+    # The disclaimer is injected by overrides/partials/copyright.html, which
+    # depends on mkdocs-material including that partial in the page footer. A
+    # theme update that drops the include leaves the build green but silently
+    # removes the disclaimer, so assert it reaches every rendered post.
+    - name: check blog post disclaimer is rendered
+      run: |
+          posts=$(find site/blog -name index.html | grep -cE "/blog/20[0-9]{2}/[0-9]{2}/[0-9]{2}/")
+          marked=$(grep -rl data-eessi-blog-disclaimer site/blog --include=index.html | grep -cE "/blog/20[0-9]{2}/[0-9]{2}/[0-9]{2}/")
+          echo "blog posts: $posts, with disclaimer: $marked"
+          test "$posts" -gt 0
+          test "$posts" -eq "$marked"
