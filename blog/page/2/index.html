@@ -5960,6 +5960,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#eessi-on-kubernetes-a-proof-of-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EESSI on Kubernetes: A Proof of Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#github-cicd-workflows-with-eessi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6052,17 +6063,6 @@
     <span class="md-ellipsis">
       
         GPU Support in EESSI: From Zero to Science in Seconds
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-in-the-eurohpc-federation-platform" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integration in the EuroHPC Federation Platform
       
     </span>
   </a>
@@ -6104,6 +6104,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#eessi-on-kubernetes-a-proof-of-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EESSI on Kubernetes: A Proof of Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#github-cicd-workflows-with-eessi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6202,17 +6213,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#integration-in-the-eurohpc-federation-platform" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Integration in the EuroHPC Federation Platform
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6227,6 +6227,54 @@
       <header class="md-typeset">
         <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/34096612?v=4" alt="Davide Grassano">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-12-05 00:00:00+00:00">December 5, 2025</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="eessi-on-kubernetes-a-proof-of-concept"><a class="toclink" href="../../2025/12/05/EESSI-on-K8s-PoC/">EESSI on Kubernetes: A Proof of Concept</a></h2>
+<p><a href="https://kubernetes.io/">Kubernetes</a>, also known as K8s, is an open-source container orchestration platform widely used for automating the deployment, scaling, and management of containerized applications.
+Normally, deploying a specific application on Kubernetes requires preparing a container image including the target software and all its dependencies.
+Furthermore, the software should be optimized depending on the target hardware architecture to achieve the best performance, which could prove particularly challenging especially on heterogeneous systems.
+Implementing an integration of EESSI with Kubernetes will allow the many sites and enterprises that already use K8s to more easily get access to a wide variety of optimized software installations.</p>
+<p>In this blog post, we present a proof of concept (PoC) for deploying EESSI on a Kubernetes cluster.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2025/12/05/EESSI-on-K8s-PoC/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -6727,60 +6775,6 @@ This document is the result of our recent efforts to prepare for adding ROCm sup
     
       <nav class="md-post__action">
         <a href="../../2025/03/24/gpu-support-in-eessi/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/620876?v=4" alt="Kenneth Hoste">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-02-10 00:00:00+00:00">February 10, 2025</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="integration-in-the-eurohpc-federation-platform"><a class="toclink" href="../../2025/02/10/integration-efp/">Integration in the EuroHPC Federation Platform</a></h2>
-<p>A couple of weeks ago the EuroHPC Joint Undertaking (EuroHPC JU) <a href="https://eurohpc-ju.europa.eu/paving-way-eurohpc-federation-platform-2024-12-19_en">announced the consortium that will develop the
-<strong>EuroHPC Federation Platform (EFP)</strong></a>.</p>
-<p>This ambitious effort will deliver a 'one-stop shop' for researchers using the EuroHPC supercomputers,
-as well as the upcoming EuroHPC AI Factories and quantum computers, built with open source software.</p>
-<figure>
-<img alt="EuroHPC JU logo" src="../../2025/02/eurohpc-ju-logo.webp" width="70%" />
-</figure>
-<p>Ghent University is part of this consortium to <strong>integrate EESSI into the EuroHPC Federation Platform</strong> as common software stack.</p>
-<p>Henrik Nortamo (CSC), the technical lead of the EFP consortium, gave an excellent 20-minute talk on EFP
-last weekend in the 10th <em>HPC, Big Data, and Data Science</em> devroom at FOSDEM'25 in Brussels.
-<strong>Slides and recording of the talk are available <a href="https://fosdem.org/2025/schedule/event/fosdem-2025-6718-eurohpc-fp-a-federated-platform-for-hpc-infrastructure-in-europe-built-with-open-source-software/">here</a>.</strong></p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2025/02/10/integration-efp/">
           Continue reading
         </a>
       </nav>

@@ -5962,6 +5962,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#chasing-a-nan-correct-rvv-hpl-on-a-risc-v-spacemit-x60-through-eessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chasing a NaN: correct RVV HPL on a RISC-V SpaceMiT X60, through EESSI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-activities-at-isc26" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6054,17 +6065,6 @@
     <span class="md-ellipsis">
       
         Using Spack on top of EESSI: A Proof of Concept
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eessi-on-kubernetes-a-proof-of-concept" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EESSI on Kubernetes: A Proof of Concept
       
     </span>
   </a>
@@ -6106,6 +6106,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#chasing-a-nan-correct-rvv-hpl-on-a-risc-v-spacemit-x60-through-eessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chasing a NaN: correct RVV HPL on a RISC-V SpaceMiT X60, through EESSI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-activities-at-isc26" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6204,17 +6215,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#eessi-on-kubernetes-a-proof-of-concept" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EESSI on Kubernetes: A Proof of Concept
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6229,6 +6229,52 @@
       <header class="md-typeset">
         <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/32266151?v=4" alt="Hugo Meiland">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-07-12 00:00:00+00:00">July 12, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              8 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="chasing-a-nan-correct-rvv-hpl-on-a-risc-v-spacemit-x60-through-eessi"><a class="toclink" href="2026/07/12/risc-v-x60-openblas-hpl/">Chasing a NaN: correct RVV HPL on a RISC-V SpaceMiT X60, through EESSI</a></h2>
+<p><em>A fresh-install, end-to-end walkthrough on an Orange Pi RV2: reproduce a silent </em><em>NaN
+failure</em><em> in the stock EESSI HPL, trace it to one RISC-V vector kernel, and fix it —
+correct results — with a single <code>eb --from-pr</code>.</em></p>
+
+    
+      <nav class="md-post__action">
+        <a href="2026/07/12/risc-v-x60-openblas-hpl/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -6675,54 +6721,6 @@ and leveraging software installations from EESSI for all required dependencies, 
     
       <nav class="md-post__action">
         <a href="2026/01/09/Spack-on-top-of-EESSI-PoC/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/34096612?v=4" alt="Davide Grassano">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-12-05 00:00:00+00:00">December 5, 2025</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="eessi-on-kubernetes-a-proof-of-concept"><a class="toclink" href="2025/12/05/EESSI-on-K8s-PoC/">EESSI on Kubernetes: A Proof of Concept</a></h2>
-<p><a href="https://kubernetes.io/">Kubernetes</a>, also known as K8s, is an open-source container orchestration platform widely used for automating the deployment, scaling, and management of containerized applications.
-Normally, deploying a specific application on Kubernetes requires preparing a container image including the target software and all its dependencies.
-Furthermore, the software should be optimized depending on the target hardware architecture to achieve the best performance, which could prove particularly challenging especially on heterogeneous systems.
-Implementing an integration of EESSI with Kubernetes will allow the many sites and enterprises that already use K8s to more easily get access to a wide variety of optimized software installations.</p>
-<p>In this blog post, we present a proof of concept (PoC) for deploying EESSI on a Kubernetes cluster.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="2025/12/05/EESSI-on-K8s-PoC/">
           Continue reading
         </a>
       </nav>

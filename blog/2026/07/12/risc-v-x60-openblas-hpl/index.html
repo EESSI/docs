@@ -8,28 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://eessi.github.io/docs/testsuite_api/eessi/testsuite/tests/apps/cp2k/src/__init__/">
+        <link rel="canonical" href="https://eessi.github.io/docs/blog/2026/07/12/risc-v-x60-openblas-hpl/">
       
       
-        <link rel="prev" href="../../cp2k/">
+        <link rel="prev" href="../../../06/26/eessi-at-isc26/">
       
-      
-        <link rel="next" href="../QS/__init__/">
       
       
         
       
       
-      <link rel="icon" href="../../../../../../../../img/logos/EESSI.png">
+      <link rel="icon" href="../../../../../img/logos/EESSI.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>src - European Environment for Scientific Software Installations (EESSI)</title>
+        <title>Chasing a NaN: correct RVV HPL on a RISC-V SpaceMiT X60, through EESSI - European Environment for Scientific Software Installations (EESSI)</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -48,15 +46,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     
-      <link rel="stylesheet" href="../../../../../../../../available_software/css/software.css">
+      <link rel="stylesheet" href="../../../../../available_software/css/software.css">
     
       <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.cssoftwares">
     
-    <script>__md_scope=new URL("../../../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eessi.testsuite.tests.apps.cp2k.src" class="md-skip">
+        <a href="#chasing-a-nan-correct-rvv-hpl-on-a-risc-v-spacemit-x60-through-eessi" class="md-skip">
           Skip to content
         </a>
       
@@ -90,9 +88,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../../../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+    <a href="../../../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
       
-  <img src="../../../../../../../../img/logos/EESSI.png" alt="logo">
+  <img src="../../../../../img/logos/EESSI.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              src
+              Chasing a NaN: correct RVV HPL on a RISC-V SpaceMiT X60, through EESSI
             
           </span>
         </div>
@@ -190,7 +188,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -199,9 +199,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../../../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
+    <a href="../../../../.." title="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" aria-label="European Environment for Scientific Software Installations (EESSI)" data-md-component="logo">
       
-  <img src="../../../../../../../../img/logos/EESSI.png" alt="logo">
+  <img src="../../../../../img/logos/EESSI.png" alt="logo">
 
     </a>
     European Environment for Scientific Software Installations (EESSI)
@@ -228,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -302,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../overview/" class="md-nav__link">
+      <a href="../../../../../overview/" class="md-nav__link">
         
   
   
@@ -330,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../filesystem_layer/" class="md-nav__link">
+      <a href="../../../../../filesystem_layer/" class="md-nav__link">
         
   
   
@@ -358,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../compatibility_layer/" class="md-nav__link">
+      <a href="../../../../../compatibility_layer/" class="md-nav__link">
         
   
   
@@ -386,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../software_layer/" class="md-nav__link">
+      <a href="../../../../../software_layer/" class="md-nav__link">
         
   
   
@@ -414,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../software_layer/cpu_targets/" class="md-nav__link">
+      <a href="../../../../../software_layer/cpu_targets/" class="md-nav__link">
         
   
   
@@ -442,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../software_layer/gpu_targets/" class="md-nav__link">
+      <a href="../../../../../software_layer/gpu_targets/" class="md-nav__link">
         
   
   
@@ -524,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../available_software/" class="md-nav__link">
+      <a href="../../../../../available_software/" class="md-nav__link">
         
   
   
@@ -552,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../available_software_riscv/" class="md-nav__link">
+      <a href="../../../../../available_software_riscv/" class="md-nav__link">
         
   
   
@@ -681,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../repositories/software.eessi.io/" class="md-nav__link">
+      <a href="../../../../../repositories/software.eessi.io/" class="md-nav__link">
         
   
   
@@ -709,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../repositories/versions/" class="md-nav__link">
+      <a href="../../../../../repositories/versions/" class="md-nav__link">
         
   
   
@@ -745,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../repositories/dev.eessi.io-riscv/" class="md-nav__link">
+      <a href="../../../../../repositories/dev.eessi.io-riscv/" class="md-nav__link">
         
   
   
@@ -773,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../repositories/dev.eessi.io/" class="md-nav__link">
+      <a href="../../../../../repositories/dev.eessi.io/" class="md-nav__link">
         
   
   
@@ -855,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../getting_access/is_eessi_accessible/" class="md-nav__link">
+      <a href="../../../../../getting_access/is_eessi_accessible/" class="md-nav__link">
         
   
   
@@ -883,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../getting_access/native_installation/" class="md-nav__link">
+      <a href="../../../../../getting_access/native_installation/" class="md-nav__link">
         
   
   
@@ -911,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../getting_access/eessi_container/" class="md-nav__link">
+      <a href="../../../../../getting_access/eessi_container/" class="md-nav__link">
         
   
   
@@ -986,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../getting_access/eessi_wsl/" class="md-nav__link">
+      <a href="../../../../../getting_access/eessi_wsl/" class="md-nav__link">
         
   
   
@@ -1014,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../getting_access/eessi_limactl/" class="md-nav__link">
+      <a href="../../../../../getting_access/eessi_limactl/" class="md-nav__link">
         
   
   
@@ -1042,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../getting_access/eessi_Apple_container_tool/" class="md-nav__link">
+      <a href="../../../../../getting_access/eessi_Apple_container_tool/" class="md-nav__link">
         
   
   
@@ -1125,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../site_specific_config/host_injections/" class="md-nav__link">
+      <a href="../../../../../site_specific_config/host_injections/" class="md-nav__link">
         
   
   
@@ -1153,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../site_specific_config/gpu/" class="md-nav__link">
+      <a href="../../../../../site_specific_config/gpu/" class="md-nav__link">
         
   
   
@@ -1181,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../site_specific_config/lmod_hooks/" class="md-nav__link">
+      <a href="../../../../../site_specific_config/lmod_hooks/" class="md-nav__link">
         
   
   
@@ -1271,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../using_eessi/setting_up_environment/" class="md-nav__link">
+      <a href="../../../../../using_eessi/setting_up_environment/" class="md-nav__link">
         
   
   
@@ -1299,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../using_eessi/basic_commands/" class="md-nav__link">
+      <a href="../../../../../using_eessi/basic_commands/" class="md-nav__link">
         
   
   
@@ -1327,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../using_eessi/eessi_demos/" class="md-nav__link">
+      <a href="../../../../../using_eessi/eessi_demos/" class="md-nav__link">
         
   
   
@@ -1355,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../using_eessi/eessi_in_ci/" class="md-nav__link">
+      <a href="../../../../../using_eessi/eessi_in_ci/" class="md-nav__link">
         
   
   
@@ -1387,20 +1387,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1421,7 +1419,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1439,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../filesystem_layer/stratum1/" class="md-nav__link">
+      <a href="../../../../../filesystem_layer/stratum1/" class="md-nav__link">
         
   
   
@@ -1467,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../using_eessi/building_on_eessi/" class="md-nav__link">
+      <a href="../../../../../using_eessi/building_on_eessi/" class="md-nav__link">
         
   
   
@@ -1492,20 +1490,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
         
           
           <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
@@ -1526,7 +1522,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1544,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../test-suite/" class="md-nav__link">
+      <a href="../../../../../test-suite/" class="md-nav__link">
         
   
   
@@ -1572,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../test-suite/installation-configuration/" class="md-nav__link">
+      <a href="../../../../../test-suite/installation-configuration/" class="md-nav__link">
         
   
   
@@ -1600,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../test-suite/ReFrame-configuration-file/" class="md-nav__link">
+      <a href="../../../../../test-suite/ReFrame-configuration-file/" class="md-nav__link">
         
   
   
@@ -1628,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../test-suite/usage/" class="md-nav__link">
+      <a href="../../../../../test-suite/usage/" class="md-nav__link">
         
   
   
@@ -1656,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../test-suite/available-tests/" class="md-nav__link">
+      <a href="../../../../../test-suite/available-tests/" class="md-nav__link">
         
   
   
@@ -1684,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../test-suite/writing-portable-tests/" class="md-nav__link">
+      <a href="../../../../../test-suite/writing-portable-tests/" class="md-nav__link">
         
   
   
@@ -1712,7 +1708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../test-suite/release-notes/" class="md-nav__link">
+      <a href="../../../../../test-suite/release-notes/" class="md-nav__link">
         
   
   
@@ -1737,20 +1733,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8" >
         
           
           <label class="md-nav__link" for="__nav_7_3_8" id="__nav_7_3_8_label" tabindex="0">
@@ -1771,7 +1765,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_3_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1786,24 +1780,22 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../../__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/__init__/" class="md-nav__link ">
               
   
   
@@ -1827,7 +1819,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_3_8_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_7_3_8_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_8_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1842,24 +1834,22 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../../__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/__init__/" class="md-nav__link ">
               
   
   
@@ -1883,7 +1873,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_3_8_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_7_3_8_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_8_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1901,7 +1891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../common_config/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/common_config/" class="md-nav__link">
         
   
   
@@ -1929,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../constants/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/constants/" class="md-nav__link">
         
   
   
@@ -1957,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../eessi_mixin/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/eessi_mixin/" class="md-nav__link">
         
   
   
@@ -1985,7 +1975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../hooks/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/hooks/" class="md-nav__link">
         
   
   
@@ -2010,24 +2000,22 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1_5" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/__init__/" class="md-nav__link ">
               
   
   
@@ -2051,7 +2039,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_7_3_8_1_1_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="6" aria-labelledby="__nav_7_3_8_1_1_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_8_1_1_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2066,24 +2054,22 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1_5_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/__init__/" class="md-nav__link ">
               
   
   
@@ -2107,7 +2093,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="7" aria-labelledby="__nav_7_3_8_1_1_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="7" aria-labelledby="__nav_7_3_8_1_1_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_8_1_1_5_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2125,7 +2111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MetalWalls/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/MetalWalls/" class="md-nav__link">
         
   
   
@@ -2165,7 +2151,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../PyTorch/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/__init__/" class="md-nav__link ">
               
   
   
@@ -2207,7 +2193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PyTorch/PyTorch_torchvision/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/PyTorch_torchvision/" class="md-nav__link">
         
   
   
@@ -2247,7 +2233,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../PyTorch/src/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/src/__init__/" class="md-nav__link ">
               
   
   
@@ -2289,7 +2275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PyTorch/src/get_free_socket/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/src/get_free_socket/" class="md-nav__link">
         
   
   
@@ -2317,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PyTorch/src/pytorch_synthetic_benchmark/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/src/pytorch_synthetic_benchmark/" class="md-nav__link">
         
   
   
@@ -2361,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../QuantumESPRESSO/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/QuantumESPRESSO/" class="md-nav__link">
         
   
   
@@ -2386,24 +2372,22 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1_5_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1_5_1_4" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/cp2k/__init__/" class="md-nav__link ">
               
   
   
@@ -2427,7 +2411,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="8" aria-labelledby="__nav_7_3_8_1_1_5_1_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="8" aria-labelledby="__nav_7_3_8_1_1_5_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_8_1_1_5_1_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2445,7 +2429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cp2k/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/cp2k/cp2k/" class="md-nav__link">
         
   
   
@@ -2470,24 +2454,22 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1_5_1_4_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3_8_1_1_5_1_4_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/cp2k/src/__init__/" class="md-nav__link ">
               
   
   
@@ -2505,13 +2487,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_7_3_8_1_1_5_1_4_2" id="__nav_7_3_8_1_1_5_1_4_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7_3_8_1_1_5_1_4_2" id="__nav_7_3_8_1_1_5_1_4_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="9" aria-labelledby="__nav_7_3_8_1_1_5_1_4_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="9" aria-labelledby="__nav_7_3_8_1_1_5_1_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7_3_8_1_1_5_1_4_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2529,7 +2511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QS/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/cp2k/src/QS/__init__/" class="md-nav__link">
         
   
   
@@ -2585,7 +2567,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../espresso/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/__init__/" class="md-nav__link ">
               
   
   
@@ -2627,7 +2609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../espresso/espresso/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/espresso/" class="md-nav__link">
         
   
   
@@ -2667,7 +2649,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../espresso/src/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/__init__/" class="md-nav__link ">
               
   
   
@@ -2721,7 +2703,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../espresso/src/lb/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/lb/__init__/" class="md-nav__link ">
               
   
   
@@ -2763,7 +2745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../espresso/src/lb/lb/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/lb/lb/" class="md-nav__link">
         
   
   
@@ -2811,7 +2793,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../espresso/src/lj/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/lj/__init__/" class="md-nav__link ">
               
   
   
@@ -2853,7 +2835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../espresso/src/lj/lj/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/lj/lj/" class="md-nav__link">
         
   
   
@@ -2901,7 +2883,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../espresso/src/p3m/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/p3m/__init__/" class="md-nav__link ">
               
   
   
@@ -2943,7 +2925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../espresso/src/p3m/madelung/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/p3m/madelung/" class="md-nav__link">
         
   
   
@@ -2995,7 +2977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gromacs/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/gromacs/" class="md-nav__link">
         
   
   
@@ -3035,7 +3017,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lammps/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lammps/__init__/" class="md-nav__link ">
               
   
   
@@ -3077,7 +3059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lammps/lammps/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lammps/lammps/" class="md-nav__link">
         
   
   
@@ -3117,7 +3099,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lammps/src/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/__init__/" class="md-nav__link ">
               
   
   
@@ -3171,7 +3153,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lammps/src/ALL%2BOBMD/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/ALL%2BOBMD/__init__/" class="md-nav__link ">
               
   
   
@@ -3213,7 +3195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lammps/src/ALL%2BOBMD/generate_obmd_input/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/ALL%2BOBMD/generate_obmd_input/" class="md-nav__link">
         
   
   
@@ -3249,7 +3231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lammps/src/lj/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/lj/__init__/" class="md-nav__link">
         
   
   
@@ -3277,7 +3259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lammps/src/rhodo/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/rhodo/__init__/" class="md-nav__link">
         
   
   
@@ -3333,7 +3315,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lbmpy-pssrt/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lbmpy-pssrt/__init__/" class="md-nav__link ">
               
   
   
@@ -3375,7 +3357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lbmpy-pssrt/lbmpy-pssrt/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lbmpy-pssrt/lbmpy-pssrt/" class="md-nav__link">
         
   
   
@@ -3415,7 +3397,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lbmpy-pssrt/src/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lbmpy-pssrt/src/__init__/" class="md-nav__link ">
               
   
   
@@ -3457,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lbmpy-pssrt/src/mixing_layer_2D/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lbmpy-pssrt/src/mixing_layer_2D/" class="md-nav__link">
         
   
   
@@ -3513,7 +3495,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lpc3d/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lpc3d/__init__/" class="md-nav__link ">
               
   
   
@@ -3555,7 +3537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lpc3d/lpc3d/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/lpc3d/lpc3d/" class="md-nav__link">
         
   
   
@@ -3603,7 +3585,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../numpy/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/numpy/__init__/" class="md-nav__link ">
               
   
   
@@ -3645,7 +3627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../numpy/numpy/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/numpy/numpy/" class="md-nav__link">
         
   
   
@@ -3685,7 +3667,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../numpy/src/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/numpy/src/__init__/" class="md-nav__link ">
               
   
   
@@ -3727,7 +3709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../numpy/src/np_ops/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/numpy/src/np_ops/" class="md-nav__link">
         
   
   
@@ -3783,7 +3765,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../openfoam/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/__init__/" class="md-nav__link ">
               
   
   
@@ -3825,7 +3807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openfoam/openfoam/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/openfoam/" class="md-nav__link">
         
   
   
@@ -3865,7 +3847,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../openfoam/src/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/__init__/" class="md-nav__link ">
               
   
   
@@ -3919,7 +3901,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../openfoam/src/cavity3D/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/__init__/" class="md-nav__link ">
               
   
   
@@ -3961,7 +3943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openfoam/src/cavity3D/1M/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/1M/__init__/" class="md-nav__link">
         
   
   
@@ -3989,7 +3971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openfoam/src/cavity3D/64M/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/64M/__init__/" class="md-nav__link">
         
   
   
@@ -4029,7 +4011,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../openfoam/src/cavity3D/8M/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/__init__/" class="md-nav__link ">
               
   
   
@@ -4083,7 +4065,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../openfoam/src/cavity3D/8M/fixedIter/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedIter/__init__/" class="md-nav__link ">
               
   
   
@@ -4125,7 +4107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openfoam/src/cavity3D/8M/fixedIter/0/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedIter/0/__init__/" class="md-nav__link">
         
   
   
@@ -4153,7 +4135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openfoam/src/cavity3D/8M/fixedIter/constant/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedIter/constant/__init__/" class="md-nav__link">
         
   
   
@@ -4181,7 +4163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openfoam/src/cavity3D/8M/fixedIter/system/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedIter/system/__init__/" class="md-nav__link">
         
   
   
@@ -4217,7 +4199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openfoam/src/cavity3D/8M/fixedTol/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedTol/__init__/" class="md-nav__link">
         
   
   
@@ -4253,7 +4235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../openfoam/src/cavity3D/evalLogCalcFixedIter/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/evalLogCalcFixedIter/" class="md-nav__link">
         
   
   
@@ -4305,7 +4287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../osu/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/osu/" class="md-nav__link">
         
   
   
@@ -4345,7 +4327,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../tensorflow/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/__init__/" class="md-nav__link ">
               
   
   
@@ -4399,7 +4381,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../tensorflow/src/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/src/__init__/" class="md-nav__link ">
               
   
   
@@ -4441,7 +4423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tensorflow/src/mnist_setup/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/src/mnist_setup/" class="md-nav__link">
         
   
   
@@ -4469,7 +4451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tensorflow/src/tf_test/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/src/tf_test/" class="md-nav__link">
         
   
   
@@ -4505,7 +4487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tensorflow/tensorflow/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/tensorflow/" class="md-nav__link">
         
   
   
@@ -4553,7 +4535,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../walberla/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/walberla/__init__/" class="md-nav__link ">
               
   
   
@@ -4595,7 +4577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../walberla/walberla/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/apps/walberla/walberla/" class="md-nav__link">
         
   
   
@@ -4651,7 +4633,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../libs/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/libs/__init__/" class="md-nav__link ">
               
   
   
@@ -4705,7 +4687,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../libs/blas/__init__/" class="md-nav__link ">
+            <a href="../../../../../testsuite_api/eessi/testsuite/tests/libs/blas/__init__/" class="md-nav__link ">
               
   
   
@@ -4747,7 +4729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../libs/blas/blas/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/libs/blas/blas/" class="md-nav__link">
         
   
   
@@ -4775,7 +4757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../libs/blas/src/__init__/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/tests/libs/blas/src/__init__/" class="md-nav__link">
         
   
   
@@ -4827,7 +4809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../utils/" class="md-nav__link">
+      <a href="../../../../../testsuite_api/eessi/testsuite/utils/" class="md-nav__link">
         
   
   
@@ -4934,7 +4916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../known_issues/eessi-2023.06/" class="md-nav__link">
+      <a href="../../../../../known_issues/eessi-2023.06/" class="md-nav__link">
         
   
   
@@ -5024,7 +5006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../adding_software/overview/" class="md-nav__link">
+      <a href="../../../../../adding_software/overview/" class="md-nav__link">
         
   
   
@@ -5099,7 +5081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../adding_software/contribution_policy/" class="md-nav__link">
+      <a href="../../../../../adding_software/contribution_policy/" class="md-nav__link">
         
   
   
@@ -5127,7 +5109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../adding_software/opening_pr/" class="md-nav__link">
+      <a href="../../../../../adding_software/opening_pr/" class="md-nav__link">
         
   
   
@@ -5155,7 +5137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../adding_software/debugging_failed_builds/" class="md-nav__link">
+      <a href="../../../../../adding_software/debugging_failed_builds/" class="md-nav__link">
         
   
   
@@ -5183,7 +5165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../adding_software/adding_development_software/" class="md-nav__link">
+      <a href="../../../../../adding_software/adding_development_software/" class="md-nav__link">
         
   
   
@@ -5266,7 +5248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../bot/" class="md-nav__link">
+      <a href="../../../../../bot/" class="md-nav__link">
         
   
   
@@ -5294,7 +5276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../adding_software/building_software/" class="md-nav__link">
+      <a href="../../../../../adding_software/building_software/" class="md-nav__link">
         
   
   
@@ -5322,7 +5304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../adding_software/deploying_software/" class="md-nav__link">
+      <a href="../../../../../adding_software/deploying_software/" class="md-nav__link">
         
   
   
@@ -5350,7 +5332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../software_layer/build_nodes/" class="md-nav__link">
+      <a href="../../../../../software_layer/build_nodes/" class="md-nav__link">
         
   
   
@@ -5440,7 +5422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../support/" class="md-nav__link">
+      <a href="../../../../../support/" class="md-nav__link">
         
   
   
@@ -5468,7 +5450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../meetings/" class="md-nav__link">
+      <a href="../../../../../meetings/" class="md-nav__link">
         
   
   
@@ -5496,7 +5478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../talks/" class="md-nav__link">
+      <a href="../../../../../talks/" class="md-nav__link">
         
   
   
@@ -5524,7 +5506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../mailing_list/" class="md-nav__link">
+      <a href="../../../../../mailing_list/" class="md-nav__link">
         
   
   
@@ -5552,7 +5534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../contact/" class="md-nav__link">
+      <a href="../../../../../contact/" class="md-nav__link">
         
   
   
@@ -5587,7 +5569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../training-events/" class="md-nav__link">
+      <a href="../../../../../training-events/" class="md-nav__link">
         
   
   
@@ -5614,7 +5596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../systems/" class="md-nav__link">
+      <a href="../../../../../systems/" class="md-nav__link">
         
   
   
@@ -5641,7 +5623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../roadmap/" class="md-nav__link">
+      <a href="../../../../../roadmap/" class="md-nav__link">
         
   
   
@@ -5715,7 +5697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../governance/" class="md-nav__link">
+      <a href="../../../../../governance/" class="md-nav__link">
         
   
   
@@ -5743,7 +5725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../governance/charter/" class="md-nav__link">
+      <a href="../../../../../governance/charter/" class="md-nav__link">
         
   
   
@@ -5771,7 +5753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../governance/governance/" class="md-nav__link">
+      <a href="../../../../../governance/governance/" class="md-nav__link">
         
   
   
@@ -5799,7 +5781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../governance/policies/" class="md-nav__link">
+      <a href="../../../../../governance/policies/" class="md-nav__link">
         
   
   
@@ -5827,7 +5809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../governance/code_of_conduct/" class="md-nav__link">
+      <a href="../../../../../governance/code_of_conduct/" class="md-nav__link">
         
   
   
@@ -5855,7 +5837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../governance/terms_of_use/" class="md-nav__link">
+      <a href="../../../../../governance/terms_of_use/" class="md-nav__link">
         
   
   
@@ -5883,7 +5865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../../../../governance/steering_committee/" class="md-nav__link">
+      <a href="../../../../../governance/steering_committee/" class="md-nav__link">
         
   
   
@@ -5915,12 +5897,14 @@
       
   
   
+    
+  
   
     
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../../../../blog/" class="md-nav__link">
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   
@@ -5948,7 +5932,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -5956,6 +5942,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -5965,10 +5953,120 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#eessi.testsuite.tests.apps.cp2k.src" class="md-nav__link">
+  <a href="#tldr" class="md-nav__link">
     <span class="md-ellipsis">
       
-        src
+        TL;DR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-board" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The board
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-you-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you need
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-0-get-eessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 0 — Get EESSI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-run-hpl-with-the-stock-stack-a-nan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Run HPL with the stock stack → a NaN
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-the-root-cause-one-rvv-gemv_n-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — The root cause: one RVV gemv_n kernel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-build-the-fixed-openblas-straight-from-the-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Build the fixed OpenBLAS straight from the PR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-swap-it-in-via-flexiblas-and-re-run-passed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Swap it in via FlexiBLAS and re-run → PASSED
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
       
     </span>
   </a>
@@ -5984,53 +6082,347 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              
-              <article class="md-content__inner md-typeset">
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
                 
-                  
-
-
-  
-  
-
-
-  <h1>src</h1>
-
-<div class="doc doc-object doc-module">
-
-
-
-<a id="eessi.testsuite.tests.apps.cp2k.src"></a>
-    <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/32266151?v=4" alt="Hugo Meiland">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Hugo Meiland
+                        
+                      </strong>
+                      <br>
+                      Microsoft
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-07-12 00:00:00+00:00" class="md-ellipsis">July 12, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              8 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
     </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
 
-</div>
+
+
+  
+  
+
+
+<h1 id="chasing-a-nan-correct-rvv-hpl-on-a-risc-v-spacemit-x60-through-eessi">Chasing a NaN: correct RVV HPL on a RISC-V SpaceMiT X60, through EESSI<a class="headerlink" href="#chasing-a-nan-correct-rvv-hpl-on-a-risc-v-spacemit-x60-through-eessi" title="Permanent link">&para;</a></h1>
+<p><em>A fresh-install, end-to-end walkthrough on an Orange Pi RV2: reproduce a silent </em><em>NaN
+failure</em><em> in the stock EESSI HPL, trace it to one RISC-V vector kernel, and fix it —
+correct results — with a single <code>eb --from-pr</code>.</em></p>
+<!-- more -->
+
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The Orange Pi RV2 (SpaceMiT <strong>K1</strong>, eight <strong>X60</strong> cores) is a vector RISC-V board:
+  <strong>RVV 1.0, VLEN=256</strong>. Unlike the scalar SiFive U74, its OpenBLAS <em>already</em> has a mature
+  RVV GEMM kernel (<code>RISCV64_ZVL256B</code>), and the stock EESSI OpenBLAS 0.3.30 is a
+  <code>DYNAMIC_ARCH</code> build that <strong>does</strong> dispatch it on this chip.</li>
+<li>So RVV is engaged out of the box — but the result is <strong>wrong</strong>: stock EESSI <strong>HPL fails
+  with residual <code>nan</code></strong> on the X60. The run even reports a healthy-looking ~8.5 GFLOP/s;
+  only the residual check reveals the answer is garbage.</li>
+<li>The cause is a one-kernel bug in OpenBLAS <strong>0.3.30</strong>'s RVV <code>gemv_n</code> (it zeroes an
+  <strong>uninitialized</strong> vector register). It was fixed upstream in <strong>v0.3.31</strong>
+  (<a href="https://github.com/OpenMathLib/OpenBLAS/pull/5408">OpenMathLib/OpenBLAS#5408</a>). Backporting that single kernel restores correctness:
+  <strong>HPL passes</strong> (residual ~4e-03).</li>
+<li>The fix is packaged for EESSI as an EasyBuild easyconfig + patch
+  (<a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/26444">easybuilders/easybuild-easyconfigs#26444</a>). This post reproduces the whole thing from
+  a clean CVMFS stack: see the NaN, build the fix straight from the PR, swap it in with
+  FlexiBLAS, and watch HPL pass — <strong>without recompiling HPL</strong>.</li>
+</ul>
+<p>Everything below was run on a real Orange Pi RV2, entirely from the EESSI CVMFS stack.</p>
+<h2 id="the-board">The board<a class="headerlink" href="#the-board" title="Permanent link">&para;</a></h2>
+<p>The <a href="http://www.orangepi.org/">Orange Pi RV2</a> (~$50) is built on the SpaceMiT <strong>K1</strong>:
+eight <strong>SpaceMiT X60</strong> cores at ~1.6 GHz, <code>rv64gcv</code> (RVA22-class), <strong>RVV 1.0 with a 256-bit
+vector length</strong> (<code>Zvl256b</code>), 8 GB RAM. It's one of the first affordable multi-core RISC-V
+boards with a <em>ratified-vector</em> unit — which makes it a natural target for a vectorized
+BLAS.</p>
+<p>That is the key difference from the scalar U74 story: here we don't need to <em>write</em> a
+kernel. OpenBLAS already ships a good RVV DGEMM micro-kernel for <code>RISCV64_ZVL256B</code>, and —
+as we'll see — EESSI's OpenBLAS already selects it on this board. The problem is not
+<em>whether</em> RVV runs; it's that the shipped version runs <strong>incorrectly</strong>.</p>
+<h2 id="what-you-need">What you need<a class="headerlink" href="#what-you-need" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A SpaceMiT X60 / K1 board (Orange Pi RV2 here; Banana Pi BPI-F3 and Milk-V Jupiter are
+  the same SoC), 8 GB RAM.</li>
+<li><a href="https://cvmfs.readthedocs.io/">CVMFS</a> + the <a href="https://www.eessi.io/">EESSI</a> software
+  stack, specifically the RISC-V development repository <a href="https://www.eessi.io/docs/repositories/dev.eessi.io-riscv/"><code>dev.eessi.io/riscv</code></a>.</li>
+</ul>
+<p>No compilers, MPI, or BLAS installed by hand — EESSI provides the entire stack.</p>
+<h2 id="step-0-get-eessi">Step 0 — Get EESSI<a class="headerlink" href="#step-0-get-eessi" title="Permanent link">&para;</a></h2>
+<p>If CVMFS + EESSI aren't already present, install them once. A CVMFS client for RISC-V is
+still experimental — tracked in <a href="https://github.com/cvmfs/cvmfs/issues/3441">cvmfs/cvmfs#3441</a>, with Ubuntu/riscv64
+test <code>.deb</code>s published at <a href="https://github.com/vavolkl/cvmfs-riscv/releases/tag/cvmfs-2.14.0-riscv-test"><code>vavolkl/cvmfs-riscv</code></a>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># CVMFS RISC-V client — experimental test packages (see cvmfs/cvmfs#3441)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">rel</span><span class="o">=</span>https://github.com/vavolkl/cvmfs-riscv/releases/download/cvmfs-2.14.0-riscv-test
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>wget<span class="w"> </span><span class="nv">$rel</span>/cvmfs_2.14.0+ubuntu24.04_riscv64.deb<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">     </span><span class="nv">$rel</span>/cvmfs-libs_2.14.0+ubuntu24.04_riscv64.deb<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">     </span><span class="nv">$rel</span>/cvmfs-fuse3_2.14.0+ubuntu24.04_riscv64.deb<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">     </span><span class="nv">$rel</span>/cvmfs-config-default_2.2_all.deb
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>./cvmfs*.deb
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>cvmfs-config-eessi_*_all.deb<span class="w">     </span><span class="c1"># EESSI config (architecture-independent)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>setup
+</code></pre></div>
+<p>Initialize the EESSI environment (the RISC-V stack lives under a version override):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_VERSION_OVERRIDE</span><span class="o">=</span><span class="m">2025</span>.06-001
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2025.06/init/lmod/bash
+</code></pre></div>
+<p>You should land in the EESSI environment, targeting <code>riscv64/generic</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ echo $EESSI_SOFTWARE_SUBDIR
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>riscv64/generic
+</code></pre></div>
+<p>Everything from here is <code>module load</code> — the whole toolchain, MPI, and BLAS come from CVMFS.</p>
+<h2 id="step-1-run-hpl-with-the-stock-stack-a-nan">Step 1 — Run HPL with the stock stack → a NaN<a class="headerlink" href="#step-1-run-hpl-with-the-stock-stack-a-nan" title="Permanent link">&para;</a></h2>
+<p>EESSI ships a ready-to-run HPL; loading it pulls in HPL, OpenMPI, and FlexiBLAS (whose
+default backend is the stock OpenBLAS 0.3.30):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>module<span class="w"> </span>load<span class="w"> </span>HPL/2.3-foss-2025b
+</code></pre></div>
+<p>Confirm every binary comes from CVMFS:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$ command -v xhpl
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>/cvmfs/dev.eessi.io/riscv/versions/2025.06-001/software/linux/riscv64/generic/software/HPL/2.3-foss-2025b/bin/xhpl
+</code></pre></div>
+<p>Run a small problem (N=8000, NB=256, 1×8 grid, one MPI rank per core):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/hpl-run<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/hpl-run
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1"># HPL.dat: N=8000, NB=256, P=1, Q=8</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">8</span><span class="w"> </span>xhpl
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>T/V                N    NB     P     Q               Time                 Gflops
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>--------------------------------------------------------------------------------
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>WR11C2R4        8000   256     1     8              40.05             8.5251e+00
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=              nan ...... FAILED
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>--------------------------------------------------------------------------------
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>              0 tests completed and passed residual checks,
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>              1 tests completed and failed residual checks,
+</code></pre></div>
+<p><strong><code>nan</code> — FAILED.</strong> Note the trap: HPL reports <strong>8.53 GFLOP/s</strong>, a perfectly plausible
+number — the vector kernel <em>is</em> running fast — but the linear system was solved to
+garbage. Without the residual check you might never notice.</p>
+<p>Why is RVV even running? Because the stock CVMFS OpenBLAS is a <strong><code>DYNAMIC_ARCH</code></strong> build.
+Its LP64 <code>libopenblas.so</code> carries three cores — you can see them in the binary:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>strings<span class="w"> </span><span class="nv">$EBROOTOPENBLAS</span>/lib/libopenblas.so<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-oE<span class="w"> </span><span class="s1">&#39;_k_RISCV64_(GENERIC|ZVL128B|ZVL256B)&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-u
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># _k_RISCV64_GENERIC</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># _k_RISCV64_ZVL128B</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># _k_RISCV64_ZVL256B</span>
+</code></pre></div>
+<p>At runtime it detects the X60's VLEN=256 and dispatches the <strong><code>ZVL256B</code></strong> RVV kernels. Good
+— except one of those kernels is broken in 0.3.30.</p>
+<blockquote>
+<p>A subtlety worth recording: the <em>ILP64</em> <code>libopenblas64_p.so</code> in the same install is
+<code>RISCV64_GENERIC</code> (scalar) only — the vector cores are compiled into the <strong>LP64</strong> library.
+HPL uses LP64, so it gets RVV. (If you ever inspect the ILP64 lib and conclude "EESSI has
+no RVV kernels", that's why it looks that way — check the LP64 lib.)</p>
+</blockquote>
+<h2 id="step-2-the-root-cause-one-rvv-gemv_n-kernel">Step 2 — The root cause: one RVV <code>gemv_n</code> kernel<a class="headerlink" href="#step-2-the-root-cause-one-rvv-gemv_n-kernel" title="Permanent link">&para;</a></h2>
+<p>HPL's panel factorization leans heavily on <strong><code>dgemv</code></strong> (matrix–vector). In OpenBLAS 0.3.30,
+<code>kernel/riscv64/gemv_n_vector.c</code> initializes its vector accumulator by <em>subtracting a
+register from itself</em> (<code>vfsub_vv(v, v)</code>) — but on an <strong>uninitialized</strong> vector register. If
+that register happens to hold NaN bits, <code>NaN − NaN = NaN</code>, and <code>dgemv</code> returns all-NaN. The
+DGEMM path uses a different (correct) kernel, so a standalone GEMM benchmark looks fine —
+which is exactly why the failure only surfaces in a full solve like HPL.</p>
+<p>The kernel was rewritten upstream right after 0.3.30 (first released in <strong>v0.3.31</strong>):
+<a href="https://github.com/OpenMathLib/OpenBLAS/pull/5408">OpenMathLib/OpenBLAS#5408</a> (the NaN-init fix) and <a href="https://github.com/OpenMathLib/OpenBLAS/pull/5476">#5476</a> (a cache-friendly
+<code>f64m4</code>→<code>f64m8</code> rewrite). EESSI currently ships 0.3.30, so the bug is live. The fix is to
+<strong>backport that one kernel</strong>.</p>
+<h2 id="step-3-build-the-fixed-openblas-straight-from-the-pr">Step 3 — Build the fixed OpenBLAS straight from the PR<a class="headerlink" href="#step-3-build-the-fixed-openblas-straight-from-the-pr" title="Permanent link">&para;</a></h2>
+<p>The fixed, X60-targeted OpenBLAS lives in easyconfigs PR <strong>#26444</strong> — an easyconfig plus
+the backported <code>gemv_n</code> patch. <code>eb --from-pr</code> builds directly from it.</p>
+<p>Set up an <strong>EESSI-extend</strong> user installation so the module lands in your home directory
+while reusing the CVMFS stack:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>module<span class="w"> </span>load<span class="w"> </span>EasyBuild/5.3.0
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HOME</span>/eessi-x60<span class="w">                  </span><span class="c1"># must exist BEFORE loading EESSI-extend</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_USER_INSTALL</span><span class="o">=</span><span class="nv">$HOME</span>/eessi-x60
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI-extend/2025.06-easybuild
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># The dev.eessi.io/riscv toolchain needs a valid RVV -march pinned (see note below):</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_OPTARCH</span><span class="o">=</span><span class="s1">&#39;-march=rv64imafdcv_zvl256b&#39;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>eb<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">26444</span><span class="w"> </span>--robot
+</code></pre></div>
+<p><code>--from-pr</code> fetches <code>OpenBLAS-0.3.30-GCC-14.3.0-x60.eb</code> <strong>and</strong> its patches, applies the
+<code>gemv_n</code> fix, and builds with <code>TARGET=RISCV64_ZVL256B DYNAMIC_ARCH=0</code> — a single-target RVV
+library. It reuses the CVMFS GCC/14.3.0 toolchain and installs the module
+<code>OpenBLAS/0.3.30-GCC-14.3.0-x60</code> under <code>$EESSI_USER_INSTALL</code>.</p>
+<p>This is a <em>full</em> build with <strong>no shortcuts</strong> — it runs the BLAS test suite <strong>and</strong> the
+complete netlib LAPACK test suite for each interface (LP64 + ILP64). On the 1.6 GHz X60
+that took ~15 h and completed with zero failures; the SBC is the bottleneck, not the build.</p>
+<blockquote>
+<p><strong>Note for the experimental <code>dev.eessi.io/riscv</code> toolchain.</strong> GCC 14.3.0's auto-optarch
+can emit a canonical-expanded <code>-march</code> (<code>…zaamo_zalrsc…</code>) that the same compiler then
+rejects, breaking OpenBLAS's <code>getarch</code>. Pinning a valid <code>-march</code> via <code>EASYBUILD_OPTARCH</code>
+(above) avoids it. It's a quirk of that experimental toolchain, not of the easyconfig —
+and note this <strong>keeps EESSI's own build hooks</strong>, so don't override <code>--hooks</code>.</p>
+</blockquote>
+<h2 id="step-4-swap-it-in-via-flexiblas-and-re-run-passed">Step 4 — Swap it in via FlexiBLAS and re-run → PASSED<a class="headerlink" href="#step-4-swap-it-in-via-flexiblas-and-re-run-passed" title="Permanent link">&para;</a></h2>
+<p>HPL was built against <strong>FlexiBLAS</strong>, so we switch the BLAS backend at <em>runtime</em> — no HPL
+rebuild. Make the user module visible, load it, and register it as a FlexiBLAS backend:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>module<span class="w"> </span>use<span class="w"> </span><span class="nv">$EESSI_USER_INSTALL</span>/versions/2025.06-001/software/linux/riscv64/generic/modules/all
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>module<span class="w"> </span>load<span class="w"> </span>OpenBLAS/0.3.30-GCC-14.3.0-x60
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>flexiblas<span class="w"> </span>add<span class="w"> </span>x60<span class="w"> </span><span class="nv">$EBROOTOPENBLAS</span>/lib/libopenblas.so
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>flexiblas<span class="w"> </span>default<span class="w"> </span>x60
+</code></pre></div>
+<blockquote>
+<p>A caveat (the answer to an obvious question): swapping the OpenBLAS <em>module</em> is not
+enough — EESSI binaries are linked with <strong>RPATH</strong>, and FlexiBLAS's default backend has an
+RPATH-pinned <code>libopenblas.so.0</code>. Loading a different module only changes compile-time
+paths. Register the backend with FlexiBLAS (above), or point at it explicitly per-run:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nv">FLEXIBLAS</span><span class="o">=</span><span class="nv">$EBROOTOPENBLAS</span>/lib/libopenblas.so<span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">8</span><span class="w"> </span>xhpl
+</code></pre></div></p>
+</blockquote>
+<p>Re-run the <strong>exact same</strong> <code>xhpl</code>, same input, same command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>WR11C2R4        8000   256     1     8              44.50             7.6719e+00
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=   4.04326757e-03 ...... PASSED
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>              1 tests completed and passed residual checks,
+</code></pre></div>
+<p><strong>PASSED</strong>, residual <code>4.04e-03</code>. Only the BLAS backend changed: the same CVMFS HPL and
+OpenMPI, now with a <em>correct</em> RVV <code>gemv_n</code>.</p>
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<p><strong>Correctness</strong> (N=8000, NB=256, 1×8 — identical HPL binary and input, only the BLAS
+backend changes):</p>
+<table>
+<thead>
+<tr>
+<th>BLAS backend</th>
+<th>HPL residual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stock EESSI CVMFS OpenBLAS 0.3.30 (RVV, unpatched)</td>
+<td><strong><code>nan</code> — FAILED</strong></td>
+</tr>
+<tr>
+<td>Fixed RVV OpenBLAS — PR #26444 (backported <code>gemv_n</code>)</td>
+<td><strong>4.04e-03 — PASSED</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Performance.</strong> With the fix in place, the <em>vector</em> path does real work. On eight X60
+cores (pure CVMFS HPL, fixed RVV backend, NB=256) HPL reaches <strong>~10.5 GFLOP/s</strong> — and the
+process grid matters as much as the problem size:</p>
+<table>
+<thead>
+<tr>
+<th>Problem / grid</th>
+<th>HPL (8 cores)</th>
+<th>residual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N=16000, 1×8</td>
+<td>9.74 GFLOP/s</td>
+<td>PASSED</td>
+</tr>
+<tr>
+<td>N=16000, 2×4</td>
+<td>10.00 GFLOP/s</td>
+<td>PASSED</td>
+</tr>
+<tr>
+<td><strong>N=20000, 2×4</strong></td>
+<td><strong>10.53 GFLOP/s</strong></td>
+<td>PASSED</td>
+</tr>
+</tbody>
+</table>
+<p>A square-ish <strong>2×4</strong> grid beats 1×8, and throughput is still climbing at N=20000. Every run
+passes its residual check — the whole point. One caveat worth knowing: this is OpenBLAS
+<strong>0.3.30</strong>'s RVV kernel; a newer OpenBLAS (≥ 0.3.34) is both faster <em>and</em> carries this fix
+natively (see below).</p>
+<h2 id="why-this-matters">Why this matters<a class="headerlink" href="#why-this-matters" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>It's a real bug in the shipped stack, not a synthetic demo.</strong> The stock EESSI HPL on
+  this board fails its own residual check. Reproducing it takes only CVMFS + <code>module load</code>,
+  and the fix is a reviewable EasyBuild PR — no hand-built BLAS, no <code>LD_PRELOAD</code>.</li>
+<li><strong>Correctness first.</strong> A fast NaN is worthless — a valid residual is the whole point.
+  This walkthrough restores the <em>correct</em> RVV path.</li>
+<li><strong>Runtime-swappable.</strong> FlexiBLAS lets one HPL (or NumPy, SciPy, …) switch backends — set
+  the fixed library as your default with <code>flexiblas default</code>, or per-run with one
+  environment variable.</li>
+<li><strong>On a path to "just works".</strong> OpenBLAS ≥ 0.3.31 already carries the gemv_n fix, and its
+  newer RVV kernels are <em>faster</em> than 0.3.30's — so a future EESSI bump to OpenBLAS <strong>≥ 0.3.34</strong>
+  (0.3.34 also clears a separate RISC-V/K1 DGEMM regression that affects 0.3.31–0.3.33) makes
+  the NaN disappear with no patch <strong>and</strong> raises the performance ceiling. A future
+  <code>riscv64/…/x60</code>-style software subdirectory could then ship a pre-selected RVV build so an
+  Orange Pi RV2 user gets correct, vectorized BLAS from <code>module load</code> alone. This post is the
+  manual version of what should become transparent.</li>
+</ul>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li>EasyBuild easyconfig PR (the fix this post builds): <a href="https://github.com/easybuilders/easybuild-easyconfigs/pull/26444">https://github.com/easybuilders/easybuild-easyconfigs/pull/26444</a></li>
+<li>Upstream OpenBLAS <code>gemv_n</code> fix (first in v0.3.31): <a href="https://github.com/OpenMathLib/OpenBLAS/pull/5408">https://github.com/OpenMathLib/OpenBLAS/pull/5408</a> and <a href="https://github.com/OpenMathLib/OpenBLAS/pull/5476">https://github.com/OpenMathLib/OpenBLAS/pull/5476</a></li>
+<li>EESSI RISC-V dev repository: <a href="https://www.eessi.io/docs/repositories/dev.eessi.io-riscv/">https://www.eessi.io/docs/repositories/dev.eessi.io-riscv/</a></li>
+</ul>
+<hr />
+<p><em>Reproduced end-to-end on an Orange Pi RV2 (SpaceMiT K1, 8× X60 @ ~1.6 GHz, RVV 1.0
+VLEN=256, 8 GB) using EESSI <code>2025.06-001</code>, entirely from the CVMFS stack. The easyconfig,
+patch, and the diagnosis were produced with AI assistance — an OpenCode agent driving
+Claude Opus 4.8, running on Microsoft GitHub Copilot — with a human directing the work,
+operating the hardware, and validating every result, per the
+<a href="https://docs.easybuild.io/policies/ai/">EasyBuild AI policy</a>.</em></p>
 
 
 
@@ -6051,7 +6443,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 14, 2026 10:05:08 UTC">August 14, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 12, 2026 05:24:27 UTC">July 12, 2026</span>
   </span>
 
     
@@ -6062,12 +6454,14 @@
 
 
 
+  
 
 
-                
-              </article>
-            </div>
-          
+
+      
+    </article>
+  </div>
+
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
@@ -6080,6 +6474,11 @@
     <div class="md-footer-meta__inner md-grid">
       <!-- Copyright and theme information -->
 <div class="md-copyright">
+  
+    <div class="md-copyright__highlight" data-eessi-blog-disclaimer="true">
+      Blog posts are the responsibility of their authors. The EESSI community does not
+      independently verify the claims or data they present.
+    </div>
   
   
   
@@ -6122,14 +6521,14 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../../../..", "features": ["instant", "content.code.annotate"], "search": "../../../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["instant", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
       
-        <script src="../../../../../../../../available_software/javascripts/software-filter.js"></script>
+        <script src="../../../../../available_software/javascripts/software-filter.js"></script>
       
     
   </body>
