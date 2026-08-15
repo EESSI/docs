@@ -5,10 +5,17 @@ This page covers the usage of the [EESSI test suite](https://github.com/EESSI/te
 We assume you have already [installed and configured](installation-configuration.md) the EESSI test suite on your
 system.
 
-## Listing available tests
+## Prerequisites
+
+Before testing the EESSI software stack, you must make sure it is available by
+[setting up your environment](../using_eessi/setting_up_environment.md). Specifically, the `EESSI` modules must
+be in your `$MODULEPATH` so they can be loaded. You can check this by running `module --show-hidden avail EESSI`
+Loading an EESSI module before running `reframe` is not recommended; this is taken care of by the test suite.
+
+## Listing available tests { #listing-available-tests }
 
 To list the tests that are available in the EESSI test suite,
-use `reframe --list` (or `reframe -L` for short).
+use `reframe --list` (or `reframe -l` for short).
 
 If you have properly [configured ReFrame](installation-configuration.md), you should
 see a (potentially long) list of checks in the output:
@@ -22,12 +29,25 @@ Found 123 check(s)
 ```
 
 !!! note
-    When using `--list`, checks are only generated based on modules that are available in the system where the `reframe` command is invoked.
+    When using `reframe --list`, checks are only generated based on modules that are available in the system where the
+    `reframe` command is invoked.
 
-    The system partitions specified in your ReFrame configuration file are *not* taken into account when using `--list`.
+    The systems, partitions, and environments specified in your ReFrame configuration file are *not* taken into account
+    when using `--list`.
 
-    So, if `--list` produces an overview of 50 checks, and you have 4 system partitions in your configuration file,
-    actually running the test suite may result in (up to) 200 checks being executed.
+    So, if `--list` produces an overview of 50 checks, and you have 4 system partitions
+    and 2 environments in your ReFrame configuration, actually running the test suite may result in (up to) 800
+    test cases being executed.
+
+To get a list of all "concrete" test cases, i.e. all valid combinations of checks, systems, partitions, and environments, use:
+
+```
+$ reframe --list C
+...
+[List of matched checks]
+- ...
+Concretized 1234 test case(s)
+```
 
 ## Performing a dry run { #dry-run }
 
@@ -48,8 +68,10 @@ $ reframe --dry-run
 
 !!! note
 
-    When using `--dry-run`, the systems partitions listed in your ReFrame configuration file are also taken into
-    account when generating checks, next to available modules and test parameters, which is *not* the case when using `--list`.
+    Like `--list C`, `--dry-run` takes into account the system, partitions, and
+    environments listed in your ReFrame configuration, next to available
+    modules and test parameters when generating test cases. The difference is
+    that `--dry-run` also generates the job scripts (without launching them).
 
 ## Running the (full) test suite
 
@@ -57,8 +79,9 @@ To actually run the (full) EESSI test suite and let ReFrame
 produce a performance report, use `reframe --run --performance-report`.
 
 We strongly recommend filtering the checks that will be run by using additional options
-like `--system`, `--name`, `--tag` (see the ['Filtering tests' section below](#filtering-tests)),
-and doing a [dry run](#dry-run) first to make sure that the generated checks correspond to what you have in mind.
+like `--system`, `--name`, `--tag`, `--prgenv` (see the ['Filtering tests' section below](#filtering-tests)),
+[listing the available tests](#listing-available-tests), and doing a [dry run](#dry-run) first to make sure
+that the generated tests correspond to what you have in mind.
 
 ## ReFrame output and log files
 
@@ -138,7 +161,7 @@ Use `--list` or `--dry-run` to check the impact of using the `--name` option.
 
 By default, ReFrame will generate checks for each system partition that is listed in your configuration file.
 
-To only let ReFrame checks for a particular system or system partition,
+To only let ReFrame check for a particular system or system partition,
 you can use the [`--system` option](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-system).
 
 For example:
@@ -152,7 +175,7 @@ For example:
   reframe --system example:gpu ...
   ```
 
-Use `--dry-run` to check the impact of using the `--system` option.
+Use `--list C` or `--dry-run` to check the impact of using the `--system` option.
 
 
 ### Filtering by tags { #filter-tag }
@@ -212,6 +235,26 @@ To filter tests using multiple tags, you can:
 * use `|` as separator to indicate that *one* of the specified tags must match (logical OR, for example `--tag='1_core|2_cores'`);
 * use the `--tag` option multiple times to indicate that *all* specified tags must match (logical AND, for example `--tag CI --tag 1_core`);
 
+### Filtering by environment { #filter-environment }
+
+By default, ReFrame will generate checks for each EESSI environment and each additional (e.g. local) environment listed in your configuration file.
+
+To only let ReFrame check for a particular environment,
+you can use the [`--prgenv` option](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-p)
+
+For example:
+
+* To let ReFrame only generate checks for the environment named `EESSI-2025.06`, use:
+  ```
+  reframe --prgenv EESSI-2025.06 ...
+  ```
+* To let ReFrame only generate checks for a local environment named `local_env` (if defined in your configuration file), use:
+  ```
+  reframe --prgenv local_env ...
+  ```
+
+Use `--list C` or `--dry-run` to check the impact of using the `--prgenv` option.
+
 
 ## Example commands
 
@@ -234,9 +277,9 @@ reframe --dry-run --name 'TensorFlow.*CUDA' --tag 1_4_node --tag CI
 ```
 
 
-## Overriding test parameters *(advanced)*
+## Overriding test variables *(advanced)*
 
-You can override test parameters using the [`--setvar` option (or `-S`)](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-S).
+You can override test variables using the [`--setvar` option (or `-S`)](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-S).
 
 This can be done either globally (for all tests), or only for specific tests (which is recommended when using `--setvar`).
 
