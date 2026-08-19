@@ -15,7 +15,7 @@ Loading an EESSI module before running `reframe` is not recommended; this is tak
 ## Listing available tests { #listing-available-tests }
 
 To list the tests that are available in the EESSI test suite,
-use `reframe --list` (or `reframe -l` for short).
+use `reframe --list-detailed` (or `reframe -L` for short).
 
 If you have properly [configured ReFrame](installation-configuration.md), you should
 see a (potentially long) list of checks in the output:
