@@ -33,7 +33,7 @@ Found 123 check(s)
     `reframe` command is invoked.
 
     The systems, partitions, and environments specified in your ReFrame configuration file are *not* taken into account
-    when using `--list`.
+    when using ` --list-detailed`.
 
     So, if `--list` produces an overview of 50 checks, and you have 4 system partitions
     and 2 environments in your ReFrame configuration, actually running the test suite may result in (up to) 800
