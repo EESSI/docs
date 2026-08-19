@@ -6082,7 +6082,7 @@ a symbolic link for which the target can be controlled by the CernVM-FS client c
 </code></pre></div></p>
 </div>
 <p>The target for this symlink can be controlled by setting the <code>EESSI_HOST_INJECTIONS</code> variable in your local CVMFS configuration for EESSI. E.g.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo bash -c &quot;echo &#39;EESSI_HOST_INJECTIONS=/shared_fs/path/to/host/injections/&#39; &gt; /etc/cvmfs/domain.d/eessi.io.local&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/shared_fs/path/to/host/injections/' &gt; /etc/cvmfs/domain.d/eessi.io.local"
 </code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Don't forget to reload the CernVM-FS configuration</p>
@@ -6091,10 +6091,10 @@ a symbolic link for which the target can be controlled by the CernVM-FS client c
 </code></pre></div></p>
 </div>
 <p>On a heterogeneous system, you may want to use different targets for the variant symlink for different node types. For example, you might have two types of GPU nodes (<code>gpu1</code> and <code>gpu2</code>) for which the GPU drivers are <em>not</em> in the same location, or not of the same version. Since those are both things we configure under <code>host_injections</code>, you'll need separate <code>host_injections</code> directories for each node type. That can easily be achieved by putting e.g.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo bash -c &quot;echo &#39;EESSI_HOST_INJECTIONS=/shared_fs/path/to/host/injections/gpu1/&#39; &gt; /etc/cvmfs/domain.d/eessi.io.local&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/shared_fs/path/to/host/injections/gpu1/' &gt; /etc/cvmfs/domain.d/eessi.io.local"
 </code></pre></div>
 <p>in the CVMFS config on the <code>gpu1</code> nodes, and</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo bash -c &quot;echo &#39;EESSI_HOST_INJECTIONS=/shared_fs/path/to/host/injections/gpu2/&#39; &gt; /etc/cvmfs/domain.d/eessi.io.local&quot;
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/shared_fs/path/to/host/injections/gpu2/' &gt; /etc/cvmfs/domain.d/eessi.io.local"
 </code></pre></div>
 in the CVMFS config on the <code>gpu2</code> nodes.</p>
 

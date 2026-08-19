@@ -6347,10 +6347,10 @@ in a predictable location that is searched by the EESSI runtime linker.</p>
 <p><em>Step 1:</em> <a href="../../using_eessi/setting_up_environment/">initialize a version of EESSI</a>.</p>
 <p><em>Step 2 (EESSI 2025.06 and newer, mandatory):</em> define the <code>EESSI_NVIDIA_OVERRIDE_DEFAULT</code> variable in your local CernVM-FS configuration to point to a directory where you want
 to store the symlinks to the drivers. For example, to store these under <code>/opt/eessi/nvidia</code>, one would run:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo &#39;EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia&#39; &gt;&gt; /etc/cvmfs/default.local&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' &gt;&gt; /etc/cvmfs/default.local"</span>
 </code></pre></div>
 <p><em>Step 2 (EESSI 2023.06, optional):</em> Change the location in which the symlinks will end up by configuring <code>EESSI_HOST_INJECTIONS</code> explicitly (default: <code>/opt/eessi</code>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo &#39;EESSI_HOST_INJECTIONS=/desired/path/to/host/injections&#39; &gt;&gt; /etc/cvmfs/default.local&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' &gt;&gt; /etc/cvmfs/default.local"</span>
 </code></pre></div>
 <p><em>Step 3:</em> To actually reconfigure the variant symlinks, reload the updated CernVM-FS configuration using:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload<span class="w"> </span>software.eessi.io
@@ -6368,7 +6368,7 @@ Note that it is safe to re-run the script even if no driver updates were done: t
 <p>The standard approach for EESSI &gt;= 2025.06 means that the drivers may be found by any EESSI version. If you prefer to create one set of symlinks per EESSI
 version, instead of defining a single location through EESSI_NVIDIA_OVERRIDE_DEFAULT, you can define one per EESSI version, by setting EESSI_<VERSION>_NVIDIA_OVERRIDE.
 For example:
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo &#39;EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia&#39; &gt;&gt; /etc/cvmfs/default.local&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"echo 'EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia' &gt;&gt; /etc/cvmfs/default.local"</span>
 </code></pre></div></p>
 </div>
 <div class="admonition tip">
@@ -6418,7 +6418,7 @@ you just won't be able to <em>compile</em> additional CUDA or cuDNN software.</p
 <p>First, <a href="../../using_eessi/setting_up_environment/">initialize a version of EESSI</a>.</p>
 <p>Second, (optionally) define the <code>EESSI_HOST_INJECTIONS</code> variable in your local CernVM-FS configuration to point to a directory where you want to
 store the local installations of CUDA and cuDNN (the default location is <code>/opt/eessi</code>):</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;echo &#39;EESSI_HOST_INJECTIONS=/my/custom/prefix&#39; &gt;&gt; /etc/cvmfs/default.local&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"echo 'EESSI_HOST_INJECTIONS=/my/custom/prefix' &gt;&gt; /etc/cvmfs/default.local"</span>
 </code></pre></div>
 <p>Third, run the helper script to install the CUDA and cuDNN versions that are used <em>in that version of EESSI</em>.</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh

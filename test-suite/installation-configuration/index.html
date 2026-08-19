@@ -1654,17 +1654,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#installing-reframe-test-library-hpctestlib" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing ReFrame test library (hpctestlib)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -6189,17 +6178,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#installing-reframe-test-library-hpctestlib" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Installing ReFrame test library (hpctestlib)
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -6359,15 +6337,14 @@
 <p>The EESSI test suite requires </p>
 <ul>
 <li>Python &gt;= 3.7</li>
-<li><a href="https://reframe-hpc.readthedocs.io">ReFrame</a> v4.3.3 (or newer)</li>
-<li><a href="https://reframe-hpc.readthedocs.io/en/stable/hpctestlib.html">ReFrame test library (<code>hpctestlib</code>)</a></li>
+<li><a href="https://reframe-hpc.readthedocs.io">ReFrame</a> v4.3.3 or newer (ReFrame v4.10 requires Python &gt;= 3.10)</li>
 <li>(optionally) <a href="https://easybuild.io/">EasyBuild</a></li>
 </ul>
 <details class="note">
 <summary>(If your system Python version is lower than the minimum required version, click here for some tips)</summary>
 <ul>
 <li>
-<p>You can upgrade and manage python versions using <code>pyenv</code>. <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#installation">Link</a></p>
+<p>You can upgrade and manage Python versions using <a href="https://github.com/pyenv/pyenv?tab=readme-ov-file#installation"><code>pyenv</code></a>.</p>
 <ul>
 <li>For installation follow the documentation in the repository using the link above.</li>
 <li>
@@ -6379,13 +6356,20 @@ pyenv local &lt;python version number&gt;
 </ul>
 </li>
 <li>
-<p>You can install a more recent version of Python on top of the GCC/GCCcore compiler.</p>
+<p>You can upgrade and manage Python versions using <a href="https://docs.astral.sh/uv/guides/install-python/"><code>uv</code></a>.</p>
 </li>
+<li>You can install a more recent version of Python on top of the GCC/GCCcore compiler.</li>
 <li>You can install a ReFrame module with EasyBuild and a <a href="https://github.com/easybuilders/easybuild-easyconfigs/tree/develop/easybuild/easyconfigs/r/ReFrame">ReFrame easyconfig</a> containing a more recent Python version.</li>
 <li>Set RFM_PURGE_ENVIRONMENT=1 if you use Python from a module. The ReFrame easyconfigs automatically do that for you.</li>
 </ul>
 </details>
-<p>??? note EasyBuild is needed for certain tests (e.g. BLAS) that need to load multiple modules together. EasyBuilds functionality is used in these cases to finding matching-pairs of modules. If EasyBuild is not available, a warning will be printed and the tests requiring this functionality will be skipped.</p>
+<details class="note">
+<summary>(For more info about the optional EasyBuild requirement, click here)</summary>
+<p>EasyBuild is needed for certain tests (e.g. BLAS) that need to load
+multiple modules together. EasyBuild’s functionality is used in these cases
+to find matching-pairs of modules. If EasyBuild is not available, a warning
+will be printed and the tests requiring this functionality will be skipped.</p>
+</details>
 <h4 id="installing-reframe">Installing Reframe<a class="headerlink" href="#installing-reframe" title="Permanent link">&para;</a></h4>
 <p>General instructions for installing ReFrame are available in the <a href="https://reframe-hpc.readthedocs.io/en/stable/started.html">ReFrame documentation</a>. To check if ReFrame is available, run the <code>reframe</code> command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>reframe<span class="w"> </span>--version
@@ -6404,30 +6388,20 @@ pyenv local &lt;python version number&gt;
   (see <a href="https://github.com/reframe-hpc/reframe/issues/2914">ReFrame issue #2914</a>).</li>
 </ul>
 </details>
-<h4 id="installing-reframe-test-library-hpctestlib">Installing ReFrame test library (<code>hpctestlib</code>)<a class="headerlink" href="#installing-reframe-test-library-hpctestlib" title="Permanent link">&para;</a></h4>
-<p>The EESSI test suite requires that the ReFrame test library (<code>hpctestlib</code>) is available, which is currently not included in a standard installation of ReFrame.</p>
-<p>We recommend installing ReFrame using <a href="https://easybuild.io/">EasyBuild</a> (version 4.8.1, or newer), or using a ReFrame installation that is available in the EESSI repository (version 2023.06, or newer).</p>
-<p>For example (using EESSI):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">source</span><span class="w"> </span>/cvmfs/software.eessi.io/versions/2023.06/init/bash
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>module<span class="w"> </span>load<span class="w"> </span>ReFrame/4.3.3
-</code></pre></div>
-<p>To check whether the ReFrame test library is available, try importing a submodule of the <code>hpctestlib</code> Python package:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import hpctestlib.sciapps.gromacs&#39;</span>
-</code></pre></div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>To install the EESSI test suite, you can either use <code>pip</code> or clone the GitHub repository directly:</p>
 <h4 id="pip-install">Using <code>pip</code><a class="headerlink" href="#pip-install" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/EESSI/test-suite.git
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/EESSI/test-suite.git
 </code></pre></div>
 <h4 id="cloning-the-repository">Cloning the repository<a class="headerlink" href="#cloning-the-repository" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/EESSI/test-suite<span class="w"> </span><span class="nv">$HOME</span>/EESSI-test-suite
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">cd</span><span class="w"> </span>EESSI-test-suite
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PWD</span>:<span class="nv">$PYTHONPATH</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/EESSI/test-suite<span class="w"> </span><span class="nv">$HOME</span>/EESSI-test-suite
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">cd</span><span class="w"> </span>EESSI-test-suite
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PWD</span>:<span class="nv">$PYTHONPATH</span>
 </code></pre></div>
 <h4 id="verify-installation">Verify installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h4>
 <p>To check whether the EESSI test suite installed correctly,
 try importing the <code>eessi.testsuite</code> Python package:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import eessi.testsuite&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import eessi.testsuite'</span>
 </code></pre></div>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
 <p>Before you can run the EESSI test suite, you need to create a configuration file for ReFrame that is specific to the system on which the tests will be run.</p>
@@ -6438,7 +6412,7 @@ which you can use as a template to create your own.</p>
 <h4 id="RFM_CONFIG_FILES">ReFrame configuration file (<code>$RFM_CONFIG_FILES</code>)<a class="headerlink" href="#RFM_CONFIG_FILES" title="Permanent link">&para;</a></h4>
 <p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_CONFIG_FILES"><code>RFM_CONFIG_FILES</code> in ReFrame docs</a>)</em></p>
 <p>Define the <code>$RFM_CONFIG_FILES</code> environment variable to instruct ReFrame which configuration file to use, for example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CONFIG_FILES</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/config/example.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CONFIG_FILES</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/config/example.py
 </code></pre></div>
 <p>Alternatively, you can use the <code>--config-file</code> (or <code>-C</code>) <code>reframe</code> option.</p>
 <p>See the <a href="../ReFrame-configuration-file/#reframe-config-file">section on the ReFrame configuration file</a> for more information.</p>
@@ -6448,14 +6422,14 @@ which you can use as a template to create your own.</p>
 <p>In addition, define <code>$RFM_CHECK_SEARCH_RECURSIVE</code> to ensure that ReFrame searches <code>$RFM_CHECK_SEARCH_PATH</code> recursively
 (i.e. so that also tests in subdirectories are found).</p>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CHECK_SEARCH_PATH</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/eessi/testsuite/tests
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CHECK_SEARCH_RECURSIVE</span><span class="o">=</span><span class="m">1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CHECK_SEARCH_PATH</span><span class="o">=</span><span class="nv">$HOME</span>/EESSI-test-suite/eessi/testsuite/tests
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">RFM_CHECK_SEARCH_RECURSIVE</span><span class="o">=</span><span class="m">1</span>
 </code></pre></div>
 <p>Alternatively, you can use the <code>--checkpath</code> (or <code>-c</code>) and <code>--recursive</code> (or <code>-R</code>) <code>reframe</code> options.</p>
 <h4 id="RFM_PREFIX">ReFrame prefix (<code>$RFM_PREFIX</code>)<a class="headerlink" href="#RFM_PREFIX" title="Permanent link">&para;</a></h4>
 <p><em>(see also <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#envvar-RFM_PREFIX"><code>RFM_PREFIX</code> in ReFrame docs</a>)</em></p>
 <p>Define the <code>$RFM_PREFIX</code> environment variable to tell ReFrame where to store the files it produces. E.g.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>export RFM_PREFIX=$HOME/reframe_runs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>export RFM_PREFIX=$HOME/reframe_runs
 </code></pre></div>
 <p>This involves:</p>
 <ul>
@@ -6476,21 +6450,21 @@ only picks up on the <code>$RFM_PREFIX</code> environment variable to determine 
 <h4 id="enabling-gpu-tests-when-submitting-from-a-cpu-only-node">Enabling GPU tests when submitting from a CPU-only node<a class="headerlink" href="#enabling-gpu-tests-when-submitting-from-a-cpu-only-node" title="Permanent link">&para;</a></h4>
 <p>By default, the test suite checks the currently available modules to determine which tests to run. This means that if you run the <code>reframe</code> command on a CPU node, but want it to submit GPU tests since you have GPU batch nodes, you'll need to make sure the test suite can 'see' (and load) those modules.</p>
 <p>By default, EESSI makes modules available based on the host architecture. So, if the host on which the ReFrame command runs does not have NVIDIA GPUs, the CUDA-based modules will not be available, and the test suite will not run tests for them:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI/2023.06
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>reframe<span class="w"> </span>-n<span class="w"> </span>LAMMPS_lj.*gpu<span class="w"> </span>-t<span class="w"> </span>1_node<span class="w"> </span>--list
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>...
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="o">[</span>List<span class="w"> </span>of<span class="w"> </span>matched<span class="w"> </span>checks<span class="o">]</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Found<span class="w"> </span><span class="m">0</span><span class="w"> </span>check<span class="o">(</span>s<span class="o">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI/2023.06
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>reframe<span class="w"> </span>-n<span class="w"> </span>LAMMPS_lj.*gpu<span class="w"> </span>-t<span class="w"> </span>1_node<span class="w"> </span>--list
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>...
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">[</span>List<span class="w"> </span>of<span class="w"> </span>matched<span class="w"> </span>checks<span class="o">]</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Found<span class="w"> </span><span class="m">0</span><span class="w"> </span>check<span class="o">(</span>s<span class="o">)</span>
 </code></pre></div>
 <p>To make sure the EESSI test suite can see (and load) the GPU modules on the CPU host, we have to set two additional variables before loading the EESSI module: <code>EESSI_ACCELERATOR_TARGET_OVERRIDE</code> and <code>EESSI_OVERRIDE_GPU_CHECK</code>. For example, if you want to run tests on a node with a <code>zen4</code> CPU and <code>H100</code> GPU</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_OVERRIDE_GPU_CHECK</span><span class="o">=</span>True
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_ACCELERATOR_TARGET_OVERRIDE</span><span class="o">=</span>accel/nvidia/cc90
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI/2023.06
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>reframe<span class="w"> </span>-n<span class="w"> </span>LAMMPS_lj.*gpu<span class="w"> </span>-t<span class="w"> </span>1_node<span class="w"> </span>--list
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>...
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="o">[</span>List<span class="w"> </span>of<span class="w"> </span>matched<span class="w"> </span>checks<span class="o">]</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>-<span class="w"> </span>EESSI_LAMMPS_lj<span class="w"> </span>%device_type<span class="o">=</span>gpu<span class="w"> </span>%module_name<span class="o">=</span>LAMMPS/2Aug2023_update2-foss-2023a-kokkos-CUDA-12.1.1<span class="w"> </span>%scale<span class="o">=</span>1_node<span class="w"> </span>/1f2ca7c1
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>Found<span class="w"> </span><span class="m">1</span><span class="w"> </span>check<span class="o">(</span>s<span class="o">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_OVERRIDE_GPU_CHECK</span><span class="o">=</span>True
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_ACCELERATOR_TARGET_OVERRIDE</span><span class="o">=</span>accel/nvidia/cc90
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI/2023.06
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>reframe<span class="w"> </span>-n<span class="w"> </span>LAMMPS_lj.*gpu<span class="w"> </span>-t<span class="w"> </span>1_node<span class="w"> </span>--list
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>...
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="o">[</span>List<span class="w"> </span>of<span class="w"> </span>matched<span class="w"> </span>checks<span class="o">]</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>-<span class="w"> </span>EESSI_LAMMPS_lj<span class="w"> </span>%device_type<span class="o">=</span>gpu<span class="w"> </span>%module_name<span class="o">=</span>LAMMPS/2Aug2023_update2-foss-2023a-kokkos-CUDA-12.1.1<span class="w"> </span>%scale<span class="o">=</span>1_node<span class="w"> </span>/1f2ca7c1
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>Found<span class="w"> </span><span class="m">1</span><span class="w"> </span>check<span class="o">(</span>s<span class="o">)</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -6516,7 +6490,7 @@ only picks up on the <code>$RFM_PREFIX</code> environment variable to determine 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 13, 2025 15:09:13 UTC">November 13, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 5, 2026 15:46:58 UTC">August 5, 2026</span>
   </span>
 
     

@@ -6067,24 +6067,24 @@
 <h2 id="using-the-ci-component-in-gitlab">Using the CI component in GitLab<a class="headerlink" href="#using-the-ci-component-in-gitlab" title="Permanent link">&para;</a></h2>
 <p>To showcase this, let's create a simple <code>R</code> package that just outputs a map of the European Union and Norway, and colours the participating countries in the <a href="https://multixscale.eu">MultiXscale CoE</a>.</p>
 <p>We'll make a package <a href="https://gitlab.com/neves-p/eessirmaps"><code>eessirmaps</code></a> that relies on popular R packages <a href="https://cran.r-project.org/package=ggplot2"><code>ggplot2</code></a>, <a href="https://cran.r-project.org/package=sf"><code>sf</code></a>, and <a href="https://cran.r-project.org/package=rnaturalearth"><code>rnaturalearth</code></a> to render and save this map. Installing GIS tools for R can be somewhat cumbersome, which could become trickier if it has to be done in a CI environment. This is because <code>sf</code> requires system packages <code>libgdal-dev</code> and <code>libproj-dev</code>, which would add yet another step, complicating our CI workflow. Thankfully, EESSI makes a lot of the packages dependencies available to us from the start, as well as a fully functioning version of R, and the necessary package dependencies to boot! As far as setup goes, this results in a simple CI workflow:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>include:
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  - component: $CI_SERVER_FQDN/eessi/gitlab-eessi/eessi@1.0.5
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">include</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">component</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CI_SERVER_FQDN/eessi/gitlab-eessi/eessi@1.0.5</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>build:
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  stage: build
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  artifacts:
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    paths:
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>      - msx_map.png
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  script:
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    # Create directory for personal R library
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    - mkdir $CI_BUILDS_DIR/R
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    - export R_LIBS_USER=$CI_BUILDS_DIR/R
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    # Load the R module from EESSI
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    - module load R-bundle-CRAN/2023.12-foss-2023a
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    # Install eessirmaps, the rnaturalearth dep and create the plot
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    - R -e &quot;install.packages(&#39;rnaturalearthdata&#39;, repos = &#39;https://cran.rstudio.com/&#39;);
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      remotes::install_gitlab(&#39;neves-p/eessirmaps&#39;, upgrade = FALSE);
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>      eessirmaps::multixscale_map(); ggplot2::ggsave(&#39;msx_map.png&#39;, bg = &#39;white&#39;)&quot;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">msx_map.png</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="c1"># Create directory for personal R library</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdir $CI_BUILDS_DIR/R</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">export R_LIBS_USER=$CI_BUILDS_DIR/R</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="c1"># Load the R module from EESSI</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">module load R-bundle-CRAN/2023.12-foss-2023a</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="c1"># Install eessirmaps, the rnaturalearth dep and create the plot</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">R -e "install.packages('rnaturalearthdata', repos = 'https://cran.rstudio.com/');</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">remotes::install_gitlab('neves-p/eessirmaps', upgrade = FALSE);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">eessirmaps::multixscale_map(); ggplot2::ggsave('msx_map.png', bg = 'white')"</span>
 </code></pre></div>
 <p>Note how we simply include the EESSI GitLab CI component and set up a blank directory for our user R libraries. Remember, because of EESSI, the environment that you develop in will be <em>exactly</em> the same as the one the CI is run in. Apart from the <a href="https://cran.r-project.org/package=rnaturalearthdata"><code>rnaturalearthdata</code></a> R package, all the other dependencies are taken care of by the <code>R-bundle-CRAN/2023.12-foss-2023a</code> EESSI module. This is true for the system and R package dependencies.</p>
 <p>Then we simply have to install our package to the CI environment and call the <code>multixscale_map()</code> function to produce the plot, which is uploaded as an artifact from the CI environment. We can then retrieve the <a href="https://gitlab.com/neves-p/eessirmaps/-/jobs/8057216299/artifacts/download">artifact archive</a>, unpack it and obtain the map.</p>

@@ -1688,6 +1688,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listing-available-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1815,6 +1826,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#filter-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtering by environment
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1832,10 +1854,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overriding-test-parameters-advanced" class="md-nav__link">
+  <a href="#overriding-test-variables-advanced" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overriding test parameters (advanced)
+        Overriding test variables (advanced)
       
     </span>
   </a>
@@ -6155,6 +6177,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listing-available-tests" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6282,6 +6315,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#filter-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filtering by environment
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -6299,10 +6343,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#overriding-test-parameters-advanced" class="md-nav__link">
+  <a href="#overriding-test-variables-advanced" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overriding test parameters (advanced)
+        Overriding test variables (advanced)
       
     </span>
   </a>
@@ -6333,12 +6377,17 @@
 <p>This page covers the usage of the <a href="https://github.com/EESSI/test-suite">EESSI test suite</a>.</p>
 <p>We assume you have already <a href="../installation-configuration/">installed and configured</a> the EESSI test suite on your
 system.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before testing the EESSI software stack, you must make sure it is available by
+<a href="../../using_eessi/setting_up_environment/">setting up your environment</a>. Specifically, the <code>EESSI</code> modules must
+be in your <code>$MODULEPATH</code> so they can be loaded. You can check this by running <code>module --show-hidden avail EESSI</code>.
+Loading an EESSI module before running <code>reframe</code> is not recommended; this is taken care of by the test suite.</p>
 <h2 id="listing-available-tests">Listing available tests<a class="headerlink" href="#listing-available-tests" title="Permanent link">&para;</a></h2>
 <p>To list the tests that are available in the EESSI test suite,
-use <code>reframe --list</code> (or <code>reframe -L</code> for short).</p>
+use <code>reframe --list-detailed</code> (or <code>reframe -L</code> for short).</p>
 <p>If you have properly <a href="../installation-configuration/">configured ReFrame</a>, you should
 see a (potentially long) list of checks in the output:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ reframe --list
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ reframe --list-detailed
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>...
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[List of matched checks]
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>- ...
@@ -6346,35 +6395,48 @@ see a (potentially long) list of checks in the output:</p>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When using <code>--list</code>, checks are only generated based on modules that are available in the system where the <code>reframe</code> command is invoked.</p>
-<p>The system partitions specified in your ReFrame configuration file are <em>not</em> taken into account when using <code>--list</code>.</p>
-<p>So, if <code>--list</code> produces an overview of 50 checks, and you have 4 system partitions in your configuration file,
-actually running the test suite may result in (up to) 200 checks being executed.</p>
+<p>When using <code>reframe --list-detailed</code>, checks are only generated based on modules that are available in the system where the
+<code>reframe</code> command is invoked.</p>
+<p>The systems, partitions, and environments specified in your ReFrame configuration file are <em>not</em> taken into account
+when using <code>--list-detailed</code>.</p>
+<p>So, if <code>--list-detailed</code> produces an overview of 50 checks, and you have 4 system partitions
+and 2 environments in your ReFrame configuration, actually running the test suite may result in (up to) 800
+test cases being executed.</p>
 </div>
+<p>To get a list of all "concrete" test cases, i.e. all valid combinations of checks, systems, partitions, and environments, use:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ reframe --list-detailed C
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>...
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>[List of matched checks]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>- ...
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Concretized 1234 test case(s)
+</code></pre></div>
 <h2 id="dry-run">Performing a dry run<a class="headerlink" href="#dry-run" title="Permanent link">&para;</a></h2>
 <p>To perform a dry run of the EESSI test suite, use <code>reframe --dry-run</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ reframe --dry-run
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>...
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>[==========] Running 1234 check(s)
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>[----------] start processing checks
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>[ DRY      ] GROMACS_EESSI ...
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>...
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>[----------] all spawned checks have finished
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>[  PASSED  ] Ran 1234/1234 test case(s) from 1234 check(s) (0 failure(s), 0 skipped, 0 aborted)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$ reframe --dry-run
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>...
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[==========] Running 1234 check(s)
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>[----------] start processing checks
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>[ DRY      ] GROMACS_EESSI ...
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>...
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>[----------] all spawned checks have finished
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>[  PASSED  ] Ran 1234/1234 test case(s) from 1234 check(s) (0 failure(s), 0 skipped, 0 aborted)
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When using <code>--dry-run</code>, the systems partitions listed in your ReFrame configuration file are also taken into
-account when generating checks, next to available modules and test parameters, which is <em>not</em> the case when using <code>--list</code>.</p>
+<p>Like <code>--list-detailed C</code>, <code>--dry-run</code> takes into account the system, partitions, and
+environments listed in your ReFrame configuration, next to available
+modules and test parameters when generating test cases. The difference is
+that <code>--dry-run</code> also generates the job scripts (without launching them).</p>
 </div>
 <h2 id="running-the-full-test-suite">Running the (full) test suite<a class="headerlink" href="#running-the-full-test-suite" title="Permanent link">&para;</a></h2>
 <p>To actually run the (full) EESSI test suite and let ReFrame
 produce a performance report, use <code>reframe --run --performance-report</code>.</p>
 <p>We strongly recommend filtering the checks that will be run by using additional options
-like <code>--system</code>, <code>--name</code>, <code>--tag</code> (see the <a href="#filtering-tests">'Filtering tests' section below</a>),
-and doing a <a href="#dry-run">dry run</a> first to make sure that the generated checks correspond to what you have in mind.</p>
+like <code>--system</code>, <code>--name</code>, <code>--tag</code>, <code>--prgenv</code> (see the <a href="#filtering-tests">'Filtering tests' section below</a>),
+<a href="#listing-available-tests">listing the available tests</a>, and doing a <a href="#dry-run">dry run</a> first to make sure
+that the generated tests correspond to what you have in mind.</p>
 <h2 id="reframe-output-and-log-files">ReFrame output and log files<a class="headerlink" href="#reframe-output-and-log-files" title="Permanent link">&para;</a></h2>
 <p>ReFrame will generate various output and log files:</p>
 <ul>
@@ -6387,7 +6449,7 @@ and doing a <a href="#dry-run">dry run</a> first to make sure that the generated
 <p>We strongly recommend controlling where these files go by using the <a href="../ReFrame-configuration-file/#logging">common logging configuration that
 is provided by the EESSI test suite in your ReFrame configuration file</a>
 and setting <a href="../installation-configuration/#RFM_PREFIX"><code>$RFM_PREFIX</code></a> (avoid using the cmd line option <code>--prefix</code>).</p>
-<p>If you do, and if you use <a href="../installation-configuration/#requirements">ReFrame v4.3.3 or more newer</a>,
+<p>If you do, and if you use <a href="../installation-configuration/#requirements">ReFrame v4.3.3 or newer</a>,
 you should find the output and log files at:</p>
 <ul>
 <li>general ReFrame log file at <code>$RFM_PREFIX/logs/reframe_&lt;datestamp&gt;_&lt;timestamp&gt;.log</code>;</li>
@@ -6402,61 +6464,61 @@ which are tagged with a unique hash (like <code>d3adb33f</code>) that is determi
 <p>By default, ReFrame will automatically generate checks for each system partition,
 based on the tests available in the EESSI test suite, available software modules,
 and tags defined in the EESSI test suite.</p>
-<p>To avoid being overwhelmed by checks, it is recommend to <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#test-filtering">apply filters</a>
+<p>To avoid being overwhelmed by checks, we recommend <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#test-filtering">applying filters</a>
 so ReFrame only generates the checks you are interested in.</p>
 <h3 id="filter-name">Filtering by test name<a class="headerlink" href="#filter-name" title="Permanent link">&para;</a></h3>
 <p>You can filter checks based on the full test name using the <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-n"><code>--name</code> option (or <code>-n</code>)</a>,
 which includes the value for all test parameters.</p>
 <p>Here's an example of a full test name:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>GROMACS_EESSI %benchmark_info=HECBioSim/Crambin %nb_impl=cpu %scale=1_node %module_name=GROMACS/2023.1-foss-2022a /d3adb33f @example:gpu+default
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>GROMACS_EESSI %benchmark_info=HECBioSim/Crambin %nb_impl=cpu %scale=1_node %module_name=GROMACS/2023.1-foss-2022a /d3adb33f @example:gpu+default
 </code></pre></div>
 <p>To let ReFrame only generate checks for GROMACS, you can use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span>GROMACS
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span>GROMACS
 </code></pre></div>
 <p>To only run GROMACS checks with a particular version of GROMACS, you can use <code>--name</code> to only retain specific <code>GROMACS</code>
 modules:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span>%module_name<span class="o">=</span>GROMACS/2023.1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span>%module_name<span class="o">=</span>GROMACS/2023.1
 </code></pre></div>
 <p>Likewise, you can filter on any part of the test name.</p>
 <p>You can also select one specific check using the corresponding <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#test-naming-scheme">test hash</a>,
 which is also part of the full test name (see <code>/d3adb33f</code> in the example above):
 for example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span>/d3adb33f
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>reframe<span class="w"> </span>--name<span class="w"> </span>/d3adb33f
 </code></pre></div>
 <p>The argument passed to <code>--name</code> is interpreted as a Python regular expression, so you can use wildcards like <code>.*</code>,
 character ranges like <code>[0-9]</code>, use <code>^</code> to specify that the pattern should match from the start of the test name, etc.</p>
-<p>Use <code>--list</code> or <code>--dry-run</code> to check the impact of using the <code>--name</code> option.</p>
+<p>Use <code>--list-detailed</code> or <code>--dry-run</code> to check the impact of using the <code>--name</code> option.</p>
 <h3 id="filter-system-partition">Filtering by system (partition)<a class="headerlink" href="#filter-system-partition" title="Permanent link">&para;</a></h3>
 <p>By default, ReFrame will generate checks for each system partition that is listed in your configuration file.</p>
-<p>To only let ReFrame checks for a particular system or system partition,
+<p>To only let ReFrame check for a particular system or system partition,
 you can use the <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-system"><code>--system</code> option</a>.</p>
 <p>For example:</p>
 <ul>
 <li>To let ReFrame only generate checks for the system named <code>example</code>, use:
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>reframe --system example ...
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>reframe --system example ...
 </code></pre></div></li>
 <li>To let ReFrame only generate checks for the <code>gpu</code> partition of the system named <code>example</code>, use:
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>reframe --system example:gpu ...
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>reframe --system example:gpu ...
 </code></pre></div></li>
 </ul>
-<p>Use <code>--dry-run</code> to check the impact of using the <code>--system</code> option.</p>
+<p>Use <code>--list-detailed C</code> or <code>--dry-run</code> to check the impact of using the <code>--system</code> option.</p>
 <h3 id="filter-tag">Filtering by tags<a class="headerlink" href="#filter-tag" title="Permanent link">&para;</a></h3>
 <p>To filter tests using one or more tags, you can use the <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-0"><code>--tag</code> option</a>.</p>
 <p>Using <code>--list-tags</code> you can get a list of known tags.</p>
-<p>To check the impact of this on generated checks by ReFrame, use <code>--list</code> or <code>--dry-run</code>.</p>
+<p>To check the impact of this on generated checks by ReFrame, use <code>--list-detailed</code> or <code>--dry-run</code>.</p>
 <h4 id="ci-tag"><code>CI</code> tag<a class="headerlink" href="#ci-tag" title="Permanent link">&para;</a></h4>
 <p>For each software that is included in the EESSI test suite,
 a small test is tagged with <code>CI</code> to indicate it can be used in a Continuous Integration (CI) environment.</p>
 <p>Hence, you can use this tag to let ReFrame only generate checks for small test cases:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>reframe --tag CI
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>reframe --tag CI
 </code></pre></div>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$ reframe --name GROMACS --tag CI
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$ reframe --name GROMACS --tag CI
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>...
 </code></pre></div>
 <h4 id="scale-tags"><code>scale</code> tags<a class="headerlink" href="#scale-tags" title="Permanent link">&para;</a></h4>
 <p>The EESSI test suite defines a set of custom tags that control the <em>scale</em> of
-checks, which specify many cores/GPUs/nodes should be used for running a check.
+checks, which specify how many cores/GPUs/nodes should be used for running a check.
 The number of cores and GPUs serves as an upper limit; the actual count depends
 on the specific configuration of cores, GPUs, and sockets within the node, as
 well as the specific test being carried out.</p>
@@ -6470,7 +6532,7 @@ well as the specific test being carried out.</p>
 <tbody>
 <tr>
 <td style="text-align: center;"><code>1_core</code></td>
-<td>using 1 CPU core 1 GPU</td>
+<td>using 1 CPU core and 1 GPU</td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>2_cores</code></td>
@@ -6528,21 +6590,35 @@ well as the specific test being carried out.</p>
 <li>use <code>|</code> as separator to indicate that <em>one</em> of the specified tags must match (logical OR, for example <code>--tag='1_core|2_cores'</code>);</li>
 <li>use the <code>--tag</code> option multiple times to indicate that <em>all</em> specified tags must match (logical AND, for example <code>--tag CI --tag 1_core</code>);</li>
 </ul>
+<h3 id="filter-environment">Filtering by environment<a class="headerlink" href="#filter-environment" title="Permanent link">&para;</a></h3>
+<p>By default, ReFrame will generate checks for each EESSI environment and each additional (e.g. local) environment listed in your configuration file.</p>
+<p>To only let ReFrame check for a particular environment,
+you can use the <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-p"><code>--prgenv</code> option</a>.</p>
+<p>For example:</p>
+<ul>
+<li>To let ReFrame only generate checks for the environment named <code>EESSI-2025.06</code>, use:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>reframe --prgenv EESSI-2025.06 ...
+</code></pre></div></li>
+<li>To let ReFrame only generate checks for a local environment named <code>local_env</code> (if defined in your configuration file), use:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>reframe --prgenv local_env ...
+</code></pre></div></li>
+</ul>
+<p>Use <code>--list-detailed C</code> or <code>--dry-run</code> to check the impact of using the <code>--prgenv</code> option.</p>
 <h2 id="example-commands">Example commands<a class="headerlink" href="#example-commands" title="Permanent link">&para;</a></h2>
-<p>Running all GROMACS tests on 4 cores on the <code>cpu</code> partition</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-report
+<p>Running all GROMACS tests on 4 cores on the <code>cpu</code> partition:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-report
 </code></pre></div>
-<p>List all checks for TensorFlow 2.11 using a single node</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>reframe --list --name %module_name=TensorFlow/2.11 --tag 1_node
+<p>List all checks for TensorFlow 2.11 using a single node:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>reframe --list-detailed --name %module_name=TensorFlow/2.11 --tag 1_node
 </code></pre></div>
-<p>Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>reframe --dry-run --name &#39;TensorFlow.*CUDA&#39; --tag 1_4_node --tag CI
+<p>Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>reframe --dry-run --name 'TensorFlow.*CUDA' --tag 1_4_node --tag CI
 </code></pre></div>
-<h2 id="overriding-test-parameters-advanced">Overriding test parameters <em>(advanced)</em><a class="headerlink" href="#overriding-test-parameters-advanced" title="Permanent link">&para;</a></h2>
-<p>You can override test parameters using the <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-S"><code>--setvar</code> option (or <code>-S</code>)</a>.</p>
+<h2 id="overriding-test-variables-advanced">Overriding test variables <em>(advanced)</em><a class="headerlink" href="#overriding-test-variables-advanced" title="Permanent link">&para;</a></h2>
+<p>You can override test variables using the <a href="https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-S"><code>--setvar</code> option (or <code>-S</code>)</a>.</p>
 <p>This can be done either globally (for all tests), or only for specific tests (which is recommended when using <code>--setvar</code>).</p>
 <p>For example, to run all GROMACS checks with a specific GROMACS module, you can use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>reframe --setvar GROMACS_EESSI.modules=GROMACS/2023.1-foss-2022a ...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>reframe --setvar GROMACS_EESSI.modules=GROMACS/2023.1-foss-2022a ...
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -6570,7 +6646,7 @@ this way that can result in broken checks.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 29, 2024 13:45:56 UTC">July 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 19, 2026 10:27:20 UTC">August 19, 2026</span>
   </span>
 
     

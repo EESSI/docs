@@ -6439,14 +6439,14 @@ so the CernVM-FS client component can prioritize connecting to the closest one.<
 <p>This is really only relevant for <em>public</em> Stratum 1 replica servers, not a private Stratum 1 replica server
 that is only accessible from within the local network, like the one we are setting up here.</p>
 <p>To disable the Geo API service, set <code>CVMFS_GEO_DB_FILE</code> to <code>NONE</code> in <code>/etc/cvmfs/server.local</code>:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;CVMFS_GEO_DB_FILE=NONE&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/cvmfs/server.local
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">'CVMFS_GEO_DB_FILE=NONE'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/cvmfs/server.local
 </code></pre></div>
 <h4 id="creating-replica">Creating replica<a class="headerlink" href="#creating-replica" title="Permanent link">&para;</a></h4>
 <p>To actually create the replica, run the <code>cvmfs_server add-replica</code> command as follows,
 specifying that the current user account should be the repository owner via <code>-o $USER</code>:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">sync_server</span><span class="o">=</span><span class="s1">&#39;aws-eu-west-s1-sync.eessi.science&#39;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nv">repo</span><span class="o">=</span><span class="s1">&#39;software.eessi.io&#39;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nv">key_dir</span><span class="o">=</span><span class="s1">&#39;/etc/cvmfs/keys/eessi.io&#39;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nv">sync_server</span><span class="o">=</span><span class="s1">'aws-eu-west-s1-sync.eessi.science'</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nv">repo</span><span class="o">=</span><span class="s1">'software.eessi.io'</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nv">key_dir</span><span class="o">=</span><span class="s1">'/etc/cvmfs/keys/eessi.io'</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>sudo<span class="w"> </span>cvmfs_server<span class="w"> </span>add-replica<span class="w"> </span>-o<span class="w"> </span><span class="nv">$USER</span><span class="w"> </span>http://<span class="si">${</span><span class="nv">sync_server</span><span class="si">}</span>/cvmfs/<span class="si">${</span><span class="nv">repo</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">key_dir</span><span class="si">}</span>
 </code></pre></div>
 <details class="note">
@@ -6487,7 +6487,7 @@ automatically to the Stratum-1 replica server, we should set up a cron job to do
 </code></pre></div>
 <h4 id="cron-job">Cron job<a class="headerlink" href="#cron-job" title="Permanent link">&para;</a></h4>
 <p>To synchronize all active replica repositories every 5 minutes, we can create a cron job <code>/etc/cron.d/cvmfs_stratum1_snapshot</code> that runs <code>cvmfs_server snapshot -a -i</code>:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>*/5<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>OWNER<span class="w"> </span><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>/usr/bin/cvmfs_server<span class="w"> </span>snapshot<span class="w"> </span>-a<span class="w"> </span>-i<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="k">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$output</span><span class="s2">&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>*/5<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>OWNER<span class="w"> </span><span class="nv">output</span><span class="o">=</span><span class="k">$(</span>/usr/bin/cvmfs_server<span class="w"> </span>snapshot<span class="w"> </span>-a<span class="w"> </span>-i<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="k">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$output</span><span class="s2">"</span>
 </code></pre></div>
 <p>In here, you must replace "<code>OWNER</code>" with the account name of the repository owner (cfr. the <code>-o $USER</code> option
 used in the <code>add-replica</code> command above).</p>
@@ -6527,13 +6527,13 @@ and demonstrate how to use both the proxy server and the Stratum 1 replica serve
 <li>Specifies each Stratum 1 as a URL that starts with <code>http://</code>, and ends with <code>/cvmfs/@fqrn@</code></li>
 </ul>
 <p>For example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>CVMFS_SERVER_URL=&quot;http://s1.test.eu/cvmfs/@fqrn@;http://s1.test.us/cvmfs/@fqrn@&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>CVMFS_SERVER_URL="http://s1.test.eu/cvmfs/@fqrn@;http://s1.test.us/cvmfs/@fqrn@"
 </code></pre></div>
 <p>The <code>@fqrn@</code> substring is replaced by CernVM-FS with the <em>fully qualified repository name</em>, like <code>software.eessi.io</code>.</p>
 <p><code>CVMFS_SERVER_URL</code> should be specified in the <em>domain-specific configuration file</em> in <code>/etc/cvmfs</code> that is
 relevant for the CernVM-FS repository we have replicated on our Stratum 1.</p>
 <p>For <code>software.eessi.io</code>, we should add the following to <code>/etc/cvmfs/domain.d/eessi.io.local</code>:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="na">CVMFS_SERVER_URL</span><span class="o">=</span><span class="s">&quot;http://STRATUM1_IP/cvmfs/@fqrn@&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="na">CVMFS_SERVER_URL</span><span class="o">=</span><span class="s">"http://STRATUM1_IP/cvmfs/@fqrn@"</span>
 </code></pre></div>
 <p>in which "<code>STRATUM1_IP</code>" must be replaced with (you guessed it)
 the IP address or hostname of the private Stratum 1 replica server.</p>
@@ -6577,7 +6577,7 @@ by adding the IP address of the private Stratum 1:
 <p>We also need to update the client configuration to restore the <code>CVMFS_HTTP_PROXY</code> line
 in <code>/etc/cvmfs/default.local</code>, <a href="../proxy/#client-system-configuration">like we did when using the proxy server</a>:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># replace PROXY_IP with the IP address of the proxy server</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="na">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="s">&quot;http://PROXY_IP:3128&quot;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="na">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="s">"http://PROXY_IP:3128"</span>
 </code></pre></div>
 <p>Don't forget to reload the CernVM-FS client configuration:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload

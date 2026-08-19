@@ -6219,7 +6219,7 @@ source</a>.</p>
 <p>Next to installing the CernVM-FS client, you should also create a minimal configuration file for it.</p>
 <p>This is typically done in <code>/etc/cvmfs/default.local</code>,
 which should contain something like:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">CVMFS_CLIENT_PROFILE</span><span class="o">=</span><span class="s">&quot;single&quot;</span><span class="w"> </span><span class="c1"># a single node setup, not a cluster</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="na">CVMFS_CLIENT_PROFILE</span><span class="o">=</span><span class="s">"single"</span><span class="w"> </span><span class="c1"># a single node setup, not a cluster</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">CVMFS_QUOTA_LIMIT</span><span class="o">=</span><span class="s">10000</span>
 </code></pre></div>
 <p>More information on the structure of <code>/etc/cvmfs</code> and supported configuration settings is available
@@ -6234,7 +6234,7 @@ which should contain something like:</p>
 </ul>
 <p>As an alternative to defining <code>CVMFS_CLIENT_PROFILE</code>, you can also set <code>CVMFS_HTTP_PROXY</code> to <code>DIRECT</code> to specify
 that no proxy server should be used by CernVM-FS:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="na">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="s">&quot;DIRECT&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="na">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="s">"DIRECT"</span>
 </code></pre></div>
 <p>We will get back to <code>CVMFS_HTTP_PROXY</code> later when <a href="../proxy/">setting up a proxy server</a>.</p>
 </details>
@@ -6330,7 +6330,7 @@ update the <code>autofs</code> configuration.</p>
 since that <a href="https://github.com/cvmfs/cvmfs/issues/3402">can cause problems in specific situations</a>.</p>
 <p>This can be done by setting additional options in <code>/etc/sysconfig/autofs</code> (on RHEL-based Linux distributions)
 or <code>/etc/default/autofs</code> (on Debian-based distributions):</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="na">OPTIONS</span><span class="o">=</span><span class="s">&quot;--timeout 0&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="na">OPTIONS</span><span class="o">=</span><span class="s">"--timeout 0"</span>
 </code></pre></div>
 <p>The default <code>autofs</code> timeout is typically 5 minutes (300 seconds), which is usually specified in <code>/etc/autofs.conf</code>.</p>
 <details class="warning">
@@ -6375,7 +6375,7 @@ like <a href="../../eessi/high-level-design/#filesystem_layer"><code>software.ee
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>ls<span class="w"> </span>/cvmfs/cvmfs-config.cern.ch/etc/cvmfs
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>common.conf<span class="w">  </span>config.d<span class="w">  </span>default.conf<span class="w">  </span>domain.d<span class="w">  </span>keys
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>$<span class="w"> </span>find<span class="w"> </span>/cvmfs/cvmfs-config.cern.ch/etc/cvmfs<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*eessi*&#39;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>$<span class="w"> </span>find<span class="w"> </span>/cvmfs/cvmfs-config.cern.ch/etc/cvmfs<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s1">'*eessi*'</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>/cvmfs/cvmfs-config.cern.ch/etc/cvmfs/domain.d/eessi.io.conf
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>/cvmfs/cvmfs-config.cern.ch/etc/cvmfs/keys/eessi.io/eessi.io.pub
 </code></pre></div>

@@ -6359,7 +6359,7 @@ the cache due to space constraints).</p>
 <h2 id="tensorflow-start-up-performance">TensorFlow start-up performance<a class="headerlink" href="#tensorflow-start-up-performance" title="Permanent link">&para;</a></h2>
 <p>We have evaluated the start-up performance of <a href="https://www.tensorflow.org">TensorFlow</a>
 across a wide range of system configurations, by timing how long it takes to run the following command:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import tensorflow&#39;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import tensorflow'</span>
 </code></pre></div>
 <p>Although this is a trivial single-core workload, it yields some interesting insights
 into start-up performance for software provided via CernVM-FS and alternatives.</p>
@@ -6563,10 +6563,10 @@ that TensorFlow is available:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>module<span class="w"> </span>load<span class="w"> </span>TensorFlow/2.13.0-foss-2023a
 </code></pre></div>
 <p>To evaluate the start-up performance of TensorFlow, we simply run:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import tensorflow&#39;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import tensorflow'</span>
 </code></pre></div>
 <p>Timing information is collected using the GNU <code>time</code> command, as follows:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/usr/bin/time<span class="w"> </span>--format<span class="w"> </span><span class="s1">&#39;%e&#39;</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import tensorflow&#39;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/usr/bin/time<span class="w"> </span>--format<span class="w"> </span><span class="s1">'%e'</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import tensorflow'</span>
 </code></pre></div>
 <h4 id="required-files">Required files<a class="headerlink" href="#required-files" title="Permanent link">&para;</a></h4>
 <p>Based on the statistics for and the contents of the CernVM-FS client cache after running the specified command

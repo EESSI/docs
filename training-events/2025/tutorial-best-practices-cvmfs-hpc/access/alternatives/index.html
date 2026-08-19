@@ -6033,7 +6033,7 @@ where a CernVM-FS repository is mounted.</p>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>module<span class="w"> </span>load<span class="w"> </span>TensorFlow/2.13.0-foss-2023a
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>python<span class="w"> </span>-V
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import tensorflow as tf; print(tf.__version__)&#39;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>python3<span class="w"> </span>-c<span class="w"> </span><span class="s1">'import tensorflow as tf; print(tf.__version__)'</span>
 </code></pre></div>
 <p>which gives:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$ ./cvmfsexec software.eessi.io -- ./test_eessi.sh
@@ -6064,7 +6064,7 @@ for the client container used in EESSI, which is available <a href="https://gith
 <p>Using the <code>--fusemount</code> option you can specify that a CernVM-FS repository should be mounted
 when starting the container. For example for <a href="../../eessi/high-level-design/#filesystem_layer">EESSI</a>,
 you should use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>apptainer<span class="w"> </span>...<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io&quot;</span><span class="w"> </span>...
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>apptainer<span class="w"> </span>...<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">"container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io"</span><span class="w"> </span>...
 </code></pre></div>
 <p>There are a couple of caveats here:</p>
 <ul>
@@ -6072,16 +6072,16 @@ you should use:</p>
 <p>If the configuration for the CernVM-FS repository is provided via the <code>cvmfs-config</code> repository,
   you need to instruct Apptainer to also mount that, by using the <code>--fusemount</code> option twice: once for
   the <code>cvmfs-config</code> repository, and once for the target repository itself:
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch&quot;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">FUSEMOUNT_EESSI</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io&quot;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>apptainer<span class="w"> </span>...<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUSEMOUNT_EESSI</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>...
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="o">=</span><span class="s2">"container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch"</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">FUSEMOUNT_EESSI</span><span class="o">=</span><span class="s2">"container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io"</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>apptainer<span class="w"> </span>...<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">FUSEMOUNT_EESSI</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>...
 </code></pre></div></p>
 </li>
 <li>
 <p>Next to mounting CernVM-FS repositories, you also need to <em>bind mount</em> local writable directories
   to <code>/var/run/cvmfs</code>, since CernVM-FS needs write access in those locations (for the CernVM-FS client cache):
   <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/<span class="nv">$USER</span>/<span class="o">{</span>var-lib-cvmfs,var-run-cvmfs<span class="o">}</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">APPTAINER_BIND</span><span class="o">=</span><span class="s2">&quot;/tmp/</span><span class="nv">$USER</span><span class="s2">/var-run-cvmfs:/var/run/cvmfs,/tmp/</span><span class="nv">$USER</span><span class="s2">/var-lib-cvmfs:/var/lib/cvmfs&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">APPTAINER_BIND</span><span class="o">=</span><span class="s2">"/tmp/</span><span class="nv">$USER</span><span class="s2">/var-run-cvmfs:/var/run/cvmfs,/tmp/</span><span class="nv">$USER</span><span class="s2">/var-lib-cvmfs:/var/lib/cvmfs"</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>apptainer<span class="w"> </span>...<span class="w"> </span>--fusemount<span class="w"> </span>...
 </code></pre></div></p>
 </li>
@@ -6089,10 +6089,10 @@ you should use:</p>
 <p>To try this, you can use the EESSI client container that is available in Docker Hub,
 to start an interactive shell in which EESSI is available, as follows:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/tmp/<span class="nv">$USER</span>/<span class="o">{</span>var-lib-cvmfs,var-run-cvmfs<span class="o">}</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">APPTAINER_BIND</span><span class="o">=</span><span class="s2">&quot;/tmp/</span><span class="nv">$USER</span><span class="s2">/var-run-cvmfs:/var/run/cvmfs,/tmp/</span><span class="nv">$USER</span><span class="s2">/var-lib-cvmfs:/var/lib/cvmfs&quot;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch&quot;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nv">FUSEMOUNT_EESSI</span><span class="o">=</span><span class="s2">&quot;container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io&quot;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>apptainer<span class="w"> </span>shell<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUSEMOUNT_EESSI</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>docker://ghcr.io/eessi/client:rocky8
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">APPTAINER_BIND</span><span class="o">=</span><span class="s2">"/tmp/</span><span class="nv">$USER</span><span class="s2">/var-run-cvmfs:/var/run/cvmfs,/tmp/</span><span class="nv">$USER</span><span class="s2">/var-lib-cvmfs:/var/lib/cvmfs"</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="o">=</span><span class="s2">"container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch"</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nv">FUSEMOUNT_EESSI</span><span class="o">=</span><span class="s2">"container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io"</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>apptainer<span class="w"> </span>shell<span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">FUSEMOUNT_CVMFS_CONFIG</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>--fusemount<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">FUSEMOUNT_EESSI</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>docker://ghcr.io/eessi/client:rocky8
 </code></pre></div>
 <h2 id="alien-cache">Alien cache<a class="headerlink" href="#alien-cache" title="Permanent link">&para;</a></h2>
 <p>An alien cache can be used, optionally in combination with preloading, as another alternative,

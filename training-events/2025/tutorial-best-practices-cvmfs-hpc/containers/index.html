@@ -6005,9 +6005,9 @@
 <p><a href="https://apptainer.org">Apptainer</a> is the recommended way to run containers from CernVM-FS, as it can start a container directly from an unpacked root file system, which is ideal for CernVM-FS.</p>
 <p><a href="https://www.docker.com">Docker</a> can be used as well but the setup is more complicated, requiring the <a href="https://cvmfs.readthedocs.io/en/stable/cpt-graphdriver.html">CernVM-FS graphdriver plugin</a>.</p>
 <p>For example, to run the <a href="https://hub.docker.com/layers/tensorflow/tensorflow/2.15.0-jupyter/images/sha256-3bf17d6d5f2ed968543238936cca0725ca664d24729c537778b1333a315036d7?context=explore"><code>tensorflow/tensorflow:2.15.0-jupyter</code></a> image from <a href="https://hub.docker.com/">Docker Hub</a> that has been unpacked in <code>/cvmfs/unpacked.cern.ch</code>, use the following commands:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">container</span><span class="o">=</span><span class="s2">&quot;registry.hub.docker.com/tensorflow/tensorflow:2.15.0-jupyter&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">python_code</span><span class="o">=</span><span class="s2">&quot;import tensorflow as tf; print(tf.__version__)&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>apptainer<span class="w"> </span>run<span class="w"> </span>/cvmfs/unpacked.cern.ch/<span class="si">${</span><span class="nv">container</span><span class="si">}</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">python_code</span><span class="si">}</span><span class="s2">&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">container</span><span class="o">=</span><span class="s2">"registry.hub.docker.com/tensorflow/tensorflow:2.15.0-jupyter"</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">python_code</span><span class="o">=</span><span class="s2">"import tensorflow as tf; print(tf.__version__)"</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>apptainer<span class="w"> </span>run<span class="w"> </span>/cvmfs/unpacked.cern.ch/<span class="si">${</span><span class="nv">container</span><span class="si">}</span><span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">python_code</span><span class="si">}</span><span class="s2">"</span>
 </code></pre></div>
 <p>This directory just contains the root file system of the image:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ls<span class="w"> </span>/cvmfs/unpacked.cern.ch/registry.hub.docker.com/tensorflow/tensorflow:2.15.0-jupyter
@@ -6019,9 +6019,9 @@
 where <code>recipe.yaml</code> is a 'wishlist' of container images available in external registries that should be made available:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cvmfsunpacker</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">cvmfs_repo</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;unpacked.repo.tld&#39;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">cvmfs_repo</span><span class="p">:</span><span class="w"> </span><span class="s">'unpacked.repo.tld'</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nt">input</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;https://registry.hub.docker.com/tensorflow/tensorflow:2.15.0-jupyter&#39;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">'https://registry.hub.docker.com/tensorflow/tensorflow:2.15.0-jupyter'</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </code></pre></div>
 <p>For more information, <a href="https://cvmfs.readthedocs.io/en/stable/cpt-ducc.html">see the CernVM-FS documentation</a>.</p>
@@ -6030,7 +6030,7 @@ where <code>recipe.yaml</code> is a 'wishlist' of container images available in 
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--volume<span class="w"> </span>/cvmfs:/cvmfs:shared<span class="w"> </span>ubuntu<span class="w"> </span>ls<span class="w"> </span>-lna<span class="w"> </span>/cvmfs/atlas.cern.ch
 </code></pre></div>
 <p>For Apptainer, the same can be done by setting the <code>$SINGULARITY_BIND</code> (or <code>$APPTAINER_BIND</code>) environment variable: </p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITY_BIND</span><span class="o">=</span><span class="s2">&quot;/cvmfs&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SINGULARITY_BIND</span><span class="o">=</span><span class="s2">"/cvmfs"</span>
 </code></pre></div>
 <hr />
 <p><em>(next: <a href="../creating-repo/">Creating a CernVM-FS repository</a>)</em></p>

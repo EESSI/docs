@@ -6188,10 +6188,10 @@ It is reproduced here, simplified for clarity, with annotations:</p>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup EESSI</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eessi/github-action-eessi@v3</span><span class="w"> </span><span class="c1"># (3)</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">          </span><span class="nt">eessi_stack_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2023.06&quot;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">          </span><span class="nt">eessi_stack_version</span><span class="p">:</span><span class="w"> </span><span class="s">"2023.06"</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span><span class="w"> </span><span class="c1"># (4)</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">          </span><span class="no">test &quot;${RUNNER_ARCH}&quot; = &quot;X64&quot; &amp;&amp; module use /cvmfs/dev.eessi.io/espresso/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">          </span><span class="no">test "${RUNNER_ARCH}" = "X64" &amp;&amp; module use /cvmfs/dev.eessi.io/espresso/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">          </span><span class="no">module load ESPResSo/dc87ede3f6c218bb71624460752bc8c26a271c33-foss-2023b</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">          </span><span class="no">module save espresso</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">          </span><span class="no">python -m venv --system-site-packages venv</span>
@@ -6208,10 +6208,10 @@ It is reproduced here, simplified for clarity, with annotations:</p>
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">          </span><span class="no">python -m coverage report</span>
 <a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">          </span><span class="no">python -m coverage xml</span>
 <a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload coverage to Codecov</span><span class="w"> </span><span class="c1"># (6)</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.repository == &#39;SwarmRL/SwarmRL&#39; }}</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.repository == 'SwarmRL/SwarmRL' }}</span>
 <a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">codecov/codecov-action@v5</span>
 <a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">          </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./coverage.xml&quot;</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">          </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="s">"./coverage.xml"</span>
 <a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">          </span><span class="nt">disable_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">          </span><span class="nt">env_vars</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OS,PYTHON</span>
 <a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">          </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ secrets.CODECOV_TOKEN }}</span>
@@ -6270,8 +6270,8 @@ while workflows go to <code>.github/workflows/my_workflow.yml</code>.</p>
 <span class="normal"><a href="#__codelineno-1-22">22</a></span>
 <span class="normal"><a href="#__codelineno-1-23">23</a></span>
 <span class="normal"><a href="#__codelineno-1-24">24</a></span>
-<span class="normal"><a href="#__codelineno-1-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;dependencies&#39;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Install</span><span class="nv"> </span><span class="s">project</span><span class="nv"> </span><span class="s">dependencies&#39;</span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">'dependencies'</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">'Install</span><span class="nv"> </span><span class="s">project</span><span class="nv"> </span><span class="s">dependencies'</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nt">inputs</span><span class="p">:</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">modules</span><span class="p">:</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Newline-separated list of arguments for module load.</span>
@@ -6280,16 +6280,16 @@ while workflows go to <code>.github/workflows/my_workflow.yml</code>.</p>
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Newline-separated list of arguments for pip install.</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="nt">runs</span><span class="p">:</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="nt">using</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;composite&quot;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="nt">using</span><span class="p">:</span><span class="w"> </span><span class="s">"composite"</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">  </span><span class="nt">steps</span><span class="p">:</span>
 <a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="no">test &quot;${RUNNER_ARCH}&quot; = &quot;X64&quot; &amp;&amp; module use /cvmfs/dev.eessi.io/espresso/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="no">test "${RUNNER_ARCH}" = "X64" &amp;&amp; module use /cvmfs/dev.eessi.io/espresso/versions/2023.06/software/linux/x86_64/amd/zen2/modules/all</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span><span class="no">module load ${{ inputs.modules }}</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="no">module save espresso</span>
 <a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">        </span><span class="no">python3 -m venv --system-site-packages venv</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">        </span><span class="no">source venv/bin/activate</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="no">echo -e &quot;\n&quot; &gt;&gt; requirements.txt</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="no">echo &quot;${{ inputs.extra-python-packages }}&quot; &gt;&gt; requirements.txt</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="no">echo -e "\n" &gt;&gt; requirements.txt</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="no">echo "${{ inputs.extra-python-packages }}" &gt;&gt; requirements.txt</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">        </span><span class="no">python3 -m pip install -r requirements.txt</span>
 <a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="no">git restore requirements.txt</span>
 <a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">        </span><span class="no">deactivate</span>
@@ -6350,7 +6350,7 @@ when pushing a commit to a branch (<code>push</code> event) or updating a pull r
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="nt">ubuntu</span><span class="p">:</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-24.04</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="nt">env</span><span class="p">:</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">      </span><span class="nt">FI_PROVIDER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;^psm3,psm3;ofi_rxd&quot;</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">      </span><span class="nt">FI_PROVIDER</span><span class="p">:</span><span class="w"> </span><span class="s">"^psm3,psm3;ofi_rxd"</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">      </span><span class="nt">OMPI_MCA_mtl_ofi_provider_exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psm3</span>
 </code></pre></div></td></tr></table></div>
 <p>Since details about the host machine hardware can be fuzzy in a virtual machine,
@@ -6368,9 +6368,9 @@ to automatically create jobs with different input parameters:</p>
 <span class="normal"><a href="#__codelineno-4-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
 <a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
 <a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">        </span><span class="nt">espresso</span><span class="p">:</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4.2.2&quot;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"4.2.2"</span>
 <a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">            </span><span class="nt">eessi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ESPResSo/4.2.2-foss-2023a</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5.0-dev&quot;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"5.0-dev"</span>
 <a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">            </span><span class="nt">eessi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ESPResSo/8aa60cecd56cdd10ab62042c567552f347374f36-foss-2023b</span>
 <a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu - ESPResSo ${{ matrix.espresso.version }}</span>
 </code></pre></div></td></tr></table></div>
@@ -6399,7 +6399,7 @@ The syntax also accepts lists of values, in which case the <em>n</em>-fold Carte
 <a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup EESSI</span>
 <a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eessi/github-action-eessi@v3</span>
 <a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">          </span><span class="nt">eessi_stack_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2023.06&quot;</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">          </span><span class="nt">eessi_stack_version</span><span class="p">:</span><span class="w"> </span><span class="s">"2023.06"</span>
 <a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
 <a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/actions/dependencies</span>
 <a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
@@ -6464,7 +6464,7 @@ and providing a list of extra packages for code linting, code coverage and docum
 <a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ matrix.espresso.upload_artifact }}</span>
 <a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/upload-artifact@v4</span>
 <a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./documentation&quot;</span>
+<a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">"./documentation"</span>
 <a id="__codelineno-7-53" name="__codelineno-7-53"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation</span>
 <a id="__codelineno-7-54" name="__codelineno-7-54"></a><span class="w">          </span><span class="nt">retention-days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 <a id="__codelineno-7-55" name="__codelineno-7-55"></a><span class="w">          </span><span class="nt">if-no-files-found</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">error</span>
@@ -6487,10 +6487,10 @@ to download the artifact and publish it to <a href="https://pymbe-dev.github.io/
 <span class="normal"><a href="#__codelineno-8-64">64</a></span>
 <span class="normal"><a href="#__codelineno-8-65">65</a></span>
 <span class="normal"><a href="#__codelineno-8-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload coverage to Codecov</span>
-<a id="__codelineno-8-57" name="__codelineno-8-57"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.repository == &#39;pyMBE-dev/pyMBE&#39; }}</span>
+<a id="__codelineno-8-57" name="__codelineno-8-57"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.repository == 'pyMBE-dev/pyMBE' }}</span>
 <a id="__codelineno-8-58" name="__codelineno-8-58"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">codecov/codecov-action@v4</span>
 <a id="__codelineno-8-59" name="__codelineno-8-59"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-8-60" name="__codelineno-8-60"></a><span class="w">          </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./coverage.xml&quot;</span>
+<a id="__codelineno-8-60" name="__codelineno-8-60"></a><span class="w">          </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">"./coverage.xml"</span>
 <a id="__codelineno-8-61" name="__codelineno-8-61"></a><span class="w">          </span><span class="nt">disable_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-8-62" name="__codelineno-8-62"></a><span class="w">          </span><span class="nt">env_vars</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OS,PYTHON</span>
 <a id="__codelineno-8-63" name="__codelineno-8-63"></a><span class="w">          </span><span class="nt">fail_ci_if_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
@@ -6579,14 +6579,14 @@ in a new branch by removing the <code>if</code> field and setting up their own t
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">  </span><span class="nt">ubuntu</span><span class="p">:</span>
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-24.04</span>
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="nt">env</span><span class="p">:</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">      </span><span class="nt">FI_PROVIDER</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;^psm3,psm3;ofi_rxd&quot;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">      </span><span class="nt">FI_PROVIDER</span><span class="p">:</span><span class="w"> </span><span class="s">"^psm3,psm3;ofi_rxd"</span>
 <a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">      </span><span class="nt">OMPI_MCA_mtl_ofi_provider_exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">psm3</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
 <a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">        </span><span class="nt">espresso</span><span class="p">:</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4.2.2&quot;</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"4.2.2"</span>
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">            </span><span class="nt">eessi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ESPResSo/4.2.2-foss-2023a</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;5.0-dev&quot;</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">"5.0-dev"</span>
 <a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">            </span><span class="nt">eessi</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ESPResSo/8aa60cecd56cdd10ab62042c567552f347374f36-foss-2023b</span>
 <a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu - ESPResSo ${{ matrix.espresso.version }}</span>
 <a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
@@ -6595,7 +6595,7 @@ in a new branch by removing the <code>if</code> field and setting up their own t
 <a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Setup EESSI</span>
 <a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eessi/github-action-eessi@v3</span>
 <a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">          </span><span class="nt">eessi_stack_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2023.06&quot;</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">          </span><span class="nt">eessi_stack_version</span><span class="p">:</span><span class="w"> </span><span class="s">"2023.06"</span>
 <a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
 <a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/actions/dependencies</span>
 <a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
@@ -6620,15 +6620,15 @@ in a new branch by removing the <code>if</code> field and setting up their own t
 <a id="__codelineno-9-49" name="__codelineno-9-49"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ matrix.espresso.upload_artifact }}</span>
 <a id="__codelineno-9-50" name="__codelineno-9-50"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/upload-artifact@v4</span>
 <a id="__codelineno-9-51" name="__codelineno-9-51"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./documentation&quot;</span>
+<a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">"./documentation"</span>
 <a id="__codelineno-9-53" name="__codelineno-9-53"></a><span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">documentation</span>
 <a id="__codelineno-9-54" name="__codelineno-9-54"></a><span class="w">          </span><span class="nt">retention-days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 <a id="__codelineno-9-55" name="__codelineno-9-55"></a><span class="w">          </span><span class="nt">if-no-files-found</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">error</span>
 <a id="__codelineno-9-56" name="__codelineno-9-56"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload coverage to Codecov</span>
-<a id="__codelineno-9-57" name="__codelineno-9-57"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.repository == &#39;pyMBE-dev/pyMBE&#39; }}</span>
+<a id="__codelineno-9-57" name="__codelineno-9-57"></a><span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.repository == 'pyMBE-dev/pyMBE' }}</span>
 <a id="__codelineno-9-58" name="__codelineno-9-58"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">codecov/codecov-action@v4</span>
 <a id="__codelineno-9-59" name="__codelineno-9-59"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-9-60" name="__codelineno-9-60"></a><span class="w">          </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;./coverage.xml&quot;</span>
+<a id="__codelineno-9-60" name="__codelineno-9-60"></a><span class="w">          </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="s">"./coverage.xml"</span>
 <a id="__codelineno-9-61" name="__codelineno-9-61"></a><span class="w">          </span><span class="nt">disable_search</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-9-62" name="__codelineno-9-62"></a><span class="w">          </span><span class="nt">env_vars</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OS,PYTHON</span>
 <a id="__codelineno-9-63" name="__codelineno-9-63"></a><span class="w">          </span><span class="nt">fail_ci_if_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>

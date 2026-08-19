@@ -6441,7 +6441,7 @@ file systems and networking on Linux systems in general.</p>
 <p>The CernVM-FS repository may not be known (yet) on your system, which will result
   in a (clear) error message like this when you try to access it:
   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ ls /cvmfs/software.eessi.io
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ls: cannot access &#39;/cvmfs/software.eessi.io&#39;: No such file or directory
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ls: cannot access '/cvmfs/software.eessi.io': No such file or directory
 </code></pre></div></p>
 </li>
 <li>
@@ -6456,7 +6456,7 @@ file systems and networking on Linux systems in general.</p>
 </code></pre></div>
   <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Failed to transfer ownership of /var/lib/cvmfs/shared to cvmfs
 </code></pre></div>
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ls: cannot open directory &#39;/cvmfs/config-repo.cern.ch&#39;: Too many levels of symbolic links
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ls: cannot open directory '/cvmfs/config-repo.cern.ch': Too many levels of symbolic links
 </code></pre></div>
   <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Transport endpoint is not connected
 </code></pre></div>
@@ -6488,7 +6488,7 @@ that we put forward.</p>
 </code></pre></div></p>
 <p>Either of these errors would be a clear indication that CernVM-FS is not installed,
 or that the <a href="../access/client/#completing-the-client-setup">installation was not completed</a>:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls: cannot access &#39;/cvmfs&#39;: No such file or directory
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls: cannot access '/cvmfs': No such file or directory
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>id: ‘cvmfs’: no such user
 </code></pre></div></p>
@@ -6520,7 +6520,7 @@ will not be reloaded with this command, since they require remounting the reposi
 </code></pre></div></p>
 <p>We strongly advise combining this command with <code>grep</code> to check for specific configuration settings, like:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ cvmfs_config showconfig software.eessi.io | grep CVMFS_SERVER_URL
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>CVMFS_SERVER_URL=&#39;http://aws-eu-central-s1.eessi.science/cvmfs/software.eessi.io;http://azure-us-east-s1.eessi.science/cvmfs/software.eessi.io&#39;    # from /cvmfs/cvmfs-config.cern.ch/etc/cvmfs/domain.d/eessi.io.conf
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>CVMFS_SERVER_URL='http://aws-eu-central-s1.eessi.science/cvmfs/software.eessi.io;http://azure-us-east-s1.eessi.science/cvmfs/software.eessi.io'    # from /cvmfs/cvmfs-config.cern.ch/etc/cvmfs/domain.d/eessi.io.conf
 </code></pre></div>
 <p>Be aware that <code>cvmfs_config showconfig</code> will read the configuration files as they are currently,
 but that does not necessarily mean that those configuration settings are currently active;
@@ -6627,17 +6627,17 @@ you should check whether the active Stratum 1 is directly accessible at port <co
 <h4 id="download-from-stratum-1">Download from Stratum 1<a class="headerlink" href="#download-from-stratum-1" title="Permanent link">&para;</a></h4>
 <p>To see whether a Stratum 1 replica server can be used to download repository contents from,
 you can use <code>curl</code> to check whether the <code>.cvmfspublished</code> file is accessible ( this file must exist in every repository ):</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nv">S1_URL</span><span class="o">=</span><span class="s2">&quot;http://aws-eu-central-s1.eessi.science&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nv">S1_URL</span><span class="o">=</span><span class="s2">"http://aws-eu-central-s1.eessi.science"</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>curl<span class="w"> </span>--head<span class="w"> </span><span class="si">${</span><span class="nv">S1_URL</span><span class="si">}</span>/cvmfs/software.eessi.io/.cvmfspublished
 </code></pre></div>
 <p>If CernVM-FS is configured to use a proxy server, you should let <code>curl</code> use it too:
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nv">P_URL</span><span class="o">=</span><span class="s2">&quot;http://PROXY_IP:3128&quot;</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nv">S1_URL</span><span class="o">=</span><span class="s2">&quot;http://aws-eu-central-s1.eessi.science&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nv">P_URL</span><span class="o">=</span><span class="s2">"http://PROXY_IP:3128"</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nv">S1_URL</span><span class="o">=</span><span class="s2">"http://aws-eu-central-s1.eessi.science"</span>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>curl<span class="w"> </span>--proxy<span class="w"> </span><span class="si">${</span><span class="nv">P_URL</span><span class="si">}</span><span class="w"> </span>--head<span class="w"> </span><span class="si">${</span><span class="nv">S1_URL</span><span class="si">}</span>/cvmfs/software.eessi.io/.cvmfspublished
 </code></pre></div>
 or equivalently via the standard <code>http_proxy</code> environment variable that <code>curl</code> picks up on:
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nv">S1_URL</span><span class="o">=</span><span class="s2">&quot;http://aws-eu-central-s1.eessi.science&quot;</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nv">http_proxy</span><span class="o">=</span><span class="s2">&quot;PROXY_IP:3128&quot;</span><span class="w"> </span>curl<span class="w"> </span>--head<span class="w"> </span><span class="si">${</span><span class="nv">S1_URL</span><span class="si">}</span>/cvmfs/software.eessi.io/.cvmfspublished
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nv">S1_URL</span><span class="o">=</span><span class="s2">"http://aws-eu-central-s1.eessi.science"</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nv">http_proxy</span><span class="o">=</span><span class="s2">"PROXY_IP:3128"</span><span class="w"> </span>curl<span class="w"> </span>--head<span class="w"> </span><span class="si">${</span><span class="nv">S1_URL</span><span class="si">}</span>/cvmfs/software.eessi.io/.cvmfspublished
 </code></pre></div></p>
 <p>Make sure you replace "<code>PROXY_IP</code>" in the commands above with the actual IP (or hostname) of the proxy server.</p>
 <p>If you see a <code>200</code> HTTP return code in the first line of output produced by <code>curl</code>, access is working as it should:</p>
@@ -6766,7 +6766,7 @@ repository, which <strong>can be accessed without special privileges</strong> th
 emitted to <code>/var/log/*</code>.</p>
 <p>For example:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>$ attr -g logbuffer /cvmfs/software.eessi.io
-<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>Attribute &quot;logbuffer&quot; had a 283 byte value for /cvmfs/software.eessi.io:
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>Attribute "logbuffer" had a 283 byte value for /cvmfs/software.eessi.io:
 <a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>[3 Dec 2023 21:01:33 UTC] switching proxy from (none) to http://PROXY_IP:3128 (set proxies)
 <a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>[3 Dec 2023 21:01:33 UTC] switching proxy from (none) to http://PROXY_IP:3128 (cloned)
 <a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>[3 Dec 2023 21:01:33 UTC] switching proxy from http://PROXY_IP:3128 to DIRECT (set proxies)

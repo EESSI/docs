@@ -6522,7 +6522,7 @@ beginning with <code>CernVM-FS:</code> have been printed after the first prompt
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Leaving Gentoo Prefix with exit status 1
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Apptainer&gt; exit
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>exit
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Saved contents of tmp directory &#39;/tmp/eessi-debug.VgLf1v9gf0&#39; to tarball &#39;${HOME}/pr360/EESSI-1698056784.tgz&#39; (to resume session add &#39;--resume ${HOME}/pr360/EESSI-1698056784.tgz&#39;)
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Saved contents of tmp directory '/tmp/eessi-debug.VgLf1v9gf0' to tarball '${HOME}/pr360/EESSI-1698056784.tgz' (to resume session add '--resume ${HOME}/pr360/EESSI-1698056784.tgz')
 </code></pre></div>
 <p>Note that the tarballs can be quite sizeable, so make sure to pick a filesystem where you have a large enough quotum.</p>
 <p>Next time you want to continue investigating this issue, you can start the container with <code>--resume DIR/TGZ</code> and continue where you left off, having all dependencies already built and available.
@@ -6665,7 +6665,7 @@ Finally, run the <code>EESSI-remove-software.sh</code> script
 </code></pre></div></p>
 <p>This should remove any software specified in a <a href="../opening_pr/#rebuilding_software">rebuild easystack</a> that got added in your current feature branch.</p>
 <p>Now, exit the container, paying attention to the instructions that are printed to resume later, e.g.:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Saved contents of tmp directory &#39;/tmp/eessi.WZxeFUemH2&#39; to tarball &#39;/home/myuser/pr507/EESSI-1711538681.tgz&#39; (to resume session add &#39;--resume /home/myuser/pr507/EESSI-1711538681.tgz&#39;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Saved contents of tmp directory '/tmp/eessi.WZxeFUemH2' to tarball '/home/myuser/pr507/EESSI-1711538681.tgz' (to resume session add '--resume /home/myuser/pr507/EESSI-1711538681.tgz')
 </code></pre></div>
 <p>Now, continue with the original instructions to start the container (i.e. either <a href="#starting-a-shell-in-the-eessi-container">here</a> or <a href="#more-efficient-approach-for-multiplecontinued-debugging-sessions">with this alternate approach</a>) and make sure to add the <code>--resume</code> flag. This way, you are resuming from the tarball (i.e. with the software removed that has to be rebuilt), but in a new container in which you have regular (i.e. no root) permissions.</p>
 <h2 id="running-the-test-step">Running the test step<a class="headerlink" href="#running-the-test-step" title="Permanent link">&para;</a></h2>
@@ -6698,12 +6698,12 @@ if all goes well, you should see (part of) the EESSI test suite being run by ReF
 <p>Some installations might expect the system root (sysroot, for short) to be in <code>/</code>. However, in case of EESSI, we are building against the OS in the <a href="../../compatibility_layer/">compatibility layer</a>. Thus, our sysroot is something like <code>${EESSI_CVMFS_REPO}/versions/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}</code>. This <em>can</em> cause issues if installation procedures <em>assume</em> the sysroot is in <code>/</code>.</p>
 <p>One example of a sysroot <a href="https://github.com/EESSI/software-layer/pull/370#issuecomment-1774744151">issue</a> was in installing <code>wget</code>. The EasyConfig for <code>wget</code> defined
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a># make sure pkg-config picks up system packages (OpenSSL &amp; co)
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>preconfigopts = &quot;export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; &quot;
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>configopts = &#39;--with-ssl=openssl &#39;
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>preconfigopts = "export PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; "
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>configopts = '--with-ssl=openssl '
 </code></pre></div>
 This will not work in EESSI, since the OpenSSL should be picked up from the compatibility layer. This was fixed by changing the EasyConfig to read
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>preconfigopts = &quot;export PKG_CONFIG_PATH=%(sysroot)s/usr/lib64/pkgconfig:%(sysroot)s/usr/lib/pkgconfig:%(sysroot)s/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; &quot;
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>configopts = &#39;--with-ssl=openssl
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>preconfigopts = "export PKG_CONFIG_PATH=%(sysroot)s/usr/lib64/pkgconfig:%(sysroot)s/usr/lib/pkgconfig:%(sysroot)s/usr/lib/x86_64-linux-gnu/pkgconfig &amp;&amp; "
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>configopts = '--with-ssl=openssl
 </code></pre></div>
 The <code>%(sysroot)s</code> is a template value which EasyBuild will resolve to the value that has been configured in EasyBuild for <code>sysroot</code> (it is one of the fields printed by <code>eb --show-config</code> if a non-standard sysroot is configured).</p>
 <p>If you encounter issues where the installation can not find something that is <em>normally</em> provided by the OS (i.e. <em>not</em> one of the dependencies in your module environment), you may need to resort to a similar approach.</p>

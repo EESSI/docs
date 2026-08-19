@@ -6142,7 +6142,7 @@ of hundred worker nodes</em> (100-500).</p>
 <p>To make a CernVM-FS client system use the proxy server,
 the <code>/etc/cvmfs/default.local</code> configuration file <em>on the client system</em> should be updated to include:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># replace PROXY_IP with the IP address of the proxy server</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="s">&quot;http://PROXY_IP:3128&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">CVMFS_HTTP_PROXY</span><span class="o">=</span><span class="s">"http://PROXY_IP:3128"</span>
 </code></pre></div>
 <p>To apply the change we need to reload the CernVM-FS configuration on the client system:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload
@@ -6169,11 +6169,11 @@ the <code>.cvmfspublished</code> file in the root of the repository on a Stratum
 <h2 id="cleanup_proxy">Cleanup to prepare for Stratum 1<a class="headerlink" href="#cleanup_proxy" title="Permanent link">&para;</a></h2>
 <p>To prepare for the next tutorial section on <a href="../stratum1/">setting up a private Stratum 1 replica server</a>,
 comment out the <code>CVMFS_HTTP_PROXY</code> line in <code>/etc/cvmfs/default.local</code> by prefixing it with a hash (<code>#</code>):</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">#CVMFS_HTTP_PROXY=&quot;http://PROXY_IP:3128&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">#CVMFS_HTTP_PROXY="http://PROXY_IP:3128"</span>
 </code></pre></div>
 <p>The full contents of <code>/etc/cvmfs/default.local</code> on the client system should again be as shown below, like it was initially created when
 <a href="../client/#minimal_configuration">configuring the client</a>:</p>
-<div class="copy highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="na">CVMFS_CLIENT_PROFILE</span><span class="o">=</span><span class="s">&quot;single&quot;</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="na">CVMFS_CLIENT_PROFILE</span><span class="o">=</span><span class="s">"single"</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="na">CVMFS_QUOTA_LIMIT</span><span class="o">=</span><span class="s">10000</span>
 </code></pre></div>
 <p>Do not forget to also reload the CernVM-FS client configuration:

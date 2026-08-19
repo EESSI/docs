@@ -6261,7 +6261,7 @@ number — the vector kernel <em>is</em> running fast — but the linear system 
 garbage. Without the residual check you might never notice.</p>
 <p>Why is RVV even running? Because the stock CVMFS OpenBLAS is a <strong><code>DYNAMIC_ARCH</code></strong> build.
 Its LP64 <code>libopenblas.so</code> carries three cores — you can see them in the binary:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>strings<span class="w"> </span><span class="nv">$EBROOTOPENBLAS</span>/lib/libopenblas.so<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-oE<span class="w"> </span><span class="s1">&#39;_k_RISCV64_(GENERIC|ZVL128B|ZVL256B)&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-u
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>strings<span class="w"> </span><span class="nv">$EBROOTOPENBLAS</span>/lib/libopenblas.so<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-oE<span class="w"> </span><span class="s1">'_k_RISCV64_(GENERIC|ZVL128B|ZVL256B)'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-u
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># _k_RISCV64_GENERIC</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># _k_RISCV64_ZVL128B</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># _k_RISCV64_ZVL256B</span>
@@ -6296,7 +6296,7 @@ while reusing the CVMFS stack:</p>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>module<span class="w"> </span>load<span class="w"> </span>EESSI-extend/2025.06-easybuild
 <a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
 <a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># The dev.eessi.io/riscv toolchain needs a valid RVV -march pinned (see note below):</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_OPTARCH</span><span class="o">=</span><span class="s1">&#39;-march=rv64imafdcv_zvl256b&#39;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EASYBUILD_OPTARCH</span><span class="o">=</span><span class="s1">'-march=rv64imafdcv_zvl256b'</span>
 <a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>eb<span class="w"> </span>--from-pr<span class="w"> </span><span class="m">26444</span><span class="w"> </span>--robot
 </code></pre></div>

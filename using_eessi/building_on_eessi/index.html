@@ -6283,7 +6283,7 @@ shell before building and loading any of the <code>buildenv</code> modules (one 
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>   MPI_Init(&amp;argc,&amp;argv);
 <a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>   MPI_Comm_rank(MPI_COMM_WORLD, &amp;rank);
 <a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>   printf(&quot;Hello World from MPI rank %d\n&quot;, rank);
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>   printf("Hello World from MPI rank %d\n", rank);
 <a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>   MPI_Finalize();
 <a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>}
@@ -6301,7 +6301,7 @@ shell before building and loading any of the <code>buildenv</code> modules (one 
 </code></pre></div>
 <p>This is the moment to check if the compiler picked all the libraries from the software and compatibility layer, not the host.</p>
 <p>Look at the difference on the library solving when using the compatibility layer ldd from the host one:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># ldd from the compatibility layer, notice how all libraries are resolved from the software layer -&gt; &quot;/cvmfs/software.eessi.io/versions/2023.06/software&quot;, the libc and the interpreter point to the compatibility layer, so all good to go!</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># ldd from the compatibility layer, notice how all libraries are resolved from the software layer -&gt; "/cvmfs/software.eessi.io/versions/2023.06/software", the libc and the interpreter point to the compatibility layer, so all good to go!</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="o">{</span>EESSI<span class="w"> </span><span class="m">2023</span>.06<span class="o">}</span><span class="w"> </span>hvela@ThinkPad-hvela:~/HPCNow/EESSI/develop/buildenv_tests$<span class="w"> </span>ldd<span class="w"> </span>HelloWorld<span class="w"> </span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span>linux-vdso.so.1<span class="w"> </span><span class="o">(</span>0x00007ffc1d112000<span class="o">)</span>

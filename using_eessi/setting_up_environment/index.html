@@ -6350,7 +6350,7 @@ will return a best match between your system and the architectures it is aware o
 </code></pre></div></p>
 <p>To override the returned CPU architecture, you can set the environment variable <code>EESSI_SOFTWARE_SUBDIR_OVERRIDE</code> to a
 specific (expected) value:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_SOFTWARE_SUBDIR_OVERRIDE</span><span class="o">=</span><span class="s2">&quot;x86_64/intel/haswell&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">EESSI_SOFTWARE_SUBDIR_OVERRIDE</span><span class="o">=</span><span class="s2">"x86_64/intel/haswell"</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1"># Executed on an icelake system</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>$<span class="w"> </span>./eessi_archdetect.sh<span class="w"> </span>cpupath
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>x86_64/intel/haswell
