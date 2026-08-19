@@ -9,7 +9,7 @@ system.
 
 Before testing the EESSI software stack, you must make sure it is available by
 [setting up your environment](../using_eessi/setting_up_environment.md). Specifically, the `EESSI` modules must
-be in your `$MODULEPATH` so they can be loaded. You can check this by running `module --show-hidden avail EESSI`
+be in your `$MODULEPATH` so they can be loaded. You can check this by running `module --show-hidden avail EESSI`.
 Loading an EESSI module before running `reframe` is not recommended; this is taken care of by the test suite.
 
 ## Listing available tests { #listing-available-tests }
@@ -33,7 +33,7 @@ Found 123 check(s)
     `reframe` command is invoked.
 
     The systems, partitions, and environments specified in your ReFrame configuration file are *not* taken into account
-    when using ` --list-detailed`.
+    when using `--list-detailed`.
 
     So, if `--list-detailed` produces an overview of 50 checks, and you have 4 system partitions
     and 2 environments in your ReFrame configuration, actually running the test suite may result in (up to) 800
@@ -115,7 +115,7 @@ By default, ReFrame will automatically generate checks for each system partition
 based on the tests available in the EESSI test suite, available software modules,
 and tags defined in the EESSI test suite.
 
-To avoid being overwhelmed by checks, it is recommend to [apply filters](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#test-filtering)
+To avoid being overwhelmed by checks, we recommend [applying filters](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#test-filtering)
 so ReFrame only generates the checks you are interested in.
 
 ### Filtering by test name { #filter-name }
@@ -207,14 +207,14 @@ $ reframe --name GROMACS --tag CI
 #### `scale` tags
 
 The EESSI test suite defines a set of custom tags that control the *scale* of
-checks, which specify many cores/GPUs/nodes should be used for running a check.
+checks, which specify how many cores/GPUs/nodes should be used for running a check.
 The number of cores and GPUs serves as an upper limit; the actual count depends
 on the specific configuration of cores, GPUs, and sockets within the node, as
 well as the specific test being carried out.
 
 | tag name | description |
 |:--------:|-------------|
-| `1_core` | using 1 CPU core 1 GPU |
+| `1_core` | using 1 CPU and core 1 GPU |
 | `2_cores` | using 2 CPU cores and 1 GPU |
 | `4_cores` | using 4 CPU cores and 1 GPU |
 | `1cpn_2nodes` | using 1 CPU core per node, 1 GPU per node, and 2 nodes |
@@ -240,7 +240,7 @@ To filter tests using multiple tags, you can:
 By default, ReFrame will generate checks for each EESSI environment and each additional (e.g. local) environment listed in your configuration file.
 
 To only let ReFrame check for a particular environment,
-you can use the [`--prgenv` option](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-p)
+you can use the [`--prgenv` option](https://reframe-hpc.readthedocs.io/en/stable/manpage.html#cmdoption-p).
 
 For example:
 
@@ -258,19 +258,19 @@ Use `--list-detailed C` or `--dry-run` to check the impact of using the `--prgen
 
 ## Example commands
 
-Running all GROMACS tests on 4 cores on the `cpu` partition
+Running all GROMACS tests on 4 cores on the `cpu` partition:
 
 ```
 reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-report
 ```
 
-List all checks for TensorFlow 2.11 using a single node
+List all checks for TensorFlow 2.11 using a single node:
 
 ```
 reframe --list-detailed --name %module_name=TensorFlow/2.11 --tag 1_node
 ```
 
-Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)
+Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions):
 
 ```
 reframe --dry-run --name 'TensorFlow.*CUDA' --tag 1_4_node --tag CI
