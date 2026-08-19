@@ -214,7 +214,7 @@ well as the specific test being carried out.
 
 | tag name | description |
 |:--------:|-------------|
-| `1_core` | using 1 CPU and core 1 GPU |
+| `1_core` | using 1 CPU core and 1 GPU |
 | `2_cores` | using 2 CPU cores and 1 GPU |
 | `4_cores` | using 4 CPU cores and 1 GPU |
 | `1cpn_2nodes` | using 1 CPU core per node, 1 GPU per node, and 2 nodes |
