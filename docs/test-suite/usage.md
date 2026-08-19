@@ -21,7 +21,7 @@ If you have properly [configured ReFrame](installation-configuration.md), you sh
 see a (potentially long) list of checks in the output:
 
 ```
-$ reframe --list
+$ reframe --list-detailed
 ...
 [List of matched checks]
 - ...
@@ -42,7 +42,7 @@ Found 123 check(s)
 To get a list of all "concrete" test cases, i.e. all valid combinations of checks, systems, partitions, and environments, use:
 
 ```
-$ reframe --list C
+$ reframe --list-detailed C
 ...
 [List of matched checks]
 - ...
@@ -68,7 +68,7 @@ $ reframe --dry-run
 
 !!! note
 
-    Like `--list C`, `--dry-run` takes into account the system, partitions, and
+    Like `--list-detailed C`, `--dry-run` takes into account the system, partitions, and
     environments listed in your ReFrame configuration, next to available
     modules and test parameters when generating test cases. The difference is
     that `--dry-run` also generates the job scripts (without launching them).
@@ -155,7 +155,7 @@ reframe --name /d3adb33f
 The argument passed to `--name` is interpreted as a Python regular expression, so you can use wildcards like `.*`,
 character ranges like `[0-9]`, use `^` to specify that the pattern should match from the start of the test name, etc.
 
-Use `--list` or `--dry-run` to check the impact of using the `--name` option.
+Use `--list-detailed` or `--dry-run` to check the impact of using the `--name` option.
 
 ### Filtering by system (partition) { #filter-system-partition }
 
@@ -175,7 +175,7 @@ For example:
   reframe --system example:gpu ...
   ```
 
-Use `--list C` or `--dry-run` to check the impact of using the `--system` option.
+Use `--list-detailed C` or `--dry-run` to check the impact of using the `--system` option.
 
 
 ### Filtering by tags { #filter-tag }
@@ -184,7 +184,7 @@ To filter tests using one or more tags, you can use the [`--tag` option](https:/
 
 Using `--list-tags` you can get a list of known tags.
 
-To check the impact of this on generated checks by ReFrame, use `--list` or `--dry-run`.
+To check the impact of this on generated checks by ReFrame, use `--list-detailed` or `--dry-run`.
 
 #### `CI` tag
 
@@ -253,7 +253,7 @@ For example:
   reframe --prgenv local_env ...
   ```
 
-Use `--list C` or `--dry-run` to check the impact of using the `--prgenv` option.
+Use `--list-detailed C` or `--dry-run` to check the impact of using the `--prgenv` option.
 
 
 ## Example commands
@@ -267,7 +267,7 @@ reframe --run --system example:cpu --name GROMACS --tag 4_cores --performance-re
 List all checks for TensorFlow 2.11 using a single node
 
 ```
-reframe --list --name %module_name=TensorFlow/2.11 --tag 1_node
+reframe --list-detailed --name %module_name=TensorFlow/2.11 --tag 1_node
 ```
 
 Dry run of TensorFlow CI checks on a quarter (1/4) of a node (on all system partitions)
