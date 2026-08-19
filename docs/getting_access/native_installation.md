@@ -93,7 +93,7 @@ The good news is that all of this only requires a handful commands :astonished: 
       ```
   Be aware that in such cases, the `DIRECT` directive is silently ignored.
 
-## Installation for larger systems (e.g. clusters)
+## Installation for larger systems (e.g. clusters) { #native-install-on-clusters }
 
 When using CernVM-FS on a larger number of local clients, e.g. on a HPC cluster or set of workstations,
 it is very strongly recommended to at least set up some Squid proxies close to your clients.

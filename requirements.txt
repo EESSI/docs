@@ -13,3 +13,5 @@ mkdocstrings[python]
 mkdocs-gen-files
 mkdocs-literate-nav
 mkdocs-section-index
+# Provides pymdownx.blocks.caption
+pymdown-extensions>=10.12
