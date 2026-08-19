@@ -5,6 +5,9 @@ The [EESSI test suite](https://github.com/EESSI/test-suite) is a collection of t
 It is used to check whether the software installations included in the [EESSI software layer](../software_layer.md)
 are working and performing as expected.
 
+In addition to the EESSI software stack, also it works with other (e.g.locally
+installed) software stacks, provided they use the [EasyBuild module naming scheme](https://docs.easybuild.io/api/easybuild/tools/module_naming_scheme/easybuild_mns/).
+
 To get started, you should look into the [installation and configuration guidelines](installation-configuration.md) first.
 
 To write the ReFrame configuration file for your system, check [ReFrame configuration file](ReFrame-configuration-file.md).
