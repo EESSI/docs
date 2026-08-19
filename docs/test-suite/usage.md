@@ -29,7 +29,7 @@ Found 123 check(s)
 ```
 
 !!! note
-    When using `reframe --list`, checks are only generated based on modules that are available in the system where the
+    When using `reframe --list-detailed`, checks are only generated based on modules that are available in the system where the
     `reframe` command is invoked.
 
     The systems, partitions, and environments specified in your ReFrame configuration file are *not* taken into account
