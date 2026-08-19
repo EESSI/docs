@@ -35,7 +35,7 @@ Found 123 check(s)
     The systems, partitions, and environments specified in your ReFrame configuration file are *not* taken into account
     when using ` --list-detailed`.
 
-    So, if `--list` produces an overview of 50 checks, and you have 4 system partitions
+    So, if `--list-detailed` produces an overview of 50 checks, and you have 4 system partitions
     and 2 environments in your ReFrame configuration, actually running the test suite may result in (up to) 800
     test cases being executed.
 
