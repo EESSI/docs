@@ -172,7 +172,7 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td><code>x86_64/amd/zen2</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
             <td>{{ eessi_202606_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }} {{ eessi_202606_n }}</td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
             <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
             <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
