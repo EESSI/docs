@@ -6,6 +6,8 @@ hide:
 {% set eessi_202306_x = '<span class="software-eessi-version-202306">2023.06: x</span>' %}
 {% set eessi_202506_n = '<span class="software-eessi-version-202506">2025.06: N</span>' %}
 {% set eessi_202506_x = '<span class="software-eessi-version-202506">2025.06: x</span>' %}
+{% set eessi_202606_n = '<span class="software-eessi-version-202606">2026.06: N</span>' %}
+{% set eessi_202606_x = '<span class="software-eessi-version-202606">2026.06: x</span>' %}
 
 # GPU targets
 
@@ -30,11 +32,12 @@ The combinations marked with an '`N`' are built natively; others are built on a 
     <thead>
         <tr>
             <th></th>
-            <th colspan=5><div align="center">CUDA compute capability</div></th>
+            <th colspan=6><div align="center">CUDA compute capability</div></th>
         </tr>
         <tr>
             <th><div align="center">CPU microarchitecture</div></th>
             <th>7.0</th>
+            <th>7.5</th>
             <th>8.0</th>
             <th>9.0</th>
             <th>10.0</th>
@@ -45,10 +48,11 @@ The combinations marked with an '`N`' are built natively; others are built on a 
         <tr>
             <td><code>aarch64/generic</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>aarch64/a64fx</code></td>
@@ -57,113 +61,148 @@ The combinations marked with an '`N`' are built natively; others are built on a 
             <td>-</td>
             <td>-</td>
             <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td><code>aarch64/aws/graviton4</code></td>
+            <td>-</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>aarch64/neoverse_n1</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>aarch64/neoverse_v1</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>aarch64/nvidia/grace</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }} {{ eessi_202606_n }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
-            <td colspan=6></td>
+            <td colspan=7></td>
+        </tr>
+        <tr>
+            <td><code>riscv64/generic</code></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td colspan=7></td>
         </tr>
         <tr>
             <td><code>x86_64/generic</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/haswell</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/skylake_avx512</code></td>
             <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/cascadelake</code></td>
             <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/icelake</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }} {{ eessi_202606_n }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/intel/sapphirerapids</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/amd/zen2</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/amd/zen3</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }} {{ eessi_202606_n }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/amd/zen4</code></td>
             <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_x }} {{ eessi_202506_x }}</td>
-            <td>{{ eessi_202306_n }} {{ eessi_202506_n }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_x }} {{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202306_n }} {{ eessi_202506_n }} {{ eessi_202606_n }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
         </tr>
         <tr>
             <td><code>x86_64/amd/zen5</code></td>
             <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_x }}</td>
-            <td>{{ eessi_202506_n }}</td>
+            <td>{{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_x }} {{ eessi_202606_x }}</td>
+            <td>{{ eessi_202506_n }} {{ eessi_202606_n }}</td>
         </tr>
     </tbody>
 </table>
