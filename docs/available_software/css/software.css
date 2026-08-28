@@ -138,7 +138,7 @@
   border-radius: 0.8em;
   font-size: 0.8em;
   font-style: normal;
-  background-color: darkred; /* https://www.w3schools.com/cssref/css_colors.php */
+  background-color: darkgoldenrod; /* https://www.w3schools.com/cssref/css_colors.php */
   color: var(--md-primary-bg-color);
   margin-right: 0.3em;
 }
