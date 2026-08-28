@@ -1,6 +1,6 @@
 # EESSI hackathon (25 Sept. 2026, Dublin)
 
-On Friday 25 September 2026 (09:30-16:30 local time, UTC+1), an EESSI hackathon will be organised in the wake of the
+On Friday 25 September 2026 (09:00-17:30 local time ([IST, UTC+1](https://time.is/Dublin))), an EESSI hackathon will be organised in the wake of the
 [EuroHPC User Days](https://userdays2026.eurohpc-ju.europa.eu/)
 which takes place 22-24 September 2026 in Dublin. 
 
