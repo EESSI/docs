@@ -131,17 +131,39 @@ You can configure your CVMFS server to do [automatic catalog creation](https://c
 
 Here, we follow **Option 1**.
 
-To get the `.cvmfsdirtab` in your repository, you have to open a transaction, move the file into the repository, and publish the transaction. In the same transaction, we can immediately remove the `new_repository` file that is present by default in any newly created repository
+First, we define a `versions_subpath` which is used as the reference point for the root of your repository:
+
+``` { .bash .copy }
+# Repository-relative path to the versions directory (default)
+versions_subpath=versions
+# Alternatively, define a different versions subpath that includes
+# an extra subdirectory
+# versions_subpath=eessi/versions
+```
+
+This is especially useful if you want your repository to have custom site software prefix. While a software prefix looks like `/cvmfs/${repo_name}/`, you might want to, for example, use `/cvmfs/${repo_name}/eessi/`. If you do so, you will also need to use  `EESSI_SITE_SOFTWARE_PREFIX` later, more details on that later in the [bot configuration section](#install-eessi-build-bot-on-a-machine).
+
+Then, to get the `.cvmfsdirtab` in your repository, you have to open a transaction, move the file into the repository, and publish the transaction. In the same transaction, we can immediately remove the `new_repository` file that is present by default in any newly created repository:
 
 ``` { .bash .copy }
 sudo cvmfs_server transaction $repo_name
-# Essentially copy the .cvmfsdirtab from EESSI, but strip every pattern related to the compatibility layer 
-sudo bash -c "cat /cvmfs/software.eessi.io/.cvmfsdirtab | grep -v '^/versions/\*/compat' > /cvmfs/$repo_name/.cvmfsdirtab"
+# Copy the upstream .cvmfsdirtab, remove compatibility-layer patterns,
+# and adjust the versions path for the selected repository layout
+sudo bash -c "grep -v '^/versions/\*/compat' /cvmfs/software.eessi.io/.cvmfsdirtab \
+    | sed 's#^/versions/#/${versions_subpath}/#' \
+    > /cvmfs/$repo_name/.cvmfsdirtab"
 sudo rm /cvmfs/$repo_name/new_repository
-sudo cvmfs_server publish -m "Add .cvfmsdirtab file and remove new_repository file"
+sudo cvmfs_server publish -m "Add .cvmfsdirtab file and remove new_repository file"
 ```
 
 As you now have a `.cvmfsdirtab` file in place, you should see CVMFS going through the logic of creating catalogs as soon as you run the `cvmfs_server publish` command. No catalogs will be created at this point, as none of the directory structures listed in the `.cvmfsdirtab` file match existing directories in your repository (since it is still empty). CVMFS will warn you about the patterns that don't have any match ('WARNING: cannot apply pathspec') - these warnings are harmless and only serve as an indication that not all pathspecs in your `.cvmfsdirtab` file seem to actually exit (yet) in your repository.
+
+!!! note "Using a custom site software prefix"
+
+    The paths in `.cvmfsdirtab` are relative to the root of the CVMFS repository. If you [configure](#install-eessi-build-bot-on-a-machine) `EESSI_SITE_SOFTWARE_PREFIX` with an additional subdirectory, `versions_subpath` must contain the corresponding repository-relative path to the `versions` directory.
+
+    For example, with `EESSI_SITE_SOFTWARE_PREFIX=/cvmfs/${repo_name}/eessi`, use `versions_subpath=eessi/versions`. Do not include the `/cvmfs/${repo_name}` repository mount point in `.cvmfsdirtab`.
+
 
 **7. Setup automatic whitelist resigning**
 
@@ -587,7 +609,7 @@ sudo systemctl start squid
 sudo systemctl enable squid
 ```
 
-### (Re)configuring your CVMFS clients
+### (Re)configuring your CVMFS clients { #reconf_cvmfs_client }
 
 **1. Set up your environment**
 
@@ -605,7 +627,7 @@ proxy_port2=<PORT_NR_FOR_PROXY2>
 
 **2. Install CVMFS client**
 
-Typically, the machines on which you want to offer your own software stack on top of EESSI already have the CVMFS client installed, otherwise you wouldn't be able to serve EESSI there. If you haven't done so, please follow the instructions [here](../../getting_access/native_installation#native-install-on-clusters).
+Typically, the machines on which you want to offer your own software stack on top of EESSI already have the CVMFS client installed, otherwise you wouldn't be able to serve EESSI there. If you haven't done so, please follow the instructions [here](../getting_access/native_installation.md).
 
 **3. Add the repository master public key**
 
@@ -884,7 +906,7 @@ Go to [https://smee.io/new](https://smee.io/new) in order to create a new SMEE c
 
 - Go to https://github.com/organizations/GH_ORG/settings/apps.
 - Click "New GitHub App"
-- Pick a descriptive name. We'll refer to it as APP_NAME
+- Pick a descriptive name. We'll refer to it as `APP_NAME`
 - Under "Homepage URL", we suggest you fill in the URL of the SMEE channel you just created (but unimportant for how the bot functions)
 - Under "Webhook URL", fill in the URL of the SMEE channel you just created
 - Generate a Webhook secret. This secret will be used by the bot's event handler to verify that the event was really sent from your GitHub app.
@@ -914,7 +936,7 @@ Note that you may regularly want to pull in the `bot/build.sh` from the upstream
 - Select "Only select repositories" and select the GH_REPO from the dropdown menu
 - Click "Install"
 
-### Install EESSI build bot on a machine
+### Install EESSI build bot on a machine { #install-eessi-build-bot-on-a-machine }
 
 The next step is to actually deploy the bot processes on a machine from where it can submit build jobs to your Slurm cluster.
 
@@ -957,6 +979,7 @@ GITHUB_APP_SECRET_TOKEN='<some_64_hexadecimal_secret>'
 **2. Create a bot configuration file**
 
 The bot configuration file holds configuration items like:
+
 - The app & installation IDs of the GitHub App you [registered](#register_gh_app) and [installed](#install_gh_app) in previous steps
 - Location of the private key you generated when [registering](#register_gh_app) the GitHub App
 - Which partitions your bot can submit to (and how)
@@ -964,6 +987,8 @@ The bot configuration file holds configuration items like:
 - Which GitHub users are allowed to build/deploy with your bot
 - Bucket names & S3 endpoint URL
 - Location of CVMFS repository config files (needed during build jobs to mount CVMFS into the build container)
+- Location of a `site_config_script`, which can be used to customize particular aspects of your site's installations.
+
 
 All of this is configured in an `app.cfg` file located in the root of your `eessi-bot-software-layer` checkout. Typically, you copy the `app.cfg.example` from there to use as a template:
 
@@ -982,7 +1007,7 @@ repos_cfg_dir = $bot_prefix/repos
 for consistentcy with the next step, in which we will set up the contents of this directory.
 
 !!! Warning
-    You can not ACTUALLY use environment variables like $bot_prefix in the `app.cfg`, as this file is not interpreted by your shell. What we mean is that you should use the expanded form of where-ever the environment variable `$bot_prefix` points.
+    You can not ACTUALLY use environment variables like `$bot_prefix` in the `app.cfg`, as this file is not interpreted by your shell. What we mean is that you should use the expanded form of where-ever the environment variable `$bot_prefix` points.
 
 Second, the bot uses names for repositories in it's internal configuration, and these should be used consistently. These are used in the `bucket_name` (as keys in that dictionary), `signing` (as keys in that dictionary) and `node_type_map` (as item in the `repo_targets` list). Let's assume we refer to your site repository as `SITE_REPO` for the remainder as this section. The `app.cfg` should then contain snippets like like:
 
@@ -999,6 +1024,33 @@ signing =
 ...
 node_type_map = {"<node_type_name>":{ ..., 'repo_targets':['SITE_REPO']}}
 ```
+
+If you want to keep the EESSI site installation in an additional subdirectory of the repository, use the bot's `site_config_script` setting to export `EESSI_SITE_SOFTWARE_PREFIX`. The script is sourced on the build node before `bot/build.sh` is run.
+
+Create a site configuration script in a location that is readable under the same absolute path on every build node:
+
+```{ .bash .copy }
+cat > /path/on/shared/filesystem/eessi-site-config.sh <<EOF
+export EESSI_SITE_SOFTWARE_PREFIX=/cvmfs/name.sitename.tld/eessi
+EOF
+chmod 0644 /path/on/shared/filesystem/eessi-site-config.sh
+```
+
+Then configure its fully expanded path in the `[buildenv]` section of `app.cfg`:
+
+``` { .ini .copy }
+site_config_script = /path/on/shared/filesystem/eessi-site-config.sh
+```
+
+The example above produces installations under:
+
+``` { .bash }
+/cvmfs/name.sitename.tld/eessi/versions/<eessi_version>/software/...
+```
+
+`EESSI_SITE_SOFTWARE_PREFIX` should point to the repository root or a subdirectory below it. It should not include `versions`, the EESSI version, or a trailing slash. Variables exported by the site configuration script must use `export`, because `bot/build.sh` is started as a child process.
+
+If you don't need anything different from the default `/cvmfs/name.sitename.tld/versions/...` layout, then there is no need to set `EESSI_SITE_SOFTWARE_PREFIX` in a site configuration script, since the standard case is handled automatically.
 
 **3. Provide your CVMFS configuration repository**
 
