@@ -131,3 +131,14 @@
   color: var(--md-primary-bg-color);
   margin-right: 0.3em;
 }
+
+.software-eessi-version-202606 {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  border-radius: 0.8em;
+  font-size: 0.8em;
+  font-style: normal;
+  background-color: darkgoldenrod; /* https://www.w3schools.com/cssref/css_colors.php */
+  color: var(--md-primary-bg-color);
+  margin-right: 0.3em;
+}
