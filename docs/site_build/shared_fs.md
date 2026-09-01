@@ -38,7 +38,7 @@ module load EESSI-extend
 !!! note
 
     Note that we have to pick a specific EESSI version here, depending on the toolchain of the software that we want to install.
-    See [EESSI versions](../repositories/versions/) for more information about the different EESSI versions.
+    See [EESSI versions](../repositories/versions.md) for more information about the different EESSI versions.
 
 ## Start building
 
@@ -134,4 +134,3 @@ cowsay "EESSI keeps the clusters moo-ving."
                 ||     ||
 
 ```
-
