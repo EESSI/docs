@@ -141,7 +141,7 @@ versions_subpath=versions
 # versions_subpath=eessi/versions
 ```
 
-This is especially useful if you want your repository to have custom site software prefix. While a software prefix looks like `/cvmfs/${repo_name}/`, you might want to, for example, use `/cvmfs/${repo_name}/eessi/`. If you do so, you will also need to use  `EESSI_SITE_SOFTWARE_PREFIX` later, more details on that later in the [bot configuration section](#install-eessi-build-bot-on-a-machine).
+This is especially useful if you want your repository to have a custom site software prefix. While a default software prefix looks like `/cvmfs/${repo_name}/`, you might want to, for example, use `/cvmfs/${repo_name}/eessi/`. If you do so, you will also need to use  `EESSI_SITE_SOFTWARE_PREFIX` later, more details on that later in the [bot configuration section](#install-eessi-build-bot-on-a-machine).
 
 Then, to get the `.cvmfsdirtab` in your repository, you have to open a transaction, move the file into the repository, and publish the transaction. In the same transaction, we can immediately remove the `new_repository` file that is present by default in any newly created repository:
 
