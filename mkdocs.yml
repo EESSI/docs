@@ -214,7 +214,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Tue, 01 Sep 2026 at 16:18:52 UTC"
+  generated_time: "Wed, 02 Sep 2026 at 16:16:00 UTC"
   slack_invite_url: "https://join.slack.com/t/eessi-hpc/shared_invite/zt-2wg10p26d-m_CnRB89xQq3zk9qxf1k3g"
 extra_javascript:
   # mermaid diagram
