@@ -802,7 +802,7 @@ If this does _not_ work, the issue is with your Stratum 0. Go through the [sanit
 
 The standard deployment method for the EESSI build bot is to stage tarballs in an S3 bucket. While the bot's functionality may be extended in the future (the [function](https://github.com/EESSI/eessi-bot-software-layer/blob/29dc5e9aa339c323a900dc1454d39246def73984/tasks/deploy.py#L689) actually uploading the tarballs could easily be altered to deploy to a central directory on a local filesystem, for example), for now this means we need an S3 bucket if we want to use the bot's deployment functionality.
 
-There is extensive documentation on how to interact with S3 buckets available online - here we only list the few commands that you would commonly need to set up a staging bucket. Note that you can create the bucket from anywhere - but you'll need the AWS commands to be available on the machine where you [install the EESSI build bot](#install-eessi-build-bot-on-a-machine), so you might as well set it up there directly.
+There is extensive documentation on how to interact with S3 buckets available online - here we only list the few commands that you would commonly need to set up a staging bucket. Note that you can create the bucket from anywhere - but you'll need the AWS commands to be available on the machine where you [install the EESSI build bot](#install-eessi-build-bot-on-a-machine), so you might as well set it up there directly. You don't necessarily need to use Amazon AWS S3 buckets, for example, if you have access to object storage on a Ceph cluster. The only requirement is that the `aws` tool can read and write to your endpoint.
 
 ### Installing the AWS CLI commands
 
@@ -924,7 +924,7 @@ Go to [https://smee.io/new](https://smee.io/new) in order to create a new SMEE c
 
 - Go to https://github.com/organizations/GH_ORG/repositories/new
 - Pick a descriptive name. We'll refer to it as GH_REPO
-- Add the `bot/build.sh` from [EESSI/software-layer](https://github.com/EESSI/software-layer) to your repository (under the exact same name)
+- Add the `bot/build.sh` from [EESSI/software-layer](https://github.com/EESSI/software-layer) to your repository (under the exact same name) and make sure it is executable by the Linux user running the bot.
 
 Note that you may regularly want to pull in the `bot/build.sh` from the upstream `EESSI/software-layer` in case changes are made to it upstream.
 
