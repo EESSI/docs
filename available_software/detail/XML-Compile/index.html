@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://eessi.github.io/docs/available_software/detail/STAR/" rel="canonical"/>
+<link href="https://eessi.github.io/docs/available_software/detail/XML-Compile/" rel="canonical"/>
 <link href="../../../img/logos/EESSI.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>STAR - European Environment for Scientific Software Installations (EESSI)</title>
+<title>XML-Compile - European Environment for Scientific Software Installations (EESSI)</title>
 <link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,9 +22,9 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "applicationCategory": "DeveloperApplication",
-  "description": "STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.",
+  "description": "Perl module for compilation based XML processing",
   "license": "Not confirmed",
-  "name": "STAR",
+  "name": "XML-Compile",
   "offers": {
     "@type": "Offer",
     "price": 0
@@ -43,15 +43,15 @@
     }
   },
   "softwareRequirements": "See https://www.eessi.io/docs/ for how to make EESSI available on your system",
-  "softwareVersion": "['2.7.11b']",
-  "url": "https://github.com/alexdobin/STAR"
+  "softwareVersion": "['1.64']",
+  "url": "https://metacpan.org/pod/XML::Compile"
 }</script></head>
 <body dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#star">
+<a class="md-skip" href="#xml-compile">
           Skip to content
         </a>
 </div>
@@ -75,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              STAR
+              XML-Compile
             
           </span>
 </div>
@@ -2767,6 +2767,64 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extensions">
+<span class="md-ellipsis">
+      
+        Extensions
+      
+    </span>
+</a>
+<nav aria-label="Extensions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmlcompile">
+<span class="md-ellipsis">
+      
+        XML::Compile
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmlcompilecache">
+<span class="md-ellipsis">
+      
+        XML::Compile::Cache
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmlcompilesoap">
+<span class="md-ellipsis">
+      
+        XML::Compile::SOAP
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmlcompilewsdl11">
+<span class="md-ellipsis">
+      
+        XML::Compile::WSDL11
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xmllibxmlsimple">
+<span class="md-ellipsis">
+      
+        XML::LibXML::Simple
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -2774,14 +2832,14 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="star">STAR<a class="headerlink" href="#star" title="Permanent link">¶</a></h1>
-<p>STAR aligns RNA-seq reads to a reference genome using uncompressed suffix arrays.</p>
-<p><small>homepage: </small><span class="software-link"><a href="https://github.com/alexdobin/STAR">https://github.com/alexdobin/STAR</a></span></p>
+<h1 id="xml-compile">XML-Compile<a class="headerlink" href="#xml-compile" title="Permanent link">¶</a></h1>
+<p>Perl module for compilation based XML processing</p>
+<p><small>homepage: </small><span class="software-link"><a href="https://metacpan.org/pod/XML::Compile">https://metacpan.org/pod/XML::Compile</a></span></p>
 <h2 id="available-installations">Available installations<a class="headerlink" href="#available-installations" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>STAR version</th>
+<th>XML-Compile version</th>
 <th>Supported CPU targets</th>
 <th>Supported GPU targets</th>
 <th>EESSI version</th>
@@ -2790,18 +2848,88 @@
 </thead>
 <tbody>
 <tr>
-<td>2.7.11b</td>
+<td>1.64</td>
 <td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
 <td><em>(none)</em></td>
 <td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>STAR/2.7.11b-GCC-14.3.0</code></td>
+<td><code>XML-Compile/1.64-GCCcore-14.2.0</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¶</a></h2>
+<p>Overview of extensions included in XML-Compile installations</p>
+<h3 id="xmlcompile">XML::Compile<a class="headerlink" href="#xmlcompile" title="Permanent link">¶</a></h3>
+<table>
+<thead>
 <tr>
-<td>2.7.11b</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202306">2023.06</span></td>
-<td><code>STAR/2.7.11b-GCC-13.2.0</code></td>
+<th><code>XML::Compile</code> version</th>
+<th>XML-Compile modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.64</td>
+<td><code>XML-Compile/1.64-GCCcore-14.2.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="xmlcompilecache">XML::Compile::Cache<a class="headerlink" href="#xmlcompilecache" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>XML::Compile::Cache</code> version</th>
+<th>XML-Compile modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.06</td>
+<td><code>XML-Compile/1.64-GCCcore-14.2.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="xmlcompilesoap">XML::Compile::SOAP<a class="headerlink" href="#xmlcompilesoap" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>XML::Compile::SOAP</code> version</th>
+<th>XML-Compile modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.28</td>
+<td><code>XML-Compile/1.64-GCCcore-14.2.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="xmlcompilewsdl11">XML::Compile::WSDL11<a class="headerlink" href="#xmlcompilewsdl11" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>XML::Compile::WSDL11</code> version</th>
+<th>XML-Compile modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.08</td>
+<td><code>XML-Compile/1.64-GCCcore-14.2.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="xmllibxmlsimple">XML::LibXML::Simple<a class="headerlink" href="#xmllibxmlsimple" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>XML::LibXML::Simple</code> version</th>
+<th>XML-Compile modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.01</td>
+<td><code>XML-Compile/1.64-GCCcore-14.2.0</code></td>
 </tr>
 </tbody>
 </table>
