@@ -48,7 +48,7 @@ Overview of software available in [EESSI's production repository `software.eessi
     <p class="software-description">
     {{ pkg.description }}
     </p>
-    <span class="software-eessi-versions">Available in EESSI versions: {% if '2023.06' in pkg.eessi_versions -%}<span class="software-eessi-version-202306">2023.06</span>{% endif %}{% if '2025.06' in pkg.eessi_versions -%}<span class="software-eessi-version-202506">2025.06</span>{% endif %}</span>{% if '2026.06' in pkg.eessi_versions -%}<span class="software-eessi-version-202606">2026.06</span>{% endif %}
+    <span class="software-eessi-versions">Available in EESSI versions: {% if '2023.06' in pkg.eessi_versions -%}<span class="software-eessi-version-202306">2023.06</span>{% endif %}{% if '2025.06' in pkg.eessi_versions -%}<span class="software-eessi-version-202506">2025.06</span>{% endif %}{% if '2026.06' in pkg.eessi_versions -%}<span class="software-eessi-version-202606">2026.06</span>{% endif %}</span>
     <br/>
     <span class="software-cpus">Supported CPU families: {% if 'AMD' in pkg.cpu_families -%}<span class="software-cpu-amd">AMD</span>{% endif %}{% if 'Intel' in pkg.cpu_families -%}<span class="software-cpu-intel">Intel</span>{% endif %}{% if 'Arm' in pkg.cpu_families -%}<span class="software-cpu-arm">Arm</span>{% endif %}{% if 'RISC-V' in pkg.cpu_families -%}<span class="software-cpu-riscv">RISC-V</span>{% endif %}</span>
     <br/>
