@@ -24,7 +24,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''2.1.3'', ''2.1.2'', ''1.8.3'', ''1.7.1'', ''1.6.1'', ''1.5.1'']'
+  softwareVersion: '[''2.3.4'', ''2.1.3'', ''2.1.2'', ''1.8.3'', ''1.7.1'', ''1.6.1'',
+    ''1.5.1'']'
   url: https://python-poetry.org
 ---
 # poetry
@@ -40,6 +41,7 @@ Python packaging and dependency management made easy. Poetry helps you declare, 
 
 |poetry version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|2.3.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`poetry/2.3.4-GCCcore-15.2.0`|
 |2.1.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`poetry/2.1.3-GCCcore-14.3.0`|
 |2.1.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`poetry/2.1.2-GCCcore-14.2.0`|
 |1.8.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`poetry/1.8.3-GCCcore-13.3.0`|
@@ -72,6 +74,7 @@ Overview of extensions included in poetry installations
 
 |`CacheControl` version|poetry modules that include it|
 | --- | --- |
+|0.14.4|`poetry/2.3.4-GCCcore-15.2.0`|
 |0.14.3|`poetry/2.1.3-GCCcore-14.3.0`|
 |0.14.2|`poetry/2.1.2-GCCcore-14.2.0`|
 |0.14.0|`poetry/1.8.3-GCCcore-13.3.0`|
@@ -85,11 +88,19 @@ Overview of extensions included in poetry installations
 | --- | --- |
 |0.13.1|`poetry/1.6.1-GCCcore-13.2.0`|
 
+### calver
+
+
+|`calver` version|poetry modules that include it|
+| --- | --- |
+|2025.10.20|`poetry/2.3.4-GCCcore-15.2.0`|
+
 ### certifi
 
 
 |`certifi` version|poetry modules that include it|
 | --- | --- |
+|2026.2.25|`poetry/2.3.4-GCCcore-15.2.0`|
 |2025.7.14|`poetry/2.1.3-GCCcore-14.3.0`|
 |2025.1.31|`poetry/2.1.2-GCCcore-14.2.0`|
 |2024.6.2|`poetry/1.8.3-GCCcore-13.3.0`|
@@ -102,6 +113,7 @@ Overview of extensions included in poetry installations
 
 |`charset-normalizer` version|poetry modules that include it|
 | --- | --- |
+|3.4.7|`poetry/2.3.4-GCCcore-15.2.0`|
 |3.3.2|`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`|
 |3.3.1|`poetry/1.6.1-GCCcore-13.2.0`|
 |3.1.0|`poetry/1.5.1-GCCcore-12.3.0`|
@@ -119,7 +131,7 @@ Overview of extensions included in poetry installations
 
 |`cleo` version|poetry modules that include it|
 | --- | --- |
-|2.1.0|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`|
+|2.1.0|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`|
 |2.0.1|`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
 ### crashtest
@@ -127,7 +139,7 @@ Overview of extensions included in poetry installations
 
 |`crashtest` version|poetry modules that include it|
 | --- | --- |
-|0.4.1|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
+|0.4.1|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
 ### dulwich
 
@@ -144,14 +156,23 @@ Overview of extensions included in poetry installations
 
 |`fastjsonschema` version|poetry modules that include it|
 | --- | --- |
+|2.21.2|`poetry/2.3.4-GCCcore-15.2.0`|
 |2.21.1|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 |2.19.1|`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`|
+
+### filelock
+
+
+|`filelock` version|poetry modules that include it|
+| --- | --- |
+|3.28.0|`poetry/2.3.4-GCCcore-15.2.0`|
 
 ### findpython
 
 
 |`findpython` version|poetry modules that include it|
 | --- | --- |
+|0.7.1|`poetry/2.3.4-GCCcore-15.2.0`|
 |0.6.3|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 
 ### html5lib
@@ -166,6 +187,7 @@ Overview of extensions included in poetry installations
 
 |`idna` version|poetry modules that include it|
 | --- | --- |
+|3.11|`poetry/2.3.4-GCCcore-15.2.0`|
 |3.10|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 |3.7|`poetry/1.8.3-GCCcore-13.3.0`|
 |3.6|`poetry/1.7.1-GCCcore-12.3.0`|
@@ -192,14 +214,14 @@ Overview of extensions included in poetry installations
 
 |`installer` version|poetry modules that include it|
 | --- | --- |
-|0.7.0|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
+|0.7.0|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
 ### jaraco.classes
 
 
 |`jaraco.classes` version|poetry modules that include it|
 | --- | --- |
-|3.4.0|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`|
+|3.4.0|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`|
 |3.3.0|`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`|
 |3.2.3|`poetry/1.5.1-GCCcore-12.3.0`|
 
@@ -208,6 +230,7 @@ Overview of extensions included in poetry installations
 
 |`jaraco.context` version|poetry modules that include it|
 | --- | --- |
+|6.1.2|`poetry/2.3.4-GCCcore-15.2.0`|
 |6.0.1|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 
 ### jaraco.functools
@@ -215,6 +238,7 @@ Overview of extensions included in poetry installations
 
 |`jaraco.functools` version|poetry modules that include it|
 | --- | --- |
+|4.4.0|`poetry/2.3.4-GCCcore-15.2.0`|
 |4.2.1|`poetry/2.1.3-GCCcore-14.3.0`|
 |4.1.0|`poetry/2.1.2-GCCcore-14.2.0`|
 
@@ -223,7 +247,7 @@ Overview of extensions included in poetry installations
 
 |`jeepney` version|poetry modules that include it|
 | --- | --- |
-|0.9.0|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
+|0.9.0|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 |0.8.0|`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
 ### jsonschema
@@ -254,6 +278,7 @@ Overview of extensions included in poetry installations
 
 |`keyring` version|poetry modules that include it|
 | --- | --- |
+|25.7.0|`poetry/2.3.4-GCCcore-15.2.0`|
 |25.6.0|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 |24.3.1|`poetry/1.8.3-GCCcore-13.3.0`|
 |24.3.0|`poetry/1.7.1-GCCcore-12.3.0`|
@@ -272,6 +297,7 @@ Overview of extensions included in poetry installations
 
 |`more-itertools` version|poetry modules that include it|
 | --- | --- |
+|11.0.2|`poetry/2.3.4-GCCcore-15.2.0`|
 |10.6.0|`poetry/2.1.2-GCCcore-14.2.0`|
 |10.3.0|`poetry/1.8.3-GCCcore-13.3.0`|
 |10.2.0|`poetry/1.7.1-GCCcore-12.3.0`|
@@ -290,6 +316,7 @@ Overview of extensions included in poetry installations
 
 |`msgpack` version|poetry modules that include it|
 | --- | --- |
+|1.1.2|`poetry/2.3.4-GCCcore-15.2.0`|
 |1.1.1|`poetry/2.1.3-GCCcore-14.3.0`|
 |1.1.0|`poetry/2.1.2-GCCcore-14.2.0`|
 |1.0.8|`poetry/1.8.3-GCCcore-13.3.0`|
@@ -301,6 +328,7 @@ Overview of extensions included in poetry installations
 
 |`pbs_installer` version|poetry modules that include it|
 | --- | --- |
+|2026.4.7|`poetry/2.3.4-GCCcore-15.2.0`|
 |2025.7.23|`poetry/2.1.3-GCCcore-14.3.0`|
 |2025.4.9|`poetry/2.1.2-GCCcore-14.2.0`|
 
@@ -317,7 +345,7 @@ Overview of extensions included in poetry installations
 
 |`pkginfo` version|poetry modules that include it|
 | --- | --- |
-|1.12.1.2|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
+|1.12.1.2|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 |1.11.1|`poetry/1.8.3-GCCcore-13.3.0`|
 |1.9.6|`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
@@ -326,6 +354,7 @@ Overview of extensions included in poetry installations
 
 |`platformdirs` version|poetry modules that include it|
 | --- | --- |
+|4.9.6|`poetry/2.3.4-GCCcore-15.2.0`|
 |4.3.8|`poetry/2.1.3-GCCcore-14.3.0`|
 |4.3.6|`poetry/2.1.2-GCCcore-14.2.0`|
 |4.2.2|`poetry/1.8.3-GCCcore-13.3.0`|
@@ -337,6 +366,7 @@ Overview of extensions included in poetry installations
 
 |`poetry` version|poetry modules that include it|
 | --- | --- |
+|2.3.4|`poetry/2.3.4-GCCcore-15.2.0`|
 |2.1.3|`poetry/2.1.3-GCCcore-14.3.0`|
 |2.1.2|`poetry/2.1.2-GCCcore-14.2.0`|
 |1.8.3|`poetry/1.8.3-GCCcore-13.3.0`|
@@ -349,6 +379,7 @@ Overview of extensions included in poetry installations
 
 |`poetry-core` version|poetry modules that include it|
 | --- | --- |
+|2.3.2|`poetry/2.3.4-GCCcore-15.2.0`|
 |2.1.3|`poetry/2.1.3-GCCcore-14.3.0`|
 |2.1.2|`poetry/2.1.2-GCCcore-14.2.0`|
 |1.9.0|`poetry/1.8.3-GCCcore-13.3.0`|
@@ -358,6 +389,7 @@ Overview of extensions included in poetry installations
 
 |`poetry-plugin-export` version|poetry modules that include it|
 | --- | --- |
+|1.10.0|`poetry/2.3.4-GCCcore-15.2.0`|
 |1.9.0|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 |1.8.0|`poetry/1.8.3-GCCcore-13.3.0`|
 
@@ -391,6 +423,7 @@ Overview of extensions included in poetry installations
 
 |`pyproject_hooks` version|poetry modules that include it|
 | --- | --- |
+|1.2.0|`poetry/2.3.4-GCCcore-15.2.0`|
 |1.0.0|`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
 ### pyrsistent
@@ -406,6 +439,7 @@ Overview of extensions included in poetry installations
 
 |`rapidfuzz` version|poetry modules that include it|
 | --- | --- |
+|3.14.5|`poetry/2.3.4-GCCcore-15.2.0`|
 |3.13.0|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`|
 |3.9.3|`poetry/1.8.3-GCCcore-13.3.0`|
 |3.6.1|`poetry/1.7.1-GCCcore-12.3.0`|
@@ -425,6 +459,7 @@ Overview of extensions included in poetry installations
 
 |`requests` version|poetry modules that include it|
 | --- | --- |
+|2.33.1|`poetry/2.3.4-GCCcore-15.2.0`|
 |2.32.4|`poetry/2.1.3-GCCcore-14.3.0`|
 |2.32.3|`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`|
 |2.31.0|`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
@@ -434,7 +469,7 @@ Overview of extensions included in poetry installations
 
 |`requests-toolbelt` version|poetry modules that include it|
 | --- | --- |
-|1.0.0|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
+|1.0.0|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
 ### rpds-py
 
@@ -457,12 +492,19 @@ Overview of extensions included in poetry installations
 | --- | --- |
 |3.3.3|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
+### secretstorage
+
+
+|`secretstorage` version|poetry modules that include it|
+| --- | --- |
+|3.5.0|`poetry/2.3.4-GCCcore-15.2.0`|
+
 ### shellingham
 
 
 |`shellingham` version|poetry modules that include it|
 | --- | --- |
-|1.5.4|`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`|
+|1.5.4|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`|
 |1.5.0|`poetry/1.5.1-GCCcore-12.3.0`|
 
 ### six
@@ -477,12 +519,20 @@ Overview of extensions included in poetry installations
 
 |`tomlkit` version|poetry modules that include it|
 | --- | --- |
+|0.14.0|`poetry/2.3.4-GCCcore-15.2.0`|
 |0.13.3|`poetry/2.1.3-GCCcore-14.3.0`|
 |0.13.2|`poetry/2.1.2-GCCcore-14.2.0`|
 |0.12.5|`poetry/1.8.3-GCCcore-13.3.0`|
 |0.12.3|`poetry/1.7.1-GCCcore-12.3.0`|
 |0.12.1|`poetry/1.6.1-GCCcore-13.2.0`|
 |0.11.8|`poetry/1.5.1-GCCcore-12.3.0`|
+
+### trove-classifiers
+
+
+|`trove-classifiers` version|poetry modules that include it|
+| --- | --- |
+|2026.1.14.14|`poetry/2.3.4-GCCcore-15.2.0`|
 
 ### urllib3
 

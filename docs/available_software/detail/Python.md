@@ -23,8 +23,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.13.5'', ''3.13.1'', ''3.12.3'', ''3.11.5'', ''3.11.3'', ''3.10.8'',
-    ''2.7.18'']'
+  softwareVersion: '[''3.14.2'', ''3.13.5'', ''3.13.1'', ''3.12.3'', ''3.11.5'', ''3.11.3'',
+    ''3.10.8'', ''2.7.18'']'
   url: https://python.org/
 ---
 # Python
@@ -40,6 +40,7 @@ Python is a programming language that lets you work more quickly and integrate y
 
 |Python version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|3.14.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`Python/3.14.2-GCCcore-15.2.0`|
 |3.13.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Python/3.13.5-GCCcore-14.3.0`|
 |3.13.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Python/3.13.1-GCCcore-14.2.0`|
 |3.12.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Python/3.12.3-GCCcore-13.3.0`|
@@ -325,7 +326,7 @@ Overview of extensions included in Python installations
 
 |`flit_core` version|Python modules that include it|
 | --- | --- |
-|3.12.0|`Python/3.13.5-GCCcore-14.3.0`|
+|3.12.0|`Python/3.14.2-GCCcore-15.2.0`<br/>`Python/3.13.5-GCCcore-14.3.0`|
 |3.10.1|`Python/3.13.1-GCCcore-14.2.0`|
 |3.9.0|`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.11.5-GCCcore-13.2.0`<br/>`Python/3.11.3-GCCcore-12.3.0`|
 |3.8.0|`Python/3.10.8-GCCcore-12.2.0`|
@@ -552,7 +553,7 @@ Overview of extensions included in Python installations
 
 |`packaging` version|Python modules that include it|
 | --- | --- |
-|25.0|`Python/3.13.5-GCCcore-14.3.0`|
+|25.0|`Python/3.14.2-GCCcore-15.2.0`<br/>`Python/3.13.5-GCCcore-14.3.0`|
 |24.2|`Python/3.13.1-GCCcore-14.2.0`|
 |24.0|`Python/3.12.3-GCCcore-13.3.0`|
 |23.2|`Python/3.11.5-GCCcore-13.2.0`|
@@ -606,6 +607,7 @@ Overview of extensions included in Python installations
 
 |`pip` version|Python modules that include it|
 | --- | --- |
+|25.3|`Python/3.14.2-GCCcore-15.2.0`|
 |25.1.1|`Python/3.13.5-GCCcore-14.3.0`|
 |24.3.1|`Python/3.13.1-GCCcore-14.2.0`|
 |24.0|`Python/3.12.3-GCCcore-13.3.0`|
@@ -849,7 +851,7 @@ Overview of extensions included in Python installations
 
 |`setuptools` version|Python modules that include it|
 | --- | --- |
-|80.9.0|`Python/3.13.5-GCCcore-14.3.0`|
+|80.9.0|`Python/3.14.2-GCCcore-15.2.0`<br/>`Python/3.13.5-GCCcore-14.3.0`|
 |75.6.0|`Python/3.13.1-GCCcore-14.2.0`|
 |70.0.0|`Python/3.12.3-GCCcore-13.3.0`|
 |68.2.2|`Python/3.11.5-GCCcore-13.2.0`|
@@ -875,6 +877,7 @@ Overview of extensions included in Python installations
 
 |`setuptools_scm` version|Python modules that include it|
 | --- | --- |
+|9.2.2|`Python/3.14.2-GCCcore-15.2.0`|
 |8.3.1|`Python/3.13.5-GCCcore-14.3.0`|
 |8.1.0|`Python/3.13.1-GCCcore-14.2.0`<br/>`Python/3.12.3-GCCcore-13.3.0`|
 |7.1.0|`Python/3.11.3-GCCcore-12.3.0`|
@@ -1011,6 +1014,7 @@ Overview of extensions included in Python installations
 
 |`tomli` version|Python modules that include it|
 | --- | --- |
+|2.3.0|`Python/3.14.2-GCCcore-15.2.0`|
 |2.2.1|`Python/3.13.5-GCCcore-14.3.0`<br/>`Python/3.13.1-GCCcore-14.2.0`|
 |2.0.1|`Python/3.12.3-GCCcore-13.3.0`<br/>`Python/3.11.5-GCCcore-13.2.0`<br/>`Python/3.11.3-GCCcore-12.3.0`<br/>`Python/3.10.8-GCCcore-12.2.0`|
 
@@ -1033,6 +1037,7 @@ Overview of extensions included in Python installations
 
 |`typing_extensions` version|Python modules that include it|
 | --- | --- |
+|4.15.0|`Python/3.14.2-GCCcore-15.2.0`|
 |4.14.0|`Python/3.13.5-GCCcore-14.3.0`|
 |4.12.2|`Python/3.13.1-GCCcore-14.2.0`|
 |4.11.0|`Python/3.12.3-GCCcore-13.3.0`|
@@ -1080,7 +1085,7 @@ Overview of extensions included in Python installations
 
 |`wheel` version|Python modules that include it|
 | --- | --- |
-|0.45.1|`Python/3.13.5-GCCcore-14.3.0`<br/>`Python/3.13.1-GCCcore-14.2.0`|
+|0.45.1|`Python/3.14.2-GCCcore-15.2.0`<br/>`Python/3.13.5-GCCcore-14.3.0`<br/>`Python/3.13.1-GCCcore-14.2.0`|
 |0.43.0|`Python/3.12.3-GCCcore-13.3.0`|
 |0.41.2|`Python/3.11.5-GCCcore-13.2.0`|
 |0.40.0|`Python/3.11.3-GCCcore-12.3.0`|
