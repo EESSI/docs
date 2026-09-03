@@ -59,30 +59,23 @@ Both in person and online attendance is free of charge, but registration is requ
 
 ## Agenda
 
-*(more info soon)*
-
-<!--
-* `[09:00-09:15]` Informal welcome + practical info
-* `[09:15-09:45]` Round table: introduce yourself
-* `[09:45-10:15]` Quick refresher on EESSI & EasyBuild *[Lara + Helena]*
-* `[10:15-10:45]` EESSI for Continuous Integration (CI) *[Alan]*
-* `[10:45-11:00]` *(short break)*
-* `[11:00-11:30]` EESSI for Continuous Integration (CI), continued *[Alan]*
-* `[11:30-12:00]` EESSI for Continuous Deployment (CD) *[Alan]*
-* `[12:00-12:30]` *(short lunch break)*
-* `[12:30-15:45]` Hands-on session (with support from EESSI team members)
-    * `[12:30-12:45]` Quick presentation, different scenarios *[Kenneth]*
-    * `[12:45]` Start with guided exercise (at your own pace)
-    * Follow-up with pick your own adventure (medium/advanced)
-    * Online participants: ask for help in [`#cicd` channel in EESSI Slack](https://eessi-hpc.slack.com/archives/C096B9JSD0C)
-        * Join EESSI Slack via [`Slack channel` link on EESSI website](https://www.eessi.io)
-        * Ask to jump in Zoom breakout room to have 1-on-1 with EESSI team member
-* `[15:45-16:00]` *(short break)*
-* `[16:00-16:30]` Show & tell *(optional)*
-    * Both for in-person and online participants
-* `[16:30-16:55]` Q&A
-* `[16:55-17:00]` Raspberry Pi start kit prize for most impressive project *(in-person only!)*
--->
+- *[09:00]* welcome
+- *[09:30-10:00]* intro to EESSI, incl. quick demo of using it
+- *[10:00-10:30]* hands-on: playing with EESSI as a user
+    - incl. setup of VM
+    - easy exercises: exploring EESSI, running a demo script
+- *[10:30-11:00]* *(coffee break)*
+- *[11:00-12:00]* building software for EESSI + contributing it
+    - incl. EESSI-extend, EasyBuild configuration, EESSI build-and-deploy bot, ...
+- *[12:00-13:00]* *(lunch break + group picture)*
+- *[13:00-15:00]* hands-on (with support from EESSI core team members)
+    - exercises with building software on top of EESSI
+    - work on onboard the software you're interested in
+        - existing easyconfigs
+        - new easyconfigs
+- *[15:00-15:30]* *(coffee break*)
+- *[15:30-17:00]* hands-on (continued)
+- *[17:00-17:30]* show & tell: what have you achieved/learned (will be used as input for a blog post on this event) 
 
 ## Preparatory Material
 
