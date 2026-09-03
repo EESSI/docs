@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''1.27.0'', ''1.24.2'', ''1.18.0'']'
+  softwareVersion: '[''1.29.0'', ''1.27.0'', ''1.24.2'', ''1.18.0'']'
   url: https://hatch.pypa.io
 ---
 # hatchling
@@ -40,6 +40,7 @@ a modern, extensible Python project manager.
 
 |hatchling version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|1.29.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`hatchling/1.29.0-GCCcore-15.2.0`|
 |1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.3.0`|
 |1.27.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.27.0-GCCcore-14.2.0`|
 |1.24.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatchling/1.24.2-GCCcore-13.3.0`|
@@ -50,6 +51,13 @@ a modern, extensible Python project manager.
 
 Overview of extensions included in hatchling installations
 
+
+### calver
+
+
+|`calver` version|hatchling modules that include it|
+| --- | --- |
+|2025.10.20|`hatchling/1.29.0-GCCcore-15.2.0`|
 
 ### editables
 
@@ -64,14 +72,14 @@ Overview of extensions included in hatchling installations
 
 |`hatch-docstring-description` version|hatchling modules that include it|
 | --- | --- |
-|1.1.1|`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.1.1|`hatchling/1.29.0-GCCcore-15.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
 
 ### hatch-fancy-pypi-readme
 
 
 |`hatch-fancy-pypi-readme` version|hatchling modules that include it|
 | --- | --- |
-|25.1.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|25.1.0|`hatchling/1.29.0-GCCcore-15.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
 |24.1.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 
 ### hatch-requirements-txt
@@ -79,14 +87,14 @@ Overview of extensions included in hatchling installations
 
 |`hatch-requirements-txt` version|hatchling modules that include it|
 | --- | --- |
-|0.4.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
+|0.4.1|`hatchling/1.29.0-GCCcore-15.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`<br/>`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
 
 ### hatch-vcs
 
 
 |`hatch-vcs` version|hatchling modules that include it|
 | --- | --- |
-|0.5.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|0.5.0|`hatchling/1.29.0-GCCcore-15.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
 |0.4.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 
 ### hatch_fancy_pypi_readme
@@ -108,6 +116,7 @@ Overview of extensions included in hatchling installations
 
 |`hatchling` version|hatchling modules that include it|
 | --- | --- |
+|1.29.0|`hatchling/1.29.0-GCCcore-15.2.0`|
 |1.27.0|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`|
 |1.24.2|`hatchling/1.24.2-GCCcore-13.3.0`|
 |1.18.0|`hatchling/1.18.0-GCCcore-13.2.0`<br/>`hatchling/1.18.0-GCCcore-12.3.0`|
@@ -117,6 +126,7 @@ Overview of extensions included in hatchling installations
 
 |`pathspec` version|hatchling modules that include it|
 | --- | --- |
+|1.1.1|`hatchling/1.29.0-GCCcore-15.2.0`|
 |0.12.1|`hatchling/1.27.0-GCCcore-14.3.0`<br/>`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 |0.11.2|`hatchling/1.18.0-GCCcore-13.2.0`|
 |0.11.1|`hatchling/1.18.0-GCCcore-12.3.0`|
@@ -126,7 +136,7 @@ Overview of extensions included in hatchling installations
 
 |`pluggy` version|hatchling modules that include it|
 | --- | --- |
-|1.6.0|`hatchling/1.27.0-GCCcore-14.3.0`|
+|1.6.0|`hatchling/1.29.0-GCCcore-15.2.0`<br/>`hatchling/1.27.0-GCCcore-14.3.0`|
 |1.5.0|`hatchling/1.27.0-GCCcore-14.2.0`<br/>`hatchling/1.24.2-GCCcore-13.3.0`|
 |1.3.0|`hatchling/1.18.0-GCCcore-13.2.0`|
 |1.2.0|`hatchling/1.18.0-GCCcore-12.3.0`|
@@ -136,6 +146,7 @@ Overview of extensions included in hatchling installations
 
 |`trove-classifiers` version|hatchling modules that include it|
 | --- | --- |
+|2026.1.14.14|`hatchling/1.29.0-GCCcore-15.2.0`|
 |2025.5.9.12|`hatchling/1.27.0-GCCcore-14.3.0`|
 |2025.2.18.16|`hatchling/1.27.0-GCCcore-14.2.0`|
 |2024.5.22|`hatchling/1.24.2-GCCcore-13.3.0`|
