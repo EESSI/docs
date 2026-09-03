@@ -29,7 +29,7 @@ The following table lists the CPU microarchitectures that are natively supported
 | `x86_64/intel/cascadelake`    | Intel Cascade Lake, Cooper Lake                                    | {{ eessi_202306 }} {{ eessi_202506 }} {{ eessi_202606 }} |
 | `x86_64/intel/icelake`        | Intel Ice Lake                                                     | {{ eessi_202306 }} {{ eessi_202506 }} {{ eessi_202606 }} |
 | `x86_64/intel/sapphirerapids` | Intel Sapphire Rapids, Emerald Rapids                              | {{ eessi_202306 }} {{ eessi_202506 }} {{ eessi_202606 }} |
-| `x86_64/intel/graniterapids`  | Intel Granite Rapids                              | {{ eessi_202306 }} {{ eessi_202506 }} {{ eessi_202606 }} |
+| `x86_64/intel/graniterapids`  | Intel Granite Rapids                              | {{ eessi_202606 }} |
 
 The names of these CPU targets correspond to the names used by [archspec](https://github.com/archspec/archspec).
 
