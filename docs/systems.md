@@ -185,6 +185,10 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 ### Netherlands
 
+#### Eindhoven University of Technology
+
+* TU/e Umbrella HPC Cluster: [General documentation](https://supercomputing.tue.nl/documentation/)
+
 #### SURF
 
 * Snellius: [General documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Snellius) | [EESSI @ Snellius](https://servicedesk.surf.nl/wiki/display/WIKI/EESSI+software+environment)
