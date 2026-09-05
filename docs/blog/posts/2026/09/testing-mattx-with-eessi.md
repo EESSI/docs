@@ -18,10 +18,16 @@ back the openMosix vibes.    [MattX](https://github.com/brainmatt/mattx) lacked 
 number of VM's and migrated basic processes around to validate the new releases.  Working on that Test suite I wondered if it weren't a good idea to take let some  real HPC workloads migrate around, and 
 where better to find them than in the [EESSI](https://github.com/EESSI/eessi-demo) demo project. 
 
+
+
+   ![MattX Process Migration](MattX-SSI-Live-Process-Migration2.jpeg)
+
+
 The Test suite thus got expanded with default test targets for GROMACS,  and it actually helped us to find some bugs 
 in MattX.  However  we eventually succeeded not only to migrate GROMACS to other nodes and back while it kept running.
-We managed added a test scenario for GROMACS where we start it on node01,  migrate it to node02 , then migrate it to node03
-before we migrated it back to node01.
+We managed added a test scenario for GROMACS where we start it on node01,  migrate it to node02 , then migrate it back  node01.
+And we can do this multiple times effectively migrating a process to different nodes during it's lifetime.
+
 
 
 Our test suite first setup the GROMACS EESSI module, 
@@ -82,12 +88,12 @@ grep
 
 
 
-As we can see the process now cleanly moves the full process back to almanode1 where it continues running and is gone from almanode2 
+As we can see this action  now cleanly moves the full process back to almanode1 where it continues running and is gone from almanode2 
 and unlike in the initial migration it also doesn't leave anything behind. 
 
 The test suite verifies if the output of GROMACS is as it expects, and also verifies if there's no errors in the logs so we could use those to report back to upstream if there really is a problem. 
 This test scenario proves that  we are successfully leveraging the EESSI demo project to validate the MattX cluster functionality while we keep working on other tool setups provided by the EESSI demo project thus improving it's feature set.
 
 
-Would an SSI style cluster be usefull for you ?   What workloads to you want to migrate around ,  please let us know :) 
+Would an SSI style cluster be useful for you ?   What workloads to you want to migrate around ,  please let us know :) 
 
