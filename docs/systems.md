@@ -95,7 +95,7 @@ MareNostrum 5 is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomp
 
 ### MeluXina (Luxembourg)
 
-MeluXina is the EuroHPC JU supercomputer hosted by the [Barcelona Supercomputing Center (BSC)](https://www.bsc.es/).
+MeluXina is the EuroHPC JU supercomputer hosted by [LuxProvide](https://www.luxprovide.lu/).
 
 * [Website](https://www.luxprovide.lu/meluxina/)
 * [General documentation](https://docs.lxp.lu/)
