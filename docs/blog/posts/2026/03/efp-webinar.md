@@ -83,7 +83,7 @@ EESSI is already available on 7 out of 9 of current [EuroHPC supercomputers](htt
 
 This includes, in alphabetical order:
 
-- [Deucalion](https://www.eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en#deucalion) in Portugal, hosted by [FCT](https://www.fct.pt/en) and managed by [CNCA](https://www.incd.pt/);
+- [Deucalion](https://www.eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en#deucalion) in Portugal, hosted by [FCT](https://www.fct.pt/en) and managed by [CNCA](https://www.deucalion.acnca.pt/);
 - [Discoverer](https://www.eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en#discoverer) in Bulgaria, hosted by [Sofia Tech Park](https://sofiatech.bg/en/);
 - [Karolina](https://www.eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en#karolina) in Czech Republic, hosted by [IT4Innovations (IT4I)](https://www.it4i.cz/en);
 - [Leonardo](https://www.eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en#leonardo) in Italy, hosted by [CINECA](https://www.cineca.it/en);

@@ -35,11 +35,11 @@ It serves as the base for the [Federated Software Catalog](https://docs.my-euroh
 
 ### Deucalion (Portugal)
 
-Deucalion is the EuroHPC JU supercomputer hosted by the [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
+Deucalion is the EuroHPC JU supercomputer hosted by the [Foundation for Science and Technology](https://www.fct.pt/) (FCT) and operated by the [National Center for Advanced Computing](https://deucalion.acnca.pt/) (CNCA), [INESC TEC](https://www.inesctec.pt/en), and the [University of Minho](https://www.uminho.pt/).
 
 * [Website](https://deucalion.acnca.pt/)
-* [General documentation](https://docs.deucalion.macc.fccn.pt/)
-* [EESSI @ Deucalion](https://docs.deucalion.macc.fccn.pt/jobs/eessi/)
+* [General documentation](https://docs.deucalion.acnca.pt/)
+* [EESSI @ Deucalion](https://docs.deucalion.acnca.pt/jobs/eessi/)
 * [EFP Federated Software Catalog @ Deucalion](https://docs.my-eurohpc.eu/software-catalog/system-specific/deucalion/)
 
 ### Discoverer (Bulgaria)

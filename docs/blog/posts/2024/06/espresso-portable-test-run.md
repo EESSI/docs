@@ -16,7 +16,7 @@ This allows running ESPResSo effortlessly on the EuroHPC systems where EESSI is 
 like [Vega](https://doc.vega.izum.si) and [Karolina](https://docs.it4i.cz/karolina/introduction).
 
 On 27 June 2024, an additional installation of ESPResSo v4.2.2 that is optimized for Arm A64FX processors
-was added, which enables also running ESPResSo efficiently on [Deucalion](https://docs.macc.fccn.pt/deucalion),
+was added, which enables also running ESPResSo efficiently on [Deucalion](https://docs.deucalion.acnca.pt/deucalion),
 even though EESSI is not available yet system-wide on Deucalion (see below for more details).
 
 With the [portable test for ESPResSo](https://www.eessi.io/docs/test-suite/available-tests/#espresso) that is available

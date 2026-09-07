@@ -112,7 +112,7 @@ including:
 
 * An on-site cluster consisting of 4 Arm-based Raspberry Pi 3B+ boards;
 * A RISC-V StarFive VisionFive 2 SBC;
-* An Arm A64FX node of the EuroHPC system [Deucalion](https://rnca.fccn.pt/en/deucalion/);
+* An Arm A64FX node of the EuroHPC system [Deucalion](https://deucalion.acnca.pt/);
 * An A100 GPU in the EuroHPC system [Vega](https://izum.si/en/vega-en);
 
 <figure markdown="span">
