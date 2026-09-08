@@ -25,9 +25,6 @@ where better to find them than in the [EESSI](https://github.com/EESSI/eessi-dem
 
 <!-- more -->
 
-
- <!-- more -->
-
 The Test suite thus got expanded with default test targets for GROMACS,  and it actually helped us to find some bugs 
 in MattX.  However  we eventually succeeded not only to migrate GROMACS to other nodes and back while it kept running.
 We managed added a test scenario for GROMACS where we start it on `node01`, migrate it to `node02`, then migrate it back `node01`.
