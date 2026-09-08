@@ -58,8 +58,8 @@ then does a full local test run to make sure it works before  starting a round t
 
 
 
-At this point GROMACS was started on almanode1 and has migrated to almanode2 .. where it keeps running till we tell it to move back.
-We still see the original process on almanode1  , but the threads are stopped. 
+At this point GROMACS was started on `almanode1` and has migrated to `almanode2` .. where it keeps running till we tell it to move back.
+We still see the original process on `almanode1`  , but the threads are stopped. 
 
 
 Lets move it back
