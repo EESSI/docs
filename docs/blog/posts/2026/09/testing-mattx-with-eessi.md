@@ -90,7 +90,7 @@ grep
 
 
 
-As we can see this action  now cleanly moves the full process back to almanode1 where it continues running and is gone from almanode2 
+As we can see this action  now cleanly moves the full process back to `almanode1` where it continues running and is gone from `almanode2`
 and unlike in the initial migration it also doesn't leave anything behind. 
 
 The test suite verifies if the output of GROMACS is as it expects, and also verifies if there's no errors in the logs so we could use those to report back to upstream if there really is a problem. 
