@@ -31,7 +31,7 @@ And we can do this multiple times effectively migrating a process to different n
 
 
 Our test suite first setup the GROMACS EESSI module, 
-then does a full local test run to make sure it works before  starting a round trip migration from  almanode1 to almanode2 and back 
+then does a full local test run to make sure it works before  starting a round trip migration from  `almanode1` to `almanode2` and back:
 
 ```
  ─────────────────────────────────────────────────────
