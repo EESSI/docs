@@ -334,9 +334,10 @@ set_common_required_config(site_configuration)
 ```
 
 If the EESSI modules are not available by default, we can add the necessary
-commands as `eessi_prepare_cmds` argument to make them available.  If the
-system doesn't have an Lmod installation by default, the following commands
-will use the one from EESSI:
+commands to [make them available](../using_eessi/setting_up_environment.md)
+with the `eessi_prepare_cmds` keyword argument.  If the system doesn't have an
+Lmod installation by default, the following commands will use the one from
+EESSI:
 
 ```python
 eessi_prepare_cmds = [
