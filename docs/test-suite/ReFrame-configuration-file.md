@@ -333,11 +333,10 @@ dictionary with required configuration options:
 set_common_required_config(site_configuration)
 ```
 
-If the EESSI modules are not available by default on the batch nodes, we can
-add the necessary commands as `eessi_prepare_cmds` argument to make them
-available in the batch job.  If the system doesn't have an Lmod installation
-by default on the batch nodes, the following commands will use the one from
-EESSI:
+If the EESSI modules are not available by default, we can add the necessary
+commands as `eessi_prepare_cmds` argument to make them available.  If the
+system doesn't have an Lmod installation by default, the following commands
+will use the one from EESSI:
 
 ```python
 eessi_prepare_cmds = [
