@@ -1,5 +1,5 @@
 ---
-date: 2026-09-10
+date: 2026-09-08
 authors: [krisbuytaert]
 slug: testing-mattx-with-eessi
 hide: 
