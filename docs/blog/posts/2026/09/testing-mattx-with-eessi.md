@@ -7,7 +7,7 @@ hide:
 ---
 
 
-Almost 2 decades ago openMosix was the hottest open source Single System Image  cluster out there.
+Almost 2 decades ago openMosix was the hottest open source Single System Image (SSI) cluster out there.
 OpenMosix could migrate long running  processes across a cluster and thus effectively allowing HPC workloads to be spread 
 across a cluster or migrated to a node with more resources, with no changes to the code. 
 The project however never got a 2.6 kernel port and thus was EOL by early 2008.
