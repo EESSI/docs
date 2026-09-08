@@ -62,7 +62,7 @@ At this point GROMACS was started on `almanode1` and has migrated to `almanode2`
 We still see the original process on `almanode1`  , but the threads are stopped. 
 
 
-Lets move it back
+Let's move it back:
 ```
  ─────────────────────────────────────────────────────
   Starting migration of gmx mdrun [PID 92045]
