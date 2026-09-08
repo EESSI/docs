@@ -97,5 +97,5 @@ The test suite verifies if the output of GROMACS is as it expects, and also chec
 This test scenario proves that  we are successfully leveraging the EESSI demo project to validate the MattX cluster functionality while we keep working on other tool setups provided by the EESSI demo project thus improving it's feature set.
 
 
-Would an SSI style cluster be useful for you ?   What workloads to you want to migrate around ,  please let us know :) 
+Would an SSI style cluster be useful for you ?   What workloads to you want to migrate around?  Please let us know!
 
