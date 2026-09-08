@@ -5960,6 +5960,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-spack-on-top-of-eessi-a-proof-of-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Spack on top of EESSI: A Proof of Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-on-kubernetes-a-proof-of-concept" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6052,17 +6063,6 @@
     <span class="md-ellipsis">
       
         Open OnDemand meets EESSI at Global Open OnDemand Conference (Boston)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gpu-support-in-eessi-from-zero-to-science-in-seconds" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Support in EESSI: From Zero to Science in Seconds
       
     </span>
   </a>
@@ -6104,6 +6104,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-spack-on-top-of-eessi-a-proof-of-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using Spack on top of EESSI: A Proof of Concept
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-on-kubernetes-a-proof-of-concept" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6202,17 +6213,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#gpu-support-in-eessi-from-zero-to-science-in-seconds" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Support in EESSI: From Zero to Science in Seconds
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6227,6 +6227,61 @@
       <header class="md-typeset">
         <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/30901257?v=4" alt="Loris Ercole">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-01-09 00:00:00+00:00">January 9, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="using-spack-on-top-of-eessi-a-proof-of-concept"><a class="toclink" href="../../2026/01/09/Spack-on-top-of-EESSI-PoC/">Using Spack on top of EESSI: A Proof of Concept</a></h2>
+<figure>
+<img alt="Spack + EESSI" src="../../2026/01/spack-plus-eessi.webp" width="75%" />
+</figure>
+<p>EESSI provides a rich set of software installations, which were built and installed using
+<a href="https://easybuild.io">EasyBuild</a>.</p>
+<p>Can we convince <a href="https://spack.io">Spack</a> to reuse software installed in EESSI,
+and by doing so make EESSI more attractive to those of you who prefer using Spack over EasyBuild?</p>
+<p>Several people have expressed interest in exposing the software installations provided by EESSI
+to Spack, so they can be used as dependencies when building and installing software with Spack.</p>
+<p>Recently, we have explored how this could be achieved through a proof-of-concept with <a href="https://www.quantum-espresso.org/">QuantumESPRESSO</a>.</p>
+<p>The goal here is to build and install only QuantumESPRESSO with Spack,
+and leveraging software installations from EESSI for all required dependencies, including the compiler and libraries for MPI, BLAS/LAPACK, FFTW, etc.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2026/01/09/Spack-on-top-of-EESSI-PoC/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -6727,54 +6782,6 @@ This document is the result of our recent efforts to prepare for adding ROCm sup
     
       <nav class="md-post__action">
         <a href="../../2025/04/03/eessi-at-good-conf/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/1187034?v=4" alt="Pavel Grochal">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2025-03-24 00:00:00+00:00">March 24, 2025</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              17 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="gpu-support-in-eessi-from-zero-to-science-in-seconds"><a class="toclink" href="../../2025/03/24/gpu-support-in-eessi/">GPU Support in EESSI: From Zero to Science in Seconds</a></h2>
-<p>"How long until I can run my simulation?" </p>
-<p>It's the question every computational scientist asks when setting up a new environment. With GPU-accelerated EESSI, the answer might surprise you: as little as 15 seconds from login to launching your first computation.</p>
-<p>In the high-stakes world of scientific computing, every minute spent configuring software is a minute not spent on discovery. That's why we've developed a metric we call <strong>Mean-Time-To-Science</strong> – the total time from system access to running your first scientific computation. By optimizing this crucial metric, EESSI's GPU support transforms the traditional hours-long setup process into a seamless experience that keeps researchers focused on their science.</p>
-<p>Although EESSI aims to provide pre-built software for all common HPC architectures, GPU support introduces multiplicative requirements for software builds. Each GPU compute capability (e.g., CC7.5, CC8.0, CC8.6) needs to be combined with each CPU architecture (zen2, zen3, generic x86_64), creating a large matrix of possible configurations. While it's possible to pre-build all software for all CPU/GPU combinations, testing all the configurations is not - the combination of CPU/GPU might not even exist in the real-world.</p>
-<p>To address this challenge, we're developing additional documentation highlighting which CPU/GPU combinations are already built into EESSI. Additionally, we provide the tools and process for users to build any EasyBuild-enabled software on EESSI, allowing them to create architecture-specific builds for their particular needs when a specific combination isn't available in the standard distribution.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2025/03/24/gpu-support-in-eessi/">
           Continue reading
         </a>
       </nav>

@@ -5945,6 +5945,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#testing-mattx-with-eessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing MattX with EESSI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#chasing-a-nan-correct-rvv-hpl-on-a-risc-v-spacemit-x60-through-eessi" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6043,17 +6054,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#using-spack-on-top-of-eessi-a-proof-of-concept" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using Spack on top of EESSI: A Proof of Concept
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -6068,6 +6068,58 @@
       <header class="md-typeset">
         <h1 id="2026">2026<a class="headerlink" href="#2026" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/574106" alt="Kris Buytaert">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-09-08 00:00:00+00:00">September 8, 2026</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="testing-mattx-with-eessi"><a class="toclink" href="../../2026/09/08/testing-mattx-with-eessi/">Testing MattX with EESSI</a></h2>
+<p>Almost 2 decades ago <a href="https://en.wikipedia.org/wiki/OpenMosix">openMosix</a> was the hottest open source Single System Image (SSI) cluster out there.
+OpenMosix could migrate long running  processes across a cluster and thus effectively allowing HPC workloads to be spread 
+across a cluster or migrated to a node with more resources, with no changes to the code. 
+The project however never got a 2.6 kernel port and thus was EOL by early 2008.</p>
+<p>Earlier this year Matt Rechenburg, one of the original openMosix community members released <a href="https://mattx.de">MattX, the Modern SSI Cluster</a> , which brought 
+back the openMosix vibes.    <a href="https://github.com/brainmatt/mattx">MattX</a> lacked a test suite and thus I had a suite build.  Initially the <a href="https://github.com/KrisBuytaert/mattx-testsuite">Mattx Test suite</a> just spun up a
+number of VM's and migrated basic processes around to validate the new releases.  Working on that Test suite I wondered if it weren't a good idea to take let some  real HPC workloads migrate around, and 
+where better to find them than in the <a href="https://github.com/EESSI/eessi-demo">EESSI</a> demo project. </p>
+<p><img alt="MattX Process Migration" src="../../2026/09/MattX-SSI-Live-Process-Migration2.jpeg" /></p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2026/09/08/testing-mattx-with-eessi/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -6513,61 +6565,6 @@ Simultaneously working towards bringing a large repository of scientific softwar
   </div>
 </article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/u/30901257?v=4" alt="Loris Ercole">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2026-01-09 00:00:00+00:00">January 9, 2026</time></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="using-spack-on-top-of-eessi-a-proof-of-concept"><a class="toclink" href="../../2026/01/09/Spack-on-top-of-EESSI-PoC/">Using Spack on top of EESSI: A Proof of Concept</a></h2>
-<figure>
-<img alt="Spack + EESSI" src="../../2026/01/spack-plus-eessi.webp" width="75%" />
-</figure>
-<p>EESSI provides a rich set of software installations, which were built and installed using
-<a href="https://easybuild.io">EasyBuild</a>.</p>
-<p>Can we convince <a href="https://spack.io">Spack</a> to reuse software installed in EESSI,
-and by doing so make EESSI more attractive to those of you who prefer using Spack over EasyBuild?</p>
-<p>Several people have expressed interest in exposing the software installations provided by EESSI
-to Spack, so they can be used as dependencies when building and installing software with Spack.</p>
-<p>Recently, we have explored how this could be achieved through a proof-of-concept with <a href="https://www.quantum-espresso.org/">QuantumESPRESSO</a>.</p>
-<p>The goal here is to build and install only QuantumESPRESSO with Spack,
-and leveraging software installations from EESSI for all required dependencies, including the compiler and libraries for MPI, BLAS/LAPACK, FFTW, etc.</p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../2026/01/09/Spack-on-top-of-EESSI-PoC/">
-          Continue reading
-        </a>
-      </nav>
-    
-    
-  </div>
-</article>
-      
       
         
           
@@ -6575,7 +6572,7 @@ and leveraging software installations from EESSI for all required dependencies, 
 
 
 <nav class="md-pagination">
-  
+  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a>
 </nav>
         
       
