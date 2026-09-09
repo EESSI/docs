@@ -218,10 +218,10 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 #### Barcelona Supercomputing Center (BSC)
 
 * HCA RISC-V clusters: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
-** arriesgado-hirsute
-** bananaf3
-** premier
-** fireflyk3
+  * arriesgado-hirsute
+  * bananaf3
+  * premier
+  * fireflyk3
 
 
 #### Galicia Supercomputing Center (CESGA)
