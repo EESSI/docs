@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://eessi.github.io/docs/available_software/detail/Boost.Python-NumPy/" rel="canonical"/>
+<link href="https://eessi.github.io/docs/available_software/detail/xopen/" rel="canonical"/>
 <link href="../../../img/logos/EESSI.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>Boost.Python-NumPy - European Environment for Scientific Software Installations (EESSI)</title>
+<title>xopen - European Environment for Scientific Software Installations (EESSI)</title>
 <link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,9 +22,9 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "applicationCategory": "DeveloperApplication",
-  "description": "Boost.Python is a C++ library which enables seamless interoperability between C++\n and the Python programming language.",
+  "description": "This Python module provides an xopen function that works like Python\u2019s built-in open function but\nalso transparently deals with compressed files. xopen selects the most efficient method for reading or writing a\ncompressed file.",
   "license": "Not confirmed",
-  "name": "Boost.Python-NumPy",
+  "name": "xopen",
   "offers": {
     "@type": "Offer",
     "price": 0
@@ -43,15 +43,15 @@
     }
   },
   "softwareRequirements": "See https://www.eessi.io/docs/ for how to make EESSI available on your system",
-  "softwareVersion": "['1.88.0', '1.83.0']",
-  "url": "https://boostorg.github.io/python"
+  "softwareVersion": "['2.1.0']",
+  "url": "https://github.com/pycompression/xopen/"
 }</script></head>
 <body dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#boostpython-numpy">
+<a class="md-skip" href="#xopen">
           Skip to content
         </a>
 </div>
@@ -75,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Boost.Python-NumPy
+              xopen
             
           </span>
 </div>
@@ -2767,6 +2767,46 @@
     </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extensions">
+<span class="md-ellipsis">
+      
+        Extensions
+      
+    </span>
+</a>
+<nav aria-label="Extensions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backports-zstd">
+<span class="md-ellipsis">
+      
+        backports-zstd
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xopen_1">
+<span class="md-ellipsis">
+      
+        xopen
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zlib-ng">
+<span class="md-ellipsis">
+      
+        zlib-ng
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
 </ul>
 </nav>
 </div>
@@ -2774,15 +2814,16 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="boostpython-numpy">Boost.Python-NumPy<a class="headerlink" href="#boostpython-numpy" title="Permanent link">¶</a></h1>
-<p>Boost.Python is a C++ library which enables seamless interoperability between C++
- and the Python programming language.</p>
-<p><small>homepage: </small><span class="software-link"><a href="https://boostorg.github.io/python">https://boostorg.github.io/python</a></span></p>
+<h1 id="xopen">xopen<a class="headerlink" href="#xopen" title="Permanent link">¶</a></h1>
+<p>This Python module provides an xopen function that works like Python’s built-in open function but
+also transparently deals with compressed files. xopen selects the most efficient method for reading or writing a
+compressed file.</p>
+<p><small>homepage: </small><span class="software-link"><a href="https://github.com/pycompression/xopen/">https://github.com/pycompression/xopen/</a></span></p>
 <h2 id="available-installations">Available installations<a class="headerlink" href="#available-installations" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>Boost.Python-NumPy version</th>
+<th>xopen version</th>
 <th>Supported CPU targets</th>
 <th>Supported GPU targets</th>
 <th>EESSI version</th>
@@ -2791,25 +2832,58 @@
 </thead>
 <tbody>
 <tr>
-<td>1.88.0</td>
+<td>2.1.0</td>
 <td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
 <td><em>(none)</em></td>
 <td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>Boost.Python-NumPy/1.88.0-gfbf-2025b</code></td>
+<td><code>xopen/2.1.0-GCCcore-14.3.0</code></td>
 </tr>
+</tbody>
+</table>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¶</a></h2>
+<p>Overview of extensions included in xopen installations</p>
+<h3 id="backports-zstd">backports-zstd<a class="headerlink" href="#backports-zstd" title="Permanent link">¶</a></h3>
+<table>
+<thead>
 <tr>
-<td>1.88.0</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>Boost.Python-NumPy/1.88.0-gfbf-2025a</code></td>
+<th><code>backports-zstd</code> version</th>
+<th>xopen modules that include it</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td>1.83.0</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202306">2023.06</span></td>
-<td><code>Boost.Python-NumPy/1.83.0-gfbf-2023b</code></td>
+<td>1.5.0</td>
+<td><code>xopen/2.1.0-GCCcore-14.3.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="xopen_1">xopen<a class="headerlink" href="#xopen_1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>xopen</code> version</th>
+<th>xopen modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1.0</td>
+<td><code>xopen/2.1.0-GCCcore-14.3.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="zlib-ng">zlib-ng<a class="headerlink" href="#zlib-ng" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>zlib-ng</code> version</th>
+<th>xopen modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td><code>xopen/2.1.0-GCCcore-14.3.0</code></td>
 </tr>
 </tbody>
 </table>
