@@ -39,7 +39,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''2025.09'']'
+  softwareVersion: '[''2026.05'', ''2025.09'']'
   url: http://www.opengl.org/
 ---
 # OpenGL
@@ -63,6 +63,7 @@ sample applications, and GLU as an computer graphics library utilizing OpenGL.
 
 |OpenGL version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|2026.05|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`OpenGL/2026.05-GCCcore-15.2.0`|
 |2025.09|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`OpenGL/2025.09-GCCcore-14.3.0`|
 
 ## Extensions
@@ -75,20 +76,21 @@ Overview of extensions included in OpenGL installations
 
 |`libGLU` version|OpenGL modules that include it|
 | --- | --- |
-|9.0.3|`OpenGL/2025.09-GCCcore-14.3.0`|
+|9.0.3|`OpenGL/2026.05-GCCcore-15.2.0`<br/>`OpenGL/2025.09-GCCcore-14.3.0`|
 
 ### libglvnd
 
 
 |`libglvnd` version|OpenGL modules that include it|
 | --- | --- |
-|1.7.0|`OpenGL/2025.09-GCCcore-14.3.0`|
+|1.7.0|`OpenGL/2026.05-GCCcore-15.2.0`<br/>`OpenGL/2025.09-GCCcore-14.3.0`|
 
 ### Mesa
 
 
 |`Mesa` version|OpenGL modules that include it|
 | --- | --- |
+|26.1.1|`OpenGL/2026.05-GCCcore-15.2.0`|
 |25.2.2|`OpenGL/2025.09-GCCcore-14.3.0`|
 
 ### Mesa-demos
@@ -96,4 +98,4 @@ Overview of extensions included in OpenGL installations
 
 |`Mesa-demos` version|OpenGL modules that include it|
 | --- | --- |
-|9.0.0|`OpenGL/2025.09-GCCcore-14.3.0`|
+|9.0.0|`OpenGL/2026.05-GCCcore-15.2.0`<br/>`OpenGL/2025.09-GCCcore-14.3.0`|
