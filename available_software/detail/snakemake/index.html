@@ -43,7 +43,7 @@
     }
   },
   "softwareRequirements": "See https://www.eessi.io/docs/ for how to make EESSI available on your system",
-  "softwareVersion": "['8.28.0', '8.4.2']",
+  "softwareVersion": "['9.22.0', '8.28.0', '8.4.2']",
   "url": "https://snakemake.readthedocs.io"
 }</script></head>
 <body dir="ltr">
@@ -2805,6 +2805,15 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#configargparse_1">
+<span class="md-ellipsis">
+      
+        configargparse
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#connection-pool">
 <span class="md-ellipsis">
       
@@ -2976,10 +2985,28 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#snakemake-interface-logger-plugins">
+<span class="md-ellipsis">
+      
+        snakemake-interface-logger-plugins
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#snakemake-interface-report-plugins">
 <span class="md-ellipsis">
       
         snakemake-interface-report-plugins
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#snakemake-interface-scheduler-plugins">
+<span class="md-ellipsis">
+      
+        snakemake-interface-scheduler-plugins
       
     </span>
 </a>
@@ -2994,10 +3021,28 @@
 </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#sqlmodel">
+<span class="md-ellipsis">
+      
+        sqlmodel
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#stopit">
 <span class="md-ellipsis">
       
         stopit
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tenacity">
+<span class="md-ellipsis">
+      
+        tenacity
       
     </span>
 </a>
@@ -3064,6 +3109,13 @@
 </thead>
 <tbody>
 <tr>
+<td>9.22.0</td>
+<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
+<td><em>(none)</em></td>
+<td><span class="software-eessi-version-202506">2025.06</span></td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
+<tr>
 <td>8.28.0</td>
 <td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
 <td><em>(none)</em></td>
@@ -3092,7 +3144,7 @@
 <tbody>
 <tr>
 <td>2.0.0</td>
-<td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
 </tr>
 </tbody>
 </table>
@@ -3107,7 +3159,7 @@
 <tbody>
 <tr>
 <td>1.3.2</td>
-<td><code>snakemake/8.28.0-foss-2023b</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
 <tr>
 <td>1.3.1</td>
@@ -3130,6 +3182,21 @@
 </tr>
 </tbody>
 </table>
+<h3 id="configargparse_1">configargparse<a class="headerlink" href="#configargparse_1" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>configargparse</code> version</th>
+<th>snakemake modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.7.5</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
+</tbody>
+</table>
 <h3 id="connection-pool">connection-pool<a class="headerlink" href="#connection-pool" title="Permanent link">¶</a></h3>
 <table>
 <thead>
@@ -3141,7 +3208,7 @@
 <tbody>
 <tr>
 <td>0.0.3</td>
-<td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
 </tr>
 </tbody>
 </table>
@@ -3154,6 +3221,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>0.8.3</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>0.8.2</td>
 <td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
@@ -3171,7 +3242,7 @@
 <tbody>
 <tr>
 <td>2.2.0</td>
-<td><code>snakemake/8.28.0-foss-2023b</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
 <tr>
 <td>2.1.6</td>
@@ -3189,6 +3260,10 @@
 </thead>
 <tbody>
 <tr>
+<td>2.21.2</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
+<tr>
 <td>2.19.1</td>
 <td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
 </tr>
@@ -3205,7 +3280,7 @@
 <tbody>
 <tr>
 <td>10.0</td>
-<td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
 </tr>
 </tbody>
 </table>
@@ -3220,7 +3295,7 @@
 <tbody>
 <tr>
 <td>0.21</td>
-<td><code>snakemake/8.28.0-foss-2023b</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
 <tr>
 <td>0.20</td>
@@ -3237,6 +3312,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>5.9.1</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>5.7.2</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
@@ -3258,7 +3337,7 @@
 <tbody>
 <tr>
 <td>5.10.4</td>
-<td><code>snakemake/8.28.0-foss-2023b</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
 <tr>
 <td>5.9.2</td>
@@ -3275,6 +3354,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>1.4.5</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>1.4.3</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
@@ -3296,7 +3379,7 @@
 <tbody>
 <tr>
 <td>0.11.8</td>
-<td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
 </tr>
 </tbody>
 </table>
@@ -3309,6 +3392,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>7.6.1</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>7.1.0</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
@@ -3328,6 +3415,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>9.22.0</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>8.28.0</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
@@ -3349,7 +3440,7 @@
 <tbody>
 <tr>
 <td>1.0.9</td>
-<td><code>snakemake/8.28.0-foss-2023b</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
 <tr>
 <td>1.0.7</td>
@@ -3366,6 +3457,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>0.1.5</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>0.1.4</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
@@ -3387,7 +3482,7 @@
 <tbody>
 <tr>
 <td>0.1.1</td>
-<td><code>snakemake/8.28.0-foss-2023b</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
 <tr>
 <td>0.1.0</td>
@@ -3404,6 +3499,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>2.6.1</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>0.12.0</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
@@ -3424,6 +3523,10 @@
 </thead>
 <tbody>
 <tr>
+<td>0.6.1</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
+<tr>
 <td>0.2.1</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
@@ -3442,6 +3545,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>1.23.0</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>1.17.4</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
@@ -3462,12 +3569,31 @@
 </thead>
 <tbody>
 <tr>
+<td>9.4.0</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
+<tr>
 <td>9.3.3</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
 <tr>
 <td>8.2.0</td>
 <td><code>snakemake/8.4.2-foss-2023a</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="snakemake-interface-logger-plugins">snakemake-interface-logger-plugins<a class="headerlink" href="#snakemake-interface-logger-plugins" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>snakemake-interface-logger-plugins</code> version</th>
+<th>snakemake modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1.0</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
 </tr>
 </tbody>
 </table>
@@ -3481,8 +3607,27 @@
 </thead>
 <tbody>
 <tr>
+<td>1.3.0</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
+<tr>
 <td>1.1.0</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="snakemake-interface-scheduler-plugins">snakemake-interface-scheduler-plugins<a class="headerlink" href="#snakemake-interface-scheduler-plugins" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>snakemake-interface-scheduler-plugins</code> version</th>
+<th>snakemake modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.0.2</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
 </tr>
 </tbody>
 </table>
@@ -3496,12 +3641,31 @@
 </thead>
 <tbody>
 <tr>
+<td>4.4.1</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
+<tr>
 <td>3.3.0</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
 <tr>
 <td>3.0.0</td>
 <td><code>snakemake/8.4.2-foss-2023a</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sqlmodel">sqlmodel<a class="headerlink" href="#sqlmodel" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>sqlmodel</code> version</th>
+<th>snakemake modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0.37</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
 </tr>
 </tbody>
 </table>
@@ -3516,7 +3680,22 @@
 <tbody>
 <tr>
 <td>1.1.2</td>
-<td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tenacity">tenacity<a class="headerlink" href="#tenacity" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>tenacity</code> version</th>
+<th>snakemake modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.1.4</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
 </tr>
 </tbody>
 </table>
@@ -3529,6 +3708,10 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>1.2.3</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
 <tr>
 <td>1.2.2</td>
 <td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
@@ -3546,7 +3729,7 @@
 <tbody>
 <tr>
 <td>1.10</td>
-<td><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
+<td><code>snakemake/9.22.0-foss-2025b</code><br/><code>snakemake/8.28.0-foss-2023b</code><br/><code>snakemake/8.4.2-foss-2023a</code></td>
 </tr>
 </tbody>
 </table>
@@ -3575,6 +3758,10 @@
 </thead>
 <tbody>
 <tr>
+<td>1.8.1</td>
+<td><code>snakemake/9.22.0-foss-2025b</code></td>
+</tr>
+<tr>
 <td>1.5.5</td>
 <td><code>snakemake/8.28.0-foss-2023b</code></td>
 </tr>
@@ -3589,7 +3776,7 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 1, 2026 13:26:56 UTC">May 1, 2026</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2026 03:50:24 UTC">September 11, 2026</span>
 </span>
 </aside>
 </article>
