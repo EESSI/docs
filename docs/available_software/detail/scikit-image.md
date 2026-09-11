@@ -37,6 +37,7 @@ scikit-image is a collection of algorithms for image processing.
 
 |scikit-image version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.25.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`scikit-image/0.25.0-foss-2025b`|
 |0.25.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`scikit-image/0.25.0-foss-2025a`|
 |0.25.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`scikit-image/0.25.0-foss-2024a`|
 
@@ -50,26 +51,26 @@ Overview of extensions included in scikit-image installations
 
 |`imread` version|scikit-image modules that include it|
 | --- | --- |
-|0.7.6|`scikit-image/0.25.0-foss-2025a`<br/>`scikit-image/0.25.0-foss-2024a`|
+|0.7.6|`scikit-image/0.25.0-foss-2025b`<br/>`scikit-image/0.25.0-foss-2025a`<br/>`scikit-image/0.25.0-foss-2024a`|
 
 ### lazy_loader
 
 
 |`lazy_loader` version|scikit-image modules that include it|
 | --- | --- |
-|0.4|`scikit-image/0.25.0-foss-2025a`<br/>`scikit-image/0.25.0-foss-2024a`|
+|0.4|`scikit-image/0.25.0-foss-2025b`<br/>`scikit-image/0.25.0-foss-2025a`<br/>`scikit-image/0.25.0-foss-2024a`|
 
 ### scikit-image
 
 
 |`scikit-image` version|scikit-image modules that include it|
 | --- | --- |
-|0.25.0|`scikit-image/0.25.0-foss-2025a`<br/>`scikit-image/0.25.0-foss-2024a`|
+|0.25.0|`scikit-image/0.25.0-foss-2025b`<br/>`scikit-image/0.25.0-foss-2025a`<br/>`scikit-image/0.25.0-foss-2024a`|
 
 ### tifffile
 
 
 |`tifffile` version|scikit-image modules that include it|
 | --- | --- |
-|2025.10.16|`scikit-image/0.25.0-foss-2025a`|
+|2025.10.16|`scikit-image/0.25.0-foss-2025b`<br/>`scikit-image/0.25.0-foss-2025a`|
 |2024.12.12|`scikit-image/0.25.0-foss-2024a`|
