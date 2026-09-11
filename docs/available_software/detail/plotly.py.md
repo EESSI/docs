@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''5.16.0'']'
+  softwareVersion: '[''5.24.1'', ''5.16.0'']'
   url: https://plot.ly/python
 ---
 # plotly.py
@@ -37,6 +37,7 @@ An open-source, interactive graphing library for Python
 
 |plotly.py version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|5.24.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`plotly.py/5.24.1-GCCcore-13.3.0`|
 |5.16.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`plotly.py/5.16.0-GCCcore-12.3.0`|
 
 ## Extensions
@@ -49,6 +50,7 @@ Overview of extensions included in plotly.py installations
 
 |`packaging` version|plotly.py modules that include it|
 | --- | --- |
+|24.1|`plotly.py/5.24.1-GCCcore-13.3.0`|
 |23.1|`plotly.py/5.16.0-GCCcore-12.3.0`|
 
 ### plotly
@@ -56,6 +58,7 @@ Overview of extensions included in plotly.py installations
 
 |`plotly` version|plotly.py modules that include it|
 | --- | --- |
+|5.24.1|`plotly.py/5.24.1-GCCcore-13.3.0`|
 |5.16.0|`plotly.py/5.16.0-GCCcore-12.3.0`|
 
 ### tenacity
@@ -63,4 +66,5 @@ Overview of extensions included in plotly.py installations
 
 |`tenacity` version|plotly.py modules that include it|
 | --- | --- |
+|9.0.0|`plotly.py/5.24.1-GCCcore-13.3.0`|
 |8.2.3|`plotly.py/5.16.0-GCCcore-12.3.0`|
