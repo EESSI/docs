@@ -23,7 +23,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''22.0.0'', ''17.0.0'', ''16.1.0'', ''14.0.1'', ''11.0.0'']'
+  softwareVersion: '[''24.0.0'', ''22.0.0'', ''17.0.0'', ''16.1.0'', ''14.0.1'', ''11.0.0'']'
   url: https://arrow.apache.org
 ---
 # Arrow
@@ -39,6 +39,7 @@ Apache Arrow (incl. PyArrow Python bindings), a cross-language development platf
 
 |Arrow version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|24.0.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`Arrow/24.0.0-gfbf-2026.1`|
 |22.0.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Arrow/22.0.0-gfbf-2025b`|
 |17.0.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Arrow/17.0.0-gfbf-2024a`|
 |16.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Arrow/16.1.0-gfbf-2023b`|
@@ -55,6 +56,7 @@ Overview of extensions included in Arrow installations
 
 |`pyarrow` version|Arrow modules that include it|
 | --- | --- |
+|24.0.0|`Arrow/24.0.0-gfbf-2026.1`|
 |22.0.0|`Arrow/22.0.0-gfbf-2025b`|
 |17.0.0|`Arrow/17.0.0-gfbf-2024a`|
 |16.1.0|`Arrow/16.1.0-gfbf-2023b`|
