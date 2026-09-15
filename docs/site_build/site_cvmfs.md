@@ -867,7 +867,7 @@ aws s3 mb s3://<bucket_name>
 
 There are many policies you can attach to a bucket to increase security. At the _very_ least, consider setting a bucket policy that restricts IP access to a whitelisted range (i.e. only the nodes where your build bot(s) run and your Stratum 0 need access). The [AWS policy generator](https://awspolicygen.s3.amazonaws.com/policygen.html) can be a helpful tool in generating such a policy.
 
-Another thing to consider is to create a secondary user with `aws iam create-user --user-name <name>` and attach a very limited policy to it (e.g. only read/write/list on buckets, nothing else). Then, create credentials for this user with `aws iam create-access-key --user-name <name>` and provide those credentials to the EESSI build bot and Stratum 0 machines. That way, if that token is compromised, the impact is minimized (e.g. the token can at least not be used to create new IAM idententies, etc).
+Another thing to consider is to create a secondary user with `aws iam create-user --user-name <name>` and attach a very limited policy to it (e.g. only read/write/list on buckets, nothing else). Then, create credentials for this user with `aws iam create-access-key --user-name <name>` and provide those credentials to the EESSI build bot and Stratum 0 machines. That way, if that token is compromised, the impact is minimized (e.g. the token can at least not be used to create new IAM identities, etc).
 
 ## Setting up the EESSI build bot
 
