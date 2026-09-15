@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''9.4.0'', ''9.3.0'', ''8.28.0'', ''8.17.2'', ''8.14.0'']'
+  softwareVersion: '[''9.14.0'', ''9.4.0'', ''9.3.0'', ''8.28.0'', ''8.17.2'', ''8.14.0'']'
   url: https://ipython.org/index.html
 ---
 # IPython
@@ -47,6 +47,7 @@ IPython provides a rich architecture for interactive computing with:
 
 |IPython version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|9.14.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`IPython/9.14.0-GCCcore-15.2.0`|
 |9.4.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`IPython/9.4.0-GCCcore-14.3.0`|
 |9.3.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`IPython/9.3.0-GCCcore-14.2.0`|
 |8.28.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`IPython/8.28.0-GCCcore-13.3.0`|
@@ -63,6 +64,7 @@ Overview of extensions included in IPython installations
 
 |`asttokens` version|IPython modules that include it|
 | --- | --- |
+|3.0.1|`IPython/9.14.0-GCCcore-15.2.0`|
 |3.0.0|`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
 |2.4.1|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |2.2.1|`IPython/8.14.0-GCCcore-12.3.0`|
@@ -79,20 +81,36 @@ Overview of extensions included in IPython installations
 
 |`executing` version|IPython modules that include it|
 | --- | --- |
+|2.2.1|`IPython/9.14.0-GCCcore-15.2.0`|
 |2.2.0|`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
 |2.0.1|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |1.2.0|`IPython/8.14.0-GCCcore-12.3.0`|
+
+### ipytest
+
+
+|`ipytest` version|IPython modules that include it|
+| --- | --- |
+|0.14.2|`IPython/9.14.0-GCCcore-15.2.0`|
 
 ### ipython
 
 
 |`ipython` version|IPython modules that include it|
 | --- | --- |
+|9.14.0|`IPython/9.14.0-GCCcore-15.2.0`|
 |9.4.0|`IPython/9.4.0-GCCcore-14.3.0`|
 |9.3.0|`IPython/9.3.0-GCCcore-14.2.0`|
 |8.28.0|`IPython/8.28.0-GCCcore-13.3.0`|
 |8.17.2|`IPython/8.17.2-GCCcore-13.2.0`|
 |8.14.0|`IPython/8.14.0-GCCcore-12.3.0`|
+
+### ipython-pygments-lexers
+
+
+|`ipython-pygments-lexers` version|IPython modules that include it|
+| --- | --- |
+|1.1.1|`IPython/9.14.0-GCCcore-15.2.0`|
 
 ### ipython_pygments_lexers
 
@@ -113,6 +131,7 @@ Overview of extensions included in IPython installations
 
 |`matplotlib-inline` version|IPython modules that include it|
 | --- | --- |
+|0.2.2|`IPython/9.14.0-GCCcore-15.2.0`|
 |0.1.6|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
 
 ### matplotlib_inline
@@ -128,6 +147,13 @@ Overview of extensions included in IPython installations
 |`parso` version|IPython modules that include it|
 | --- | --- |
 |0.8.3|`IPython/8.14.0-GCCcore-12.3.0`|
+
+### pexpect
+
+
+|`pexpect` version|IPython modules that include it|
+| --- | --- |
+|4.9.0|`IPython/9.14.0-GCCcore-15.2.0`|
 
 ### pickleshare
 
@@ -145,12 +171,19 @@ Overview of extensions included in IPython installations
 |3.0.41|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |3.0.39|`IPython/8.14.0-GCCcore-12.3.0`|
 
+### ptyprocess
+
+
+|`ptyprocess` version|IPython modules that include it|
+| --- | --- |
+|0.7.0|`IPython/9.14.0-GCCcore-15.2.0`|
+
 ### pure_eval
 
 
 |`pure_eval` version|IPython modules that include it|
 | --- | --- |
-|0.2.3|`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
+|0.2.3|`IPython/9.14.0-GCCcore-15.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
 |0.2.2|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`<br/>`IPython/8.14.0-GCCcore-12.3.0`|
 
 ### stack_data
@@ -158,7 +191,7 @@ Overview of extensions included in IPython installations
 
 |`stack_data` version|IPython modules that include it|
 | --- | --- |
-|0.6.3|`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
+|0.6.3|`IPython/9.14.0-GCCcore-15.2.0`<br/>`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`<br/>`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |0.6.2|`IPython/8.14.0-GCCcore-12.3.0`|
 
 ### traitlets
@@ -166,6 +199,7 @@ Overview of extensions included in IPython installations
 
 |`traitlets` version|IPython modules that include it|
 | --- | --- |
+|5.15.1|`IPython/9.14.0-GCCcore-15.2.0`|
 |5.14.3|`IPython/9.4.0-GCCcore-14.3.0`<br/>`IPython/9.3.0-GCCcore-14.2.0`|
 |5.13.0|`IPython/8.28.0-GCCcore-13.3.0`<br/>`IPython/8.17.2-GCCcore-13.2.0`|
 |5.9.0|`IPython/8.14.0-GCCcore-12.3.0`|
