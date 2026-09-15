@@ -47,6 +47,7 @@ Typical use cases are Jupyter Lab Extensions and Jupyter Widgets.
 
 |hatch-jupyter-builder version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.9.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`hatch-jupyter-builder/0.9.1-GCCcore-15.2.0`|
 |0.9.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatch-jupyter-builder/0.9.1-GCCcore-14.3.0`|
 |0.9.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatch-jupyter-builder/0.9.1-GCCcore-14.2.0`|
 |0.9.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`hatch-jupyter-builder/0.9.1-GCCcore-13.3.0`|
@@ -57,6 +58,20 @@ Typical use cases are Jupyter Lab Extensions and Jupyter Widgets.
 
 Overview of extensions included in hatch-jupyter-builder installations
 
+
+### hatch-jupyter-builder
+
+
+|`hatch-jupyter-builder` version|hatch-jupyter-builder modules that include it|
+| --- | --- |
+|0.9.1|`hatch-jupyter-builder/0.9.1-GCCcore-15.2.0`|
+
+### hatch-nodejs-version
+
+
+|`hatch-nodejs-version` version|hatch-jupyter-builder modules that include it|
+| --- | --- |
+|0.4.0|`hatch-jupyter-builder/0.9.1-GCCcore-15.2.0`|
 
 ### hatch_jupyter_builder
 
