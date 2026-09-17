@@ -34,7 +34,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''1.9.5'']'
+  softwareVersion: '[''1.10.1'', ''1.9.5'']'
   url: https://github.com/Toblerity/Fiona
 ---
 # Fiona
@@ -53,6 +53,7 @@ packages such as pyproj, Rtree, and Shapely.
 
 |Fiona version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|1.10.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Fiona/1.10.1-foss-2025a`|
 |1.9.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`Fiona/1.9.5-foss-2023a`|
 
 ## Extensions
@@ -65,20 +66,21 @@ Overview of extensions included in Fiona installations
 
 |`click-plugins` version|Fiona modules that include it|
 | --- | --- |
-|1.1.1|`Fiona/1.9.5-foss-2023a`|
+|1.1.1|`Fiona/1.10.1-foss-2025a`<br/>`Fiona/1.9.5-foss-2023a`|
 
 ### cligj
 
 
 |`cligj` version|Fiona modules that include it|
 | --- | --- |
-|0.7.2|`Fiona/1.9.5-foss-2023a`|
+|0.7.2|`Fiona/1.10.1-foss-2025a`<br/>`Fiona/1.9.5-foss-2023a`|
 
 ### fiona
 
 
 |`fiona` version|Fiona modules that include it|
 | --- | --- |
+|1.10.1|`Fiona/1.10.1-foss-2025a`|
 |1.9.5|`Fiona/1.9.5-foss-2023a`|
 
 ### munch
@@ -86,4 +88,4 @@ Overview of extensions included in Fiona installations
 
 |`munch` version|Fiona modules that include it|
 | --- | --- |
-|4.0.0|`Fiona/1.9.5-foss-2023a`|
+|4.0.0|`Fiona/1.10.1-foss-2025a`<br/>`Fiona/1.9.5-foss-2023a`|
