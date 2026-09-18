@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''4.1.0'', ''4.0.1'', ''3.1.5'', ''3.1.4'']'
+  softwareVersion: '[''4.1.2'', ''4.1.0'', ''4.0.1'', ''3.1.5'', ''3.1.4'']'
   url: https://github.com/mpi4py/mpi4py
 ---
 # mpi4py
@@ -40,6 +40,7 @@ MPI for Python (mpi4py) provides bindings of the Message Passing Interface (MPI)
 
 |mpi4py version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|4.1.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`mpi4py/4.1.2-gompi-2026.1`|
 |4.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`mpi4py/4.1.0-gompi-2025b`|
 |4.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`mpi4py/4.1.0-gompi-2025a`|
 |4.0.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`mpi4py/4.0.1-gompi-2024a`|
@@ -57,6 +58,7 @@ Overview of extensions included in mpi4py installations
 
 |`mpi4py` version|mpi4py modules that include it|
 | --- | --- |
+|4.1.2|`mpi4py/4.1.2-gompi-2026.1`|
 |4.1.0|`mpi4py/4.1.0-gompi-2025b`<br/>`mpi4py/4.1.0-gompi-2025a`|
 |4.0.1|`mpi4py/4.0.1-gompi-2024a`|
 |3.1.5|`mpi4py/3.1.5-gompi-2023b`|

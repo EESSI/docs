@@ -26,7 +26,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.24.43'', ''3.24.42'', ''3.24.39'', ''3.24.37'', ''3.24.35'']'
+  softwareVersion: '[''3.24.52'', ''3.24.43'', ''3.24.42'', ''3.24.39'', ''3.24.37'',
+    ''3.24.35'']'
   url: https://developer.gnome.org/gtk3/stable/
 ---
 # GTK3
@@ -46,6 +47,7 @@ GTK+ is the primary library used to construct user interfaces in GNOME. It
 
 |GTK3 version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|3.24.52|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`GTK3/3.24.52-GCCcore-15.2.0`|
 |3.24.43|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GTK3/3.24.43-GCCcore-14.3.0`|
 |3.24.42|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GTK3/3.24.42-GCCcore-13.3.0`|
 |3.24.39|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`GTK3/3.24.39-GCCcore-13.2.0`|
@@ -62,11 +64,19 @@ Overview of extensions included in GTK3 installations
 
 |`adwaita-icon-theme` version|GTK3 modules that include it|
 | --- | --- |
+|50.0|`GTK3/3.24.52-GCCcore-15.2.0`|
 |49.0|`GTK3/3.24.43-GCCcore-14.3.0`|
 |47.0|`GTK3/3.24.42-GCCcore-13.3.0`|
 |45.0|`GTK3/3.24.39-GCCcore-13.2.0`|
 |44.0|`GTK3/3.24.37-GCCcore-12.3.0`|
 |42.0|`GTK3/3.24.35-GCCcore-12.2.0`|
+
+### GTK
+
+
+|`GTK` version|GTK3 modules that include it|
+| --- | --- |
+|3.24.52|`GTK3/3.24.52-GCCcore-15.2.0`|
 
 ### GTK+
 
@@ -84,5 +94,5 @@ Overview of extensions included in GTK3 installations
 
 |`hicolor-icon-theme` version|GTK3 modules that include it|
 | --- | --- |
-|0.18|`GTK3/3.24.43-GCCcore-14.3.0`<br/>`GTK3/3.24.42-GCCcore-13.3.0`|
+|0.18|`GTK3/3.24.52-GCCcore-15.2.0`<br/>`GTK3/3.24.43-GCCcore-14.3.0`<br/>`GTK3/3.24.42-GCCcore-13.3.0`|
 |0.17|`GTK3/3.24.39-GCCcore-13.2.0`<br/>`GTK3/3.24.37-GCCcore-12.3.0`<br/>`GTK3/3.24.35-GCCcore-12.2.0`|
