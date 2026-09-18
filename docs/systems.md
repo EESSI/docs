@@ -187,7 +187,7 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 #### Eindhoven University of Technology
 
-* TU/e Umbrella HPC Cluster: [General documentation](https://supercomputing.tue.nl/documentation/)
+* TU/e Umbrella HPC Cluster: [General documentation](https://supercomputing.tue.nl/documentation/) | [EESSI @ Umbrella](https://supercomputing.tue.nl/documentation/steps/software/?h=eessi#eessi202306-legacy-software)
 
 #### Leiden University
 
