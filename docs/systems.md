@@ -29,7 +29,7 @@ and you can try [running our demos](using_eessi/eessi_demos.md).
 
 ## EuroHPC JU systems
 
-EESSI is available on *all* of the [EuroHPC JU supercomputers](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
+EESSI is available on most of the [EuroHPC JU supercomputers](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
 It serves as the base for the [Federated Software Catalog](https://docs.my-eurohpc.eu/software-catalog/overview/) of the
 [EuroHPC Federation Platform (EFP)](https://my-eurohpc.eu).
 
@@ -49,14 +49,6 @@ Discoverer is the EuroHPC JU supercomputer hosted in Sofia, Bulgaria.
 * [Website](https://discoverer.bg/)
 * [General documentation](https://docs.discoverer.bg)
 * [EFP Federated Software Catalog @ Discoverer](https://docs.my-eurohpc.eu/software-catalog/system-specific/discoverer/)
-
-### JUPITER (Germany)
-
-JUPITER is the first exascale EuroHPC JU supercomputer hosted by the [Jülich Supercomputing Centre (JSC)](https://www.fz-juelich.de/en/jsc).
-
-* [Website](https://www.fz-juelich.de/en/jsc/jupiter)
-* [General documentation](https://apps.fz-juelich.de/jsc/hps/jupiter/)
-* [EFP Federated Software Catalog @ JUPITER](https://docs.my-eurohpc.eu/software-catalog/system-specific/jupiter/)
 
 ### Karolina (Czech Republic)
 
