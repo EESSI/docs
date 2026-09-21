@@ -1200,6 +1200,12 @@ BUCKET="<bucket_name>"
 DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store tarballs on the Stratum 0
 ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
 REPO_NAME="<repo_name>"
+# Repository-relative path to the versions directory.
+# This must match the versions_subpath used for .cvmfsdirtab.
+VERSIONS_SUBPATH="versions"
+# For a site prefix such as /cvmfs/name.sitename.tld/eessi, use:
+# VERSIONS_SUBPATH="eessi/versions"
+
 # a name for a dir in the bucket in which to archive tarballs, so that a subsequent run doesn't re-ingest them
 ARCHIVE_PREFIX="archive"
 # Ensure the download directory exists
@@ -1217,6 +1223,10 @@ git clone https://github.com/EESSI/filesystem-layer.git
 # 3. Update the lmod caches for your site installation prefix
 INGEST_SCRIPT="$PWD/filesystem-layer/scripts/ingest-tarball.sh"
 ```
+
+`VERSIONS_SUBPATH` must match the `versions_subpath` used when [configuring `.cvmfsdirtab`](#setting-up-your-stratum-0). It is relative to the root of the target CVMFS repository and must include the `versions` directory.
+
+For example, with `EESSI_SITE_SOFTWARE_PREFIX=/cvmfs/name.sitename.tld/eessi`, use `VERSIONS_SUBPATH=eessi/versions`. The default is `versions`.
 
 Also, make sure that you've [installed](#installing-the-aws-cli-commands) and [configured](http://localhost:5432/docs/site_build/site_cvmfs/#configuring-aws-cli) the AWS CLI on the Stratum 0, so that it can fetch tarballs from your bucket.
 
@@ -1362,15 +1372,22 @@ Note that our `rm -f` assumes you downloaded signature files (`${local_tar_sig}`
 
 **5. Ingest the tarball into the repository**
 
-Here, we leverage a script from `EESSI/filesystem-layer` that ingests tarballs, but also takes care of regenerating the `.cvmfscatalog` files _and_ updates the `Lmod` cache. To update the `Lmod` cache, the script uses the Lmod installation provided by `software.eessi.io`, which is why we explicitly made this available as one of the steps [when we set up our Stratum 0](#setting-up-your-stratum-0)
+Here, we leverage [`ingest-tarball.sh`](https://github.com/EESSI/filesystem-layer/blob/main/scripts/ingest-tarball.sh) from `EESSI/filesystem-layer`. The script ingests the tarball, regenerates the `.cvmfscatalog` files, and updates the Lmod cache.
+
+The tarball contains paths relative to the versioned installation directory, such as `2025.06/software/...`. The `--basedir` option determines where that directory is placed relative to the root of the target CVMFS repository. It must therefore match the repository layout configured through `VERSIONS_SUBPATH`.
+
+When updating the Lmod cache, the script uses the selected base directory for the site installation. If the site repository does not provide its own compatibility layer, it automatically falls back to an Lmod installation from `/cvmfs/software.eessi.io/versions`.
 
 ``` { .bash .copy }
     # ---- Ingest into CVMFS ----
-    echo "Ingesting into CVMFS (${REPO_NAME})..."
-    if $INGEST_SCRIPT "${REPO_NAME}" "${local_tar}"; then
+    echo "Ingesting into CVMFS (${REPO_NAME}) under ${VERSIONS_SUBPATH}..."
+    if "${INGEST_SCRIPT}" \
+        --repository "${REPO_NAME}" \
+        --basedir "${VERSIONS_SUBPATH}" \
+        "${local_tar}"; then
         echo "Ingest succeeded for ${filename}."
     else
-        echo "ERROR: cvmfs_server ingest failed for ${filename}." >&2
+        echo "ERROR: CVMFS ingestion failed for ${filename}." >&2
         # Keep the files for troubleshooting
         continue
     fi
@@ -1378,11 +1395,12 @@ Here, we leverage a script from `EESSI/filesystem-layer` that ingests tarballs, 
 
 **6. Regenerate the `.cvmfscatalog` files by publishing an empty transaction**
 
-This is already taken care of by the `$INGEST_SCRIPT` in the step above. If you don't want to use that script, you'll have to implement this step yourself.
+This is already taken care of by `$INGEST_SCRIPT` in the step above. The patterns in `.cvmfsdirtab` must use the same repository-relative versions path as `VERSIONS_SUBPATH`; otherwise the expected nested catalogs will not be created.
 
 **7. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction**
 
-This is already taken care of by the `$INGEST_SCRIPT` in step 5 above. If you don't want to use that script, you'll have to implement this step yourself.
+This is already taken care of by `$INGEST_SCRIPT` in step 5. The cache is updated below `${VERSIONS_SUBPATH}/<eessi_version>` in the site repository. The script will use an Lmod installation from the site repository when one is available, and otherwise falls back to `software.eessi.io`.
+
 
 **8. Cleanup local files**
 
@@ -1458,6 +1476,13 @@ BUCKET="<bucket_name>"
 DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store tarballs on the Stratum 0
 ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
 REPO_NAME="<repo_name>"
+
+# Repository-relative path to the versions directory.
+# This must match the versions_subpath used for .cvmfsdirtab.
+VERSIONS_SUBPATH="versions"
+# For a site prefix such as /cvmfs/name.sitename.tld/eessi, use:
+# VERSIONS_SUBPATH="eessi/versions"
+
 # a name for a dir in the bucket in which to archive tarballs, so that a subsequent run doesn't re-ingest them
 ARCHIVE_PREFIX="archive"
 # Ensure the download directory exists
@@ -1566,11 +1591,14 @@ for key in "${tar_keys[@]}"; do
     fi
 
     # ---- Ingest into CVMFS ----
-    echo "Ingesting into CVMFS (${REPO_NAME})..."
-    if $INGEST_SCRIPT "${REPO_NAME}" "${local_tar}"; then
+    echo "Ingesting into CVMFS (${REPO_NAME}) under ${VERSIONS_SUBPATH}..."
+    if "${INGEST_SCRIPT}" \
+        --repository "${REPO_NAME}" \
+        --basedir "${VERSIONS_SUBPATH}" \
+        "${local_tar}"; then
         echo "Ingest succeeded for ${filename}."
     else
-        echo "ERROR: cvmfs_server ingest failed for ${filename}." >&2
+        echo "ERROR: CVMFS ingestion failed for ${filename}." >&2
         # Keep the files for troubleshooting
         continue
     fi
