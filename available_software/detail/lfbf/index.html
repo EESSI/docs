@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://eessi.github.io/docs/available_software/detail/SuiteSparse/" rel="canonical"/>
+<link href="https://eessi.github.io/docs/available_software/detail/lfbf/" rel="canonical"/>
 <link href="../../../img/logos/EESSI.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>SuiteSparse - European Environment for Scientific Software Installations (EESSI)</title>
+<title>lfbf - European Environment for Scientific Software Installations (EESSI)</title>
 <link href="../../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,9 +22,9 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "applicationCategory": "DeveloperApplication",
-  "description": "SuiteSparse is a collection of libraries to manipulate sparse matrices.",
+  "description": "LLVM based compiler toolchain, including\n FlexiBLAS (BLAS and LAPACK support) and (serial) FFTW.",
   "license": "Not confirmed",
-  "name": "SuiteSparse",
+  "name": "lfbf",
   "offers": {
     "@type": "Offer",
     "price": 0
@@ -43,15 +43,15 @@
     }
   },
   "softwareRequirements": "See https://www.eessi.io/docs/ for how to make EESSI available on your system",
-  "softwareVersion": "['7.11.0', '7.10.3', '7.10.1', '7.7.0', '7.1.0']",
-  "url": "https://faculty.cse.tamu.edu/davis/suitesparse.html"
+  "softwareVersion": "['2025b']",
+  "url": "(none)"
 }</script></head>
 <body dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#suitesparse">
+<a class="md-skip" href="#lfbf">
           Skip to content
         </a>
 </div>
@@ -75,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              SuiteSparse
+              lfbf
             
           </span>
 </div>
@@ -2774,14 +2774,15 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="suitesparse">SuiteSparse<a class="headerlink" href="#suitesparse" title="Permanent link">¶</a></h1>
-<p>SuiteSparse is a collection of libraries to manipulate sparse matrices.</p>
-<p><small>homepage: </small><span class="software-link"><a href="https://faculty.cse.tamu.edu/davis/suitesparse.html">https://faculty.cse.tamu.edu/davis/suitesparse.html</a></span></p>
+<h1 id="lfbf">lfbf<a class="headerlink" href="#lfbf" title="Permanent link">¶</a></h1>
+<p>LLVM based compiler toolchain, including
+ FlexiBLAS (BLAS and LAPACK support) and (serial) FFTW.</p>
+<p><small>homepage: </small><span class="software-link"><a href="(none)">(none)</a></span></p>
 <h2 id="available-installations">Available installations<a class="headerlink" href="#available-installations" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
-<th>SuiteSparse version</th>
+<th>lfbf version</th>
 <th>Supported CPU targets</th>
 <th>Supported GPU targets</th>
 <th>EESSI version</th>
@@ -2790,46 +2791,11 @@
 </thead>
 <tbody>
 <tr>
-<td>7.11.0</td>
+<td>2025b</td>
 <td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
 <td><em>(none)</em></td>
 <td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>SuiteSparse/7.11.0-lfbf-2025b</code></td>
-</tr>
-<tr>
-<td>7.11.0</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>SuiteSparse/7.11.0-gfbf-2025b</code></td>
-</tr>
-<tr>
-<td>7.10.3</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>SuiteSparse/7.10.3-foss-2025a</code></td>
-</tr>
-<tr>
-<td>7.10.1</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202506">2025.06</span></td>
-<td><code>SuiteSparse/7.10.1-foss-2024a</code></td>
-</tr>
-<tr>
-<td>7.7.0</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202306">2023.06</span></td>
-<td><code>SuiteSparse/7.7.0-foss-2023b</code></td>
-</tr>
-<tr>
-<td>7.1.0</td>
-<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
-<td><em>(none)</em></td>
-<td><span class="software-eessi-version-202306">2023.06</span></td>
-<td><code>SuiteSparse/7.1.0-foss-2023a</code></td>
+<td><code>lfbf/2025b</code></td>
 </tr>
 </tbody>
 </table>
