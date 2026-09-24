@@ -234,6 +234,12 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 * sciCORE: [General documentation](https://docs.scicore.unibas.ch/)
 
+### United Kingdom
+
+#### University of Bristol / Bristol Centre for Supercomputing
+
+* BlueCrystal 5: [General documentation](https://docs.isambard.ac.uk/)
+
 ---
 
 ## Systems outside of Europe
