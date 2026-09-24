@@ -59,6 +59,8 @@ Both in person and online attendance is free of charge, but registration is requ
 
 ## Agenda
 
+*([local time in Dublin (IST)](https://time.is/Dublin))*
+
 - *[09:00]* welcome
 - *[09:30-10:00]* intro to EESSI, incl. quick demo of using it
 - *[10:00-10:30]* hands-on: playing with EESSI as a user
