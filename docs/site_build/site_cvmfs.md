@@ -1213,7 +1213,7 @@ DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store 
 BOT_PREFIX=/path/to/eessi/gh/repos/eessi-bot-software-layer
 FILESYSTEM_LAYER_REPO_PREFIX=/path/to/eessi/gh/repos/filesystem-layer
 
-ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
+# ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
 REPO_NAME="<repo_name>"
 # Repository-relative path to the versions directory.
 # This must match the versions_subpath used for .cvmfsdirtab.
