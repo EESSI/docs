@@ -1443,32 +1443,33 @@ Here, we archive the tarballs in the bucket within an subdir `$ARCHIVE_PREFIX`. 
         echo "Metadata archived."
     fi
 
-    # Archive the signature file
-    archive_sig_key="${ARCHIVE_PREFIX}/${key}.sig"
-    echo "Archiving signature file ${sig_key} to s3://${BUCKET}/${archive_sig_key}"
-    aws s3 mv "s3://${BUCKET}/${sig_key}" "s3://${BUCKET}/${archive_sig_key}"
-    if [ $? -eq 0 ]; then
-        echo "Tarball signature file archived."
+    if [ -z "$ALLOWED_SIGNERS" ]; then
+        echo "\$ALLOWED_SIGNERS is not set, skipping signature archival step."
     else
-        echo "ERROR: Failed to move tarball signature file to archive." >&2
+        # Archive the signature file
+        archive_sig_key="${ARCHIVE_PREFIX}/${key}.sig"
+        echo "Archiving signature file ${sig_key} to s3://${BUCKET}/${archive_sig_key}"
+        aws s3 mv "s3://${BUCKET}/${sig_key}" "s3://${BUCKET}/${archive_sig_key}"
+        if [ $? -eq 0 ]; then
+            echo "Tarball signature file archived."
+        else
+            echo "ERROR: Failed to move tarball signature file to archive." >&2
+        fi
+    
+        # Archive the metadata signature file
+        archive_meta_sig_key="${ARCHIVE_PREFIX}/${key}.meta.txt.sig"
+        echo "Archiving metadata signature file ${meta_sig_key} to s3://${BUCKET}/${archive_meta_sig_key}"
+        aws s3 mv "s3://${BUCKET}/${meta_sig_key}" "s3://${BUCKET}/${archive_meta_sig_key}"
+        if [ $? -eq 0 ]; then
+            echo "Metadata signature file archived."
+        else
+            echo "ERROR: Failed to move metadata signature file to archive." >&2
+        fi
     fi
-
-    # Archive the metadata signature file
-    archive_meta_sig_key="${ARCHIVE_PREFIX}/${key}.meta.txt.sig"
-    echo "Archiving metadata signature file ${meta_sig_key} to s3://${BUCKET}/${archive_meta_sig_key}"
-    aws s3 mv "s3://${BUCKET}/${meta_sig_key}" "s3://${BUCKET}/${archive_meta_sig_key}"
-    if [ $? -eq 0 ]; then
-        echo "Metadata signature file archived."
-    else
-        echo "ERROR: Failed to move metadata signature file to archive." >&2
-    fi
-
 done
 
 echo "All done."
 ```
-
-Note that we assumed you have signature files as well. If not, remove those sections from the code above.
 
 **Full script**
 
