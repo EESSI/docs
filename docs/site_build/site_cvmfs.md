@@ -1313,7 +1313,7 @@ Here, we are assuming you're inside the loop we opened in the previous step:
 
 ``` { .bash .copy }
     if [ -z "$ALLOWED_SIGNERS" ]; then
-        echo "$ALLOWED_SIGNERS is not set, skipping signature step."
+        echo "\$ALLOWED_SIGNERS is not set, skipping signature step."
     else
         # Full local paths
         local_tar_sig="${DOWNLOAD_DIR}/${sig_file}"
