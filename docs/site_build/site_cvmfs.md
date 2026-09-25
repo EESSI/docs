@@ -1180,13 +1180,12 @@ However, this is unnecessarily complex for site builds. Instead, we suggest that
 
 1. Query the bucket for new tarballs
 2. Download the new tarballs & metadata files to the Stratum 0
-3. Download the signature files to the Stratum 0 (optional, only if you want to do signature verification)
-4. Verify the signature (optional)
-5. Ingest the tarball into the repository (using `cvmfs_server ingest`)
-6. Regenerate the `.cvmfscatalog` files by publishing an empty transaction (`cvmfs_server transaction && cvmfs_server -m "<commit_msg>"`)
-7. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction
-8. Cleanup local files (downloaded tarball & metadata file)
-9. Archive/move/remove the tarballs in the upstream bucket, so they don't get picked up on a subsequent iteration
+3. Download the signature files to the Stratum 0 and verify the signature (optional)
+4. Ingest the tarball into the repository (using `cvmfs_server ingest`)
+5. Regenerate the `.cvmfscatalog` files by publishing an empty transaction (`cvmfs_server transaction && cvmfs_server -m "<commit_msg>"`)
+6. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction
+7. Cleanup local files (downloaded tarball & metadata file)
+8. Archive/move/remove the tarballs in the upstream bucket, so they don't get picked up on a subsequent iteration
 
 **Environment setup**
 
@@ -1307,9 +1306,29 @@ for key in "${tar_keys[@]}"; do
     fi
 ```
 
-**3. Download the tarball metadata and signature files to the Stratum 0 (optional)**
+**3. Download the signature files to the Stratum 0 and verify the signature (optional)**
 
-Here, we are assuming you're inside the loop we opened in the previous step:
+First, you'll need to create a file listing the public keys for keypairs that are allowed to sign the tarballs. You've specified the private key in the `signing` config item in the bot's `app.cfg`.
+
+Assuming you're using the private key generated in the [GitHub app registration step](#register_gh_app), you don't have a public key yet. You'll have to generate that first **on the machine hosting the bot instance**, by running
+
+``` { .bash .copy }
+ssh-keygen -y -f KEY.pem
+```
+
+where `KEY.pem` is the private key (if you used a separate, manually created key-pair, you should already have a public key).
+
+On the Stratum 0, create the allowed signers file `$ALLOWED_SIGNERS` with the following content:
+
+```
+<identity> namespaces="<namespace>,valid-before="YYYYMMDD" ssh-rsa <pubkey>
+```
+
+Where `<identity>` can be any string (useful for yourself to identify the key), `<namespace>` should match the `app_name` you configured for the bot in `app.cfg`, and `<pubkey>` is the public key you just generated.
+
+We suggest leveraging a script from the `eessi-bot-software-layer` to do the actual verification (though you could make your own verification script):
+
+Here, we are assuming you're inside the loop we opened in the previous step.
 
 ``` { .bash .copy }
     if [ -z "$ALLOWED_SIGNERS" ]; then
@@ -1344,45 +1363,19 @@ Here, we are assuming you're inside the loop we opened in the previous step:
             echo "WARNING. Failed to download metadata signature file. Continuing to next tarball (not ingesting ${filename})."
             continue
         fi
+
+        # ---- Verify signature ----
+        echo "Running check_signature..."
+        if eessi-bot-software-layer/scripts/sign_verify_file_ssh.sh --verify --allowed-signers-file $ALLOWED_SIGNERS --file $local_tar; then
+            echo "Signature OK."
+        else
+            echo "ERROR: Signature verification failed for ${filename}. Skipping ingest." >&2
+            # Optionally clean up the bad files
+            rm -f "${local_tar}" "${local_meta}" "${local_tar_sig}" "${local_meta_sig}"
+            continue
+        fi
     fi
 ```
-
-**4. Verify the signature (optional)**
-
-First, you'll need to create a file listing the public keys for keypairs that are allowed to sign the tarballs. You've specified the private key in the `signing` config item in the bot's `app.cfg`.
-
-Assuming you're using the private key generated in the [GitHub app registration step](#register_gh_app), you don't have a public key yet. You'll have to generate that first **on the machine hosting the bot instance**, by running
-
-``` { .bash .copy }
-ssh-keygen -y -f KEY.pem
-```
-
-where `KEY.pem` is the private key (if you used a separate, manually created key-pair, you should already have a public key).
-
-On the Stratum 0, create the allowed signers file `$ALLOWED_SIGNERS` with the following content:
-
-```
-<identity> namespaces="<namespace>,valid-before="YYYYMMDD" ssh-rsa <pubkey>
-```
-
-Where `<identity>` can be any string (useful for yourself to identify the key), `<namespace>` should match the `app_name` you configured for the bot in `app.cfg`, and `<pubkey>` is the public key you just generated.
-
-We suggest leveraging a script from the `eessi-bot-software-layer` to do the actual verification (though you could make your own verification script):
-
-``` { .bash .copy }
-    # ---- Verify signature ----
-    echo "Running check_signature..."
-    if eessi-bot-software-layer/scripts/sign_verify_file_ssh.sh --verify --allowed-signers-file $ALLOWED_SIGNERS --file $local_tar; then
-        echo "Signature OK."
-    else
-        echo "ERROR: Signature verification failed for ${filename}. Skipping ingest." >&2
-        # Optionally clean up the bad files
-        rm -f "${local_tar}" "${local_meta}" "${local_tar_sig}" "${local_meta_sig}"
-        continue
-    fi
-```
-
-Note that our `rm -f` assumes you downloaded signature files (`${local_tar_sig}` and `${local_meta_sig}`) as well - if not, you'll have to strip that from the command.
 
 **5. Ingest the tarball into the repository**
 
@@ -1488,7 +1481,7 @@ Composing all of the above (including signature verification), we get the follow
 IFS=$'\n\t'         # sane field splitting
 BUCKET="<bucket_name>"
 DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store tarballs on the Stratum 0
-ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
+ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 3
 REPO_NAME="<repo_name>"
 
 # Repository-relative path to the versions directory.
@@ -1563,47 +1556,50 @@ for key in "${tar_keys[@]}"; do
         continue
     fi
 
-    # Full local paths
-    local_tar_sig="${DOWNLOAD_DIR}/${sig_file}"
-    local_meta_sig="${DOWNLOAD_DIR}/${meta_sig_file}"
-
-    # Remote paths
-    sig_key=${key}.sig
-    meta_sig_key=${key}.meta.txt.sig
-
-    # ---- Download tarball signature file ----
-    echo "Downloading tarball signature file... s3://${BUCKET}/${sig_key} to ${local_tar_sig}"
-    aws s3 cp "s3://${BUCKET}/${sig_key}" "${local_tar_sig}"
-
-    if [ $? -eq 0 ]; then
-        echo "Tarball signature file downloaded."
+    if [ -z "$ALLOWED_SIGNERS" ]; then
+        echo "\$ALLOWED_SIGNERS is not set, skipping signature step."
     else
-        echo "WARNING: Failed to download tarball signature file. Continuing to next tarball (not ingesting ${filename})."
-        # No point in continuing this loop iteration, we'll fail the signature verification check anyway
-        continue
-    fi
+        # Full local paths
+        local_tar_sig="${DOWNLOAD_DIR}/${sig_file}"
+        local_meta_sig="${DOWNLOAD_DIR}/${meta_sig_file}"
 
-    # ---- Download metadata signature file ----
-    echo "Downloading metadata signature file... s3://${BUCKET}/${meta_sig_key} to ${local_meta_sig}"
-    aws s3 cp "s3://${BUCKET}/${meta_sig_key}" "${local_meta_sig}"
-    if [ $? -eq 0 ]; then
-        echo "Metadata signature file downloaded."
-    else
-        echo "WARNING. Failed to download metadata signature file. Continuing to next tarball (not ingesting ${filename})."
-        continue
-    fi
+        # Remote paths
+        sig_key=${key}.sig
+        meta_sig_key=${key}.meta.txt.sig
+        
+        # ---- Download tarball signature file (optional) ----
+        echo "Downloading tarball signature file... s3://${BUCKET}/${sig_key} to ${local_tar_sig}"
+        aws s3 cp "s3://${BUCKET}/${sig_key}" "${local_tar_sig}"
 
-    # ---- Verify signature ----
-    echo "Running check_signature..."
-    if eessi-bot-software-layer/scripts/sign_verify_file_ssh.sh --verify --allowed-signers-file $ALLOWED_SIGNERS --file $local_tar; then
-        echo "Signature OK."
-    else
-        echo "ERROR: Signature verification failed for ${filename}. Skipping ingest." >&2
-        # Optionally clean up the bad files
-        rm -f "${local_tar}" "${local_meta}"
-        continue
-    fi
+        if [ $? -eq 0 ]; then
+            echo "Tarball signature file downloaded."
+        else
+            echo "WARNING: Failed to download tarball signature file. Continuing to next tarball (not ingesting ${filename})."
+            # No point in continuing this loop iteration, we'll fail the signature verification check anyway
+            continue
+        fi
+    
+        # ---- Download metadata signature file ----
+        echo "Downloading metadata signature file... s3://${BUCKET}/${meta_sig_key} to ${local_meta_sig}"
+        aws s3 cp "s3://${BUCKET}/${meta_sig_key}" "${local_meta_sig}"
+        if [ $? -eq 0 ]; then
+            echo "Metadata signature file downloaded."
+        else
+            echo "WARNING. Failed to download metadata signature file. Continuing to next tarball (not ingesting ${filename})."
+            continue
+        fi
 
+        # ---- Verify signature ----
+        echo "Running check_signature..."
+        if eessi-bot-software-layer/scripts/sign_verify_file_ssh.sh --verify --allowed-signers-file $ALLOWED_SIGNERS --file $local_tar; then
+            echo "Signature OK."
+        else
+            echo "ERROR: Signature verification failed for ${filename}. Skipping ingest." >&2
+            # Optionally clean up the bad files
+            rm -f "${local_tar}" "${local_meta}" "${local_tar_sig}" "${local_meta_sig}"
+            continue
+        fi
+    fi
     # ---- Ingest into CVMFS ----
     echo "Ingesting into CVMFS (${REPO_NAME}) under ${VERSIONS_SUBPATH}..."
     if "${INGEST_SCRIPT}" \
