@@ -1212,7 +1212,7 @@ DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store 
 BOT_PREFIX=/path/to/eessi/gh/repos/eessi-bot-software-layer
 FILESYSTEM_LAYER_REPO_PREFIX=/path/to/eessi/gh/repos/filesystem-layer
 
-# ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 4
+# ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 3
 REPO_NAME="<repo_name>"
 # Repository-relative path to the versions directory.
 # This must match the versions_subpath used for .cvmfsdirtab.
@@ -1377,7 +1377,7 @@ Here, we are assuming you're inside the loop we opened in the previous step.
     fi
 ```
 
-**5. Ingest the tarball into the repository**
+**4. Ingest the tarball into the repository**
 
 Here, we leverage [`ingest-tarball.sh`](https://github.com/EESSI/filesystem-layer/blob/main/scripts/ingest-tarball.sh) from `EESSI/filesystem-layer`. The script ingests the tarball, regenerates the `.cvmfscatalog` files, and updates the Lmod cache.
 
@@ -1400,16 +1400,16 @@ When updating the Lmod cache, the script uses the selected base directory for th
     fi
 ```
 
-**6. Regenerate the `.cvmfscatalog` files by publishing an empty transaction**
+**5. Regenerate the `.cvmfscatalog` files by publishing an empty transaction**
 
 This is already taken care of by `$INGEST_SCRIPT` in the step above. The patterns in `.cvmfsdirtab` must use the same repository-relative versions path as `VERSIONS_SUBPATH`; otherwise the expected nested catalogs will not be created.
 
-**7. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction**
+**6. Open a new transaction, update the Lmod cache for your site installs, and publish the transaction**
 
 This is already taken care of by `$INGEST_SCRIPT` in step 5. The cache is updated below `${VERSIONS_SUBPATH}/<eessi_version>` in the site repository. The script will use an Lmod installation from the site repository when one is available, and otherwise falls back to `software.eessi.io`.
 
 
-**8. Cleanup local files**
+**7. Cleanup local files**
 
 ``` { .bash .copy }
     # ---- Clean up local copies ----
@@ -1419,7 +1419,7 @@ This is already taken care of by `$INGEST_SCRIPT` in step 5. The cache is update
 
 Note that our `rm -f` assumes you downloaded signature files (`${local_tar_sig}` and `${local_meta_sig}`) as well - if not, you'll have to strip that from the command.
 
-**9. Archive/move/remove the tarballs in the bucket**
+**8. Archive/move/remove the tarballs in the bucket**
 
 Here, we archive the tarballs in the bucket within an subdir `$ARCHIVE_PREFIX`. It is crucial that we do NOT search this subdir in step 1, that way we make sure we only pick up new tarballs. 
 
