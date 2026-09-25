@@ -1481,9 +1481,23 @@ Composing all of the above (including signature verification), we get the follow
 IFS=$'\n\t'         # sane field splitting
 BUCKET="<bucket_name>"
 DOWNLOAD_DIR=/prefix/for/tarball/staging  # Some directory to temporarily store tarballs on the Stratum 0
-ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 3
-REPO_NAME="<repo_name>"
 
+# We will leverage a script from filesystem-layer (for tarball ingestion)
+# Do this beforehand while setting up, not as part of this script
+# mkdir -p /path/to/eessi/gh/repos/filesystem-layer && cd /path/to/eessi/gh/repos/filesystem-layer
+# git clone https://github.com/EESSI/filesystem-layer.git
+
+# We will leverage a script from eessi-bot-software-layer (for signature verification - optional)
+# Do this beforehand while setting up, not as part of this script
+# mkdir -p /path/to/eessi/gh/repos/eessi-bot-software-layer && cd /path/to/eessi/gh/repos/eessi-bot-software-layer
+# git clone https://github.com/EESSI/eessi-bot-software-layer.git
+
+# Set the prefixes used above to be able to leverage those scripts
+BOT_PREFIX=/path/to/eessi/gh/repos/eessi-bot-software-layer
+FILESYSTEM_LAYER_REPO_PREFIX=/path/to/eessi/gh/repos/filesystem-layer
+
+# ALLOWED_SIGNERS=/path/to/allowed/signers/file  # Optional, needed in step 3
+REPO_NAME="<repo_name>"
 # Repository-relative path to the versions directory.
 # This must match the versions_subpath used for .cvmfsdirtab.
 VERSIONS_SUBPATH="versions"
@@ -1495,11 +1509,6 @@ ARCHIVE_PREFIX="archive"
 # Ensure the download directory exists
 mkdir -p "${DOWNLOAD_DIR}"
 
-# We will leverage a script from eessi-bot-software-layer (for signature verification - optional)
-git clone https://github.com/EESSI/eessi-bot-software-layer.git
-
-# We will leverage a script from filesystem-layer (for tarball ingestion)
-git clone https://github.com/EESSI/filesystem-layer.git
 
 # The script referenced here does three things
 # 1. Ingest the tarball (cvmfs_server ingest <tarball>)
@@ -1638,26 +1647,29 @@ for key in "${tar_keys[@]}"; do
         fi
     fi
 
-    # Archive the signature file
-    archive_sig_key="${ARCHIVE_PREFIX}/${key}.sig"
-    echo "Archiving signature file ${sig_key} to s3://${BUCKET}/${archive_sig_key}"
-    aws s3 mv "s3://${BUCKET}/${sig_key}" "s3://${BUCKET}/${archive_sig_key}"
-    if [ $? -eq 0 ]; then
-        echo "Tarball signature file archived."
+    if [ -z "$ALLOWED_SIGNERS" ]; then
+        echo "\$ALLOWED_SIGNERS is not set, skipping signature archival step."
     else
-        echo "ERROR: Failed to move tarball signature file to archive." >&2
+        # Archive the signature file
+        archive_sig_key="${ARCHIVE_PREFIX}/${key}.sig"
+        echo "Archiving signature file ${sig_key} to s3://${BUCKET}/${archive_sig_key}"
+        aws s3 mv "s3://${BUCKET}/${sig_key}" "s3://${BUCKET}/${archive_sig_key}"
+        if [ $? -eq 0 ]; then
+            echo "Tarball signature file archived."
+        else
+            echo "ERROR: Failed to move tarball signature file to archive." >&2
+        fi
+    
+        # Archive the metadata signature file
+        archive_meta_sig_key="${ARCHIVE_PREFIX}/${key}.meta.txt.sig"
+        echo "Archiving metadata signature file ${meta_sig_key} to s3://${BUCKET}/${archive_meta_sig_key}"
+        aws s3 mv "s3://${BUCKET}/${meta_sig_key}" "s3://${BUCKET}/${archive_meta_sig_key}"
+        if [ $? -eq 0 ]; then
+            echo "Metadata signature file archived."
+        else
+            echo "ERROR: Failed to move metadata signature file to archive." >&2
+        fi
     fi
-
-    # Archive the metadata signature file
-    archive_meta_sig_key="${ARCHIVE_PREFIX}/${key}.meta.txt.sig"
-    echo "Archiving metadata signature file ${meta_sig_key} to s3://${BUCKET}/${archive_meta_sig_key}"
-    aws s3 mv "s3://${BUCKET}/${meta_sig_key}" "s3://${BUCKET}/${archive_meta_sig_key}"
-    if [ $? -eq 0 ]; then
-        echo "Metadata signature file archived."
-    else
-        echo "ERROR: Failed to move metadata signature file to archive." >&2
-    fi
-
 done
 
 echo "All done."
