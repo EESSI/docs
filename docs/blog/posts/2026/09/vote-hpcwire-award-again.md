@@ -40,8 +40,7 @@ in January 2027.
 It will focus on increasing the adoption of EESSI, further developing the service,
 and integrating EESSI with various existing well-established tools.
 
-More on this later...
-
+More on this in future blog posts...
 ---
 
 
