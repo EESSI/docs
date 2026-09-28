@@ -523,7 +523,7 @@ bi-monthly online <a href="https://github.com/EESSI/meetings/wiki" target="_blan
 and held regular online [**EESSI Happy Hour**](../../../../training-events/happy-hours-sessions.md) sessions
 from August 2025 through June 2026 (which we plan to resume on a monthly basis soon).
 
-The **EESSI webinars**, for example the most recent series in [spring 2026](../../../../training/2026/webinar-series-2026Q2.md),
+The **EESSI webinars**, for example the most recent series in [spring 2026](../../../../training-events/2026/webinar-series-2026Q2.md),
 should help people who are new to EESSI to quickly get up to speed on what its all about.
 Similar webinars were presented in collaboration with <a href="https://epicure-hpc.eu/" target="_blank">EPICURE</a>, see
 <a href="https://epicure-hpc.eu/2024/10/17/webinar-streaming-optimised-scientific-software-an-introduction-to-eessi/" target="_blank">
