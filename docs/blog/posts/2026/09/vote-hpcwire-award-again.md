@@ -110,7 +110,8 @@ covering roughly 450 unique software projects (excluding extensions like Python 
 R libraries, etc.) and targeting 9 different CPU microarchitectures.
 
 Today EESSI provides *over 44,000 software installations*, across the three
-current EESSI versions and all CPU/GPU targets, covering over 875 unique software projects (excl. extensions) in total.
+current EESSI versions and all CPU/GPU targets, covering over 875 unique software projects
+(together with more than 3200 unique extensions) in total.
 
 ![Growth in number of software installations available in EESSI](EESSI-growth-number-of-modules-202609.webp)
 
