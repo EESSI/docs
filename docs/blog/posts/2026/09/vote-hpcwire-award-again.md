@@ -33,8 +33,10 @@ we should highlight once again that the <a href="https://www.multixscale.eu/" ta
 has had a significant positive impact on EESSI since the project started in January 2023.
 It has enabled us to mature EESSI from a proof-of-concept to a **production-ready** service.
 
-The first iteration of the MultiXscale project will wrap up in December 2026.
-A new EuroHPC Transversal Centre-of-Excellence, nicknamed *EESSIER*, will kick off in January 2027.
+The first iteration of the MultiXscale project will wrap up in December 2026, with a successor
+beginning in January 2027. The technical part of the project has been forked off to become a
+new EuroHPC Transversal Centre-of-Excellence, nicknamed *EESSIER*, which will also kick off
+in January 2027.
 It will focus on increasing the adoption of EESSI, further developing the service,
 and integrating EESSI with various existing well-established tools.
 
