@@ -346,7 +346,7 @@ have been significantly enhanced compared to November 2024.
 
 ### CernVM-FS { #cvmfs }
 
-The [CernVM-FS servers](../../../../infrastructure.md) have been kept up-to-date to
+The [CernVM-FS servers](../../../../filesystem_layer.md) have been kept up-to-date to
 benefit from the various improvements and bug fixes that are developed by the CernVM-FS team.
 
 The disk space that is required to store a full copy of all EESSI CernVM-FS repositories
@@ -520,7 +520,7 @@ bi-monthly online <a href="https://github.com/EESSI/meetings/wiki" target="_blan
 and held regular online [**EESSI Happy Hour**](../../../../training-events/happy-hours-sessions.md) sessions
 from August 2025 through June 2026 (which we plan to resume on a monthly basis soon).
 
-The **EESSI webinars**, for example the most recent series in [spring 2026](../../../../training/2026/webinar-series-2026Q2),
+The **EESSI webinars**, for example the most recent series in [spring 2026](../../../../training/2026/webinar-series-2026Q2.md),
 should help people who are new to EESSI to quickly get up to speed on what its all about.
 Similar webinars were presented in collaboration with <a href="https://epicure-hpc.eu/" target="_blank">EPICURE</a>, see
 <a href="https://epicure-hpc.eu/2024/10/17/webinar-streaming-optimised-scientific-software-an-introduction-to-eessi/" target="_blank">
@@ -536,7 +536,7 @@ and the extensive report of day 3 of EUM'26 in <a href="https://blog.easybuild.i
 We have held **Birds-of-a-Feather** sessions on EESSI at both the <a href="https://isc-hpc.com" target="_blank">ISC</a> and
 <a href="https://supercomputing.org" target="_blank">Supercomputing</a> conferences. At ISC'26 (June 2026), we had a **half-day tutorial**
 on EESSI as a part of the official program, for which a dedicated <a href="https://www.eessi.io/isc26-tutorial/" target="_blank">tutorial website</a> was set up.
-See the [blog post](../../06/eessi-at-isc26.md) on our activities at ISC'26 for more details.
+See the [blog post](../../2026/06/eessi-at-isc26.md) on our activities at ISC'26 for more details.
 
 Several people have presented EESSI at a wide variety of events, including:
 
