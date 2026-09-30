@@ -199,6 +199,7 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 #### Vrije Universiteit Amsterdam
 * ADA: [General documentation](https://rdm.vu.nl/tools/ada/) | [EESSI @ ADA](https://rdm.vu.nl/tools/ada/software.html#european-environment-for-scientific-software-installations-eessi)
+* DAS-6: [General documentation](https://www.cs.vu.nl/das/) | [EESSI @ DAS-6](https://www.cs.vu.nl/das6/eessi.shtml)
 
 ### Norway
 
