@@ -12,10 +12,10 @@ Going forward, EESSI aims to have yearly version releases, which will target a m
 | ------------------- | -------------------------------------- | --------------------------------------------------- |
 | 2023.06 (default)   | `foss/2022b` `foss/2023a` `foss/2023b` | [2023.06](../../available_software/?search=2023.06) |
 | 2025.06             | `foss/2024a` `foss/2025a` `foss/2025b` | [2025.06](../../available_software/?search=2025.06) |
-| 2026.06             | `foss/2026.1`                          | (under development)                                 |
+| 2026.06             | `foss/2026.1`                          | [2026.06](../../available_software/?search=2026.06)                                 |
 
-The current default EESSI version is `2023.06`. However such a default for EESSI has little real meaning, version `2025.06` is already fully available 
-with new software added regularly and the development effort for EESSI `2026.06` is already underway.
+The current default EESSI version is `2023.06`. However such a default for EESSI has little real meaning, versions `2025.06` and `2026.06` are already fully available 
+with new software added regularly.
 
 ## Switching between EESSI versions
 
