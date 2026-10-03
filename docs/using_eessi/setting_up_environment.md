@@ -62,6 +62,11 @@ available to use. If you would like to see what environment variables the module
         module load EESSI/2023.06
         ```
 
+        !!! Note
+            If you encounter an Lmod error (`Did not find mpath in mA`), you
+            may need to disable the Lmod cache by setting LMOD_IGNORE_CACHE=1
+            in your environment before loading the module.
+
         :clap: Your environment is now set up, you are ready to start running software provided by EESSI!
 
     2.  If you are using an Lmod with a version older than 8.6 or any other module tool utilizing `MODULEPATH` (e.g., 
