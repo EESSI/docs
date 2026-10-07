@@ -9,9 +9,8 @@ This guarantees that you always have a full and up-to-date copy of the entire st
 ## Requirements for a Stratum 1
 
 The main requirements for a Stratum 1 server are a good network connection to the clients it is going to serve,
-and sufficient disk space. As the EESSI repository is constantly growing, make sure that the disk space can easily be extended if necessary. 
-Currently, we recommend to have at least 1 TB available.
-
+and sufficient disk space. For the current disk space used by a Stratum 1 mirror, see [this page](https://status.eessi.io/trends.html). 
+As the EESSI repository continues to grow, allow extra space for future growth and ensure that storage capacity can be easily expanded when needed.
 In terms of cores and memory, a machine with just a few (~4) cores and 4-8 GB of memory should suffice.
 
 Various Linux distributions are supported, but we recommend one based on RHEL 8 or 9.
