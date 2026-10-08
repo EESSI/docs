@@ -31,7 +31,7 @@ The session will be recorded. Recordings, slides, and materials used will be mad
 
 ## Presentation materials
 
-*(will be made available shortly before the event)*
+- [slides (PDF)](EESSI-hackathon-EuroHPC-User-Days-Dublin-2026-09-25.pdf)
 
 ## Venue
 
