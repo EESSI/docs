@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''0.9.0'']'
+  softwareVersion: '[''0.10.0.post5'', ''0.9.0'']'
   url: https://github.com/FEniCS/dolfinx
 ---
 # FEniCS-DOLFINx-Python
@@ -37,4 +37,17 @@ DOLFINx is the computational environment of FEniCSx - Python binding
 
 |FEniCS-DOLFINx-Python version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.10.0.post5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`FEniCS-DOLFINx-Python/0.10.0.post5-foss-2025b`|
 |0.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`FEniCS-DOLFINx-Python/0.9.0-foss-2023b`|
+
+## Extensions
+
+Overview of extensions included in FEniCS-DOLFINx-Python installations
+
+
+### fenics-dolfinx
+
+
+|`fenics-dolfinx` version|FEniCS-DOLFINx-Python modules that include it|
+| --- | --- |
+|0.10.0.post5|`FEniCS-DOLFINx-Python/0.10.0.post5-foss-2025b`|
