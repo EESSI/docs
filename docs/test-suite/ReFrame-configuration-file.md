@@ -63,7 +63,7 @@ The EESSI test suite standardizes a few string-based values as constants, as wel
 Every ReFrame configuration file used for running the EESSI test suite should therefore start with the following import statements:
 
 ```python
-from eessi.testsuite.common_config import (common_eessi_init, common_general_config, common_logging_config,
+from eessi.testsuite.common_config import (common_general_config, common_logging_config,
                                            set_common_required_config)
 from eessi.testsuite.constants import EXTRAS, FEATURES, SCALES, DEVICE_TYPES, GPU_VENDORS
 ```
@@ -335,10 +335,18 @@ in the standard ReFrame prefix (by default the current directory, unless otherwi
 ### Common required configuration
 
 After defining the `site_configuration` dictionary, we run the `set_common_required_config` function to update the
-dictionary with required configuration options:
+dictionary with required configuration options, and set `eessi_prepare_cmds` needed for making EESSI available:
+
+eessi_prepare_cmds = [
+    'module unuse MODULEPATH',
+    'module use /cvmfs/software.eessi.io/init/modules',
+    # If the system doesn’t have an Lmod installation by default, the following commands will use the one from EESSI
+    # 'source /cvmfs/software.eessi.io/2025.06/init/lmod/bash',
+    # 'module unload EESSI',
+]
 
 ```python
-set_common_required_config(site_configuration)
+set_common_required_config(site_configuration, eessi_prepare_cmds=eessi_prepare_cmds)
 ```
 
 ### Auto-detection of processor information { #cpu-auto-detection }
