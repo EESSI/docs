@@ -25,7 +25,8 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.10.5'', ''3.10.3'', ''3.9.2'', ''3.8.2'', ''3.7.2'', ''3.7.0'']'
+  softwareVersion: '[''3.10.9'', ''3.10.5'', ''3.10.3'', ''3.9.2'', ''3.8.2'', ''3.7.2'',
+    ''3.7.0'']'
   url: https://matplotlib.org
 ---
 # matplotlib
@@ -42,6 +43,7 @@ matplotlib is a python 2D plotting library which produces publication quality fi
 
 |matplotlib version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|3.10.9|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`matplotlib/3.10.9-gfbf-2026.1`|
 |3.10.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`matplotlib/3.10.5-gfbf-2025b`|
 |3.10.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`matplotlib/3.10.3-gfbf-2025a`|
 |3.9.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`matplotlib/3.9.2-gfbf-2024a`|
@@ -59,7 +61,7 @@ Overview of extensions included in matplotlib installations
 
 |`contourpy` version|matplotlib modules that include it|
 | --- | --- |
-|1.3.3|`matplotlib/3.10.5-gfbf-2025b`|
+|1.3.3|`matplotlib/3.10.9-gfbf-2026.1`<br/>`matplotlib/3.10.5-gfbf-2025b`|
 |1.3.2|`matplotlib/3.10.3-gfbf-2025a`|
 |1.3.0|`matplotlib/3.9.2-gfbf-2024a`|
 |1.2.0|`matplotlib/3.8.2-gfbf-2023b`|
@@ -79,7 +81,7 @@ Overview of extensions included in matplotlib installations
 
 |`cycler` version|matplotlib modules that include it|
 | --- | --- |
-|0.12.1|`matplotlib/3.10.5-gfbf-2025b`<br/>`matplotlib/3.10.3-gfbf-2025a`|
+|0.12.1|`matplotlib/3.10.9-gfbf-2026.1`<br/>`matplotlib/3.10.5-gfbf-2025b`<br/>`matplotlib/3.10.3-gfbf-2025a`|
 
 ### fonttools
 
@@ -96,6 +98,7 @@ Overview of extensions included in matplotlib installations
 
 |`kiwisolver` version|matplotlib modules that include it|
 | --- | --- |
+|1.5.0|`matplotlib/3.10.9-gfbf-2026.1`|
 |1.4.8|`matplotlib/3.10.5-gfbf-2025b`|
 |1.4.5|`matplotlib/3.10.3-gfbf-2025a`<br/>`matplotlib/3.9.2-gfbf-2024a`<br/>`matplotlib/3.8.2-gfbf-2023b`|
 |1.4.4|`matplotlib/3.7.2-gfbf-2023a`<br/>`matplotlib/3.7.0-gfbf-2022b`|
@@ -105,6 +108,7 @@ Overview of extensions included in matplotlib installations
 
 |`matplotlib` version|matplotlib modules that include it|
 | --- | --- |
+|3.10.9|`matplotlib/3.10.9-gfbf-2026.1`|
 |3.10.5|`matplotlib/3.10.5-gfbf-2025b`|
 |3.10.3|`matplotlib/3.10.3-gfbf-2025a`|
 |3.9.2|`matplotlib/3.9.2-gfbf-2024a`|
