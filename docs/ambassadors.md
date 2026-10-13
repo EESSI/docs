@@ -28,4 +28,5 @@ Feel free to get in touch with them if you have any questions regarding EESSI.
 * Richard Topouchian (University of Bergen, Norway)
 * Caspar van Leeuwen (SURF, The Netherlands)
 * Helena Vela Beltran (Do IT Now, Spain)
+* Valentin Volkl (CERN, Switzerland)
 * Alexander Wilhelmi (Goethe University Frankfurt, Germany)
