@@ -3,7 +3,11 @@
 The people listed below are recognized as *EESSI Ambassadors*.
 
 EESSI Ambassadors go way beyond just using EESSI themselves or making it available to people on the systems they manage,
-they also: actively promote the project by giving talks, writing [blog posts](blog/index.md), and organizing events like hackathons.
+they also:
+
+* actively promote the project by giving talks,
+* writing [blog posts](blog/index.md),
+* and organizing events like hackathons.
 
 Feel free to get in touch with them if you have any questions regarding EESSI.
 
