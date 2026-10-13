@@ -19,7 +19,7 @@ Feel free to get in touch with them if you have any questions regarding EESSI.
 
 * Renato Alves (EMBL, Germany)
 * Bob Dröge (University of Groningen, The Netherlands)
-* Migual Dias Costa (University of Coimbra, Portugal)
+* Miguel Dias Costa (University of Coimbra, Portugal)
 * Abdullatif Eymash (High-Performance Computing Center Stuttgart, Germany)
 * Kenneth Hoste (Ghent University, Belgium)
 * Bernardo Malaca (Centro Nacional de Computação Avançada, Portugal)
