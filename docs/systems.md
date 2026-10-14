@@ -128,6 +128,10 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 * VSC Tier-2 clusters: [General documentation](https://docs.vscentrum.be//) | [EESSI @ KU Leuven/UHasselt](https://docs.vscentrum.be/leuven/leuven_module_system.html#using-modules-from-eessi)
 
+#### Universiteit Antwerpen
+
+* VSC Tier-2 clusters: [General documentation](https://docs.vscentrum.be/) | [EESSI @ Universiteit Antwerpen](https://docs.vscentrum.be/compute/software/using_software/using_eessi.html)
+
 ### Cyprus
 
 #### The Cyprus Institute
@@ -179,7 +183,7 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 #### Eindhoven University of Technology
 
-* TU/e Umbrella HPC Cluster: [General documentation](https://supercomputing.tue.nl/documentation/) | [EESSI @ Umbrella](https://supercomputing.tue.nl/documentation/steps/software/?h=eessi#eessi202306-legacy-software)
+* TU/e Umbrella HPC Cluster: [General documentation](https://supercomputing.tue.nl/documentation/) | [EESSI @ Umbrella](https://supercomputing.tue.nl/documentation/software/eessi/)
 
 #### Leiden University
 

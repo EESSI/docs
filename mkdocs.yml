@@ -85,7 +85,8 @@ nav:
     - Mailing list: mailing_list.md
     - Contact info: contact.md
   - Training & events: training-events/index.md
-  - Systems where EESSI is available: systems.md
+  - Systems: systems.md
+  - Ambassadors: ambassadors.md
   - Roadmap: roadmap.md
   - Governance:
     - Overview: governance/index.md
@@ -220,7 +221,7 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eessi_hpc
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Fri, 09 Oct 2026 at 08:09:57 UTC"
+  generated_time: "Tue, 13 Oct 2026 at 19:03:57 UTC"
   slack_invite_url: "https://join.slack.com/t/eessi-hpc/shared_invite/zt-2wg10p26d-m_CnRB89xQq3zk9qxf1k3g"
 extra_javascript:
   # mermaid diagram

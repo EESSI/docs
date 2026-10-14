@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.12.15'', ''3.9.5'', ''3.8.5'']'
+  softwareVersion: '[''3.14.3'', ''3.12.15'', ''3.9.5'', ''3.8.5'']'
   url: https://github.com/aio-libs/aiohttp
 ---
 # aiohttp
@@ -37,6 +37,7 @@ Asynchronous HTTP client/server framework for asyncio and Python.
 
 |aiohttp version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|3.14.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |3.12.15|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`aiohttp/3.12.15-GCCcore-14.3.0`|
 |3.9.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`aiohttp/3.9.5-GCCcore-13.2.0`|
 |3.8.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`aiohttp/3.8.5-GCCcore-12.3.0`|
@@ -51,6 +52,7 @@ Overview of extensions included in aiohttp installations
 
 |`aiobotocore` version|aiohttp modules that include it|
 | --- | --- |
+|3.9.1|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |2.23.2|`aiohttp/3.12.15-GCCcore-14.3.0`|
 
 ### aiohappyeyeballs
@@ -58,6 +60,7 @@ Overview of extensions included in aiohttp installations
 
 |`aiohappyeyeballs` version|aiohttp modules that include it|
 | --- | --- |
+|2.7.1|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |2.6.1|`aiohttp/3.12.15-GCCcore-14.3.0`|
 |2.3.2|`aiohttp/3.9.5-GCCcore-13.2.0`|
 
@@ -66,6 +69,7 @@ Overview of extensions included in aiohttp installations
 
 |`aiohttp` version|aiohttp modules that include it|
 | --- | --- |
+|3.14.3|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |3.12.15|`aiohttp/3.12.15-GCCcore-14.3.0`|
 |3.9.5|`aiohttp/3.9.5-GCCcore-13.2.0`|
 |3.8.5|`aiohttp/3.8.5-GCCcore-12.3.0`|
@@ -75,6 +79,7 @@ Overview of extensions included in aiohttp installations
 
 |`aioitertools` version|aiohttp modules that include it|
 | --- | --- |
+|0.13.0|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |0.12.0|`aiohttp/3.12.15-GCCcore-14.3.0`|
 
 ### aiosignal
@@ -82,7 +87,7 @@ Overview of extensions included in aiohttp installations
 
 |`aiosignal` version|aiohttp modules that include it|
 | --- | --- |
-|1.4.0|`aiohttp/3.12.15-GCCcore-14.3.0`|
+|1.4.0|`aiohttp/3.14.3-GCCcore-15.2.0`<br/>`aiohttp/3.12.15-GCCcore-14.3.0`|
 |1.3.1|`aiohttp/3.9.5-GCCcore-13.2.0`<br/>`aiohttp/3.8.5-GCCcore-12.3.0`|
 
 ### async-timeout
@@ -97,13 +102,14 @@ Overview of extensions included in aiohttp installations
 
 |`async_timeout` version|aiohttp modules that include it|
 | --- | --- |
-|5.0.1|`aiohttp/3.12.15-GCCcore-14.3.0`|
+|5.0.1|`aiohttp/3.14.3-GCCcore-15.2.0`<br/>`aiohttp/3.12.15-GCCcore-14.3.0`|
 
 ### botocore
 
 
 |`botocore` version|aiohttp modules that include it|
 | --- | --- |
+|1.43.75|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |1.39.8|`aiohttp/3.12.15-GCCcore-14.3.0`|
 
 ### expandvars
@@ -111,6 +117,7 @@ Overview of extensions included in aiohttp installations
 
 |`expandvars` version|aiohttp modules that include it|
 | --- | --- |
+|1.1.2|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |1.1.1|`aiohttp/3.12.15-GCCcore-14.3.0`|
 |0.12.0|`aiohttp/3.9.5-GCCcore-13.2.0`|
 
@@ -119,6 +126,7 @@ Overview of extensions included in aiohttp installations
 
 |`frozenlist` version|aiohttp modules that include it|
 | --- | --- |
+|1.8.0|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |1.7.0|`aiohttp/3.12.15-GCCcore-14.3.0`|
 |1.4.1|`aiohttp/3.9.5-GCCcore-13.2.0`|
 |1.4.0|`aiohttp/3.8.5-GCCcore-12.3.0`|
@@ -128,13 +136,14 @@ Overview of extensions included in aiohttp installations
 
 |`jmespath` version|aiohttp modules that include it|
 | --- | --- |
-|1.0.1|`aiohttp/3.12.15-GCCcore-14.3.0`|
+|1.0.1|`aiohttp/3.14.3-GCCcore-15.2.0`<br/>`aiohttp/3.12.15-GCCcore-14.3.0`|
 
 ### multidict
 
 
 |`multidict` version|aiohttp modules that include it|
 | --- | --- |
+|6.7.1|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |6.6.3|`aiohttp/3.12.15-GCCcore-14.3.0`|
 |6.0.5|`aiohttp/3.9.5-GCCcore-13.2.0`|
 |6.0.4|`aiohttp/3.8.5-GCCcore-12.3.0`|
@@ -144,6 +153,7 @@ Overview of extensions included in aiohttp installations
 
 |`propcache` version|aiohttp modules that include it|
 | --- | --- |
+|0.5.2|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |0.3.2|`aiohttp/3.12.15-GCCcore-14.3.0`|
 
 ### wrapt
@@ -151,6 +161,7 @@ Overview of extensions included in aiohttp installations
 
 |`wrapt` version|aiohttp modules that include it|
 | --- | --- |
+|2.4.0|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |1.17.2|`aiohttp/3.12.15-GCCcore-14.3.0`|
 
 ### yarl
@@ -158,6 +169,7 @@ Overview of extensions included in aiohttp installations
 
 |`yarl` version|aiohttp modules that include it|
 | --- | --- |
+|1.24.5|`aiohttp/3.14.3-GCCcore-15.2.0`|
 |1.20.1|`aiohttp/3.12.15-GCCcore-14.3.0`|
 |1.9.4|`aiohttp/3.9.5-GCCcore-13.2.0`|
 |1.9.2|`aiohttp/3.8.5-GCCcore-12.3.0`|

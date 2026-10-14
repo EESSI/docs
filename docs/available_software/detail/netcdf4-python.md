@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''1.7.2'', ''1.6.4'', ''1.6.3'']'
+  softwareVersion: '[''1.7.4'', ''1.7.2'', ''1.6.4'', ''1.6.3'']'
   url: https://unidata.github.io/netcdf4-python/
 ---
 # netcdf4-python
@@ -37,6 +37,7 @@ Python/numpy interface to netCDF.
 
 |netcdf4-python version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|1.7.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`netcdf4-python/1.7.4-foss-2026.1`|
 |1.7.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`netcdf4-python/1.7.2-foss-2025a`|
 |1.6.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`netcdf4-python/1.6.4-foss-2023a`|
 |1.6.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`netcdf4-python/1.6.3-foss-2022b`|
@@ -51,8 +52,16 @@ Overview of extensions included in netcdf4-python installations
 
 |`cftime` version|netcdf4-python modules that include it|
 | --- | --- |
+|1.6.5|`netcdf4-python/1.7.4-foss-2026.1`|
 |1.6.4.post1|`netcdf4-python/1.7.2-foss-2025a`|
 |1.6.2|`netcdf4-python/1.6.4-foss-2023a`<br/>`netcdf4-python/1.6.3-foss-2022b`|
+
+### netcdf4
+
+
+|`netcdf4` version|netcdf4-python modules that include it|
+| --- | --- |
+|1.7.4|`netcdf4-python/1.7.4-foss-2026.1`|
 
 ### netcdf4-python
 
