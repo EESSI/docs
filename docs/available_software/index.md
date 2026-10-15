@@ -37,7 +37,7 @@ Overview of software available in [EESSI's production repository `software.eessi
   </span>
 {% else -%}
 - <span class="software-item software-card"
-       data-search="name:{{ pkg.name }} {{ pkg.homepage }} {{ pkg.description }} {{ pkg.cpu_families }} {{ pkg.eessi_versions }} ">
+       data-search="name:{{ pkg.name }} {% if pkg.homepage %}{{ pkg.homepage }} {% endif %}{{ pkg.description }} {{ pkg.cpu_families }} {{ pkg.eessi_versions }} ">
 
     <span class="software-name"><a href="detail/{{ pkg_slug }}" target="_blank">{{ pkg.name }}</a></span>
     <!-- <span class="software-versions">{% if pkg.n_versions == 1 -%}({{ pkg.n_versions }} version){% else -%}({{ pkg.n_versions }} versions){% endif %}</span> -->
