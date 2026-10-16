@@ -63,7 +63,7 @@ The EESSI test suite standardizes a few string-based values as constants, as wel
 Every ReFrame configuration file used for running the EESSI test suite should therefore start with the following import statements:
 
 ```python
-from eessi.testsuite.common_config import (common_eessi_init, common_general_config, common_logging_config,
+from eessi.testsuite.common_config import (common_general_config, common_logging_config,
                                            set_common_required_config)
 from eessi.testsuite.constants import EXTRAS, FEATURES, SCALES, DEVICE_TYPES, GPU_VENDORS
 ```
@@ -141,10 +141,6 @@ site_configuration = {
                     'prepare_cmds': [
                         # Pass job environment variables like $PATH, etc., into job steps
                         'export SLURM_EXPORT_ENV=ALL',
-                        # If your system doesn't have an Lmod installation by default on the batch nodes,
-                        # uncommenting the following two lines will use one from EESSI.
-                        # 'source /cvmfs/software.eessi.io/2025.06/init/lmod/bash',
-                        # 'module unload EESSI',
                     ],
                     'launcher': 'mpirun',
                     'access':  ['-p cpu'],
@@ -162,10 +158,6 @@ site_configuration = {
                     'prepare_cmds': [
                         # Pass job environment variables like $PATH, etc., into job steps
                         'export SLURM_EXPORT_ENV=ALL',
-                        # If your system doesn't have an Lmod installation by default on the batch nodes,
-                        # Uncommenting the following two lines will use one from EESSI.
-                        # 'source /cvmfs/software.eessi.io/2025.06/init/lmod/bash',
-                        # 'module unload EESSI',
                     ],
                     'launcher': 'mpirun',
                     'access':  ['-p gpu'],
@@ -208,10 +200,10 @@ The most common configuration items defined at this level are:
   A list of arguments that you would normally pass to the scheduler when submitting to this partition
   (for example '`-p cpu`' for submitting to a Slurm partition called `cpu`).
   If supported by your scheduler, we recommend to _not_ export the submission environment
-  (for example by using '`--export=None`' with Slurm). This avoids test failures due to environment variables set
+  (for example by using '`--export=NONE`' with Slurm). This avoids test failures due to environment variables set
   in the submission environment that are passed down to submitted jobs.
 - [`prepare_cmds`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.prepare_cmds):
-  Commands to execute at the start of every job that runs a test, such as making the EESSI-installed version of Lmod available.
+  Commands to execute at the start of every job on this partition that runs a test, such as passing environment variables into jobs.
 - [`environs`](https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.environs):
   The names of optional additional environments (to be defined later in the configuration file via [`environments`](#environments))
   ReFrame requires each test to run in a specific environment. The EESSI test suite automatically adds the available
@@ -335,10 +327,18 @@ in the standard ReFrame prefix (by default the current directory, unless otherwi
 ### Common required configuration
 
 After defining the `site_configuration` dictionary, we run the `set_common_required_config` function to update the
-dictionary with required configuration options:
+dictionary with required configuration options, and set `eessi_prepare_cmds` needed for making EESSI available:
+
+eessi_prepare_cmds = [
+    'module unuse MODULEPATH',
+    'module use /cvmfs/software.eessi.io/init/modules',
+    # If the system doesn’t have an Lmod installation by default, the following commands will use the one from EESSI
+    # 'source /cvmfs/software.eessi.io/2026.06/init/lmod/bash',
+    # 'module unload EESSI',
+]
 
 ```python
-set_common_required_config(site_configuration)
+set_common_required_config(site_configuration, eessi_prepare_cmds=eessi_prepare_cmds)
 ```
 
 ### Auto-detection of processor information { #cpu-auto-detection }
