@@ -12,6 +12,7 @@ mkdocs-autorefs
 mkdocstrings[python]
 mkdocs-gen-files
 mkdocs-literate-nav
+mkdocs-rss-plugin
 mkdocs-section-index
 # Provides pymdownx.blocks.caption
 pymdown-extensions>=10.12
