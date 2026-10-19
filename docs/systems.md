@@ -29,17 +29,17 @@ and you can try [running our demos](using_eessi/eessi_demos.md).
 
 ## EuroHPC JU systems
 
-EESSI is available on *all* of the [EuroHPC JU supercomputers](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
+EESSI is available on most of the [EuroHPC JU supercomputers](https://eurohpc-ju.europa.eu/supercomputers/our-supercomputers_en).
 It serves as the base for the [Federated Software Catalog](https://docs.my-eurohpc.eu/software-catalog/overview/) of the
 [EuroHPC Federation Platform (EFP)](https://my-eurohpc.eu).
 
 ### Deucalion (Portugal)
 
-Deucalion is the EuroHPC JU supercomputer hosted by the [Minho Advanced Computing Center (MACC)](https://www.macc.fccn.pt/).
+Deucalion is the EuroHPC JU supercomputer hosted by the [Foundation for Science and Technology](https://www.fct.pt/) (FCT) and operated by the [National Center for Advanced Computing](https://deucalion.acnca.pt/) (CNCA), [INESC TEC](https://www.inesctec.pt/en), and the [University of Minho](https://www.uminho.pt/).
 
 * [Website](https://deucalion.acnca.pt/)
-* [General documentation](https://docs.deucalion.macc.fccn.pt/)
-* [EESSI @ Deucalion](https://docs.deucalion.macc.fccn.pt/jobs/eessi/)
+* [General documentation](https://docs.deucalion.acnca.pt/)
+* [EESSI @ Deucalion](https://docs.deucalion.acnca.pt/jobs/eessi/)
 * [EFP Federated Software Catalog @ Deucalion](https://docs.my-eurohpc.eu/software-catalog/system-specific/deucalion/)
 
 ### Discoverer (Bulgaria)
@@ -49,14 +49,6 @@ Discoverer is the EuroHPC JU supercomputer hosted in Sofia, Bulgaria.
 * [Website](https://discoverer.bg/)
 * [General documentation](https://docs.discoverer.bg)
 * [EFP Federated Software Catalog @ Discoverer](https://docs.my-eurohpc.eu/software-catalog/system-specific/discoverer/)
-
-### JUPITER (Germany)
-
-JUPITER is the first exascale EuroHPC JU supercomputer hosted by the [Jülich Supercomputing Centre (JSC)](https://www.fz-juelich.de/en/jsc).
-
-* [Website](https://www.fz-juelich.de/en/jsc/jupiter)
-* [General documentation](https://apps.fz-juelich.de/jsc/hps/jupiter/)
-* [EFP Federated Software Catalog @ JUPITER](https://docs.my-eurohpc.eu/software-catalog/system-specific/jupiter/)
 
 ### Karolina (Czech Republic)
 
@@ -136,6 +128,10 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 * VSC Tier-2 clusters: [General documentation](https://docs.vscentrum.be//) | [EESSI @ KU Leuven/UHasselt](https://docs.vscentrum.be/leuven/leuven_module_system.html#using-modules-from-eessi)
 
+#### Universiteit Antwerpen
+
+* VSC Tier-2 clusters: [General documentation](https://docs.vscentrum.be/) | [EESSI @ Universiteit Antwerpen](https://docs.vscentrum.be/compute/software/using_software/using_eessi.html)
+
 ### Cyprus
 
 #### The Cyprus Institute
@@ -185,6 +181,14 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 ### Netherlands
 
+#### Eindhoven University of Technology
+
+* TU/e Umbrella HPC Cluster: [General documentation](https://supercomputing.tue.nl/documentation/) | [EESSI @ Umbrella](https://supercomputing.tue.nl/documentation/software/eessi/)
+
+#### Leiden University
+
+* ALICE: [General documentation](https://pubappslu.atlassian.net/wiki/spaces/HPCWIKI/)
+
 #### SURF
 
 * Snellius: [General documentation](https://servicedesk.surf.nl/wiki/display/WIKI/Snellius) | [EESSI @ Snellius](https://servicedesk.surf.nl/wiki/display/WIKI/EESSI+software+environment)
@@ -199,6 +203,7 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 #### Vrije Universiteit Amsterdam
 * ADA: [General documentation](https://rdm.vu.nl/tools/ada/) | [EESSI @ ADA](https://rdm.vu.nl/tools/ada/software.html#european-environment-for-scientific-software-installations-eessi)
+* DAS-6: [General documentation](https://www.cs.vu.nl/das/) | [EESSI @ DAS-6](https://www.cs.vu.nl/das6/eessi.shtml)
 
 ### Norway
 
@@ -213,10 +218,12 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 #### Barcelona Supercomputing Center (BSC)
 
-* arriesgado-hirsute: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes).
-This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
-* bananaf3: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes).
-This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/repositories/riscv.eessi.io/)
+* HCA RISC-V clusters: [General documentation](https://repo.hca.bsc.es/gitlab/epi-public/risc-v-software-development-vehicles/-/wikis/HCA-Nodes-and-Queues#commercial-risc-v-nodes)
+    * arriesgado-hirsute
+    * bananaf3
+    * premier
+    * fireflyk3
+
 
 #### Galicia Supercomputing Center (CESGA)
 
@@ -231,6 +238,12 @@ This is a RISC-V cluster that uses [`riscv.eessi.io`](https://www.eessi.io/docs/
 #### University of Basel
 
 * sciCORE: [General documentation](https://docs.scicore.unibas.ch/)
+
+### United Kingdom
+
+#### University of Bristol / Bristol Centre for Supercomputing
+
+* BlueCrystal 5: [General documentation](https://docs.isambard.ac.uk/)
 
 ---
 

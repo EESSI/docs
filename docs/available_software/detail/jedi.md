@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''0.19.2'', ''0.19.1'', ''0.19.0'']'
+  softwareVersion: '[''0.20.0'', ''0.19.2'', ''0.19.1'', ''0.19.0'']'
   url: https://github.com/davidhalter/jedi
 ---
 # jedi
@@ -44,6 +44,7 @@ json_ld:
 
 |jedi version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.20.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`jedi/0.20.0-GCCcore-15.2.0`|
 |0.19.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`jedi/0.19.2-GCCcore-14.3.0`|
 |0.19.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`jedi/0.19.1-GCCcore-14.2.0`|
 |0.19.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`jedi/0.19.1-GCCcore-13.3.0`|
@@ -60,6 +61,7 @@ Overview of extensions included in jedi installations
 
 |`jedi` version|jedi modules that include it|
 | --- | --- |
+|0.20.0|`jedi/0.20.0-GCCcore-15.2.0`|
 |0.19.2|`jedi/0.19.2-GCCcore-14.3.0`|
 |0.19.1|`jedi/0.19.1-GCCcore-14.2.0`<br/>`jedi/0.19.1-GCCcore-13.3.0`<br/>`jedi/0.19.1-GCCcore-13.2.0`|
 |0.19.0|`jedi/0.19.0-GCCcore-12.3.0`|
@@ -69,5 +71,6 @@ Overview of extensions included in jedi installations
 
 |`parso` version|jedi modules that include it|
 | --- | --- |
+|0.8.7|`jedi/0.20.0-GCCcore-15.2.0`|
 |0.8.4|`jedi/0.19.2-GCCcore-14.3.0`<br/>`jedi/0.19.1-GCCcore-14.2.0`|
 |0.8.3|`jedi/0.19.1-GCCcore-13.3.0`<br/>`jedi/0.19.1-GCCcore-13.2.0`<br/>`jedi/0.19.0-GCCcore-12.3.0`|

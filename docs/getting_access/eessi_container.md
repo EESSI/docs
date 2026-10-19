@@ -41,7 +41,7 @@ You should see output like
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).
 Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell  --fusemount "container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch" --fusemount "container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io" /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 Apptainer> CernVM-FS: loading Fuse module... done
 CernVM-FS: loading Fuse module... done
@@ -181,7 +181,7 @@ You should see an output such as
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).$
 Pulling container image from docker://ghcr.io/eessi/build-node:debian11 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian11.sif
 Launching container with command (next line):
-singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
+singularity -q shell  --fusemount "container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch" --fusemount "container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io" /tmp/eessi.ymYGaZwoWC/ghcr.io_eessi_build_node_debian11.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
 README.eessi  host_injections  init  versions
@@ -283,7 +283,7 @@ The output should be similar to
 Using /tmp/eessi.abc123defg as tmp storage (add '--resume /tmp/eessi.abc123defg' to resume where this session ended).$
 Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
 Launching container with command (next line):
-singularity -q shell --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+singularity -q shell --fusemount "container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch" --fusemount "container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io" /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
 linux/aarch64/a64fx
@@ -337,7 +337,7 @@ We can resolve this in two ways:
   Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /tmp/eessi.abc123defg').
   Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
   Launching container with command (next line):
-  singularity -q shell --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+  singularity -q shell --fusemount "container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch" --fusemount "container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io" /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
   CernVM-FS: pre-mounted on file descriptor 3
   CernVM-FS: loading Fuse module... done
   total 3
@@ -357,7 +357,7 @@ parsing command line arguments. For example,
   Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
   Mounting 'software.eessi.io' 'read-only' without fuse-overlayfs.
   Launching container with command (next line):
-  singularity -q shell --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+  singularity -q shell --fusemount "container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch" --fusemount "container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io" /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
   CernVM-FS: pre-mounted on file descriptor 3
   CernVM-FS: loading Fuse module... done
   total 3
@@ -392,7 +392,7 @@ Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /t
 Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
 Mounting 'software.eessi.io' 'read-only' without fuse-overlayfs.
 Launching container with command (next line):
-singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+singularity -q shell  --fusemount "container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch" --fusemount "container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io" /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done
@@ -412,7 +412,7 @@ Using /tmp/eessi.abc123defg as tmp directory (to resume session add '--resume /t
 Pulling container image from docker://ghcr.io/eessi/build-node:debian12 to /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
 Mounting 'software.eessi.io' 'read-only' without fuse-overlayfs.
 Launching container with command (next line):
-singularity -q shell  --fusemount container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch --fusemount container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
+singularity -q shell  --fusemount "container:cvmfs2 cvmfs-config.cern.ch /cvmfs/cvmfs-config.cern.ch" --fusemount "container:cvmfs2 software.eessi.io /cvmfs/software.eessi.io" /tmp/eessi.abc123defg/ghcr.io_eessi_build_node_debian12.sif
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: pre-mounted on file descriptor 3
 CernVM-FS: loading Fuse module... done

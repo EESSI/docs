@@ -31,7 +31,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''2.0.36'', ''2.0.29'', ''2.0.25'']'
+  softwareVersion: '[''2.0.41'', ''2.0.36'', ''2.0.29'', ''2.0.25'']'
   url: https://www.sqlalchemy.org/
 ---
 # SQLAlchemy
@@ -50,6 +50,7 @@ simple and Pythonic domain language.
 
 |SQLAlchemy version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|2.0.41|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`SQLAlchemy/2.0.41-GCCcore-14.3.0`|
 |2.0.36|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
 |2.0.29|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SQLAlchemy/2.0.29-GCCcore-13.2.0`|
 |2.0.25|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
@@ -64,6 +65,7 @@ Overview of extensions included in SQLAlchemy installations
 
 |`alembic` version|SQLAlchemy modules that include it|
 | --- | --- |
+|1.16.4|`SQLAlchemy/2.0.41-GCCcore-14.3.0`|
 |1.14.0|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
 |1.13.1|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
 
@@ -72,7 +74,7 @@ Overview of extensions included in SQLAlchemy installations
 
 |`async-timeout` version|SQLAlchemy modules that include it|
 | --- | --- |
-|5.0.1|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
+|5.0.1|`SQLAlchemy/2.0.41-GCCcore-14.3.0`<br/>`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
 |4.0.3|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
 
 ### asyncpg
@@ -80,7 +82,7 @@ Overview of extensions included in SQLAlchemy installations
 
 |`asyncpg` version|SQLAlchemy modules that include it|
 | --- | --- |
-|0.30.0|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
+|0.30.0|`SQLAlchemy/2.0.41-GCCcore-14.3.0`<br/>`SQLAlchemy/2.0.36-GCCcore-13.3.0`|
 |0.29.0|`SQLAlchemy/2.0.29-GCCcore-13.2.0`<br/>`SQLAlchemy/2.0.25-GCCcore-12.3.0`|
 
 ### greenlet
@@ -103,4 +105,5 @@ Overview of extensions included in SQLAlchemy installations
 
 |`sqlalchemy` version|SQLAlchemy modules that include it|
 | --- | --- |
+|2.0.41|`SQLAlchemy/2.0.41-GCCcore-14.3.0`|
 |2.0.36|`SQLAlchemy/2.0.36-GCCcore-13.3.0`|

@@ -37,6 +37,7 @@ A simple packaging tool for simple packages.
 
 |flit version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|3.12.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`flit/3.12.0-GCCcore-15.2.0`|
 |3.12.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.12.0-GCCcore-14.3.0`|
 |3.10.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.10.1-GCCcore-14.2.0`|
 |3.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`flit/3.9.0-GCCcore-13.3.0`|
@@ -53,6 +54,7 @@ Overview of extensions included in flit installations
 
 |`certifi` version|flit modules that include it|
 | --- | --- |
+|2026.6.17|`flit/3.12.0-GCCcore-15.2.0`|
 |2025.7.14|`flit/3.12.0-GCCcore-14.3.0`|
 |2025.1.31|`flit/3.10.1-GCCcore-14.2.0`|
 |2024.6.2|`flit/3.9.0-GCCcore-13.3.0`|
@@ -64,6 +66,7 @@ Overview of extensions included in flit installations
 
 |`charset-normalizer` version|flit modules that include it|
 | --- | --- |
+|3.4.7|`flit/3.12.0-GCCcore-15.2.0`|
 |3.4.2|`flit/3.12.0-GCCcore-14.3.0`|
 |3.4.1|`flit/3.10.1-GCCcore-14.2.0`|
 |3.3.2|`flit/3.9.0-GCCcore-13.3.0`|
@@ -75,6 +78,7 @@ Overview of extensions included in flit installations
 
 |`docutils` version|flit modules that include it|
 | --- | --- |
+|0.23|`flit/3.12.0-GCCcore-15.2.0`|
 |0.21.2|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 |0.20.1|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
 
@@ -83,7 +87,7 @@ Overview of extensions included in flit installations
 
 |`flit` version|flit modules that include it|
 | --- | --- |
-|3.12.0|`flit/3.12.0-GCCcore-14.3.0`|
+|3.12.0|`flit/3.12.0-GCCcore-15.2.0`<br/>`flit/3.12.0-GCCcore-14.3.0`|
 |3.10.1|`flit/3.10.1-GCCcore-14.2.0`|
 |3.9.0|`flit/3.9.0-GCCcore-13.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
 
@@ -92,7 +96,7 @@ Overview of extensions included in flit installations
 
 |`flit-scm` version|flit modules that include it|
 | --- | --- |
-|1.7.0|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
+|1.7.0|`flit/3.12.0-GCCcore-15.2.0`<br/>`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 
 ### flit_scm
 
@@ -106,6 +110,7 @@ Overview of extensions included in flit installations
 
 |`idna` version|flit modules that include it|
 | --- | --- |
+|3.18|`flit/3.12.0-GCCcore-15.2.0`|
 |3.10|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
 |3.7|`flit/3.9.0-GCCcore-13.3.0`|
 |3.4|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
@@ -124,6 +129,7 @@ Overview of extensions included in flit installations
 
 |`requests` version|flit modules that include it|
 | --- | --- |
+|2.34.2|`flit/3.12.0-GCCcore-15.2.0`|
 |2.32.4|`flit/3.12.0-GCCcore-14.3.0`|
 |2.32.3|`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`|
 |2.31.0|`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
@@ -148,7 +154,7 @@ Overview of extensions included in flit installations
 
 |`tomli-w` version|flit modules that include it|
 | --- | --- |
-|1.2.0|`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
+|1.2.0|`flit/3.12.0-GCCcore-15.2.0`<br/>`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`|
 |1.0.0|`flit/3.9.0-GCCcore-13.3.0`|
 
 ### tomli_w
@@ -178,6 +184,7 @@ Overview of extensions included in flit installations
 
 |`urllib3` version|flit modules that include it|
 | --- | --- |
+|2.7.0|`flit/3.12.0-GCCcore-15.2.0`|
 |2.5.0|`flit/3.12.0-GCCcore-14.3.0`|
 |2.4.0|`flit/3.10.1-GCCcore-14.2.0`|
 |2.2.1|`flit/3.9.0-GCCcore-13.3.0`|

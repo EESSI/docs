@@ -1,0 +1,29 @@
+{#-
+  Overrides the mkdocs-material partial of the same name to add a disclaimer to
+  the footer of blog posts. The copyright and generator markup below is a copy
+  of the upstream partial and must be kept in sync when the theme is updated.
+-#}
+
+<!-- Copyright and theme information -->
+<div class="md-copyright">
+  {% if page and page.file and page.file.src_uri.startswith("blog/posts/") %}
+    <div class="md-copyright__highlight" data-eessi-blog-disclaimer="true">
+      Blog posts are the responsibility of their authors. The EESSI community does not
+      independently verify the claims or data they present.
+    </div>
+  {% endif %}
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+  {% if not config.extra.generator == false %}
+    Made with
+    <a
+      href="https://squidfunk.github.io/mkdocs-material/"
+      target="_blank" rel="noopener"
+    >
+      Material for MkDocs
+    </a>
+  {% endif %}
+</div>

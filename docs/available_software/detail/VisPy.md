@@ -41,6 +41,7 @@ VisPy is a high-performance interactive 2D/3D data visualization library
 
 |VisPy version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.15.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`VisPy/0.15.2-gfbf-2025b`|
 |0.15.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`VisPy/0.15.2-gfbf-2025a`|
 
 ## Extensions
@@ -53,18 +54,18 @@ Overview of extensions included in VisPy installations
 
 |`freetype-py` version|VisPy modules that include it|
 | --- | --- |
-|2.5.1|`VisPy/0.15.2-gfbf-2025a`|
+|2.5.1|`VisPy/0.15.2-gfbf-2025b`<br/>`VisPy/0.15.2-gfbf-2025a`|
 
 ### hsluv
 
 
 |`hsluv` version|VisPy modules that include it|
 | --- | --- |
-|5.0.4|`VisPy/0.15.2-gfbf-2025a`|
+|5.0.4|`VisPy/0.15.2-gfbf-2025b`<br/>`VisPy/0.15.2-gfbf-2025a`|
 
 ### vispy
 
 
 |`vispy` version|VisPy modules that include it|
 | --- | --- |
-|0.15.2|`VisPy/0.15.2-gfbf-2025a`|
+|0.15.2|`VisPy/0.15.2-gfbf-2025b`<br/>`VisPy/0.15.2-gfbf-2025a`|

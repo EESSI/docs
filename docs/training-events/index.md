@@ -2,10 +2,12 @@
 
 ## Upcoming events (2026)
 
+* [*EESSI Hackathon @ EuroHPC User Days 2026*](2026/hackathon-eurohpc-user-days.md) (hybrid event, 25 September 2026)
 * [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** Monday, starting 12 January 2026)
 
 ### Past events (2026)
 
+* EESSI tutorial @ ISC'26 (22 June 2026) - see [tutorial website](https://eessi.io/isc26-tutorial/)
 * [*EESSI webinar series (April-May 2026)*](2026/webinar-series-2026Q2.md) (online tutorials)
     * [**Introduction to EESSI** *(27 April 2026)*](2026/webinar-series-2026Q2.md#introduction-to-eessi)
     * [**Building software on top of EESSI + contributing to EESSI** *(4 May 2026)*](2026/webinar-series-2026Q2.md#building-software-on-top-of-eessi-contributing-to-eessi)
@@ -15,7 +17,7 @@
 
 ### Past events (2025)
 
-* [*EESSI CI/CD Hackathon*](2025/hackathon-eurohpc-user-days.md) (hybrid event, 2 October 2025)
+* [*EESSI CI/CD Hackathon @ EuroHPC User Days 2025*](2025/hackathon-eurohpc-user-days.md) (hybrid event, 2 October 2025)
 * [*EESSI happy hour sessions 2025*](2025/happy-hours-previous-sessions.md) (online sessions every Monday, starting 18 August 2025)
 * [*EESSI webinar series (May-June 2025)*](2025/webinar-series-2025Q2.md) (online tutorials)
     * [**Introduction to EESSI** *(5 May 2025)*](2025/webinar-series-2025Q2.md#introduction-to-eessi)
