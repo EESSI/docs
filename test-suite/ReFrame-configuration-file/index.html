@@ -6516,7 +6516,7 @@ which defines the most common configuration settings.</p>
 <h3 id="python-imports">Python imports<a class="headerlink" href="#python-imports" title="Permanent link">&para;</a></h3>
 <p>The EESSI test suite standardizes a few string-based values as constants, as well as the logging format used by ReFrame.
 Every ReFrame configuration file used for running the EESSI test suite should therefore start with the following import statements:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">eessi.testsuite.common_config</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">common_eessi_init</span><span class="p">,</span> <span class="n">common_general_config</span><span class="p">,</span> <span class="n">common_logging_config</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">eessi.testsuite.common_config</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">common_general_config</span><span class="p">,</span> <span class="n">common_logging_config</span><span class="p">,</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>                                           <span class="n">set_common_required_config</span><span class="p">)</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">eessi.testsuite.constants</span><span class="w"> </span><span class="kn">import</span> <span class="n">EXTRAS</span><span class="p">,</span> <span class="n">FEATURES</span><span class="p">,</span> <span class="n">SCALES</span><span class="p">,</span> <span class="n">DEVICE_TYPES</span><span class="p">,</span> <span class="n">GPU_VENDORS</span>
 </code></pre></div>
@@ -6581,55 +6581,47 @@ and one GPU partition) could for example look something like this:</p>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>                    <span class="s1">'prepare_cmds'</span><span class="p">:</span> <span class="p">[</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>                        <span class="c1"># Pass job environment variables like $PATH, etc., into job steps</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>                        <span class="s1">'export SLURM_EXPORT_ENV=ALL'</span><span class="p">,</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>                        <span class="c1"># If your system doesn't have an Lmod installation by default on the batch nodes,</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>                        <span class="c1"># uncommenting the following two lines will use one from EESSI.</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>                        <span class="c1"># 'source /cvmfs/software.eessi.io/2025.06/init/lmod/bash',</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>                        <span class="c1"># 'module unload EESSI',</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>                    <span class="p">],</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>                    <span class="s1">'launcher'</span><span class="p">:</span> <span class="s1">'mpirun'</span><span class="p">,</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>                    <span class="s1">'access'</span><span class="p">:</span>  <span class="p">[</span><span class="s1">'-p cpu'</span><span class="p">],</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>                    <span class="c1"># Optionally specify additional (local) environments here</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>                    <span class="c1"># 'environs': ['local_environ'],</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>                    <span class="s1">'max_jobs'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>                    <span class="s1">'features'</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">CPU</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>                    <span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">SCALES</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>                <span class="p">},</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>                <span class="p">{</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>                    <span class="s1">'name'</span><span class="p">:</span> <span class="s1">'gpu_partition'</span><span class="p">,</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>                    <span class="s1">'descr'</span><span class="p">:</span> <span class="s1">'GPU partition'</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>                    <span class="s1">'scheduler'</span><span class="p">:</span> <span class="s1">'slurm'</span><span class="p">,</span>
-<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>                    <span class="s1">'prepare_cmds'</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>                        <span class="c1"># Pass job environment variables like $PATH, etc., into job steps</span>
-<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>                        <span class="s1">'export SLURM_EXPORT_ENV=ALL'</span><span class="p">,</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>                        <span class="c1"># If your system doesn't have an Lmod installation by default on the batch nodes,</span>
-<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>                        <span class="c1"># Uncommenting the following two lines will use one from EESSI.</span>
-<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>                        <span class="c1"># 'source /cvmfs/software.eessi.io/2025.06/init/lmod/bash',</span>
-<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>                        <span class="c1"># 'module unload EESSI',</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>                    <span class="p">],</span>
-<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>                    <span class="s1">'launcher'</span><span class="p">:</span> <span class="s1">'mpirun'</span><span class="p">,</span>
-<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>                    <span class="s1">'access'</span><span class="p">:</span>  <span class="p">[</span><span class="s1">'-p gpu'</span><span class="p">],</span>
-<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>                    <span class="c1"># Optionally specify additional (local) environments here</span>
-<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>                    <span class="c1"># 'environs': ['local_environ'],</span>
-<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>                    <span class="s1">'max_jobs'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>                    <span class="s1">'devices'</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>                        <span class="p">{</span>
-<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a>                            <span class="s1">'type'</span><span class="p">:</span> <span class="n">DEVICE_TYPES</span><span class="o">.</span><span class="n">GPU</span><span class="p">,</span>
-<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a>                            <span class="s1">'num_devices'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
-<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a>                        <span class="p">}</span>
-<a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a>                    <span class="p">],</span>
-<a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a>                    <span class="s1">'features'</span><span class="p">:</span> <span class="p">[</span>
-<a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">CPU</span><span class="p">,</span>
-<a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">GPU</span><span class="p">,</span>
-<a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a>                    <span class="p">],</span>
-<a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a>                    <span class="s1">'extras'</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a>                        <span class="n">EXTRAS</span><span class="o">.</span><span class="n">GPU_VENDOR</span><span class="p">:</span> <span class="n">GPU_VENDORS</span><span class="o">.</span><span class="n">NVIDIA</span><span class="p">,</span>
-<a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a>                    <span class="p">},</span>
-<a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a>                <span class="p">},</span>
-<a id="__codelineno-5-58" name="__codelineno-5-58" href="#__codelineno-5-58"></a>            <span class="p">]</span>
-<a id="__codelineno-5-59" name="__codelineno-5-59" href="#__codelineno-5-59"></a>        <span class="p">}</span>
-<a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a>    <span class="p">]</span>
-<a id="__codelineno-5-61" name="__codelineno-5-61" href="#__codelineno-5-61"></a><span class="p">}</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>                    <span class="p">],</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>                    <span class="s1">'launcher'</span><span class="p">:</span> <span class="s1">'mpirun'</span><span class="p">,</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>                    <span class="s1">'access'</span><span class="p">:</span>  <span class="p">[</span><span class="s1">'-p cpu'</span><span class="p">],</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>                    <span class="c1"># Optionally specify additional (local) environments here</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>                    <span class="c1"># 'environs': ['local_environ'],</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>                    <span class="s1">'max_jobs'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>                    <span class="s1">'features'</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">CPU</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>                    <span class="p">]</span> <span class="o">+</span> <span class="nb">list</span><span class="p">(</span><span class="n">SCALES</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>                <span class="p">},</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>                <span class="p">{</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>                    <span class="s1">'name'</span><span class="p">:</span> <span class="s1">'gpu_partition'</span><span class="p">,</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>                    <span class="s1">'descr'</span><span class="p">:</span> <span class="s1">'GPU partition'</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>                    <span class="s1">'scheduler'</span><span class="p">:</span> <span class="s1">'slurm'</span><span class="p">,</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>                    <span class="s1">'prepare_cmds'</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>                        <span class="c1"># Pass job environment variables like $PATH, etc., into job steps</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>                        <span class="s1">'export SLURM_EXPORT_ENV=ALL'</span><span class="p">,</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>                    <span class="p">],</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>                    <span class="s1">'launcher'</span><span class="p">:</span> <span class="s1">'mpirun'</span><span class="p">,</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>                    <span class="s1">'access'</span><span class="p">:</span>  <span class="p">[</span><span class="s1">'-p gpu'</span><span class="p">],</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>                    <span class="c1"># Optionally specify additional (local) environments here</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>                    <span class="c1"># 'environs': ['local_environ'],</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>                    <span class="s1">'max_jobs'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>                    <span class="s1">'devices'</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>                        <span class="p">{</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>                            <span class="s1">'type'</span><span class="p">:</span> <span class="n">DEVICE_TYPES</span><span class="o">.</span><span class="n">GPU</span><span class="p">,</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>                            <span class="s1">'num_devices'</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>                        <span class="p">}</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>                    <span class="p">],</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>                    <span class="s1">'features'</span><span class="p">:</span> <span class="p">[</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">CPU</span><span class="p">,</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>                        <span class="n">FEATURES</span><span class="o">.</span><span class="n">GPU</span><span class="p">,</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>                    <span class="p">],</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a>                    <span class="s1">'extras'</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a>                        <span class="n">EXTRAS</span><span class="o">.</span><span class="n">GPU_VENDOR</span><span class="p">:</span> <span class="n">GPU_VENDORS</span><span class="o">.</span><span class="n">NVIDIA</span><span class="p">,</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a>                    <span class="p">},</span>
+<a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a>                <span class="p">},</span>
+<a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a>            <span class="p">]</span>
+<a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a>        <span class="p">}</span>
+<a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a>    <span class="p">]</span>
+<a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a><span class="p">}</span>
 </code></pre></div>
 <p>The most common configuration items defined at this level are:</p>
 <ul>
@@ -6647,10 +6639,10 @@ and one GPU partition) could for example look something like this:</p>
   A list of arguments that you would normally pass to the scheduler when submitting to this partition
   (for example '<code>-p cpu</code>' for submitting to a Slurm partition called <code>cpu</code>).
   If supported by your scheduler, we recommend to <em>not</em> export the submission environment
-  (for example by using '<code>--export=None</code>' with Slurm). This avoids test failures due to environment variables set
+  (for example by using '<code>--export=NONE</code>' with Slurm). This avoids test failures due to environment variables set
   in the submission environment that are passed down to submitted jobs.</li>
 <li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.prepare_cmds"><code>prepare_cmds</code></a>:
-  Commands to execute at the start of every job that runs a test, such as making the EESSI-installed version of Lmod available.</li>
+  Commands to execute at the start of every job on this partition that runs a test, such as passing environment variables into jobs.</li>
 <li><a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.environs"><code>environs</code></a>:
   The names of optional additional environments (to be defined later in the configuration file via <a href="#environments"><code>environments</code></a>)
   ReFrame requires each test to run in a specific environment. The EESSI test suite automatically adds the available
@@ -6760,8 +6752,15 @@ the regular ReFrame log ends up. Note that the performance logs do <em>not</em> 
 in the standard ReFrame prefix (by default the current directory, unless otherwise set with <code>$RFM_PREFIX</code> or <code>--prefix</code>).</p>
 <h3 id="common-required-configuration">Common required configuration<a class="headerlink" href="#common-required-configuration" title="Permanent link">&para;</a></h3>
 <p>After defining the <code>site_configuration</code> dictionary, we run the <code>set_common_required_config</code> function to update the
-dictionary with required configuration options:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">set_common_required_config</span><span class="p">(</span><span class="n">site_configuration</span><span class="p">)</span>
+dictionary with required configuration options, and set <code>eessi_prepare_cmds</code> needed for making EESSI available:</p>
+<p>eessi_prepare_cmds = [
+    'module unuse MODULEPATH',
+    'module use /cvmfs/software.eessi.io/init/modules',
+    # If the system doesn’t have an Lmod installation by default, the following commands will use the one from EESSI
+    # 'source /cvmfs/software.eessi.io/2026.06/init/lmod/bash',
+    # 'module unload EESSI',
+]</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">set_common_required_config</span><span class="p">(</span><span class="n">site_configuration</span><span class="p">,</span> <span class="n">eessi_prepare_cmds</span><span class="o">=</span><span class="n">eessi_prepare_cmds</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="cpu-auto-detection">Auto-detection of processor information<a class="headerlink" href="#cpu-auto-detection" title="Permanent link">&para;</a></h3>
 <p>You can let ReFrame <a href="https://reframe-hpc.readthedocs.io/en/stable/config_reference.html#config.systems.partitions.processor">auto-detect the processor information</a> for your system.</p>
@@ -6984,7 +6983,7 @@ let ReFrame list the available tests:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 11, 2026 15:53:22 UTC">August 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 15, 2026 20:39:23 UTC">October 15, 2026</span>
   </span>
 
     
