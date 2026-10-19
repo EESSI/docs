@@ -6518,11 +6518,13 @@ in a predictable location that is searched by the EESSI runtime linker.</p>
 to store the symlinks to the drivers. For example, to store these under <code>/opt/eessi/nvidia</code>, one would run:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' &gt;&gt; /etc/cvmfs/default.local"</span>
 </code></pre></div>
+<p>Keep in mind that values stored in <code>/etc/cvmfs/default.local</code> can be overridden by values stored in <code>/etc/cvmfs/domain.d/eessi.io.local</code>.</p>
 <p><em>Step 2 (EESSI 2023.06, optional):</em> Change the location in which the symlinks will end up by configuring <code>EESSI_HOST_INJECTIONS</code> explicitly (default: <code>/opt/eessi</code>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' &gt;&gt; /etc/cvmfs/default.local"</span>
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' &gt;&gt; /etc/cvmfs/default.local"</span>
 </code></pre></div>
+<p>Keep in mind that values stored in <code>/etc/cvmfs/default.local</code> can be overridden by values stored in <code>/etc/cvmfs/domain.d/eessi.io.local</code>.</p>
 <p><em>Step 3:</em> To actually reconfigure the variant symlinks, reload the updated CernVM-FS configuration using:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload<span class="w"> </span>software.eessi.io
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>cvmfs_config<span class="w"> </span>reload<span class="w"> </span>software.eessi.io
 </code></pre></div></p>
 <p><em>Step 4:</em> Run the helper script:</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/scripts/gpu_support/nvidia/link_nvidia_host_libraries.sh
@@ -6535,7 +6537,7 @@ Note that it is safe to re-run the script even if no driver updates were done: t
 <div class="admonition tip">
 <p class="admonition-title">Maintaining different driver versions for each EESSI version</p>
 <p>The standard approach for EESSI &gt;= 2025.06 means that the drivers may be found by any EESSI version. If you prefer to create one set of symlinks per EESSI
-version, instead of defining a single location through EESSI_NVIDIA_OVERRIDE_DEFAULT, you can define one per EESSI version, by setting EESSI_<VERSION>_NVIDIA_OVERRIDE.
+version, instead of defining a single location through <code>EESSI_NVIDIA_OVERRIDE_DEFAULT</code>, you can define one per EESSI version, by setting <code>EESSI_&lt;VERSION&gt;_NVIDIA_OVERRIDE</code>.
 For example:
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">"echo 'EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia' &gt;&gt; /etc/cvmfs/default.local"</span>
 </code></pre></div></p>
@@ -6564,7 +6566,11 @@ Then, change to the correct directory:</p>
 <li>For EESSI 2025.06 and later: <code>/cvmfs/software.eessi.io/versions/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib/nvidia</code>,</li>
 <li>For EESSI 2023.06: <code>/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib</code></li>
 </ul>
-<p>Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.</p>
+<p>Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
+You can use the command <code>ldconfig -p | grep -i cuda</code> to determine the absolute path of the libraries on your system.
+Sometimes, these libraries have versioned variants (e.g. with extension <code>.so.1</code>), which need to be linked as well.
+If a CUDA application fails at runtime due to a missing shared library, you can determine which one
+is missing with <code>compute-sanitizer --tool memcheck ./myapp</code> (requires <code>module load CUDA/&lt;cuda_version&gt;</code>).</p>
 <h4 id="nvidia_eessi_container">Runtime support when using EESSI in a container<a class="headerlink" href="#nvidia_eessi_container" title="Permanent link">&para;</a></h4>
 <p>If you are running your own <a href="https://apptainer.org/">Apptainer</a>/<a href="https://sylabs.io/singularity">Singularity</a> container,
 it is sufficient to use the <a href="https://apptainer.org/docs/user/latest/gpu.html#nvidia-gpus-cuda-standard"><code>--nv</code> option</a>
@@ -6592,6 +6598,8 @@ store the local installations of CUDA and cuDNN (the default location is <code>/
 <p>Third, run the helper script to install the CUDA and cuDNN versions that are used <em>in that version of EESSI</em>.</p>
 <div class="copy highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>/cvmfs/software.eessi.io/versions/<span class="si">${</span><span class="nv">EESSI_VERSION</span><span class="si">}</span>/scripts/gpu_support/nvidia/install_cuda_and_libraries.sh
 </code></pre></div>
+<p>The script may ask for additional command line options, e.g. to accept the terms of the EULA.
+Be sure to work in a clean environment and outside your local EasyBuild configuration.</p>
 <p>Note that this script uses EasyBuild in order to install CUDA and cuDNN - and EasyBuild does not allow running as root by default. 
 The recommended approach is to change ownership of the <code>host_injections</code> directory to a non-root user, and perform the installation with
 that user. Alternatively (but not recommended), you can override EasyBuild's behaviour and install as root by setting 
@@ -6617,10 +6625,12 @@ This means that from an end-user point of view, the EESSI CUDA module now 'just 
 <h3 id="gpu_cuda_testing">Testing the GPU support<a class="headerlink" href="#gpu_cuda_testing" title="Permanent link">&para;</a></h3>
 <p>The quickest way to test if software installations included in EESSI can access and use your GPU is to run the
 <code>deviceQuery</code> executable that is part of the <code>CUDA-Samples</code> module:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>module load CUDA-Samples
+<div class="copy highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>module<span class="w"> </span>load<span class="w"> </span>CUDA-Samples
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>deviceQuery
 </code></pre></div>
-If both are successful, you should see information about your GPU printed to your terminal.</p>
+If both are successful, you should see information about your GPU printed to your terminal.
+If the symlinks are not properly set up, Lmod will fail to find the CUDA runtime environment.
+If <code>libcuda.so</code> and its versioned variants are missing, <code>deviceQuery</code> will print <code>cudaGetDeviceCount returned 35</code>.</p>
 <h2 id="amd">Support for using AMD GPUs<a class="headerlink" href="#amd" title="Permanent link">&para;</a></h2>
 <p><em>(last update: May 2025)</em></p>
 <p>ROCm (Radeon Open Compute) support in EESSI is currently under development to enable GPU-accelerated computing on AMD hardware.</p>
@@ -6664,7 +6674,7 @@ If you have specific ROCm software requirements or insights to share, please <a 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 30, 2026 08:07:09 UTC">June 30, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 19, 2026 10:17:53 UTC">October 19, 2026</span>
   </span>
 
     
