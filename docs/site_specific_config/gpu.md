@@ -146,8 +146,6 @@ Third, run the helper script to install the CUDA and cuDNN versions that are use
 
 The script may ask for additional command line options, e.g. to accept the terms of the EULA.
 Be sure to work in a clean environment and outside your local EasyBuild configuration.
-If the installation is interrupted by the error message "Files missing CUDA PTX code",
-re-run the command with environment variable `EASYBUILD_CUDA_SANITY_CHECK_ACCEPT_MISSING_PTX=1` set.
 
 Note that this script uses EasyBuild in order to install CUDA and cuDNN - and EasyBuild does not allow running as root by default. 
 The recommended approach is to change ownership of the `host_injections` directory to a non-root user, and perform the installation with
