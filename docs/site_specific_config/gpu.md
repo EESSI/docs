@@ -100,7 +100,7 @@ Then, change to the correct directory:
 - For EESSI 2023.06: `/cvmfs/software.eessi.io/host_injections/${EESSI_VERSION}/compat/${EESSI_OS_TYPE}/${EESSI_CPU_FAMILY}/lib`
 
 Then, manually create the symlinks for each of the files in the aforementioned list (if they exist on your system) to the current directory.
-You can use the command `locate libcuda.so` to determine the absolute path of the libraries on your system.
+You can use the command `ldconfig -p | grep -i cuda` to determine the absolute path of the libraries on your system.
 Sometimes, these libraries have versioned variants (e.g. with extension `.so.1`), which need to be linked as well.
 If a CUDA application fails at runtime due to a missing shared library, you can determine which one
 is missing with `compute-sanitizer --tool memcheck ./myapp` (requires `module load CUDA/<cuda_version>`).
