@@ -425,6 +425,10 @@
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/DCMTK/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/DIAMOND/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
@@ -1741,6 +1745,10 @@
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/SymEngine/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Szip/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
@@ -2041,6 +2049,10 @@
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/bacio/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/basemap/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
@@ -2313,6 +2325,10 @@
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/g2clib/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/gRPC/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
@@ -2494,6 +2510,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/iodata/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/ip/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
@@ -3153,6 +3173,10 @@
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/poppler/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/pre-commit/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
@@ -3602,6 +3626,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/xprop/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/xproto/</loc>
          <lastmod>2026-10-20</lastmod>
     </url>
     <url>
