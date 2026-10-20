@@ -36,22 +36,22 @@ in a predictable location that is searched by the EESSI runtime linker.
 
 *Step 1:* [initialize a version of EESSI](../using_eessi/setting_up_environment.md).
 
-*Step 2 (EESSI 2025.06 and newer, mandatory):* define the `EESSI_NVIDIA_OVERRIDE_DEFAULT` variable in your local CernVM-FS configuration to point to a directory where you want
-to store the symlinks to the drivers. For example, to store these under `/opt/eessi/nvidia`, one would run:
+*Step 2 (EESSI 2025.06 and newer, mandatory):* define the `EESSI_NVIDIA_OVERRIDE_DEFAULT` variable in your local EESSI CernVM-FS configuration file
+to point to a directory where you want to store the symlinks to the drivers. For example, to store these under `/opt/eessi/nvidia`, one would run:
 
 ```{ .bash .copy }
-sudo bash -c "echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' >> /etc/cvmfs/default.local"
+sudo bash -c "echo 'EESSI_NVIDIA_OVERRIDE_DEFAULT=/opt/eessi/nvidia' >> /etc/cvmfs/domain.d/eessi.io.local"
 ```
 
-Keep in mind that values stored in `/etc/cvmfs/default.local` can be overridden by values stored in `/etc/cvmfs/domain.d/eessi.io.local`.
+Keep in mind that values stored in `/etc/cvmfs/domain.d/eessi.io.local` override values stored in `/etc/cvmfs/default.local`.
 
 *Step 2 (EESSI 2023.06, optional):* Change the location in which the symlinks will end up by configuring `EESSI_HOST_INJECTIONS` explicitly (default: `/opt/eessi`):
 
 ```{ .bash .copy }
-sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' >> /etc/cvmfs/default.local"
+sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/desired/path/to/host/injections' >> /etc/cvmfs/domain.d/eessi.io.local"
 ```
 
-Keep in mind that values stored in `/etc/cvmfs/default.local` can be overridden by values stored in `/etc/cvmfs/domain.d/eessi.io.local`.
+Again, keep in mind that values stored in `/etc/cvmfs/domain.d/eessi.io.local` override values stored in `/etc/cvmfs/default.local`.
 
 *Step 3:* To actually reconfigure the variant symlinks, reload the updated CernVM-FS configuration using:
 ```{ .bash .copy }
@@ -73,12 +73,12 @@ sudo cvmfs_config reload software.eessi.io
     version, instead of defining a single location through `EESSI_NVIDIA_OVERRIDE_DEFAULT`, you can define one per EESSI version, by setting `EESSI_<VERSION>_NVIDIA_OVERRIDE`.
     For example:
     ```{ .bash .copy}
-    sudo bash -c "echo 'EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia' >> /etc/cvmfs/default.local"
+    sudo bash -c "echo 'EESSI_202506_NVIDIA_OVERRIDE=/opt/eessi/2025.06/nvidia' >> /etc/cvmfs/domain.d/eessi.io.local"
     ```
 
 !!! tip "Use a EESSI-specific CernVM-FS configuration file to configure the variant symlinks"
-    Instead of using `/etc/cvmfs/default.local` you can also put the symlink configuration in a local configuration file that is specific to the `software.eessi.io` repository
-    or to the `eessi.io` domain.
+    Instead of putting EESSI-specific variables in `/etc/cvmfs/default.local`, it is recommended to add them to a local configuration file
+    that is specific to the `software.eessi.io` repository or to the `eessi.io` domain.
     For the first you can use `/etc/cvmfs/config.d/software.eessi.io.local`, while for the latter you can use `/etc/cvmfs/domain.d/eessi.io.local`.
     For more details about the different configuration files, 
     see [the configuration hierarchy section of our CernVM-FS tutorial](https://www.eessi.io/docs/training-events/2025/tutorial-best-practices-cvmfs-hpc/access/client/#configuration_hierarchy).
@@ -135,7 +135,7 @@ Second, (optionally) define the `EESSI_HOST_INJECTIONS` variable in your local C
 store the local installations of CUDA and cuDNN (the default location is `/opt/eessi`):
 
 ```{ .bash .copy }
-sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/my/custom/prefix' >> /etc/cvmfs/default.local"
+sudo bash -c "echo 'EESSI_HOST_INJECTIONS=/my/custom/prefix' >> /etc/cvmfs/domain.d/eessi.io.local"
 ```
 
 Third, run the helper script to install the CUDA and cuDNN versions that are used _in that version of EESSI_.
