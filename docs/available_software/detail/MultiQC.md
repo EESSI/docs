@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''1.14'']'
+  softwareVersion: '[''1.28'', ''1.14'']'
   url: https://multiqc.info
 ---
 # MultiQC
@@ -43,6 +43,7 @@ Aggregate results from bioinformatics analyses across many samples into a single
 
 |MultiQC version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|1.28|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`MultiQC/1.28-gfbf-2024a`|
 |1.14|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`MultiQC/1.14-foss-2022b`|
 
 ## Extensions
@@ -55,7 +56,7 @@ Overview of extensions included in MultiQC installations
 
 |`coloredlogs` version|MultiQC modules that include it|
 | --- | --- |
-|15.0.1|`MultiQC/1.14-foss-2022b`|
+|15.0.1|`MultiQC/1.28-gfbf-2024a`<br/>`MultiQC/1.14-foss-2022b`|
 
 ### colormath
 
@@ -63,6 +64,13 @@ Overview of extensions included in MultiQC installations
 |`colormath` version|MultiQC modules that include it|
 | --- | --- |
 |3.0.0|`MultiQC/1.14-foss-2022b`|
+
+### colormath2
+
+
+|`colormath2` version|MultiQC modules that include it|
+| --- | --- |
+|3.0.3|`MultiQC/1.28-gfbf-2024a`|
 
 ### commonmark
 
@@ -76,7 +84,14 @@ Overview of extensions included in MultiQC installations
 
 |`humanfriendly` version|MultiQC modules that include it|
 | --- | --- |
-|10.0|`MultiQC/1.14-foss-2022b`|
+|10.0|`MultiQC/1.28-gfbf-2024a`<br/>`MultiQC/1.14-foss-2022b`|
+
+### humanize
+
+
+|`humanize` version|MultiQC modules that include it|
+| --- | --- |
+|4.12.2|`MultiQC/1.28-gfbf-2024a`|
 
 ### lzstring
 
@@ -91,6 +106,13 @@ Overview of extensions included in MultiQC installations
 |`Markdown` version|MultiQC modules that include it|
 | --- | --- |
 |3.4.1|`MultiQC/1.14-foss-2022b`|
+
+### markdown
+
+
+|`markdown` version|MultiQC modules that include it|
+| --- | --- |
+|3.7|`MultiQC/1.28-gfbf-2024a`|
 
 ### markdown-it-py
 
@@ -111,7 +133,22 @@ Overview of extensions included in MultiQC installations
 
 |`multiqc` version|MultiQC modules that include it|
 | --- | --- |
+|1.28|`MultiQC/1.28-gfbf-2024a`|
 |1.14|`MultiQC/1.14-foss-2022b`|
+
+### natsort
+
+
+|`natsort` version|MultiQC modules that include it|
+| --- | --- |
+|8.4.0|`MultiQC/1.28-gfbf-2024a`|
+
+### pyaml_env
+
+
+|`pyaml_env` version|MultiQC modules that include it|
+| --- | --- |
+|1.2.2|`MultiQC/1.28-gfbf-2024a`|
 
 ### Pygments
 
@@ -119,6 +156,13 @@ Overview of extensions included in MultiQC installations
 |`Pygments` version|MultiQC modules that include it|
 | --- | --- |
 |2.14.0|`MultiQC/1.14-foss-2022b`|
+
+### python_dotenv
+
+
+|`python_dotenv` version|MultiQC modules that include it|
+| --- | --- |
+|1.1.0|`MultiQC/1.28-gfbf-2024a`|
 
 ### rich
 
@@ -139,4 +183,12 @@ Overview of extensions included in MultiQC installations
 
 |`spectra` version|MultiQC modules that include it|
 | --- | --- |
+|0.1.0|`MultiQC/1.28-gfbf-2024a`|
 |0.0.11|`MultiQC/1.14-foss-2022b`|
+
+### typeguard
+
+
+|`typeguard` version|MultiQC modules that include it|
+| --- | --- |
+|4.4.2|`MultiQC/1.28-gfbf-2024a`|
