@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''2.4.2'']'
+  softwareVersion: '[''2.9.0'', ''2.4.2'']'
   url: https://www.mdanalysis.org/
 ---
 # MDAnalysis
@@ -41,6 +41,7 @@ simulations in many popular formats.
 
 |MDAnalysis version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|2.9.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`MDAnalysis/2.9.0-foss-2025a`|
 |2.4.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`MDAnalysis/2.4.2-foss-2022b`|
 
 ## Extensions
@@ -67,6 +68,7 @@ Overview of extensions included in MDAnalysis installations
 
 |`GridDataFormats` version|MDAnalysis modules that include it|
 | --- | --- |
+|1.0.2|`MDAnalysis/2.9.0-foss-2025a`|
 |1.0.1|`MDAnalysis/2.4.2-foss-2022b`|
 
 ### gsd
@@ -76,6 +78,20 @@ Overview of extensions included in MDAnalysis installations
 | --- | --- |
 |2.8.0|`MDAnalysis/2.4.2-foss-2022b`|
 
+### mda_xdrlib
+
+
+|`mda_xdrlib` version|MDAnalysis modules that include it|
+| --- | --- |
+|0.2.0|`MDAnalysis/2.9.0-foss-2025a`|
+
+### mdahole2
+
+
+|`mdahole2` version|MDAnalysis modules that include it|
+| --- | --- |
+|0.5.0|`MDAnalysis/2.9.0-foss-2025a`|
+
 ### MDAnalysis
 
 
@@ -83,12 +99,19 @@ Overview of extensions included in MDAnalysis installations
 | --- | --- |
 |2.4.2|`MDAnalysis/2.4.2-foss-2022b`|
 
+### mdanalysis
+
+
+|`mdanalysis` version|MDAnalysis modules that include it|
+| --- | --- |
+|2.9.0|`MDAnalysis/2.9.0-foss-2025a`|
+
 ### mmtf-python
 
 
 |`mmtf-python` version|MDAnalysis modules that include it|
 | --- | --- |
-|1.1.3|`MDAnalysis/2.4.2-foss-2022b`|
+|1.1.3|`MDAnalysis/2.9.0-foss-2025a`<br/>`MDAnalysis/2.4.2-foss-2022b`|
 
 ### mrcfile
 
@@ -103,3 +126,24 @@ Overview of extensions included in MDAnalysis installations
 |`msgpack` version|MDAnalysis modules that include it|
 | --- | --- |
 |1.0.5|`MDAnalysis/2.4.2-foss-2022b`|
+
+### pathsimanalysis
+
+
+|`pathsimanalysis` version|MDAnalysis modules that include it|
+| --- | --- |
+|1.2.0|`MDAnalysis/2.9.0-foss-2025a`|
+
+### tidynamics
+
+
+|`tidynamics` version|MDAnalysis modules that include it|
+| --- | --- |
+|1.1.2|`MDAnalysis/2.9.0-foss-2025a`|
+
+### waterdynamics
+
+
+|`waterdynamics` version|MDAnalysis modules that include it|
+| --- | --- |
+|1.2.0|`MDAnalysis/2.9.0-foss-2025a`|
