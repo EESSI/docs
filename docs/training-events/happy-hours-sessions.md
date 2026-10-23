@@ -12,11 +12,11 @@ Each series will focus on a specific main topic over several sessions, giving pa
 
 🧭 *Where?* [Online, via Zoom **(click here to join!)**](https://uib.zoom.us/j/61528767539?pwd=03hjbZwXvXFkhG6BtSvJZrQvzKwTac.1)
 
-⏰ *When?* **Mondays, 14:00-15:00 CE(S)T**
+⏰ *When?* **Monthly, 13:00-14:00 CE(S)T**
 
 💬 *Who should join?* Everyone interested in EESSI.
 
-Let's make Mondays productive and collaborative - see you at the EESSI Happy Hour!
+Let's have productive and collaborative sessions - see you at the EESSI Happy Hour!
 
 All sessions will be recorded. Recordings, slides, and materials used will be made publicly available shortly after each session.
 
@@ -32,7 +32,13 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ---
 
 !!! note "Schedule update! :rotating_light:"  
-    Monday, 29 June 2026 will be the final EESSI Happy Hour before the summer break.
+    We are trying out a new **monthly** schedule! Going forward, we aim to host EESSI Happy Hours on weeks when 
+    other community meetings take place. Come try out our new sessions!
+
+### 💡 **Next session**: EESSI at the EuroHPC User Days 2026 Dublin
+### Topic Series: Happy Hour Restart!
+🗓️ Schedule
+#### Friday 30 October 2026, 13:00-14:00 CET
 
 ---
 
