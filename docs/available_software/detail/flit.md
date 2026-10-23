@@ -54,12 +54,7 @@ Overview of extensions included in flit installations
 
 |`certifi` version|flit modules that include it|
 | --- | --- |
-|2026.6.17|`flit/3.12.0-GCCcore-15.2.0`|
-|2025.7.14|`flit/3.12.0-GCCcore-14.3.0`|
-|2025.1.31|`flit/3.10.1-GCCcore-14.2.0`|
-|2024.6.2|`flit/3.9.0-GCCcore-13.3.0`|
-|2023.7.22|`flit/3.9.0-GCCcore-13.2.0`|
-|2023.5.7|`flit/3.9.0-GCCcore-12.3.0`|
+|2026.10.19|`flit/3.12.0-GCCcore-15.2.0`<br/>`flit/3.12.0-GCCcore-14.3.0`<br/>`flit/3.10.1-GCCcore-14.2.0`<br/>`flit/3.9.0-GCCcore-13.3.0`<br/>`flit/3.9.0-GCCcore-13.2.0`<br/>`flit/3.9.0-GCCcore-12.3.0`|
 
 ### charset-normalizer
 

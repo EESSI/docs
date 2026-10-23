@@ -100,13 +100,7 @@ Overview of extensions included in poetry installations
 
 |`certifi` version|poetry modules that include it|
 | --- | --- |
-|2026.2.25|`poetry/2.3.4-GCCcore-15.2.0`|
-|2025.7.14|`poetry/2.1.3-GCCcore-14.3.0`|
-|2025.1.31|`poetry/2.1.2-GCCcore-14.2.0`|
-|2024.6.2|`poetry/1.8.3-GCCcore-13.3.0`|
-|2023.11.17|`poetry/1.7.1-GCCcore-12.3.0`|
-|2023.7.22|`poetry/1.6.1-GCCcore-13.2.0`|
-|2023.5.7|`poetry/1.5.1-GCCcore-12.3.0`|
+|2026.10.19|`poetry/2.3.4-GCCcore-15.2.0`<br/>`poetry/2.1.3-GCCcore-14.3.0`<br/>`poetry/2.1.2-GCCcore-14.2.0`<br/>`poetry/1.8.3-GCCcore-13.3.0`<br/>`poetry/1.7.1-GCCcore-12.3.0`<br/>`poetry/1.6.1-GCCcore-13.2.0`<br/>`poetry/1.5.1-GCCcore-12.3.0`|
 
 ### charset-normalizer
 

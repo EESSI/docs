@@ -57,5 +57,5 @@ Overview of extensions included in OpenSSL installations
 
 |`OpenSSL` version|OpenSSL modules that include it|
 | --- | --- |
-|3.2.1|`OpenSSL/3`|
+|3.5.7|`OpenSSL/3`|
 |1.1.1w|`OpenSSL/1.1`|
