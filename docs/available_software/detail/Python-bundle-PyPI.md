@@ -224,12 +224,7 @@ Overview of extensions included in Python-bundle-PyPI installations
 
 |`certifi` version|Python-bundle-PyPI modules that include it|
 | --- | --- |
-|2026.2.25|`Python-bundle-PyPI/2026.04-GCCcore-15.2.0`|
-|2025.7.14|`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`|
-|2025.4.26|`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`|
-|2024.6.2|`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`|
-|2023.7.22|`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`|
-|2023.5.7|`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
+|2026.10.19|`Python-bundle-PyPI/2026.04-GCCcore-15.2.0`<br/>`Python-bundle-PyPI/2025.07-GCCcore-14.3.0`<br/>`Python-bundle-PyPI/2025.04-GCCcore-14.2.0`<br/>`Python-bundle-PyPI/2024.06-GCCcore-13.3.0`<br/>`Python-bundle-PyPI/2023.10-GCCcore-13.2.0`<br/>`Python-bundle-PyPI/2023.06-GCCcore-12.3.0`|
 
 ### cffi
 

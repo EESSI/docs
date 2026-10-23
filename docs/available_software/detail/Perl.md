@@ -47,6 +47,8 @@ This is a minimal build without any modules. Should only be used for build depen
 |Perl version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
 |5.42.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`Perl/5.42.0-GCCcore-15.2.0`|
+|5.42.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Perl/5.42.0`|
+|5.42.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`Perl/5.42.0`|
 |5.40.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Perl/5.40.2-GCCcore-14.3.0`|
 |5.40.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Perl/5.40.0-GCCcore-14.2.0`|
 |5.38.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Perl/5.38.2-GCCcore-13.3.0`|
@@ -221,7 +223,7 @@ Overview of extensions included in Perl installations
 
 |`Carp::Heavy` version|Perl modules that include it|
 | --- | --- |
-|1.50|`Perl/5.36.0-GCCcore-12.2.0`|
+|1.50|`Perl/5.42.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
 
 ### Class::Accessor
 
@@ -846,7 +848,7 @@ Overview of extensions included in Perl installations
 
 |`File::Path` version|Perl modules that include it|
 | --- | --- |
-|2.18|`Perl/5.42.0-GCCcore-15.2.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|2.18|`Perl/5.42.0-GCCcore-15.2.0`<br/>`Perl/5.42.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
 
 ### File::pushd
 
@@ -902,7 +904,7 @@ Overview of extensions included in Perl installations
 
 |`File::Spec` version|Perl modules that include it|
 | --- | --- |
-|3.75|`Perl/5.42.0-GCCcore-15.2.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|3.75|`Perl/5.42.0-GCCcore-15.2.0`<br/>`Perl/5.42.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
 
 ### File::Temp
 
@@ -930,7 +932,7 @@ Overview of extensions included in Perl installations
 
 |`Getopt::Long` version|Perl modules that include it|
 | --- | --- |
-|2.58|`Perl/5.42.0-GCCcore-15.2.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`|
+|2.58|`Perl/5.42.0-GCCcore-15.2.0`<br/>`Perl/5.42.0`<br/>`Perl/5.40.2-GCCcore-14.3.0`<br/>`Perl/5.40.0-GCCcore-14.2.0`|
 |2.57|`Perl/5.38.2-GCCcore-13.3.0`|
 |2.54|`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`|
 |2.52|`Perl/5.36.0-GCCcore-12.2.0`|
@@ -1116,7 +1118,7 @@ Overview of extensions included in Perl installations
 |`IO::File` version|Perl modules that include it|
 | --- | --- |
 |1.55|`Perl/5.38.2-GCCcore-13.3.0`|
-|1.51|`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`|
+|1.51|`Perl/5.42.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`|
 
 ### IO::HTML
 
@@ -2495,7 +2497,7 @@ Overview of extensions included in Perl installations
 
 |`Thread::Queue` version|Perl modules that include it|
 | --- | --- |
-|3.13|`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
+|3.13|`Perl/5.42.0`<br/>`Perl/5.38.2-GCCcore-13.3.0`<br/>`Perl/5.38.0-GCCcore-13.2.0`<br/>`Perl/5.38.0`<br/>`Perl/5.36.1-GCCcore-12.3.0`<br/>`Perl/5.36.0-GCCcore-12.2.0`|
 
 ### threads
 
