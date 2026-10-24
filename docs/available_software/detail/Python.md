@@ -151,7 +151,7 @@ Overview of extensions included in Python installations
 
 |`certifi` version|Python modules that include it|
 | --- | --- |
-|2022.9.24|`Python/3.10.8-GCCcore-12.2.0`|
+|2026.10.19|`Python/3.10.8-GCCcore-12.2.0`|
 
 ### cffi
 
