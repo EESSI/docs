@@ -6,7 +6,7 @@ _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
 The European Environment for Scientific Software Installations [EESSI](https://eessi.io) comes to the rescue!
 
-Join us for EESSI Happy Hour, an informal, weekly online session to explore and discuss key EESSI topics and updates with the community.
+Join us for EESSI Happy Hour, an informal, ~~weekly~~ **monthly**  online session to explore and discuss key EESSI topics and updates with the community.
 
 Each series will focus on a specific main topic over several sessions, giving participants the opportunity to ask questions, get hands-on guidance, and share experiences.
 
