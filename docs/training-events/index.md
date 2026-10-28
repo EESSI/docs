@@ -3,7 +3,7 @@
 ## Upcoming events (2026)
 
 * [*EESSI Hackathon @ EuroHPC User Days 2026*](2026/hackathon-eurohpc-user-days.md) (hybrid event, 25 September 2026)
-* [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** Monday, starting 12 January 2026)
+* [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** month, starting 30 October 2026)
 
 ### Past events (2026)
 
@@ -14,6 +14,7 @@
     * [**Using EESSI for Continuous Integration** *(11 May 2026)*](2026/webinar-series-2026Q2.md#using-eessi-for-continuous-integration-ci)
     * [**Introduction to CernVM-FS** *(18 May 2026)*](2026/webinar-series-2026Q2.md#introduction-to-cernvm-fs)
     * [**Using EESSI as a base for a central software stack** (1 June 2026)](2026/webinar-series-2026Q2.md#using-eessi-as-a-base-for-a-central-software-stack)
+* [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** Monday, starting 12 January 2026)
 
 ### Past events (2025)
 
