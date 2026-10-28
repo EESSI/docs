@@ -106,7 +106,18 @@ This does not imply exclusion of other platforms, but reflects the project's pri
 
 # EESSI Team Policies
 
-There are no Team Policies yet.
+## 1. Builders' Policies
+
+- Do not give AI assistants / agents permissions that allows them to command the build bot (i.e. do not provide them access to tokens that can post 'bot:build' comments), as this is considered a potential security risk.
+
+## 2. Deployers' Policies
+
+- Do not give AI assistants / agents permissions that allows them to set the `bot:deploy` label (i.e. do not provide them access to tokens that can set labels), as this is considered a potential security risk.
+
+## 3. Ingesters' Policies
+
+- Do not give AI assistants / agents permissions that allows them to merge pull requests on the EESSI staging repositories (i.e. do not provide them access to tokens that can merge PRs), as this is considered a potential security risk.
 
 # Changelog
 - 04 August 2025: First version published
+- 27 October 2026: Added Team Policies to prevent AI assistants / agents can interact with the bot
