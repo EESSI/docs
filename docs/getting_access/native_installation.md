@@ -74,6 +74,14 @@ The good news is that all of this only requires a handful commands :astonished: 
     sudo bash -c "echo 'CVMFS_CACHE_BASE=<some other directory for the cache>' >> /etc/cvmfs/default.local"
     ```
 
+!!! Note
+    If the EESSI CernVM-FS doesn't get mounted, restart the automounter:
+    ``` { .bash .copy }
+    sudo bash -c "echo '+dir:/etc/auto.master.d' >> /etc/auto.master"
+    sudo systemctl restart autofs
+    sudo cvmfs_config chksetup
+    ```
+
 !!! Warning
     When using the default setting `CVMFS_CLIENT_PROFILE="single"`,  `CVMFS_HTTP_PROXY` is set to `auto;DIRECT`. In case you have setup with a private Stratum 1 with no proxy, this can lead to unintended requests to Web Proxy Auto Discovery (WPAD) infrastructure before falling back to direct connections. Removing the `auto` ensures direct connections without unnecessary WPAD requests.
     ``` { .bash .copy }
