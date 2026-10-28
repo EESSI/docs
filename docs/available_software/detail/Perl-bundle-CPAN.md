@@ -1757,9 +1757,7 @@ Overview of extensions included in Perl-bundle-CPAN installations
 
 |`Mozilla::CA` version|Perl-bundle-CPAN modules that include it|
 | --- | --- |
-|20240924|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`|
-|20240313|`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`|
-|20221114|`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
+|20261020|`Perl-bundle-CPAN/5.40.0-GCCcore-14.2.0`<br/>`Perl-bundle-CPAN/5.38.2-GCCcore-13.3.0`<br/>`Perl-bundle-CPAN/5.36.1-GCCcore-12.3.0`|
 
 ### MRO::Compat
 
