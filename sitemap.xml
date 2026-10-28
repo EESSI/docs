@@ -105,6 +105,10 @@
          <lastmod>2026-10-28</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/AITW-material_optimization/</loc>
+         <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/AITW-microstructures/</loc>
          <lastmod>2026-10-28</lastmod>
     </url>
@@ -118,6 +122,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/AITW-viscosity/</loc>
+         <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/AITW_infiltration_surrogate/</loc>
          <lastmod>2026-10-28</lastmod>
     </url>
     <url>
@@ -1685,6 +1693,10 @@
          <lastmod>2026-10-28</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Safetensors/</loc>
+         <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Salmon/</loc>
          <lastmod>2026-10-28</lastmod>
     </url>
@@ -1798,6 +1810,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/Tombo/</loc>
+         <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/Transformers/</loc>
          <lastmod>2026-10-28</lastmod>
     </url>
     <url>
@@ -1930,6 +1946,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/XCrySDen/</loc>
+         <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/XGBoost/</loc>
          <lastmod>2026-10-28</lastmod>
     </url>
     <url>
@@ -3518,6 +3538,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/toil-cwl/</loc>
+         <lastmod>2026-10-28</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/tokenizers/</loc>
          <lastmod>2026-10-28</lastmod>
     </url>
     <url>
