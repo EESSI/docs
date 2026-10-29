@@ -95,7 +95,7 @@ nav:
     - Policies: governance/policies.md
     - Code of Conduct: governance/code_of_conduct.md
     - Terms of Use: governance/terms_of_use.md
-    - Current Steering Committee: governance/steering_committee.md
+    - Steering Committee: governance/steering_committee.md
   - Blog: blog/index.md
 plugins:
   - blog:
