@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''6.3.1'', ''5.24.1'', ''5.16.0'']'
+  softwareVersion: '[''6.5.0'', ''6.3.1'', ''5.24.1'', ''5.16.0'']'
   url: https://plot.ly/python
 ---
 # plotly.py
@@ -37,6 +37,7 @@ An open-source, interactive graphing library for Python
 
 |plotly.py version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|6.5.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`plotly.py/6.5.0-GCCcore-14.3.0`|
 |6.3.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`plotly.py/6.3.1-GCCcore-14.2.0`|
 |5.24.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`plotly.py/5.24.1-GCCcore-13.3.0`|
 |5.16.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`plotly.py/5.16.0-GCCcore-12.3.0`|
@@ -51,6 +52,7 @@ Overview of extensions included in plotly.py installations
 
 |`narwhals` version|plotly.py modules that include it|
 | --- | --- |
+|2.12.0|`plotly.py/6.5.0-GCCcore-14.3.0`|
 |2.0.1|`plotly.py/6.3.1-GCCcore-14.2.0`|
 
 ### packaging
@@ -66,6 +68,7 @@ Overview of extensions included in plotly.py installations
 
 |`plotly` version|plotly.py modules that include it|
 | --- | --- |
+|6.5.0|`plotly.py/6.5.0-GCCcore-14.3.0`|
 |6.3.1|`plotly.py/6.3.1-GCCcore-14.2.0`|
 |5.24.1|`plotly.py/5.24.1-GCCcore-13.3.0`|
 |5.16.0|`plotly.py/5.16.0-GCCcore-12.3.0`|
@@ -75,6 +78,6 @@ Overview of extensions included in plotly.py installations
 
 |`tenacity` version|plotly.py modules that include it|
 | --- | --- |
-|9.1.2|`plotly.py/6.3.1-GCCcore-14.2.0`|
+|9.1.2|`plotly.py/6.5.0-GCCcore-14.3.0`<br/>`plotly.py/6.3.1-GCCcore-14.2.0`|
 |9.0.0|`plotly.py/5.24.1-GCCcore-13.3.0`|
 |8.2.3|`plotly.py/5.16.0-GCCcore-12.3.0`|

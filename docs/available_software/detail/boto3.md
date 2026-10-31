@@ -26,7 +26,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''1.43.34'', ''1.28.70'']'
+  softwareVersion: '[''1.43.34'', ''1.39.8'', ''1.28.70'']'
   url: https://github.com/boto/boto3
 ---
 # boto3
@@ -44,6 +44,7 @@ use of services like Amazon S3 and Amazon EC2.
 |boto3 version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
 |1.43.34|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`boto3/1.43.34-GCCcore-15.2.0`|
+|1.39.8|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`boto3/1.39.8-GCCcore-14.3.0`|
 |1.28.70|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`boto3/1.28.70-GCCcore-12.3.0`|
 
 ## Extensions
@@ -57,6 +58,7 @@ Overview of extensions included in boto3 installations
 |`boto3` version|boto3 modules that include it|
 | --- | --- |
 |1.43.34|`boto3/1.43.34-GCCcore-15.2.0`|
+|1.39.8|`boto3/1.39.8-GCCcore-14.3.0`|
 |1.28.70|`boto3/1.28.70-GCCcore-12.3.0`|
 
 ### botocore
@@ -65,6 +67,7 @@ Overview of extensions included in boto3 installations
 |`botocore` version|boto3 modules that include it|
 | --- | --- |
 |1.43.34|`boto3/1.43.34-GCCcore-15.2.0`|
+|1.39.8|`boto3/1.39.8-GCCcore-14.3.0`|
 |1.31.70|`boto3/1.28.70-GCCcore-12.3.0`|
 
 ### jmespath
@@ -73,7 +76,7 @@ Overview of extensions included in boto3 installations
 |`jmespath` version|boto3 modules that include it|
 | --- | --- |
 |1.1.0|`boto3/1.43.34-GCCcore-15.2.0`|
-|1.0.1|`boto3/1.28.70-GCCcore-12.3.0`|
+|1.0.1|`boto3/1.39.8-GCCcore-14.3.0`<br/>`boto3/1.28.70-GCCcore-12.3.0`|
 
 ### s3transfer
 
@@ -81,4 +84,5 @@ Overview of extensions included in boto3 installations
 |`s3transfer` version|boto3 modules that include it|
 | --- | --- |
 |0.19.0|`boto3/1.43.34-GCCcore-15.2.0`|
+|0.13.1|`boto3/1.39.8-GCCcore-14.3.0`|
 |0.7.0|`boto3/1.28.70-GCCcore-12.3.0`|
