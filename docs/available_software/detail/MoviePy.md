@@ -40,6 +40,7 @@ MoviePy (full documentation) is a Python library for video editing: cutting, con
 
 |MoviePy version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|2.2.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`MoviePy/2.2.1-foss-2025b`|
 |2.2.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`MoviePy/2.2.1-foss-2025a`|
 
 ## Extensions
@@ -52,25 +53,25 @@ Overview of extensions included in MoviePy installations
 
 |`imageio_ffmpeg` version|MoviePy modules that include it|
 | --- | --- |
-|0.6.0|`MoviePy/2.2.1-foss-2025a`|
+|0.6.0|`MoviePy/2.2.1-foss-2025b`<br/>`MoviePy/2.2.1-foss-2025a`|
 
 ### moviepy
 
 
 |`moviepy` version|MoviePy modules that include it|
 | --- | --- |
-|2.2.1|`MoviePy/2.2.1-foss-2025a`|
+|2.2.1|`MoviePy/2.2.1-foss-2025b`<br/>`MoviePy/2.2.1-foss-2025a`|
 
 ### proglog
 
 
 |`proglog` version|MoviePy modules that include it|
 | --- | --- |
-|0.1.12|`MoviePy/2.2.1-foss-2025a`|
+|0.1.12|`MoviePy/2.2.1-foss-2025b`<br/>`MoviePy/2.2.1-foss-2025a`|
 
 ### python_dotenv
 
 
 |`python_dotenv` version|MoviePy modules that include it|
 | --- | --- |
-|1.2.1|`MoviePy/2.2.1-foss-2025a`|
+|1.2.1|`MoviePy/2.2.1-foss-2025b`<br/>`MoviePy/2.2.1-foss-2025a`|

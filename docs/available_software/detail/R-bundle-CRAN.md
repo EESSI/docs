@@ -7213,7 +7213,7 @@ Overview of extensions included in R-bundle-CRAN installations
 |`RcppNumerical` version|R-bundle-CRAN modules that include it|
 | --- | --- |
 |0.7-0|`R-bundle-CRAN/2026.07-foss-2026.1`|
-|0.6-0|`R-bundle-CRAN/2025.10-foss-2025a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
+|0.6-0|`R-bundle-CRAN/2025.11-foss-2025b`<br/>`R-bundle-CRAN/2025.10-foss-2025a`<br/>`R-bundle-CRAN/2024.11-foss-2024a`<br/>`R-bundle-CRAN/2024.06-foss-2023b`<br/>`R-bundle-CRAN/2023.12-foss-2023a`|
 
 ### RcppParallel
 
