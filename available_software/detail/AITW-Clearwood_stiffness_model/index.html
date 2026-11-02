@@ -1,0 +1,4930 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://eessi.github.io/docs/available_software/detail/AITW-Clearwood_stiffness_model/" rel="canonical"/>
+<link href="../../../feed_rss_created.xml" rel="alternate" title="RSS feed" type="application/rss+xml"/>
+<link href="../../../feed_rss_updated.xml" rel="alternate" title="RSS feed of updated content" type="application/rss+xml"/>
+<link href="../../../img/logos/EESSI.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.8.0" name="generator"/>
+<title>AITW-Clearwood_stiffness_model - European Environment for Scientific Software Installations (EESSI)</title>
+<link href="../../../assets/stylesheets/main.57a0d79d.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../assets/_mkdocstrings.css" rel="stylesheet"/>
+<link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<link href="../../css/software.css" rel="stylesheet"/>
+<link href="https://cdn.datatables.net/2.2.2/css/dataTables.semanticui.cssoftwares" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "applicationCategory": "DeveloperApplication",
+  "description": "This repository contains a neural network model for clearwood unit cell analysis.",
+  "license": "Not confirmed",
+  "name": "AITW-Clearwood_stiffness_model",
+  "offers": {
+    "@type": "Offer",
+    "price": 0
+  },
+  "operatingSystem": "LINUX",
+  "review": {
+    "@type": "Review",
+    "author": {
+      "@type": "Organization",
+      "name": "EESSI"
+    },
+    "reviewBody": "Application has been successfully made available on all architectures supported by EESSI",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 5
+    }
+  },
+  "softwareRequirements": "See https://www.eessi.io/docs/ for how to make EESSI available on your system",
+  "softwareVersion": "['0.1.0']",
+  "url": "https://github.com/AI-TranspWood/Clearwood_share"
+}</script></head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#aitw-clearwood_stiffness_model">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="European Environment for Scientific Software Installations (EESSI)" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="European Environment for Scientific Software Installations (EESSI)">
+<img alt="logo" src="../../../img/logos/EESSI.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            European Environment for Scientific Software Installations (EESSI)
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              AITW-Clearwood_stiffness_model
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/EESSI" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="European Environment for Scientific Software Installations (EESSI)" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="European Environment for Scientific Software Installations (EESSI)">
+<img alt="logo" src="../../../img/logos/EESSI.png"/>
+</a>
+    European Environment for Scientific Software Installations (EESSI)
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/EESSI" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    EESSI @ GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Design
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Design
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../overview/">
+<span class="md-ellipsis">
+    
+  
+    Project overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../filesystem_layer/">
+<span class="md-ellipsis">
+    
+  
+    Filesystem layer
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../compatibility_layer/">
+<span class="md-ellipsis">
+    
+  
+    Compatibility layer
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../software_layer/">
+<span class="md-ellipsis">
+    
+  
+    Software layer
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../software_layer/cpu_targets/">
+<span class="md-ellipsis">
+    
+  
+    Supported CPU targets
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../software_layer/gpu_targets/">
+<span class="md-ellipsis">
+    
+  
+    Supported GPU targets
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Available software
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Available software
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+<span class="md-ellipsis">
+    
+  
+    Production
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../available_software_riscv/">
+<span class="md-ellipsis">
+    
+  
+    RISC-V
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Repositories
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Repositories
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Production
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Production
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../repositories/software.eessi.io/">
+<span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../repositories/versions/">
+<span class="md-ellipsis">
+    
+  
+    Versions
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../repositories/dev.eessi.io-riscv/">
+<span class="md-ellipsis">
+    
+  
+    RISC-V
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../repositories/dev.eessi.io/">
+<span class="md-ellipsis">
+    
+  
+    Development repository
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Installation and configuration
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Installation and configuration
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_access/is_eessi_accessible/">
+<span class="md-ellipsis">
+    
+  
+    Is EESSI already installed?
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_access/native_installation/">
+<span class="md-ellipsis">
+    
+  
+    Native
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_access/eessi_container/">
+<span class="md-ellipsis">
+    
+  
+    Container
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Windows and macOS
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Windows and macOS
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_access/eessi_wsl/">
+<span class="md-ellipsis">
+    
+  
+    Windows with WSL
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_access/eessi_limactl/">
+<span class="md-ellipsis">
+    
+  
+    macOS with Lima
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../getting_access/eessi_Apple_container_tool/">
+<span class="md-ellipsis">
+    
+  
+    macOS with container tool
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Configuring EESSI
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuring EESSI
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../site_specific_config/host_injections/">
+<span class="md-ellipsis">
+    
+  
+    How to configure EESSI
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../site_specific_config/gpu/">
+<span class="md-ellipsis">
+    
+  
+    GPU support
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../site_specific_config/lmod_hooks/">
+<span class="md-ellipsis">
+    
+  
+    Custom LMOD hooks
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Basic usage
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Basic usage
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../using_eessi/setting_up_environment/">
+<span class="md-ellipsis">
+    
+  
+    Set up environment
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../using_eessi/basic_commands/">
+<span class="md-ellipsis">
+    
+  
+    Basic commands
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../using_eessi/eessi_demos/">
+<span class="md-ellipsis">
+    
+  
+    Demos
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../using_eessi/eessi_in_ci/">
+<span class="md-ellipsis">
+    
+  
+    EESSI in CI
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Advanced usage
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Advanced usage
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../filesystem_layer/stratum1/">
+<span class="md-ellipsis">
+    
+  
+    Setting up your Stratum
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../using_eessi/building_on_eessi/">
+<span class="md-ellipsis">
+    
+  
+    Building software with EESSI
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Build a site software stack on EESSI
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Build a site software stack on EESSI
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../site_build/overview/">
+<span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../site_build/shared_fs/">
+<span class="md-ellipsis">
+    
+  
+    EESSI-extend on shared FS
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../site_build/site_cvmfs/">
+<span class="md-ellipsis">
+    
+  
+    EESSI build infra on site CVMFS
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Test suite
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Test suite
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test-suite/">
+<span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test-suite/installation-configuration/">
+<span class="md-ellipsis">
+    
+  
+    Installation &amp; configuration
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test-suite/ReFrame-configuration-file/">
+<span class="md-ellipsis">
+    
+  
+    ReFrame configuration file
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test-suite/usage/">
+<span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test-suite/available-tests/">
+<span class="md-ellipsis">
+    
+  
+    Available tests
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test-suite/writing-portable-tests/">
+<span class="md-ellipsis">
+    
+  
+    Writing tests
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../test-suite/release-notes/">
+<span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_4_8" id="__nav_7_4_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    API documentation
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_4_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    API documentation
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/__init__/">
+<span class="md-ellipsis">
+    
+  
+    eessi
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1" id="__nav_7_4_8_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_label" class="md-nav" data-md-level="4">
+<label class="md-nav__title" for="__nav_7_4_8_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    eessi
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/__init__/">
+<span class="md-ellipsis">
+    
+  
+    testsuite
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1" id="__nav_7_4_8_1_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_label" class="md-nav" data-md-level="5">
+<label class="md-nav__title" for="__nav_7_4_8_1_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    testsuite
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/common_config/">
+<span class="md-ellipsis">
+    
+  
+    common_config
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/constants/">
+<span class="md-ellipsis">
+    
+  
+    constants
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/eessi_mixin/">
+<span class="md-ellipsis">
+    
+  
+    eessi_mixin
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/hooks/">
+<span class="md-ellipsis">
+    
+  
+    hooks
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/__init__/">
+<span class="md-ellipsis">
+    
+  
+    tests
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5" id="__nav_7_4_8_1_1_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_label" class="md-nav" data-md-level="6">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    tests
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/__init__/">
+<span class="md-ellipsis">
+    
+  
+    apps
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1" id="__nav_7_4_8_1_1_5_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_label" class="md-nav" data-md-level="7">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    apps
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/MetalWalls/">
+<span class="md-ellipsis">
+    
+  
+    MetalWalls
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/__init__/">
+<span class="md-ellipsis">
+    
+  
+    PyTorch
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_2" id="__nav_7_4_8_1_1_5_1_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_2_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    PyTorch
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/PyTorch_torchvision/">
+<span class="md-ellipsis">
+    
+  
+    PyTorch_torchvision
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_2_2" id="__nav_7_4_8_1_1_5_1_2_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_2_2_label" class="md-nav" data-md-level="9">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    src
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/src/get_free_socket/">
+<span class="md-ellipsis">
+    
+  
+    get_free_socket
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/PyTorch/src/pytorch_synthetic_benchmark/">
+<span class="md-ellipsis">
+    
+  
+    pytorch_synthetic_benchmark
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/QuantumESPRESSO/">
+<span class="md-ellipsis">
+    
+  
+    QuantumESPRESSO
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/cp2k/__init__/">
+<span class="md-ellipsis">
+    
+  
+    cp2k
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_4" id="__nav_7_4_8_1_1_5_1_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_4_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_4">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    cp2k
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/cp2k/cp2k/">
+<span class="md-ellipsis">
+    
+  
+    cp2k
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_4_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/cp2k/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_4_2" id="__nav_7_4_8_1_1_5_1_4_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_4_2_label" class="md-nav" data-md-level="9">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_4_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    src
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/cp2k/src/QS/__init__/">
+<span class="md-ellipsis">
+    
+  
+    QS
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/__init__/">
+<span class="md-ellipsis">
+    
+  
+    espresso
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_5" id="__nav_7_4_8_1_1_5_1_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_5_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    espresso
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/espresso/">
+<span class="md-ellipsis">
+    
+  
+    espresso
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_5_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_5_2" id="__nav_7_4_8_1_1_5_1_5_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_5_2_label" class="md-nav" data-md-level="9">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_5_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    src
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_5_2_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/lb/__init__/">
+<span class="md-ellipsis">
+    
+  
+    lb
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_5_2_1" id="__nav_7_4_8_1_1_5_1_5_2_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_5_2_1_label" class="md-nav" data-md-level="10">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_5_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    lb
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/lb/lb/">
+<span class="md-ellipsis">
+    
+  
+    lb
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_5_2_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/lj/__init__/">
+<span class="md-ellipsis">
+    
+  
+    lj
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_5_2_2" id="__nav_7_4_8_1_1_5_1_5_2_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_5_2_2_label" class="md-nav" data-md-level="10">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_5_2_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    lj
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/lj/lj/">
+<span class="md-ellipsis">
+    
+  
+    lj
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_5_2_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/p3m/__init__/">
+<span class="md-ellipsis">
+    
+  
+    p3m
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_5_2_3" id="__nav_7_4_8_1_1_5_1_5_2_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_5_2_3_label" class="md-nav" data-md-level="10">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_5_2_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    p3m
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/espresso/src/p3m/madelung/">
+<span class="md-ellipsis">
+    
+  
+    madelung
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/gromacs/">
+<span class="md-ellipsis">
+    
+  
+    gromacs
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lammps/__init__/">
+<span class="md-ellipsis">
+    
+  
+    lammps
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_7" id="__nav_7_4_8_1_1_5_1_7_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_7_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_7">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    lammps
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lammps/lammps/">
+<span class="md-ellipsis">
+    
+  
+    lammps
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_7_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_7_2" id="__nav_7_4_8_1_1_5_1_7_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_7_2_label" class="md-nav" data-md-level="9">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_7_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    src
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_7_2_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/ALL%2BOBMD/__init__/">
+<span class="md-ellipsis">
+    
+  
+    ALL+OBMD
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_7_2_1" id="__nav_7_4_8_1_1_5_1_7_2_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_7_2_1_label" class="md-nav" data-md-level="10">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_7_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    ALL+OBMD
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/ALL%2BOBMD/generate_obmd_input/">
+<span class="md-ellipsis">
+    
+  
+    generate_obmd_input
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/lj/__init__/">
+<span class="md-ellipsis">
+    
+  
+    lj
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lammps/src/rhodo/__init__/">
+<span class="md-ellipsis">
+    
+  
+    rhodo
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lbmpy-pssrt/__init__/">
+<span class="md-ellipsis">
+    
+  
+    lbmpy-pssrt
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_8" id="__nav_7_4_8_1_1_5_1_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_8_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    lbmpy-pssrt
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lbmpy-pssrt/lbmpy-pssrt/">
+<span class="md-ellipsis">
+    
+  
+    lbmpy-pssrt
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_8_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lbmpy-pssrt/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_8_2" id="__nav_7_4_8_1_1_5_1_8_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_8_2_label" class="md-nav" data-md-level="9">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_8_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    src
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lbmpy-pssrt/src/mixing_layer_2D/">
+<span class="md-ellipsis">
+    
+  
+    mixing_layer_2D
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lpc3d/__init__/">
+<span class="md-ellipsis">
+    
+  
+    lpc3d
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_9" id="__nav_7_4_8_1_1_5_1_9_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_9_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_9">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    lpc3d
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/lpc3d/lpc3d/">
+<span class="md-ellipsis">
+    
+  
+    lpc3d
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_10" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/numpy/__init__/">
+<span class="md-ellipsis">
+    
+  
+    numpy
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_10" id="__nav_7_4_8_1_1_5_1_10_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_10_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_10">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    numpy
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/numpy/numpy/">
+<span class="md-ellipsis">
+    
+  
+    numpy
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_10_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/numpy/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_10_2" id="__nav_7_4_8_1_1_5_1_10_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_10_2_label" class="md-nav" data-md-level="9">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_10_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    src
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/numpy/src/np_ops/">
+<span class="md-ellipsis">
+    
+  
+    np_ops
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_11" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/__init__/">
+<span class="md-ellipsis">
+    
+  
+    openfoam
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_11" id="__nav_7_4_8_1_1_5_1_11_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_11_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_11">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    openfoam
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/openfoam/">
+<span class="md-ellipsis">
+    
+  
+    openfoam
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_11_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_11_2" id="__nav_7_4_8_1_1_5_1_11_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_11_2_label" class="md-nav" data-md-level="9">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_11_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    src
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_11_2_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/__init__/">
+<span class="md-ellipsis">
+    
+  
+    cavity3D
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_11_2_1" id="__nav_7_4_8_1_1_5_1_11_2_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_11_2_1_label" class="md-nav" data-md-level="10">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_11_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    cavity3D
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/1M/__init__/">
+<span class="md-ellipsis">
+    
+  
+    1M
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/64M/__init__/">
+<span class="md-ellipsis">
+    
+  
+    64M
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_11_2_1_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/__init__/">
+<span class="md-ellipsis">
+    
+  
+    8M
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_11_2_1_3" id="__nav_7_4_8_1_1_5_1_11_2_1_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_11_2_1_3_label" class="md-nav" data-md-level="11">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_11_2_1_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    8M
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_11_2_1_3_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedIter/__init__/">
+<span class="md-ellipsis">
+    
+  
+    fixedIter
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_11_2_1_3_1" id="__nav_7_4_8_1_1_5_1_11_2_1_3_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_11_2_1_3_1_label" class="md-nav" data-md-level="12">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_11_2_1_3_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    fixedIter
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedIter/0/__init__/">
+<span class="md-ellipsis">
+    
+  
+    0
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedIter/constant/__init__/">
+<span class="md-ellipsis">
+    
+  
+    constant
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedIter/system/__init__/">
+<span class="md-ellipsis">
+    
+  
+    system
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/8M/fixedTol/__init__/">
+<span class="md-ellipsis">
+    
+  
+    fixedTol
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/openfoam/src/cavity3D/evalLogCalcFixedIter/">
+<span class="md-ellipsis">
+    
+  
+    evalLogCalcFixedIter
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/osu/">
+<span class="md-ellipsis">
+    
+  
+    osu
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_13" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/__init__/">
+<span class="md-ellipsis">
+    
+  
+    tensorflow
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_13" id="__nav_7_4_8_1_1_5_1_13_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_13_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_13">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    tensorflow
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_13_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_13_1" id="__nav_7_4_8_1_1_5_1_13_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_13_1_label" class="md-nav" data-md-level="9">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_13_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    src
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/src/mnist_setup/">
+<span class="md-ellipsis">
+    
+  
+    mnist_setup
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/src/tf_test/">
+<span class="md-ellipsis">
+    
+  
+    tf_test
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/tensorflow/tensorflow/">
+<span class="md-ellipsis">
+    
+  
+    tensorflow
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_1_14" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/walberla/__init__/">
+<span class="md-ellipsis">
+    
+  
+    walberla
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_1_14" id="__nav_7_4_8_1_1_5_1_14_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_1_14_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_1_14">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    walberla
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/apps/walberla/walberla/">
+<span class="md-ellipsis">
+    
+  
+    walberla
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/libs/__init__/">
+<span class="md-ellipsis">
+    
+  
+    libs
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_2" id="__nav_7_4_8_1_1_5_2_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_2_label" class="md-nav" data-md-level="7">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    libs
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_4_8_1_1_5_2_1" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/libs/blas/__init__/">
+<span class="md-ellipsis">
+    
+  
+    blas
+  
+
+    
+  </span>
+</a>
+<label class="md-nav__link" for="__nav_7_4_8_1_1_5_2_1" id="__nav_7_4_8_1_1_5_2_1_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_4_8_1_1_5_2_1_label" class="md-nav" data-md-level="8">
+<label class="md-nav__title" for="__nav_7_4_8_1_1_5_2_1">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    blas
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/libs/blas/blas/">
+<span class="md-ellipsis">
+    
+  
+    blas
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/tests/libs/blas/src/__init__/">
+<span class="md-ellipsis">
+    
+  
+    src
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../testsuite_api/eessi/testsuite/utils/">
+<span class="md-ellipsis">
+    
+  
+    utils
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Known issues and workarounds
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_5">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Known issues and workarounds
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../known_issues/eessi-2023.06/">
+<span class="md-ellipsis">
+    
+  
+    v2023.06
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Adding software to EESSI
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Adding software to EESSI
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adding_software/overview/">
+<span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    For contributors
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_2">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    For contributors
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adding_software/contribution_policy/">
+<span class="md-ellipsis">
+    
+  
+    Contribution policy
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adding_software/opening_pr/">
+<span class="md-ellipsis">
+    
+  
+    Open PR
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adding_software/debugging_failed_builds/">
+<span class="md-ellipsis">
+    
+  
+    Debugging
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adding_software/adding_development_software/">
+<span class="md-ellipsis">
+    
+  
+    Development repository
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    For maintainers
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_3">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    For maintainers
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../bot/">
+<span class="md-ellipsis">
+    
+  
+    BTD bot
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adding_software/building_software/">
+<span class="md-ellipsis">
+    
+  
+    Building software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../adding_software/deploying_software/">
+<span class="md-ellipsis">
+    
+  
+    Deploying software
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../software_layer/build_nodes/">
+<span class="md-ellipsis">
+    
+  
+    Build nodes
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Community and support
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Community and support
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../support/">
+<span class="md-ellipsis">
+    
+  
+    Getting support
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../meetings/">
+<span class="md-ellipsis">
+    
+  
+    Meetings
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../talks/">
+<span class="md-ellipsis">
+    
+  
+    Talks
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../mailing_list/">
+<span class="md-ellipsis">
+    
+  
+    Mailing list
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../contact/">
+<span class="md-ellipsis">
+    
+  
+    Contact info
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../training-events/">
+<span class="md-ellipsis">
+    
+  
+    Training &amp; events
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../systems/">
+<span class="md-ellipsis">
+    
+  
+    Systems
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ambassadors/">
+<span class="md-ellipsis">
+    
+  
+    Ambassadors
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../roadmap/">
+<span class="md-ellipsis">
+    
+  
+    Roadmap
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_14" type="checkbox"/>
+<label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+<span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_14_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+            
+  
+    Governance
+  
+
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/">
+<span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/charter/">
+<span class="md-ellipsis">
+    
+  
+    Charter
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/governance/">
+<span class="md-ellipsis">
+    
+  
+    Governance
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/policies/">
+<span class="md-ellipsis">
+    
+  
+    Policies
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/code_of_conduct/">
+<span class="md-ellipsis">
+    
+  
+    Code of Conduct
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/terms_of_use/">
+<span class="md-ellipsis">
+    
+  
+    Terms of Use
+  
+
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../governance/steering_committee/">
+<span class="md-ellipsis">
+    
+  
+    Steering Committee
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../blog/">
+<span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#available-installations">
+<span class="md-ellipsis">
+      
+        Available installations
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extensions">
+<span class="md-ellipsis">
+      
+        Extensions
+      
+    </span>
+</a>
+<nav aria-label="Extensions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstractffts">
+<span class="md-ellipsis">
+      
+        AbstractFFTs
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adapt">
+<span class="md-ellipsis">
+      
+        Adapt
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adtypes">
+<span class="md-ellipsis">
+      
+        ADTypes
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#aliastables">
+<span class="md-ellipsis">
+      
+        AliasTables
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#atomix">
+<span class="md-ellipsis">
+      
+        Atomix
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bfloat16s">
+<span class="md-ellipsis">
+      
+        BFloat16s
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cenum">
+<span class="md-ellipsis">
+      
+        CEnum
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainrules">
+<span class="md-ellipsis">
+      
+        ChainRules
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chainrulescore">
+<span class="md-ellipsis">
+      
+        ChainRulesCore
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chunkcodeccore">
+<span class="md-ellipsis">
+      
+        ChunkCodecCore
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chunkcodeclibzlib">
+<span class="md-ellipsis">
+      
+        ChunkCodecLibZlib
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#chunkcodeclibzstd">
+<span class="md-ellipsis">
+      
+        ChunkCodecLibZstd
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clearwood_stiffness_model">
+<span class="md-ellipsis">
+      
+        Clearwood_stiffness_model
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#codetracking">
+<span class="md-ellipsis">
+      
+        CodeTracking
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#commonsubexpressions">
+<span class="md-ellipsis">
+      
+        CommonSubexpressions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compat">
+<span class="md-ellipsis">
+      
+        Compat
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constructionbase">
+<span class="md-ellipsis">
+      
+        ConstructionBase
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dataapi">
+<span class="md-ellipsis">
+      
+        DataAPI
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datastructures">
+<span class="md-ellipsis">
+      
+        DataStructures
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#datavalueinterfaces">
+<span class="md-ellipsis">
+      
+        DataValueInterfaces
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#delimitedfiles">
+<span class="md-ellipsis">
+      
+        DelimitedFiles
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diffresults">
+<span class="md-ellipsis">
+      
+        DiffResults
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diffrules">
+<span class="md-ellipsis">
+      
+        DiffRules
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#docstringextensions">
+<span class="md-ellipsis">
+      
+        DocStringExtensions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#enzymecore">
+<span class="md-ellipsis">
+      
+        EnzymeCore
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fileio">
+<span class="md-ellipsis">
+      
+        FileIO
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fillarrays">
+<span class="md-ellipsis">
+      
+        FillArrays
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flux">
+<span class="md-ellipsis">
+      
+        Flux
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#forwarddiff">
+<span class="md-ellipsis">
+      
+        ForwardDiff
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#functors">
+<span class="md-ellipsis">
+      
+        Functors
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpuarrays">
+<span class="md-ellipsis">
+      
+        GPUArrays
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gpuarrayscore">
+<span class="md-ellipsis">
+      
+        GPUArraysCore
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hasharraymappedtries">
+<span class="md-ellipsis">
+      
+        HashArrayMappedTries
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#irrationalconstants">
+<span class="md-ellipsis">
+      
+        IrrationalConstants
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#irtools">
+<span class="md-ellipsis">
+      
+        IRTools
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#iteratorinterfaceextensions">
+<span class="md-ellipsis">
+      
+        IteratorInterfaceExtensions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jld2">
+<span class="md-ellipsis">
+      
+        JLD2
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jllwrappers">
+<span class="md-ellipsis">
+      
+        JLLWrappers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#json">
+<span class="md-ellipsis">
+      
+        JSON
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kernelabstractions">
+<span class="md-ellipsis">
+      
+        KernelAbstractions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#llvm">
+<span class="md-ellipsis">
+      
+        LLVM
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#llvmextra_jll">
+<span class="md-ellipsis">
+      
+        LLVMExtra_jll
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#logexpfunctions">
+<span class="md-ellipsis">
+      
+        LogExpFunctions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macrotools">
+<span class="md-ellipsis">
+      
+        MacroTools
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#missings">
+<span class="md-ellipsis">
+      
+        Missings
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mlcore">
+<span class="md-ellipsis">
+      
+        MLCore
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mldatadevices">
+<span class="md-ellipsis">
+      
+        MLDataDevices
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mlutils">
+<span class="md-ellipsis">
+      
+        MLUtils
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nanmath">
+<span class="md-ellipsis">
+      
+        NaNMath
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nnlib">
+<span class="md-ellipsis">
+      
+        NNlib
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#onehotarrays">
+<span class="md-ellipsis">
+      
+        OneHotArrays
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openspecfun_jll">
+<span class="md-ellipsis">
+      
+        OpenSpecFun_jll
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimisers">
+<span class="md-ellipsis">
+      
+        Optimisers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#orderedcollections">
+<span class="md-ellipsis">
+      
+        OrderedCollections
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parsers">
+<span class="md-ellipsis">
+      
+        Parsers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#precompiletools">
+<span class="md-ellipsis">
+      
+        PrecompileTools
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preferences">
+<span class="md-ellipsis">
+      
+        Preferences
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progresslogging">
+<span class="md-ellipsis">
+      
+        ProgressLogging
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ptrarrays">
+<span class="md-ellipsis">
+      
+        PtrArrays
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#realdot">
+<span class="md-ellipsis">
+      
+        RealDot
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reexport">
+<span class="md-ellipsis">
+      
+        Reexport
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#requires">
+<span class="md-ellipsis">
+      
+        Requires
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scimlpublic">
+<span class="md-ellipsis">
+      
+        SciMLPublic
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scopedvalues">
+<span class="md-ellipsis">
+      
+        ScopedValues
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setfield">
+<span class="md-ellipsis">
+      
+        Setfield
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#showcases">
+<span class="md-ellipsis">
+      
+        ShowCases
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simpletraits">
+<span class="md-ellipsis">
+      
+        SimpleTraits
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sortingalgorithms">
+<span class="md-ellipsis">
+      
+        SortingAlgorithms
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sparseinversesubset">
+<span class="md-ellipsis">
+      
+        SparseInverseSubset
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#specialfunctions">
+<span class="md-ellipsis">
+      
+        SpecialFunctions
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#staticarrays">
+<span class="md-ellipsis">
+      
+        StaticArrays
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#staticarrayscore">
+<span class="md-ellipsis">
+      
+        StaticArraysCore
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statistics">
+<span class="md-ellipsis">
+      
+        Statistics
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statsapi">
+<span class="md-ellipsis">
+      
+        StatsAPI
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#statsbase">
+<span class="md-ellipsis">
+      
+        StatsBase
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structarrays">
+<span class="md-ellipsis">
+      
+        StructArrays
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structutils">
+<span class="md-ellipsis">
+      
+        StructUtils
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tables">
+<span class="md-ellipsis">
+      
+        Tables
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tabletraits">
+<span class="md-ellipsis">
+      
+        TableTraits
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unsafeatomics">
+<span class="md-ellipsis">
+      
+        UnsafeAtomics
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zstd_jll">
+<span class="md-ellipsis">
+      
+        Zstd_jll
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zygote">
+<span class="md-ellipsis">
+      
+        Zygote
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zygoterules">
+<span class="md-ellipsis">
+      
+        ZygoteRules
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="aitw-clearwood_stiffness_model">AITW-Clearwood_stiffness_model<a class="headerlink" href="#aitw-clearwood_stiffness_model" title="Permanent link">¶</a></h1>
+<p>This repository contains a neural network model for clearwood unit cell analysis.</p>
+<p><small>homepage: </small><span class="software-link"><a href="https://github.com/AI-TranspWood/Clearwood_share">https://github.com/AI-TranspWood/Clearwood_share</a></span></p>
+<h2 id="available-installations">Available installations<a class="headerlink" href="#available-installations" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>AITW-Clearwood_stiffness_model version</th>
+<th>Supported CPU targets</th>
+<th>Supported GPU targets</th>
+<th>EESSI version</th>
+<th>Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.0</td>
+<td><code>generic</code>: <code>aarch64</code>, <code>x86_64</code><br/><span class="software-cpu-arm">Arm</span>: <code>a64fx</code>, <code>neoverse_n1</code>, <code>neoverse_v1</code>, <code>nvidia/grace</code><br/><span class="software-cpu-amd">AMD</span>: <code>zen2</code>, <code>zen3</code>, <code>zen4</code>, <code>zen5</code><br/><span class="software-cpu-intel">Intel</span>: <code>haswell</code>, <code>skylake_avx512</code>, <code>sapphirerapids</code>, <code>icelake</code>, <code>cascadelake</code><br/></td>
+<td><em>(none)</em></td>
+<td><span class="software-eessi-version-202506">2025.06</span></td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¶</a></h2>
+<p>Overview of extensions included in AITW-Clearwood_stiffness_model installations</p>
+<h3 id="abstractffts">AbstractFFTs<a class="headerlink" href="#abstractffts" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>AbstractFFTs</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.5.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="adapt">Adapt<a class="headerlink" href="#adapt" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Adapt</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.7.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="adtypes">ADTypes<a class="headerlink" href="#adtypes" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ADTypes</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.24.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="aliastables">AliasTables<a class="headerlink" href="#aliastables" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>AliasTables</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.3</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="atomix">Atomix<a class="headerlink" href="#atomix" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Atomix</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.3</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bfloat16s">BFloat16s<a class="headerlink" href="#bfloat16s" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>BFloat16s</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.6.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cenum">CEnum<a class="headerlink" href="#cenum" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>CEnum</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chainrules">ChainRules<a class="headerlink" href="#chainrules" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ChainRules</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.73.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chainrulescore">ChainRulesCore<a class="headerlink" href="#chainrulescore" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ChainRulesCore</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.26.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chunkcodeccore">ChunkCodecCore<a class="headerlink" href="#chunkcodeccore" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ChunkCodecCore</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.2</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chunkcodeclibzlib">ChunkCodecLibZlib<a class="headerlink" href="#chunkcodeclibzlib" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ChunkCodecLibZlib</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="chunkcodeclibzstd">ChunkCodecLibZstd<a class="headerlink" href="#chunkcodeclibzstd" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ChunkCodecLibZstd</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="clearwood_stiffness_model">Clearwood_stiffness_model<a class="headerlink" href="#clearwood_stiffness_model" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Clearwood_stiffness_model</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="codetracking">CodeTracking<a class="headerlink" href="#codetracking" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>CodeTracking</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.0.2</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="commonsubexpressions">CommonSubexpressions<a class="headerlink" href="#commonsubexpressions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>CommonSubexpressions</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.3.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="compat">Compat<a class="headerlink" href="#compat" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Compat</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.18.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="constructionbase">ConstructionBase<a class="headerlink" href="#constructionbase" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ConstructionBase</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.6.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="dataapi">DataAPI<a class="headerlink" href="#dataapi" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>DataAPI</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.16.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="datastructures">DataStructures<a class="headerlink" href="#datastructures" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>DataStructures</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.19.6</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="datavalueinterfaces">DataValueInterfaces<a class="headerlink" href="#datavalueinterfaces" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>DataValueInterfaces</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="delimitedfiles">DelimitedFiles<a class="headerlink" href="#delimitedfiles" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>DelimitedFiles</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.9.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="diffresults">DiffResults<a class="headerlink" href="#diffresults" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>DiffResults</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="diffrules">DiffRules<a class="headerlink" href="#diffrules" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>DiffRules</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.16.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="docstringextensions">DocStringExtensions<a class="headerlink" href="#docstringextensions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>DocStringExtensions</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.9.5</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="enzymecore">EnzymeCore<a class="headerlink" href="#enzymecore" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>EnzymeCore</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.8.21</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fileio">FileIO<a class="headerlink" href="#fileio" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>FileIO</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.20.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="fillarrays">FillArrays<a class="headerlink" href="#fillarrays" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>FillArrays</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.17.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="flux">Flux<a class="headerlink" href="#flux" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Flux</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.16.11</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="forwarddiff">ForwardDiff<a class="headerlink" href="#forwarddiff" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ForwardDiff</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.4.5</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="functors">Functors<a class="headerlink" href="#functors" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Functors</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5.3</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gpuarrays">GPUArrays<a class="headerlink" href="#gpuarrays" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>GPUArrays</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11.5.13</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gpuarrayscore">GPUArraysCore<a class="headerlink" href="#gpuarrayscore" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>GPUArraysCore</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.2.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="hasharraymappedtries">HashArrayMappedTries<a class="headerlink" href="#hasharraymappedtries" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>HashArrayMappedTries</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.2.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="irrationalconstants">IrrationalConstants<a class="headerlink" href="#irrationalconstants" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>IrrationalConstants</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.2.6</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="irtools">IRTools<a class="headerlink" href="#irtools" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>IRTools</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.4.20</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="iteratorinterfaceextensions">IteratorInterfaceExtensions<a class="headerlink" href="#iteratorinterfaceextensions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>IteratorInterfaceExtensions</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="jld2">JLD2<a class="headerlink" href="#jld2" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>JLD2</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.6.6</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="jllwrappers">JLLWrappers<a class="headerlink" href="#jllwrappers" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>JLLWrappers</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.8.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>JSON</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.7.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="kernelabstractions">KernelAbstractions<a class="headerlink" href="#kernelabstractions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>KernelAbstractions</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.9.42</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="llvm">LLVM<a class="headerlink" href="#llvm" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>LLVM</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.13.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="llvmextra_jll">LLVMExtra_jll<a class="headerlink" href="#llvmextra_jll" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>LLVMExtra_jll</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0.46+0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="logexpfunctions">LogExpFunctions<a class="headerlink" href="#logexpfunctions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>LogExpFunctions</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="macrotools">MacroTools<a class="headerlink" href="#macrotools" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>MacroTools</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5.16</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="missings">Missings<a class="headerlink" href="#missings" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Missings</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.2.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mlcore">MLCore<a class="headerlink" href="#mlcore" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>MLCore</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mldatadevices">MLDataDevices<a class="headerlink" href="#mldatadevices" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>MLDataDevices</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.17.10</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="mlutils">MLUtils<a class="headerlink" href="#mlutils" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>MLUtils</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.4.13</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="nanmath">NaNMath<a class="headerlink" href="#nanmath" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>NaNMath</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.4</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="nnlib">NNlib<a class="headerlink" href="#nnlib" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>NNlib</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.9.44</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="onehotarrays">OneHotArrays<a class="headerlink" href="#onehotarrays" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>OneHotArrays</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.2.11</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="openspecfun_jll">OpenSpecFun_jll<a class="headerlink" href="#openspecfun_jll" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>OpenSpecFun_jll</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5.6+0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="optimisers">Optimisers<a class="headerlink" href="#optimisers" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Optimisers</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.4.9</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="orderedcollections">OrderedCollections<a class="headerlink" href="#orderedcollections" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>OrderedCollections</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.0.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parsers">Parsers<a class="headerlink" href="#parsers" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Parsers</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.8.7</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="precompiletools">PrecompileTools<a class="headerlink" href="#precompiletools" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>PrecompileTools</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.3.4</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="preferences">Preferences<a class="headerlink" href="#preferences" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Preferences</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.5.2</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="progresslogging">ProgressLogging<a class="headerlink" href="#progresslogging" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ProgressLogging</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.6</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ptrarrays">PtrArrays<a class="headerlink" href="#ptrarrays" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>PtrArrays</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.4.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="realdot">RealDot<a class="headerlink" href="#realdot" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>RealDot</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="reexport">Reexport<a class="headerlink" href="#reexport" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Reexport</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.2.2</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="requires">Requires<a class="headerlink" href="#requires" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Requires</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.3.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="scimlpublic">SciMLPublic<a class="headerlink" href="#scimlpublic" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>SciMLPublic</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.3.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="scopedvalues">ScopedValues<a class="headerlink" href="#scopedvalues" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ScopedValues</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.6.2</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setfield">Setfield<a class="headerlink" href="#setfield" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Setfield</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1.2</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="showcases">ShowCases<a class="headerlink" href="#showcases" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ShowCases</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="simpletraits">SimpleTraits<a class="headerlink" href="#simpletraits" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>SimpleTraits</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.9.6</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sortingalgorithms">SortingAlgorithms<a class="headerlink" href="#sortingalgorithms" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>SortingAlgorithms</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.2.3</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="sparseinversesubset">SparseInverseSubset<a class="headerlink" href="#sparseinversesubset" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>SparseInverseSubset</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.3</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="specialfunctions">SpecialFunctions<a class="headerlink" href="#specialfunctions" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>SpecialFunctions</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.9.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="staticarrays">StaticArrays<a class="headerlink" href="#staticarrays" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>StaticArrays</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.9.19</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="staticarrayscore">StaticArraysCore<a class="headerlink" href="#staticarrayscore" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>StaticArraysCore</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.4.4</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Statistics</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.11.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="statsapi">StatsAPI<a class="headerlink" href="#statsapi" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>StatsAPI</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.8.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="statsbase">StatsBase<a class="headerlink" href="#statsbase" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>StatsBase</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.34.13</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="structarrays">StructArrays<a class="headerlink" href="#structarrays" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>StructArrays</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.7.3</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="structutils">StructUtils<a class="headerlink" href="#structutils" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>StructUtils</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.8.5</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Tables</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.14.0</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tabletraits">TableTraits<a class="headerlink" href="#tabletraits" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>TableTraits</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0.1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="unsafeatomics">UnsafeAtomics<a class="headerlink" href="#unsafeatomics" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>UnsafeAtomics</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.3.2</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="zstd_jll">Zstd_jll<a class="headerlink" href="#zstd_jll" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Zstd_jll</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.5.7+1</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="zygote">Zygote<a class="headerlink" href="#zygote" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>Zygote</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.7.12</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="zygoterules">ZygoteRules<a class="headerlink" href="#zygoterules" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ZygoteRules</code> version</th>
+<th>AITW-Clearwood_stiffness_model modules that include it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.2.8</td>
+<td><code>AITW-Clearwood_stiffness_model/0.1.0-Julia-1.12.2</code></td>
+</tr>
+</tbody>
+</table>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 2, 2026 22:04:53 UTC">November 2, 2026</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<!-- Copyright and theme information -->
+<div class="md-copyright">
+  
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://eessi.io/docs/feed_rss_created.xml" rel="noopener" target="_blank" title="RSS (XML)">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64m0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0m32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32"></path></svg>
+</a>
+<a class="md-social__link" href="https://eessi.io/docs/feed_json_created.json" rel="noopener" target="_blank" title="RSS (JSON)">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64m0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0m32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["instant", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs" type="module"></script>
+<script src="../../javascripts/software-filter.js"></script>
+</body>
+</html>

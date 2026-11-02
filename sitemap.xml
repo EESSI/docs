@@ -105,7 +105,15 @@
          <lastmod>2026-11-02</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/AITW-Clearwood_stiffness_model/</loc>
+         <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/AITW-aiida-wood-permeability/</loc>
+         <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/AITW-darcy_infiltration/</loc>
          <lastmod>2026-11-02</lastmod>
     </url>
     <url>
@@ -681,6 +689,10 @@
          <lastmod>2026-11-02</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/GLM/</loc>
+         <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/GLPK/</loc>
          <lastmod>2026-11-02</lastmod>
     </url>
@@ -870,6 +882,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/IDG/</loc>
+         <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/IJulia/</loc>
          <lastmod>2026-11-02</lastmod>
     </url>
     <url>
@@ -1406,6 +1422,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/ParaView/</loc>
+         <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/ParallelIO/</loc>
          <lastmod>2026-11-02</lastmod>
     </url>
     <url>
