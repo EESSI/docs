@@ -4,6 +4,17 @@ Find slides, and video recordings of earlier sessions below.
 
 ---
 
+## Topic series: EESSI Happy Hour Restart!
+
+### Friday 30 October 2026
+
+**Outline:** EESSI at the EuroHPC User Days 2026 Dublin
+([Slides (PDF)](EESSI-happyhour-2026-019-EESSI@eurohpc-user-days-2026.pdf), [Recording (YouTube)](https://www.youtube.com/watch?v=xokal8XPjGQ))
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xokal8XPjGQ?si=moqr8EDRqiJ5S0IJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 ## Topic series: EESSI Mix and Match
 
 ### Monday 29 June 2026

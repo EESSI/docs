@@ -35,7 +35,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
     We are trying out a new **monthly** schedule! Going forward, we aim to host EESSI Happy Hours on weeks when 
     other community meetings take place. Come try out our new sessions!
 
-### 💡 **Next session**: EESSI at the EuroHPC User Days 2026 Dublin
+### 💡 **Next session**: TBD
 ### Topic Series: Happy Hour Restart!
 🗓️ Schedule
 #### Friday 30 October 2026, 13:00-14:00 CET
@@ -47,6 +47,10 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
+
+*Topic series: Happy Hour Restart!*
+
+- 30 Oct 2026 - [EESSI at the EuroHPC User Days 2026 Dublin](https://www.youtube.com/watch?v=xokal8XPjGQ)
 
 *Topic series: EESSI Mix and Match*
 
