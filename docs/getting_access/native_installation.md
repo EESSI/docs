@@ -74,24 +74,32 @@ The good news is that all of this only requires a handful commands :astonished: 
     sudo bash -c "echo 'CVMFS_CACHE_BASE=<some other directory for the cache>' >> /etc/cvmfs/default.local"
     ```
 
+!!! Note
+    If the EESSI CernVM-FS doesn't get mounted, restart the automounter:
+    ``` { .bash .copy }
+    sudo bash -c "echo '+dir:/etc/auto.master.d' >> /etc/auto.master"
+    sudo systemctl restart autofs
+    sudo cvmfs_config chksetup
+    ```
+
 !!! Warning
-    When using the default setting `CVMFS_CLIENT_PROFILE="single"`,  `CVMFS_HTTP_PROXY` is set to `auto;DIRECT`. Ìn case you have setup with a private Stratum 1 with no proxy, this can lead to unintended requests to Web Proxy Auto Discovery (WPAD) infrastructure before falling back to direct connections. Removing the `auto` ensures direct connections without unnecessary WPAD requests.
-    ```bash
-      sudo bash -c "echo 'CVMFS_HTTP_PROXY=direct' >> /etc/cvmfs/default.local"
+    When using the default setting `CVMFS_CLIENT_PROFILE="single"`,  `CVMFS_HTTP_PROXY` is set to `auto;DIRECT`. In case you have setup with a private Stratum 1 with no proxy, this can lead to unintended requests to Web Proxy Auto Discovery (WPAD) infrastructure before falling back to direct connections. Removing the `auto` ensures direct connections without unnecessary WPAD requests.
+    ``` { .bash .copy }
+    sudo bash -c "echo 'CVMFS_HTTP_PROXY=direct' >> /etc/cvmfs/default.local"
     ```
 
-  Additionally, if you have a local proxy configured with:
+    Additionally, if you have a local proxy configured with:
 
-    ```bash
-      CVMFS_HTTP_PROXY=<local-proxy>;DIRECT
+    ``` { .bash .copy }
+    CVMFS_HTTP_PROXY="<local-proxy>;DIRECT"
     ```
 
-  and the local proxy becomes unavailable, the client will not directly contact the Stratum 1. Instead, it will failover to CERN/FNAL fallback proxies as its set in CernVM-FS's general configuration:
+    and the local proxy becomes unavailable, the client will not directly contact the Stratum 1. Instead, it will failover to CERN/FNAL fallback proxies as its set in CernVM-FS's general configuration:
 
-      ```bash
-      CVMFS_FALLBACK_PROXY="http://cvmfsbproxy.cern.ch:3126;http://cvmfsbproxy.fnal.gov:3126 # Taken from /cvmfs/cvmfs- config.cern.ch/etc/cvmfs/common.conf
-      ```
-  Be aware that in such cases, the `DIRECT` directive is silently ignored.
+    ``` { .bash .copy }
+    CVMFS_FALLBACK_PROXY="http://cvmfsbproxy.cern.ch:3126;http://cvmfsbproxy.fnal.gov:3126 # Taken from /cvmfs/cvmfs- config.cern.ch/etc/cvmfs/common.conf
+    ```
+    Be aware that in such cases, the `DIRECT` directive is silently ignored.
 
 ## Installation for larger systems (e.g. clusters) { #native-install-on-clusters }
 
@@ -124,14 +132,14 @@ More advanced use cases can be found in [the CernVM-FS documentation](https://cv
 If you have set up your own Stratum 1 mirror server that replicates the EESSI CernVM-FS repositories,
 you can instruct your CernVM-FS client(s) to use it by prepending your newly created Stratum 1 to the existing list of EESSI Stratum 1 servers by creating a local CVMFS configuration file for the EESSI domain:
 
-```bash
+``` { .bash .copy }
 echo 'CVMFS_SERVER_URL="http://<url-or-ip-to-your-stratum1>/cvmfs/@fqrn@;$CVMFS_SERVER_URL"' | sudo tee -a /etc/cvmfs/domain.d/eessi.io.local
 ```
 
 It is also strongly recommended to disable the GEO API when using a private Stratum 1, because you want your private Stratum 1 to be picked first anyway.
 In order to do this, add the following to `/etc/cvmfs/domain.d/eessi.io.local`:
 
-```bash
+``` { .bash .copy }
 CVMFS_USE_GEOAPI=no
 ```
 
@@ -145,13 +153,13 @@ CVMFS_USE_GEOAPI=no
 After you have made any changes to the CernVM-FS client configuration, you will have to apply them.
 If this is the first time you set up the client, you can simply run:
 
-```bash
+``` { .bash .copy }
 sudo cvmfs_config setup
 ```
 
 If you already had configured the client before, you can reload the configuration for the EESSI repository (or, similarly, for any other repository) using:
 
-```bash
+``` { .bash .copy }
 sudo cvmfs_config reload -c software.eessi.io
 ```
 

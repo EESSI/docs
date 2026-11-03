@@ -546,7 +546,6 @@ sudo apt-get update
 sudo apt-get install -y squid
 
 echo "Creating squid config"
-``` { .bash .copy }
 sudo bash -c "cat > /etc/squid/squid.conf" <<EOF
 # List of local IP addresses (separate IPs and/or CIDR notation) allowed to access your local proxy
 acl local_nodes src $client_ip_range_CIDR
