@@ -249,6 +249,12 @@ Vega is the EuroHPC JU supercomputer hosted by the [Institute for Information Sc
 
 ## Systems outside of Europe
 
+### Canada
+
+#### Digital Research Alliance of Canada
+
+* Fir, Narval, Nibi, Rorqual, Tamia, and Trillium: [General documentation](https://docs.alliancecan.ca/wiki/Technical_documentation)
+
 ### United States of America
 
 #### Michigan State University
