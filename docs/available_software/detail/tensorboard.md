@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''2.18.0'', ''2.15.1'']'
+  softwareVersion: '[''2.20.0'', ''2.18.0'', ''2.15.1'']'
   url: https://github.com/tensorflow/tensorboard
 ---
 # tensorboard
@@ -40,6 +40,7 @@ understanding your TensorFlow runs and graphs.
 
 |tensorboard version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|2.20.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`tensorboard/2.20.0-gfbf-2025b`|
 |2.18.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`tensorboard/2.18.0-gfbf-2024a`|
 |2.15.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`tensorboard/2.15.1-gfbf-2023a`|
 
@@ -96,6 +97,7 @@ Overview of extensions included in tensorboard installations
 
 |`Markdown` version|tensorboard modules that include it|
 | --- | --- |
+|3.10.2|`tensorboard/2.20.0-gfbf-2025b`|
 |3.5.2|`tensorboard/2.15.1-gfbf-2023a`|
 
 ### oauthlib
@@ -132,8 +134,16 @@ Overview of extensions included in tensorboard installations
 
 |`tensorboard` version|tensorboard modules that include it|
 | --- | --- |
+|2.20.0|`tensorboard/2.20.0-gfbf-2025b`|
 |2.18.0|`tensorboard/2.18.0-gfbf-2024a`|
 |2.15.1|`tensorboard/2.15.1-gfbf-2023a`|
+
+### tensorboard-data-server
+
+
+|`tensorboard-data-server` version|tensorboard modules that include it|
+| --- | --- |
+|0.7.2|`tensorboard/2.20.0-gfbf-2025b`|
 
 ### tensorboard-plugin-profile
 
@@ -154,5 +164,6 @@ Overview of extensions included in tensorboard installations
 
 |`Werkzeug` version|tensorboard modules that include it|
 | --- | --- |
+|3.1.8|`tensorboard/2.20.0-gfbf-2025b`|
 |3.1.3|`tensorboard/2.18.0-gfbf-2024a`|
 |3.0.1|`tensorboard/2.15.1-gfbf-2023a`|
