@@ -26,7 +26,7 @@ No guarantees can be made on the time required to address security issues, as mi
 
 Known security issues will be prioritized based on risk, potential impact, and how commonly the software is assumed to be used.
 
-The primary focus with respect to addressing security issues relevant for the [main production repository `software.eessi.io`](../repositories/software.eessi.io.md).
+The primary focus with respect to addressing security issues is on ones that are relevant for the [main production repository `software.eessi.io`](../repositories/software.eessi.io.md).
 
 #### 1.2 Reporting security issues { #security-reports }
 
