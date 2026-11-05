@@ -1601,7 +1601,7 @@ Overview of extensions included in Perl installations
 
 |`Mozilla::CA` version|Perl modules that include it|
 | --- | --- |
-|20211001|`Perl/5.36.0-GCCcore-12.2.0`|
+|20261020|`Perl/5.36.0-GCCcore-12.2.0`|
 
 ### MRO::Compat
 
