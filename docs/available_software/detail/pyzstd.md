@@ -46,6 +46,7 @@ The API style is similar to Python's bz2/lzma/zlib modules.
 
 |pyzstd version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.19.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`pyzstd/0.19.0-GCCcore-14.3.0`|
 |0.19.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`pyzstd/0.19.0-GCCcore-14.2.0`|
 |0.16.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`pyzstd/0.16.2-GCCcore-13.3.0`|
 
@@ -59,11 +60,11 @@ Overview of extensions included in pyzstd installations
 
 |`backports.zstd` version|pyzstd modules that include it|
 | --- | --- |
-|1.2.0|`pyzstd/0.19.0-GCCcore-14.2.0`|
+|1.2.0|`pyzstd/0.19.0-GCCcore-14.3.0`<br/>`pyzstd/0.19.0-GCCcore-14.2.0`|
 
 ### pyzstd
 
 
 |`pyzstd` version|pyzstd modules that include it|
 | --- | --- |
-|0.19.0|`pyzstd/0.19.0-GCCcore-14.2.0`|
+|0.19.0|`pyzstd/0.19.0-GCCcore-14.3.0`<br/>`pyzstd/0.19.0-GCCcore-14.2.0`|

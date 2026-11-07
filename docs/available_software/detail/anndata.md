@@ -23,7 +23,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''0.10.5.post1'']'
+  softwareVersion: '[''0.12.16'', ''0.10.5.post1'']'
   url: https://github.com/scverse/anndata
 ---
 # anndata
@@ -39,6 +39,7 @@ anndata is a Python package for handling annotated data matrices in memory and o
 
 |anndata version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.12.16|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`anndata/0.12.16-foss-2025b`|
 |0.10.5.post1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`anndata/0.10.5.post1-foss-2023a`|
 
 ## Extensions
@@ -51,6 +52,7 @@ Overview of extensions included in anndata installations
 
 |`anndata` version|anndata modules that include it|
 | --- | --- |
+|0.12.16|`anndata/0.12.16-foss-2025b`|
 |0.10.5.post1|`anndata/0.10.5.post1-foss-2023a`|
 
 ### array_api_compat
@@ -58,14 +60,22 @@ Overview of extensions included in anndata installations
 
 |`array_api_compat` version|anndata modules that include it|
 | --- | --- |
+|1.15.0|`anndata/0.12.16-foss-2025b`|
 |1.4.1|`anndata/0.10.5.post1-foss-2023a`|
+
+### legacy_api_wrap
+
+
+|`legacy_api_wrap` version|anndata modules that include it|
+| --- | --- |
+|1.5|`anndata/0.12.16-foss-2025b`|
 
 ### natsort
 
 
 |`natsort` version|anndata modules that include it|
 | --- | --- |
-|8.4.0|`anndata/0.10.5.post1-foss-2023a`|
+|8.4.0|`anndata/0.12.16-foss-2025b`<br/>`anndata/0.10.5.post1-foss-2023a`|
 
 ### packaging
 
@@ -73,3 +83,17 @@ Overview of extensions included in anndata installations
 |`packaging` version|anndata modules that include it|
 | --- | --- |
 |23.2|`anndata/0.10.5.post1-foss-2023a`|
+
+### scverse-misc
+
+
+|`scverse-misc` version|anndata modules that include it|
+| --- | --- |
+|0.0.8|`anndata/0.12.16-foss-2025b`|
+
+### session-info2
+
+
+|`session-info2` version|anndata modules that include it|
+| --- | --- |
+|0.4.1|`anndata/0.12.16-foss-2025b`|
