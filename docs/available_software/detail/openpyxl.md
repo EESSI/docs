@@ -37,6 +37,7 @@ A Python library to read/write Excel 2010 xlsx/xlsm files
 
 |openpyxl version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|3.1.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`openpyxl/3.1.5-GCCcore-15.2.0`|
 |3.1.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`openpyxl/3.1.5-GCCcore-14.2.0`|
 
 ## Extensions
@@ -49,18 +50,18 @@ Overview of extensions included in openpyxl installations
 
 |`et_xmlfile` version|openpyxl modules that include it|
 | --- | --- |
-|2.0.0|`openpyxl/3.1.5-GCCcore-14.2.0`|
+|2.0.0|`openpyxl/3.1.5-GCCcore-15.2.0`<br/>`openpyxl/3.1.5-GCCcore-14.2.0`|
 
 ### jdcal
 
 
 |`jdcal` version|openpyxl modules that include it|
 | --- | --- |
-|1.4.1|`openpyxl/3.1.5-GCCcore-14.2.0`|
+|1.4.1|`openpyxl/3.1.5-GCCcore-15.2.0`<br/>`openpyxl/3.1.5-GCCcore-14.2.0`|
 
 ### openpyxl
 
 
 |`openpyxl` version|openpyxl modules that include it|
 | --- | --- |
-|3.1.5|`openpyxl/3.1.5-GCCcore-14.2.0`|
+|3.1.5|`openpyxl/3.1.5-GCCcore-15.2.0`<br/>`openpyxl/3.1.5-GCCcore-14.2.0`|

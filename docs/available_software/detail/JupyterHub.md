@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''5.4.2'']'
+  softwareVersion: '[''5.5.0'', ''5.4.2'']'
   url: https://jupyter.org
 ---
 # JupyterHub
@@ -40,6 +40,7 @@ JupyterHub is a multiuser version of the Jupyter (IPython) notebook designed
 
 |JupyterHub version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|5.5.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`JupyterHub/5.5.0-GCCcore-15.2.0`|
 |5.4.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ## Extensions
@@ -59,13 +60,14 @@ Overview of extensions included in JupyterHub installations
 
 |`batchspawner` version|JupyterHub modules that include it|
 | --- | --- |
-|1.3.0|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|1.3.0|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### certipy
 
 
 |`certipy` version|JupyterHub modules that include it|
 | --- | --- |
+|0.2.3|`JupyterHub/5.5.0-GCCcore-15.2.0`|
 |0.2.2|`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### jupyter-events
@@ -73,6 +75,7 @@ Overview of extensions included in JupyterHub installations
 
 |`jupyter-events` version|JupyterHub modules that include it|
 | --- | --- |
+|0.12.1|`JupyterHub/5.5.0-GCCcore-15.2.0`|
 |0.12.0|`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### jupyter-telemetry
@@ -87,6 +90,7 @@ Overview of extensions included in JupyterHub installations
 
 |`jupyterhub` version|JupyterHub modules that include it|
 | --- | --- |
+|5.5.0|`JupyterHub/5.5.0-GCCcore-15.2.0`|
 |5.4.2|`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### jupyterhub-jwtauthenticator-v2
@@ -94,63 +98,70 @@ Overview of extensions included in JupyterHub installations
 
 |`jupyterhub-jwtauthenticator-v2` version|JupyterHub modules that include it|
 | --- | --- |
-|2.0.3|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|2.0.3|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### jupyterhub-ldapauthenticator
 
 
 |`jupyterhub-ldapauthenticator` version|JupyterHub modules that include it|
 | --- | --- |
-|2.0.2|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|2.0.2|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### jupyterhub-nativeauthenticator
 
 
 |`jupyterhub-nativeauthenticator` version|JupyterHub modules that include it|
 | --- | --- |
-|1.3.0|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|1.3.0|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### jupyterhub-simplespawner
 
 
 |`jupyterhub-simplespawner` version|JupyterHub modules that include it|
 | --- | --- |
-|0.1|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|0.1|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### jupyterhub-systemdspawner
 
 
 |`jupyterhub-systemdspawner` version|JupyterHub modules that include it|
 | --- | --- |
-|1.0.2|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|1.0.2|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### ldap3
 
 
 |`ldap3` version|JupyterHub modules that include it|
 | --- | --- |
-|2.9.1|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|2.9.1|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### oauthlib
 
 
 |`oauthlib` version|JupyterHub modules that include it|
 | --- | --- |
-|3.3.1|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|3.3.1|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### onetimepass
 
 
 |`onetimepass` version|JupyterHub modules that include it|
 | --- | --- |
-|1.0.1|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|1.0.1|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### pamela
 
 
 |`pamela` version|JupyterHub modules that include it|
 | --- | --- |
-|1.2.0|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+|1.2.0|`JupyterHub/5.5.0-GCCcore-15.2.0`<br/>`JupyterHub/5.4.2-GCCcore-14.3.0`|
+
+### prometheus-client
+
+
+|`prometheus-client` version|JupyterHub modules that include it|
+| --- | --- |
+|0.25.0|`JupyterHub/5.5.0-GCCcore-15.2.0`|
 
 ### prometheus_client
 
@@ -166,6 +177,13 @@ Overview of extensions included in JupyterHub installations
 | --- | --- |
 |2.10.1|`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
+### pyjwt
+
+
+|`pyjwt` version|JupyterHub modules that include it|
+| --- | --- |
+|2.13.0|`JupyterHub/5.5.0-GCCcore-15.2.0`|
+
 ### pyOpenSSL
 
 
@@ -178,6 +196,7 @@ Overview of extensions included in JupyterHub installations
 
 |`python-json-logger` version|JupyterHub modules that include it|
 | --- | --- |
+|4.1.0|`JupyterHub/5.5.0-GCCcore-15.2.0`|
 |4.0.0|`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
 ### rfc3339-validator
@@ -187,12 +206,26 @@ Overview of extensions included in JupyterHub installations
 | --- | --- |
 |0.1.4|`JupyterHub/5.4.2-GCCcore-14.3.0`|
 
+### rfc3339_validator
+
+
+|`rfc3339_validator` version|JupyterHub modules that include it|
+| --- | --- |
+|0.1.4|`JupyterHub/5.5.0-GCCcore-15.2.0`|
+
 ### rfc3986-validator
 
 
 |`rfc3986-validator` version|JupyterHub modules that include it|
 | --- | --- |
 |0.1.1|`JupyterHub/5.4.2-GCCcore-14.3.0`|
+
+### rfc3986_validator
+
+
+|`rfc3986_validator` version|JupyterHub modules that include it|
+| --- | --- |
+|0.1.1|`JupyterHub/5.5.0-GCCcore-15.2.0`|
 
 ### ruamel.yaml
 
