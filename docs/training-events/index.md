@@ -4,7 +4,7 @@
 
 ## 2027
 
-* [Pre-FOSDEM EESSI hackathon](2027/pre-fosdem-hackathon.md) (27-28 Jan 2026, Brussels)
+* [Pre-FOSDEM EESSI hackathon](2027/pre-fosdem-hackathon.md) (Thu+Fri 27-28 Jan 2027, Brussels)
 
 ## 2026
 
