@@ -38,7 +38,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ### 💡 **Next session**: TBD
 ### Topic Series: Happy Hour Restart!
 🗓️ Schedule
-#### Friday 20 November 2026, 13:00-14:00 CE(S)T
+#### Friday 20 November 2026, 13:00-14:00 CET
 
 ---
 ### Upcoming sessions:
