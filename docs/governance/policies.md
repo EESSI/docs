@@ -42,7 +42,7 @@ If you feel you need to escalate the reported security issue, please contact one
 
 ### 2. Build and Deployment Policies { #build-deployment-policy }
 
-#### 2.1 Architecture Support { #supported-architecures }
+#### 2.1 Architecture Support { #supported-architectures }
 
 - EESSI aims to build and support software for a wide range of relevant hardware architectures. Currently supported CPU microarchitectures are listed [here](../software_layer/cpu_targets.md).
 - If a package is unavailable for a specific CPU microarchitecture, a clear runtime message (e.g., via modulefile error) should be provided to the user.
@@ -53,7 +53,7 @@ If you feel you need to escalate the reported security issue, please contact one
 Reproducibility is important in scientific computing. Thus, we exercise restraint in rebuilding software. A list of scenarios in which software may be rebuilt is:
 
 - The software installation contained security vulnerabilities;
-- There were updates to the (list of) dependencies, e.g. some optional dependency was missing which restricted functionality of the original installation;
+- There were updates to the (list of) dependencies, e.g., some optional dependency was missing which restricted functionality of the original installation;
 - There were (unintended) differences between the software installations for different (micro)architectures;
 - The original installation (or a substantial part thereof) was found to be broken. Note that this does _not_ apply to small bugs;
 - Mistakes in the original installation prevent it from being used as a dependency for other software.
@@ -138,4 +138,4 @@ There are no Team Policies yet.
 ## Changelog { #changelog }
 
 - 2 November 2026: Security policy added
-- 4 August 2025: First version publishe§d
+- 4 August 2025: First version published
