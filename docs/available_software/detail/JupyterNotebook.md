@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''7.4.7'', ''7.4.4'', ''7.2.3'', ''7.2.0'', ''7.0.2'']'
+  softwareVersion: '[''7.5.7'', ''7.4.7'', ''7.4.4'', ''7.2.3'', ''7.2.0'', ''7.0.2'']'
   url: https://jupyter.org/
 ---
 # JupyterNotebook
@@ -40,6 +40,7 @@ The Jupyter Notebook is the original web application for creating and
 
 |JupyterNotebook version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|7.5.7|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`JupyterNotebook/7.5.7-GCCcore-15.2.0`|
 |7.4.7|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterNotebook/7.4.7-GCCcore-14.3.0`|
 |7.4.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterNotebook/7.4.4-GCCcore-14.2.0`|
 |7.2.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`JupyterNotebook/7.2.3-GCCcore-13.3.0`|
@@ -56,6 +57,7 @@ Overview of extensions included in JupyterNotebook installations
 
 |`notebook` version|JupyterNotebook modules that include it|
 | --- | --- |
+|7.5.7|`JupyterNotebook/7.5.7-GCCcore-15.2.0`|
 |7.4.7|`JupyterNotebook/7.4.7-GCCcore-14.3.0`|
 |7.4.4|`JupyterNotebook/7.4.4-GCCcore-14.2.0`|
 |7.2.3|`JupyterNotebook/7.2.3-GCCcore-13.3.0`|
