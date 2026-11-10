@@ -21,6 +21,7 @@ Feel free to get in touch with them if you have any questions regarding EESSI.
 * Bob Dröge (University of Groningen, The Netherlands)
 * Miguel Dias Costa (University of Coimbra, Portugal)
 * Abdullatif Eymash (High-Performance Computing Center Stuttgart, Germany)
+* Jean-Noël Grad (University of Stuttgart, Germany)
 * Kenneth Hoste (Ghent University, Belgium)
 * Bernardo Malaca (Centro Nacional de Computação Avançada, Portugal)
 * Adam McCartney (Austrian Scientific Computing, Austria)
