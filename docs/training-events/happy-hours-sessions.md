@@ -35,7 +35,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
     We are trying out a new **monthly** schedule! Going forward, we aim to host EESSI Happy Hours on weeks when 
     other community meetings take place. Come try out our new sessions!
 
-### 💡 **Next session**: TBD
+### 💡 **Next session**: EESSI releases and DOIs
 ### Topic Series: Happy Hour Restart!
 🗓️ Schedule
 #### Friday 20 November 2026, 13:00-14:00 CET
@@ -43,7 +43,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ---
 ### Upcoming sessions:
 
-- 18 December 2026, 13:00-14:00 CET
+- 18 December 2026, 13:00-14:00 CET - EESSI version 2026.06
 
 ---
 
