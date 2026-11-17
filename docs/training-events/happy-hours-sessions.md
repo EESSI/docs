@@ -43,7 +43,7 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 ---
 ### Upcoming sessions:
 
-- 11 December 2026 
+- 18 December 2026, 13:00-14:00 CET
 
 ---
 
