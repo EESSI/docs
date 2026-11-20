@@ -11,7 +11,7 @@ Find slides, and video recordings of earlier sessions below.
 **Outline:** EESSI releases and DOIs
 ([Slides (PDF)](EESSI-happyhour-2026-020-EESSI-releases-DOIs.pdf), [Recording (YouTube)](https://www.youtube.com/PLACEHOLDER))
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xokal8XPjGQ?si=moqr8EDRqiJ5S0IJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PLACEHOLDER" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Friday 30 October 2026
 
