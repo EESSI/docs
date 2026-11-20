@@ -23,7 +23,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.8.1'']'
+  softwareVersion: '[''3.10.3'', ''3.8.1'']'
   url: https://www.nltk.org/
 ---
 # NLTK
@@ -38,12 +38,20 @@ NLTK is a leading platform for building Python programs to work with human langu
 
 |NLTK version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|3.10.3|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`NLTK/3.10.3-foss-2025b`|
 |3.8.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`NLTK/3.8.1-foss-2023b`|
 
 ## Extensions
 
 Overview of extensions included in NLTK installations
 
+
+### defusedxml
+
+
+|`defusedxml` version|NLTK modules that include it|
+| --- | --- |
+|0.7.1|`NLTK/3.10.3-foss-2025b`|
 
 ### NLTK
 
@@ -52,11 +60,19 @@ Overview of extensions included in NLTK installations
 | --- | --- |
 |3.8.1|`NLTK/3.8.1-foss-2023b`|
 
+### nltk
+
+
+|`nltk` version|NLTK modules that include it|
+| --- | --- |
+|3.10.3|`NLTK/3.10.3-foss-2025b`|
+
 ### python-crfsuite
 
 
 |`python-crfsuite` version|NLTK modules that include it|
 | --- | --- |
+|0.9.12|`NLTK/3.10.3-foss-2025b`|
 |0.9.10|`NLTK/3.8.1-foss-2023b`|
 
 ### regex
@@ -64,4 +80,5 @@ Overview of extensions included in NLTK installations
 
 |`regex` version|NLTK modules that include it|
 | --- | --- |
+|2026.9.10|`NLTK/3.10.3-foss-2025b`|
 |2023.12.25|`NLTK/3.8.1-foss-2023b`|
