@@ -53,6 +53,7 @@ PyTables is a package for managing hierarchical datasets and designed to efficie
 |PyTables version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
 |3.10.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`PyTables/3.10.2-foss-2025b`|
+|3.10.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`PyTables/3.10.2-foss-2025a`|
 |3.9.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`PyTables/3.9.2-foss-2023b`|
 
 ## Extensions
@@ -66,6 +67,7 @@ Overview of extensions included in PyTables installations
 |`blosc2` version|PyTables modules that include it|
 | --- | --- |
 |3.6.1|`PyTables/3.10.2-foss-2025b`|
+|3.5.1|`PyTables/3.10.2-foss-2025a`|
 |2.5.1|`PyTables/3.9.2-foss-2023b`|
 
 ### ndindex
@@ -73,7 +75,7 @@ Overview of extensions included in PyTables installations
 
 |`ndindex` version|PyTables modules that include it|
 | --- | --- |
-|1.10.0|`PyTables/3.10.2-foss-2025b`|
+|1.10.0|`PyTables/3.10.2-foss-2025b`<br/>`PyTables/3.10.2-foss-2025a`|
 |1.8|`PyTables/3.9.2-foss-2023b`|
 
 ### tables
@@ -81,5 +83,5 @@ Overview of extensions included in PyTables installations
 
 |`tables` version|PyTables modules that include it|
 | --- | --- |
-|3.10.2|`PyTables/3.10.2-foss-2025b`|
+|3.10.2|`PyTables/3.10.2-foss-2025b`<br/>`PyTables/3.10.2-foss-2025a`|
 |3.9.2|`PyTables/3.9.2-foss-2023b`|
