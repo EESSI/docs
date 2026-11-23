@@ -41,7 +41,7 @@ Check out the short recording of this festive moment on the Supercomputing exhib
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-XpbuF9nSVU?si=K4HOZVP5tmcttZxt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-We feel this award is well deserved, see also [our earlier blog post](../09/hpcwire-readers-choice-awards-2026.md) summarizing the progress we have made
+We feel this award is well deserved, see also [our earlier blog post](../09/vote-hpcwire-award-again.md) summarizing the progress we have made
 since November 2024.
 
 For the full list of HPCWire award winners, <a href="https://www.hpcwire.com/2026-hpcwire-awards-readers-editors-choice/" target="_blank">see HPCwire</a>.
