@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''6.2.0'', ''5.1.1'', ''5.0.1'']'
+  softwareVersion: '[''6.4.0'', ''6.2.0'', ''5.1.1'', ''5.0.1'']'
   url: https://github.com/redis/redis-py
 ---
 # redis-py
@@ -37,6 +37,7 @@ The Python interface to the Redis key-value store.
 
 |redis-py version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|6.4.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`redis-py/6.4.0-GCCcore-14.3.0`|
 |6.2.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`redis-py/6.2.0-GCCcore-14.2.0`|
 |5.1.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`redis-py/5.1.1-GCCcore-13.3.0`|
 |5.0.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`redis-py/5.0.1-GCCcore-12.3.0`|
@@ -58,13 +59,14 @@ Overview of extensions included in redis-py installations
 
 |`async_timeout` version|redis-py modules that include it|
 | --- | --- |
-|5.0.1|`redis-py/6.2.0-GCCcore-14.2.0`|
+|5.0.1|`redis-py/6.4.0-GCCcore-14.3.0`<br/>`redis-py/6.2.0-GCCcore-14.2.0`|
 
 ### redis-py
 
 
 |`redis-py` version|redis-py modules that include it|
 | --- | --- |
+|6.4.0|`redis-py/6.4.0-GCCcore-14.3.0`|
 |6.2.0|`redis-py/6.2.0-GCCcore-14.2.0`|
 |5.1.1|`redis-py/5.1.1-GCCcore-13.3.0`|
 |5.0.1|`redis-py/5.0.1-GCCcore-12.3.0`|
