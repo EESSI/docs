@@ -55,7 +55,7 @@ See the full Recordings, slides, and materials here: [Previous Sessions & Videos
 
 *Topic series: Happy Hour Restart!*
 
-- 20 Nov 2026 [EESSI releases and DOIs](PLACEHOLDER)
+- 20 Nov 2026 [EESSI releases and DOIs](https://www.youtube.com/watch?v=0VOAnuULzBk)
 
 - 30 Oct 2026 - [EESSI at the EuroHPC User Days 2026 Dublin](https://www.youtube.com/watch?v=xokal8XPjGQ)
 
