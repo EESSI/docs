@@ -39,6 +39,7 @@ Read, write and analyze MD trajectories with only a few lines of Python code.
 |MDTraj version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
 |1.11.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`MDTraj/1.11.0-foss-2025b`|
+|1.11.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`MDTraj/1.11.0-foss-2025a`|
 
 ## Extensions
 
@@ -57,7 +58,7 @@ Overview of extensions included in MDTraj installations
 
 |`mdtraj` version|MDTraj modules that include it|
 | --- | --- |
-|1.11.0|`MDTraj/1.11.0-foss-2025b`|
+|1.11.0|`MDTraj/1.11.0-foss-2025b`<br/>`MDTraj/1.11.0-foss-2025a`|
 
 ### pyparsing
 
@@ -65,6 +66,7 @@ Overview of extensions included in MDTraj installations
 |`pyparsing` version|MDTraj modules that include it|
 | --- | --- |
 |3.2.5|`MDTraj/1.11.0-foss-2025b`|
+|3.2.3|`MDTraj/1.11.0-foss-2025a`|
 
 ### pytest_rerunfailures
 

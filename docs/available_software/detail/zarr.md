@@ -24,7 +24,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.1.5'']'
+  softwareVersion: '[''3.1.5'', ''3.1.1'']'
   url: https://zarr.readthedocs.io/en/stable/
 ---
 # zarr
@@ -41,6 +41,7 @@ chunked, N-dimensional arrays, designed for use in parallel computing.
 |zarr version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
 |3.1.5|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`zarr/3.1.5-gfbf-2025b`|
+|3.1.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`zarr/3.1.1-gfbf-2025a`|
 
 ## Extensions
 
@@ -53,13 +54,14 @@ Overview of extensions included in zarr installations
 |`crc32c` version|zarr modules that include it|
 | --- | --- |
 |2.8|`zarr/3.1.5-gfbf-2025b`|
+|2.7.1|`zarr/3.1.1-gfbf-2025a`|
 
 ### donfig
 
 
 |`donfig` version|zarr modules that include it|
 | --- | --- |
-|0.8.1.post1|`zarr/3.1.5-gfbf-2025b`|
+|0.8.1.post1|`zarr/3.1.5-gfbf-2025b`<br/>`zarr/3.1.1-gfbf-2025a`|
 
 ### google-crc32c
 
@@ -81,6 +83,7 @@ Overview of extensions included in zarr installations
 |`numcodecs` version|zarr modules that include it|
 | --- | --- |
 |0.16.5|`zarr/3.1.5-gfbf-2025b`|
+|0.16.1|`zarr/3.1.1-gfbf-2025a`|
 
 ### zarr
 
@@ -88,3 +91,4 @@ Overview of extensions included in zarr installations
 |`zarr` version|zarr modules that include it|
 | --- | --- |
 |3.1.5|`zarr/3.1.5-gfbf-2025b`|
+|3.1.1|`zarr/3.1.1-gfbf-2025a`|
