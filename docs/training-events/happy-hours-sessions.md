@@ -6,7 +6,7 @@ _provided by [EuroHPC CoE MultiXscale](https://www.multixscale.eu)_
 
 The European Environment for Scientific Software Installations [EESSI](https://eessi.io) comes to the rescue!
 
-Join us for EESSI Happy Hour, an informal, weekly online session to explore and discuss key EESSI topics and updates with the community.
+Join us for EESSI Happy Hour, an informal, ~~weekly~~ **monthly**  online session to explore and discuss key EESSI topics and updates with the community.
 
 Each series will focus on a specific main topic over several sessions, giving participants the opportunity to ask questions, get hands-on guidance, and share experiences.
 
@@ -35,10 +35,15 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
     We are trying out a new **monthly** schedule! Going forward, we aim to host EESSI Happy Hours on weeks when 
     other community meetings take place. Come try out our new sessions!
 
-### 💡 **Next session**: EESSI at the EuroHPC User Days 2026 Dublin
+### 💡 **Next session**: EESSI version 2026.06
 ### Topic Series: Happy Hour Restart!
 🗓️ Schedule
-#### Friday 30 October 2026, 13:00-14:00 CET
+#### Friday 18 December 2026, 13:00-14:00 CET
+
+---
+### Upcoming sessions:
+
+- Sessions in 2027 TBD!
 
 ---
 
@@ -47,6 +52,12 @@ If you haven't joined the EESSI Slack yet, [click here to join]({{ config.extra.
 [**YouTube playlist with recordings**](https://www.youtube.com/playlist?list=PL6_PkP_6pUtbzPBB1wZTdsrJgj6EbO-AS)
 
 See the full Recordings, slides, and materials here: [Previous Sessions & Videos](2026/happy-hours-previous-sessions.md)
+
+*Topic series: Happy Hour Restart!*
+
+- 20 Nov 2026 [EESSI releases and DOIs](https://www.youtube.com/watch?v=0VOAnuULzBk)
+
+- 30 Oct 2026 - [EESSI at the EuroHPC User Days 2026 Dublin](https://www.youtube.com/watch?v=xokal8XPjGQ)
 
 *Topic series: EESSI Mix and Match*
 

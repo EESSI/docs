@@ -27,7 +27,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''0.25.0'']'
+  softwareVersion: '[''0.26.1'', ''0.25.0'']'
   url: https://python.org/
 ---
 # plumpy
@@ -44,6 +44,7 @@ inputs and outputs that can be strung together.
 
 |plumpy version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|0.26.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`plumpy/0.26.1-GCCcore-14.3.0`|
 |0.25.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`plumpy/0.25.0-GCCcore-12.3.0`|
 
 ## Extensions
@@ -56,6 +57,7 @@ Overview of extensions included in plumpy installations
 
 |`aio-pika` version|plumpy modules that include it|
 | --- | --- |
+|9.5.8|`plumpy/0.26.1-GCCcore-14.3.0`|
 |9.4.3|`plumpy/0.25.0-GCCcore-12.3.0`|
 
 ### aiormq
@@ -63,6 +65,7 @@ Overview of extensions included in plumpy installations
 
 |`aiormq` version|plumpy modules that include it|
 | --- | --- |
+|6.9.4|`plumpy/0.26.1-GCCcore-14.3.0`|
 |6.8.1|`plumpy/0.25.0-GCCcore-12.3.0`|
 
 ### deprecation
@@ -70,13 +73,21 @@ Overview of extensions included in plumpy installations
 
 |`deprecation` version|plumpy modules that include it|
 | --- | --- |
-|2.1.0|`plumpy/0.25.0-GCCcore-12.3.0`|
+|2.1.0|`plumpy/0.26.1-GCCcore-14.3.0`<br/>`plumpy/0.25.0-GCCcore-12.3.0`|
+
+### greenback
+
+
+|`greenback` version|plumpy modules that include it|
+| --- | --- |
+|1.3.0|`plumpy/0.26.1-GCCcore-14.3.0`|
 
 ### kiwipy
 
 
 |`kiwipy` version|plumpy modules that include it|
 | --- | --- |
+|0.9.0|`plumpy/0.26.1-GCCcore-14.3.0`|
 |0.8.5|`plumpy/0.25.0-GCCcore-12.3.0`|
 
 ### nest-asyncio
@@ -86,23 +97,45 @@ Overview of extensions included in plumpy installations
 | --- | --- |
 |1.6.0|`plumpy/0.25.0-GCCcore-12.3.0`|
 
+### outcome
+
+
+|`outcome` version|plumpy modules that include it|
+| --- | --- |
+|1.3.0|`plumpy/0.26.1-GCCcore-14.3.0`|
+
 ### pamqp
 
 
 |`pamqp` version|plumpy modules that include it|
 | --- | --- |
-|3.3.0|`plumpy/0.25.0-GCCcore-12.3.0`|
+|3.3.0|`plumpy/0.26.1-GCCcore-14.3.0`<br/>`plumpy/0.25.0-GCCcore-12.3.0`|
 
 ### plumpy
 
 
 |`plumpy` version|plumpy modules that include it|
 | --- | --- |
+|0.26.1|`plumpy/0.26.1-GCCcore-14.3.0`|
 |0.25.0|`plumpy/0.25.0-GCCcore-12.3.0`|
+
+### pytray
+
+
+|`pytray` version|plumpy modules that include it|
+| --- | --- |
+|0.3.4|`plumpy/0.26.1-GCCcore-14.3.0`|
 
 ### shortuuid
 
 
 |`shortuuid` version|plumpy modules that include it|
 | --- | --- |
-|1.0.13|`plumpy/0.25.0-GCCcore-12.3.0`|
+|1.0.13|`plumpy/0.26.1-GCCcore-14.3.0`<br/>`plumpy/0.25.0-GCCcore-12.3.0`|
+
+### sniffio
+
+
+|`sniffio` version|plumpy modules that include it|
+| --- | --- |
+|1.3.1|`plumpy/0.26.1-GCCcore-14.3.0`|

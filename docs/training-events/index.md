@@ -1,12 +1,20 @@
 # Trainings & events related to EESSI
 
-## Upcoming events (2026)
+## Upcoming events
 
-* [*EESSI Hackathon @ EuroHPC User Days 2026*](2026/hackathon-eurohpc-user-days.md) (hybrid event, 25 September 2026)
-* [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** Monday, starting 12 January 2026)
+## 2027
+
+* [Pre-FOSDEM EESSI hackathon](2027/pre-fosdem-hackathon.md) (Thu+Fri 27-28 Jan 2027, Brussels)
+
+## 2026
+
+* [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** month, starting 30 October 2026)
+
+## Past events
 
 ### Past events (2026)
 
+* [*EESSI Hackathon @ EuroHPC User Days 2026*](2026/hackathon-eurohpc-user-days.md) (hybrid event, 25 September 2026)
 * EESSI tutorial @ ISC'26 (22 June 2026) - see [tutorial website](https://eessi.io/isc26-tutorial/)
 * [*EESSI webinar series (April-May 2026)*](2026/webinar-series-2026Q2.md) (online tutorials)
     * [**Introduction to EESSI** *(27 April 2026)*](2026/webinar-series-2026Q2.md#introduction-to-eessi)
@@ -14,6 +22,7 @@
     * [**Using EESSI for Continuous Integration** *(11 May 2026)*](2026/webinar-series-2026Q2.md#using-eessi-for-continuous-integration-ci)
     * [**Introduction to CernVM-FS** *(18 May 2026)*](2026/webinar-series-2026Q2.md#introduction-to-cernvm-fs)
     * [**Using EESSI as a base for a central software stack** (1 June 2026)](2026/webinar-series-2026Q2.md#using-eessi-as-a-base-for-a-central-software-stack)
+* [*EESSI happy hour sessions 2026*](./happy-hours-sessions.md) (online sessions **every** Monday, from January to June 2026)
 
 ### Past events (2025)
 

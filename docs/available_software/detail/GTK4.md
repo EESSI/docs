@@ -26,7 +26,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''4.20.2'', ''4.13.1'']'
+  softwareVersion: '[''4.22.5'', ''4.20.2'', ''4.13.1'']'
   url: https://docs.gtk.org/gtk4/
 ---
 # GTK4
@@ -46,6 +46,7 @@ GTK+ is the primary library used to construct user interfaces in GNOME. It
 
 |GTK4 version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|4.22.5|`generic`: `aarch64`, `x86_64`, `riscv64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`, `aws/graviton4`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`, `graniterapids`<br/>|*(none)*|<span class="software-eessi-version-202606">2026.06</span>|`GTK4/4.22.5-GCCcore-15.2.0`|
 |4.20.2|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`GTK4/4.20.2-GCCcore-14.3.0`|
 |4.13.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`GTK4/4.13.1-GCC-12.3.0`|
 
@@ -59,6 +60,7 @@ Overview of extensions included in GTK4 installations
 
 |`adwaita-icon-theme` version|GTK4 modules that include it|
 | --- | --- |
+|51.0|`GTK4/4.22.5-GCCcore-15.2.0`|
 |49.0|`GTK4/4.20.2-GCCcore-14.3.0`|
 |45.0|`GTK4/4.13.1-GCC-12.3.0`|
 
@@ -67,6 +69,7 @@ Overview of extensions included in GTK4 installations
 
 |`GTK` version|GTK4 modules that include it|
 | --- | --- |
+|4.22.5|`GTK4/4.22.5-GCCcore-15.2.0`|
 |4.20.2|`GTK4/4.20.2-GCCcore-14.3.0`|
 |4.13.1|`GTK4/4.13.1-GCC-12.3.0`|
 
@@ -75,5 +78,5 @@ Overview of extensions included in GTK4 installations
 
 |`hicolor-icon-theme` version|GTK4 modules that include it|
 | --- | --- |
-|0.18|`GTK4/4.20.2-GCCcore-14.3.0`|
+|0.18|`GTK4/4.22.5-GCCcore-15.2.0`<br/>`GTK4/4.20.2-GCCcore-14.3.0`|
 |0.17|`GTK4/4.13.1-GCC-12.3.0`|

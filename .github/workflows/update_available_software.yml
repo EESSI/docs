@@ -68,3 +68,4 @@ jobs:
           body: ''
           token: ${{ secrets.EESSIBOT_GITHUB_TOKEN }}
           push-to-fork: EESSIbot/docs
+          author: EESSIbot <90030231+EESSIbot@users.noreply.github.com>

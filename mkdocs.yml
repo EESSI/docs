@@ -95,7 +95,7 @@ nav:
     - Policies: governance/policies.md
     - Code of Conduct: governance/code_of_conduct.md
     - Terms of Use: governance/terms_of_use.md
-    - Current Steering Committee: governance/steering_committee.md
+    - Steering Committee: governance/steering_committee.md
   - Blog: blog/index.md
 plugins:
   - blog:
@@ -232,7 +232,7 @@ extra:
       icon: fontawesome/solid/rss
       link: https://eessi.io/docs/feed_json_created.json
   # this gets auto-updated via update_generated_time.sh script run in update_available_software.yml action
-  generated_time: "Sun, 25 Oct 2026 at 15:48:41 UTC"
+  generated_time: "Wed, 25 Nov 2026 at 20:55:22 UTC"
   slack_invite_url: "https://join.slack.com/t/eessi-hpc/shared_invite/zt-2wg10p26d-m_CnRB89xQq3zk9qxf1k3g"
 extra_javascript:
   # mermaid diagram

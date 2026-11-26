@@ -23,7 +23,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''7.0.0'']'
+  softwareVersion: '[''7.1.0'', ''7.0.0'']'
   url: https://www.astropy.org/
 ---
 # astropy-testing
@@ -38,6 +38,7 @@ This bundle contains all dependencies needed to test astropy using pytest.
 
 |astropy-testing version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|7.1.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`astropy-testing/7.1.0-gfbf-2025b`|
 |7.0.0|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`astropy-testing/7.0.0-gfbf-2023b`|
 
 ## Extensions
@@ -50,21 +51,21 @@ Overview of extensions included in astropy-testing installations
 
 |`pytest-arraydiff` version|astropy-testing modules that include it|
 | --- | --- |
-|0.6.1|`astropy-testing/7.0.0-gfbf-2023b`|
+|0.6.1|`astropy-testing/7.1.0-gfbf-2025b`<br/>`astropy-testing/7.0.0-gfbf-2023b`|
 
 ### pytest-astropy
 
 
 |`pytest-astropy` version|astropy-testing modules that include it|
 | --- | --- |
-|0.11.0|`astropy-testing/7.0.0-gfbf-2023b`|
+|0.11.0|`astropy-testing/7.1.0-gfbf-2025b`<br/>`astropy-testing/7.0.0-gfbf-2023b`|
 
 ### pytest-astropy-header
 
 
 |`pytest-astropy-header` version|astropy-testing modules that include it|
 | --- | --- |
-|0.2.2|`astropy-testing/7.0.0-gfbf-2023b`|
+|0.2.2|`astropy-testing/7.1.0-gfbf-2025b`<br/>`astropy-testing/7.0.0-gfbf-2023b`|
 
 ### pytest-cov
 
@@ -78,6 +79,7 @@ Overview of extensions included in astropy-testing installations
 
 |`pytest-doctestplus` version|astropy-testing modules that include it|
 | --- | --- |
+|1.4.0|`astropy-testing/7.1.0-gfbf-2025b`|
 |1.3.0|`astropy-testing/7.0.0-gfbf-2023b`|
 
 ### pytest-filter-subpackage
@@ -85,7 +87,7 @@ Overview of extensions included in astropy-testing installations
 
 |`pytest-filter-subpackage` version|astropy-testing modules that include it|
 | --- | --- |
-|0.2.0|`astropy-testing/7.0.0-gfbf-2023b`|
+|0.2.0|`astropy-testing/7.1.0-gfbf-2025b`<br/>`astropy-testing/7.0.0-gfbf-2023b`|
 
 ### pytest-mock
 
@@ -99,4 +101,18 @@ Overview of extensions included in astropy-testing installations
 
 |`pytest-remotedata` version|astropy-testing modules that include it|
 | --- | --- |
-|0.4.1|`astropy-testing/7.0.0-gfbf-2023b`|
+|0.4.1|`astropy-testing/7.1.0-gfbf-2025b`<br/>`astropy-testing/7.0.0-gfbf-2023b`|
+
+### pytest_cov
+
+
+|`pytest_cov` version|astropy-testing modules that include it|
+| --- | --- |
+|7.0.0|`astropy-testing/7.1.0-gfbf-2025b`|
+
+### pytest_mock
+
+
+|`pytest_mock` version|astropy-testing modules that include it|
+| --- | --- |
+|3.15.1|`astropy-testing/7.1.0-gfbf-2025b`|

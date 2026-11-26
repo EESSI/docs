@@ -22,7 +22,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''3.5.15'']'
+  softwareVersion: '[''3.6.4'', ''3.5.15'']'
   url: https://rpy2.github.io
 ---
 # rpy2
@@ -37,6 +37,7 @@ rpy2 is an interface to R running embedded in a Python process.
 
 |rpy2 version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|3.6.4|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`rpy2/3.6.4-foss-2025a`|
 |3.5.15|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`rpy2/3.5.15-foss-2023a`|
 
 ## Extensions
@@ -63,11 +64,27 @@ Overview of extensions included in rpy2 installations
 
 |`rpy2` version|rpy2 modules that include it|
 | --- | --- |
+|3.6.4|`rpy2/3.6.4-foss-2025a`|
 |3.5.15|`rpy2/3.5.15-foss-2023a`|
+
+### rpy2-rinterface
+
+
+|`rpy2-rinterface` version|rpy2 modules that include it|
+| --- | --- |
+|3.6.3|`rpy2/3.6.4-foss-2025a`|
+
+### rpy2-robjects
+
+
+|`rpy2-robjects` version|rpy2 modules that include it|
+| --- | --- |
+|3.6.3|`rpy2/3.6.4-foss-2025a`|
 
 ### tzlocal
 
 
 |`tzlocal` version|rpy2 modules that include it|
 | --- | --- |
+|5.3.1|`rpy2/3.6.4-foss-2025a`|
 |5.2|`rpy2/3.5.15-foss-2023a`|
