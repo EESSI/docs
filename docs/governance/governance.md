@@ -148,7 +148,9 @@ The Steering Committee shall be responsible for:
 
 ### 6.2 Members and Chairs
 
-The Steering Committee is made up of community members with sustained and recognized contributions over time. Members take part in the Steering Committee as private individuals (i.e. they do not represent their employer(s)).
+The Steering Committee is made up of community members, and should represent a broad spectrum of stakeholders of the project.
+
+Members take part in the Steering Committee as private individuals (i.e. they do not represent their employer(s)).
 
 #### 6.2.1 Termination of membership
 
