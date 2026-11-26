@@ -9,6 +9,6 @@ For more information:
 * Join our [mailing list](mailing_list.md)
 * Reach out to one of the [project partners](partners.md)
 * Check out our GitHub [repositories](https://github.com/EESSI)
-* Follow us on [Twitter](https://twitter.com/eessi_hpc)
+* Follow us on [BlueSky](https://bsky.app/profile/eessi.bsky.social)
 
 ![EESSI logo](img/logos/EESSI_logo_horizontal.jpg)
