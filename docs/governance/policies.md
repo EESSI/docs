@@ -120,4 +120,4 @@ This does not imply exclusion of other platforms, but reflects the project's pri
 
 # Changelog
 - 04 August 2025: First version published
-- 27 October 2026: Added Team Policies to prevent AI assistants / agents can interact with the bot
+- 26 November 2026: Added Team Policies to prevent AI assistants / agents can interact with the bot
