@@ -25,7 +25,7 @@ json_ld:
       ratingValue: 5
   softwareRequirements: See https://www.eessi.io/docs/ for how to make EESSI available
     on your system
-  softwareVersion: '[''7.520'', ''7.505'']'
+  softwareVersion: '[''7.526'', ''7.520'', ''7.505'']'
   url: https://mafft.cbrc.jp/alignment/software/source.html
 ---
 # MAFFT
@@ -42,6 +42,7 @@ of <∼200 sequences), FFT-NS-2 (fast; for alignment of <∼30,000 sequences), e
 
 |MAFFT version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
+|7.526|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`MAFFT/7.526-GCC-14.2.0-with-extensions`|
 |7.520|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`MAFFT/7.520-GCC-12.3.0-with-extensions`|
 |7.505|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202306">2023.06</span>|`MAFFT/7.505-GCC-12.2.0-with-extensions`|
 
@@ -55,6 +56,7 @@ Overview of extensions included in MAFFT installations
 
 |`MAFFT` version|MAFFT modules that include it|
 | --- | --- |
+|7.526|`MAFFT/7.526-GCC-14.2.0-with-extensions`|
 |7.520|`MAFFT/7.520-GCC-12.3.0-with-extensions`|
 |7.505|`MAFFT/7.505-GCC-12.2.0-with-extensions`|
 
@@ -63,5 +65,6 @@ Overview of extensions included in MAFFT installations
 
 |`MAFFT Extensions` version|MAFFT modules that include it|
 | --- | --- |
+|7.526|`MAFFT/7.526-GCC-14.2.0-with-extensions`|
 |7.520|`MAFFT/7.520-GCC-12.3.0-with-extensions`|
 |7.505|`MAFFT/7.505-GCC-12.2.0-with-extensions`|

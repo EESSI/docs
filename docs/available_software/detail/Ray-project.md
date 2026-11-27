@@ -39,6 +39,7 @@ Ray is a fast and simple framework for building and running distributed applicat
 |Ray-project version|Supported CPU targets|Supported GPU targets|EESSI version|Module|
 | --- | --- | --- | --- | --- |
 |2.47.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Ray-project/2.47.1-foss-2025b`|
+|2.47.1|`generic`: `aarch64`, `x86_64`<br/><span class="software-cpu-arm">Arm</span>: `a64fx`, `neoverse_n1`, `neoverse_v1`, `nvidia/grace`<br/><span class="software-cpu-amd">AMD</span>: `zen2`, `zen3`, `zen4`, `zen5`<br/><span class="software-cpu-intel">Intel</span>: `haswell`, `skylake_avx512`, `sapphirerapids`, `icelake`, `cascadelake`<br/>|*(none)*|<span class="software-eessi-version-202506">2025.06</span>|`Ray-project/2.47.1-foss-2025a`|
 
 ## Extensions
 
@@ -51,6 +52,7 @@ Overview of extensions included in Ray-project installations
 |`aiosignal` version|Ray-project modules that include it|
 | --- | --- |
 |1.4.0|`Ray-project/2.47.1-foss-2025b`|
+|1.3.2|`Ray-project/2.47.1-foss-2025a`|
 
 ### expandvars
 
@@ -58,6 +60,7 @@ Overview of extensions included in Ray-project installations
 |`expandvars` version|Ray-project modules that include it|
 | --- | --- |
 |1.1.2|`Ray-project/2.47.1-foss-2025b`|
+|1.0.0|`Ray-project/2.47.1-foss-2025a`|
 
 ### frozenlist
 
@@ -65,6 +68,7 @@ Overview of extensions included in Ray-project installations
 |`frozenlist` version|Ray-project modules that include it|
 | --- | --- |
 |1.8.0|`Ray-project/2.47.1-foss-2025b`|
+|1.7.0|`Ray-project/2.47.1-foss-2025a`|
 
 ### grpcio
 
@@ -72,17 +76,18 @@ Overview of extensions included in Ray-project installations
 |`grpcio` version|Ray-project modules that include it|
 | --- | --- |
 |1.75.1|`Ray-project/2.47.1-foss-2025b`|
+|1.73.1|`Ray-project/2.47.1-foss-2025a`|
 
 ### lz4
 
 
 |`lz4` version|Ray-project modules that include it|
 | --- | --- |
-|4.4.4|`Ray-project/2.47.1-foss-2025b`|
+|4.4.4|`Ray-project/2.47.1-foss-2025b`<br/>`Ray-project/2.47.1-foss-2025a`|
 
 ### Ray
 
 
 |`Ray` version|Ray-project modules that include it|
 | --- | --- |
-|2.47.1|`Ray-project/2.47.1-foss-2025b`|
+|2.47.1|`Ray-project/2.47.1-foss-2025b`<br/>`Ray-project/2.47.1-foss-2025a`|
