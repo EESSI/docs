@@ -42,9 +42,9 @@ dev.eessi.io-example
 
 !!! note "*the `X.patch` and `X.py` files are optional"
 
-    These files are [patch](https://docs.easybuild.io/patch-files/?h=patch) files (ending in `.patch`) or custom [easyblocks](https://docs.easybuild.io/terminology/#easyblocks) (ending in`.py`).
+    These files are [patch](https://docs.easybuild.io/patch-files/?h=patch) files (ending in `.patch`) or custom [easyblocks](https://docs.easybuild.io/terminology/#easyblocks) (ending in `.py`).
     They are not strictly necessary if your development build can use already existing 
-    easyblocks available through EasyBuild, and / or if nothing needs to be patched
+    easyblocks available through EasyBuild, and / or if nothing needs to be patched.
 
 
 ### Quick steps to build for `dev.eessi.io`
@@ -73,9 +73,9 @@ unlike builds for `software.eessi.io`. In this case, the development easyconfigs
 `easyconfigs/` in the `dev.eessi.io` repository being used.
 
 To allow for development builds, we leverage the `--software-commit` functionality (requires [EasyBuild](https://easybuild.io/) 
-v4.9.3 or higher). This lets us build a given application from a specific commit in repository. This can also be done from a 
+v4.9.3 or higher). This lets us build a given application from a specific commit in a repository. This can also be done from a 
 fork, by changing the `github_account` field in the easyconfig file. We've created a template for `ESPResSo` based on the 
-standard eaasyconfig of the most recent version. The relevant fields are:
+standard easyconfig of the most recent version. The relevant fields are:
 
 ``` python
 easyblock = 'CMakeMake'
@@ -110,18 +110,18 @@ are a few additional details to keep in mind.
 #### Software version
 
 Installations to the EESSI production repository refer to specific versions of applications. However, development builds can't follow the same 
-approach as they are most often not pegged to a release. Because of this, it is possible to include a descriptive "version" label to the `version` parameter
+approach as they are most often not pegged to a release. Because of this, it is possible to include a descriptive "version" label in the `version` parameter
 in the easyconfig file for a given (set of) installations. 
 
 Note that some applications are built with custom easyblocks, which may
-use the `version` parameter to determine how the installation is meant to work (for example, recent versions need to copy files from to a new directory). Make sure
+use the `version` parameter to determine how the installation is meant to work (for example, recent versions need to copy files to a new directory). Make sure
 that you account for this, otherwise you may install software differently than intended. If you encounter issues, you can open an issue in our
 [support portal](https://gitlab.com/eessi/support#eessi-support-portal).
 
 #### Installing dependencies
 
 Installations in `dev.eessi.io` are done _on top_ of `software.eessi.io`. That means if your development build depends on some application that is
-already installed in `software.eessi.io`, then that will simply be used. However, if you need to add a new dependency, then this must included as 
+already installed in `software.eessi.io`, then that will simply be used. However, if you need to add a new dependency, then this must be included as 
 part of the build. That means including an easyconfig file for it, and adding it to the right easystack file.
 
 #### Using commit IDs or tags for `--software-commit`
@@ -133,7 +133,7 @@ the commit ID itself. You can then include this in the `versionsuffix` on your e
 #### Patch files
 
 If your specific development build requires patch files, you should add these to the `easyconfigs/` directory. If the necessary patch is part of an
-EasyBuild release, then this may not be necessary, as these will be directly taken from EasyBuild. If it is a new patch that is not on an EasyBuild
+EasyBuild release, then this may not be necessary, as these will be directly taken from EasyBuild. If it is a new patch that is not in an EasyBuild
 release, then include it in the `easyconfigs/` directory.
 
 #### Checksums
@@ -141,7 +141,7 @@ release, then include it in the `easyconfigs/` directory.
 EasyBuild's easyconfig files typically contain [checksums](https://docs.easybuild.io/writing-easyconfig-files/?h=checksums#common_easyconfig_param_sources_checksums) 
 as their use is highly recommended. By default, EasyBuild will compute the checksums of sources and patch files it needs for 
 a given installation, and compare them with the values in the easyconfig file. Because builds for `dev.eessi.io` change much 
-more often, hard coded checksums become a problem, as they'd need to be updated with every new build. For this reason, we 
+more often, hardcoded checksums become a problem, as they'd need to be updated with every new build. For this reason, we 
 recommend not including checksums in your development easyconfig files (unless you need to, for a specific reason).
 
 #### Easystack files
@@ -172,13 +172,13 @@ For the sake of this example, the chosen commit actually corresponds to the
 Because building with `software-commit` disables [`robot`](https://docs.easybuild.io/api/easybuild/tools/robot/?h=robot) 
 (automatic dependency resolution) as we note above, we need to explicitly include easyconfig files of direct dependencies
 that are not yet available in `software.eessi.io` or in our development stack. Since these dependencies are required for
-installing our target application (i.e., they listed as the `builddependencies` or `dependencies` in the easyconfig file), 
+installing our target application (i.e., they are listed as the `builddependencies` or `dependencies` in the easyconfig file), 
 we must include them _above_ the software we mean to install. 
 
-As an example, let's take a hypothetical easystack file that installs a untagged version of the GitHub command 
+As an example, let's take a hypothetical easystack file that installs an untagged version of the GitHub command 
 line application `gh` from a particular commit in its history. Because `gh` requires a version of `Go` that 
 is not yet (or will never be) available in `software.eessi.io`, we include the easyconfig needed to 
-install it on the easystack file:
+install it in the easystack file:
 
 ```yaml
 easyconfigs:
